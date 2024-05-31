@@ -1,0 +1,608 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Super Search</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" lang="en" content="Supersearch">
+		<meta name="author" content="Mark Beachill">
+		<meta name="robots" content="index, follow">
+
+		<!-- icons -->
+		<!-- <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png"> -->
+		<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+
+		<!-- Override CSS file - add your own CSS rules -->
+		<!-- <link rel="stylesheet" href="styles.css"> -->
+		<script language="JavaScript">
+		
+		
+function stopRKey(evt) { 
+  var evt = (evt) ? evt : ((event) ? event : null); 
+  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null); 
+  if ((evt.keyCode == 13) && (node.type=="text"))  
+  {
+  showInput();
+  return false;
+  } 
+} 
+
+document.onkeypress = stopRKey; 		
+		
+		
+function showInput() {
+
+
+
+var green_btn = " target=_blank class=\"btn green-btn\" onmouseover=\"this.style.background='#aaa'\" onmouseout=\"this.style.background='#eeeeee'\"";
+var red_btn = " target=_blank class=\"btn red-btn\" onmouseover=\"this.style.background='#aaa'\" onmouseout=\"this.style.background='#eeeeee'\"";
+
+    
+	
+	
+	var message_entered = "";
+	var message_entered_original = "";
+	
+	message_entered_original =  document.getElementById("user_input").value;
+	
+	message_entered =  message_entered_original;
+	message_entered = message_entered.replaceAll("'", "&apos;");
+
+	
+	
+	var m2 = "";
+	
+	// UK Academic search
+	m2 = "<a href='https://www.google.co.uk/search?q=.ac.uk+" + message_entered + "' target=_blank>UK Academic search</a>";
+    document.getElementById('display-academic').innerHTML = m2;
+
+	// UK Academic PDF
+	m2 = "<a href='https://www.google.co.uk/search?q=.ac.uk+pdf+" + message_entered + "' target=_blank>UK Academic PDF</a>";
+    document.getElementById('display-academicpdf').innerHTML = m2;
+
+	// BBC
+	m2 = "<a href='https://www.google.co.uk/search?q=site:bbc.co.uk+" + message_entered + "' target=_blank>BBC</a>";
+    document.getElementById('display-bbc').innerHTML = m2;		
+	
+	
+	// Bing images
+	m2 = "<a href='https://www.bing.com/images/search?q=" + message_entered + "' target=_blank>Bing images</a>";
+    document.getElementById('display-bingimages').innerHTML = m2;
+	
+	// Bing img (free)
+	m2 = "<a href='https://www.bing.com/images/search?qft=+filterui:license-L1&form=IRFLTR&q=" + message_entered + "' target=_blank>Bing img (free)</a>";
+    document.getElementById('display-bingimagespd').innerHTML = m2;	
+	
+	
+
+	// Bing videos
+	m2 = "<a href='https://www.bing.com/videos/search?q=" + message_entered + "' target=_blank>Bing videos</a>";
+    document.getElementById('display-bingvideos').innerHTML = m2;	
+
+	// British Library thesis
+	m2 = "<a href='http://ethos.bl.uk/ProcessSearch.do?sedDownload.chk1=on&query=" + message_entered + "' target=_blank>British Library thesis</a>";
+    document.getElementById('display-blthesis').innerHTML = m2;
+	
+	
+	// Box of Broadcasts
+	m2 = "<a href='http://bobnational.net/site/search?yt0=Search&query=" + message_entered + "' target=_blank>Box of Broadcasts<a>";
+    document.getElementById('display-bob').innerHTML = m2;	
+	
+	
+	// Daily Mail
+	m2 = "<a href='https://www.google.co.uk/search?q=site:dailymail.co.uk+" + message_entered + "' target=_blank>Daily Mail</a>";
+    document.getElementById('display-dailymail').innerHTML = m2;	
+
+	
+	// Economist
+	m2 = "<a href='https://www.google.co.uk/search?q=site:economist.com+" + message_entered + "' target=_blank>Economist</a>";
+    document.getElementById('display-economist').innerHTML = m2;	
+	
+	
+	// Google search
+	m2 = "<a href='https://www.google.co.uk/search?q=" + message_entered + "' target=_blank>Google search</a>";
+    document.getElementById('display-google').innerHTML = m2;
+	
+	
+	// Google Books
+	m2 = "<a href='https://www.google.com/search?tbm=bks&q=" + message_entered + "' target=_blank>Google Books</a>";
+    document.getElementById('display-googlebooks').innerHTML = m2;
+	
+	
+	// Google News
+	m2 = "<a href='https://news.google.com/search?q=" + message_entered + "' target=_blank>Google News</a>";
+    document.getElementById('display-googlenews').innerHTML = m2;
+
+	
+	
+	// Google Scholar
+	m2 = "<a  target=_blank href='https://scholar.google.co.uk/scholar?hl=en&q=" + message_entered + "'>Google Scholar</a>";
+    document.getElementById('display-googlescholar').innerHTML = m2;
+	
+	// Guardian
+	m2 = "<a href='https://www.google.co.uk/search?q=site:theguardian.com+" + message_entered + "' target=_blank>Guardian</a>";
+    document.getElementById('display-guardian').innerHTML = m2;
+
+	// Independent
+	m2 = "<a href='https://www.google.co.uk/search?q=site:independent.co.uk+" + message_entered + "' target=_blank>Independent</a>";
+    document.getElementById('display-independent').innerHTML = m2;
+	
+	
+	// Mirror
+	m2 = "<a href='https://www.google.co.uk/search?q=site:mirror.co.uk+" + message_entered + "' target=_blank>Mirror</a>";
+    document.getElementById('display-mirror').innerHTML = m2;
+	
+	// News Now aggregation
+	m2 = "<a href='http://www.newsnow.co.uk/h/?lang=en&search=" + message_entered + "' target=_blank>News Now aggregation</a>";
+    document.getElementById('display-newsnow').innerHTML = m2;	
+
+	// New Statesman
+	m2 = "<a href='https://www.google.co.uk/search?q=site:newstatesman.com+" + message_entered + "' target=_blank>New Statesman</a>";
+    document.getElementById('display-newstatesman').innerHTML = m2;
+
+	
+	// New York Times
+	m2 = "<a href='https://www.google.co.uk/search?q=site:nytimes.com+" + message_entered + "' target=_blank>New York Times</a>";
+    document.getElementById('display-nyt').innerHTML = m2;	
+	
+	// Order Order
+	m2 = "<a href='https://www.google.co.uk/search?q=site:order-order.com+" + message_entered + "' target=_blank>Order Order</a>";
+    document.getElementById('display-orderorder').innerHTML = m2;	
+
+    // Pixabay
+	m2 = "<a href='https://pixabay.com/images/search/" + message_entered + "' target=_blank>Pixabay</a>";
+    document.getElementById('display-pixabay').innerHTML = m2;
+	
+	
+	// Project Gutenberg
+	m2 = "<a href='https://www.gutenberg.org/ebooks/search/?query=" + message_entered + "' target=_blank>Project Gutenberg</a>";
+    document.getElementById('display-projectgutenberg').innerHTML = m2;
+	
+		
+
+	// Reddit
+    m2 = "<a href='https://www.reddit.com/search/?q=" + message_entered + "' target=_blank>Reddit</a>";
+    document.getElementById('display-reddit').innerHTML = m2;
+	
+	
+	// Spectator
+	m2 = "<a href='https://www.google.co.uk/search?q=site:spectator.co.uk+" + message_entered + "' target=_blank>Spectator</a>";
+    document.getElementById('display-spectator').innerHTML = m2;
+	
+	// Spiked Online
+	m2 = "<a href='https://www.google.co.uk/search?q=site:spiked-online.com+" + message_entered + "' target=_blank>Spiked Online</a>";
+    document.getElementById('display-spiked').innerHTML = m2;	
+	
+	// Sun
+	m2 = "<a href='https://www.google.co.uk/search?q=site:thesun.co.uk+" + message_entered + "' target=_blank>Sun</a>";
+    document.getElementById('display-sun').innerHTML = m2;	
+
+	
+	// Substack
+	m2 = "<a href='https://substack.com/search/" + message_entered + "?searching=all_posts&language=en' target=_blank>Substack</a>";
+    document.getElementById('display-substack').innerHTML = m2;		
+	
+	
+	
+	// Telegraph
+	m2 = "<a href='https://www.google.co.uk/search?q=site:telegraph.co.uk+" + message_entered + "' target=_blank>Telegraph</a>";
+    document.getElementById('display-telegraph').innerHTML = m2;
+
+	// Twitter
+	m2 = "<a href='https://twitter.com/search?q=" + message_entered + "' target=_blank>Twitter</a>";
+    document.getElementById('display-twitter').innerHTML = m2;
+
+	// UEL library
+	m2 = "<a target=_blank  href='http://uel-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do?institution=44UEL&vid=UEL_VU1&group=GUEST&onCampus=false&displayMode=full&search_scope=LSCOP_ALL&query=any%2Ccontains%2C" + message_entered + "' >UEL Library</a>";
+    document.getElementById('display-uellibrary').innerHTML = m2;	
+	
+	
+	// UEL library journals
+	m2 = "<a href='https://uel.primo.exlibrisgroup.com/discovery/search?tab=CentralIndex&search_scope=CentralIndex&vid=44UEL_INST:UEL_VU1&offset=0&query=any,contains," + message_entered + "' target=_blank>UEL Library journal</a>";
+    document.getElementById('display-uellibraryjournals').innerHTML = m2;
+	
+	
+	// WikiMEDIA
+	m2 = "<a href='https://commons.wikimedia.org/w/index.php?title=Special:MediaSearch&go=Go&type=image&search=" + message_entered + "' target=_blank>WikiMEDIA commons</a>";
+    document.getElementById('display-wikimedia').innerHTML = m2;	
+	
+	
+	
+    // wikipedia
+	m2 = "<a href='https://en.wikipedia.org/wiki/Special:Search?search=" + message_entered + "' target=_blank>Wikipedia</a>";
+    document.getElementById('display-wikipedia').innerHTML = m2;	
+	
+	
+
+	// YouTube
+	m2 = "<a href='https://www.youtube.com/results?search_query=" + message_entered + "' target=_blank>YouTube</a>";
+    document.getElementById('display-youtube').innerHTML = m2;
+	
+	
+	
+	
+	var yr = "&tbs=cdr%3A1%2Ccd_min%3A01%2F01%2F2011%2Ccd_max%3A";
+	
+	yr = "&tbs=cdr:1,cd_min:01/01/2011,sbd:1";
+	
+	
+	document.getElementById('SearchList').style.display = 'block';
+	
+	
+	document.getElementById('searchterms').innerHTML = message_entered_original;
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+	<style>
+	.enjoy-css {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 90%;
+  height: 25px;
+  padding: 10px 20px;
+  border: 1px solid #b7b7b7;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font: normal 18px/normal Tahoma, Geneva, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  background: rgba(255,255,255,1);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.enjoy-css-button {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #018dc4;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal normal bold 16px/normal Arial, Helvetica, sans-serif;
+  color: rgba(255,255,255,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #0199d9;
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.maincontent {
+	clear: both;
+	width: 80%;
+	font-size: .8125em;
+	max-width: 92.3em;
+	margin: 0 auto;
+	padding: 1em 0;
+	color: #333;
+	line-height: 1.5em;
+	position: relative
+}
+
+.section {
+	clear: both;
+	padding: 0;
+	margin: 0
+}
+
+.col {
+	display: block;
+	float: left;
+	margin: 1% 0 1% 1%
+}
+
+.col:first-child {
+	margin-left: 0
+}
+
+.group:before,.group:after {
+	content: "";
+	display: table
+}
+
+.group:after {
+	clear: both
+}
+
+.group {
+	zoom: 1
+}
+
+.span_5_of_5 {
+	width: 100%
+}
+
+.span_4_of_5 {
+	width: 79.8%
+}
+
+.span_3_of_5 {
+	width: 59.6%
+}
+
+.span_2_of_5 {
+	width: 39.4%
+}
+
+.span_1_of_5 {
+	width: 19.2%
+}
+
+@media only screen and (max-width:767px) {
+	.col {
+		margin: 1% 0 1% 0%
+	}
+
+	.span_1_of_5,.span_2_of_5,.span_3_of_5,.span_4_of_5,.span_5_of_5 {
+		width: 100%
+	}
+}
+
+.btn {
+	text-align: left;
+	width: 200px;
+	color: #333;
+	position: relative;
+	display: inline-block;
+	overflow: visible;
+	margin: 8px 0 0;
+	padding: 10px 14px;
+	cursor: pointer;
+	outline: currentcolor none 0;
+	border-style: none none none solid;
+	border-width: 0 0 0 3px;
+	border-image: none 100% / 1 / 0 stretch;
+	background: #eee none repeat scroll 0% 0%;
+	z-index: 1;
+	font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+	min-width: 42px;
+	text-shadow: #fff 0 1px 0;
+	text-decoration: none;
+	white-space: nowrap;
+	vertical-align: inherit;
+	font-weight: 600
+}
+
+.blue-btn {
+	border-color: currentcolor currentcolor currentcolor #4d90fe
+}
+
+.green-btn {
+	border-color: currentcolor currentcolor currentcolor #35aa47
+}
+
+.orange-btn {
+	border-color: currentcolor currentcolor currentcolor #d84a38
+}
+
+.purple-btn {
+	border-color: currentcolor currentcolor currentcolor #852b99
+}
+
+.red-btn {
+	border-color: currentcolor currentcolor currentcolor #bd121d
+}
+
+.hdr {
+	text-align: left;
+	width: 200px;
+	color: #fff;
+	position: relative;
+	display: inline-block;
+	overflow: visible;
+	margin: 0;
+	margin-top: 0;
+	padding: 10px 14px;
+	margin-top: 8px;
+	cursor: pointer;
+	outline: 0;
+	border: 0;
+	background-repeat: repeat-x;
+	z-index: 1;
+	font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	line-height: 14px;
+	min-width: 42px;
+	text-shadow: none;
+	text-decoration: none;
+	white-space: nowrap;
+	vertical-align: inherit
+}
+
+.blue-hdr {
+	background-color: #4d90fe
+}
+
+.green-hdr {
+	background-color: #35aa47
+}
+
+.orange-hdr {
+	background-color: #d84a38
+}
+
+.purple-hdr {
+	background-color: #852b99
+}
+
+.red-hdr {
+	background-color: #bd121d
+}
+
+.hdr-para {
+	margin-bottom: 1.8em;
+	line-height: 160%;
+	margin: 0
+}</style>
+
+
+
+	</head>
+<body style="margin: 0;padding: 0;font: 16px Arial, Helvetica, sans-serif">
+
+<div class="maincontent">		
+<div class="header">		
+<div class="container">
+				<h2 class="header-heading">Super Search (UEL)</h2>
+			</div></div>
+			
+			<div class="container">
+				<div class="main">
+
+					<!-- Heading levels -->
+
+
+
+
+<div class="post section group">
+
+<div class="col span_4_of_5">
+<!-- was form here -->
+<form>
+<input type="text" class="enjoy-css" name="message" id="user_input" autofocus="autofocus"  onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()">
+</form></div>
+<div class="col span_1_of_5">
+<input id="btnSearch" type="submit" onclick="showInput();" value="Search" class="enjoy-css-button">
+</div>
+</div>
+
+<div class="col span_5_of_5">
+<!-- was form here -->
+<div id="SearchList" style="display:none"></div>
+<hr />
+<h2>Searching for: <span id='searchterms' style="color:red;">*UNSPECIFIED*</span></h2>
+</div>
+
+<div class="section group">
+
+<div class="col span_1_of_5">
+<!-- *** HEADING - UEL  -->
+<p class="hdr-para"><a class="hdr blue-hdr"><b>UEL</b></a></p>
+
+
+<a target="_blank" id='display-uellibrary' href="" class="btn blue-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">UEL Library</a>
+<a target="_blank" id='display-uellibraryjournals' href="" class="btn blue-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">UEL Library Journ.</a>
+<p class="hdr-para"><a class="hdr green-hdr"><b>ACADEMIC</b></a></p>
+<a target="_blank" id='display-googlescholar' class="btn green-btn" href="" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Google Scholar</a>
+
+
+
+
+<a target="_blank" id='display-googlebooks' class="btn green-btn" href="" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Google Books.</a>
+<a target="_blank" id='display-academic' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">UK Academic search</a>
+<a target="_blank" id='display-academicpdf' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">UK Academic pdf</a>
+<a target="_blank" id='display-blthesis' href="" class="btn orange-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">British Library Thesis</a>
+</div>
+<div class="col span_1_of_5">
+<!-- *** HEADING - NEWS  -->
+<p class="hdr-para"><a class="hdr red-hdr"><b>NEWS</b></a></p>
+<a target="_blank" id='display-bbc' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">BBC</a>
+<a target="_blank" id='display-guardian' href="" class="btn red-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Guardian</a>
+<a target="_blank" id='display-economist' href="" class="btn red-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Economist</a>
+<a target="_blank" id='display-independent' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Independant</a>
+<a target="_blank" id='display-dailymail' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Mail</a>
+<a target="_blank" id='display-mirror' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Mirror</a>
+<a target="_blank" id='display-nyt' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">NewYorkTimes</a>
+<a target="_blank" id='display-telegraph' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Telegraph</a>
+<a target="_blank" id='display-sun' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Sun</a>
+<a target="_blank" id='display-newsnow' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">NewsNow</a>
+<a target="_blank" id='display-googlenews' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Google News</a>
+</div>
+<div class="col span_1_of_5">
+<!-- *** HEADING - SOCIAL MEDIA  -->
+<p class="hdr-para"><a class="hdr purple-hdr"><b>MEDIA</b></a></p>
+<a target="_blank" id='display-bob' href="" class="btn purple-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Box of Broadcasts</a>
+<a target="_blank" id='display-youtube' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">YouTube</a>
+<a target="_blank" id='display-bingvideos' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Bing videos</a>
+<p class="hdr-para"><a class="hdr blue-hdr"><b>SOCIAL MEDIA</b></a></p>
+<a target="_blank" id='display-reddit' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Reddit</a>
+<a target="_blank" id='display-substack' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Substack</a>
+<a target="_blank" id='display-twitter' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Twitter</a>
+	</div>
+
+<div class="col span_1_of_5"><!-- *** HEADING - MEDIA  -->
+<p class="hdr-para"><a class="hdr orange-hdr"><b>MAGS</b></a></p>
+<a target="_blank" id='display-newstatesman' href="" class="btn orange-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">New Statesman</a>
+<a target="_blank" id='display-orderorder' href="" class="btn orange-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Order Order</a>
+<a target="_blank" id='display-spectator' href="" class="btn orange-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Spectator</a>
+<a target="_blank" id='display-spiked' href="" class="btn orange-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Spiked</a>
+</a>
+<p class="hdr-para"><a class="hdr orange-hdr"><b>SITES</b></a></p>
+<a target="_blank" id='display-google' href="" class="btn red-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Google</a>
+<a target="_blank" id='display-wikipedia' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Wikipedia</a>
+<!-- iplayer  -->
+</div>
+<div class="col span_1_of_5"><!-- *** HEADING - SITES  -->
+
+
+
+
+<p class="hdr-para"><a class="hdr orange-hdr"><b>IMAGES</b></a></p>
+<a target="_blank" id='display-bingimages' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Bing Imgages</a>
+<a target="_blank" id='display-bingimagespd' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Bing Img (free)</a>
+<a target="_blank" id='display-pixabay' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Pixabay</a>
+<a target="_blank" id='display-wikimedia' href="" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Wikimedia commons</a>
+
+<p class="hdr-para"><a class="hdr red-hdr"><b>OTHER</b></a></p>
+<a target="_blank" id='display-projectgutenberg' href="" class="btn green-red" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Project Gutenberg</a>
+
+
+<p class="hdr-para"><a class="hdr red-hdr"><b>LINKS</b></a></p>
+
+
+<a target="_blank" id='display-linkkeenioussetup' href="https://keenious.com/auth/sign-up?group=universityofeastlondon" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Keenious UEL SETUP</a>
+
+<a target="_blank" id='display-linkkeenioussetup' href="https://keenious.com/" class="btn green-btn" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">Keenious</a>
+
+<p class="hdr-para"><a class="hdr red-hdr"><b>SETUP</b></a></p>
+<a target="_blank" id='display-1278126538googlescholar' class="btn red-btn" href="https://scholar.google.co.uk/scholar_setprefs?instq=East+London" onmouseover="this.style.background='#aaa'" onmouseout="this.style.background='#eeeeee'">SETUP Library Links</a>
+
+	</div>
+</div>
+</div>
+
+</body>	
+	
+	<footer>	<div class="footer">
+			<div class="container">
+				&copy; Copyright 2024
+			</div>
+		</div></footer
+	
+</html>
