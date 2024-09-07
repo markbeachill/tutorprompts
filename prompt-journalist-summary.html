@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Summary Prompt</title>
+    <link rel="stylesheet" href="https://markbeachill.github.io/tutorprompts/prompt-harvard.css">
+    <style>
+        /* Additional styling for the prompt area */
+        .prompt-box {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+        .prompt-box pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function copyPrompt() {
+            const promptText = document.getElementById('promptText').innerText;
+            navigator.clipboard.writeText(promptText).then(function() {
+                alert('Prompt copied to clipboard!');
+            }, function(err) {
+                console.error('Error copying text: ', err);
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Generate a Journalist Summary Prompt</h1>
+    </header>
+    
+    <main>
+        <section id="instructions">
+            <h2>Instructions</h2>
+            <p>Click the button below to copy a prompt you can use in ChatGPT to generate a summary about a journalist's career.</p>
+        </section>
+
+        <section id="prompt">
+            <h2>Prompt</h2>
+            <div class="prompt-box">
+                <pre id="promptText">Please write a concise summary of Mr. Any Author, focusing specifically on their work as a journalist. 
+Include the author’s full name, birth year, and, if applicable, their year of death at the top as a headline. 
+The summary should introduce who they are, describe the type of audience they catered to, and highlight key moments in their career. 
+Mention both positions they have supported and critiqued, and provide specific examples of their reporting style or approach, such as important themes or issues they focused on.
+
+Where relevant, describe how their work as a journalist connects with other aspects of their career, such as their fiction or public life. 
+Include a quote from one of their works, with the correct citation.
+
+Finally, provide a “Links” section with 1–2 links to material written by the author, formatted in Harvard style. Display the full URLs.
+
+The writing should be clear and in plain English, avoiding overly formal language or interpretation. 
+Focus on presenting factual information, allowing readers to explore the significance of the details themselves. 
+Each paragraph should introduce key details and avoid summarizing the overall influence or legacy of the author.</pre>
+            </div>
+            <button onclick="copyPrompt()">Copy Prompt to Clipboard</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Created to help generate prompts for ChatGPT use.</p>
+    </footer>
+</body>
+</html>
