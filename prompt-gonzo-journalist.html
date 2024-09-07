@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Wild Journalist Summary Prompt</title>
+    <link rel="stylesheet" href="https://markbeachill.github.io/tutorprompts/prompt-harvard.css">
+    <style>
+        /* Additional styling for the prompt area */
+        .prompt-box {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+        .prompt-box pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function copyPrompt() {
+            const promptText = document.getElementById('promptText').innerText;
+            navigator.clipboard.writeText(promptText).then(function() {
+                alert('Prompt copied to clipboard!');
+            }, function(err) {
+                console.error('Error copying text: ', err);
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Generate a Wild Journalist Summary Prompt</h1>
+    </header>
+    
+    <main>
+        <section id="instructions">
+            <h2>Instructions</h2>
+            <p>Click the button below to copy a high-energy prompt you can use in ChatGPT to generate a bold, colorful summary about a journalist’s career.</p>
+        </section>
+
+        <section id="prompt">
+            <h2>Prompt</h2>
+            <div class="prompt-box">
+                <pre id="promptText">Write a wild, no-holds-barred summary of JOURNALISTNAME, focusing on their work as a journalist. 
+Hit me with the facts, but don’t hold back on the color. Start with the author’s full name, birth year, and, if applicable, their year of death at the top like a bold headline in a tabloid. 
+Give me the goods on who they are, the kind of readers they wrote for, and the critical moments that blew open their career. 
+Tell me where they took a stand, where they kicked up dust, and when they didn’t pull any punches. 
+Throw in juicy examples of their reporting style—don’t leave out the blood, sweat, or ink.
+
+If their work connects to other parts of their life—fiction, politics, whatever—lay it out. Don’t sugarcoat it, give me the raw connections. 
+And you better believe I want a quote, the kind that hits you right in the gut. Make sure it’s theirs, with the right citation.
+
+Finish off with a “Links” section—throw in 1 or 2 pieces written by the author, in proper Harvard style. Show me the full URLs. 
+Keep it fast and sharp—don’t drown me in boring academic talk. Stick to the facts, but make them scream. Let the students dig for meaning on their own.</pre>
+            </div>
+            <button onclick="copyPrompt()">Copy Prompt to Clipboard</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Created to help generate energetic prompts for ChatGPT use.</p>
+    </footer>
+</body>
+</html>
