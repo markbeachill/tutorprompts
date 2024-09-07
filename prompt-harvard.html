@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt: Create Harvard references from web links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <style>
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        .instructions {
+            text-align: left;
+            margin-bottom: 10px;
+			color: green;
+			weight: bold;
+        }
+        .box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background: #f9f9f9;
+            position: relative;
+        }
+        .copy-btn {
+            float: right;
+        }
+        .copy-btn-box {
+            margin-top: 10px;
+        }
+        textarea {
+            margin-top: 10px;
+            width: 100%;
+        }
+        .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+		
+		.navbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 1em 0;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+ <div class="navbar">
+        <a href="#" class="logo">TutorPrompts</a>
+        <a href="index.html">Home</a>
+        <a href="allprompts.html">All Prompts</a>
+        <a href="help.html">Help</a>
+        <a href="contact.htm">Contact</a>
+    </div>
+
+    
+    <div class="container">
+	        <h1>Prompt Harvard: Create Harvard references</h1>
+        <div class="instructions">
+            <p>1) Optional: edit the prompt.</br> 
+			2) Paste your text in.</br> 
+			3) Copy the "Prompt with your text".</br>
+			4) Paste into ChatGPT or similar to get results</br>
+            </p>
+        </div>
+        <div class="box" id="prompt-box">
+            <label for="prompt">1. Prompt</label>
+			<p>Creates references</p>
+            <button class="copy-btn" onclick="copyPrompt()">Copy</button>
+            <textarea id="prompt" rows="10">
+You are an expert in referencing. You are scrupulous, accurate, and check all your work. When you do Harvard referencing, you:
+a) Include brackets around the year
+b) Put titles of articles in quotation marks
+c) Format the first author as: Surname, Initial(s)
+d) Format subsequent authors as: Initial(s), Surname
+e) Ensure there is no comma after the last author and before the year. Example: Smith, A. (Year) – not: Smith, A., (Year)
+f) Do not add a full stop at the end of the reference
+When listing references, you do not number them.
+Create consistent Harvard-style references for the following links:
+
+            </textarea>
+            <div class="instructions">
+                <p>Edit the prompt text as needed before using it.</ br>
+                [You can click "Copy" to copy the prompt to your clipboard.]</p>
+            </div>
+        </div>
+        <div class="box">
+            <label for="user-text">2. Paste your links here</label>
+            <textarea id="user-text" rows="5"></textarea>
+            <div class="instructions">
+                <p>Paste the links you want references for this box.</br>
+                Your text will be combined with the prompt above.</p>
+            </div>
+        </div>
+        <div class="box">
+            <label for="final-prompt">3. Prompt with your text</label>
+            <textarea id="final-prompt" rows="10" readonly></textarea>
+            <button class="copy-btn-box" onclick="copyFinalPrompt()">Copy</button>
+            <div class="instructions">
+                <p>This box shows the  prompt combined with your text.</br>
+                Click "Copy" to copy the combined text to your clipboard.</br>
+				You can paste this into ChatGPT to analyse your text.</p>
+            </div>
+        </div>
+        <div class="links">
+            <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>
+            <a href="https://dillinger.io/" target="_blank">Online Markdown Editor</a>
+        </div>
+		
+<div class="box">
+            <label for="follow-up-prompt">Follow-up/fixing prompts</label>
+            <textarea id="prompt2" rows="10" readonly>Some text goes to clipboard....</textarea>
+            <button class="copy-btn-box" onclick="copyFollowUpPrompt()">Copy</button>
+            </div>
+		
+    </div>
+
+    <script>
+        function copyPrompt() {
+            const promptText = document.getElementById('prompt').value;
+            navigator.clipboard.writeText(promptText).then(() => {
+                alert('Prompt copied to clipboard');
+            }).catch(err => {
+                console.error('Error copying text: ', err);
+            });
+        }
+
+        function copyFinalPrompt() {
+            const finalPromptText = document.getElementById('final-prompt').value;
+            navigator.clipboard.writeText(finalPromptText).then(() => {
+                alert('Final prompt copied to clipboard');
+            }).catch(err => {
+                console.error('Error copying text: ', err);
+            });
+        }
+        function copyFollowUpPrompt() {
+            const promptText = document.getElementById('prompt2').value;
+            navigator.clipboard.writeText(promptText).then(() => {
+                alert('Prompt copied to clipboard');
+            }).catch(err => {
+                console.error('Error copying text: ', err);
+            });
+
+        }		
+		
+
+        document.getElementById('user-text').addEventListener('input', function() {
+            const promptText = document.getElementById('prompt').value;
+            const userText = this.value;
+            document.getElementById('final-prompt').value = promptText + "\n\n" + userText;
+        });
+    </script>
+</body>
+</html>
