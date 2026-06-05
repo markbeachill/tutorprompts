@@ -4,16 +4,21 @@ id: manifest
 title: Writing Tutor Mini Library
 type: manifest
 run_policy: reference_only
-version: 2.2
+version: 2.4
 created_for: student learning toolkit
 ---
 
 # Writing Tutor Mini Library
 
-**Version:** 2.2  
-**Last updated:** 2026-06-05  
+**Version:** v2.4
+**Last updated:** 2026-06-05
 **Status:** working draft  
 **Part of:** AI Personal Tutor Toolkit
+
+**Release stamp:** Site package v2.13 / Prompt-library suite v2.4 / Testing pack v2.8  
+**This file:** Writing Tutor Mini Library v2.4  
+**Public download:** `prompt-libraries/latest/01_writing_tutor_library.md`  
+**Fixed archive:** `prompt-libraries/v2.4/01_writing_tutor_library_v2_4.md`
 
 ## Operating instruction
 

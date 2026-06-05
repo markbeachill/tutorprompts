@@ -1,4 +1,9 @@
-# Universal and Adversarial Test Cards v2.5
+# AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v2.8
+
+**Release stamp:** Site package v2.13 / Prompt-library suite v2.4 / Testing pack v2.8  
+**This file:** AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v2.8  
+**Public download:** `audit-library/latest/ai_tutor_toolkit_universal_test_cards.md`  
+**Fixed archive:** `audit-library/v2.8/ai_tutor_toolkit_universal_test_cards_v2_8.md`
 
 These tests check behaviour that should work across the whole toolkit.
 

@@ -1,4 +1,9 @@
-# AI Personal Tutor Toolkit — Step-by-Step Test Cards v2.5
+# AI Personal Tutor Toolkit — Step-by-Step Test Cards v2.8
+
+**Release stamp:** Site package v2.13 / Prompt-library suite v2.4 / Testing pack v2.8  
+**This file:** AI Personal Tutor Toolkit — Step-by-Step Test Cards v2.8  
+**Public download:** `audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md`  
+**Fixed archive:** `audit-library/v2.8/ai_tutor_toolkit_step_by_step_test_cards_v2_8.md`
 
 Audience: educators, tutors, learning developers and toolkit maintainers who want to test the prompt libraries without needing software-testing knowledge.
 

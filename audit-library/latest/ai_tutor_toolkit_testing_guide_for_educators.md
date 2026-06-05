@@ -1,4 +1,9 @@
-# AI Personal Tutor Toolkit — Testing Guide for Educators v2.6
+# AI Personal Tutor Toolkit — Testing Guide for Educators v2.8
+
+**Release stamp:** Site package v2.13 / Prompt-library suite v2.4 / Testing pack v2.8  
+**This file:** AI Personal Tutor Toolkit — Testing Guide for Educators v2.8  
+**Public download:** `audit-library/latest/ai_tutor_toolkit_testing_guide_for_educators.md`  
+**Fixed archive:** `audit-library/v2.8/ai_tutor_toolkit_testing_guide_for_educators_v2_8.md`
 
 Audience: educators, tutors, learning developers and toolkit maintainers.
 
@@ -54,8 +59,8 @@ Use lowercase filenames, underscores, the tool code, and the version number.
 Examples:
 
 ```text
-wt1_clarity_clinic_test_output_v1_8.md
-wt1_clarity_clinic_audit_v1_8.md
+wt1_clarity_clinic_test_output_v2_4.md
+wt1_clarity_clinic_audit_v2_8.md
 st1_paragraph_structure_test_output_v1_8.md
 st1_paragraph_structure_audit_v1_8.md
 ```
