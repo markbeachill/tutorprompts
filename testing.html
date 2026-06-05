@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Testing and audit | AI Personal Tutor Toolkit</title>
+  <meta name="description" content="Run qualitative tests and audit reports for the AI Personal Tutor Toolkit prompt libraries.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="container nav"><a class="brand" href="index.html">AI Personal Tutor Toolkit<small>Markdown prompt libraries</small></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="tools.html">Tools</a></li><li><a href="examples.html">Examples</a></li><li><a href="teaching-approach.html">Teaching approach</a></li><li><a href="testing.html">Testing</a></li><li><a href="changelog.html">Changelog</a></li></ul></nav></div></header>
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="kicker">Testing and audit</p>
+        <h1>Check the toolkit after every meaningful change.</h1>
+        <p class="lead">These prompt libraries cannot be tested like ordinary software. The tests are designed to create evidence for human audit: does the tool stay within its learning purpose, avoid doing the work for the student, and give useful feedback?</p>
+        <div class="btn-row">
+          <a class="button" href="audit-library/ai_personal_tutor_testing_pack_v1_0.zip" download>Download testing pack</a>
+          <a class="button secondary" href="audit-library/ai_tutor_toolkit_test_suite_v1_0.md" download>Download test suite</a>
+          <a class="button ghost" href="audit-library/ai_tutor_toolkit_audit_prompt_v1_0.md" download>Download audit prompt</a>
+        </div>
+      </div>
+      <div class="panel">
+        <span class="tag">Quick idea</span>
+        <h2>Run, collect, audit.</h2>
+        <p>Run selected tests in an AI tool, paste the outputs into the results template, then use the audit prompt to create a Markdown audit report.</p>
+        <p>The result is not a perfect pass/fail grade. It is a structured record you can inspect and use before releasing a new version.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="panel notice">
+      <span class="tag">Recommended minimum</span>
+      <h2>Before a public release</h2>
+      <p>For a small wording change, run the universal smoke tests and one affected tool test. For a major release, test every mini library and run at least one adversarial test.</p>
+      <div class="grid two">
+        <article class="card"><h3>Small update</h3><ul class="list-clean"><li>Run universal tests U-01 to U-08.</li><li>Run the tool test for any changed tool.</li><li>Audit the output and note any fixes.</li></ul></article>
+        <article class="card"><h3>Major update</h3><ul class="list-clean"><li>Run universal tests.</li><li>Run one test for every tool changed.</li><li>Run adversarial tests.</li><li>Update version history and changelog.</li></ul></article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>The four testing files</h2>
+      <table>
+        <thead><tr><th>File</th><th>Use it for</th><th>Download</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Test suite</strong></td><td>Universal, tool-specific, adversarial and regression tests.</td><td><a href="audit-library/ai_tutor_toolkit_test_suite_v1_0.md" download>Download .md</a></td></tr>
+          <tr><td><strong>Results template</strong></td><td>A structured place to paste the test inputs and outputs.</td><td><a href="audit-library/ai_tutor_toolkit_test_results_template_v1_0.md" download>Download .md</a></td></tr>
+          <tr><td><strong>Audit prompt</strong></td><td>Turns collected outputs into a Markdown audit report.</td><td><a href="audit-library/ai_tutor_toolkit_audit_prompt_v1_0.md" download>Download .md</a></td></tr>
+          <tr><td><strong>Testing guide</strong></td><td>Explains the workflow, ratings and release checklist.</td><td><a href="audit-library/ai_tutor_toolkit_testing_guide_v1_0.md" download>Download .md</a></td></tr>
+        </tbody>
+      </table>
+      <div class="btn-row"><a class="button secondary" href="audit-library/ai_personal_tutor_testing_pack_v1_0.zip" download>Download all testing files as ZIP</a></div>
+    </section>
+
+    <section class="panel">
+      <h2>Basic audit workflow</h2>
+      <div class="grid two">
+        <article class="card"><h3>1. Choose a library</h3><p>Upload the mini library or master library you want to test.</p></article>
+        <article class="card"><h3>2. Run the test input</h3><p>Use the exact test input from the test suite where possible.</p></article>
+        <article class="card"><h3>3. Save the output</h3><p>Paste the full AI output into the results template under the right test ID.</p></article>
+        <article class="card"><h3>4. Repeat</h3><p>Collect enough outputs for the update you are testing.</p></article>
+        <article class="card"><h3>5. Audit</h3><p>Paste the completed results template into a fresh chat with the audit prompt.</p></article>
+        <article class="card"><h3>6. Decide</h3><p>Fix critical and major issues before release. Record minor issues in the changelog or backlog.</p></article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>What the audit checks</h2>
+      <table>
+        <thead><tr><th>Area</th><th>What to look for</th></tr></thead>
+        <tbody>
+          <tr><td>Learning boundary</td><td>Does the tool give feedback and teaching rather than writing assessed work?</td></tr>
+          <tr><td>Routing</td><td>Does <code>prompt</code> return to the menu, and do vague requests ask for clarification?</td></tr>
+          <tr><td>Privacy and responsibility</td><td>Does the tool respond proportionately to private or identifiable material?</td></tr>
+          <tr><td>Language setting</td><td>Does the toolkit use UK English by default and switch if asked?</td></tr>
+          <tr><td>Output format</td><td>Does it produce clean Markdown and follow the selected tool’s structure?</td></tr>
+          <tr><td>Truthfulness</td><td>Does it avoid invented facts, sources, references or false certainty?</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Release checklist</h2>
+      <ul class="list-clean">
+        <li>Version number is visible near the top of every changed library.</li>
+        <li>Version history at the bottom of each changed library is updated.</li>
+        <li>Website download links point to the current filenames.</li>
+        <li>Mini library ZIP and site ZIP contain the current files.</li>
+        <li>Universal smoke tests have been run.</li>
+        <li>Changed tools have been tested.</li>
+        <li>No critical or unresolved major audit issues remain.</li>
+      </ul>
+    </section>
+  </div>
+</main>
+<footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Versioned Markdown libraries for learning-focused AI support. Use course and institution rules when deciding how to use AI.</p></div></footer>
+</body>
+</html>
