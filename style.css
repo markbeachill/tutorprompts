@@ -66,3 +66,7 @@ pre { background: #19202a; color: #f8fafc; padding: 16px; border-radius: 14px; o
 /* Stage 4 testing/audit additions */
 .panel table a { white-space: nowrap; }
 .card ul { margin-top: 0; }
+
+.steps li { margin-bottom: 0.75rem; }
+.checklist { columns: 2; column-gap: 2rem; }
+@media (max-width: 760px) { .checklist { columns: 1; } }

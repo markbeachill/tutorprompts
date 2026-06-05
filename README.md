@@ -15,3 +15,8 @@ Deploy the contents of this folder to the root of a GitHub Pages repository.
 ## v1.6 cleanup
 
 This release adds stable tool codes, an expectation note about AI behaviour, and tightened wording around Markdown output, referencing and source reliability.
+
+
+## Testing pack v2.0
+
+The audit-library folder contains the educator-friendly testing pack v2.0 with step-by-step test cards, an audit prompt with menu, universal/adversarial tests, a testing guide and a test log template.
