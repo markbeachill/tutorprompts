@@ -1,16 +1,16 @@
 <!-- FILE: 00-manifest.md -->
 ---
 id: manifest
-title: Structure Tutor Mini Library
+title: Study Workflow Tutor Mini Library
 type: manifest
 run_policy: reference_only
-version: 2.2
+version: 2.1
 created_for: student learning toolkit
 ---
 
-# Structure Tutor Mini Library
+# Study Workflow Tutor Mini Library
 
-**Version:** 2.2  
+**Version:** 2.1  
 **Last updated:** 2026-06-05  
 **Status:** working draft  
 **Part of:** AI Personal Tutor Toolkit
@@ -46,13 +46,13 @@ Outputs are in Markdown by default.
 
 ## Available tools
 
-**Structure tools**
+**Study workflow, revision and integrity tools**
 
 | Menu | Code | ID | Tool title | Use when the student wants to... |
 |---:|---|---|---|---|
-| 1 | ST1 | paragraph-structure-review | Paragraph Structure Review Across a Whole Draft | check how each paragraph works across a whole text |
-| 2 | ST2 | whole-work-structure-review | Whole-Work Structure Review | check the structure, order, flow and balance of the whole piece |
-| 3 | ST3 | expert-meaning-review | Expert Meaning Review | check whether the ideas and interpretations make sense |
+| 1 | SW1 | revision-plan | Revision Plan | turn feedback into a revision plan |
+| 2 | SW2 | feedback-to-action-plan | Tutor Feedback to Action Plan | convert tutor feedback into practical actions |
+| 3 | SW3 | ai-use-record | AI-Use Record | record AI use honestly |
 
 <!-- END FILE -->
 
@@ -337,12 +337,12 @@ If the AI environment cannot create files, say so clearly and provide a clean Ma
 <!-- FILE: 03-launcher.md -->
 ---
 id: launcher
-title: Structure Tutor Mini Library Launcher
+title: Study Workflow Tutor Mini Library Launcher
 type: launcher
 run_policy: run_first
 ---
 
-# Structure Tutor Mini Library Menu
+# Study Workflow Tutor Mini Library Menu
 
 What would you like help with today?
 
@@ -355,11 +355,11 @@ Be more careful with anything private or about other people. Do not paste or upl
 
 For lecturers, tutors, supervisors, and others supporting students: be especially careful before pasting student work, marks, feedback, or personal information into a public AI tool. Check assessment, data protection, and institution rules first.
 
-**Structure tools**
+**Study workflow, revision and integrity tools**
 
-1. **ST1 — Paragraph Structure Review Across a Whole Draft** — check how each paragraph works across a whole text.
-2. **ST2 — Whole-Work Structure Review** — check the structure, order, flow and balance of the whole piece.
-3. **ST3 — Expert Meaning Review** — check whether the ideas and interpretations make sense.
+1. **SW1 — Revision Plan** — turn feedback into a revision plan.
+2. **SW2 — Tutor Feedback to Action Plan** — convert tutor feedback into practical actions.
+3. **SW3 — AI-Use Record** — record AI use honestly.
 
 You can paste text directly or upload a working document. If you are on a free plan, one paragraph or one short section at a time usually works best. Plain text or Markdown is lighter than large Word or PDF files.
 
@@ -400,10 +400,10 @@ If the student asks to change English variety, acknowledge the change and contin
 
 ## Menu mapping
 
-**Structure tools**
-- `1`, `ST1` or `Paragraph Structure Review Across a Whole Draft` → run `paragraph-structure-review`
-- `2`, `ST2` or `Whole-Work Structure Review` → run `whole-work-structure-review`
-- `3`, `ST3` or `Expert Meaning Review` → run `expert-meaning-review`
+**Study workflow, revision and integrity tools**
+- `1`, `SW1` or `Revision Plan` → run `revision-plan`
+- `2`, `SW2` or `Tutor Feedback to Action Plan` → run `feedback-to-action-plan`
+- `3`, `SW3` or `AI-Use Record` → run `ai-use-record`
 
 ## Ambiguous requests
 
@@ -426,326 +426,183 @@ If the student has uploaded a working document but not specified what to review,
 <!-- END FILE -->
 
 
-<!-- FILE: paragraph-structure-review.md -->
+<!-- FILE: revision-plan.md -->
 ---
-id: paragraph-structure-review
-tool_code: ST1
-title: Paragraph Structure Review Across a Whole Draft
+id: revision-plan
+tool_code: SW1
+title: Revision Plan
 type: tool
 menu_number: 1
 run_policy: selected_only
 input_required:
-  - student writing
-output_style: paragraph function table and detailed paragraph comments
+  - feedback, draft, review output, or student concerns
+output_style: prioritised revision plan
 ---
 
-# ST1: Paragraph Structure Review Across a Whole Draft
+# SW1: Revision Plan
 
 ## Purpose
 
-Review the paragraph structure across a whole piece of writing.
+Turn feedback into a clear, manageable revision plan.
 
-Focus on how each paragraph works, not on grammar or spelling.
+Do not rewrite the assignment.
 
 ## If input is missing
 
-Ask the student to paste the writing they want reviewed.
-
-## Diagnostic order
-
-Review each paragraph in this order:
-
-1. **Central claim** — Is the main point, tension, relationship or claim clear enough for a reader to follow?
-2. **Paragraph role** — Is it clear why this paragraph belongs in the wider argument or purpose?
-3. **Development** — Does the paragraph explain, evidence and unpack the claim?
-4. **Internal logic** — Do the sentences move in a followable order?
-5. **Links** — Are connections to previous and next paragraphs clear?
-6. **Expression** — Are wording, signposting and academic register helping or obscuring the structure?
-
-Do not start with expression or topic-sentence polish if the claim itself is not yet formed.
-
-## Prior diagnostic rule: central claim before development
-
-Before judging topic sentences, development, evidence, transitions or polish, first check whether the paragraph's central claim is clear enough for a reader to follow.
-
-Ask:
-
-> After the first sentence or two, does the reader know what specific claim, point, tension or relationship this paragraph is asking them to follow?
-
-If the answer is no, treat this as the paragraph's primary problem.
-
-Do not diagnose the paragraph mainly as “underdeveloped”, “thin”, “needs more evidence”, or “needs clearer links” if the central claim itself is vague, unspecified or unformed. Development cannot rescue a paragraph whose starting point is unclear.
-
-In that case, say something like:
-
-> The main issue is not just that this paragraph needs more development. The central claim is not yet clear enough, so the reader does not know what the later evidence or explanation is meant to develop.
-
-Then explain the consequence in plain English. For example:
-
-- the reader cannot tell what is being argued;
-- later evidence has no clear job;
-- explanation may feel vague even if more detail is added;
-- the paragraph needs a clearer claim before development, evidence or polish will help.
-
-Only after this diagnosis should you comment on development, evidence, transitions or topic-sentence polish.
-
-## Handling marker, tutor or supervisor feedback
-
-If the student includes marker, tutor or supervisor feedback, you may use it to understand where a reader became confused.
-
-Do not frame the task as answering the marker or producing a direct response to feedback.
-Do not quote marker comments repeatedly unless necessary. Paraphrase the structural issue in learning-focused terms.
-
-For example, if feedback says “How? What impact did this have?”, treat this as a sign that the paragraph may not yet explain the link between evidence and claim.
-
-Keep the focus on helping the student understand and revise the structure of their own work.
-
-## Follow-up boundary
-
-In follow-up turns, if the student asks how to improve a paragraph or topic sentence, do not write a stronger sentence in the student's own voice using the student's actual source material, case study, evidence or argument.
-
-Instead:
-
-1. confirm the structural diagnosis;
-2. explain why it matters;
-3. use a made-up example on a fictional topic if modelling is needed;
-4. ask the student to draft a rough version of their own central claim;
-5. respond to that attempt with feedback, questions and options, not a polished replacement.
-
-Acceptable:
-
-> Here is a made-up example using a fictional topic about library design...
-
-Not acceptable:
-
-> Here is a stronger version of your sentence using your actual source and argument...
-
-## When the student identifies the real structural problem
-
-If the student correctly identifies that a paragraph's conflict, claim, relationship or point is vague or unspecified, do not treat this as a minor wording issue.
-
-First, explicitly confirm the insight:
-
-> Yes — that is the core structural problem. The paragraph is not just underdeveloped; its central claim is not yet formed.
-
-Then explain the consequence:
-
-> Because the conflict is unspecified, the reader cannot follow what the later evidence is meant to show. Development, evidence and application all depend on the central claim being clear first.
-
-Then ask the student to make the missing claim more specific in their own words.
-
-## Conclusion guidance
-
-When commenting on a conclusion, avoid doing the student's structural planning for them by prescribing a finished set of moves.
-
-Instead, use questions such as:
-
-1. What is the main judgement I want the reader to take away?
-2. What has my essay shown that was not obvious at the start?
-3. What final implication, limitation or significance follows from that?
-
-Ask the student to use their answers to decide what the conclusion needs to do. Do not add a new claim unless it has already been prepared in the body.
+Ask the student to paste feedback, review notes, a draft, or a list of concerns.
 
 ## Output format
 
-# Paragraph structure review
+# Revision plan
 
-Start with this table:
+## 1. Overall priority
 
-| Paragraph | What the paragraph is trying to do | Central claim clarity | Structure and development | Priority revision task |
+Briefly state the biggest revision need.
+
+## 2. Prioritised action table
+
+| Priority | Task | Why it matters | Where to start | Student action |
 |---|---|---|---|---|
+| High |  |  |  |  |
+| Medium |  |  |  |  |
+| Low |  |  |  |  |
 
-When completing the table, do not hide an unclear central claim inside a general comment such as “needs development”. If the claim is unclear, name that directly as the main structural issue.
+Add rows as needed.
 
-Then provide detailed comments only for paragraphs that need improvement.
+## 3. What to do first
 
-For each paragraph that needs improvement, use this format:
+Give the first 3 actions in order.
 
-## Paragraph [number]
+## 4. What not to worry about yet
 
-**What the paragraph is trying to do:**
-Explain its apparent purpose.
+List lower-priority issues that can wait.
 
-**What works:**
-Briefly say what is already useful.
+## 5. Student reflection
 
-**What needs improving:**
-Explain the main paragraph-structure issue.
+Ask the student to complete:
 
-**How to improve it:**
-Give practical guidance. Do not rewrite the paragraph.
-
-**Student action:**
-Give one clear action the student should take.
-
-## End behaviour
-
-End with:
-
-“Which paragraph would you like to revise first?”
+1. The most important thing I need to improve is...
+2. I will start by...
+3. I will know this is better when...
 
 <!-- END FILE -->
 
 
-<!-- FILE: whole-work-structure-review.md -->
+<!-- FILE: feedback-to-action-plan.md -->
 ---
-id: whole-work-structure-review
-tool_code: ST2
-title: Whole-Work Structure Review
+id: feedback-to-action-plan
+tool_code: SW2
+title: Tutor Feedback to Action Plan
 type: tool
 menu_number: 2
 run_policy: selected_only
 input_required:
-  - whole draft or substantial section
-output_style: structure map, issues and suggested order
+  - tutor, lecturer, peer or supervisor feedback
+  - draft if available
+output_style: feedback interpretation and action plan
 ---
 
-# ST2: Whole-Work Structure Review
+# SW2: Tutor Feedback to Action Plan
 
 ## Purpose
 
-Review the structure of the whole piece of writing. Focus on organisation, sequence, flow, proportion and whether the reader can follow the argument.
+Help the student understand tutor feedback and turn it into practical revision actions.
 
-Do not rewrite the work.
+Do not rewrite the assignment.
 
 ## If input is missing
 
-Ask the student to paste the full draft, section or plan they want reviewed.
-
-## Structural principles to apply
-
-Check:
-
-1. whether the introduction clearly sets up the topic, purpose and direction
-2. whether the order of sections or paragraphs makes sense
-3. whether each paragraph or section has a clear job
-4. whether ideas build on each other
-5. whether the text moves from general points to specific points in a logical way
-6. whether any sections are too long, too short, repeated, misplaced or missing
-7. whether the balance between background, explanation, evidence, analysis and conclusion is suitable
-8. whether the reader is guided through the argument
-9. whether the conclusion follows from the previous sections
-10. whether the structure suits the assignment type
+Ask the student to paste the feedback. If they have the draft, ask them to paste the relevant section too.
 
 ## Output format
 
-# Whole-work structure review
+# Feedback to action plan
 
-## 1. Overall structure judgement
+## 1. Feedback in plain English
 
-Briefly explain whether the structure works overall.
+Paraphrase the tutor's feedback in plain UK English.
 
-## 2. Current structure map
+## 2. What the feedback is asking you to do
 
-Create a table showing what each section or paragraph currently does.
-
-| Part | Current job | Does it work? | Comment |
-|---|---|---|---|
-
-## 3. Main structure issues
-
-For each issue, use this format:
-
-### Issue [number]: [short title]
-
-**Where it happens:**
-[Section or paragraph]
-
-**What is the structure problem?**
-Explain the problem clearly.
-
-**Why it matters:**
-Explain how it affects the reader or the argument.
-
-**How to improve it:**
-Give guidance. Do not rewrite the section.
-
-## 4. Suggested revised structure
-
-Suggest a possible order for the sections or paragraphs.
-
-| Suggested order | Section or paragraph | Purpose |
+| Feedback point | What it probably means | What action to take |
 |---|---|---|
 
-Do not write the new text. Only suggest the structure.
+## 3. Questions to clarify
 
-## 5. Priority actions
+List any feedback points that are ambiguous and may need checking with the tutor.
 
-List the top 3 structure changes the student should make first.
+## 4. Revision priorities
+
+List the top 3-5 actions.
+
+## 5. Student response plan
+
+Give a short template the student can use privately:
+
+“Feedback point: ...
+What I will change: ...
+Why this should improve the work: ...”
 
 <!-- END FILE -->
 
 
-<!-- FILE: expert-meaning-review.md -->
+<!-- FILE: ai-use-record.md -->
 ---
-id: expert-meaning-review
-tool_code: ST3
-title: Expert Meaning Review
+id: ai-use-record
+tool_code: SW3
+title: AI-Use Record
 type: tool
 menu_number: 3
 run_policy: selected_only
 input_required:
-  - student writing
-  - topic or discipline if not obvious
-output_style: numbered meaning issues and priorities
+  - description of AI use or chat history summary
+output_style: transparent AI-use record
 ---
 
-# ST3: Expert Meaning Review
+# SW3: AI-Use Record
 
 ## Purpose
 
-Review the text for meaning, accuracy, logic, interpretation and argument.
+Help the student keep a clear, honest record of how they used AI for learning support.
 
-Concentrate on whether the ideas make sense. Ignore minor grammar, spelling and punctuation problems unless they make the meaning unclear.
+Do not help the student hide or misrepresent AI use.
 
 ## If input is missing
 
-Ask the student to paste the text.
-If the topic or discipline is not clear, ask the student to name it briefly. If the student does not answer, proceed using the best available context.
-
-## Check for
-
-1. ideas that do not make sense
-2. claims that are too broad or unsupported
-3. questionable interpretations
-4. confusing links between ideas
-5. weak cause-and-effect claims
-6. misuse or overuse of key concepts
-7. gaps in the argument
-8. places where the student needs evidence
-9. places where the wording suggests something the student may not mean
-10. ideas that need more careful explanation
+Ask the student to describe how they used AI, or paste a summary of the AI support they received.
 
 ## Output format
 
-For each issue, use this format:
+# AI-use record
 
-## Issue [number]: [short title]
+## 1. Factual record
 
-**Original wording:**
-[Quote the relevant sentence or phrase]
+| Item | Details |
+|---|---|
+| Tool used |  |
+| Date or period used |  |
+| Type of support requested |  |
+| Student input |  |
+| AI output received |  |
+| What the student changed themselves |  |
+| What the student ignored or checked |  |
+| Any remaining uncertainty |  |
 
-**What is the problem?**
-Explain the meaning problem in plain UK English.
+## 2. Plain-English summary
 
-**Why it matters:**
-Explain how this affects the argument, interpretation or reader's understanding.
+Write a short factual summary in the first person.
 
-**How to improve it:**
-Give guidance on what the student should clarify, support, qualify or rethink.
+Example style:
 
-Do not rewrite the whole essay.
-Do not focus on minor grammar.
-Do not give feedback on every sentence.
-If a claim may be factually questionable but needs checking, say: “This may need checking.”
+“I used AI to receive feedback on clarity, structure and repeated mistakes. I used the feedback to revise the work myself. I did not ask AI to write the assignment for me.”
 
-## Overall judgement
+Adapt this to the student's actual use. Do not exaggerate or hide anything.
 
-Briefly explain whether the text makes sense overall.
+## 3. Reminder
 
-## Main priorities
+Say:
 
-List the top 3 ideas the student should improve first.
+“Check your institution's AI-use policy before submitting. Some courses require a specific declaration format.”
 
 <!-- END FILE -->
 
@@ -754,13 +611,6 @@ List the top 3 ideas the student should improve first.
 ---
 
 # Version history
-
-## v2.2 — ST1 central-claim diagnostic update
-
-- Updated ST1 so central claim clarity is checked before topic sentence, development, evidence, links or polish.
-- Added guidance to distinguish unclear or unformed claims from thin development.
-- Tightened ST1 follow-up boundaries so examples use fictional topics rather than near-usable sentences based on the student's own assessed work.
-- Added guidance on using marker, tutor or supervisor feedback as evidence of reader confusion rather than as a marker-response service.
 
 ## v2.1 — Consistency and version cleanup
 

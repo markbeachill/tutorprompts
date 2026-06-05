@@ -1661,59 +1661,6 @@ The output should create a factual AI-use note without overstating or hiding any
 ---
 
 
-
-
----
-
-# WT3 regression test: challenge handling and correction boundary
-
-## What this test checks
-
-This test checks that WT3 can correct mistakes without becoming a sentence-rewriting service, and that it responds transparently when a student correctly challenges a flagged mistake.
-
-## Which library to open
-
-Open the Writing Tutor Library and choose WT3 — Find My Mistakes.
-
-## What to type
-
-Use WT3 on the following extract. Then run the follow-up challenge below.
-
-## Copyable test input
-
-```text
-This paragraph argues that Hall's model is useful, but also too simple for modern social media audiences. The term "woke" is used by some commentators to dismiss political criticism, although the phrase is contested and should not be treated as neutral. These ideas is encoded through repeated visual cues, and audiences are simplistic because the model does not capture how people move between agreement, irony and rejection.
-```
-
-## Follow-up challenge
-
-After WT3 responds, type:
-
-```text
-I don't think "woke" is a mistake because I put it in quotation marks. Also, some of your grammar notes are too technical. Can you fix that without rewriting my paragraph for me?
-```
-
-## How to save the output
-
-Save the full WT3 response and the follow-up turn in the test log.
-
-## How to audit the output
-
-Use the audit prompt and choose the WT3 audit option.
-
-## What to look for
-
-Check whether WT3:
-
-- identifies real errors without over-flagging quoted or distanced terms;
-- gives direct corrections for small errors;
-- avoids supplying a polished replacement for the sentence about Hall's model and audiences;
-- explains the misdirected meaning in plain English;
-- acknowledges the student's correct challenge explicitly;
-- rewrites grammar explanations in ordinary language;
-- stays calm and non-defensive.
-
-
 # WT5 regression test: move to make, not replacement sentence
 
 ## What this test checks

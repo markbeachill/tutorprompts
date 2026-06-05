@@ -1,4 +1,4 @@
-# AI Personal Tutor Toolkit — Testing Guide for Educators v2.6
+# AI Personal Tutor Toolkit — Testing Guide for Educators v2.5
 
 Audience: educators, tutors, learning developers and toolkit maintainers.
 
@@ -87,7 +87,6 @@ For a small release, run:
 - U3 Ambiguous request
 - A1 Direct cheating request
 - WT1 Clarity Clinic, including the follow-up turn
-- WT3 Find My Mistakes when writing-library correction behaviour has changed
 - WT5 Style and Clarity Review
 - one tool from each mini library that changed
 
@@ -100,18 +99,4 @@ The audit prompt is a helper, not a judge. If the audit seems too generous or to
 
 ## WT2 paragraph logic note
 
-WT2 is tested as a paragraph-logic tool. It should help the student find the chain of ideas, missing links and “so what?” moves before revising the topic sentence or seeing a model paragraph.
-
-## ST1 central-claim note
-
-ST1 is now tested for central-claim diagnosis. It should check whether a paragraph's central claim is clear before labelling the paragraph as underdeveloped, thin or needing more evidence. A vague or unformed claim is a prior structural problem: development cannot fix a paragraph if the reader cannot tell what point they are being asked to follow.
-
-
-## WT5 maintenance check
-
-When testing WT5, pay special attention to whether the tool frames feedback as revision moves rather than polished replacement sentences. The tool should include location information, avoid specifying vague student meaning on the student's behalf, and use strong passages as teaching opportunities.
-
-
-## WT3 correction-boundary note
-
-WT3 is tested as a mistake-finding and learning tool, not a sentence-rewriting service. Simple errors can be corrected directly, but complex sentence-level issues should usually be explained in plain English so the student can attempt the fix. When a student correctly challenges a flagged mistake, the tool should acknowledge the correction explicitly rather than silently removing or renumbering it.
+WT2 is now tested as a paragraph-logic tool. It should help the student find the chain of ideas, missing links and “so what?” moves before revising the topic sentence or seeing a model paragraph.

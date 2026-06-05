@@ -4,13 +4,13 @@ id: manifest
 title: Academic Thinking Tutor Mini Library
 type: manifest
 run_policy: reference_only
-version: 2.2
+version: 2.1
 created_for: student learning toolkit
 ---
 
 # Academic Thinking Tutor Mini Library
 
-**Version:** 2.2  
+**Version:** 2.1  
 **Last updated:** 2026-06-05  
 **Status:** working draft  
 **Part of:** AI Personal Tutor Toolkit
@@ -1297,10 +1297,6 @@ End with:
 ---
 
 # Version history
-
-## v2.2 — Suite archive refresh
-
-- Included unchanged library in the v2.2 prompt-library suite alongside the ST1 structure update.
 
 ## v2.1 — Consistency and version cleanup
 

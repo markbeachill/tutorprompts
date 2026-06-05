@@ -1,32 +1,22 @@
 # AI Personal Tutor Toolkit site
 
-This is the deployable GitHub Pages version of the AI Personal Tutor Toolkit.
+This repository contains a static GitHub Pages site for the AI Personal Tutor Toolkit.
 
 ## Folder structure
 
-- Root HTML files: public website pages
-- `style.css`: shared styling
-- `prompt-libraries/latest/`: current student-facing prompt libraries with stable filenames
-- `prompt-libraries/v2.0/`: fixed archive of prompt library version 2.0
-- `audit-library/latest/`: current educator testing and audit materials with stable filenames
-- `audit-library/v2.4/`: fixed archive of testing pack version 2.4
+- `prompt-libraries/latest/`: current prompt library downloads used by the public site
+- `prompt-libraries/v2.1/`: fixed archive of prompt library version v2.1
+- `prompt-libraries/v2.2/`: fixed archive of prompt library version v2.2
+- `prompt-libraries/v2.3/`: fixed archive of prompt library version v2.3
+- `prompt-libraries/v2.4/`: fixed archive of prompt library version v2.4
+- `audit-library/latest/`: current testing and audit downloads used by the public site
+- `audit-library/v2.5/`: fixed archive of testing pack version v2.5
+- `audit-library/v2.6/`: fixed archive of testing pack version v2.6
+- `audit-library/v2.7/`: fixed archive of testing pack version v2.7
+- `audit-library/v2.8/`: fixed archive of testing pack version v2.8
 
-## Versioning approach
+Student-facing pages should link to the `latest/` folders. Versioned folders are for educators, developers and audit trails.
 
-The website links to the `latest/` folders so download URLs can remain stable.
-Versioned folders preserve the exact release files for developers and educators who need to know which version they are testing or adapting.
-
-Current prompt library version: v2.0
-Current testing/audit pack version: v2.4
-
-## Deploying
-
-Upload the contents of this folder to the root of a GitHub Pages repository.
-
-
-## Site editing rules
-
-- Student-facing pages should explain what the toolkit does and how to use it. Avoid GitHub folder-structure details on Home, Tools, Examples and library pages.
-- Put visible content inside `<section class="hero"><div class="container">...` or inside `<div class="container"><section class="panel">...`.
-- Do not place `<section class="panel">` directly under `<main>` unless it is an intentional exception. The CSS includes a fallback guardrail, but the clean structure is still preferred.
-- Keep version-folder and release-archive details on `testing.html`, `changelog.html` or in this README.
+Current prompt library version: v2.4
+Current testing/audit pack version: v2.8
+Current site package: v2.11

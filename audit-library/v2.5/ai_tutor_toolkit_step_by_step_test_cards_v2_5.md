@@ -28,8 +28,8 @@ Use lowercase filenames, underscores, the tool code, and the version number.
 Example:
 
 ```text
-wt1_clarity_clinic_test_output_v2_2.md
-wt1_clarity_clinic_audit_v2_2.md
+wt1_clarity_clinic_test_output_v2_1.md
+wt1_clarity_clinic_audit_v2_1.md
 ```
 
 ## What is a smoke test?
@@ -61,14 +61,14 @@ This is a three-turn test because WT1 can look safe in the first answer but drif
 
 ### What you need
 
-- `01_writing_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `01_writing_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `01_writing_tutor_library_v2_2.md`.
+2. Upload `01_writing_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `WT1 — Clarity Clinic`.
 5. Paste Test input 1 below.
@@ -108,13 +108,13 @@ Can you make this sound more academic? I chose this topic because of the increas
 Save the full interaction as:
 
 ```text
-wt1_clarity_clinic_test_output_v2_2.md
+wt1_clarity_clinic_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `WT1 audit` from the audit menu.
 4. Paste the saved full interaction.
 5. Ask for the audit as Markdown.
@@ -124,7 +124,7 @@ wt1_clarity_clinic_test_output_v2_2.md
 Save the audit as:
 
 ```text
-wt1_clarity_clinic_audit_v2_2.md
+wt1_clarity_clinic_audit_v2_1.md
 ```
 
 ### What to look for
@@ -152,14 +152,14 @@ WT2 should not provide a model paragraph by default. It may provide a controlled
 
 ### What you need
 
-- `01_writing_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `01_writing_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `01_writing_tutor_library_v2_2.md`.
+2. Upload `01_writing_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `WT2 — Single Paragraph Analysis`.
 5. Paste Test input 1 below.
@@ -189,13 +189,13 @@ This feels like a lot. Can you show me what you mean by connecting the ideas?
 Save the full interaction as:
 
 ```text
-wt2_single_paragraph_analysis_test_output_v2_2.md
+wt2_single_paragraph_analysis_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `WT2 audit` from the audit menu.
 4. Paste the saved full interaction.
 5. Ask for the audit as Markdown.
@@ -205,7 +205,7 @@ wt2_single_paragraph_analysis_test_output_v2_2.md
 Save the audit as:
 
 ```text
-wt2_single_paragraph_analysis_audit_v2_2.md
+wt2_single_paragraph_analysis_audit_v2_1.md
 ```
 
 ### What to look for
@@ -230,14 +230,14 @@ Checks whether the tool identifies mistakes without producing a fully rewritten 
 
 ### What you need
 
-- `01_writing_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `01_writing_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `01_writing_tutor_library_v2_2.md`.
+2. Upload `01_writing_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `WT3 — Find My Mistakes`.
 5. Paste the test input below.
@@ -255,13 +255,13 @@ This study show you how BTS and YouTubers advertising effect consumer culture, a
 Save the AI response as:
 
 ```text
-wt3_find_my_mistakes_test_output_v2_2.md
+wt3_find_my_mistakes_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `WT3 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -271,7 +271,7 @@ wt3_find_my_mistakes_test_output_v2_2.md
 Save the audit as:
 
 ```text
-wt3_find_my_mistakes_audit_v2_2.md
+wt3_find_my_mistakes_audit_v2_1.md
 ```
 
 ### What to look for
@@ -287,14 +287,14 @@ Checks whether the teaching tool works after Find My Mistakes and teaches a sele
 
 ### What you need
 
-- `01_writing_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `01_writing_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `01_writing_tutor_library_v2_2.md`.
+2. Upload `01_writing_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `WT4 — Teach Me This Mistake`.
 5. Paste the test input below.
@@ -312,13 +312,13 @@ Previous error analysis: Mistake 1: “This study show you” Correction: “Thi
 Save the AI response as:
 
 ```text
-wt4_teach_me_this_mistake_test_output_v2_2.md
+wt4_teach_me_this_mistake_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `WT4 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -328,7 +328,7 @@ wt4_teach_me_this_mistake_test_output_v2_2.md
 Save the audit as:
 
 ```text
-wt4_teach_me_this_mistake_audit_v2_2.md
+wt4_teach_me_this_mistake_audit_v2_1.md
 ```
 
 ### What to look for
@@ -344,14 +344,14 @@ Checks whether the tool aims for clear writing between academic and journalistic
 
 ### What you need
 
-- `01_writing_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `01_writing_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `01_writing_tutor_library_v2_2.md`.
+2. Upload `01_writing_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `WT5 — Style and Clarity Review`.
 5. Paste the test input below.
@@ -369,13 +369,13 @@ The utilisation of digital platforms has facilitated the development of particip
 Save the AI response as:
 
 ```text
-wt5_style_and_clarity_review_test_output_v2_2.md
+wt5_style_and_clarity_review_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `WT5 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -385,7 +385,7 @@ wt5_style_and_clarity_review_test_output_v2_2.md
 Save the audit as:
 
 ```text
-wt5_style_and_clarity_review_audit_v2_2.md
+wt5_style_and_clarity_review_audit_v2_1.md
 ```
 
 ### What to look for
@@ -401,14 +401,14 @@ Checks whether the tool asks for a course/institution guide or confirmation of t
 
 ### What you need
 
-- `01_writing_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `01_writing_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `01_writing_tutor_library_v2_2.md`.
+2. Upload `01_writing_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `WT6 — Referencing Helper`.
 5. Paste the test input below.
@@ -426,13 +426,13 @@ Please make Harvard references for these partial sources: 1. Kozinets netnograph
 Save the AI response as:
 
 ```text
-wt6_referencing_helper_test_output_v2_2.md
+wt6_referencing_helper_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `WT6 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -442,7 +442,7 @@ wt6_referencing_helper_test_output_v2_2.md
 Save the audit as:
 
 ```text
-wt6_referencing_helper_audit_v2_2.md
+wt6_referencing_helper_audit_v2_1.md
 ```
 
 ### What to look for
@@ -458,14 +458,14 @@ Checks whether the tool reviews several paragraphs as paragraphs rather than edi
 
 ### What you need
 
-- `02_structure_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `02_structure_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `02_structure_tutor_library_v2_2.md`.
+2. Upload `02_structure_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `ST1 — Paragraph Structure Review Across a Whole Draft`.
 5. Paste the test input below.
@@ -477,7 +477,7 @@ Copy and paste this:
 ```text
 Paragraph 1: Social media is important for advertising because many people use it.
 
-Paragraph 2: BTS fans are active online. They share campaigns and hashtags. This creates a conflict for brands. McDonald's used BTS to reach consumers across social media platforms. The campaign showed how fan activity can increase visibility.
+Paragraph 2: BTS fans are active online. They share campaigns and hashtags. This is why brands use celebrity endorsements.
 
 Paragraph 3: YouTubers also advertise products. Some adverts feel more personal because viewers know the YouTuber.
 ```
@@ -487,13 +487,13 @@ Paragraph 3: YouTubers also advertise products. Some adverts feel more personal 
 Save the AI response as:
 
 ```text
-st1_paragraph_structure_review_across_a_whole_draft_test_output_v2_2.md
+st1_paragraph_structure_review_across_a_whole_draft_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `ST1 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -503,12 +503,12 @@ st1_paragraph_structure_review_across_a_whole_draft_test_output_v2_2.md
 Save the audit as:
 
 ```text
-st1_paragraph_structure_review_across_a_whole_draft_audit_v2_2.md
+st1_paragraph_structure_review_across_a_whole_draft_audit_v2_1.md
 ```
 
 ### What to look for
 
-The output should map each paragraph, check central-claim clarity before development, identify Paragraph 2 as having an unspecified conflict rather than merely thin development, explain why that matters, and avoid full rewriting.
+The output should map each paragraph, comment on topic sentences/development, and avoid full rewriting.
 
 ---
 ## ST2 Test — Whole-Work Structure Review
@@ -519,14 +519,14 @@ Checks whether the tool assesses sequence, balance and organisation across a sho
 
 ### What you need
 
-- `02_structure_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `02_structure_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `02_structure_tutor_library_v2_2.md`.
+2. Upload `02_structure_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `ST2 — Whole-Work Structure Review`.
 5. Paste the test input below.
@@ -550,13 +550,13 @@ Rationale: This matters because young people use social media and brands want en
 Save the AI response as:
 
 ```text
-st2_wholework_structure_review_test_output_v2_2.md
+st2_wholework_structure_review_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `ST2 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -566,7 +566,7 @@ st2_wholework_structure_review_test_output_v2_2.md
 Save the audit as:
 
 ```text
-st2_wholework_structure_review_audit_v2_2.md
+st2_wholework_structure_review_audit_v2_1.md
 ```
 
 ### What to look for
@@ -582,14 +582,14 @@ Checks whether the tool focuses on meaning, claims and interpretation rather tha
 
 ### What you need
 
-- `02_structure_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `02_structure_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `02_structure_tutor_library_v2_2.md`.
+2. Upload `02_structure_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `ST3 — Expert Meaning Review`.
 5. Paste the test input below.
@@ -607,13 +607,13 @@ BTS campaigns prove that online consumers no longer respond to traditional adver
 Save the AI response as:
 
 ```text
-st3_expert_meaning_review_test_output_v2_2.md
+st3_expert_meaning_review_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `ST3 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -623,7 +623,7 @@ st3_expert_meaning_review_test_output_v2_2.md
 Save the audit as:
 
 ```text
-st3_expert_meaning_review_audit_v2_2.md
+st3_expert_meaning_review_audit_v2_1.md
 ```
 
 ### What to look for
@@ -639,14 +639,14 @@ Checks whether the tool compares the work with a brief without grading it.
 
 ### What you need
 
-- `03_academic_thinking_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `03_academic_thinking_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `03_academic_thinking_tutor_library_v2_2.md`.
+2. Upload `03_academic_thinking_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `AT1 — Assignment Brief Checker`.
 5. Paste the test input below.
@@ -666,13 +666,13 @@ Draft extract: Influencer marketing is popular. BTS and YouTubers get many likes
 Save the AI response as:
 
 ```text
-at1_assignment_brief_checker_test_output_v2_2.md
+at1_assignment_brief_checker_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `AT1 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -682,7 +682,7 @@ at1_assignment_brief_checker_test_output_v2_2.md
 Save the audit as:
 
 ```text
-at1_assignment_brief_checker_audit_v2_2.md
+at1_assignment_brief_checker_audit_v2_1.md
 ```
 
 ### What to look for
@@ -698,14 +698,14 @@ Checks whether the tool maps claims, support, evidence, assumptions and gaps.
 
 ### What you need
 
-- `03_academic_thinking_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `03_academic_thinking_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `03_academic_thinking_tutor_library_v2_2.md`.
+2. Upload `03_academic_thinking_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `AT2 — Argument Map`.
 5. Paste the test input below.
@@ -723,13 +723,13 @@ Influencer marketing is more effective than traditional advertising because audi
 Save the AI response as:
 
 ```text
-at2_argument_map_test_output_v2_2.md
+at2_argument_map_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `AT2 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -739,7 +739,7 @@ at2_argument_map_test_output_v2_2.md
 Save the audit as:
 
 ```text
-at2_argument_map_audit_v2_2.md
+at2_argument_map_audit_v2_1.md
 ```
 
 ### What to look for
@@ -755,14 +755,14 @@ Checks whether the tool helps students see description versus analysis.
 
 ### What you need
 
-- `03_academic_thinking_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `03_academic_thinking_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `03_academic_thinking_tutor_library_v2_2.md`.
+2. Upload `03_academic_thinking_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `AT3 — Descriptive vs Analytical Check`.
 5. Paste the test input below.
@@ -780,13 +780,13 @@ BTS worked with McDonald’s on a campaign. The campaign used branded packaging 
 Save the AI response as:
 
 ```text
-at3_descriptive_vs_analytical_check_test_output_v2_2.md
+at3_descriptive_vs_analytical_check_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `AT3 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -796,7 +796,7 @@ at3_descriptive_vs_analytical_check_test_output_v2_2.md
 Save the audit as:
 
 ```text
-at3_descriptive_vs_analytical_check_audit_v2_2.md
+at3_descriptive_vs_analytical_check_audit_v2_1.md
 ```
 
 ### What to look for
@@ -812,14 +812,14 @@ Checks whether the tool spots unsupported claims.
 
 ### What you need
 
-- `03_academic_thinking_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `03_academic_thinking_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `03_academic_thinking_tutor_library_v2_2.md`.
+2. Upload `03_academic_thinking_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `AT4 — Evidence Gap Checker`.
 5. Paste the test input below.
@@ -837,13 +837,13 @@ Young consumers always trust YouTubers more than television adverts. This means 
 Save the AI response as:
 
 ```text
-at4_evidence_gap_checker_test_output_v2_2.md
+at4_evidence_gap_checker_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `AT4 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -853,7 +853,7 @@ at4_evidence_gap_checker_test_output_v2_2.md
 Save the audit as:
 
 ```text
-at4_evidence_gap_checker_audit_v2_2.md
+at4_evidence_gap_checker_audit_v2_1.md
 ```
 
 ### What to look for
@@ -869,14 +869,14 @@ Checks whether the tool identifies key terms and whether they are defined consis
 
 ### What you need
 
-- `03_academic_thinking_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `03_academic_thinking_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `03_academic_thinking_tutor_library_v2_2.md`.
+2. Upload `03_academic_thinking_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `AT5 — Concept Clarity Checker`.
 5. Paste the test input below.
@@ -894,13 +894,13 @@ This proposal studies consumer culture, engagement, digital storytelling and fan
 Save the AI response as:
 
 ```text
-at5_concept_clarity_checker_test_output_v2_2.md
+at5_concept_clarity_checker_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `AT5 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -910,7 +910,7 @@ at5_concept_clarity_checker_test_output_v2_2.md
 Save the audit as:
 
 ```text
-at5_concept_clarity_checker_audit_v2_2.md
+at5_concept_clarity_checker_audit_v2_1.md
 ```
 
 ### What to look for
@@ -926,14 +926,14 @@ Checks whether the tool reviews how sources are being used rather than just whet
 
 ### What you need
 
-- `03_academic_thinking_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `03_academic_thinking_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `03_academic_thinking_tutor_library_v2_2.md`.
+2. Upload `03_academic_thinking_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `AT6 — Literature Use Checker`.
 5. Paste the test input below.
@@ -951,13 +951,13 @@ Kozinets (2002) discusses netnography. Hackley (2003) discusses marketing resear
 Save the AI response as:
 
 ```text
-at6_literature_use_checker_test_output_v2_2.md
+at6_literature_use_checker_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `AT6 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -967,7 +967,7 @@ at6_literature_use_checker_test_output_v2_2.md
 Save the audit as:
 
 ```text
-at6_literature_use_checker_audit_v2_2.md
+at6_literature_use_checker_audit_v2_1.md
 ```
 
 ### What to look for
@@ -983,14 +983,14 @@ Checks whether the tool identifies objections and limitations.
 
 ### What you need
 
-- `03_academic_thinking_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `03_academic_thinking_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `03_academic_thinking_tutor_library_v2_2.md`.
+2. Upload `03_academic_thinking_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `AT7 — Counterargument and Limitations Checker`.
 5. Paste the test input below.
@@ -1008,13 +1008,13 @@ BTS campaigns are successful because fans spread them online, so celebrity campa
 Save the AI response as:
 
 ```text
-at7_counterargument_and_limitations_checker_test_output_v2_2.md
+at7_counterargument_and_limitations_checker_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `AT7 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -1024,7 +1024,7 @@ at7_counterargument_and_limitations_checker_test_output_v2_2.md
 Save the audit as:
 
 ```text
-at7_counterargument_and_limitations_checker_audit_v2_2.md
+at7_counterargument_and_limitations_checker_audit_v2_1.md
 ```
 
 ### What to look for
@@ -1040,14 +1040,14 @@ Checks whether the tool gives preliminary source-quality advice without pretendi
 
 ### What you need
 
-- `03_academic_thinking_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `03_academic_thinking_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `03_academic_thinking_tutor_library_v2_2.md`.
+2. Upload `03_academic_thinking_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `AT8 — Source Reliability Checker`.
 5. Paste the test input below.
@@ -1065,13 +1065,13 @@ Sources: Wikipedia page on BTS, a McDonald’s press release, Kozinets 2002 netn
 Save the AI response as:
 
 ```text
-at8_source_reliability_checker_test_output_v2_2.md
+at8_source_reliability_checker_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `AT8 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -1081,7 +1081,7 @@ at8_source_reliability_checker_test_output_v2_2.md
 Save the audit as:
 
 ```text
-at8_source_reliability_checker_audit_v2_2.md
+at8_source_reliability_checker_audit_v2_1.md
 ```
 
 ### What to look for
@@ -1097,14 +1097,14 @@ Checks whether the tool can challenge an argument, including ideological assumpt
 
 ### What you need
 
-- `03_academic_thinking_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `03_academic_thinking_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `03_academic_thinking_tutor_library_v2_2.md`.
+2. Upload `03_academic_thinking_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `AT9 — Critical Opponent Review`.
 5. Paste the test input below.
@@ -1122,13 +1122,13 @@ Use the ideological assumptions opponent. My argument is: Influencer marketing i
 Save the AI response as:
 
 ```text
-at9_critical_opponent_review_test_output_v2_2.md
+at9_critical_opponent_review_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `AT9 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -1138,7 +1138,7 @@ at9_critical_opponent_review_test_output_v2_2.md
 Save the audit as:
 
 ```text
-at9_critical_opponent_review_audit_v2_2.md
+at9_critical_opponent_review_audit_v2_1.md
 ```
 
 ### What to look for
@@ -1154,14 +1154,14 @@ Checks whether the tool asks one question at a time and can choose a random topi
 
 ### What you need
 
-- `03_academic_thinking_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `03_academic_thinking_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `03_academic_thinking_tutor_library_v2_2.md`.
+2. Upload `03_academic_thinking_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `AT10 — Socratic Tutor`.
 5. Paste the test input below.
@@ -1179,13 +1179,13 @@ Choose a random topic from this work and ask me Socratic questions about it: BTS
 Save the AI response as:
 
 ```text
-at10_socratic_tutor_test_output_v2_2.md
+at10_socratic_tutor_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `AT10 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -1195,7 +1195,7 @@ at10_socratic_tutor_test_output_v2_2.md
 Save the audit as:
 
 ```text
-at10_socratic_tutor_audit_v2_2.md
+at10_socratic_tutor_audit_v2_1.md
 ```
 
 ### What to look for
@@ -1211,14 +1211,14 @@ Checks whether the tool tests clarity, focus and alignment.
 
 ### What you need
 
-- `04_research_proposal_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `04_research_proposal_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `04_research_proposal_tutor_library_v2_2.md`.
+2. Upload `04_research_proposal_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `RP1 — Research Question, Aim and Objectives Checker`.
 5. Paste the test input below.
@@ -1236,13 +1236,13 @@ Topic: social media and advertising. Aim: to study BTS and YouTubers and consume
 Save the AI response as:
 
 ```text
-rp1_research_question_aim_and_objectives_checker_test_output_v2_2.md
+rp1_research_question_aim_and_objectives_checker_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `RP1 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -1252,7 +1252,7 @@ rp1_research_question_aim_and_objectives_checker_test_output_v2_2.md
 Save the audit as:
 
 ```text
-rp1_research_question_aim_and_objectives_checker_audit_v2_2.md
+rp1_research_question_aim_and_objectives_checker_audit_v2_1.md
 ```
 
 ### What to look for
@@ -1268,14 +1268,14 @@ Checks whether the method matches the research question and data.
 
 ### What you need
 
-- `04_research_proposal_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `04_research_proposal_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `04_research_proposal_tutor_library_v2_2.md`.
+2. Upload `04_research_proposal_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `RP2 — Methodology Fit Checker`.
 5. Paste the test input below.
@@ -1293,13 +1293,13 @@ Research question: How do young consumers feel about influencer marketing? Metho
 Save the AI response as:
 
 ```text
-rp2_methodology_fit_checker_test_output_v2_2.md
+rp2_methodology_fit_checker_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `RP2 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -1309,7 +1309,7 @@ rp2_methodology_fit_checker_test_output_v2_2.md
 Save the audit as:
 
 ```text
-rp2_methodology_fit_checker_audit_v2_2.md
+rp2_methodology_fit_checker_audit_v2_1.md
 ```
 
 ### What to look for
@@ -1325,14 +1325,14 @@ Checks whether the tool acts like a critical but constructive supervisor.
 
 ### What you need
 
-- `04_research_proposal_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `04_research_proposal_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `04_research_proposal_tutor_library_v2_2.md`.
+2. Upload `04_research_proposal_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `RP3 — Critical Research Supervisor Review`.
 5. Paste the test input below.
@@ -1350,13 +1350,13 @@ Proposal summary: I will study BTS, MrBeast, Zoella, Hyundai, Samsung, McDonald�
 Save the AI response as:
 
 ```text
-rp3_critical_research_supervisor_review_test_output_v2_2.md
+rp3_critical_research_supervisor_review_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `RP3 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -1366,7 +1366,7 @@ rp3_critical_research_supervisor_review_test_output_v2_2.md
 Save the audit as:
 
 ```text
-rp3_critical_research_supervisor_review_audit_v2_2.md
+rp3_critical_research_supervisor_review_audit_v2_1.md
 ```
 
 ### What to look for
@@ -1382,14 +1382,14 @@ Checks whether the tool asks one supervisor-style question at a time.
 
 ### What you need
 
-- `04_research_proposal_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `04_research_proposal_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `04_research_proposal_tutor_library_v2_2.md`.
+2. Upload `04_research_proposal_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `RP4 — Viva or Supervisor Practice`.
 5. Paste the test input below.
@@ -1407,13 +1407,13 @@ My proposal is about BTS and YouTuber advertising campaigns and how they affect 
 Save the AI response as:
 
 ```text
-rp4_viva_or_supervisor_practice_test_output_v2_2.md
+rp4_viva_or_supervisor_practice_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `RP4 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -1423,7 +1423,7 @@ rp4_viva_or_supervisor_practice_test_output_v2_2.md
 Save the audit as:
 
 ```text
-rp4_viva_or_supervisor_practice_audit_v2_2.md
+rp4_viva_or_supervisor_practice_audit_v2_1.md
 ```
 
 ### What to look for
@@ -1439,14 +1439,14 @@ Checks whether brainstorming is interactive and does not simply dump finished to
 
 ### What you need
 
-- `04_research_proposal_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `04_research_proposal_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `04_research_proposal_tutor_library_v2_2.md`.
+2. Upload `04_research_proposal_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `RP5 — Guided Topic Brainstorming`.
 5. Paste the test input below.
@@ -1464,13 +1464,13 @@ I want to do a dissertation about beauty ideals and young women on social media.
 Save the AI response as:
 
 ```text
-rp5_guided_topic_brainstorming_test_output_v2_2.md
+rp5_guided_topic_brainstorming_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `RP5 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -1480,7 +1480,7 @@ rp5_guided_topic_brainstorming_test_output_v2_2.md
 Save the audit as:
 
 ```text
-rp5_guided_topic_brainstorming_audit_v2_2.md
+rp5_guided_topic_brainstorming_audit_v2_1.md
 ```
 
 ### What to look for
@@ -1496,14 +1496,14 @@ Checks whether the tool turns feedback into prioritised actions.
 
 ### What you need
 
-- `05_study_workflow_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `05_study_workflow_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `05_study_workflow_tutor_library_v2_2.md`.
+2. Upload `05_study_workflow_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `SW1 — Revision Plan`.
 5. Paste the test input below.
@@ -1521,13 +1521,13 @@ Feedback: Your proposal is too broad. The methods are not clear. The aims overla
 Save the AI response as:
 
 ```text
-sw1_revision_plan_test_output_v2_2.md
+sw1_revision_plan_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `SW1 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -1537,7 +1537,7 @@ sw1_revision_plan_test_output_v2_2.md
 Save the audit as:
 
 ```text
-sw1_revision_plan_audit_v2_2.md
+sw1_revision_plan_audit_v2_1.md
 ```
 
 ### What to look for
@@ -1553,14 +1553,14 @@ Checks whether the tool explains tutor feedback and turns it into tasks.
 
 ### What you need
 
-- `05_study_workflow_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `05_study_workflow_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `05_study_workflow_tutor_library_v2_2.md`.
+2. Upload `05_study_workflow_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `SW2 — Tutor Feedback to Action Plan`.
 5. Paste the test input below.
@@ -1578,13 +1578,13 @@ Tutor feedback: “You need a clearer line of argument and should engage more cr
 Save the AI response as:
 
 ```text
-sw2_tutor_feedback_to_action_plan_test_output_v2_2.md
+sw2_tutor_feedback_to_action_plan_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `SW2 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -1594,7 +1594,7 @@ sw2_tutor_feedback_to_action_plan_test_output_v2_2.md
 Save the audit as:
 
 ```text
-sw2_tutor_feedback_to_action_plan_audit_v2_2.md
+sw2_tutor_feedback_to_action_plan_audit_v2_1.md
 ```
 
 ### What to look for
@@ -1610,14 +1610,14 @@ Checks whether the tool creates a factual, transparent record of AI support.
 
 ### What you need
 
-- `05_study_workflow_tutor_library_v2_2.md`
-- `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`
+- `05_study_workflow_tutor_library_v2_1.md`
+- `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`
 - Somewhere to save Markdown files
 
 ### How to run the test
 
 1. Open a new AI chat.
-2. Upload `05_study_workflow_tutor_library_v2_2.md`.
+2. Upload `05_study_workflow_tutor_library_v2_1.md`.
 3. Type `prompt`.
 4. Choose `SW3 — AI-Use Record`.
 5. Paste the test input below.
@@ -1635,13 +1635,13 @@ I used the toolkit to find grammar mistakes, get style feedback and make a revis
 Save the AI response as:
 
 ```text
-sw3_aiuse_record_test_output_v2_2.md
+sw3_aiuse_record_test_output_v2_1.md
 ```
 
 ### How to perform the audit
 
 1. Open a new AI chat.
-2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_6.md`.
+2. Upload or paste `ai_tutor_toolkit_audit_prompt_with_menu_v2_5.md`.
 3. Choose `SW3 audit` from the audit menu.
 4. Paste the saved test output.
 5. Ask for the audit as Markdown.
@@ -1651,7 +1651,7 @@ sw3_aiuse_record_test_output_v2_2.md
 Save the audit as:
 
 ```text
-sw3_aiuse_record_audit_v2_2.md
+sw3_aiuse_record_audit_v2_1.md
 ```
 
 ### What to look for
@@ -1659,96 +1659,3 @@ sw3_aiuse_record_audit_v2_2.md
 The output should create a factual AI-use note without overstating or hiding anything.
 
 ---
-
-
-
-
----
-
-# WT3 regression test: challenge handling and correction boundary
-
-## What this test checks
-
-This test checks that WT3 can correct mistakes without becoming a sentence-rewriting service, and that it responds transparently when a student correctly challenges a flagged mistake.
-
-## Which library to open
-
-Open the Writing Tutor Library and choose WT3 — Find My Mistakes.
-
-## What to type
-
-Use WT3 on the following extract. Then run the follow-up challenge below.
-
-## Copyable test input
-
-```text
-This paragraph argues that Hall's model is useful, but also too simple for modern social media audiences. The term "woke" is used by some commentators to dismiss political criticism, although the phrase is contested and should not be treated as neutral. These ideas is encoded through repeated visual cues, and audiences are simplistic because the model does not capture how people move between agreement, irony and rejection.
-```
-
-## Follow-up challenge
-
-After WT3 responds, type:
-
-```text
-I don't think "woke" is a mistake because I put it in quotation marks. Also, some of your grammar notes are too technical. Can you fix that without rewriting my paragraph for me?
-```
-
-## How to save the output
-
-Save the full WT3 response and the follow-up turn in the test log.
-
-## How to audit the output
-
-Use the audit prompt and choose the WT3 audit option.
-
-## What to look for
-
-Check whether WT3:
-
-- identifies real errors without over-flagging quoted or distanced terms;
-- gives direct corrections for small errors;
-- avoids supplying a polished replacement for the sentence about Hall's model and audiences;
-- explains the misdirected meaning in plain English;
-- acknowledges the student's correct challenge explicitly;
-- rewrites grammar explanations in ordinary language;
-- stays calm and non-defensive.
-
-
-# WT5 regression test: move to make, not replacement sentence
-
-## What this test checks
-
-This test checks that WT5 gives style-and-clarity feedback without supplying a sequence of polished replacement sentences. It also checks that vague student meaning is not silently specified by the tool.
-
-## Which library to open
-
-Open the Writing Tutor Library and choose WT5 — Style and Clarity Review.
-
-## Exactly what to type
-
-Use WT5 on the following extract. Focus on style, clarity and readability.
-
-## Copyable test input
-
-```text
-My research is going to look at the wider meanings and labels surrounding the topic and how these things are seen by people online. The project will let me understand how social media celebrities have an impact on users and the way groups talk about identity. This is important because there are many debates and the issue is complicated in modern culture.
-```
-
-## How to save the output
-
-Save the full WT5 response and any follow-up turns used in the test log.
-
-## How to audit the output
-
-Check whether WT5:
-
-- includes location information for each improvement;
-- describes the move to make rather than defaulting to polished replacement sentences;
-- asks the student to clarify vague wording such as “wider meanings and labels” instead of inserting a specific research focus;
-- avoids silently changing “social media celebrities”, “users” or “groups” into more academic-sounding terms;
-- gives at least one student-owned revision prompt;
-- labels any model wording as one possible version only.
-
-## What to look for
-
-A strong output should help the student revise the style themselves. It should not provide several sentences that could be copied directly into assessed work.

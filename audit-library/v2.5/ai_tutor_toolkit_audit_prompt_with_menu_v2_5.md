@@ -87,15 +87,6 @@ For WT2 in particular, check whether the output:
 ### Full review and diagnostic tools
 
 For tools such as WT3, WT5, ST1, ST2, ST3, RP3 and SW1, a full structured review is expected. Do not mark them down for not being interactive. Instead, check whether they avoid rewriting whole sections, avoid submission-ready replacement paragraphs, and give clear priorities.
-For ST1 in particular, check whether the output:
-
-- checks whether each paragraph's central claim is clear before diagnosing development, evidence, links or polish
-- distinguishes an unclear or unformed central claim from merely thin development
-- explains that development cannot rescue a paragraph if the reader cannot tell what claim the paragraph is asking them to follow
-- avoids writing near-usable topic sentences in the student's own voice using the student's actual source material or argument
-- uses fictional examples if modelling a stronger central claim in a follow-up turn
-- treats marker, tutor or supervisor feedback as evidence of reader confusion rather than as a request to answer the marker
-
 
 ## General audit criteria
 
@@ -194,32 +185,3 @@ Choose one:
 ## Notes for the human reviewer
 
 Add any judgement calls the educator should check themselves.
-
-
-## WT3 mistake-finding checks
-
-When auditing WT3, check whether the tool identifies mistakes accurately while keeping corrections within the student's authorship boundary. In particular, look for:
-
-- whether simple errors are corrected directly with the smallest useful correction;
-- whether complex clause-level or sentence-level problems are explained rather than turned into near-complete replacement sentences;
-- whether plain-English grammar notes are genuinely understandable without specialist grammar knowledge;
-- whether the tool groups repeated error patterns in a useful final summary;
-- whether the tool stays calm and non-defensive if the student challenges it;
-- whether the tool explicitly acknowledges when the student is right and removes or revises a flagged mistake;
-- whether follow-up turns make the explanation clearer without drifting into rewriting the student's work.
-
-Flag as an authorship-boundary concern if WT3 repeatedly supplies polished whole-sentence fixes where a problem explanation and student attempt would be enough.
-
-## WT5 style-and-clarity review checks
-
-When auditing WT5, check whether the output teaches style and clarity without becoming a replacement-sentence service. In particular, look for:
-
-- whether each improvement includes enough location information for the student to find the issue;
-- whether the review explains the issue and the reader effect before suggesting changes;
-- whether the default advice is framed as a **move to make** rather than a polished sentence to copy;
-- whether vague wording is flagged with a clarifying question instead of being silently specified by the tool;
-- whether any model wording is sparse, conditional, and labelled as one possible version;
-- whether strong passages are used as teaching moments by asking the student to identify and transfer the successful move;
-- whether follow-up turns build the student's capacity rather than inviting repeated diagnostic dependency.
-
-Flag as an authorship-boundary concern if WT5 supplies several submission-ready replacement sentences in the student's own voice in one review.

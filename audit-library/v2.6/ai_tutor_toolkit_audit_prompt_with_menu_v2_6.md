@@ -194,32 +194,3 @@ Choose one:
 ## Notes for the human reviewer
 
 Add any judgement calls the educator should check themselves.
-
-
-## WT3 mistake-finding checks
-
-When auditing WT3, check whether the tool identifies mistakes accurately while keeping corrections within the student's authorship boundary. In particular, look for:
-
-- whether simple errors are corrected directly with the smallest useful correction;
-- whether complex clause-level or sentence-level problems are explained rather than turned into near-complete replacement sentences;
-- whether plain-English grammar notes are genuinely understandable without specialist grammar knowledge;
-- whether the tool groups repeated error patterns in a useful final summary;
-- whether the tool stays calm and non-defensive if the student challenges it;
-- whether the tool explicitly acknowledges when the student is right and removes or revises a flagged mistake;
-- whether follow-up turns make the explanation clearer without drifting into rewriting the student's work.
-
-Flag as an authorship-boundary concern if WT3 repeatedly supplies polished whole-sentence fixes where a problem explanation and student attempt would be enough.
-
-## WT5 style-and-clarity review checks
-
-When auditing WT5, check whether the output teaches style and clarity without becoming a replacement-sentence service. In particular, look for:
-
-- whether each improvement includes enough location information for the student to find the issue;
-- whether the review explains the issue and the reader effect before suggesting changes;
-- whether the default advice is framed as a **move to make** rather than a polished sentence to copy;
-- whether vague wording is flagged with a clarifying question instead of being silently specified by the tool;
-- whether any model wording is sparse, conditional, and labelled as one possible version;
-- whether strong passages are used as teaching moments by asking the student to identify and transfer the successful move;
-- whether follow-up turns build the student's capacity rather than inviting repeated diagnostic dependency.
-
-Flag as an authorship-boundary concern if WT5 supplies several submission-ready replacement sentences in the student's own voice in one review.

@@ -4,40 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Changelog | AI Personal Tutor Toolkit</title>
-  <meta name="description" content="Version history for the AI Personal Tutor Toolkit website and Markdown libraries.">
+  <meta name="description" content="Version history for the AI Personal Tutor Toolkit.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header><div class="container nav"><a class="brand" href="index.html">AI Personal Tutor Toolkit<small>Markdown prompt libraries</small></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="tools.html">Tools</a></li><li><a href="examples.html">Examples</a></li><li><a href="teaching-approach.html">Teaching approach</a></li><li><a href="testing.html">Testing</a></li><li><a href="changelog.html">Changelog</a></li></ul></nav></div></header>
 <main>
-<!-- SITE EDITING NOTE: Changelog is a maintainer-facing page; version and folder details are acceptable here. Keep panels inside .container. -->
-  <section class="hero">
-    <div class="container">
-      <p class="kicker">Changelog</p>
-      <h1>Version history.</h1>
-      <p class="lead">A short record of major changes to the site, prompt libraries and testing pack.</p>
-    </div>
-  </section>
+  <section class="hero"><div class="container"><p class="kicker">Changelog</p><h1>Version history.</h1><p class="lead">A short record of major changes to the toolkit files and site.</p></div></section>
   <div class="container">
-    <section class="panel notice">
-      <h2>Site v2.7 — formatting and audience cleanup</h2>
-      <ul>
-        <li>Fixed page structure so panels remain inside the standard page container.</li>
-        <li>Removed developer-facing folder details from the homepage.</li>
-        <li>Added editing notes and a CSS guardrail to reduce layout breaks in future edits.</li>
-        <li>Kept version-folder details on maintainer-facing pages only.</li>
-      </ul>
-    </section>
-    <section class="panel"><h2>Site v2.6 — version-folder structure</h2><p>Download folders were reorganised so current files live in <code>prompt-libraries/latest/</code> and <code>audit-library/latest/</code>, while fixed release copies live in <code>prompt-libraries/v2.0/</code> and <code>audit-library/v2.4/</code>.</p></section>
-    <section class="panel"><h2>Site v2.5 — WT2 paragraph logic update</h2><ul><li>Updated WT2 Single Paragraph Analysis so it starts with the paragraph’s chain of ideas, missing links and “so what?” questions.</li><li>Added controlled modelling rules for paragraph-level teaching.</li><li>Updated the testing pack with a two-turn WT2 test and new WT2 audit criteria.</li></ul></section>
-    <section class="panel"><h2>Site v2.4 — precision before polish</h2><p>Added global rules and site guidance to prevent academic-sounding wording from changing the student’s intended meaning.</p></section>
-    <section class="panel"><h2>Site v2.3 — clinic-style teaching refinement</h2><p>Clinic-style tools now use made-up before/after examples before asking the student to revise their own wording.</p></section>
-    <section class="panel"><h2>Site v2.2 — interaction types and testing update</h2><p>Added a distinction between interactive tutoring tools and full review tools, and updated audit criteria accordingly.</p></section>
-    <section class="panel"><h2>Site Stage 4 v1.0</h2><p>Expanded the testing and audit area with a workflow, testing-file descriptions, minimum testing recommendations, audit criteria and release checklist.</p></section>
-    <section class="panel"><h2>Site Stage 3 v1.0</h2><p>Added example input/output sections so users can preview what each mini library does before downloading.</p></section>
-    <section class="panel"><h2>Library v2.0</h2><p>Added visible version information near the top of each library and version history sections at the bottom.</p></section>
+    <section class="panel"><h2>Site v2.11 / Libraries v2.4 / Testing pack v2.8</h2><ul><li>Updated WT3 so simple mistakes can be corrected directly while complex clause-level issues are explained rather than turned into near-complete replacement sentences.</li><li>Added a plain-English grammar-note test to reduce unnecessary terminology in WT3 explanations.</li><li>Added a WT3 challenge-response protocol so valid student pushback is acknowledged explicitly before the mistake list is revised.</li><li>Updated the audit prompt, educator guide and step-by-step test cards with WT3 regression checks.</li></ul></section>
+    <section class="panel"><h2>Site v2.10 / Libraries v2.3 / Testing pack v2.7</h2><ul><li>Updated WT5 so style-and-clarity feedback uses location, issue, reader effect, move to make, and student-owned revision prompts.</li><li>Reduced authorship drift by removing polished replacement sentences as the default WT5 output pattern.</li><li>Added WT5 vague-meaning guidance so the tool asks clarification questions rather than specifying the student's research focus on their behalf.</li><li>Added a strong-passage teaching pattern so students learn from parts of their own writing that already work well.</li><li>Updated the audit prompt and step-by-step test cards with WT5 regression checks.</li></ul></section>
+    <section class="panel"><h2>Site v2.9 / Libraries v2.2 / Testing pack v2.6</h2><ul><li>Updated ST1 so it checks central claim clarity before diagnosing paragraph development, evidence, links or polish.</li><li>Added guidance to distinguish an unclear or unformed central claim from merely thin development.</li><li>Tightened ST1 follow-up boundaries so examples use fictional topics rather than near-usable sentences based on the student's own source material.</li><li>Added guidance on handling marker, tutor or supervisor feedback as evidence of reader confusion, not as a marker-response service.</li><li>Updated the audit prompt and ST1 test card so this central-claim issue is checked in future regression testing.</li></ul></section>
+    <section class="panel"><h2>Site v2.8 / Libraries v2.1 / Testing pack v2.5</h2><ul><li>Fixed version consistency across library front matter, visible headers and download folders.</li><li>Removed duplicate global AI-behaviour guidance from the prompt libraries.</li><li>Consolidated repeated precision-before-polish wording in clinic-style guidance.</li><li>Fixed audit-pack instructions so step-by-step cards point to the correct audit prompt version.</li><li>Updated the homepage from the current student-facing version and removed developer folder details from student-facing copy.</li></ul></section>
+    <section class="panel"><h2>Site v2.6 / Libraries v2.0 / Testing pack v2.4</h2><ul><li>Added version-folder structure: current downloads live in <code>prompt-libraries/latest/</code> and <code>audit-library/latest/</code>.</li><li>Added fixed release copies in <code>prompt-libraries/v2.0/</code> and <code>audit-library/v2.4/</code>.</li></ul></section>
+    <section class="panel"><h2>Libraries v2.0 — WT2 paragraph logic update</h2><ul><li>Updated WT2 Single Paragraph Analysis so it starts with the paragraph's chain of ideas, missing links and “so what?” questions.</li><li>Added controlled modelling rules for paragraph logic examples.</li><li>Updated WT2 audit tests and criteria.</li></ul></section>
+    <section class="panel"><h2>Libraries v1.9 — Precision before polish</h2><ul><li>Added meaning-preservation rules so the tools do not silently swap key terms for more academic-sounding alternatives.</li><li>Updated WT1 and WT5 to guard against academicising that changes meaning.</li></ul></section>
+    <section class="panel"><h2>Earlier releases</h2><p>Earlier versions created the five mini libraries, the master library, the testing pack, tool codes, privacy/responsibility notes, language settings and the multi-page website.</p></section>
   </div>
 </main>
-<footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Versioned Markdown libraries for learning-focused AI support. Use course and institution rules when deciding how to use AI.</p></div></footer>
-</body>
-</html>
+<footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Versioned Markdown libraries for learning-focused AI support.</p></div></footer>
+</body></html>

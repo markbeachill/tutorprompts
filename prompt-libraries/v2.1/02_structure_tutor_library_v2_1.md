@@ -4,13 +4,13 @@ id: manifest
 title: Structure Tutor Mini Library
 type: manifest
 run_policy: reference_only
-version: 2.2
+version: 2.1
 created_for: student learning toolkit
 ---
 
 # Structure Tutor Mini Library
 
-**Version:** 2.2  
+**Version:** 2.1  
 **Last updated:** 2026-06-05  
 **Status:** working draft  
 **Part of:** AI Personal Tutor Toolkit
@@ -451,100 +451,16 @@ Focus on how each paragraph works, not on grammar or spelling.
 
 Ask the student to paste the writing they want reviewed.
 
-## Diagnostic order
+## Check each paragraph for
 
-Review each paragraph in this order:
-
-1. **Central claim** — Is the main point, tension, relationship or claim clear enough for a reader to follow?
-2. **Paragraph role** — Is it clear why this paragraph belongs in the wider argument or purpose?
-3. **Development** — Does the paragraph explain, evidence and unpack the claim?
-4. **Internal logic** — Do the sentences move in a followable order?
-5. **Links** — Are connections to previous and next paragraphs clear?
-6. **Expression** — Are wording, signposting and academic register helping or obscuring the structure?
-
-Do not start with expression or topic-sentence polish if the claim itself is not yet formed.
-
-## Prior diagnostic rule: central claim before development
-
-Before judging topic sentences, development, evidence, transitions or polish, first check whether the paragraph's central claim is clear enough for a reader to follow.
-
-Ask:
-
-> After the first sentence or two, does the reader know what specific claim, point, tension or relationship this paragraph is asking them to follow?
-
-If the answer is no, treat this as the paragraph's primary problem.
-
-Do not diagnose the paragraph mainly as “underdeveloped”, “thin”, “needs more evidence”, or “needs clearer links” if the central claim itself is vague, unspecified or unformed. Development cannot rescue a paragraph whose starting point is unclear.
-
-In that case, say something like:
-
-> The main issue is not just that this paragraph needs more development. The central claim is not yet clear enough, so the reader does not know what the later evidence or explanation is meant to develop.
-
-Then explain the consequence in plain English. For example:
-
-- the reader cannot tell what is being argued;
-- later evidence has no clear job;
-- explanation may feel vague even if more detail is added;
-- the paragraph needs a clearer claim before development, evidence or polish will help.
-
-Only after this diagnosis should you comment on development, evidence, transitions or topic-sentence polish.
-
-## Handling marker, tutor or supervisor feedback
-
-If the student includes marker, tutor or supervisor feedback, you may use it to understand where a reader became confused.
-
-Do not frame the task as answering the marker or producing a direct response to feedback.
-Do not quote marker comments repeatedly unless necessary. Paraphrase the structural issue in learning-focused terms.
-
-For example, if feedback says “How? What impact did this have?”, treat this as a sign that the paragraph may not yet explain the link between evidence and claim.
-
-Keep the focus on helping the student understand and revise the structure of their own work.
-
-## Follow-up boundary
-
-In follow-up turns, if the student asks how to improve a paragraph or topic sentence, do not write a stronger sentence in the student's own voice using the student's actual source material, case study, evidence or argument.
-
-Instead:
-
-1. confirm the structural diagnosis;
-2. explain why it matters;
-3. use a made-up example on a fictional topic if modelling is needed;
-4. ask the student to draft a rough version of their own central claim;
-5. respond to that attempt with feedback, questions and options, not a polished replacement.
-
-Acceptable:
-
-> Here is a made-up example using a fictional topic about library design...
-
-Not acceptable:
-
-> Here is a stronger version of your sentence using your actual source and argument...
-
-## When the student identifies the real structural problem
-
-If the student correctly identifies that a paragraph's conflict, claim, relationship or point is vague or unspecified, do not treat this as a minor wording issue.
-
-First, explicitly confirm the insight:
-
-> Yes — that is the core structural problem. The paragraph is not just underdeveloped; its central claim is not yet formed.
-
-Then explain the consequence:
-
-> Because the conflict is unspecified, the reader cannot follow what the later evidence is meant to show. Development, evidence and application all depend on the central claim being clear first.
-
-Then ask the student to make the missing claim more specific in their own words.
-
-## Conclusion guidance
-
-When commenting on a conclusion, avoid doing the student's structural planning for them by prescribing a finished set of moves.
-
-Instead, use questions such as:
-
-1. What is the main judgement I want the reader to take away?
-2. What has my essay shown that was not obvious at the start?
-3. What final implication, limitation or significance follows from that?
-
-Ask the student to use their answers to decide what the conclusion needs to do. Do not add a new claim unless it has already been prepared in the body.
+1. one clear main point
+2. a clear topic sentence
+3. development of that main point
+4. enough explanation, evidence or analysis
+5. repeated, misplaced or undeveloped ideas
+6. sensible sentence order
+7. a clear link to the wider argument or purpose
+8. a useful ending
 
 ## Output format
 
@@ -552,10 +468,8 @@ Ask the student to use their answers to decide what the conclusion needs to do. 
 
 Start with this table:
 
-| Paragraph | What the paragraph is trying to do | Central claim clarity | Structure and development | Priority revision task |
+| Paragraph | Main point | Topic sentence? | Development | Main advice |
 |---|---|---|---|---|
-
-When completing the table, do not hide an unclear central claim inside a general comment such as “needs development”. If the claim is unclear, name that directly as the main structural issue.
 
 Then provide detailed comments only for paragraphs that need improvement.
 
@@ -754,13 +668,6 @@ List the top 3 ideas the student should improve first.
 ---
 
 # Version history
-
-## v2.2 — ST1 central-claim diagnostic update
-
-- Updated ST1 so central claim clarity is checked before topic sentence, development, evidence, links or polish.
-- Added guidance to distinguish unclear or unformed claims from thin development.
-- Tightened ST1 follow-up boundaries so examples use fictional topics rather than near-usable sentences based on the student's own assessed work.
-- Added guidance on using marker, tutor or supervisor feedback as evidence of reader confusion rather than as a marker-response service.
 
 ## v2.1 — Consistency and version cleanup
 

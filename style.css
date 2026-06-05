@@ -70,13 +70,3 @@ pre { background: #19202a; color: #f8fafc; padding: 16px; border-radius: 14px; o
 .steps li { margin-bottom: 0.75rem; }
 .checklist { columns: 2; column-gap: 2rem; }
 @media (max-width: 760px) { .checklist { columns: 1; } }
-
-
-/* Layout guardrail: visible panels should normally sit inside .container.
-   This fallback stops accidentally inserted direct-child panels from stretching full width. */
-main > .panel, main > section.panel {
-  width: min(1120px, calc(100% - 32px));
-  margin-left: auto;
-  margin-right: auto;
-}
-.small-note { background: #fffdf7; }

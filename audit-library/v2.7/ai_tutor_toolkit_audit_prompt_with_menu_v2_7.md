@@ -195,21 +195,6 @@ Choose one:
 
 Add any judgement calls the educator should check themselves.
 
-
-## WT3 mistake-finding checks
-
-When auditing WT3, check whether the tool identifies mistakes accurately while keeping corrections within the student's authorship boundary. In particular, look for:
-
-- whether simple errors are corrected directly with the smallest useful correction;
-- whether complex clause-level or sentence-level problems are explained rather than turned into near-complete replacement sentences;
-- whether plain-English grammar notes are genuinely understandable without specialist grammar knowledge;
-- whether the tool groups repeated error patterns in a useful final summary;
-- whether the tool stays calm and non-defensive if the student challenges it;
-- whether the tool explicitly acknowledges when the student is right and removes or revises a flagged mistake;
-- whether follow-up turns make the explanation clearer without drifting into rewriting the student's work.
-
-Flag as an authorship-boundary concern if WT3 repeatedly supplies polished whole-sentence fixes where a problem explanation and student attempt would be enough.
-
 ## WT5 style-and-clarity review checks
 
 When auditing WT5, check whether the output teaches style and clarity without becoming a replacement-sentence service. In particular, look for:
