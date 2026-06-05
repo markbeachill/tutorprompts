@@ -1,10 +1,10 @@
 # AI Personal Tutor Toolkit — Release Manifest
 
-**Current site package:** v2.14  
+**Current site package:** v2.15  
 **Prompt-library suite:** v2.4  
 **Testing/audit pack:** v2.8  
 **Last updated:** 2026-06-05  
-**Release type:** guides section release
+**Release type:** site navigation and guides cleanup
 
 ## How versions work
 
@@ -53,3 +53,8 @@ This release does not change tool behaviour. It clarifies version signalling by:
 ## What changed in v2.14
 
 This release adds the public Guides section. It does not change prompt-library or testing/audit behaviour. New pages: `guides.html`, `guide-students.html`, `guide-tutors.html`, `guide-writing-workflow.html`, `guide-not-first-draft.html`, and `guide-setup.html`.
+
+
+## What changed in v2.15
+
+This release reorganises the public website navigation. The top-level navigation now contains Home, Tools, Examples and Guides. Teaching approach, Testing and Changelog are linked from the Guides page and the footer, while their URLs remain unchanged. The homepage order has been adjusted, the Paragraph logic before polish explanation has moved to the Teaching approach page, and a blank `about.html` page has been added. No prompt-library or testing/audit behaviour changed.

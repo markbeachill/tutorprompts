@@ -54,3 +54,8 @@ See `release_manifest.md` for the complete current file list.
 
 - Rebuilt `testing.html` so its page header uses the same site header and hero structure as the other public pages.
 - Added a CSS alias so `button-row` and `btn-row` both render consistently.
+
+
+## v2.15 site navigation cleanup
+
+This site-only release simplifies the top-level navigation to Home, Tools, Examples and Guides. Teaching approach, Testing and Changelog remain available at their existing URLs and are linked from the Guides page and footer. The Guides home page has been simplified and labelled by audience: Student, Tutor and Technical. A blank About this site page has been added for future content. Prompt-library and testing/audit behaviour did not change.
