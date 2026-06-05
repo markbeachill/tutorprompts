@@ -1,25 +1,24 @@
-# AI Personal Tutor Toolkit
+# AI Personal Tutor Toolkit site
 
-This is a static GitHub Pages site for the AI Personal Tutor Toolkit.
+This is the deployable GitHub Pages version of the AI Personal Tutor Toolkit.
 
 ## Folder structure
 
-- Root: website pages and `style.css`
-- `prompt-libraries/`: downloadable Markdown prompt libraries and the mini-library ZIP
-- `audit-library/`: testing and audit materials
-- `assets/`: reserved for future images or screenshots
+- Root HTML files: public website pages
+- `style.css`: shared styling
+- `prompt-libraries/latest/`: current student-facing prompt libraries with stable filenames
+- `prompt-libraries/v2.0/`: fixed archive of prompt library version 2.0
+- `audit-library/latest/`: current educator testing and audit materials with stable filenames
+- `audit-library/v2.4/`: fixed archive of testing pack version 2.4
 
-Deploy the contents of this folder to the root of a GitHub Pages repository.
+## Versioning approach
 
+The website links to the `latest/` folders so download URLs can remain stable.
+Versioned folders preserve the exact release files for developers and educators who need to know which version they are testing or adapting.
 
-## v1.6 cleanup
+Current prompt library version: v2.0
+Current testing/audit pack version: v2.4
 
-This release adds stable tool codes, an expectation note about AI behaviour, and tightened wording around Markdown output, referencing and source reliability.
+## Deploying
 
-
-## Testing pack v2.0
-
-The audit-library folder contains the educator-friendly testing pack v2.0 with step-by-step test cards, an audit prompt with menu, universal/adversarial tests, a testing guide and a test log template.
-
-
-Current release: site v2.4, prompt libraries v1.9, testing pack v2.3.
+Upload the contents of this folder to the root of a GitHub Pages repository.
