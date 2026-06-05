@@ -10,3 +10,8 @@ This is a static GitHub Pages site for the AI Personal Tutor Toolkit.
 - `assets/`: reserved for future images or screenshots
 
 Deploy the contents of this folder to the root of a GitHub Pages repository.
+
+
+## v1.6 cleanup
+
+This release adds stable tool codes, an expectation note about AI behaviour, and tightened wording around Markdown output, referencing and source reliability.
