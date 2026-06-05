@@ -1,10 +1,10 @@
 # AI Personal Tutor Toolkit — Release Manifest
 
-**Current site package:** v2.15  
+**Current site package:** v2.16  
 **Prompt-library suite:** v2.4  
 **Testing/audit pack:** v2.8  
 **Last updated:** 2026-06-05  
-**Release type:** site navigation and guides cleanup
+**Release type:** site guidance and housekeeping update
 
 ## How versions work
 
@@ -58,3 +58,26 @@ This release adds the public Guides section. It does not change prompt-library o
 ## What changed in v2.15
 
 This release reorganises the public website navigation. The top-level navigation now contains Home, Tools, Examples and Guides. Teaching approach, Testing and Changelog are linked from the Guides page and the footer, while their URLs remain unchanged. The homepage order has been adjusted, the Paragraph logic before polish explanation has moved to the Teaching approach page, and a blank `about.html` page has been added. No prompt-library or testing/audit behaviour changed.
+
+
+## Current site guide and reference pages
+
+| Page | Purpose |
+|---|---|
+| `guides.html` | Guide directory and entry point |
+| `teaching-approach.html` | Pedagogical principles behind the toolkit |
+| `guide-students.html` | Student use guidance |
+| `guide-tutors.html` | Tutor and teacher guidance |
+| `guide-writing-workflow.html` | How the toolkit fits into a writing workflow |
+| `guide-not-first-draft.html` | Why the toolkit is not a first-draft generator |
+| `guide-markdown.html` | Beginner-friendly Markdown guide |
+| `guide-free-tier.html` | Guidance for free AI plans and tighter limits |
+| `guide-setup.html` | Placeholder setup guide |
+| `other-ai-tutoring-resources.html` | Related AI tutoring and education-prompt resources |
+| `testing.html` | Testing and audit workflow |
+| `changelog.html` | Version history |
+| `about.html` | About this site, author and repository links |
+
+## What changed in v2.16
+
+This release adds new site guidance and housekeeping. Site update notes now live in `site-update-notes/`. The About page now includes author and repository links. New guide/reference pages cover Markdown, free-tier AI use, and other AI tutoring resources. No prompt-library or testing/audit behaviour changed.

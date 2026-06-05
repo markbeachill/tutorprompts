@@ -14,12 +14,13 @@ This repository contains a static GitHub Pages site for the AI Personal Tutor To
 - `audit-library/v2.6/`: fixed archive of testing pack version v2.6
 - `audit-library/v2.7/`: fixed archive of testing pack version v2.7
 - `audit-library/v2.8/`: fixed archive of testing pack version v2.8
+- `site-update-notes/`: notes for each generated site package update
 
 Student-facing pages should link to the `latest/` folders. Versioned folders are for educators, developers and audit trails.
 
 Current prompt library version: v2.4
 Current testing/audit pack version: v2.8
-Current site package: v2.14
+Current site package: v2.16
 
 
 ## How versions work
@@ -59,3 +60,12 @@ See `release_manifest.md` for the complete current file list.
 ## v2.15 site navigation cleanup
 
 This site-only release simplifies the top-level navigation to Home, Tools, Examples and Guides. Teaching approach, Testing and Changelog remain available at their existing URLs and are linked from the Guides page and footer. The Guides home page has been simplified and labelled by audience: Student, Tutor and Technical. A blank About this site page has been added for future content. Prompt-library and testing/audit behaviour did not change.
+
+
+## v2.16 guides and housekeeping release
+
+- Moved site update notes into `site-update-notes/`.
+- Added content to `about.html` with author, LinkedIn, repository and GitHub Discussions links.
+- Added `guide-markdown.html`, `guide-free-tier.html`, and `other-ai-tutoring-resources.html`.
+- Updated `guides.html`, `index.html`, `release_manifest.md`, and `changelog.html`.
+- No prompt-library or testing/audit pack behaviour changed.

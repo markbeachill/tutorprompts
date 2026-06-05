@@ -82,3 +82,9 @@ pre { background: #19202a; color: #f8fafc; padding: 16px; border-radius: 14px; o
 .guide-card.student .guide-label { background: #eef7ed; color: #35613a; }
 .guide-card.tutor .guide-label { background: #f5eef8; color: #6f3f82; }
 .guide-card.technical .guide-label { background: #eef5f7; color: #295c7a; }
+
+
+/* v2.16 guide/resource additions */
+.guide-card.resources { border-top-color: #7a6a29; }
+.guide-card.resources .guide-label { background: #f7f2df; color: #6d5b1e; }
+.table-note { color: var(--muted); font-size: .95rem; }
