@@ -20,3 +20,6 @@ This release adds stable tool codes, an expectation note about AI behaviour, and
 ## Testing pack v2.0
 
 The audit-library folder contains the educator-friendly testing pack v2.0 with step-by-step test cards, an audit prompt with menu, universal/adversarial tests, a testing guide and a test log template.
+
+
+Current release: site v2.4, prompt libraries v1.9, testing pack v2.3.
