@@ -4,49 +4,36 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Testing and audit | AI Personal Tutor Toolkit</title>
+  <meta name="description" content="Educator-facing testing and audit workflow for the AI Personal Tutor Toolkit.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header><div class="container nav"><a class="brand" href="index.html">AI Personal Tutor Toolkit<small>Markdown prompt libraries</small></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="tools.html">Tools</a></li><li><a href="examples.html">Examples</a></li><li><a href="teaching-approach.html">Teaching approach</a></li><li><a href="testing.html">Testing</a></li><li><a href="changelog.html">Changelog</a></li></ul></nav></div></header>
+<main>
+<!-- SITE EDITING NOTE: This is an educator/developer page, so version and folder details are acceptable here. Put visible panels inside .container. -->
+  <section class="hero">
+    <div class="container">
+      <p class="kicker">For educators and maintainers</p>
+      <h1>Testing and audit.</h1>
+      <p class="lead">Use this area to check whether the prompt libraries behave like learning tools, not answer machines. The tests are practical, step by step, and designed for educators rather than software testers.</p>
+      <div class="btn-row">
+        <a class="button" href="audit-library/latest/ai_personal_tutor_testing_pack.zip" download>Download testing pack</a>
+        <a class="button secondary" href="audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md" download>Download test cards</a>
+        <a class="button secondary" href="audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md" download>Download audit prompt</a>
+      </div>
+    </div>
+  </section>
+
   <div class="container">
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="tools.html">Tools</a>
-      <a href="examples.html">Examples</a>
-      <a href="teaching-approach.html">Teaching approach</a>
-      <a href="testing.html">Testing</a>
-      <a href="changelog.html">Changelog</a>
-    </nav>
-
-    <header class="hero">
-      <p class="eyebrow">For educators and maintainers</p>
-      <h1>Testing and audit</h1>
-      <p class="lead">Use this testing pack to check whether the prompt libraries behave like learning tools, not answer machines. The tests are practical, step by step, and designed for educators rather than software testers.</p>
-      <div class="button-row">
-        <a class="button primary" href="audit-library/latest/ai_personal_tutor_testing_pack.zip">Download testing pack v2.4</a>
-        <a class="button" href="audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md">Open test cards</a>
-      </div>
-    </header>
-
-    <section class="panel">
-      <h2>What changed in v2.4?</h2>
-      <p>The audit now distinguishes between <strong>interactive tutoring tools</strong> and <strong>full review tools</strong>. This matters because a tool like WT1 Clarity Clinic should make the student try a rewrite, while a tool like RP3 Critical Research Supervisor Review should give a full structured review.</p>
-      <div class="grid two">
-        <div class="card">
-          <h3>Interactive tutoring tools</h3>
-          <p>These should keep the student active. They should ask the student to think, choose, answer, revise or attempt something. They should not give polished final wording too early.</p>
-          <p><strong>Examples:</strong> WT1, WT2, WT4, AT10, RP4, RP5.</p>
-        </div>
-        <div class="card">
-          <h3>Full review tools</h3>
-          <p>These can produce a full review. They should give structured feedback and priorities, but should not rewrite whole sections or produce submission-ready replacement prose.</p>
-          <p><strong>Examples:</strong> WT3, WT5, ST1, ST2, ST3, RP3, SW1.</p>
-        </div>
-      </div>
+    <section class="panel notice">
+      <h2>Start here</h2>
+      <p>The testing pack is for educators, tutors, learning developers and toolkit maintainers who want to check the behaviour of the prompts after edits.</p>
+      <p>You do not need to be a software tester. Choose one test card, run the prompt, save the output, then use the audit prompt to review it.</p>
     </section>
 
     <section class="panel">
       <h2>Simple testing workflow</h2>
-      <ol>
+      <ol class="steps">
         <li>Choose one test card.</li>
         <li>Open a new AI chat.</li>
         <li>Upload the prompt library named in the test card.</li>
@@ -63,53 +50,44 @@
     <section class="panel">
       <h2>Downloads</h2>
       <div class="grid two">
-        <div class="card">
-          <h3>Testing pack</h3>
-          <p>Everything needed for audit-style testing in one ZIP.</p>
-          <p><a class="button" href="audit-library/latest/ai_personal_tutor_testing_pack.zip">Download ZIP</a></p>
-        </div>
-        <div class="card">
-          <h3>Audit prompt with menu</h3>
-          <p>The prompt used to review test outputs and produce Markdown audit reports.</p>
-          <p><a class="button" href="audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md">Download audit prompt</a></p>
-        </div>
-        <div class="card">
-          <h3>Step-by-step test cards</h3>
-          <p>Practical cards showing exactly what to open, paste, save and audit.</p>
-          <p><a class="button" href="audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md">Download test cards</a></p>
-        </div>
-        <div class="card">
-          <h3>Testing guide for educators</h3>
-          <p>Explains smoke tests, regression tests, adversarial tests, naming conventions and release checks.</p>
-          <p><a class="button" href="audit-library/latest/ai_tutor_toolkit_testing_guide_for_educators.md">Download guide</a></p>
-        </div>
+        <article class="card"><h3>Testing pack</h3><p>Everything needed for audit-style testing in one ZIP.</p><div class="actions"><a class="button" href="audit-library/latest/ai_personal_tutor_testing_pack.zip" download>Download ZIP</a></div></article>
+        <article class="card"><h3>Audit prompt with menu</h3><p>The prompt used to review test outputs and produce Markdown audit reports.</p><div class="actions"><a class="button" href="audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md" download>Download audit prompt</a></div></article>
+        <article class="card"><h3>Step-by-step test cards</h3><p>Practical cards showing exactly what to open, paste, save and audit.</p><div class="actions"><a class="button" href="audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md" download>Download test cards</a></div></article>
+        <article class="card"><h3>Testing guide for educators</h3><p>Explains smoke tests, regression tests, adversarial tests, naming conventions and release checks.</p><div class="actions"><a class="button" href="audit-library/latest/ai_tutor_toolkit_testing_guide_for_educators.md" download>Download guide</a></div></article>
       </div>
     </section>
 
     <section class="panel">
       <h2>Plain-English testing terms</h2>
-      <div class="grid three">
-        <div class="card"><h3>Smoke test</h3><p>A quick check that the basics work: the menu appears, routing works, and the tool responds to simple input.</p></div>
-        <div class="card"><h3>Regression test</h3><p>A check that something you fixed has not broken again in a later version.</p></div>
-        <div class="card"><h3>Adversarial test</h3><p>A check using a vague, risky or boundary-pushing request, such as asking the tool to rewrite work for submission.</p></div>
+      <div class="grid">
+        <article class="card"><h3>Smoke test</h3><p>A quick check that the basics work: the menu appears, routing works, and the tool responds to simple input.</p></article>
+        <article class="card"><h3>Regression test</h3><p>A check that something you fixed has not broken again in a later version.</p></article>
+        <article class="card"><h3>Adversarial test</h3><p>A check using a vague, risky or boundary-pushing request, such as asking the tool to rewrite work for submission.</p></article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Tool types matter</h2>
+      <div class="grid two">
+        <article class="card"><h3>Interactive tutoring tools</h3><p>These should keep the student active. They ask the student to think, choose, answer, revise or attempt something. They should not give polished final wording too early.</p><p><strong>Examples:</strong> WT1, WT2, WT4, AT10, RP4, RP5.</p></article>
+        <article class="card"><h3>Full review tools</h3><p>These can produce a full structured review. They should give feedback and priorities, but should not rewrite whole sections or produce submission-ready replacement prose.</p><p><strong>Examples:</strong> WT3, WT5, ST1, ST2, ST3, RP3, SW1.</p></article>
       </div>
     </section>
 
     <section class="panel">
       <h2>Suggested minimum before release</h2>
-      <ul>
+      <ul class="list-clean">
         <li>Run the universal menu and language-setting tests.</li>
         <li>Run at least one adversarial test.</li>
         <li>Run WT1, including the follow-up turn about sounding academic.</li>
+        <li>Run WT2, including the follow-up turn about connecting paragraph ideas.</li>
         <li>Run one changed tool from each affected mini library.</li>
         <li>Record the result in the test log.</li>
       </ul>
-      <p><a href="audit-library/latest/ai_tutor_toolkit_test_log_template.md">Download the test log template</a></p>
+      <div class="btn-row"><a class="button secondary" href="audit-library/latest/ai_tutor_toolkit_test_log_template.md" download>Download test log template</a></div>
     </section>
-
-    <footer class="footer">
-      <p>AI Personal Tutor Toolkit. Testing is audit-style and human-reviewed; it does not prove that every model will behave perfectly.</p>
-    </footer>
   </div>
+</main>
+<footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Versioned Markdown libraries for learning-focused AI support. Use course and institution rules when deciding how to use AI.</p></div></footer>
 </body>
 </html>

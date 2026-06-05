@@ -22,3 +22,11 @@ Current testing/audit pack version: v2.4
 ## Deploying
 
 Upload the contents of this folder to the root of a GitHub Pages repository.
+
+
+## Site editing rules
+
+- Student-facing pages should explain what the toolkit does and how to use it. Avoid GitHub folder-structure details on Home, Tools, Examples and library pages.
+- Put visible content inside `<section class="hero"><div class="container">...` or inside `<div class="container"><section class="panel">...`.
+- Do not place `<section class="panel">` directly under `<main>` unless it is an intentional exception. The CSS includes a fallback guardrail, but the clean structure is still preferred.
+- Keep version-folder and release-archive details on `testing.html`, `changelog.html` or in this README.
