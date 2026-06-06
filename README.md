@@ -30,6 +30,25 @@ The toolkit offers a structured way to guide independent student AI use. It is n
 
 Educators can inspect the prompts, test them, adapt them for local teaching contexts, and use the testing pack before recommending a version to students.
 
+## Where are the prompt files?
+
+The prompt libraries are stored inside the public site folder:
+
+- `docs/prompt-libraries/latest/`
+
+They live there because GitHub Pages publishes the website from `/docs`, and the live download links use those files directly.
+
+For a developer-focused guide to the prompt files and customisation, see `PROMPTS.md`.
+
+## Customising the prompt libraries
+
+The official mini libraries are recommended for most users. Developers, teachers and departments who want a smaller or locally tailored library can start from the master library and delete down.
+
+See:
+
+- `PROMPTS.md` — where the prompt files live and how the libraries are structured
+- `CUSTOMISING_PROMPTS.md` — how to build a smaller custom library without duplicating files or weakening the core tutor-not-ghost-writer design
+
 ## Repository structure
 
 The public website is published from the `docs/` folder.
@@ -37,6 +56,8 @@ The public website is published from the `docs/` folder.
 ```text
 /
 ├── README.md
+├── PROMPTS.md
+├── CUSTOMISING_PROMPTS.md
 └── docs/
     ├── index.html
     ├── tools/
@@ -53,7 +74,7 @@ GitHub Pages should be configured to publish from the `docs/` folder on the main
 
 ## Current public release
 
-- Site package: v2.21
+- Site package: v2.22
 - Prompt-library suite: v2.4
 - Testing/audit pack: v2.8
 
