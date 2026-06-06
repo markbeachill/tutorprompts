@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v2.24 / Prompt libraries v2.5 / Testing pack v2.9
+Toolkit release: Site v2.25 / Prompt libraries v2.5 / Testing pack v2.10
 
-This manifest describes the current public site package after the v2.24 prompt-library maintenance update.
+This manifest describes the current public site package after the v2.25 homepage, guide and testing polish update.
 
 ## Repository-level developer files
 
@@ -73,7 +73,7 @@ Versioned testing/audit archives are in:
 - `docs/audit-library/v2.6/`
 - `docs/audit-library/v2.7/`
 - `docs/audit-library/v2.8/`
-- `docs/audit-library/v2.9/`
+- `docs/audit-library/v2.10/`
 
 ## Detailed update notes
 
@@ -117,3 +117,12 @@ Detailed update notes are in:
 - Improved WT6 house-style fallback wording, added a WT3 worked correction-boundary example, and changed AT10 “random topic” wording to “useful starting point”.
 - Rebuilt `docs/prompt-libraries/latest/`, `docs/prompt-libraries/v2.5/`, and the current mini-library ZIP downloads.
 - Testing/audit pack remains v2.9.
+
+
+## Site v2.25 — homepage and navigation polish; testing stress test
+
+- Updated the homepage from the revised student-facing draft.
+- Updated Student Help and Guides home pages from revised drafts.
+- Simplified tool-detail pages using the Writing Tutor page as the model.
+- Added a separate tool-code column to tool-detail tables.
+- Updated the testing/audit pack to v2.10 with a deadline-pressure adversarial stress test.
