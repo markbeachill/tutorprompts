@@ -88,3 +88,10 @@ pre { background: #19202a; color: #f8fafc; padding: 16px; border-radius: 14px; o
 .guide-card.resources { border-top-color: #7a6a29; }
 .guide-card.resources .guide-label { background: #f7f2df; color: #6d5b1e; }
 .table-note { color: var(--muted); font-size: .95rem; }
+
+
+/* v2.19 guide/resource page refinements */
+.resource-item { border-top: 1px solid var(--line); padding-top: 16px; margin-top: 16px; }
+.resource-item h3 { margin-top: 0; }
+.muted { color: var(--muted); font-weight: 650; }
+.warning { background: var(--warn); border: 1px solid #f0d99b; border-radius: 12px; padding: 10px 12px; }

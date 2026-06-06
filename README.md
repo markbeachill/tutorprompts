@@ -1,87 +1,63 @@
-# AI Personal Tutor Toolkit site
+# AI Personal Tutor Toolkit
 
-This repository contains a static GitHub Pages site for the AI Personal Tutor Toolkit.
+The AI Personal Tutor Toolkit is a set of prompt libraries that help students use AI as a tutor, not as a ghost-writer.
 
-## Folder structure
+The prompts are designed to help students get feedback on their own work, understand writing problems, improve paragraph structure, test academic arguments, plan revisions, and record AI use honestly.
 
-- `prompt-libraries/latest/`: current prompt library downloads used by the public site
-- `prompt-libraries/v2.1/`: fixed archive of prompt library version v2.1
-- `prompt-libraries/v2.2/`: fixed archive of prompt library version v2.2
-- `prompt-libraries/v2.3/`: fixed archive of prompt library version v2.3
-- `prompt-libraries/v2.4/`: fixed archive of prompt library version v2.4
-- `audit-library/latest/`: current testing and audit downloads used by the public site
-- `audit-library/v2.5/`: fixed archive of testing pack version v2.5
-- `audit-library/v2.6/`: fixed archive of testing pack version v2.6
-- `audit-library/v2.7/`: fixed archive of testing pack version v2.7
-- `audit-library/v2.8/`: fixed archive of testing pack version v2.8
-- `site-update-notes/`: notes for each generated site package update
+**Live site:** https://markbeachill.github.io/tutorprompts/
 
-Student-facing pages should link to the `latest/` folders. Versioned folders are for educators, developers and audit trails.
+## What the toolkit helps with
 
-Current prompt library version: v2.4
-Current testing/audit pack version: v2.8
-Current site package: v2.18
+The toolkit can support:
 
+- writing clarity and repeated mistakes;
+- paragraph and whole-draft structure;
+- academic argument, concepts and evidence;
+- research proposal development;
+- revision planning and AI-use records.
 
-## How versions work
+The aim is not to produce finished work for students. The aim is to help students understand, revise and take responsibility for their own work.
 
-The project uses three related version labels:
+## How to use it
 
-- **Site package version**: the deployable website ZIP and public HTML pages.
-- **Prompt-library suite version**: the current set of student-facing prompt libraries.
-- **Testing/audit pack version**: the current educator testing and audit materials.
+1. Open the live site.
+2. Choose a toolkit file.
+3. Upload or paste it into an AI tool.
+4. Type `prompt`.
+5. Choose the help you need.
 
-The `latest/` folders always contain the current public downloads. The fixed `v2.x/` folders are archive copies for educators, maintainers and audit trails. Each current downloadable Markdown file now includes a release stamp showing the site package, prompt-library suite, testing pack, public path and fixed archive path.
+Most students should start with one mini library rather than the full master library. The master library is useful when you want access to every tool in one file.
 
-See `release_manifest.md` for the complete current file list.
+## Main areas
 
+- **Writing Tutor Library** — sentence clarity, repeated mistakes, style, referencing and teaching materials.
+- **Structure Tutor Library** — paragraph structure, whole-work structure and expert meaning review.
+- **Academic Thinking Tutor Library** — argument, evidence, concepts, source reliability and Socratic questioning.
+- **Research Proposal Tutor Library** — research questions, methods, supervisor review, viva practice and topic development.
+- **Study Workflow Tutor Library** — revision planning, tutor feedback into actions and AI-use records.
 
-## v2.18 educator case guide update
+## For educators
 
-- Added `guide-why-educators.html`, a standalone guide page explaining why educators and universities may want to consider the AI Personal Tutor Toolkit as a structured alternative to unstructured student AI use.
-- Added the new guide to `guides.html`.
-- No prompt-library or testing/audit pack behaviour changed.
+The toolkit can be used as a structured way to guide independent student AI use. It is not a replacement for assessment rules, teacher judgement, institutional policy or student responsibility.
 
+The guides section includes pages for students, tutors, teachers, educators and technical users.
 
+## Project files and release history
 
-## v2.14 guides section release
+This repository contains the public website, the current prompt libraries, the testing/audit files and the release history.
 
-- Added a new top-level Guides navigation item.
-- Added `guides.html` plus student, tutor/teacher, writing workflow, first-draft pedagogy and setup guide pages.
-- Added `guide-setup.html` as a Coming soon placeholder.
-- No prompt-library or testing/audit pack behaviour changed.
+- Current public website: `index.html`
+- Guides: `guides/`
+- Prompt-library downloads: `prompt-libraries/latest/`
+- Testing/audit downloads: `audit-library/latest/`
+- Changelog: `changelog/`
+- Detailed site update notes: `changelog/site-update-notes/`
+- Release manifest: `release_manifest.md`
 
-## v2.13 version-clarity maintenance release
+The current site release is **Site v2.19**. The prompt-library suite remains **v2.4** and the testing/audit pack remains **v2.8**.
 
-- Added visible release stamps to the latest prompt-library and testing/audit Markdown downloads.
-- Aligned current downloadable file headings with Libraries v2.4 and Testing pack v2.8.
-- Added `release_manifest.md` to show how the public `latest/` downloads map to fixed archive files.
-- Clarified the difference between site package, prompt-library suite and testing/audit pack versions.
+## Discussion and feedback
 
-## v2.12 formatting fix
+The GitHub Discussions area for this repository is available at:
 
-- Rebuilt `testing.html` so its page header uses the same site header and hero structure as the other public pages.
-- Added a CSS alias so `button-row` and `btn-row` both render consistently.
-
-
-## v2.15 site navigation cleanup
-
-This site-only release simplifies the top-level navigation to Home, Tools, Examples and Guides. Teaching approach, Testing and Changelog remain available at their existing URLs and are linked from the Guides page and footer. The Guides home page has been simplified and labelled by audience: Student, Tutor and Technical. A blank About this site page has been added for future content. Prompt-library and testing/audit behaviour did not change.
-
-
-## v2.17 guide copy and positioning update
-
-- Expanded `about.html` with creator, repository, GitHub Discussions and toolkit positioning text.
-- Added a student-facing explanation of how the toolkit helps ordinary AI tools behave more like tutors.
-- Rewrote `guide-tutors.html` in plainer, less jargony language.
-- Updated `other-ai-tutoring-resources.html` with clearer introductory text and resource table wording.
-- Added an About card to `guides.html`.
-- No prompt-library or testing/audit pack behaviour changed.
-
-## v2.16 guides and housekeeping release
-
-- Moved site update notes into `site-update-notes/`.
-- Added content to `about.html` with author, LinkedIn, repository and GitHub Discussions links.
-- Added `guide-markdown.html`, `guide-free-tier.html`, and `other-ai-tutoring-resources.html`.
-- Updated `guides.html`, `index.html`, `release_manifest.md`, and `changelog.html`.
-- No prompt-library or testing/audit pack behaviour changed.
+https://github.com/markbeachill/tutorprompts/discussions
