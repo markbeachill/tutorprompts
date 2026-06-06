@@ -20,7 +20,7 @@ Student-facing pages should link to the `latest/` folders. Versioned folders are
 
 Current prompt library version: v2.4
 Current testing/audit pack version: v2.8
-Current site package: v2.16
+Current site package: v2.18
 
 
 ## How versions work
@@ -34,6 +34,13 @@ The project uses three related version labels:
 The `latest/` folders always contain the current public downloads. The fixed `v2.x/` folders are archive copies for educators, maintainers and audit trails. Each current downloadable Markdown file now includes a release stamp showing the site package, prompt-library suite, testing pack, public path and fixed archive path.
 
 See `release_manifest.md` for the complete current file list.
+
+
+## v2.18 educator case guide update
+
+- Added `guide-why-educators.html`, a standalone guide page explaining why educators and universities may want to consider the AI Personal Tutor Toolkit as a structured alternative to unstructured student AI use.
+- Added the new guide to `guides.html`.
+- No prompt-library or testing/audit pack behaviour changed.
 
 
 
@@ -61,6 +68,15 @@ See `release_manifest.md` for the complete current file list.
 
 This site-only release simplifies the top-level navigation to Home, Tools, Examples and Guides. Teaching approach, Testing and Changelog remain available at their existing URLs and are linked from the Guides page and footer. The Guides home page has been simplified and labelled by audience: Student, Tutor and Technical. A blank About this site page has been added for future content. Prompt-library and testing/audit behaviour did not change.
 
+
+## v2.17 guide copy and positioning update
+
+- Expanded `about.html` with creator, repository, GitHub Discussions and toolkit positioning text.
+- Added a student-facing explanation of how the toolkit helps ordinary AI tools behave more like tutors.
+- Rewrote `guide-tutors.html` in plainer, less jargony language.
+- Updated `other-ai-tutoring-resources.html` with clearer introductory text and resource table wording.
+- Added an About card to `guides.html`.
+- No prompt-library or testing/audit pack behaviour changed.
 
 ## v2.16 guides and housekeeping release
 

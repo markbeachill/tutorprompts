@@ -1,10 +1,10 @@
 # AI Personal Tutor Toolkit — Release Manifest
 
-**Current site package:** v2.16  
+**Current site package:** v2.18  
 **Prompt-library suite:** v2.4  
 **Testing/audit pack:** v2.8  
-**Last updated:** 2026-06-05  
-**Release type:** site guidance and housekeeping update
+**Last updated:** 2026-06-06  
+**Release type:** educator guide page update
 
 ## How versions work
 
@@ -67,6 +67,7 @@ This release reorganises the public website navigation. The top-level navigation
 | `guides.html` | Guide directory and entry point |
 | `teaching-approach.html` | Pedagogical principles behind the toolkit |
 | `guide-students.html` | Student use guidance |
+| `guide-why-educators.html` | Educator and university-facing case for structured prompt-library AI use |
 | `guide-tutors.html` | Tutor and teacher guidance |
 | `guide-writing-workflow.html` | How the toolkit fits into a writing workflow |
 | `guide-not-first-draft.html` | Why the toolkit is not a first-draft generator |
@@ -77,6 +78,21 @@ This release reorganises the public website navigation. The top-level navigation
 | `testing.html` | Testing and audit workflow |
 | `changelog.html` | Version history |
 | `about.html` | About this site, author and repository links |
+
+## What changed in v2.18
+
+- Added `guide-why-educators.html`, a new guide page setting out why educators and universities may want a structured alternative to unstructured student AI use.
+- Added the new page to `guides.html`.
+- No prompt-library or testing/audit pack behaviour changed.
+
+## What changed in v2.17
+
+- Expanded the About page with creator, repository, GitHub Discussions and toolkit positioning text.
+- Added student-facing explanatory text to the homepage and Student Guide.
+- Rewrote the tutor and teacher guide in plainer, less jargony language.
+- Updated the Other AI tutoring resources introduction and table copy.
+- Added an About card to the Guides page.
+- No prompt-library or testing/audit pack behaviour changed.
 
 ## What changed in v2.16
 
