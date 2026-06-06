@@ -16,6 +16,7 @@ Versioned prompt-library archives are stored in:
 - `docs/prompt-libraries/v2.2/`
 - `docs/prompt-libraries/v2.3/`
 - `docs/prompt-libraries/v2.4/`
+- `docs/prompt-libraries/v2.5/`
 
 They live inside `docs/` because GitHub Pages is configured to publish the live website from the `/docs` folder. The live download links use these same files.
 
@@ -23,7 +24,7 @@ Do not duplicate prompt files at the repository root. Update the files in `docs/
 
 ## Current prompt libraries
 
-The current public prompt-library suite is v2.4.
+The current public prompt-library suite is v2.5.
 
 The main files are:
 
@@ -111,3 +112,12 @@ Possible future developer support could include:
 - one-tool extracts if there is enough demand.
 
 These are not needed for ordinary student use.
+
+
+## Why global rules are repeated
+
+Each mini library repeats the global rules, Markdown output rules, launcher and router because students may upload only one file to an AI tool. Each file therefore needs to work on its own.
+
+This creates some maintenance duplication. When global rules change, maintainers must update the master library and each affected mini library, then rebuild the latest and versioned release folders.
+
+Privacy warnings are also repeated intentionally because each mini library must work as a standalone uploaded file.

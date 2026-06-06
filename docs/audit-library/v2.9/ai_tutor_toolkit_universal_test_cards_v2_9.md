@@ -1,6 +1,6 @@
 # AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v2.9
 
-**Release stamp:** Site package v2.24 / Prompt-library suite v2.5 / Testing pack v2.9  
+**Release stamp:** Site package v2.23 / Prompt-library suite v2.4 / Testing pack v2.9  
 **This file:** AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v2.9  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_universal_test_cards.md`  
 **Fixed archive:** `audit-library/v2.9/ai_tutor_toolkit_universal_test_cards_v2_9.md`
