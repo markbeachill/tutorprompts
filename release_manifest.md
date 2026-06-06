@@ -1,16 +1,17 @@
 # Release manifest
 
-Toolkit release stamp: Site v2.19 / Prompt libraries v2.4 / Testing pack v2.8
+Toolkit release stamp: Site v2.20 / Prompt libraries v2.4 / Testing pack v2.8
 
 ## Summary
 
-This release reorganises the public website structure and improves first-impression wording. Guide pages now live in the `guides/` subfolder, the public changelog lives in `changelog/`, and detailed site update notes live in `changelog/site-update-notes/`.
+This release adds a dedicated `student-help/` section for student-facing pages and keeps `guides/` for educator, pedagogy, technical and reference material.
 
 No prompt-library or testing/audit behaviour changed in this release.
 
 ## Key locations
 
 - Live site entry point: `index.html`
+- Student Help: `student-help/`
 - Guides: `guides/`
 - Changelog: `changelog/`
 - Detailed update notes: `changelog/site-update-notes/`
@@ -52,7 +53,6 @@ No prompt-library or testing/audit behaviour changed in this release.
 - `audit-library/v2.8/ai_tutor_toolkit_test_log_template_v2_8.md`
 - `audit-library/v2.8/ai_tutor_toolkit_testing_guide_for_educators_v2_8.md`
 - `audit-library/v2.8/ai_tutor_toolkit_universal_test_cards_v2_8.md`
-- `changelog.html`
 - `changelog/index.html`
 - `changelog/site-update-notes/ai_personal_tutor_site_update_v2_10_notes.md`
 - `changelog/site-update-notes/ai_personal_tutor_site_update_v2_11_notes.md`
@@ -64,19 +64,16 @@ No prompt-library or testing/audit behaviour changed in this release.
 - `changelog/site-update-notes/ai_personal_tutor_site_update_v2_17_notes.md`
 - `changelog/site-update-notes/ai_personal_tutor_site_update_v2_18_notes.md`
 - `changelog/site-update-notes/ai_personal_tutor_site_update_v2_19_notes.md`
+- `changelog/site-update-notes/ai_personal_tutor_site_update_v2_20_notes.md`
 - `changelog/site-update-notes/ai_personal_tutor_site_update_v2_9_notes.md`
+- `changelog.html`
 - `examples.html`
-- `guides/free-tier.html`
 - `guides/index.html`
-- `guides/markdown.html`
-- `guides/not-first-draft.html`
 - `guides/other-ai-tutoring-resources.html`
 - `guides/setup.html`
-- `guides/students.html`
 - `guides/teaching-approach.html`
 - `guides/tutors.html`
 - `guides/why-educators.html`
-- `guides/writing-workflow.html`
 - `index.html`
 - `prompt-libraries/latest/01_writing_tutor_library.md`
 - `prompt-libraries/latest/02_structure_tutor_library.md`
@@ -113,8 +110,15 @@ No prompt-library or testing/audit behaviour changed in this release.
 - `prompt-libraries/v2.4/05_study_workflow_tutor_library_v2_4.md`
 - `prompt-libraries/v2.4/ai_personal_tutor_master_library_v2_4.md`
 - `prompt-libraries/v2.4/ai_personal_tutor_mini_libraries_v2_4.zip`
+- `release_manifest.md`
 - `research-proposal.html`
 - `structure-tutor.html`
+- `student-help/free-tier.html`
+- `student-help/index.html`
+- `student-help/markdown.html`
+- `student-help/not-first-draft.html`
+- `student-help/students.html`
+- `student-help/writing-workflow.html`
 - `study-workflow.html`
 - `style.css`
 - `testing.html`

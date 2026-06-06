@@ -40,13 +40,14 @@ Most students should start with one mini library rather than the full master lib
 
 The toolkit can be used as a structured way to guide independent student AI use. It is not a replacement for assessment rules, teacher judgement, institutional policy or student responsibility.
 
-The guides section includes pages for students, tutors, teachers, educators and technical users.
+The Student Help section collects the student-facing pages. The Guides section contains educator, pedagogy, technical and reference pages.
 
 ## Project files and release history
 
 This repository contains the public website, the current prompt libraries, the testing/audit files and the release history.
 
 - Current public website: `index.html`
+- Student Help: `student-help/`
 - Guides: `guides/`
 - Prompt-library downloads: `prompt-libraries/latest/`
 - Testing/audit downloads: `audit-library/latest/`
@@ -54,7 +55,7 @@ This repository contains the public website, the current prompt libraries, the t
 - Detailed site update notes: `changelog/site-update-notes/`
 - Release manifest: `release_manifest.md`
 
-The current site release is **Site v2.19**. The prompt-library suite remains **v2.4** and the testing/audit pack remains **v2.8**.
+The current site release is **Site v2.20**. The prompt-library suite remains **v2.4** and the testing/audit pack remains **v2.8**.
 
 ## Discussion and feedback
 
