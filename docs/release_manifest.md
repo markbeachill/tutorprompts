@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v3.7 / Prompt libraries v3.4 / Testing pack v3.4
+Toolkit release: Site v3.8 / Prompt libraries v3.4 / Testing pack v3.4
 
-This manifest describes the current public site package after the v3.7 teaching-approach and student-guide rewrite.
+This manifest describes the current public site package after the v3.8 AI setup and student setup guidance update.
 
 ## Repository-level developer files
 
@@ -153,6 +153,16 @@ Detailed update notes are in:
 
 
 
+
+## Site v3.8 — AI setup and student setup guidance
+
+- Site package updated to v3.8.
+- Prompt libraries remain v3.4.
+- Testing/audit pack remains v3.4.
+- Replaced the placeholder setup page with a tutor guide on choosing and setting up an AI system for toolkit use.
+- Added guidance that tutors should test planned classroom activities using the same or closest available setup students will use before asking students to use the toolkit.
+- Added guidance on choosing or specifying thinking/reasoning models, free-plan limits, projects/workspaces and shared custom AIs/public GPTs.
+- Simplified the Student guide so it focuses on experimenting with AI systems, choosing a suitable mode, managing free-plan usage and optional projects without repeating the toolkit instructions.
 
 ## Site v3.7 — teaching approach and student guide rewrite
 
