@@ -19,7 +19,7 @@ Versioned prompt-library archives are stored in:
 - `docs/prompt-libraries/v2.5/`
 - `docs/prompt-libraries/v3.0/`
 - `docs/prompt-libraries/v3.1/`
-- `docs/prompt-libraries/v3.2/`
+- `docs/prompt-libraries/v3.3/`
 
 They live inside `docs/` because GitHub Pages is configured to publish the live website from the `/docs` folder. The live download links use these same files.
 
@@ -27,7 +27,7 @@ Do not duplicate prompt files at the repository root. Update the files in `docs/
 
 ## Current prompt libraries
 
-The current public prompt-library suite is v3.2.
+The current public prompt-library suite is v3.3.
 
 The main files are:
 
@@ -137,7 +137,7 @@ Privacy warnings are also repeated intentionally because each mini library must 
 Selected-tool start prompts should show the tool code, tool name and prompt-library version, for example:
 
 ```markdown
-# WT1 — Clarity Clinic v3.2
+# WT1 — Clarity Clinic v3.3
 ```
 
 If you build a local custom library, update these visible headings so students and testers can see which prompt-library version they are using.
@@ -146,3 +146,10 @@ If you build a local custom library, update these visible headings so students a
 ## Menu output source
 
 The launcher is the only source for menu output. The manifest and router are internal reference/routing sections and are not for output.
+
+
+## Launcher minimum content
+
+When building or customising a library, keep the launcher’s minimum guidance content. Do not compress the launcher down to only the tool list.
+
+The launcher should include the library name and prompt-library version, purpose, short course-rules/privacy guidance, the “I'm stuck” support line, visible tool codes and names, paste/upload guidance and the `prompt` return instruction.

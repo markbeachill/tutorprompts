@@ -252,3 +252,10 @@ That is the whole build: delete 22 blocks, sync three menus, add one local block
 - Keep original tool codes; change only the menu position.
 - Local rules add to the core rules; they never replace them.
 - A customised file is not tested until you have tested it.
+
+
+## Launcher minimum content
+
+When building or customising a library, keep the launcher’s minimum guidance content. Do not compress the launcher down to only the tool list.
+
+The launcher should include the library name and prompt-library version, purpose, short course-rules/privacy guidance, the “I'm stuck” support line, visible tool codes and names, paste/upload guidance and the `prompt` return instruction.

@@ -611,3 +611,14 @@ structured, readable and specialist writing support that protects student thinki
 ```
 
 The core boundary remains the same: the toolkit should help students use AI as a tutor, not as a ghost-writer. The new emphasis is that good tutoring is not just safe; it is readable, focused, humane and manageable.
+
+
+## Why paragraph-first output matters
+
+Many AI tools produce answers that are easy to skim but harder to read carefully: headings, bullet points, nested lists and fragments of advice. This can look organised, but it can also overwhelm students or make feedback feel like a long checklist of things to fix.
+
+The toolkit uses a paragraph-first style because a good paragraph already supports both skimming and understanding. The first sentence gives the reader the main point. The rest of the paragraph explains, illustrates or qualifies that point.
+
+This matters for tutoring. Students do not only need information they can scan. They often need a short explanation they can actually read, follow and think with.
+
+Paragraphs are not anti-accessibility. Poor paragraphs are. A short, well-led paragraph can be easier to read than a long list of disconnected points.

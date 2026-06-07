@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v3.4 / Prompt libraries v3.2 / Testing pack v3.2
+Toolkit release: Site v3.5 / Prompt libraries v3.3 / Testing pack v3.3
 
-This manifest describes the current public site package after the v3.4 startup activation and launcher-fidelity maintenance update.
+This manifest describes the current public site package after the v3.5 launcher minimum-content and paragraph-first site-design update.
 
 ## Repository-level developer files
 
@@ -61,6 +61,9 @@ Versioned prompt-library archives are in:
 - `docs/prompt-libraries/v2.4/`
 - `docs/prompt-libraries/v2.5/`
 - `docs/prompt-libraries/v3.0/`
+- `docs/prompt-libraries/v3.1/`
+- `docs/prompt-libraries/v3.2/`
+- `docs/prompt-libraries/v3.3/`
 
 ## Testing/audit downloads
 
@@ -76,6 +79,9 @@ Versioned testing/audit archives are in:
 - `docs/audit-library/v2.8/`
 - `docs/audit-library/v2.10/`
 - `docs/audit-library/v3.0/`
+- `docs/audit-library/v3.1/`
+- `docs/audit-library/v3.2/`
+- `docs/audit-library/v3.3/`
 
 ## Detailed update notes
 
@@ -144,6 +150,17 @@ Detailed update notes are in:
 
 
 
+
+
+## Site v3.5 — launcher minimum content and paragraph-first site design
+
+- Site package updated to v3.5.
+- Prompt libraries updated to v3.3.
+- Testing/audit pack updated to v3.3.
+- Added launcher minimum-content rules so AI models should not compress menus down to tool lists.
+- Added testing/audit checks for launcher minimum content.
+- Added a paragraph-first design rationale to the Teaching approach page and v3 design brief.
+- Cleaned the Tools and Examples pages to align site structure with the paragraph-first design.
 
 ## Site v3.4 — startup activation and launcher fidelity
 
