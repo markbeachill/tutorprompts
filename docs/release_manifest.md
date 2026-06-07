@@ -1,6 +1,6 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v3.2 / Prompt libraries v3.0 / Testing pack v3.0
+Toolkit release: Site v3.3 / Prompt libraries v3.1 / Testing pack v3.1
 
 This manifest describes the current public site package after the v3.1 site revision aligning the public website with the v3.0 paragraph-first tutor style and writing-as-thinking prompt-library update.
 
@@ -144,7 +144,7 @@ Detailed update notes are in:
 
 
 
-## Site v3.2 — testing/audit v3 alignment
+## Site v3.3 — testing/audit v3 alignment
 
 - Updated testing/audit pack to v3.0.
 - Added audit checks for paragraph-first tutor style, manageable feedback, writing as thinking, plain-English grammar explanations and “I’m stuck” support.
