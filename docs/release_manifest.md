@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v3.11 / Prompt libraries v3.6 / Testing pack v3.5
+Toolkit release: Site v3.12 / Prompt libraries v3.6 / Testing pack v3.5
 
-This manifest describes the current public site package after the v3.11 AI-literacy, prompt-library sync and testing-pack hygiene update.
+This manifest describes the current public site package after the v3.12 single-tool downloads site update.
 
 ## Repository-level developer files
 
@@ -18,6 +18,7 @@ The public GitHub Pages site is now contained in the `docs/` folder. GitHub Page
 
 - `docs/index.html` — homepage
 - `docs/tools/index.html` — tools directory
+- `docs/tools/single-tools.html` — single-tool downloads directory
 - `docs/tools/writing-tutor.html` — Writing Tutor page
 - `docs/tools/structure-tutor.html` — Structure Tutor page
 - `docs/tools/academic-thinking.html` — Academic Thinking page
@@ -54,6 +55,7 @@ The public GitHub Pages site is now contained in the `docs/` folder. GitHub Page
 Current public downloads are in:
 
 - `docs/prompt-libraries/latest/`
+- `docs/prompt-libraries/single-tools/`
 
 Versioned prompt-library archives are in:
 
@@ -88,6 +90,15 @@ Versioned testing/audit archives are in:
 - `docs/audit-library/v3.3/`
 - `docs/audit-library/v3.4/`
 - `docs/audit-library/v3.5/`
+
+## v3.12 site update notes
+
+- Site package updated to v3.12.
+- Prompt libraries remain v3.6.
+- Testing/audit pack remains v3.5.
+- Added a single-tool downloads page at `docs/tools/single-tools.html` for free-tier AI users or tools with small upload/context limits.
+- Added homepage and Tools directory links to the single-tool downloads route.
+- No tutor prompt/source files, generated prompt-library outputs, generator scripts, GitHub workflows or testing/audit content changed.
 
 ## Detailed update notes
 
