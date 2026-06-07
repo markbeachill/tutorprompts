@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v3.5 / Prompt libraries v3.3 / Testing pack v3.3
+Toolkit release: Site v3.6 / Prompt libraries v3.4 / Testing pack v3.4
 
-This manifest describes the current public site package after the v3.5 launcher minimum-content and paragraph-first site-design update.
+This manifest describes the current public site package after the v3.6 student-guide and pushback update.
 
 ## Repository-level developer files
 
@@ -64,6 +64,7 @@ Versioned prompt-library archives are in:
 - `docs/prompt-libraries/v3.1/`
 - `docs/prompt-libraries/v3.2/`
 - `docs/prompt-libraries/v3.3/`
+- `docs/prompt-libraries/v3.4/`
 
 ## Testing/audit downloads
 
@@ -82,6 +83,7 @@ Versioned testing/audit archives are in:
 - `docs/audit-library/v3.1/`
 - `docs/audit-library/v3.2/`
 - `docs/audit-library/v3.3/`
+- `docs/audit-library/v3.4/`
 
 ## Detailed update notes
 
@@ -152,7 +154,7 @@ Detailed update notes are in:
 
 
 
-## Site v3.5 — launcher minimum content and paragraph-first site design
+## Site v3.6 — launcher minimum content and paragraph-first site design
 
 - Site package updated to v3.5.
 - Prompt libraries updated to v3.3.

@@ -259,3 +259,8 @@ That is the whole build: delete 22 blocks, sync three menus, add one local block
 When building or customising a library, keep the launcher’s minimum guidance content. Do not compress the launcher down to only the tool list.
 
 The launcher should include the library name and prompt-library version, purpose, short course-rules/privacy guidance, the “I'm stuck” support line, visible tool codes and names, paste/upload guidance and the `prompt` return instruction.
+
+
+## Preserve pushback and uncertainty rules
+
+When customising a library, preserve the global rule that student challenges should be taken seriously and that specialist uncertainty should be named rather than hidden. This is part of the tutor-not-ghost-writer design.

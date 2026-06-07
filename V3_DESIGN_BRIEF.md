@@ -622,3 +622,8 @@ The toolkit uses a paragraph-first style because a good paragraph already suppor
 This matters for tutoring. Students do not only need information they can scan. They often need a short explanation they can actually read, follow and think with.
 
 Paragraphs are not anti-accessibility. Poor paragraphs are. A short, well-led paragraph can be easier to read than a long list of disconnected points.
+
+
+## Reading-page style
+
+Student Help and Guides reading pages should follow the same paragraph-first principle as the tutor prompts. Avoid meta-introductions such as “This page explains...”. Use fewer headings, stronger topic sentences and short paragraphs that can be skimmed through their first sentence and then read in more depth. Keep cards for navigation pages, numbered lists for genuine workflows, and tables only where comparison is clearer than prose.
