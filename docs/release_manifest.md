@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v3.3 / Prompt libraries v3.1 / Testing pack v3.1
+Toolkit release: Site v3.4 / Prompt libraries v3.2 / Testing pack v3.2
 
-This manifest describes the current public site package after the v3.1 site revision aligning the public website with the v3.0 paragraph-first tutor style and writing-as-thinking prompt-library update.
+This manifest describes the current public site package after the v3.4 startup activation and launcher-fidelity maintenance update.
 
 ## Repository-level developer files
 
@@ -143,6 +143,18 @@ Detailed update notes are in:
 - Testing/audit pack remains v2.10.
 
 
+
+
+## Site v3.4 — startup activation and launcher fidelity
+
+- Site package updated to v3.4.
+- Prompt libraries updated to v3.2.
+- Testing/audit pack updated to v3.2.
+- Added a menu source rule so the launcher is the only source for menu output.
+- Marked manifest and router sections as internal and not for output.
+- Added visible tool-version headings such as `WT1 — Clarity Clinic v3.2`.
+- Added visible current toolkit version notes near site downloads.
+- Updated U6 to test startup activation and launcher fidelity.
 
 ## Site v3.3 — testing/audit v3 alignment
 

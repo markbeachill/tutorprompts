@@ -18,6 +18,8 @@ Versioned prompt-library archives are stored in:
 - `docs/prompt-libraries/v2.4/`
 - `docs/prompt-libraries/v2.5/`
 - `docs/prompt-libraries/v3.0/`
+- `docs/prompt-libraries/v3.1/`
+- `docs/prompt-libraries/v3.2/`
 
 They live inside `docs/` because GitHub Pages is configured to publish the live website from the `/docs` folder. The live download links use these same files.
 
@@ -25,7 +27,7 @@ Do not duplicate prompt files at the repository root. Update the files in `docs/
 
 ## Current prompt libraries
 
-The current public prompt-library suite is v3.0.
+The current public prompt-library suite is v3.2.
 
 The main files are:
 
@@ -38,9 +40,9 @@ The main files are:
 
 The master library contains all tools. The five mini libraries contain related groups of tools.
 
-## v3.0 design direction
+## v3 design direction
 
-v3.0 adds the paragraph-first tutor style, manageable feedback, the “I'm stuck” support model, the writing-is-thinking principle, scope clarification, and plain-English grammar-term guidance.
+v3 adds the paragraph-first tutor style, manageable feedback, the “I'm stuck” support model, the writing-is-thinking principle, scope clarification, and plain-English grammar-term guidance.
 
 The design brief is stored at `V3_DESIGN_BRIEF.md`.
 
@@ -128,3 +130,19 @@ Each mini library repeats the global rules, Markdown output rules, launcher and 
 This creates some maintenance duplication. When global rules change, maintainers must update the master library and each affected mini library, then rebuild the latest and versioned release folders.
 
 Privacy warnings are also repeated intentionally because each mini library must work as a standalone uploaded file.
+
+
+## Visible tool-version headings
+
+Selected-tool start prompts should show the tool code, tool name and prompt-library version, for example:
+
+```markdown
+# WT1 — Clarity Clinic v3.2
+```
+
+If you build a local custom library, update these visible headings so students and testers can see which prompt-library version they are using.
+
+
+## Menu output source
+
+The launcher is the only source for menu output. The manifest and router are internal reference/routing sections and are not for output.

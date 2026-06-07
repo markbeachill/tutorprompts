@@ -70,6 +70,20 @@ If you delete a tool from one place but leave it in another, the AI gets contrad
 
 ---
 
+
+
+## Menu source clarification
+
+The manifest, launcher and router must list the same active tools, but they are not interchangeable.
+
+The launcher is the only source for menu output.
+
+The manifest is an internal index/reference. It is not for output.
+
+The router maps student choices to tool blocks. It is not for output.
+
+If the AI displays the manifest or router as the menu, the prompt library is behaving incorrectly.
+
 ## The method, step by step
 
 ### Step 1 — Copy the file and rename it
