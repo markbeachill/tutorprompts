@@ -11,8 +11,7 @@ input_required:
 output_style: research alignment review
 ---
 
-# RP1 — Research Question, Aim and Objectives Checker v3.5
-
+# RP1 — Research Question, Aim and Objectives Checker v3.6
 ## Purpose
 
 Review a research question, aim and objectives to check whether they are clear, focused, researchable and aligned.
@@ -31,8 +30,7 @@ If you suggest a different key term, research focus or concept, explain how it m
 Ask only:
 
 ```markdown
-# RP1 — Research Question, Aim and Objectives Checker v3.5
-
+# RP1 — Research Question, Aim and Objectives Checker v3.6
 Please paste or upload your research question, aim and objectives. If you only have a topic, include that instead.
 ```
 

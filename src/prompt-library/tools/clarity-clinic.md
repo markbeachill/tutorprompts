@@ -12,8 +12,6 @@ output_style: interactive writing tutor response
 interaction_type: interactive tutoring
 ---
 
-# WT1 — Clarity Clinic v3.5
-
 Apply `global-rules`.
 
 Run only this tool.
@@ -37,8 +35,7 @@ Do not give a long lecture about these sources. Apply their principles in plain 
 Show only:
 
 ```markdown
-# WT1 — Clarity Clinic v3.5
-
+# WT1 — Clarity Clinic v3.6
 Please paste or upload one sentence, a few sentences, or one paragraph that you'd like to improve.
 ```
 

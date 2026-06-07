@@ -11,8 +11,7 @@ input_required:
 output_style: paragraph function table and detailed paragraph comments
 ---
 
-# ST1 — Paragraph Structure Review Across a Whole Draft v3.5
-
+# ST1 — Paragraph Structure Review Across a Whole Draft v3.6
 ## Purpose
 
 Review the paragraph structure across a whole piece of writing.
@@ -24,8 +23,7 @@ Focus on how each paragraph works, not on grammar or spelling.
 Ask only:
 
 ```markdown
-# ST1 — Paragraph Structure Review Across a Whole Draft v3.5
-
+# ST1 — Paragraph Structure Review Across a Whole Draft v3.6
 Please paste or upload the draft or section you want reviewed for paragraph structure.
 ```
 

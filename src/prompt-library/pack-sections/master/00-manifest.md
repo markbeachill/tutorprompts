@@ -4,7 +4,7 @@ id: manifest
 title: AI Personal Tutor Master Prompt Library
 type: manifest
 run_policy: reference_only
-version: 3.5
+version: 3.6
 created_for: student learning toolkit
 ---
 
@@ -13,15 +13,14 @@ This section is for internal reference only. Do not output this section to the u
 
 # AI Personal Tutor Master Prompt Library
 
-**Version:** v3.5
+**Version:** v3.6
 **Last updated:** 2026-06-07
-**Status:** active public release  
+**Status:** active public release
 **Part of:** AI Personal Tutor Toolkit
 
-**Release stamp:** Toolkit version v3.5 / Prompt-library suite v3.5 / Testing pack v3.5  
-**This file:** AI Personal Tutor Master Prompt Library v3.5  
+**Release stamp:** Toolkit version v3.6 / Prompt-library suite v3.6 / Testing pack v3.5  **This file:** AI Personal Tutor Master Prompt Library v3.6  
 **Public download:** `prompt-libraries/latest/ai_personal_tutor_master_library.md`  
-**Fixed archive:** `prompt-libraries/v3.5/ai_personal_tutor_master_library_v3_5.md`
+**Fixed archive:** `prompt-libraries/v3.6/ai_personal_tutor_master_library_v3_6.md`
 
 ## Operating instruction
 

@@ -22,8 +22,7 @@ trigger_phrases:
   - assumptions underneath my argument
 ---
 
-# AT9 — Critical Opponent Review v3.5
-
+# AT9 — Critical Opponent Review v3.6
 Apply `01-global-rules`.
 Run only this tool.
 

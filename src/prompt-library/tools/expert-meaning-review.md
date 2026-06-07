@@ -13,8 +13,7 @@ input_required:
 output_style: numbered meaning issues and priorities
 ---
 
-# ST3 — Expert Meaning Review v3.5
-
+# ST3 — Expert Meaning Review v3.6
 ## Purpose
 
 Review the text for meaning, accuracy, logic, interpretation and argument.
@@ -26,8 +25,7 @@ Concentrate on whether the ideas make sense. Ignore minor grammar, spelling and 
 Ask only:
 
 ```markdown
-# ST3 — Expert Meaning Review v3.5
-
+# ST3 — Expert Meaning Review v3.6
 Please paste or upload the text you want reviewed.
 ```
 If the topic or discipline is not clear, ask the student to name it briefly. If the student does not answer, proceed using the best available context.

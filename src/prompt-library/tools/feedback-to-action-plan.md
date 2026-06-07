@@ -13,8 +13,7 @@ input_required:
 output_style: feedback interpretation and action plan
 ---
 
-# SW2 — Tutor Feedback to Action Plan v3.5
-
+# SW2 — Tutor Feedback to Action Plan v3.6
 ## Purpose
 
 Help the student understand tutor feedback and turn it into practical revision actions.
@@ -26,8 +25,7 @@ Do not rewrite the assignment.
 Ask only:
 
 ```markdown
-# SW2 — Tutor Feedback to Action Plan v3.5
-
+# SW2 — Tutor Feedback to Action Plan v3.6
 Please paste or upload the tutor feedback. If you have the draft, include the relevant section too.
 ```
 

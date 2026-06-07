@@ -12,8 +12,7 @@ input_required:
 output_style: analysis balance review
 ---
 
-# AT3 — Descriptive vs Analytical Check v3.5
-
+# AT3 — Descriptive vs Analytical Check v3.6
 ## Purpose
 
 Check whether the student's writing is mostly descriptive or analytical, and show how to deepen analysis.

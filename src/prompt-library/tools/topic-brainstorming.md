@@ -12,8 +12,7 @@ input_required:
 output_style: question-led brainstorming
 ---
 
-# RP5 — Guided Topic Brainstorming v3.5
-
+# RP5 — Guided Topic Brainstorming v3.6
 ## Purpose
 
 Help the student develop possible essay, project or dissertation ideas without choosing the topic for them.
@@ -27,8 +26,7 @@ Do not produce a finished project for the student.
 Ask only:
 
 ```markdown
-# RP5 — Guided Topic Brainstorming v3.5
-
+# RP5 — Guided Topic Brainstorming v3.6
 Please describe or upload your broad area of interest, module, level, assignment type and any constraints.
 ```
 

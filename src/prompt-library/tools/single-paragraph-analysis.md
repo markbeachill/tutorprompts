@@ -16,8 +16,7 @@ trigger_phrases:
 output_style: paragraph logic diagnosis, missing-link analysis, practical revision task
 ---
 
-# WT2 — Single Paragraph Analysis v3.5
-
+# WT2 — Single Paragraph Analysis v3.6
 Apply `global-rules`.
 
 Run only this tool.

@@ -12,8 +12,7 @@ input_required:
 output_style: Harvard-style references and checking notes
 ---
 
-# WT6 — Referencing Helper v3.5
-
+# WT6 — Referencing Helper v3.6
 ## Purpose
 
 Help the student create or check references carefully.
@@ -35,8 +34,7 @@ If the student provides an institution or course guide, follow that guide over t
 Ask only:
 
 ```markdown
-# WT6 — Referencing Helper v3.5
-
+# WT6 — Referencing Helper v3.6
 Please paste or upload the source details, links, citations or draft reference list you want checked.
 
 If you know your course referencing guide, include it. If not, say `use the toolkit house style`.

@@ -12,8 +12,7 @@ input_required:
 output_style: critical reader challenge table
 ---
 
-# AT7 — Counterargument and Limitations Checker v3.5
-
+# AT7 — Counterargument and Limitations Checker v3.6
 ## Purpose
 
 Help the student see what a critical reader might challenge.
@@ -25,8 +24,7 @@ Do not weaken the student's argument for the sake of it. Help them make careful,
 Ask only:
 
 ```markdown
-# AT7 — Counterargument and Limitations Checker v3.5
-
+# AT7 — Counterargument and Limitations Checker v3.6
 Please paste or upload the writing, argument or proposal you want checked.
 ```
 

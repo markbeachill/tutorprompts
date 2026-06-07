@@ -1,7 +1,7 @@
 id: research-proposal
 title: "Research Proposal Tutor Mini Library"
 latest_output: docs/prompt-libraries/latest/04_research_proposal_tutor_library.md
-archive_output: docs/prompt-libraries/v3.5/04_research_proposal_tutor_library_v3_5.md
+archive_output: docs/prompt-libraries/v3.6/04_research_proposal_tutor_library_v3_6.md
 tool_metadata_mode: mini
 sections:
   - pack-sections/research-proposal/00-manifest.md

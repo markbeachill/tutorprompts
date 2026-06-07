@@ -12,8 +12,7 @@ input_required:
 output_style: key concept table
 ---
 
-# AT5 — Concept Clarity Checker v3.5
-
+# AT5 — Concept Clarity Checker v3.6
 ## Purpose
 
 Identify key concepts in the writing and check whether they are defined, used consistently and connected to the argument.

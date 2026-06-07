@@ -12,8 +12,7 @@ input_required:
 output_style: structure map, issues and suggested order
 ---
 
-# ST2 — Whole-Work Structure Review v3.5
-
+# ST2 — Whole-Work Structure Review v3.6
 ## Purpose
 
 Review the structure of the whole piece of writing. Focus on organisation, sequence, flow, proportion and whether the reader can follow the argument.
@@ -25,8 +24,7 @@ Do not rewrite the work.
 Ask only:
 
 ```markdown
-# ST2 — Whole-Work Structure Review v3.5
-
+# ST2 — Whole-Work Structure Review v3.6
 Please paste or upload the draft, section or plan you want reviewed for structure.
 ```
 

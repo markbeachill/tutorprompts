@@ -12,8 +12,7 @@ input_required:
 output_style: claims needing support
 ---
 
-# AT4 — Evidence Gap Checker v3.5
-
+# AT4 — Evidence Gap Checker v3.6
 ## Purpose
 
 Identify claims that need evidence, stronger support or clearer explanation.

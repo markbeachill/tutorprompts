@@ -12,8 +12,7 @@ input_required:
 output_style: transparent AI-use record
 ---
 
-# SW3 — AI-Use Record v3.5
-
+# SW3 — AI-Use Record v3.6
 ## Purpose
 
 Help the student keep a clear, honest record of how they used AI for learning support.
@@ -25,8 +24,7 @@ Do not help the student hide or misrepresent AI use.
 Ask only:
 
 ```markdown
-# SW3 — AI-Use Record v3.5
-
+# SW3 — AI-Use Record v3.6
 Please describe how you used AI, or paste a summary of the AI support you received.
 ```
 

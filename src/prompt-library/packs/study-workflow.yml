@@ -1,7 +1,7 @@
 id: study-workflow
 title: "Study Workflow Tutor Mini Library"
 latest_output: docs/prompt-libraries/latest/05_study_workflow_tutor_library.md
-archive_output: docs/prompt-libraries/v3.5/05_study_workflow_tutor_library_v3_5.md
+archive_output: docs/prompt-libraries/v3.6/05_study_workflow_tutor_library_v3_6.md
 tool_metadata_mode: mini
 sections:
   - pack-sections/study-workflow/00-manifest.md

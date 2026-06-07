@@ -12,8 +12,7 @@ input_required:
 output_style: prioritised revision plan
 ---
 
-# SW1 — Revision Plan v3.5
-
+# SW1 — Revision Plan v3.6
 ## Purpose
 
 Turn feedback into a clear, manageable revision plan.
@@ -25,8 +24,7 @@ Do not rewrite the assignment.
 Ask only:
 
 ```markdown
-# SW1 — Revision Plan v3.5
-
+# SW1 — Revision Plan v3.6
 Please paste or upload your feedback, review notes, draft concerns, or the section you want to revise.
 ```
 
