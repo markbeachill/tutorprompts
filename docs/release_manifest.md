@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v3.8 / Prompt libraries v3.4 / Testing pack v3.4
+Toolkit release: Site v3.9 / Prompt libraries v3.4 / Testing pack v3.4
 
-This manifest describes the current public site package after the v3.8 AI setup and student setup guidance update.
+This manifest describes the current public site package after the v3.9 Student Help structure fix.
 
 ## Repository-level developer files
 
@@ -33,6 +33,7 @@ The public GitHub Pages site is now contained in the `docs/` folder. GitHub Page
 ## Student Help pages
 
 - `docs/student-help/students.html`
+- `docs/student-help/student-ai-setup.html`
 - `docs/student-help/writing-workflow.html`
 - `docs/student-help/not-first-draft.html`
 - `docs/student-help/free-tier.html`
@@ -153,6 +154,16 @@ Detailed update notes are in:
 
 
 
+
+
+## Site v3.9 — Student Help structure fix
+
+- Site package updated to v3.9.
+- Prompt libraries remain v3.4.
+- Testing/audit pack remains v3.4.
+- Restored the main Student guide at `docs/student-help/students.html`.
+- Moved the AI setup guidance from the former Student guide into `docs/student-help/student-ai-setup.html`.
+- Updated the Student Help home page so the main Student guide is introduced as “What this is and how to get started.”
 
 ## Site v3.8 — AI setup and student setup guidance
 
