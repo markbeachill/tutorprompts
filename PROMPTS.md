@@ -17,6 +17,7 @@ Versioned prompt-library archives are stored in:
 - `docs/prompt-libraries/v2.3/`
 - `docs/prompt-libraries/v2.4/`
 - `docs/prompt-libraries/v2.5/`
+- `docs/prompt-libraries/v3.0/`
 
 They live inside `docs/` because GitHub Pages is configured to publish the live website from the `/docs` folder. The live download links use these same files.
 
@@ -24,7 +25,7 @@ Do not duplicate prompt files at the repository root. Update the files in `docs/
 
 ## Current prompt libraries
 
-The current public prompt-library suite is v2.5.
+The current public prompt-library suite is v3.0.
 
 The main files are:
 
@@ -36,6 +37,12 @@ The main files are:
 - `ai_personal_tutor_master_library.md`
 
 The master library contains all tools. The five mini libraries contain related groups of tools.
+
+## v3.0 design direction
+
+v3.0 adds the paragraph-first tutor style, manageable feedback, the “I'm stuck” support model, the writing-is-thinking principle, scope clarification, and plain-English grammar-term guidance.
+
+The design brief is stored at `V3_DESIGN_BRIEF.md`.
 
 ## How a mini library is structured
 

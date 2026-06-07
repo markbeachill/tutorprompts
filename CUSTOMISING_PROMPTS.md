@@ -4,7 +4,7 @@ A short guide for developers, teachers and departments who want to build a small
 
 This guide is for confident users. Most students should use the official mini libraries or the master library without editing them.
 
-**Based on:** AI Personal Tutor Master Prompt Library v2.5
+**Based on:** AI Personal Tutor Master Prompt Library v3.0
 **Approach:** start from the master library and **delete down**. Do not build a new library from scratch.
 
 ---
@@ -129,7 +129,7 @@ Near the top of the file (`00-manifest`), note what you based it on and that it 
 
 ```markdown
 **Local build:** First-Year Writing Support Library
-**Based on:** AI Personal Tutor Master Prompt Library v2.5
+**Based on:** AI Personal Tutor Master Prompt Library v3.0
 **Maintained by:** [your name / department]
 ```
 

@@ -2,7 +2,7 @@
 
 The AI Personal Tutor Toolkit is a set of prompt libraries that help students use AI as a tutor, not as a ghost-writer.
 
-The prompts are designed to help students get feedback on their own work, understand writing problems, improve paragraph structure, test academic arguments, plan revisions, and record AI use honestly.
+The prompts are designed to give structured, specialist writing support: focused feedback, plain explanation, practice and revision guidance while students keep responsibility for their own writing and thinking. The v3 site makes this positive pitch clearer: writing is thinking, feedback should be manageable, and the AI should behave like a focused tutor rather than a report generator.
 
 Live website: https://markbeachill.github.io/tutorprompts/
 
@@ -58,6 +58,7 @@ The public website is published from the `docs/` folder.
 ├── README.md
 ├── PROMPTS.md
 ├── CUSTOMISING_PROMPTS.md
+├── V3_DESIGN_BRIEF.md
 └── docs/
     ├── index.html
     ├── tools/
@@ -74,9 +75,9 @@ GitHub Pages should be configured to publish from the `docs/` folder on the main
 
 ## Current public release
 
-- Site package: v2.25
-- Prompt-library suite: v2.5
-- Testing/audit pack: v2.10
+- Site package: v3.2
+- Prompt-library suite: v3.0
+- Testing/audit pack: v3.0
 
 Detailed release notes are in `docs/changelog/site-update-notes/`.
 

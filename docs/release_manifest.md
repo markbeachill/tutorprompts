@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v2.25 / Prompt libraries v2.5 / Testing pack v2.10
+Toolkit release: Site v3.2 / Prompt libraries v3.0 / Testing pack v3.0
 
-This manifest describes the current public site package after the v2.25 homepage, guide and testing polish update.
+This manifest describes the current public site package after the v3.1 site revision aligning the public website with the v3.0 paragraph-first tutor style and writing-as-thinking prompt-library update.
 
 ## Repository-level developer files
 
@@ -60,6 +60,7 @@ Versioned prompt-library archives are in:
 - `docs/prompt-libraries/v2.3/`
 - `docs/prompt-libraries/v2.4/`
 - `docs/prompt-libraries/v2.5/`
+- `docs/prompt-libraries/v3.0/`
 
 ## Testing/audit downloads
 
@@ -74,6 +75,7 @@ Versioned testing/audit archives are in:
 - `docs/audit-library/v2.7/`
 - `docs/audit-library/v2.8/`
 - `docs/audit-library/v2.10/`
+- `docs/audit-library/v3.0/`
 
 ## Detailed update notes
 
@@ -126,3 +128,33 @@ Detailed update notes are in:
 - Simplified tool-detail pages using the Writing Tutor page as the model.
 - Added a separate tool-code column to tool-detail tables.
 - Updated the testing/audit pack to v2.10 with a deadline-pressure adversarial stress test.
+
+
+## Site v3.0 — prompt-library v3.0 tutor-style revision
+
+- Updated the prompt-library suite to v3.0.
+- Added paragraph-first output guidance so student-facing feedback uses short, readable paragraphs by default and avoids unnecessary bullet overload.
+- Added manageable-feedback guidance so tools focus on useful next moves rather than producing more feedback than the student can act on.
+- Added the “I'm stuck” support model across libraries.
+- Added “writing is thinking” as a guiding principle.
+- Clarified the toolkit's scope as writing, revision, academic thinking, research planning and study workflow support rather than a general-purpose homework-answer system.
+- Added plain-English grammar-term guidance for essential terms such as subject, verb and object.
+- Rebuilt `docs/prompt-libraries/latest/`, `docs/prompt-libraries/v3.0/`, and the current mini-library ZIP downloads.
+- Testing/audit pack remains v2.10.
+
+
+
+## Site v3.2 — testing/audit v3 alignment
+
+- Updated testing/audit pack to v3.0.
+- Added audit checks for paragraph-first tutor style, manageable feedback, writing as thinking, plain-English grammar explanations and “I’m stuck” support.
+- Added U5 “I’m stuck” support test and v3 regression cards.
+- Rebuilt `docs/audit-library/latest/`, `docs/audit-library/v3.0/`, and the testing-pack ZIP downloads.
+- Prompt libraries remain v3.0.
+
+## Site v3.1 — site alignment with v3 tutor style
+
+- Updated homepage and public site wording to present the toolkit as structured and specialist writing support, not only guardrails.
+- Added clearer site guidance on writing as thinking, paragraph-first tutor style, manageable feedback and “I’m stuck” support.
+- Updated Student Help, Teaching Approach, Educator and Tutor pages to reflect the v3 prompt-library principles.
+- Prompt libraries remain v3.0 and testing/audit pack remains v2.10.
