@@ -1,0 +1,49 @@
+name: Build site package
+
+on:
+  workflow_dispatch:
+    inputs:
+      include_generator:
+        description: "Include generator source/tooling in the uploaded ZIP artifact"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+jobs:
+  build-site-package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run prompt-library generator checks
+        run: python scripts/build_prompt_libraries.py --ci
+
+      - name: Run audit/testing pack generator checks
+        run: python scripts/build_audit_pack.py --ci
+
+      - name: Run release consistency check
+        run: python scripts/release_consistency_check.py --fail-on-problems
+
+      - name: Build clean site package
+        if: ${{ inputs.include_generator == 'false' }}
+        run: python scripts/build_site_package.py
+
+      - name: Build site package with generator tooling
+        if: ${{ inputs.include_generator == 'true' }}
+        run: python scripts/build_site_package.py --include-generator --output dist/ai_personal_tutor_repo_with_generator.zip
+
+      - name: Upload site package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-personal-tutor-site-package
+          path: dist/*.zip
+          if-no-files-found: error

@@ -1,0 +1,572 @@
+{
+  "generated_by": "ai-personal-tutor-package-generator-v1.6",
+  "toolkit_version": "3.5",
+  "prompt_library_version": "3.5",
+  "testing_pack_version": "3.5",
+  "release_date": "2026-06-07",
+  "source": "src/release.yml",
+  "pack_count": 34,
+  "core_pack_count": 6,
+  "custom_pack_count": 1,
+  "single_tool_pack_count": 27,
+  "packs": [
+    {
+      "id": "academic-thinking",
+      "title": "Academic Thinking Tutor Mini Library",
+      "kind": "core",
+      "source": "src/prompt-library/packs/academic-thinking.yml",
+      "latest_output": "docs/prompt-libraries/latest/03_academic_thinking_tutor_library.md",
+      "archive_output": "docs/prompt-libraries/v3.5/03_academic_thinking_tutor_library_v3_5.md",
+      "tool_count": 10,
+      "tool_codes": [
+        "AT1",
+        "AT2",
+        "AT3",
+        "AT4",
+        "AT5",
+        "AT6",
+        "AT7",
+        "AT8",
+        "AT9",
+        "AT10"
+      ],
+      "tool_ids": [
+        "assignment-brief-checker",
+        "argument-map",
+        "descriptive-analytical-check",
+        "evidence-gap-checker",
+        "concept-clarity-checker",
+        "literature-use-checker",
+        "counterargument-limitations-checker",
+        "source-reliability-checker",
+        "critical-opponent-review",
+        "socratic-tutor"
+      ]
+    },
+    {
+      "id": "master",
+      "title": "AI Personal Tutor Master Library",
+      "kind": "core",
+      "source": "src/prompt-library/packs/master.yml",
+      "latest_output": "docs/prompt-libraries/latest/ai_personal_tutor_master_library.md",
+      "archive_output": "docs/prompt-libraries/v3.5/ai_personal_tutor_master_library_v3_5.md",
+      "tool_count": 27,
+      "tool_codes": [
+        "WT1",
+        "WT2",
+        "WT3",
+        "WT4",
+        "WT5",
+        "WT6",
+        "ST1",
+        "ST2",
+        "ST3",
+        "AT1",
+        "AT2",
+        "AT3",
+        "AT4",
+        "AT5",
+        "AT6",
+        "AT7",
+        "AT8",
+        "AT9",
+        "AT10",
+        "RP1",
+        "RP2",
+        "RP3",
+        "RP4",
+        "RP5",
+        "SW1",
+        "SW2",
+        "SW3"
+      ],
+      "tool_ids": [
+        "clarity-clinic",
+        "single-paragraph-analysis",
+        "find-mistakes",
+        "teach-mistake",
+        "style-clarity-review",
+        "referencing-helper",
+        "paragraph-structure-review",
+        "whole-work-structure-review",
+        "expert-meaning-review",
+        "assignment-brief-checker",
+        "argument-map",
+        "descriptive-analytical-check",
+        "evidence-gap-checker",
+        "concept-clarity-checker",
+        "literature-use-checker",
+        "counterargument-limitations-checker",
+        "source-reliability-checker",
+        "critical-opponent-review",
+        "socratic-tutor",
+        "research-question-checker",
+        "methodology-fit-checker",
+        "critical-supervisor-review",
+        "viva-practice",
+        "topic-brainstorming",
+        "revision-plan",
+        "feedback-to-action-plan",
+        "ai-use-record"
+      ]
+    },
+    {
+      "id": "research-proposal",
+      "title": "Research Proposal Tutor Mini Library",
+      "kind": "core",
+      "source": "src/prompt-library/packs/research-proposal.yml",
+      "latest_output": "docs/prompt-libraries/latest/04_research_proposal_tutor_library.md",
+      "archive_output": "docs/prompt-libraries/v3.5/04_research_proposal_tutor_library_v3_5.md",
+      "tool_count": 5,
+      "tool_codes": [
+        "RP1",
+        "RP2",
+        "RP3",
+        "RP4",
+        "RP5"
+      ],
+      "tool_ids": [
+        "research-question-checker",
+        "methodology-fit-checker",
+        "critical-supervisor-review",
+        "viva-practice",
+        "topic-brainstorming"
+      ]
+    },
+    {
+      "id": "structure-tutor",
+      "title": "Structure Tutor Mini Library",
+      "kind": "core",
+      "source": "src/prompt-library/packs/structure-tutor.yml",
+      "latest_output": "docs/prompt-libraries/latest/02_structure_tutor_library.md",
+      "archive_output": "docs/prompt-libraries/v3.5/02_structure_tutor_library_v3_5.md",
+      "tool_count": 3,
+      "tool_codes": [
+        "ST1",
+        "ST2",
+        "ST3"
+      ],
+      "tool_ids": [
+        "paragraph-structure-review",
+        "whole-work-structure-review",
+        "expert-meaning-review"
+      ]
+    },
+    {
+      "id": "study-workflow",
+      "title": "Study Workflow Tutor Mini Library",
+      "kind": "core",
+      "source": "src/prompt-library/packs/study-workflow.yml",
+      "latest_output": "docs/prompt-libraries/latest/05_study_workflow_tutor_library.md",
+      "archive_output": "docs/prompt-libraries/v3.5/05_study_workflow_tutor_library_v3_5.md",
+      "tool_count": 3,
+      "tool_codes": [
+        "SW1",
+        "SW2",
+        "SW3"
+      ],
+      "tool_ids": [
+        "revision-plan",
+        "feedback-to-action-plan",
+        "ai-use-record"
+      ]
+    },
+    {
+      "id": "writing-tutor",
+      "title": "Writing Tutor Mini Library",
+      "kind": "core",
+      "source": "src/prompt-library/packs/writing-tutor.yml",
+      "latest_output": "docs/prompt-libraries/latest/01_writing_tutor_library.md",
+      "archive_output": "docs/prompt-libraries/v3.5/01_writing_tutor_library_v3_5.md",
+      "tool_count": 6,
+      "tool_codes": [
+        "WT1",
+        "WT2",
+        "WT3",
+        "WT4",
+        "WT5",
+        "WT6"
+      ],
+      "tool_ids": [
+        "clarity-clinic",
+        "single-paragraph-analysis",
+        "find-mistakes",
+        "teach-mistake",
+        "style-clarity-review",
+        "referencing-helper"
+      ]
+    },
+    {
+      "id": "first-year-writing-support",
+      "title": "First-Year Writing Support Pack",
+      "kind": "custom",
+      "source": "src/prompt-library/custom-packs/example-first-year-writing-support.yml",
+      "latest_output": "docs/prompt-libraries/custom/first_year_writing_support_pack.md",
+      "archive_output": null,
+      "tool_count": 4,
+      "tool_codes": [
+        "WT1",
+        "WT2",
+        "ST1",
+        "SW1"
+      ],
+      "tool_ids": [
+        "clarity-clinic",
+        "single-paragraph-analysis",
+        "paragraph-structure-review",
+        "revision-plan"
+      ]
+    },
+    {
+      "id": "single-wt1",
+      "title": "WT1 — Clarity Clinic Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/wt1_clarity_clinic.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "WT1"
+      ],
+      "tool_ids": [
+        "clarity-clinic"
+      ]
+    },
+    {
+      "id": "single-wt2",
+      "title": "WT2 — Single Paragraph Analysis Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/wt2_single_paragraph_analysis.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "WT2"
+      ],
+      "tool_ids": [
+        "single-paragraph-analysis"
+      ]
+    },
+    {
+      "id": "single-wt3",
+      "title": "WT3 — Find My Mistakes Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/wt3_find_my_mistakes.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "WT3"
+      ],
+      "tool_ids": [
+        "find-mistakes"
+      ]
+    },
+    {
+      "id": "single-wt4",
+      "title": "WT4 — Teach Me This Mistake Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/wt4_teach_me_this_mistake.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "WT4"
+      ],
+      "tool_ids": [
+        "teach-mistake"
+      ]
+    },
+    {
+      "id": "single-wt5",
+      "title": "WT5 — Style and Clarity Review Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/wt5_style_and_clarity_review.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "WT5"
+      ],
+      "tool_ids": [
+        "style-clarity-review"
+      ]
+    },
+    {
+      "id": "single-wt6",
+      "title": "WT6 — Referencing Helper Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/wt6_referencing_helper.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "WT6"
+      ],
+      "tool_ids": [
+        "referencing-helper"
+      ]
+    },
+    {
+      "id": "single-st1",
+      "title": "ST1 — Paragraph Structure Review Across a Whole Draft Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/st1_paragraph_structure_review_across_a_whole_draft.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "ST1"
+      ],
+      "tool_ids": [
+        "paragraph-structure-review"
+      ]
+    },
+    {
+      "id": "single-st2",
+      "title": "ST2 — Whole-Work Structure Review Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/st2_whole_work_structure_review.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "ST2"
+      ],
+      "tool_ids": [
+        "whole-work-structure-review"
+      ]
+    },
+    {
+      "id": "single-st3",
+      "title": "ST3 — Expert Meaning Review Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/st3_expert_meaning_review.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "ST3"
+      ],
+      "tool_ids": [
+        "expert-meaning-review"
+      ]
+    },
+    {
+      "id": "single-at1",
+      "title": "AT1 — Assignment Brief Checker Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/at1_assignment_brief_checker.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "AT1"
+      ],
+      "tool_ids": [
+        "assignment-brief-checker"
+      ]
+    },
+    {
+      "id": "single-at2",
+      "title": "AT2 — Argument Map Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/at2_argument_map.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "AT2"
+      ],
+      "tool_ids": [
+        "argument-map"
+      ]
+    },
+    {
+      "id": "single-at3",
+      "title": "AT3 — Descriptive vs Analytical Check Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/at3_descriptive_vs_analytical_check.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "AT3"
+      ],
+      "tool_ids": [
+        "descriptive-analytical-check"
+      ]
+    },
+    {
+      "id": "single-at4",
+      "title": "AT4 — Evidence Gap Checker Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/at4_evidence_gap_checker.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "AT4"
+      ],
+      "tool_ids": [
+        "evidence-gap-checker"
+      ]
+    },
+    {
+      "id": "single-at5",
+      "title": "AT5 — Concept Clarity Checker Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/at5_concept_clarity_checker.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "AT5"
+      ],
+      "tool_ids": [
+        "concept-clarity-checker"
+      ]
+    },
+    {
+      "id": "single-at6",
+      "title": "AT6 — Literature Use Checker Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/at6_literature_use_checker.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "AT6"
+      ],
+      "tool_ids": [
+        "literature-use-checker"
+      ]
+    },
+    {
+      "id": "single-at7",
+      "title": "AT7 — Counterargument and Limitations Checker Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/at7_counterargument_and_limitations_checker.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "AT7"
+      ],
+      "tool_ids": [
+        "counterargument-limitations-checker"
+      ]
+    },
+    {
+      "id": "single-at8",
+      "title": "AT8 — Source Reliability Checker Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/at8_source_reliability_checker.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "AT8"
+      ],
+      "tool_ids": [
+        "source-reliability-checker"
+      ]
+    },
+    {
+      "id": "single-at9",
+      "title": "AT9 — Critical Opponent Review Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/at9_critical_opponent_review.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "AT9"
+      ],
+      "tool_ids": [
+        "critical-opponent-review"
+      ]
+    },
+    {
+      "id": "single-at10",
+      "title": "AT10 — Socratic Tutor Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/at10_socratic_tutor.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "AT10"
+      ],
+      "tool_ids": [
+        "socratic-tutor"
+      ]
+    },
+    {
+      "id": "single-rp1",
+      "title": "RP1 — Research Question, Aim and Objectives Checker Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/rp1_research_question_aim_and_objectives_checker.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "RP1"
+      ],
+      "tool_ids": [
+        "research-question-checker"
+      ]
+    },
+    {
+      "id": "single-rp2",
+      "title": "RP2 — Methodology Fit Checker Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/rp2_methodology_fit_checker.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "RP2"
+      ],
+      "tool_ids": [
+        "methodology-fit-checker"
+      ]
+    },
+    {
+      "id": "single-rp3",
+      "title": "RP3 — Critical Research Supervisor Review Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/rp3_critical_research_supervisor_review.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "RP3"
+      ],
+      "tool_ids": [
+        "critical-supervisor-review"
+      ]
+    },
+    {
+      "id": "single-rp4",
+      "title": "RP4 — Viva or Supervisor Practice Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/rp4_viva_or_supervisor_practice.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "RP4"
+      ],
+      "tool_ids": [
+        "viva-practice"
+      ]
+    },
+    {
+      "id": "single-rp5",
+      "title": "RP5 — Guided Topic Brainstorming Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/rp5_guided_topic_brainstorming.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "RP5"
+      ],
+      "tool_ids": [
+        "topic-brainstorming"
+      ]
+    },
+    {
+      "id": "single-sw1",
+      "title": "SW1 — Revision Plan Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/sw1_revision_plan.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "SW1"
+      ],
+      "tool_ids": [
+        "revision-plan"
+      ]
+    },
+    {
+      "id": "single-sw2",
+      "title": "SW2 — Tutor Feedback to Action Plan Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/sw2_tutor_feedback_to_action_plan.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "SW2"
+      ],
+      "tool_ids": [
+        "feedback-to-action-plan"
+      ]
+    },
+    {
+      "id": "single-sw3",
+      "title": "SW3 — AI-Use Record Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/sw3_ai_use_record.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "SW3"
+      ],
+      "tool_ids": [
+        "ai-use-record"
+      ]
+    }
+  ]
+}

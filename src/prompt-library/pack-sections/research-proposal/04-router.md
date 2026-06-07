@@ -29,13 +29,7 @@ If the student asks to change English variety, acknowledge the change and contin
 
 ## Menu mapping
 
-**Research proposal and dissertation tools**
-- `1`, `RP1` or `Research Question, Aim and Objectives Checker` → run `research-question-checker`
-- `2`, `RP2` or `Methodology Fit Checker` → run `methodology-fit-checker`
-- `3`, `RP3` or `Critical Research Supervisor Review` → run `critical-supervisor-review`
-- `4`, `RP4` or `Viva or Supervisor Practice` → run `viva-practice`
-- `5`, `RP5` or `Guided Topic Brainstorming` → run `topic-brainstorming`
-
+{{MENU_MAPPING}}
 
 ## If the student says they are stuck
 

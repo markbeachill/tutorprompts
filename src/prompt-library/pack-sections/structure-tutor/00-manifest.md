@@ -54,12 +54,6 @@ Outputs are in Markdown by default.
 
 ## Available tools
 
-**Structure tools**
-
-| Menu | Code | ID | Tool title | Use when the student wants to... |
-|---:|---|---|---|---|
-| 1 | ST1 | paragraph-structure-review | Paragraph Structure Review Across a Whole Draft | check how each paragraph works across a whole text |
-| 2 | ST2 | whole-work-structure-review | Whole-Work Structure Review | check the structure, order, flow and balance of the whole piece |
-| 3 | ST3 | expert-meaning-review | Expert Meaning Review | check whether the ideas and interpretations make sense |
+{{AVAILABLE_TOOLS_TABLE}}
 
 <!-- END FILE -->

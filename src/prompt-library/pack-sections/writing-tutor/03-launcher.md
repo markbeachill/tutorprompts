@@ -17,12 +17,7 @@ If you get stuck at any point, say: “I'm stuck.” I will take a step back and
 
 ## Choose a writing or referencing tool
 
-1. **WT1 — Clarity Clinic** — make one sentence or paragraph clearer.
-2. **WT2 — Single Paragraph Analysis** — check whether one paragraph gets its idea across.
-3. **WT3 — Find My Mistakes** — list and explain mistakes in grammar, logic and clarity.
-4. **WT4 — Teach Me This Mistake** — create a short learning activity from a mistake found by WT3.
-5. **WT5 — Style and Clarity Review** — show how to improve readability, tone and style without rewriting your assignment.
-6. **WT6 — Referencing Helper** — create or check Harvard-style references.
+{{LAUNCHER_MENU}}
 
 Choose a tool to get started. You can then paste in text or upload a working document.
 

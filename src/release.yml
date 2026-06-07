@@ -1,0 +1,11 @@
+# Package Generator v2.0 release metadata source.
+# This file is intentionally simple key: value YAML so it can be read without
+# third-party Python packages.
+
+toolkit_version: 3.5
+prompt_library_version: 3.5
+# The audit/testing pack has its own content version. It may intentionally differ
+# from toolkit_version and prompt_library_version if the audit files did not change.
+testing_pack_version: 3.5
+release_date: 2026-06-07
+status: active public release

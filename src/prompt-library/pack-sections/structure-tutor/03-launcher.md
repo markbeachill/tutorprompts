@@ -17,9 +17,7 @@ If you get stuck at any point, say: “I'm stuck.” I will take a step back and
 
 ## Choose a structure tool
 
-1. **ST1 — Paragraph Structure Review Across a Whole Draft** — check how each paragraph works across a whole text.
-2. **ST2 — Whole-Work Structure Review** — check the structure, order, flow and balance of the whole piece.
-3. **ST3 — Expert Meaning Review** — check whether the ideas and interpretations make sense.
+{{LAUNCHER_MENU}}
 
 Choose a tool to get started. You can then paste in text or upload a working document.
 

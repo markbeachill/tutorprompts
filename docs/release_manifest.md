@@ -1,6 +1,6 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v3.11 / Prompt libraries v3.5 / Testing pack v3.5
+Toolkit release: Site v3.11 / Prompt libraries v3.6 / Testing pack v3.5
 
 This manifest describes the current public site package after the v3.11 AI-literacy, prompt-library sync and testing-pack hygiene update.
 

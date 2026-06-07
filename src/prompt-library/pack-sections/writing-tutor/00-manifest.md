@@ -54,15 +54,6 @@ Outputs are in Markdown by default.
 
 ## Available tools
 
-**Writing and referencing tools**
-
-| Menu | Code | ID | Tool title | Use when the student wants to... |
-|---:|---|---|---|---|
-| 1 | WT1 | clarity-clinic | Clarity Clinic | improve one sentence, a few sentences, or one paragraph |
-| 2 | WT2 | single-paragraph-analysis | Single Paragraph Analysis | analyse one paragraph for chain of ideas, missing links, topic sentence alignment and practical revision |
-| 3 | WT3 | find-mistakes | Find My Mistakes | identify grammar, logic, clarity, factual, spelling, punctuation and referencing problems |
-| 4 | WT4 | teach-mistake | Teach Me This Mistake | learn from mistakes identified by Find My Mistakes |
-| 5 | WT5 | style-clarity-review | Style and Clarity Review | improve readability, tone and style without rewriting the assignment |
-| 6 | WT6 | referencing-helper | Referencing Helper | create or check Harvard-style references carefully |
+{{AVAILABLE_TOOLS_TABLE}}
 
 <!-- END FILE -->

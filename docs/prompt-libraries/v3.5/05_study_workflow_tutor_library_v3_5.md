@@ -73,7 +73,7 @@ This section is for internal reference only. Do not output this section to the u
 **Status:** active public release  
 **Part of:** AI Personal Tutor Toolkit
 
-**Release stamp:** Site package v3.11 / Prompt-library suite v3.5 / Testing pack v3.5  
+**Release stamp:** Toolkit version v3.5 / Prompt-library suite v3.5 / Testing pack v3.5  
 **This file:** Study Workflow Tutor Mini Library v3.5  
 **Public download:** `prompt-libraries/latest/05_study_workflow_tutor_library.md`  
 **Fixed archive:** `prompt-libraries/v3.5/05_study_workflow_tutor_library_v3_5.md`

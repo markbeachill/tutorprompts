@@ -29,18 +29,7 @@ If the student asks to change English variety, acknowledge the change and contin
 
 ## Menu mapping
 
-**Argument, evidence and academic thinking tools**
-- `1`, `AT1` or `Assignment Brief Checker` → run `assignment-brief-checker`
-- `2`, `AT2` or `Argument Map` → run `argument-map`
-- `3`, `AT3` or `Descriptive vs Analytical Check` → run `descriptive-analytical-check`
-- `4`, `AT4` or `Evidence Gap Checker` → run `evidence-gap-checker`
-- `5`, `AT5` or `Concept Clarity Checker` → run `concept-clarity-checker`
-- `6`, `AT6` or `Literature Use Checker` → run `literature-use-checker`
-- `7`, `AT7` or `Counterargument and Limitations Checker` → run `counterargument-limitations-checker`
-- `8`, `AT8` or `Source Reliability Checker` → run `source-reliability-checker`
-- `9`, `AT9` or `Critical Opponent Review` → run `critical-opponent-review`
-- `10`, `AT10` or `Socratic Tutor` → run `socratic-tutor`
-
+{{MENU_MAPPING}}
 
 ## If the student says they are stuck
 

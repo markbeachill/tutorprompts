@@ -54,12 +54,6 @@ Outputs are in Markdown by default.
 
 ## Available tools
 
-**Study workflow, revision and integrity tools**
-
-| Menu | Code | ID | Tool title | Use when the student wants to... |
-|---:|---|---|---|---|
-| 1 | SW1 | revision-plan | Revision Plan | turn feedback into a revision plan |
-| 2 | SW2 | feedback-to-action-plan | Tutor Feedback to Action Plan | convert tutor feedback into practical actions |
-| 3 | SW3 | ai-use-record | AI-Use Record | record AI use honestly |
+{{AVAILABLE_TOOLS_TABLE}}
 
 <!-- END FILE -->

@@ -1,0 +1,252 @@
+{
+  "generator_feature": "single-tool-packs",
+  "toolkit_version": "3.5",
+  "prompt_library_version": "3.5",
+  "release_date": "2026-06-07",
+  "pack_count": 27,
+  "packs": [
+    {
+      "code": "WT1",
+      "id": "clarity-clinic",
+      "title": "Clarity Clinic",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "generated_file": "wt1_clarity_clinic.md",
+      "pack_title": "WT1 — Clarity Clinic Single-Tool Pack"
+    },
+    {
+      "code": "WT2",
+      "id": "single-paragraph-analysis",
+      "title": "Single Paragraph Analysis",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "generated_file": "wt2_single_paragraph_analysis.md",
+      "pack_title": "WT2 — Single Paragraph Analysis Single-Tool Pack"
+    },
+    {
+      "code": "WT3",
+      "id": "find-mistakes",
+      "title": "Find My Mistakes",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "generated_file": "wt3_find_my_mistakes.md",
+      "pack_title": "WT3 — Find My Mistakes Single-Tool Pack"
+    },
+    {
+      "code": "WT4",
+      "id": "teach-mistake",
+      "title": "Teach Me This Mistake",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "generated_file": "wt4_teach_me_this_mistake.md",
+      "pack_title": "WT4 — Teach Me This Mistake Single-Tool Pack"
+    },
+    {
+      "code": "WT5",
+      "id": "style-clarity-review",
+      "title": "Style and Clarity Review",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "generated_file": "wt5_style_and_clarity_review.md",
+      "pack_title": "WT5 — Style and Clarity Review Single-Tool Pack"
+    },
+    {
+      "code": "WT6",
+      "id": "referencing-helper",
+      "title": "Referencing Helper",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "generated_file": "wt6_referencing_helper.md",
+      "pack_title": "WT6 — Referencing Helper Single-Tool Pack"
+    },
+    {
+      "code": "ST1",
+      "id": "paragraph-structure-review",
+      "title": "Paragraph Structure Review Across a Whole Draft",
+      "family": "structure-tutor",
+      "family_label": "Structure Tutor tools",
+      "generated_file": "st1_paragraph_structure_review_across_a_whole_draft.md",
+      "pack_title": "ST1 — Paragraph Structure Review Across a Whole Draft Single-Tool Pack"
+    },
+    {
+      "code": "ST2",
+      "id": "whole-work-structure-review",
+      "title": "Whole-Work Structure Review",
+      "family": "structure-tutor",
+      "family_label": "Structure Tutor tools",
+      "generated_file": "st2_whole_work_structure_review.md",
+      "pack_title": "ST2 — Whole-Work Structure Review Single-Tool Pack"
+    },
+    {
+      "code": "ST3",
+      "id": "expert-meaning-review",
+      "title": "Expert Meaning Review",
+      "family": "structure-tutor",
+      "family_label": "Structure Tutor tools",
+      "generated_file": "st3_expert_meaning_review.md",
+      "pack_title": "ST3 — Expert Meaning Review Single-Tool Pack"
+    },
+    {
+      "code": "AT1",
+      "id": "assignment-brief-checker",
+      "title": "Assignment Brief Checker",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "generated_file": "at1_assignment_brief_checker.md",
+      "pack_title": "AT1 — Assignment Brief Checker Single-Tool Pack"
+    },
+    {
+      "code": "AT2",
+      "id": "argument-map",
+      "title": "Argument Map",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "generated_file": "at2_argument_map.md",
+      "pack_title": "AT2 — Argument Map Single-Tool Pack"
+    },
+    {
+      "code": "AT3",
+      "id": "descriptive-analytical-check",
+      "title": "Descriptive vs Analytical Check",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "generated_file": "at3_descriptive_vs_analytical_check.md",
+      "pack_title": "AT3 — Descriptive vs Analytical Check Single-Tool Pack"
+    },
+    {
+      "code": "AT4",
+      "id": "evidence-gap-checker",
+      "title": "Evidence Gap Checker",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "generated_file": "at4_evidence_gap_checker.md",
+      "pack_title": "AT4 — Evidence Gap Checker Single-Tool Pack"
+    },
+    {
+      "code": "AT5",
+      "id": "concept-clarity-checker",
+      "title": "Concept Clarity Checker",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "generated_file": "at5_concept_clarity_checker.md",
+      "pack_title": "AT5 — Concept Clarity Checker Single-Tool Pack"
+    },
+    {
+      "code": "AT6",
+      "id": "literature-use-checker",
+      "title": "Literature Use Checker",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "generated_file": "at6_literature_use_checker.md",
+      "pack_title": "AT6 — Literature Use Checker Single-Tool Pack"
+    },
+    {
+      "code": "AT7",
+      "id": "counterargument-limitations-checker",
+      "title": "Counterargument and Limitations Checker",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "generated_file": "at7_counterargument_and_limitations_checker.md",
+      "pack_title": "AT7 — Counterargument and Limitations Checker Single-Tool Pack"
+    },
+    {
+      "code": "AT8",
+      "id": "source-reliability-checker",
+      "title": "Source Reliability Checker",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "generated_file": "at8_source_reliability_checker.md",
+      "pack_title": "AT8 — Source Reliability Checker Single-Tool Pack"
+    },
+    {
+      "code": "AT9",
+      "id": "critical-opponent-review",
+      "title": "Critical Opponent Review",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "generated_file": "at9_critical_opponent_review.md",
+      "pack_title": "AT9 — Critical Opponent Review Single-Tool Pack"
+    },
+    {
+      "code": "AT10",
+      "id": "socratic-tutor",
+      "title": "Socratic Tutor",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "generated_file": "at10_socratic_tutor.md",
+      "pack_title": "AT10 — Socratic Tutor Single-Tool Pack"
+    },
+    {
+      "code": "RP1",
+      "id": "research-question-checker",
+      "title": "Research Question, Aim and Objectives Checker",
+      "family": "research-proposal",
+      "family_label": "Research Proposal tools",
+      "generated_file": "rp1_research_question_aim_and_objectives_checker.md",
+      "pack_title": "RP1 — Research Question, Aim and Objectives Checker Single-Tool Pack"
+    },
+    {
+      "code": "RP2",
+      "id": "methodology-fit-checker",
+      "title": "Methodology Fit Checker",
+      "family": "research-proposal",
+      "family_label": "Research Proposal tools",
+      "generated_file": "rp2_methodology_fit_checker.md",
+      "pack_title": "RP2 — Methodology Fit Checker Single-Tool Pack"
+    },
+    {
+      "code": "RP3",
+      "id": "critical-supervisor-review",
+      "title": "Critical Research Supervisor Review",
+      "family": "research-proposal",
+      "family_label": "Research Proposal tools",
+      "generated_file": "rp3_critical_research_supervisor_review.md",
+      "pack_title": "RP3 — Critical Research Supervisor Review Single-Tool Pack"
+    },
+    {
+      "code": "RP4",
+      "id": "viva-practice",
+      "title": "Viva or Supervisor Practice",
+      "family": "research-proposal",
+      "family_label": "Research Proposal tools",
+      "generated_file": "rp4_viva_or_supervisor_practice.md",
+      "pack_title": "RP4 — Viva or Supervisor Practice Single-Tool Pack"
+    },
+    {
+      "code": "RP5",
+      "id": "topic-brainstorming",
+      "title": "Guided Topic Brainstorming",
+      "family": "research-proposal",
+      "family_label": "Research Proposal tools",
+      "generated_file": "rp5_guided_topic_brainstorming.md",
+      "pack_title": "RP5 — Guided Topic Brainstorming Single-Tool Pack"
+    },
+    {
+      "code": "SW1",
+      "id": "revision-plan",
+      "title": "Revision Plan",
+      "family": "study-workflow",
+      "family_label": "Study Workflow tools",
+      "generated_file": "sw1_revision_plan.md",
+      "pack_title": "SW1 — Revision Plan Single-Tool Pack"
+    },
+    {
+      "code": "SW2",
+      "id": "feedback-to-action-plan",
+      "title": "Tutor Feedback to Action Plan",
+      "family": "study-workflow",
+      "family_label": "Study Workflow tools",
+      "generated_file": "sw2_tutor_feedback_to_action_plan.md",
+      "pack_title": "SW2 — Tutor Feedback to Action Plan Single-Tool Pack"
+    },
+    {
+      "code": "SW3",
+      "id": "ai-use-record",
+      "title": "AI-Use Record",
+      "family": "study-workflow",
+      "family_label": "Study Workflow tools",
+      "generated_file": "sw3_ai_use_record.md",
+      "pack_title": "SW3 — AI-Use Record Single-Tool Pack"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # AI Personal Tutor Toolkit — Audit Prompt v3.5
 
-**Release stamp:** Site package v3.11 / Prompt-library suite v3.5 / Testing pack v3.5
+**Release stamp:** Toolkit version v3.5 / Prompt-library suite v3.5 / Testing pack v3.5
 **This file:** AI Personal Tutor Toolkit — Audit Prompt v3.5  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md`  
 **Fixed archive:** `audit-library/v3.5/ai_tutor_toolkit_audit_prompt_with_menu_v3_5.md`

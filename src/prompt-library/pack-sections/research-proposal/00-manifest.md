@@ -54,14 +54,6 @@ Outputs are in Markdown by default.
 
 ## Available tools
 
-**Research proposal and dissertation tools**
-
-| Menu | Code | ID | Tool title | Use when the student wants to... |
-|---:|---|---|---|---|
-| 1 | RP1 | research-question-checker | Research Question, Aim and Objectives Checker | check whether research question, aim and objectives align |
-| 2 | RP2 | methodology-fit-checker | Methodology Fit Checker | check whether the method fits the research question |
-| 3 | RP3 | critical-supervisor-review | Critical Research Supervisor Review | review a proposal as a critical supervisor |
-| 4 | RP4 | viva-practice | Viva or Supervisor Practice | ask supervisor-style questions one at a time |
-| 5 | RP5 | topic-brainstorming | Guided Topic Brainstorming | develop possible research topics |
+{{AVAILABLE_TOOLS_TABLE}}
 
 <!-- END FILE -->

@@ -1,0 +1,54 @@
+name: Build toolkit release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Toolkit version, for example 3.6
+        required: true
+        type: string
+      release_date:
+        description: Release date in YYYY-MM-DD format
+        required: true
+        type: string
+      include_single_tools:
+        description: Also generate all single-tool packs before packaging
+        required: false
+        default: false
+        type: boolean
+      include_custom:
+        description: Also generate custom packs before packaging
+        required: false
+        default: false
+        type: boolean
+      draft_notes:
+        description: Also create a draft update-notes Markdown file
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Build release package
+        run: |
+          EXTRA_ARGS=""
+          if [ "${{ inputs.include_single_tools }}" = "true" ]; then EXTRA_ARGS="$EXTRA_ARGS --include-single-tools"; fi
+          if [ "${{ inputs.include_custom }}" = "true" ]; then EXTRA_ARGS="$EXTRA_ARGS --include-custom"; fi
+          if [ "${{ inputs.draft_notes }}" = "true" ]; then EXTRA_ARGS="$EXTRA_ARGS --draft-notes"; fi
+          python scripts/build_toolkit_release.py --version "${{ inputs.version }}" --date "${{ inputs.release_date }}" $EXTRA_ARGS
+
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-personal-tutor-release-${{ inputs.version }}
+          path: dist/*.zip

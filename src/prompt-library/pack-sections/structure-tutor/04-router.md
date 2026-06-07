@@ -29,11 +29,7 @@ If the student asks to change English variety, acknowledge the change and contin
 
 ## Menu mapping
 
-**Structure tools**
-- `1`, `ST1` or `Paragraph Structure Review Across a Whole Draft` → run `paragraph-structure-review`
-- `2`, `ST2` or `Whole-Work Structure Review` → run `whole-work-structure-review`
-- `3`, `ST3` or `Expert Meaning Review` → run `expert-meaning-review`
-
+{{MENU_MAPPING}}
 
 ## If the student says they are stuck
 

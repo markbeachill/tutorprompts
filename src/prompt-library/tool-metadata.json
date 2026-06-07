@@ -1,0 +1,301 @@
+{
+  "tools": [
+    {
+      "id": "clarity-clinic",
+      "code": "WT1",
+      "title": "Clarity Clinic",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "master_manifest_description": "improve one sentence, a few sentences, or one paragraph",
+      "mini_manifest_description": "improve one sentence, a few sentences, or one paragraph",
+      "mini_family_label": "Writing and referencing tools",
+      "launcher_description": "make one sentence or paragraph clearer."
+    },
+    {
+      "id": "single-paragraph-analysis",
+      "code": "WT2",
+      "title": "Single Paragraph Analysis",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "master_manifest_description": "analyse one paragraph for chain of ideas, missing links, topic sentence alignment and practical revision",
+      "mini_manifest_description": "analyse one paragraph for chain of ideas, missing links, topic sentence alignment and practical revision",
+      "mini_family_label": "Writing and referencing tools",
+      "launcher_description": "check whether one paragraph gets its idea across."
+    },
+    {
+      "id": "find-mistakes",
+      "code": "WT3",
+      "title": "Find My Mistakes",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "master_manifest_description": "identify grammar, logic, clarity, factual, spelling, punctuation and referencing problems",
+      "mini_manifest_description": "identify grammar, logic, clarity, factual, spelling, punctuation and referencing problems",
+      "mini_family_label": "Writing and referencing tools",
+      "launcher_description": "list and explain mistakes in grammar, logic and clarity."
+    },
+    {
+      "id": "teach-mistake",
+      "code": "WT4",
+      "title": "Teach Me This Mistake",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "master_manifest_description": "learn from mistakes identified by Find My Mistakes",
+      "mini_manifest_description": "learn from mistakes identified by Find My Mistakes",
+      "mini_family_label": "Writing and referencing tools",
+      "launcher_description": "create a short learning activity from a mistake found by WT3."
+    },
+    {
+      "id": "style-clarity-review",
+      "code": "WT5",
+      "title": "Style and Clarity Review",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "master_manifest_description": "improve readability, tone and style without rewriting the assignment",
+      "mini_manifest_description": "improve readability, tone and style without rewriting the assignment",
+      "mini_family_label": "Writing and referencing tools",
+      "launcher_description": "show how to improve readability, tone and style without rewriting your assignment."
+    },
+    {
+      "id": "referencing-helper",
+      "code": "WT6",
+      "title": "Referencing Helper",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "master_manifest_description": "create or check Harvard-style references carefully",
+      "mini_manifest_description": "create or check Harvard-style references carefully",
+      "mini_family_label": "Writing and referencing tools",
+      "launcher_description": "create or check Harvard-style references."
+    },
+    {
+      "id": "paragraph-structure-review",
+      "code": "ST1",
+      "title": "Paragraph Structure Review Across a Whole Draft",
+      "family": "structure-tutor",
+      "family_label": "Structure Tutor tools",
+      "master_manifest_description": "check whether each paragraph works across a whole text",
+      "mini_manifest_description": "check how each paragraph works across a whole text",
+      "mini_family_label": "Structure tools",
+      "launcher_description": "check how each paragraph works across a whole text."
+    },
+    {
+      "id": "whole-work-structure-review",
+      "code": "ST2",
+      "title": "Whole-Work Structure Review",
+      "family": "structure-tutor",
+      "family_label": "Structure Tutor tools",
+      "master_manifest_description": "check organisation, sequence, flow and balance",
+      "mini_manifest_description": "check the structure, order, flow and balance of the whole piece",
+      "mini_family_label": "Structure tools",
+      "launcher_description": "check the structure, order, flow and balance of the whole piece."
+    },
+    {
+      "id": "expert-meaning-review",
+      "code": "ST3",
+      "title": "Expert Meaning Review",
+      "family": "structure-tutor",
+      "family_label": "Structure Tutor tools",
+      "master_manifest_description": "check whether the ideas, interpretations and argument make sense",
+      "mini_manifest_description": "check whether the ideas and interpretations make sense",
+      "mini_family_label": "Structure tools",
+      "launcher_description": "check whether the ideas and interpretations make sense."
+    },
+    {
+      "id": "assignment-brief-checker",
+      "code": "AT1",
+      "title": "Assignment Brief Checker",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "master_manifest_description": "check whether the work answers the task",
+      "mini_manifest_description": "check whether the work answers the task",
+      "mini_family_label": "Argument, evidence and academic thinking tools",
+      "launcher_description": "check whether the work answers the task."
+    },
+    {
+      "id": "argument-map",
+      "code": "AT2",
+      "title": "Argument Map",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "master_manifest_description": "identify the main claim, supporting points, evidence, assumptions and gaps",
+      "mini_manifest_description": "identify claim, supporting points, evidence, assumptions and gaps",
+      "mini_family_label": "Argument, evidence and academic thinking tools",
+      "launcher_description": "identify the claim, supporting points, evidence, assumptions and gaps."
+    },
+    {
+      "id": "descriptive-analytical-check",
+      "code": "AT3",
+      "title": "Descriptive vs Analytical Check",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "master_manifest_description": "check whether the writing is descriptive or analytical",
+      "mini_manifest_description": "check whether the writing is descriptive or analytical",
+      "mini_family_label": "Argument, evidence and academic thinking tools",
+      "launcher_description": "check whether the writing is descriptive or analytical."
+    },
+    {
+      "id": "evidence-gap-checker",
+      "code": "AT4",
+      "title": "Evidence Gap Checker",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "master_manifest_description": "identify claims that need more evidence",
+      "mini_manifest_description": "identify claims that need evidence",
+      "mini_family_label": "Argument, evidence and academic thinking tools",
+      "launcher_description": "identify claims that need evidence."
+    },
+    {
+      "id": "concept-clarity-checker",
+      "code": "AT5",
+      "title": "Concept Clarity Checker",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "master_manifest_description": "check whether key concepts are defined and used clearly",
+      "mini_manifest_description": "check whether key concepts are defined and used clearly",
+      "mini_family_label": "Argument, evidence and academic thinking tools",
+      "launcher_description": "check whether key concepts are defined and used clearly."
+    },
+    {
+      "id": "literature-use-checker",
+      "code": "AT6",
+      "title": "Literature Use Checker",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "master_manifest_description": "review how academic sources are used",
+      "mini_manifest_description": "review how sources are used",
+      "mini_family_label": "Argument, evidence and academic thinking tools",
+      "launcher_description": "review how sources are used."
+    },
+    {
+      "id": "counterargument-limitations-checker",
+      "code": "AT7",
+      "title": "Counterargument and Limitations Checker",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "master_manifest_description": "identify possible objections, limitations and challenges",
+      "mini_manifest_description": "identify possible objections and limitations",
+      "mini_family_label": "Argument, evidence and academic thinking tools",
+      "launcher_description": "identify possible objections and limitations."
+    },
+    {
+      "id": "source-reliability-checker",
+      "code": "AT8",
+      "title": "Source Reliability Checker",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "master_manifest_description": "check whether sources look credible, relevant and suitable",
+      "mini_manifest_description": "check whether sources look credible, relevant and suitable",
+      "mini_family_label": "Argument, evidence and academic thinking tools",
+      "launcher_description": "check whether sources look credible, relevant and suitable."
+    },
+    {
+      "id": "critical-opponent-review",
+      "code": "AT9",
+      "title": "Critical Opponent Review",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "master_manifest_description": "challenge the argument from sceptical, opposing, picky, methodological, real-world or ideological viewpoints",
+      "mini_manifest_description": "challenge the argument from sceptical, opposing, picky or ideological viewpoints",
+      "mini_family_label": "Argument, evidence and academic thinking tools",
+      "launcher_description": "challenge the argument from sceptical, opposing, picky or ideological viewpoints."
+    },
+    {
+      "id": "socratic-tutor",
+      "code": "AT10",
+      "title": "Socratic Tutor",
+      "family": "academic-thinking",
+      "family_label": "Academic Thinking tools",
+      "master_manifest_description": "discuss a topic through one-question-at-a-time questioning",
+      "mini_manifest_description": "discuss a topic through one-question-at-a-time questioning",
+      "mini_family_label": "Argument, evidence and academic thinking tools",
+      "launcher_description": "discuss a topic through one-question-at-a-time questioning."
+    },
+    {
+      "id": "research-question-checker",
+      "code": "RP1",
+      "title": "Research Question, Aim and Objectives Checker",
+      "family": "research-proposal",
+      "family_label": "Research Proposal tools",
+      "master_manifest_description": "check whether research question, aim and objectives align",
+      "mini_manifest_description": "check whether research question, aim and objectives align",
+      "mini_family_label": "Research proposal and dissertation tools",
+      "launcher_description": "check whether your research question, aim and objectives align."
+    },
+    {
+      "id": "methodology-fit-checker",
+      "code": "RP2",
+      "title": "Methodology Fit Checker",
+      "family": "research-proposal",
+      "family_label": "Research Proposal tools",
+      "master_manifest_description": "check whether the method fits the research question",
+      "mini_manifest_description": "check whether the method fits the research question",
+      "mini_family_label": "Research proposal and dissertation tools",
+      "launcher_description": "check whether the method fits the research question."
+    },
+    {
+      "id": "critical-supervisor-review",
+      "code": "RP3",
+      "title": "Critical Research Supervisor Review",
+      "family": "research-proposal",
+      "family_label": "Research Proposal tools",
+      "master_manifest_description": "review a dissertation or research proposal as a critical supervisor",
+      "mini_manifest_description": "review a proposal as a critical supervisor",
+      "mini_family_label": "Research proposal and dissertation tools",
+      "launcher_description": "review a proposal as a critical supervisor."
+    },
+    {
+      "id": "viva-practice",
+      "code": "RP4",
+      "title": "Viva or Supervisor Practice",
+      "family": "research-proposal",
+      "family_label": "Research Proposal tools",
+      "master_manifest_description": "ask supervisor-style questions one at a time",
+      "mini_manifest_description": "ask supervisor-style questions one at a time",
+      "mini_family_label": "Research proposal and dissertation tools",
+      "launcher_description": "ask supervisor-style questions one at a time."
+    },
+    {
+      "id": "topic-brainstorming",
+      "code": "RP5",
+      "title": "Guided Topic Brainstorming",
+      "family": "research-proposal",
+      "family_label": "Research Proposal tools",
+      "master_manifest_description": "help develop possible research topics",
+      "mini_manifest_description": "develop possible research topics",
+      "mini_family_label": "Research proposal and dissertation tools",
+      "launcher_description": "develop possible research topics."
+    },
+    {
+      "id": "revision-plan",
+      "code": "SW1",
+      "title": "Revision Plan",
+      "family": "study-workflow",
+      "family_label": "Study Workflow tools",
+      "master_manifest_description": "turn feedback into a revision plan",
+      "mini_manifest_description": "turn feedback into a revision plan",
+      "mini_family_label": "Study workflow, revision and integrity tools",
+      "launcher_description": "turn feedback or draft concerns into a revision plan."
+    },
+    {
+      "id": "feedback-to-action-plan",
+      "code": "SW2",
+      "title": "Tutor Feedback to Action Plan",
+      "family": "study-workflow",
+      "family_label": "Study Workflow tools",
+      "master_manifest_description": "convert tutor feedback into practical actions",
+      "mini_manifest_description": "convert tutor feedback into practical actions",
+      "mini_family_label": "Study workflow, revision and integrity tools",
+      "launcher_description": "convert human tutor feedback into practical actions."
+    },
+    {
+      "id": "ai-use-record",
+      "code": "SW3",
+      "title": "AI-Use Record",
+      "family": "study-workflow",
+      "family_label": "Study Workflow tools",
+      "master_manifest_description": "help record AI use honestly",
+      "mini_manifest_description": "record AI use honestly",
+      "mini_family_label": "Study workflow, revision and integrity tools",
+      "launcher_description": "record AI use honestly."
+    }
+  ]
+}

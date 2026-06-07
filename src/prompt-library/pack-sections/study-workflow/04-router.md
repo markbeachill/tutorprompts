@@ -29,11 +29,7 @@ If the student asks to change English variety, acknowledge the change and contin
 
 ## Menu mapping
 
-**Study workflow, revision and integrity tools**
-- `1`, `SW1` or `Revision Plan` → run `revision-plan`
-- `2`, `SW2` or `Tutor Feedback to Action Plan` → run `feedback-to-action-plan`
-- `3`, `SW3` or `AI-Use Record` → run `ai-use-record`
-
+{{MENU_MAPPING}}
 
 ## If the student says they are stuck
 

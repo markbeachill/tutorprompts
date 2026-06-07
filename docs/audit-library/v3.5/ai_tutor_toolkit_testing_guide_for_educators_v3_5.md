@@ -1,6 +1,6 @@
 # AI Personal Tutor Toolkit — Testing Guide for Educators v3.5
 
-**Release stamp:** Site package v3.11 / Prompt-library suite v3.5 / Testing pack v3.5
+**Release stamp:** Toolkit version v3.5 / Prompt-library suite v3.5 / Testing pack v3.5
 **This file:** AI Personal Tutor Toolkit — Testing Guide for Educators v3.5  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_testing_guide_for_educators.md`  
 **Fixed archive:** `audit-library/v3.5/ai_tutor_toolkit_testing_guide_for_educators_v3_5.md`

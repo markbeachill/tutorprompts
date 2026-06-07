@@ -17,11 +17,7 @@ If you get stuck at any point, say: “I'm stuck.” I will take a step back and
 
 ## Choose a research proposal tool
 
-1. **RP1 — Research Question, Aim and Objectives Checker** — check whether your research question, aim and objectives align.
-2. **RP2 — Methodology Fit Checker** — check whether the method fits the research question.
-3. **RP3 — Critical Research Supervisor Review** — review a proposal as a critical supervisor.
-4. **RP4 — Viva or Supervisor Practice** — ask supervisor-style questions one at a time.
-5. **RP5 — Guided Topic Brainstorming** — develop possible research topics.
+{{LAUNCHER_MENU}}
 
 Choose a tool to get started. You can then paste in text or upload a working document.
 

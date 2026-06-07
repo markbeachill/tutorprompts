@@ -54,19 +54,6 @@ Outputs are in Markdown by default.
 
 ## Available tools
 
-**Argument, evidence and academic thinking tools**
-
-| Menu | Code | ID | Tool title | Use when the student wants to... |
-|---:|---|---|---|---|
-| 1 | AT1 | assignment-brief-checker | Assignment Brief Checker | check whether the work answers the task |
-| 2 | AT2 | argument-map | Argument Map | identify claim, supporting points, evidence, assumptions and gaps |
-| 3 | AT3 | descriptive-analytical-check | Descriptive vs Analytical Check | check whether the writing is descriptive or analytical |
-| 4 | AT4 | evidence-gap-checker | Evidence Gap Checker | identify claims that need evidence |
-| 5 | AT5 | concept-clarity-checker | Concept Clarity Checker | check whether key concepts are defined and used clearly |
-| 6 | AT6 | literature-use-checker | Literature Use Checker | review how sources are used |
-| 7 | AT7 | counterargument-limitations-checker | Counterargument and Limitations Checker | identify possible objections and limitations |
-| 8 | AT8 | source-reliability-checker | Source Reliability Checker | check whether sources look credible, relevant and suitable |
-| 9 | AT9 | critical-opponent-review | Critical Opponent Review | challenge the argument from sceptical, opposing, picky or ideological viewpoints |
-| 10 | AT10 | socratic-tutor | Socratic Tutor | discuss a topic through one-question-at-a-time questioning |
+{{AVAILABLE_TOOLS_TABLE}}
 
 <!-- END FILE -->

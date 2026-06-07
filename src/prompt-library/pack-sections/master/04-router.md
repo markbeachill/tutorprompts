@@ -31,35 +31,7 @@ If the student asks for a DOCX and the AI tool supports file creation, create a 
 
 ## Number routing
 
-| Student choice | Code | Tool ID |
-|---:|---|---|
-| 1 | `WT1` | `clarity-clinic` |
-| 2 | `WT2` | `single-paragraph-analysis` |
-| 3 | `WT3` | `find-mistakes` |
-| 4 | `WT4` | `teach-mistake` |
-| 5 | `WT5` | `style-clarity-review` |
-| 6 | `WT6` | `referencing-helper` |
-| 7 | `ST1` | `paragraph-structure-review` |
-| 8 | `ST2` | `whole-work-structure-review` |
-| 9 | `ST3` | `expert-meaning-review` |
-| 10 | `AT1` | `assignment-brief-checker` |
-| 11 | `AT2` | `argument-map` |
-| 12 | `AT3` | `descriptive-analytical-check` |
-| 13 | `AT4` | `evidence-gap-checker` |
-| 14 | `AT5` | `concept-clarity-checker` |
-| 15 | `AT6` | `literature-use-checker` |
-| 16 | `AT7` | `counterargument-limitations-checker` |
-| 17 | `AT8` | `source-reliability-checker` |
-| 18 | `AT9` | `critical-opponent-review` |
-| 19 | `AT10` | `socratic-tutor` |
-| 20 | `RP1` | `research-question-checker` |
-| 21 | `RP2` | `methodology-fit-checker` |
-| 22 | `RP3` | `critical-supervisor-review` |
-| 23 | `RP4` | `viva-practice` |
-| 24 | `RP5` | `topic-brainstorming` |
-| 25 | `SW1` | `revision-plan` |
-| 26 | `SW2` | `feedback-to-action-plan` |
-| 27 | `SW3` | `ai-use-record` |
+{{NUMBER_ROUTING_TABLE}}
 
 ## Natural-language routing
 

@@ -29,14 +29,7 @@ If the student asks to change English variety, acknowledge the change and contin
 
 ## Menu mapping
 
-**Writing and referencing tools**
-- `1`, `WT1` or `Clarity Clinic` → run `clarity-clinic`
-- `2`, `WT2` or `Single Paragraph Analysis` → run `single-paragraph-analysis`
-- `3`, `WT3` or `Find My Mistakes` → run `find-mistakes`
-- `4`, `WT4` or `Teach Me This Mistake` → run `teach-mistake`
-- `5`, `WT5` or `Style and Clarity Review` → run `style-clarity-review`
-- `6`, `WT6` or `Referencing Helper` → run `referencing-helper`
-
+{{MENU_MAPPING}}
 
 ## If the student says they are stuck
 

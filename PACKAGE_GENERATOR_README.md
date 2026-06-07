@@ -1,70 +1,182 @@
-# AI Personal Tutor Package Generator v0.1
+# AI Personal Tutor Package Generator v2.7
 
-This is a first-stage package generator for the AI Personal Tutor Toolkit prompt libraries.
-It is **not** a new website release. It is a repository tool that should be extracted into
-the root of the GitHub repository.
+This is a repository tooling release for the AI Personal Tutor Toolkit. It is **not** a website/content release.
 
-## What v0.1 does
+Extract this ZIP into the **root of your local GitHub repository**. It adds and updates generator source files, scripts, GitHub workflows and documentation.
 
-- Adds `src/prompt-library/` as the source area for prompt-library blocks.
-- Adds pack manifests for the master library and the five mini-libraries.
-- Adds `scripts/build_prompt_libraries.py`.
-- Rebuilds:
-  - `docs/prompt-libraries/latest/ai_personal_tutor_master_library.md`
-  - `docs/prompt-libraries/latest/01_writing_tutor_library.md`
-  - `docs/prompt-libraries/latest/02_structure_tutor_library.md`
-  - `docs/prompt-libraries/latest/03_academic_thinking_tutor_library.md`
-  - `docs/prompt-libraries/latest/04_research_proposal_tutor_library.md`
-  - `docs/prompt-libraries/latest/05_study_workflow_tutor_library.md`
-  - matching fixed archive copies under `docs/prompt-libraries/v3.5/`
-  - `docs/prompt-libraries/latest/ai_personal_tutor_mini_libraries.zip`
+## Start here
 
-## What v0.1 deliberately does not do yet
+For the shortest instructions, read:
 
-- It does not yet generate menus dynamically from tool metadata.
-- It does not yet generate single-tool packs.
-- It does not yet generate custom packs.
-- It does not yet update site pages, changelog files or release manifests.
-- It does not yet automate GitHub Actions.
-
-Those are intended later stages.
-
-## How to use
-
-From a clean local repository:
-
-```bash
-python scripts/build_prompt_libraries.py
+```text
+PACKAGE_GENERATOR_START_HERE.md
 ```
 
-Then inspect the result:
+After extracting the ZIP, run the standard checks from the repository root:
 
-```bash
-git status
-git diff
+```powershell
+python scripts\run_generator_checks.py
 ```
 
-To check whether generated files are current without changing files:
+This command is Windows-friendly and runs the deeper generator checks in sequence.
 
-```bash
-python scripts/build_prompt_libraries.py --check
+## What v2.7 does
+
+v2.7 keeps the mixed-version diagnostics and adds a one-command recovery option to the standard check runner. If generated prompt-library files are already on a newer version than `src/release.yml`, you can now run `python scripts\run_generator_checks.py --sync-release-metadata` to sync release metadata, rebuild prompt libraries and site data, then run the checks.
+
+v2.7 keeps the existing prompt-library, audit-pack, site-data, release-preparation and packaging behaviour. It adds a safer explanation path for choosing between standard checks, build refreshes, mixed-version recovery and release packaging.
+
+New in v2.7:
+
+- `run_generator_checks.py --explain` prints a concise command guide for the common generator workflows.
+- The command guide explains when to use the standard check, `--build-first`, `--sync-release-metadata`, and `build_toolkit_release.py`.
+- Documentation now points users to the built-in command guide before choosing a recovery or release command.
+- Existing v2.5 commands remain unchanged.
+
+Kept from earlier generator releases:
+
+- Source-driven prompt-library generation from `src/prompt-library/`.
+- Metadata-driven tool menus, available-tools tables and router mappings.
+- Master library and five mini-library generation.
+- Custom-pack generation.
+- Single-tool pack generation, README, manifest and ZIP output.
+- Audit/testing-pack source, latest/archive copying, versioning and ZIP generation.
+- Generated site-integration data under `docs/data/`.
+- Release-preparation support from `src/release.yml`.
+- Separate `testing_pack_version` support for audit/testing content.
+- Clean site-package ZIP creation under `dist/`.
+- One-command release orchestration.
+- GitHub Actions checks.
+
+## Main commands
+
+### Standard local checks
+
+```powershell
+python scripts\run_generator_checks.py
 ```
 
-## Source-of-truth rule
+This runs:
 
-In this v0.1 generator, edit the source blocks in:
+```powershell
+python scripts\generator_health_report.py --fail-on-problems --no-recommendations
+python scripts\build_prompt_libraries.py --ci
+python scripts\build_audit_pack.py --ci
+python scripts\build_site_data.py --check
+python scripts\release_consistency_check.py --fail-on-problems
+```
+
+### Build prompt libraries
+
+```powershell
+python scripts\build_prompt_libraries.py
+```
+
+### Build audit/testing pack
+
+```powershell
+python scripts\build_audit_pack.py
+```
+
+### Build generated site data
+
+```powershell
+python scripts\build_site_data.py
+```
+
+### Prepare and build a toolkit release
+
+If the audit/testing pack did not change:
+
+```powershell
+python scripts\build_toolkit_release.py --version 3.6 --date 2026-06-14
+```
+
+If the audit/testing pack also changed and should receive its own version bump:
+
+```powershell
+python scripts\build_toolkit_release.py --version 3.6 --testing-pack-version 3.6 --date 2026-06-14
+```
+
+### Create draft release notes
+
+```powershell
+python scripts\generate_release_notes_draft.py --version 3.6 --date 2026-06-14
+```
+
+## Source and generated files
+
+Human-edited source files are mainly in:
 
 ```text
 src/prompt-library/
+src/audit-library/files/
+src/release.yml
 ```
 
-Then rebuild the generated Markdown files. Avoid editing generated files under
-`docs/prompt-libraries/latest/` directly unless you intend to copy the same change back
-into the source blocks.
+Generated files are mainly in:
 
-## Important v0.1 note
+```text
+docs/prompt-libraries/
+docs/audit-library/
+docs/data/
+dist/
+```
 
-The master tool blocks are the canonical tool text. When building mini-libraries, the
-script removes `master_number` metadata and rewrites `menu_number` to match that mini-pack's
-local order. This keeps the tool body shared while preserving the current mini-library
-format.
+The prompt libraries are assembled from many source blocks. The audit/testing pack is simpler: its source files are manually edited, then copied, stamped, archived and zipped by the generator.
+
+## Windows note
+
+The `.ps1` helper scripts are optional. If PowerShell blocks them because they are not digitally signed, run the Python commands directly. The Python commands are the source of truth.
+
+## GitHub Actions
+
+The generator includes workflows under:
+
+```text
+.github/workflows/
+```
+
+These are repository automation files. They are not part of the public GitHub Pages website.
+
+## What v2.7 deliberately does not do
+
+- It does not automatically write final changelog prose.
+- It does not provide a web interface for creating custom packs.
+- It does not publish custom or single-tool packs on the website automatically.
+- It does not make the audit/testing pack structurally complex; audit source files remain manually edited.
+
+
+## v2.7 mixed-version recovery helper
+
+Package Generator v2.7 adds a convenience command for the common case where generated prompt-library files have already moved to a newer version but `src/release.yml` still says the previous version. To keep the newer generated version, sync the source metadata, rebuild and check, run from the repository root:
+
+```powershell
+python scripts\run_generator_checks.py --sync-release-metadata
+```
+
+Equivalent direct recovery command:
+
+```powershell
+python scripts\sync_release_metadata.py --to-generated --build --check
+```
+
+This updates toolkit/prompt-library release metadata to match the newest generated prompt-library version, rebuilds the prompt libraries and site data, and runs the standard checks. The audit/testing-pack version remains independent.
+
+## v2.7 local clean-up helper
+
+Package Generator v2.7 adds a conservative clean-up helper for local temporary files created while running checks and builds.
+
+Preview what would be removed:
+
+```powershell
+python scripts\clean_generator_artifacts.py
+```
+
+Actually remove the listed temporary files:
+
+```powershell
+python scripts\clean_generator_artifacts.py --apply
+```
+
+The helper targets Python bytecode caches and temporary `generated/` comparison folders. It does not remove source files, generated public library files, archive folders or ZIP packages. Use `--include-dist` only if you also want to remove built packages in `dist/`.

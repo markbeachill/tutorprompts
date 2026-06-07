@@ -17,9 +17,7 @@ If you get stuck at any point, say: “I'm stuck.” I will take a step back and
 
 ## Choose a study workflow tool
 
-1. **SW1 — Revision Plan** — turn feedback or draft concerns into a revision plan.
-2. **SW2 — Tutor Feedback to Action Plan** — convert human tutor feedback into practical actions.
-3. **SW3 — AI-Use Record** — record AI use honestly.
+{{LAUNCHER_MENU}}
 
 Choose a tool to get started. You can then paste in text or upload a working document.
 

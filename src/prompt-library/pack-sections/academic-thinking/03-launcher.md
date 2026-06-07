@@ -17,16 +17,7 @@ If you get stuck at any point, say: “I'm stuck.” I will take a step back and
 
 ## Choose an academic thinking tool
 
-1. **AT1 — Assignment Brief Checker** — check whether the work answers the task.
-2. **AT2 — Argument Map** — identify the claim, supporting points, evidence, assumptions and gaps.
-3. **AT3 — Descriptive vs Analytical Check** — check whether the writing is descriptive or analytical.
-4. **AT4 — Evidence Gap Checker** — identify claims that need evidence.
-5. **AT5 — Concept Clarity Checker** — check whether key concepts are defined and used clearly.
-6. **AT6 — Literature Use Checker** — review how sources are used.
-7. **AT7 — Counterargument and Limitations Checker** — identify possible objections and limitations.
-8. **AT8 — Source Reliability Checker** — check whether sources look credible, relevant and suitable.
-9. **AT9 — Critical Opponent Review** — challenge the argument from sceptical, opposing, picky or ideological viewpoints.
-10. **AT10 — Socratic Tutor** — discuss a topic through one-question-at-a-time questioning.
+{{LAUNCHER_MENU}}
 
 Choose a tool to get started. You can then paste in text or upload a working document.
 
