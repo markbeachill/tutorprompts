@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v3.6 / Prompt libraries v3.4 / Testing pack v3.4
+Toolkit release: Site v3.7 / Prompt libraries v3.4 / Testing pack v3.4
 
-This manifest describes the current public site package after the v3.6 student-guide and pushback update.
+This manifest describes the current public site package after the v3.7 teaching-approach and student-guide rewrite.
 
 ## Repository-level developer files
 
@@ -152,6 +152,15 @@ Detailed update notes are in:
 
 
 
+
+
+## Site v3.7 — teaching approach and student guide rewrite
+
+- Site package updated to v3.7.
+- Prompt libraries remain v3.4.
+- Testing/audit pack remains v3.4.
+- Rewrote the Teaching approach page around writing as thinking, ideas first, manageable feedback, “I’m stuck” support and development rather than completion.
+- Rewrote the Student guide with a more direct paragraph-first style, clearer student benefits, simplified getting-started guidance, pushback guidance and privacy/responsibility notes.
 
 
 ## Site v3.6 — launcher minimum content and paragraph-first site design
