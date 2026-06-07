@@ -1,0 +1,46 @@
+id: master
+title: "AI Personal Tutor Master Library"
+latest_output: docs/prompt-libraries/latest/ai_personal_tutor_master_library.md
+archive_output: docs/prompt-libraries/v3.5/ai_personal_tutor_master_library_v3_5.md
+tool_metadata_mode: master
+sections:
+  - pack-sections/master/00-manifest.md
+  - shared/01-global-rules.md
+  - shared/02-markdown-output-rules.md
+  - pack-sections/master/03-launcher.md
+  - pack-sections/master/04-router.md
+tools:
+  - section-markers/writing-tutor-tools.md
+  - tools/clarity-clinic.md
+  - tools/single-paragraph-analysis.md
+  - tools/find-mistakes.md
+  - tools/teach-mistake.md
+  - tools/style-clarity-review.md
+  - tools/referencing-helper.md
+  - section-markers/structure-tutor-tools.md
+  - tools/paragraph-structure-review.md
+  - tools/whole-work-structure-review.md
+  - tools/expert-meaning-review.md
+  - section-markers/academic-thinking-tools.md
+  - tools/assignment-brief-checker.md
+  - tools/argument-map.md
+  - tools/descriptive-analytical-check.md
+  - tools/evidence-gap-checker.md
+  - tools/concept-clarity-checker.md
+  - tools/literature-use-checker.md
+  - tools/counterargument-limitations-checker.md
+  - tools/source-reliability-checker.md
+  - tools/critical-opponent-review.md
+  - tools/socratic-tutor.md
+  - section-markers/research-proposal-tools.md
+  - tools/research-question-checker.md
+  - tools/methodology-fit-checker.md
+  - tools/critical-supervisor-review.md
+  - tools/viva-practice.md
+  - tools/topic-brainstorming.md
+  - section-markers/study-workflow-tools.md
+  - tools/revision-plan.md
+  - tools/feedback-to-action-plan.md
+  - tools/ai-use-record.md
+footer:
+  - pack-sections/master/footer.md

@@ -1,0 +1,20 @@
+id: writing-tutor
+title: "Writing Tutor Mini Library"
+latest_output: docs/prompt-libraries/latest/01_writing_tutor_library.md
+archive_output: docs/prompt-libraries/v3.5/01_writing_tutor_library_v3_5.md
+tool_metadata_mode: mini
+sections:
+  - pack-sections/writing-tutor/00-manifest.md
+  - shared/01-global-rules.md
+  - shared/02-markdown-output-rules.md
+  - pack-sections/writing-tutor/03-launcher.md
+  - pack-sections/writing-tutor/04-router.md
+tools:
+  - tools/clarity-clinic.md
+  - tools/single-paragraph-analysis.md
+  - tools/find-mistakes.md
+  - tools/teach-mistake.md
+  - tools/style-clarity-review.md
+  - tools/referencing-helper.md
+footer:
+  - pack-sections/writing-tutor/footer.md

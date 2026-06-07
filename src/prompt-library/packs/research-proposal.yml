@@ -1,0 +1,19 @@
+id: research-proposal
+title: "Research Proposal Tutor Mini Library"
+latest_output: docs/prompt-libraries/latest/04_research_proposal_tutor_library.md
+archive_output: docs/prompt-libraries/v3.5/04_research_proposal_tutor_library_v3_5.md
+tool_metadata_mode: mini
+sections:
+  - pack-sections/research-proposal/00-manifest.md
+  - shared/01-global-rules.md
+  - shared/02-markdown-output-rules.md
+  - pack-sections/research-proposal/03-launcher.md
+  - pack-sections/research-proposal/04-router.md
+tools:
+  - tools/research-question-checker.md
+  - tools/methodology-fit-checker.md
+  - tools/critical-supervisor-review.md
+  - tools/viva-practice.md
+  - tools/topic-brainstorming.md
+footer:
+  - pack-sections/research-proposal/footer.md

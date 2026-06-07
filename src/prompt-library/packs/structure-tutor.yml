@@ -1,0 +1,17 @@
+id: structure-tutor
+title: "Structure Tutor Mini Library"
+latest_output: docs/prompt-libraries/latest/02_structure_tutor_library.md
+archive_output: docs/prompt-libraries/v3.5/02_structure_tutor_library_v3_5.md
+tool_metadata_mode: mini
+sections:
+  - pack-sections/structure-tutor/00-manifest.md
+  - shared/01-global-rules.md
+  - shared/02-markdown-output-rules.md
+  - pack-sections/structure-tutor/03-launcher.md
+  - pack-sections/structure-tutor/04-router.md
+tools:
+  - tools/paragraph-structure-review.md
+  - tools/whole-work-structure-review.md
+  - tools/expert-meaning-review.md
+footer:
+  - pack-sections/structure-tutor/footer.md
