@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v3.10 / Prompt libraries v3.4 / Testing pack v3.4
+Toolkit release: Site v3.11 / Prompt libraries v3.5 / Testing pack v3.5
 
-This manifest describes the current public site package after the v3.10 tutor guidance, Guides order and Examples page update.
+This manifest describes the current public site package after the v3.11 AI-literacy, prompt-library sync and testing-pack hygiene update.
 
 ## Repository-level developer files
 
@@ -34,6 +34,7 @@ The public GitHub Pages site is now contained in the `docs/` folder. GitHub Page
 
 - `docs/student-help/students.html`
 - `docs/student-help/student-ai-setup.html`
+- `docs/student-help/directing-ai.html`
 - `docs/student-help/writing-workflow.html`
 - `docs/student-help/not-first-draft.html`
 - `docs/student-help/free-tier.html`
@@ -66,6 +67,7 @@ Versioned prompt-library archives are in:
 - `docs/prompt-libraries/v3.2/`
 - `docs/prompt-libraries/v3.3/`
 - `docs/prompt-libraries/v3.4/`
+- `docs/prompt-libraries/v3.5/`
 
 ## Testing/audit downloads
 
@@ -85,6 +87,7 @@ Versioned testing/audit archives are in:
 - `docs/audit-library/v3.2/`
 - `docs/audit-library/v3.3/`
 - `docs/audit-library/v3.4/`
+- `docs/audit-library/v3.5/`
 
 ## Detailed update notes
 
@@ -155,6 +158,20 @@ Detailed update notes are in:
 
 
 
+
+
+## Site v3.11 — AI-literacy guidance, library sync and testing-pack hygiene
+
+- Site package updated to v3.11.
+- Prompt libraries updated to v3.5.
+- Testing/audit pack updated to v3.5.
+- Added Student Help guidance on using the toolkit repeatedly across a piece of work and staying in charge when AI output is imperfect.
+- Added `docs/student-help/directing-ai.html` on learning to direct AI well.
+- Added an AI-literacy argument to the educator guide.
+- Added tutor guidance on setting honest expectations about AI behaviour and recommending the toolkit across the life of a project.
+- Synchronised the master prompt library with the mini-libraries for WT1, ST1, AT1 and RP1.
+- Rebuilt the current mini-library bundle and created a v3.5 prompt-library archive.
+- Updated the step-by-step test cards to remove stale hard-coded audit-prompt filenames, rebuilt the testing pack and created a v3.5 testing/audit archive.
 
 ## Site v3.9 — Student Help structure fix
 
