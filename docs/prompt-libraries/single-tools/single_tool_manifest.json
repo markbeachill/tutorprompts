@@ -1,7 +1,7 @@
 {
   "generator_feature": "single-tool-packs",
-  "toolkit_version": "3.5",
-  "prompt_library_version": "3.5",
+  "toolkit_version": "3.6",
+  "prompt_library_version": "3.6",
   "release_date": "2026-06-07",
   "pack_count": 27,
   "packs": [
