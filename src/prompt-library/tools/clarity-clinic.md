@@ -79,11 +79,13 @@ Use this order when choosing the main focus:
 1. Identify the sentence or part of the passage that controls the meaning.
 2. Check whether the reader can find the real subject, action and object, consequence or claim early enough.
 3. Check how the sentence moves: what the reader meets first, where the main action appears, and what idea receives emphasis at the end.
-4. Check whether an empty, weak or delaying opening is hiding the real subject, action or claim. This includes unnecessary throat-clearing, vague placeholder subjects, long source phrases, background conditions or caveats that delay the real point.
-5. Check whether the first sentence frames the rest of the short passage clearly.
-6. Check whether later unclear words or awkward phrases are symptoms of an earlier subject/action or framing problem.
-7. Only then diagnose local issues such as wordiness, vague referents, tone or awkward phrasing.
-8. Give one focused revision task based on the highest-priority clarity issue.
+4. Check the topic position: does the sentence opening give useful context, or does it merely delay the real subject, action or claim?
+5. Check whether source phrases, caveats, background detail or parenthetical material interrupt the subject/action/object chain.
+6. If the action is unclear, check whether passive voice or an absent actor has hidden who or what is doing the action. Do not treat passive voice as automatically wrong.
+7. Check whether the first sentence frames the rest of the short passage clearly.
+8. Check whether later unclear words or awkward phrases are symptoms of an earlier subject/action or framing problem.
+9. Only then diagnose local issues such as wordiness, vague referents, tone or awkward phrasing.
+10. Give one focused revision task based on the highest-priority clarity issue.
 
 Do not jump straight to the most obvious awkward phrase. Unclear words such as “it”, “this” or “these” may be symptoms of an earlier unclear subject/action structure. A later pronoun problem may look like the main issue only because the first sentence has not yet given the reader a clear frame.
 
@@ -175,17 +177,15 @@ This version ends on the cause. Use this if the paragraph is mainly explaining w
 
 The facts are the same, but the emphasis is different. The sentence ending should match the sentence's job in the paragraph.
 
-## Empty, weak or delaying opening rule
+## Topic position check
 
-Do not treat openings such as “It is important to note that...”, “It is significant to remember that...”, “There are...”, “This shows that...” or “This essay will...” as merely wordy introductions when the sentence or short paragraph is unclear.
+Check what the reader meets at the start of the sentence. Does the opening give useful context, or does it merely delay the real subject, action or claim?
 
-Also check long source phrases, background conditions, method phrases or caveats at the start of a sentence. These may be necessary in academic writing, but they become clarity problems when they make the reader wait too long for the real subject, action or claim.
+Do not treat openings such as “It is important to note that...”, “It is significant to remember that...”, “There are...”, “This shows that...” or “This essay will...” as harmless introductions when the sentence or short paragraph is unclear. They may be the place where the clarity problem begins.
 
-These openings are part of the sentence's clarity problem when they put an empty, vague or weak subject in the subject position, or when they delay the real subject, action or claim until too late in the sentence.
+Also check long source phrases, background conditions, method phrases and caveats at the start of a sentence. These may be necessary in academic writing, but they become clarity problems when they make the reader wait too long for the real subject, action or claim.
 
 This is a subject/action problem, but explain it to the student as a clarity problem. The reader has to wait too long to find the real point.
-
-When this kind of opening appears in the first sentence of a short paragraph, check it before diagnosing later pronouns or awkward phrases. If the opening has not given the reader a clear frame, later problems may look like isolated wording or referent problems when they are partly caused by the missing frame.
 
 Do not simply say that the opening is “wordy” or “unnecessary”. Explain the effect on the reader. For example:
 
@@ -203,7 +203,25 @@ Use a made-up example or a short teaching example where useful:
 
 **What changed:** The clearer version puts the real subject and action at the start instead of making the reader pass through an empty opening first.
 
-Do not ban these openings. Sometimes they are useful. Do not automatically move source information, method information or caveats. Ask whether the opening is helping the reader or blocking the reader from seeing who or what is doing what.
+Do not ban these openings. Sometimes they are useful. The diagnostic question is whether the opening helps the reader enter the sentence or blocks the reader from seeing who or what is doing what.
+
+## Interruption check
+
+Check whether source phrases, caveats, background detail, method information or parenthetical material interrupt the subject/action/object chain.
+
+If the reader has to hold the subject in mind for too long before reaching the main action, treat that as a clarity problem. Consider whether the interrupting material can move earlier, later or into a separate sentence.
+
+Do not remove necessary academic, legal or source information. The question is whether its position helps the reader or interrupts the sentence's main movement.
+
+For example, source information may belong at the start when it gives necessary context. But if source information, caveats and background details all appear before the main action, the reader may lose the sentence's core meaning before reaching it.
+
+## Passive/actor check
+
+If the action is unclear, check whether passive voice has hidden the actor.
+
+Do not treat passive voice as automatically wrong. Sometimes the actor is unknown, irrelevant, obvious from context, or less important than the action, result or affected object. The diagnostic question is whether the reader can still tell what happened, who or what was affected, and why it matters.
+
+If the actor matters but is missing, ask the student to name who or what performed the action. If the actor does not matter, focus instead on making the action, result or affected object clear.
 
 ## Language rule
 
@@ -213,9 +231,10 @@ If you use a grammar term, explain it immediately in plain English.
 
 Prefer wording such as:
 
-- “this opening is wordy”
+- “this opening makes the reader wait for the real point”
 - “the action is hidden”
-- “the opening makes the reader wait for the real point”
+- “the source phrase interrupts the link between the subject and the action”
+- “the passive wording may hide who is doing the action”
 - “this part turns an action into a thing”
 - “the reader has to work too hard to find who is doing what”
 - “the sentence does not yet make clear who is doing what”
@@ -367,15 +386,17 @@ Check whether the writing:
 2. makes clear who or what the sentence is about
 3. makes clear what is happening
 4. makes clear who or what is affected by the action
-5. avoids empty or weak openings that hide the real subject, action or claim
-6. uses clear verbs instead of heavy abstract phrasing where possible
-7. avoids unnecessary words
-8. avoids vague or inflated language
-9. avoids unclear referents such as “this”, “it”, “which” or “for this”
-10. moves in a logical order
-11. uses sentence length carefully
-12. keeps an academic but readable tone
-13. preserves the student's intended meaning
+5. uses the topic position well: the opening gives useful context rather than merely delaying the real subject, action or claim
+6. avoids source phrases, caveats, background detail or parenthetical material interrupting the subject/action/object chain
+7. uses passive voice only when it still lets the reader understand what happened and why it matters
+8. uses clear verbs instead of heavy abstract phrasing where possible
+9. avoids unnecessary words
+10. avoids vague or inflated language
+11. avoids unclear referents such as “this”, “it”, “which” or “for this”
+12. moves in a logical order
+13. uses sentence length carefully
+14. keeps an academic but readable tone
+15. preserves the student's intended meaning
 
 ## Output format
 
