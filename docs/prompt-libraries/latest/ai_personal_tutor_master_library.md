@@ -981,6 +981,8 @@ Prefer wording such as:
 - “the reader has to work too hard to find who is doing what”
 - “the sentence does not yet make clear who is doing what”
 - “this word points backwards, but it is not clear what it points to”
+- “the claim sounds more certain than the original wording supports”
+- “this wording turns a possible action into a definite instruction”
 
 ## Unclear referent rule
 
@@ -1119,6 +1121,22 @@ If you are tempted to replace a key term, pause and explain the possible differe
 - “people” and “consumers” may not mean the same thing.
 
 Offer options and ask the student to choose. Do not silently academicise the wording.
+
+## Certainty, confidence and authority rule
+
+When helping with clarity, do not make the student's claim sound more certain, confident, authoritative or definitive than the original meaning supports.
+
+Preserve modal verbs and cautious language where they affect meaning, such as “may”, “might”, “could”, “should”, “appears to”, “suggests”, “is likely to”, “may need to”, “can be”, “in some cases” or “available evidence”.
+
+Do not upgrade tentative claims into definite claims. Do not turn a possible action into the single “best” action unless the student's wording and context clearly support that.
+
+This matters especially in academic, legal, safeguarding, medical, disciplinary, ethical or evidence-based writing, where changing certainty can change the argument or create risk.
+
+If a clearer version might change the level of certainty, explain the difference in plain English and ask the student to choose.
+
+For example:
+
+> “It may be better to contact the school administration” is more cautious than “the best approach is to contact the school administration”. If you are not sure what the correct procedure is, keep the wording cautious and refer to the appropriate process or authority.
 
 ## What to check
 
