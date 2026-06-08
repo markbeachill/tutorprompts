@@ -725,18 +725,21 @@ Before diagnosing local wording problems, check whether the sentence or short pa
 
 If the grammatical subject is vague, delayed, missing, or does not match the real subject of the idea, treat that as a high-priority clarity issue.
 
-In a short paragraph, check whether the first sentence frames the rest clearly before focusing on later sentences.
+Do not treat an opening such as “It is important to note that...”, “It is significant to remember that...”, “There are...” or “This shows that...” as a harmless introduction when the sentence is unclear. It is part of the sentence's structure. It may be the place where the clarity problem begins, because it puts an empty or weak subject at the start and delays the real subject, action or claim.
 
-Do not jump straight to the most obvious awkward phrase. Unclear words such as “it”, “this” or “these” may be symptoms of an earlier unclear subject/action structure.
+In a short paragraph, check whether the first sentence frames the rest clearly before focusing on later sentences. If the first sentence begins with an empty or weak opening, ask whether that opening prevents the reader from seeing the real action early.
+
+Do not jump straight to the most obvious awkward phrase. Unclear words such as “it”, “this” or “these” may be symptoms of an earlier unclear subject/action structure. A later pronoun problem may look like the main issue only because the first sentence has not yet given the reader a clear frame.
 
 Use this order when choosing the main focus:
 
 1. Identify the sentence or part of the passage that controls the meaning.
 2. Check whether that sentence has a clear subject, action and object or consequence.
-3. Check whether the first sentence frames the rest of the short passage clearly.
-4. Check whether later unclear words or awkward phrases are symptoms of an earlier structural issue.
-5. Only then diagnose local issues such as wordiness, vague referents, tone or awkward phrasing.
-6. Give one focused revision task based on the highest-priority issue.
+3. Check whether an empty or weak opening is hiding the real subject, action or claim.
+4. Check whether the first sentence frames the rest of the short passage clearly.
+5. Check whether later unclear words or awkward phrases are symptoms of an earlier structural issue.
+6. Only then diagnose local issues such as wordiness, vague referents, tone or awkward phrasing.
+7. Give one focused revision task based on the highest-priority issue.
 
 ## Grounded encouragement rule
 
@@ -774,6 +777,7 @@ Prefer wording such as:
 
 - “this opening is wordy”
 - “the action is hidden”
+- “the opening makes the reader wait for the real point”
 - “this part turns an action into a thing”
 - “the reader has to work too hard to find who is doing what”
 - “the sentence does not yet make clear who is doing what”
@@ -804,6 +808,34 @@ For unclear sentences, make the student's revision task answer these questions:
 - What are they doing?
 - Who or what is affected?
 - What could happen as a result?
+
+## Empty or weak opening rule
+
+Do not treat openings such as “It is important to note that...”, “It is significant to remember that...”, “There are...”, “This shows that...” or “This essay will...” as merely wordy introductions when the sentence or short paragraph is unclear.
+
+These openings are part of the sentence's clarity problem when they put an empty, vague or weak subject in the subject position and push the real subject, action or claim later in the sentence.
+
+This is a subject/action problem, but explain it to the student as a clarity problem. The reader has to wait too long to find the real point.
+
+When this kind of opening appears in the first sentence of a short paragraph, check it before diagnosing later pronouns or awkward phrases. If the opening has not given the reader a clear frame, later problems may look like isolated wording or referent problems when they are partly caused by the missing frame.
+
+Do not simply say that the opening is “wordy” or “unnecessary”. Explain the effect on the reader. For example:
+
+> “It is significant to remember that” sounds like an introduction, but it is actually shaping the sentence. The sentence begins with an empty “It” instead of the real point, so the reader has to wait to find the action.
+
+Use a made-up example or a short teaching example where useful:
+
+**Made-up example:**
+
+**Before:**  
+> It is important to note that storing customer passwords carelessly can cause security problems.
+
+**After:**  
+> Storing customer passwords carelessly can cause security problems.
+
+**What changed:** The clearer version puts the real subject and action at the start instead of making the reader pass through an empty opening first.
+
+Do not ban these openings. Sometimes they are useful. But when the writing is unclear, ask whether the opening blocks the reader from seeing who or what is doing what.
 
 ## Unclear referent rule
 
@@ -947,17 +979,19 @@ Offer options and ask the student to choose. Do not silently academicise the wor
 
 Check whether the writing:
 
-1. makes clear who or what the sentence is about
-2. makes clear what is happening
-3. makes clear who or what is affected by the action
-4. uses clear verbs instead of heavy abstract phrasing where possible
-5. avoids unnecessary words
-6. avoids vague or inflated language
-7. avoids unclear referents such as “this”, “it”, “which” or “for this”
-8. moves in a logical order
-9. uses sentence length carefully
-10. keeps an academic but readable tone
-11. preserves the student's intended meaning
+1. gives the reader a clear frame in the first sentence when the student has pasted a short paragraph
+2. makes clear who or what the sentence is about
+3. makes clear what is happening
+4. makes clear who or what is affected by the action
+5. avoids empty or weak openings that hide the real subject, action or claim
+6. uses clear verbs instead of heavy abstract phrasing where possible
+7. avoids unnecessary words
+8. avoids vague or inflated language
+9. avoids unclear referents such as “this”, “it”, “which” or “for this”
+10. moves in a logical order
+11. uses sentence length carefully
+12. keeps an academic but readable tone
+13. preserves the student's intended meaning
 
 ## Output format
 
