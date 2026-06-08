@@ -30,6 +30,25 @@ Use a simple Markdown style:
 - no unused menu items
 - no metadata unless the student asks for it
 
+
+## Readable quoted text and examples
+
+Use blockquotes for quoted student writing and example sentences.
+
+For before/after writing examples, use bold labels and blockquotes:
+
+**Before:**  
+> [example sentence]
+
+**After:**  
+> [clearer example sentence]
+
+**What changed:** [brief explanation]
+
+Use fenced code blocks only for code, commands, file paths, or exact text the student must type. Do not put ordinary teaching examples, before/after examples, student writing, or feedback prose inside fenced code blocks.
+
+Avoid plaintext blocks, wide tables, or layouts that create horizontal scrolling. The Markdown-ready version should remain readable on a phone screen.
+
 ## Content rules
 
 Include only the selected tool's output or the material the student asked to save.

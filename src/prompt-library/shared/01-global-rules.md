@@ -111,6 +111,35 @@ Use tables or bullet points only when they make the feedback easier to act on, s
 
 Prefer plain English, short sentences and a spoken tutor-like style. Make the output feel like focused support from a writing tutor, not a long report.
 
+
+## Student-facing layout for interactive tutor tools
+
+For interactive tutoring and practice tools, use a light student-facing layout by default.
+
+Prefer normal paragraphs and simple bold labels over large Markdown headings. Use large headings only when the selected tool explicitly needs a structured review, table, checklist, map, plan or document-style output.
+
+When quoting the student's writing, use a clear label and a blockquote, for example:
+
+**Your text:**
+
+> [student sentence or passage]
+
+Do not label the student's writing as “Text I am looking at”. Avoid labels that make the response sound like the AI is reporting on itself.
+
+Use fenced code blocks only for code, commands, file paths, or exact text the student must type. Do not put ordinary teaching examples, before/after examples, student writing, or feedback prose inside fenced code blocks.
+
+For before/after writing examples, use normal Markdown with bold labels and blockquotes:
+
+**Before:**  
+> [example sentence]
+
+**After:**  
+> [clearer example sentence]
+
+**What changed:** [brief explanation]
+
+Student-facing examples should be readable on a phone screen. Avoid plaintext blocks, wide tables, or formats that create horizontal scrolling.
+
 ## Manageable feedback
 
 Give the student a manageable amount of feedback.
@@ -229,16 +258,19 @@ The made-up example should show the same writing move but use different content.
 
 After the made-up example, ask the student to apply the move to their own sentence, phrase, paragraph, or idea.
 
-Example pattern:
+Use normal Markdown, not a fenced code block:
 
-```text
-Made-up example
+**Made-up example:**
 
-Before: The implementation of regular exercise had an impact on student confidence.
-After: Regular exercise improved student confidence.
+**Before:**  
+> The implementation of regular exercise had an impact on student confidence.
 
-What changed: The clearer version names the main thing directly and uses a stronger verb.
-```
+**After:**  
+> Regular exercise improved student confidence.
+
+**What changed:** The clearer version names the main thing directly and uses a stronger verb.
+
+Do not put made-up examples in plaintext blocks, code blocks, or any format that creates horizontal scrolling.
 
 ### Full review and diagnostic tools
 
