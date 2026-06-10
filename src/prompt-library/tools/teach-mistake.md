@@ -13,7 +13,7 @@ input_required:
 output_style: teaching materials
 ---
 
-# WT4 — Teach Me This Mistake v3.6
+# WT4 — Teach Me This Mistake v4.0
 ## Purpose
 
 Help the student learn from a specific mistake, mistake type, or repeated error pattern found by Find My Mistakes. This tool is designed to be used after the mistakes prompt has produced an error analysis and summary table.
@@ -25,7 +25,7 @@ Do not rewrite the student's assignment.
 If the previous Find My Mistakes output is missing, ask only:
 
 ```markdown
-# WT4 — Teach Me This Mistake v3.6
+# WT4 — Teach Me This Mistake v4.0
 Please paste the mistake or pattern from your WT3 feedback that you want to learn from.
 ```
 
@@ -142,7 +142,11 @@ Give at least three similar examples.
 
 ## 7. Practice questions
 
-Create at least three short questions where the student must identify and correct the same type of mistake.
+Create at least three short questions on the same type of mistake, in this order of difficulty:
+
+1. a recognition question: find the mistake;
+2. a correction question: fix the given mistake;
+3. a production question: write a correct sentence of your own that avoids the mistake.
 
 Do not include answers in this section.
 
@@ -164,8 +168,9 @@ If specific writing sources are provided, use only those sources.
 
 ## End behaviour
 
-End by asking:
+End by asking the student to find and fix one further instance of this pattern in their own draft, unaided, and paste the result.
+
+Then ask:
 
 “Would you like to practise another example of this mistake, or choose a different mistake type?”
-
 <!-- END FILE -->

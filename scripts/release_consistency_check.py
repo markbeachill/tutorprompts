@@ -39,6 +39,7 @@ EXPECTED_MINI_MEMBERS = {
 
 EXPECTED_AUDIT_MEMBERS = {
     "ai_tutor_toolkit_audit_prompt_with_menu.md",
+    "ai_tutor_toolkit_output_collector.md",
     "ai_tutor_toolkit_step_by_step_test_cards.md",
     "ai_tutor_toolkit_test_log_template.md",
     "ai_tutor_toolkit_testing_guide_for_educators.md",

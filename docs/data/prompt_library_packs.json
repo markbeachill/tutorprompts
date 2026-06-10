@@ -1,9 +1,9 @@
 {
   "generated_by": "ai-personal-tutor-package-generator-v1.6",
-  "toolkit_version": "3.6",
-  "prompt_library_version": "3.6",
-  "testing_pack_version": "3.5",
-  "release_date": "2026-06-07",
+  "toolkit_version": "4.0",
+  "prompt_library_version": "4.0",
+  "testing_pack_version": "4.0",
+  "release_date": "2026-06-10",
   "source": "src/release.yml",
   "pack_count": 34,
   "core_pack_count": 6,
@@ -16,7 +16,7 @@
       "kind": "core",
       "source": "src/prompt-library/packs/academic-thinking.yml",
       "latest_output": "docs/prompt-libraries/latest/03_academic_thinking_tutor_library.md",
-      "archive_output": "docs/prompt-libraries/v3.6/03_academic_thinking_tutor_library_v3_6.md",
+      "archive_output": "docs/prompt-libraries/v4.0/03_academic_thinking_tutor_library_v4_0.md",
       "tool_count": 10,
       "tool_codes": [
         "AT1",
@@ -49,7 +49,7 @@
       "kind": "core",
       "source": "src/prompt-library/packs/master.yml",
       "latest_output": "docs/prompt-libraries/latest/ai_personal_tutor_master_library.md",
-      "archive_output": "docs/prompt-libraries/v3.6/ai_personal_tutor_master_library_v3_6.md",
+      "archive_output": "docs/prompt-libraries/v4.0/ai_personal_tutor_master_library_v4_0.md",
       "tool_count": 27,
       "tool_codes": [
         "WT1",
@@ -116,7 +116,7 @@
       "kind": "core",
       "source": "src/prompt-library/packs/research-proposal.yml",
       "latest_output": "docs/prompt-libraries/latest/04_research_proposal_tutor_library.md",
-      "archive_output": "docs/prompt-libraries/v3.6/04_research_proposal_tutor_library_v3_6.md",
+      "archive_output": "docs/prompt-libraries/v4.0/04_research_proposal_tutor_library_v4_0.md",
       "tool_count": 5,
       "tool_codes": [
         "RP1",
@@ -139,7 +139,7 @@
       "kind": "core",
       "source": "src/prompt-library/packs/structure-tutor.yml",
       "latest_output": "docs/prompt-libraries/latest/02_structure_tutor_library.md",
-      "archive_output": "docs/prompt-libraries/v3.6/02_structure_tutor_library_v3_6.md",
+      "archive_output": "docs/prompt-libraries/v4.0/02_structure_tutor_library_v4_0.md",
       "tool_count": 3,
       "tool_codes": [
         "ST1",
@@ -158,7 +158,7 @@
       "kind": "core",
       "source": "src/prompt-library/packs/study-workflow.yml",
       "latest_output": "docs/prompt-libraries/latest/05_study_workflow_tutor_library.md",
-      "archive_output": "docs/prompt-libraries/v3.6/05_study_workflow_tutor_library_v3_6.md",
+      "archive_output": "docs/prompt-libraries/v4.0/05_study_workflow_tutor_library_v4_0.md",
       "tool_count": 3,
       "tool_codes": [
         "SW1",
@@ -177,7 +177,7 @@
       "kind": "core",
       "source": "src/prompt-library/packs/writing-tutor.yml",
       "latest_output": "docs/prompt-libraries/latest/01_writing_tutor_library.md",
-      "archive_output": "docs/prompt-libraries/v3.6/01_writing_tutor_library_v3_6.md",
+      "archive_output": "docs/prompt-libraries/v4.0/01_writing_tutor_library_v4_0.md",
       "tool_count": 6,
       "tool_codes": [
         "WT1",

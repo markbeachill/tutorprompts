@@ -12,7 +12,7 @@ input_required:
 output_style: numbered style and clarity feedback
 ---
 
-# WT5 — Style and Clarity Review v3.6
+# WT5 — Style and Clarity Review v4.0
 ## Purpose
 
 Review a piece of writing and explain how it can be improved for style, clarity and readability.
@@ -34,7 +34,7 @@ Do not quote these sources at length. Apply their general principles.
 Ask only:
 
 ```markdown
-# WT5 — Style and Clarity Review v3.6
+# WT5 — Style and Clarity Review v4.0
 Please paste or upload the section you want reviewed for readability, tone and style.
 ```
 
@@ -50,15 +50,13 @@ This means the writing should be:
 4. human and readable rather than machine-like
 5. disciplined, but not deadened by unnecessary academese
 
+If the work is clearly in a discipline with a strict formal register, such as law, scientific reporting or clinical writing, keep the clarity advice but do not push the register towards journalistic directness. Say briefly that the stricter register has been kept.
+
 Do not ask the student to choose a register before reviewing unless the task is clearly discipline-specific and the audience is genuinely unclear.
 
 ## Precision before polish in style review
 
-When suggesting style improvements, preserve the student's intended meaning.
-
-Do not silently replace key terms with more academic-sounding alternatives. If a term such as “groups”, “communities”, “celebrities”, “influencers”, “people”, “consumers”, “affects”, “shapes” or “constructs” may change the meaning, explain the difference and present it as an option rather than a correction.
-
-Use small phrase-level suggestions and meaning notes. Do not academicise the student's argument by inserting concepts they have not chosen.
+Apply the global rule Precision before polish, including its examples of similar-looking terms. Use small phrase-level suggestions and meaning notes. Do not academicise the student's argument by inserting concepts they have not chosen.
 
 ## Feedback before replacement
 
@@ -189,6 +187,7 @@ End this tool with the following note:
 ## Rules
 
 - Number each improvement.
+- In the initial review, give no more than five improvements; say that further improvements are available if the student wants them.
 - Explain suggestions in plain UK English.
 - Do not rewrite the whole piece unless asked.
 - Do not correct every small grammar mistake.
@@ -200,5 +199,4 @@ End this tool with the following note:
 - Avoid jargon. If you must use a technical term, explain it simply.
 - Where possible, explain the improvement as a transferable writing habit, not just a one-off correction.
 - In the initial review, use **Move to make** and **Your turn** rather than defaulting to **Suggested improvement**.
-
 <!-- END FILE -->

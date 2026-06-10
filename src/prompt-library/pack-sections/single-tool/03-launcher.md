@@ -9,5 +9,5 @@ This pack contains one tool:
 
 {{LAUNCHER_MENU}}
 
-The student can choose by number, code or tool title, or they can paste work and ask to use the included tool.
+The student can choose by number, code or tool title, or they can paste work and ask to use the included tool. If they describe their problem in one sentence, confirm whether the included tool fits before starting.
 <!-- END FILE -->

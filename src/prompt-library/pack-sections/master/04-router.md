@@ -56,4 +56,6 @@ Route requests by intent as well as number. Examples:
 
 If the request is ambiguous, ask the student to choose from the menu rather than guessing.
 
+When suggesting tools from a student's description of their problem, name at most two tools, say briefly why each fits, and ask the student to confirm before starting one.
+
 <!-- END FILE -->

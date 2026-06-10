@@ -12,7 +12,7 @@ input_required:
 output_style: claims needing support
 ---
 
-# AT4 — Evidence Gap Checker v3.6
+# AT4 — Evidence Gap Checker v4.0
 ## Purpose
 
 Identify claims that need evidence, stronger support or clearer explanation.
@@ -24,8 +24,7 @@ Do not invent evidence or sources.
 Ask only:
 
 ```markdown
-# Academic thinking check
-
+# AT4 — Evidence Gap Checker v4.0
 Please paste or upload the paragraph or section you want checked.
 ```
 
@@ -70,6 +69,5 @@ Give 3-5 actions.
 
 End with:
 
-“Choose one claim from the table and find a suitable source or example before rewriting it.”
-
+“Decide which claims in the table are common knowledge in your discipline and which need a citation. Then choose one claim and find a suitable source or example before rewriting it.”
 <!-- END FILE -->

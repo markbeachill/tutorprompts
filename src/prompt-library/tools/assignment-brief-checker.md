@@ -4,7 +4,8 @@ id: assignment-brief-checker
 tool_code: AT1
 title: Assignment Brief Checker
 type: tool
-menu_number: 1
+menu_number: 10
+master_number: 10
 run_policy: selected_only
 input_required:
   - assignment brief
@@ -12,7 +13,7 @@ input_required:
 output_style: task alignment review
 ---
 
-# AT1 — Assignment Brief Checker v3.6
+# AT1 — Assignment Brief Checker v4.0
 ## Purpose
 
 Check whether the student's work answers the assignment brief.
@@ -34,8 +35,9 @@ Ask the student to paste:
 
 1. the assignment brief or question
 2. their draft, plan or section
+3. the marking criteria or rubric, if available
 
-If they only provide one of these, ask for the missing item.
+If the brief or the draft is missing, ask for it. The marking criteria are optional.
 
 ## Check for
 
@@ -58,12 +60,16 @@ If they only provide one of these, ask for the missing item.
 
 Paraphrase the assignment task in simple terms.
 
+Briefly explain what the main task word, such as analyse, evaluate, compare or discuss, requires the student to actually do, in one or two sentences.
+
 ## 2. Alignment table
 
 | Part of the brief | Where the draft addresses it | Strength | What to improve |
 |---|---|---|---|
 
 Use Strength as: Strong / Partial / Weak / Missing.
+
+If marking criteria were provided, relate each part of the brief to the relevant criterion in the “What to improve” column or in an extra column.
 
 ## 3. Off-task or weakly related material
 
@@ -82,5 +88,4 @@ List the top 3 actions the student should take to answer the brief more directly
 End with:
 
 “Before revising, write one sentence saying what you think the assignment is really asking you to do.”
-
 <!-- END FILE -->

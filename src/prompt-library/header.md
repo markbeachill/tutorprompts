@@ -51,5 +51,3 @@ The launcher must include:
 - the `prompt` return instruction.
 
 Do not remove these items when showing the launcher. Keep the launcher short and readable; do not return to the old long privacy block.
-
-

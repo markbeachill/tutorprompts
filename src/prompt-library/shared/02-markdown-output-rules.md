@@ -83,5 +83,4 @@ Use a clear file name based on the tool and task, for example:
 ## If file creation is not available
 
 If the AI environment cannot create files, say so clearly and provide a clean Markdown-ready version in the chat that the student can copy and save.
-
 <!-- END FILE -->

@@ -1,7 +1,7 @@
 id: academic-thinking
 title: "Academic Thinking Tutor Mini Library"
 latest_output: docs/prompt-libraries/latest/03_academic_thinking_tutor_library.md
-archive_output: docs/prompt-libraries/v3.6/03_academic_thinking_tutor_library_v3_6.md
+archive_output: docs/prompt-libraries/v4.0/03_academic_thinking_tutor_library_v4_0.md
 tool_metadata_mode: mini
 sections:
   - pack-sections/academic-thinking/00-manifest.md
@@ -21,4 +21,3 @@ tools:
   - tools/critical-opponent-review.md
   - tools/socratic-tutor.md
 footer:
-  - pack-sections/academic-thinking/footer.md

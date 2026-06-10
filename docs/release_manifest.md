@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v3.12 / Prompt libraries v3.6 / Testing pack v3.5
+Toolkit release: Site v4.0 / Prompt libraries v4.0 / Testing pack v4.0
 
-This manifest describes the current public site package after the v3.12 single-tool downloads site update.
+This manifest describes the current public site package after the v4.0 prompt-library and testing/audit release sync.
 
 ## Repository-level developer files
 
@@ -70,6 +70,8 @@ Versioned prompt-library archives are in:
 - `docs/prompt-libraries/v3.3/`
 - `docs/prompt-libraries/v3.4/`
 - `docs/prompt-libraries/v3.5/`
+- `docs/prompt-libraries/v3.6/`
+- `docs/prompt-libraries/v4.0/`
 
 ## Testing/audit downloads
 
@@ -90,6 +92,18 @@ Versioned testing/audit archives are in:
 - `docs/audit-library/v3.3/`
 - `docs/audit-library/v3.4/`
 - `docs/audit-library/v3.5/`
+- `docs/audit-library/v4.0/`
+
+## Site v4.0 — prompt-library consolidation and testing-pack update
+
+- Site package updated to v4.0.
+- Prompt libraries updated to v4.0.
+- Testing/audit pack updated to v4.0.
+- Rebuilt the master library, five mini-libraries, custom pack and single-tool downloads from the v4.0 source split.
+- Added the default teaching loop across the prompt-library source and clarified the positive learning behaviour behind academic-integrity boundaries.
+- Updated launcher and router templates so students can describe their problem in one sentence and receive at most two tool suggestions before choosing.
+- Updated testing/audit files with the output collector, long-input honesty checks, certainty/confidence/authority checks, WT1 sentence-movement checks and v4 tool-behaviour regression tests.
+- Updated the Testing page, release metadata and public version labels to match the v4.0 downloads.
 
 ## v3.12 site update notes
 

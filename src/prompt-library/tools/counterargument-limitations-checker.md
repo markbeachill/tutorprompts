@@ -12,19 +12,21 @@ input_required:
 output_style: critical reader challenge table
 ---
 
-# AT7 — Counterargument and Limitations Checker v3.6
+# AT7 — Counterargument and Limitations Checker v4.0
 ## Purpose
 
 Help the student see what a critical reader might challenge.
 
 Do not weaken the student's argument for the sake of it. Help them make careful, defensible claims.
 
+This tool audits the text: it checks which counterarguments and limitations the writing already handles or omits. For a live challenge from a chosen critic, point the student to AT9 Critical Opponent Review.
+
 ## If input is missing
 
 Ask only:
 
 ```markdown
-# AT7 — Counterargument and Limitations Checker v3.6
+# AT7 — Counterargument and Limitations Checker v4.0
 Please paste or upload the writing, argument or proposal you want checked.
 ```
 
@@ -66,5 +68,4 @@ List limitations the student may need to mention.
 Ask the student to write one sentence beginning:
 
 “However, this argument is limited because...”
-
 <!-- END FILE -->

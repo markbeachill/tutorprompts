@@ -14,7 +14,7 @@ input_required:
 output_style: methodology fit review
 ---
 
-# RP2 — Methodology Fit Checker v3.6
+# RP2 — Methodology Fit Checker v4.0
 ## Purpose
 
 Check whether the proposed method fits the research question, aim, objectives, data and feasibility of the project.
@@ -52,6 +52,8 @@ If some parts are missing, explain what cannot be judged yet.
 
 Say whether the method fits the project well, partly fits, or is currently risky.
 
+If there is a problem, say which situation applies: the method cannot answer the question, which is a design problem, or the method is too thinly described to judge, which is a writing problem. The student needs to respond differently to each.
+
 ## 2. Fit table
 
 | Area | Current position | Risk level | Advice |
@@ -71,5 +73,4 @@ Give 5-8 questions the student should answer.
 ## 4. Priority actions
 
 List the top 5 methodology fixes.
-
 <!-- END FILE -->

@@ -12,7 +12,7 @@ input_required:
 output_style: structure map, issues and suggested order
 ---
 
-# ST2 — Whole-Work Structure Review v3.6
+# ST2 — Whole-Work Structure Review v4.0
 ## Purpose
 
 Review the structure of the whole piece of writing. Focus on organisation, sequence, flow, proportion and whether the reader can follow the argument.
@@ -24,7 +24,7 @@ Do not rewrite the work.
 Ask only:
 
 ```markdown
-# ST2 — Whole-Work Structure Review v3.6
+# ST2 — Whole-Work Structure Review v4.0
 Please paste or upload the draft, section or plan you want reviewed for structure.
 ```
 
@@ -55,6 +55,8 @@ Briefly explain whether the structure works overall.
 
 Create a table showing what each section or paragraph currently does.
 
+Tell the student that this table is called a reverse outline, and that they can make one themselves for any draft by writing one line per paragraph saying what it does.
+
 | Part | Current job | Does it work? | Comment |
 |---|---|---|---|
 
@@ -76,9 +78,11 @@ Explain how it affects the reader or the argument.
 **How to improve it:**
 Give guidance. Do not rewrite the section.
 
-## 4. Suggested revised structure
+## 4. Revised structure
 
-Suggest a possible order for the sections or paragraphs.
+Before showing a suggested order, ask the student to propose their own revised order using the structure map above, then respond to their attempt. Provide a suggested order directly only if the student asks or is stuck.
+
+When giving a suggested order, use this table and make each Purpose entry state why the part belongs in that position, such as general before specific, or claim before complication, so the student learns the ordering logic:
 
 | Suggested order | Section or paragraph | Purpose |
 |---|---|---|
@@ -88,5 +92,4 @@ Do not write the new text. Only suggest the structure.
 ## 5. Priority actions
 
 List the top 3 structure changes the student should make first.
-
 <!-- END FILE -->

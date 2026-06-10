@@ -12,7 +12,7 @@ input_required:
 output_style: analysis balance review
 ---
 
-# AT3 — Descriptive vs Analytical Check v3.6
+# AT3 — Descriptive vs Analytical Check v4.0
 ## Purpose
 
 Check whether the student's writing is mostly descriptive or analytical, and show how to deepen analysis.
@@ -24,8 +24,7 @@ Do not rewrite the work.
 Ask only:
 
 ```markdown
-# Academic thinking check
-
+# AT3 — Descriptive vs Analytical Check v4.0
 Please paste or upload the paragraph or section you want checked.
 ```
 
@@ -43,6 +42,8 @@ Evaluation judges strengths, weaknesses, value or limits.
 ## 1. Overall judgement
 
 Say whether the writing is mostly descriptive, partly analytical, or strongly analytical.
+
+Make clear that some description is necessary groundwork; the question is proportion and whether the description leads somewhere.
 
 ## 2. Paragraph table
 
@@ -69,5 +70,4 @@ Give 5 useful questions, such as:
 ## 5. Student action
 
 Ask the student to choose one descriptive paragraph and add two analytical sentences themselves.
-
 <!-- END FILE -->

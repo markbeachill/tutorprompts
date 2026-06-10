@@ -2,8 +2,8 @@
 # This file is intentionally simple key: value YAML so it can be read without
 # third-party Python packages.
 
-toolkit_version: 3.6
-prompt_library_version: 3.6
-testing_pack_version: 3.5
-release_date: 2026-06-07
+toolkit_version: 4.0
+prompt_library_version: 4.0
+testing_pack_version: 4.0
+release_date: 2026-06-10
 status: active public release

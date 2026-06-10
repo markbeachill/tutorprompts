@@ -70,6 +70,7 @@ EXPECTED_SITE_DATA_FILES = [
 
 EXPECTED_AUDIT_FILES = [
     "docs/audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md",
+    "docs/audit-library/latest/ai_tutor_toolkit_output_collector.md",
     "docs/audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md",
     "docs/audit-library/latest/ai_tutor_toolkit_test_log_template.md",
     "docs/audit-library/latest/ai_tutor_toolkit_testing_guide_for_educators.md",
@@ -79,6 +80,7 @@ EXPECTED_AUDIT_FILES = [
 
 EXPECTED_AUDIT_ZIP_MEMBERS = [
     "ai_tutor_toolkit_audit_prompt_with_menu.md",
+    "ai_tutor_toolkit_output_collector.md",
     "ai_tutor_toolkit_step_by_step_test_cards.md",
     "ai_tutor_toolkit_test_log_template.md",
     "ai_tutor_toolkit_testing_guide_for_educators.md",

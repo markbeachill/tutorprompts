@@ -4,14 +4,15 @@ id: paragraph-structure-review
 tool_code: ST1
 title: Paragraph Structure Review Across a Whole Draft
 type: tool
-menu_number: 1
+menu_number: 7
+master_number: 7
 run_policy: selected_only
 input_required:
   - student writing
 output_style: paragraph function table and detailed paragraph comments
 ---
 
-# ST1 — Paragraph Structure Review Across a Whole Draft v3.6
+# ST1 — Paragraph Structure Review Across a Whole Draft v4.0
 ## Purpose
 
 Review the paragraph structure across a whole piece of writing.
@@ -23,7 +24,7 @@ Focus on how each paragraph works, not on grammar or spelling.
 Ask only:
 
 ```markdown
-# ST1 — Paragraph Structure Review Across a Whole Draft v3.6
+# ST1 — Paragraph Structure Review Across a Whole Draft v4.0
 Please paste or upload the draft or section you want reviewed for paragraph structure.
 ```
 
@@ -133,6 +134,10 @@ Start with this table:
 
 When completing the table, do not hide an unclear central claim inside a general comment such as “needs development”. If the claim is unclear, name that directly as the main structural issue.
 
+After the table, add a short section:
+
+**Recurring pattern:** If the same structural habit appears in several paragraphs, name it once and explain it properly here, for example: evidence is presented but its meaning for the claim is never stated. Individual paragraph comments can then refer to the pattern instead of repeating the explanation.
+
 Then provide detailed comments only for paragraphs that need improvement.
 
 For each paragraph that needs improvement, use this format:
@@ -159,5 +164,4 @@ Give one clear action the student should take.
 End with:
 
 “Which paragraph would you like to revise first?”
-
 <!-- END FILE -->

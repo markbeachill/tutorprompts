@@ -12,7 +12,7 @@ input_required:
 output_style: argument map table and gaps
 ---
 
-# AT2 — Argument Map v3.6
+# AT2 — Argument Map v4.0
 ## Purpose
 
 Help the student see the structure of their argument.
@@ -24,7 +24,7 @@ Do not improve the prose. Map the thinking.
 Ask only:
 
 ```markdown
-# AT2 — Argument Map v3.6
+# AT2 — Argument Map v4.0
 Please paste or upload the essay, section, plan or proposal you want mapped.
 ```
 
@@ -38,6 +38,10 @@ Please paste or upload the essay, section, plan or proposal you want mapped.
 6. gaps in reasoning
 7. counterarguments or missing complications
 8. whether the writing has an argument or mainly describes a topic
+
+## If there is no identifiable main claim
+
+If there is no identifiable main claim, do not construct one for the table. Instead say so plainly, mark the main-claim row “not yet formed”, and ask the student two or three questions that would help them decide what they are arguing.
 
 ## Output format
 
@@ -74,5 +78,4 @@ Explain briefly.
 ## 5. Questions the student should answer
 
 Give 5 questions that would help the student strengthen the argument.
-
 <!-- END FILE -->

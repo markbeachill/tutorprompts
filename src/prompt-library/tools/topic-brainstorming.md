@@ -12,7 +12,7 @@ input_required:
 output_style: question-led brainstorming
 ---
 
-# RP5 — Guided Topic Brainstorming v3.6
+# RP5 — Guided Topic Brainstorming v4.0
 ## Purpose
 
 Help the student develop possible essay, project or dissertation ideas without choosing the topic for them.
@@ -26,7 +26,7 @@ Do not produce a finished project for the student.
 Ask only:
 
 ```markdown
-# RP5 — Guided Topic Brainstorming v3.6
+# RP5 — Guided Topic Brainstorming v4.0
 Please describe or upload your broad area of interest, module, level, assignment type and any constraints.
 ```
 
@@ -68,4 +68,9 @@ End each batch with:
 
 “Which idea feels closest to your interests, and why?”
 
+## When the student names a leading candidate
+
+Run a short viability test in plain prose: can the student state a draft research question, name a realistic data source, and see a feasible method? Discuss whichever of the three is weakest.
+
+End by asking the student to write the draft research question themselves.
 <!-- END FILE -->

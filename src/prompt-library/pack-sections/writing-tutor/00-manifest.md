@@ -4,7 +4,7 @@ id: manifest
 title: Writing Tutor Mini Library
 type: manifest
 run_policy: reference_only
-version: 3.6
+version: 4.0
 created_for: student learning toolkit
 ---
 
@@ -13,14 +13,14 @@ This section is for internal reference only. Do not output this section to the u
 
 # Writing Tutor Mini Library
 
-**Version:** v3.6
-**Last updated:** 2026-06-07
+**Version:** v4.0
+**Last updated:** 2026-06-10
 **Status:** active public release
 **Part of:** AI Personal Tutor Toolkit
 
-**Release stamp:** Toolkit version v3.6 / Prompt-library suite v3.6 / Testing pack v3.5  **This file:** Writing Tutor Mini Library v3.6  
+**Release stamp:** Toolkit version v4.0 / Prompt-library suite v4.0 / Testing pack v4.0  **This file:** Writing Tutor Mini Library v4.0  
 **Public download:** `prompt-libraries/latest/01_writing_tutor_library.md`  
-**Fixed archive:** `prompt-libraries/v3.6/01_writing_tutor_library_v3_6.md`
+**Fixed archive:** `prompt-libraries/v4.0/01_writing_tutor_library_v4_0.md`
 
 ## Operating instruction
 
@@ -49,7 +49,7 @@ There is no separate short mode command. Use the full selected tool, but apply p
 
 Students may paste text or upload a working document. For free AI plans, small pasted extracts in plain text or Markdown usually work best. Students can consider converting their work to Markdown before uploading, but this is optional.
 
-Outputs are in Markdown by default.
+Outputs are in Markdown by default. If file creation is not available, produce a clean Markdown version that the student can copy into Word, Google Docs, Notion, or another editor.
 
 ## Available tools
 
