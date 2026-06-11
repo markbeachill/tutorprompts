@@ -1,21 +1,109 @@
 <!DOCTYPE html>
-
-<html lang="en-GB">
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Background, educator guidance and reference pages for the AI Personal Tutor Toolkit.">
 <title>Guides | AI Personal Tutor Toolkit</title>
-<meta content="Background, educator guidance and reference pages for the AI Personal Tutor Toolkit." name="description"/>
-<link href="../style.css" rel="stylesheet"/>
+<!-- Standalone styling: replace the <style> block with the site stylesheet if preferred. -->
+<style>
+:root{--ink:#1d2430;--muted:#5a6472;--accent:#23527c;--line:#dfe3e8;--bg:#ffffff;--code:#f5f7f9;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+header{border-bottom:1px solid var(--line);padding:0.9rem 1rem}
+.hwrap,main,footer .fwrap{max-width:46rem;margin:0 auto}
+.site-title{font-weight:700;text-decoration:none;color:var(--ink);font-size:1.05rem}
+.site-sub{color:var(--muted);font-size:0.85rem;display:block}
+nav.top{margin-top:0.45rem;font-size:0.95rem}
+nav.top a{color:var(--accent);text-decoration:none;margin-right:0.9rem}
+nav.top a:hover{text-decoration:underline}
+main{padding:1.4rem 1rem 3rem}
+p.label{color:var(--muted);font-size:0.85rem;letter-spacing:0.04em;text-transform:uppercase;margin:0 0 0.2rem}
+h1{font-size:1.7rem;line-height:1.25;margin:0.2rem 0 0.8rem}
+h2{font-size:1.25rem;margin-top:2rem;border-bottom:1px solid var(--line);padding-bottom:0.25rem}
+h3{font-size:1.05rem;margin-top:1.6rem}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;font-size:0.95rem;margin:1rem 0}
+th,td{border:1px solid var(--line);padding:0.45rem 0.6rem;text-align:left;vertical-align:top}
+th{background:var(--code)}
+pre{background:var(--code);border:1px solid var(--line);border-radius:6px;padding:0.8rem;overflow:auto;font-size:0.88rem;max-height:26rem}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.copywrap{margin:0.8rem 0}
+.copybtn,.btn{display:inline-block;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:0.4rem 0.9rem;font-size:0.9rem;cursor:pointer;text-decoration:none;margin:0 0 0.4rem 0}
+.copybtn:hover,.btn:hover{filter:brightness(1.1)}
+.fileframe{width:100%;height:26rem;border:1px solid var(--line);border-radius:6px;background:var(--code)}
+blockquote{border-left:3px solid var(--line);margin:1rem 0;padding:0.1rem 1rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:2rem;padding:1.2rem 1rem;color:var(--muted);font-size:0.9rem}
+footer a{color:var(--accent)}
+hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+</style>
 </head>
 <body>
-<header><div class="container nav"><a class="brand" href="../index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="../index.html">Home</a></li><li><a href="../tools/">Tools</a></li><li><a href="../examples/">Examples</a></li><li><a href="../student-help/">Student Help</a></li><li><a href="./">Guides</a></li></ul></nav></div></header>
+<header><div class="hwrap">
+<a class="site-title" href="https://markbeachill.github.io/tutorprompts/index.html">AI Personal Tutor Toolkit <span class="site-sub">Structured writing support</span></a>
+<nav class="top">
+<a href="https://markbeachill.github.io/tutorprompts/index.html">Home</a>
+<a href="https://markbeachill.github.io/tutorprompts/tools/">Tools</a>
+<a href="https://markbeachill.github.io/tutorprompts/examples/">Examples</a>
+<a href="https://markbeachill.github.io/tutorprompts/student-help/">Student Help</a>
+<a href="https://markbeachill.github.io/tutorprompts/guides/">Guides</a>
+</nav>
+</div></header>
 <main>
-<section class="hero"><div class="container"><p class="kicker">Guides</p><h1>Guides</h1><p class="lead">Educator guidance, testing and more...</p></div></section>
-<div class="container">
-<section class="panel"><div class="grid two"><article class="card guide-card tutor"><span class="guide-label">Tutor</span><h3>Tutor and teacher guide</h3><p>How to introduce the toolkit safely, set clear rules, protect student work, and use AI feedback as part of learning.</p><div class="actions"><a class="button" href="tutors.html">Read the tutor guide</a></div></article><article class="card guide-card tutor"><span class="guide-label">Pedagogy</span><h3>Teaching approach</h3><p>Why the toolkit uses diagnosis, explanation, examples, practice and revision rather than replacing the student's work.</p><div class="actions"><a class="button" href="teaching-approach.html">Read the teaching approach</a></div></article><article class="card guide-card tutor"><span class="guide-label">Educators</span><h3>Why educators should consider this toolkit</h3><p>A case for using structured prompt libraries to guide independent student AI use, especially in colleges and universities.</p><div class="actions"><a class="button" href="why-educators.html">Read the educator case</a></div></article><article class="card guide-card technical"><span class="guide-label">Technical</span><h3>Choosing and setting up an AI</h3><p>How tutors can choose an AI system, specify a model, plan for free limits, and decide whether Projects or shared custom AIs are appropriate.</p><div class="actions"><a class="button secondary" href="setup.html">Read the setup guide</a></div></article><article class="card guide-card technical"><span class="guide-label">Developer</span><h3>Customising prompt libraries</h3><p>How developers, teachers or departments can build a smaller tailored library from the master library.</p><div class="actions"><a class="button secondary" href="customising-prompts.html">Open customising guide</a></div></article><article class="card guide-card technical"><span class="guide-label">Technical</span><h3>Testing and audit</h3><p>How to check whether the toolkit behaves like a learning tool rather than an answer machine before recommending or releasing it.</p><div class="actions"><a class="button secondary" href="../testing.html">Open testing and audit</a></div></article><article class="card guide-card resources"><span class="guide-label">Resources</span><h3>Other AI tutoring resources</h3><p>A simple reference list of related AI tutoring, writing-support and education-prompt resources.</p><div class="actions"><a class="button secondary" href="other-ai-tutoring-resources.html">Open resources</a></div></article><article class="card guide-card technical"><span class="guide-label">About</span><h3>About this site</h3><p>Information about the creator, repository, discussions area and purpose of the toolkit.</p><div class="actions"><a class="button secondary" href="../about.html">Open About this site</a></div></article><article class="card guide-card technical"><span class="guide-label">Release history</span><h3>Changelog</h3><p>A release history showing what changed across the public site, prompt libraries and testing pack.</p><div class="actions"><a class="button secondary" href="../changelog/">Open the changelog</a></div></article></div></section>
-</div>
+<p class="label">Guides</p>
+<h1>Guides</h1>
+<p>Background, educator guidance and reference pages for understanding, deploying and maintaining the AI Personal Tutor Toolkit.</p>
+<h2>Available guides</h2>
+<p>Pedagogy</p>
+<h3>Teaching approach</h3>
+<p>Why the toolkit uses diagnosis, explanation, examples, practice and revision rather than replacing the student's work.</p>
+<p><a href="https://markbeachill.github.io/tutorprompts/guides/teaching-approach.html">Read the teaching approach</a></p>
+<p>Educators</p>
+<h3>Why educators should consider this toolkit</h3>
+<p>A case for using structured prompt libraries to guide independent student AI use, especially in universities and other education settings.</p>
+<p><a href="https://markbeachill.github.io/tutorprompts/guides/why-educators.html">Read the educator case</a></p>
+<p>Tutor</p>
+<h3>Tutor and teacher guide</h3>
+<p>How to introduce the toolkit safely, set clear rules, protect student work, and use AI feedback as part of learning.</p>
+<p><a href="https://markbeachill.github.io/tutorprompts/guides/tutors.html">Read the tutor guide</a></p>
+<p>Developer</p>
+<h3>Customising prompt libraries</h3>
+<p>How developers, teachers or departments can build a smaller tailored library from the master library.</p>
+<p><a href="https://markbeachill.github.io/tutorprompts/guides/customising-prompts.html">Open customising guide</a></p>
+<p>Tutor</p>
+<h3>Deployment guide</h3>
+<p>Choosing an AI system, loading the toolkit on each platform — uploads, Projects, custom GPTs, Gems, Copilot — and a short deployment check to run on your own setup before using a tool with a class.</p>
+<p><a href="https://markbeachill.github.io/tutorprompts/guides/setup.html">Open the deployment guide</a></p>
+<p>Tutor</p>
+<h3>Producing documentation</h3>
+<p>How to capture an AI tutoring session and turn it into classroom examples, student evidence of process, or a problem report.</p>
+<p><a href="https://markbeachill.github.io/tutorprompts/guides/documentation.html">Open the documentation guide</a></p>
+<p>Maintainer</p>
+<h3>Auditing and testing</h3>
+<p>The full testing method for maintainers: workflow, the output collector, second-chat audits, test cards, release checks, and an honest account of what the method can and cannot show.</p>
+<p><a href="https://markbeachill.github.io/tutorprompts/testing.html">Open auditing and testing</a></p>
+<p>Resources</p>
+<h3>Other AI tutoring resources</h3>
+<p>A simple reference list of related AI tutoring, writing-support and education-prompt resources.</p>
+<p><a href="https://markbeachill.github.io/tutorprompts/guides/other-ai-tutoring-resources.html">Open resources</a></p>
+<p>About</p>
+<h3>About this site</h3>
+<p>Information about the creator, repository, discussions area and purpose of the toolkit.</p>
+<p><a href="https://markbeachill.github.io/tutorprompts/about.html">Open About this site</a></p>
+<p>Release history</p>
+<h3>Changelog</h3>
+<p>A release history showing what changed across the public site, prompt libraries and testing pack.</p>
+<p><a href="https://markbeachill.github.io/tutorprompts/changelog">Open the changelog</a></p>
 </main>
-<footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="../testing.html">Testing</a> | <a href="../changelog/">Changelog</a> | <a href="teaching-approach.html">Teaching approach</a> | <a href="../about.html">About this site</a></p></div></footer>
+<footer><div class="fwrap">
+AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.<br>
+<a href="https://markbeachill.github.io/tutorprompts/testing.html">Testing</a> |
+<a href="https://markbeachill.github.io/tutorprompts/changelog/">Changelog</a> |
+<a href="https://markbeachill.github.io/tutorprompts/guides/teaching-approach.html">Teaching approach</a> |
+<a href="https://markbeachill.github.io/tutorprompts/about.html">About this site</a>
+</div></footer>
+<script>
+function copyBox(id,btn){var t=document.getElementById(id).textContent;navigator.clipboard.writeText(t).then(function(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o;},1500);});}
+</script>
 </body>
 </html>

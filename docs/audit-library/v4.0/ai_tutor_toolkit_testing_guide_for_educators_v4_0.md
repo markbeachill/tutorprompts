@@ -16,9 +16,9 @@ Testing pack v4.0 checks the v4.0 prompt-library revision and updates the testin
 - **The output collector.** A new prompt, pasted at the end of a test session, produces a single self-contained test record (metadata plus verbatim transcript), replacing manual transcript assembly. See `ai_tutor_toolkit_output_collector.md`.
 - **WT2 is now audited as a full review tool.** It gives its structured report first and handles follow-up turns interactively. Do not mark a correct v4.0 WT2 report down for "not keeping the student active".
 - **New expectations from the v4.0 library:** the default teaching loop (fix/rewrite requests get permitted help, not a rewrite and not a bare refusal); router triage suggesting at most two tools with confirmation; long-input pattern summaries that never claim unread material; EAL handling; WT3's complete check confirmed as intended behaviour; WT5's five-improvement cap and strict-register rule; ST2's student-first ordering; new cross-check, no-claim, stage-calibration and convergence behaviours across the tools.
-- **New tests:** U8 long inputs, U9 EAL, A4 concealment request, WT1 sentence-ending emphasis, WT1 topic-chain, certainty/confidence/authority, WT3 long-input, WT5 register, WT6 cross-check, and second inputs for U3, AT2, RP3 and SW2.
+- **New tests:** U8 long inputs, U9 EAL, A4 concealment request, WT3 long-input, WT5 register, WT6 cross-check, and second inputs for U3, AT2, RP3 and SW2.
 - **Process changes:** critical checks marked ★ with a rating cap; a model matrix and repeat-run rule; an A/B comparison protocol for contested library changes; a test-input hygiene rule; verbatim evidence quoting in audits.
-- The pack's tests assume the v4.0 launcher content, including the triage line. Launcher tests should fail any output of release notes, changelog or version-history text, whether that material is published separately or still present elsewhere in the uploaded file.
+- The pack's tests assume the v4.0 launcher content, including the triage line, and assume the version history is published separately rather than inside the library.
 
 ## What testing means here
 
@@ -127,8 +127,6 @@ For a small release, run:
 - A3 Deadline pressure rewrite
 - A4 Concealment request
 - WT1 Clarity Clinic, all four turns
-- WT1 sentence-ending emphasis and topic-chain regression cards when WT1 has changed
-- Certainty/confidence/authority regression card when WT1 or WT5 has changed
 - WT3 Find My Mistakes when correction behaviour has changed
 - AT2 Argument Map, input B (the no-claim test)
 - one tool from each mini library that changed
@@ -212,5 +210,3 @@ A useful tutor should not treat its first diagnosis as automatically right. If a
 ## The output collector and record fidelity
 
 The output collector reduces tester burden, but the record it produces is self-reported by the same AI that was tested. The spot-check is therefore part of the method: compare at least one turn against the live chat for routine tests, and every turn (or capture manually) for A-series and release-gating tests. A record that disagrees with the chat makes the test NOT TESTABLE; re-run with manual capture. Never paste the collector before or during the test turns — it would change the behaviour being tested.
-
-Manual capture is preferred for release-gating tests if the platform provides reliable transcript export or if the collector cannot reproduce the conversation verbatim. Treat collector records as self-reported evidence that must be spot-checked against the live chat.

@@ -1,60 +1,85 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Tutor Guide: Choosing and Setting Up an AI | AI Personal Tutor Toolkit</title>
-<meta content="Guidance for tutors choosing AI systems, models, free-plan approaches, projects and custom AIs for the AI Personal Tutor Toolkit." name="description"/>
-<link href="../style.css" rel="stylesheet"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Guidance for tutors choosing AI systems, models, free-plan approaches, projects and custom AIs for the AI Personal Tutor Toolkit.">
+<title>Deployment Guide: Choosing and Setting Up an AI | AI Personal Tutor Toolkit</title>
+<!-- Standalone styling: replace the <style> block with the site stylesheet if preferred. -->
+<style>
+:root{--ink:#1d2430;--muted:#5a6472;--accent:#23527c;--line:#dfe3e8;--bg:#ffffff;--code:#f5f7f9;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+header{border-bottom:1px solid var(--line);padding:0.9rem 1rem}
+.hwrap,main,footer .fwrap{max-width:46rem;margin:0 auto}
+.site-title{font-weight:700;text-decoration:none;color:var(--ink);font-size:1.05rem}
+.site-sub{color:var(--muted);font-size:0.85rem;display:block}
+nav.top{margin-top:0.45rem;font-size:0.95rem}
+nav.top a{color:var(--accent);text-decoration:none;margin-right:0.9rem}
+nav.top a:hover{text-decoration:underline}
+main{padding:1.4rem 1rem 3rem}
+p.label{color:var(--muted);font-size:0.85rem;letter-spacing:0.04em;text-transform:uppercase;margin:0 0 0.2rem}
+h1{font-size:1.7rem;line-height:1.25;margin:0.2rem 0 0.8rem}
+h2{font-size:1.25rem;margin-top:2rem;border-bottom:1px solid var(--line);padding-bottom:0.25rem}
+h3{font-size:1.05rem;margin-top:1.6rem}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;font-size:0.95rem;margin:1rem 0}
+th,td{border:1px solid var(--line);padding:0.45rem 0.6rem;text-align:left;vertical-align:top}
+th{background:var(--code)}
+pre{background:var(--code);border:1px solid var(--line);border-radius:6px;padding:0.8rem;overflow:auto;font-size:0.88rem;max-height:26rem}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.copywrap{margin:0.8rem 0}
+.copybtn,.btn{display:inline-block;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:0.4rem 0.9rem;font-size:0.9rem;cursor:pointer;text-decoration:none;margin:0 0 0.4rem 0}
+.copybtn:hover,.btn:hover{filter:brightness(1.1)}
+.fileframe{width:100%;height:26rem;border:1px solid var(--line);border-radius:6px;background:var(--code)}
+blockquote{border-left:3px solid var(--line);margin:1rem 0;padding:0.1rem 1rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:2rem;padding:1.2rem 1rem;color:var(--muted);font-size:0.9rem}
+footer a{color:var(--accent)}
+hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+</style>
 </head>
 <body>
-<header><div class="container nav"><a class="brand" href="../index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="../index.html">Home</a></li><li><a href="../tools/">Tools</a></li><li><a href="../examples/">Examples</a></li><li><a href="../student-help/">Student Help</a></li><li><a href="../guides/">Guides</a></li></ul></nav></div></header>
+<header><div class="hwrap">
+<a class="site-title" href="https://markbeachill.github.io/tutorprompts/index.html">AI Personal Tutor Toolkit <span class="site-sub">Structured writing support</span></a>
+<nav class="top">
+<a href="https://markbeachill.github.io/tutorprompts/index.html">Home</a>
+<a href="https://markbeachill.github.io/tutorprompts/tools/">Tools</a>
+<a href="https://markbeachill.github.io/tutorprompts/examples/">Examples</a>
+<a href="https://markbeachill.github.io/tutorprompts/student-help/">Student Help</a>
+<a href="https://markbeachill.github.io/tutorprompts/guides/">Guides</a>
+</nav>
+</div></header>
 <main>
-<section class="hero"><div class="container"><p class="kicker">Tutor guide</p><h1>Choosing and setting up an AI</h1><p class="lead">How to choose an AI system, model and setup before using the toolkit with students.</p></div></section>
-<div class="container">
-
-<section class="panel reading">
+<p class="label">Deployment guide · 1 of 3</p>
+<h1>Choosing and setting up an AI</h1>
+<p>How to choose an AI system, model and setup before using the toolkit with students.</p>
+<p>This is the first page of the deployment guide. The other pages are <a href="deployment-routes.html">Deployment routes</a> — how to load the toolkit on each platform — and the <a href="deployment-check.html">Deployment check</a> — a short test you run on your own setup before using a tool with a class.</p>
 <h2>Purpose</h2>
 <p>This guide is for tutors, lecturers, learning developers and support staff who want to use the AI Personal Tutor Toolkits with students.</p>
 <p>It helps you decide which AI systems students may be able to access, whether to recommend a specific model or mode, whether free plans are enough for the intended classroom activity, whether Projects or workspaces are worth using, and whether a shared custom AI such as a custom GPT is appropriate.</p>
-<p>This guide does not replace the standard getting-started guide. For basic upload and first-use instructions, use the separate <a href="../student-help/free-tier.html">free-tier guidance</a>, <a href="../student-help/students.html">student guide</a> and the <a href="../testing.html">testing and audit workflow</a>.</p>
-<p><strong>Do not simply bring the toolkit into a lesson and ask students to use it without testing the activity first.</strong> AI systems vary, and the same toolkit may behave differently depending on the model, account type, free-plan limits, file handling and institutional setup. Before using the toolkit in class, test the activity yourself using the same or closest available setup your students will use. Check that students are likely to be able to complete the task well within the time, access and usage limits available to them.</p>
-</section>
-
-<section class="panel reading">
+<p>This guide does not replace the standard getting-started guide. For basic upload and first-use instructions, use the separate <a href="https://markbeachill.github.io/tutorprompts/student-help/free-tier.html">free-tier guidance</a> and <a href="https://markbeachill.github.io/tutorprompts/student-help/students.html">student guide</a>. For full release testing of the toolkit itself, see the <a href="https://markbeachill.github.io/tutorprompts/testing.html">auditing and testing guide</a> for maintainers.</p>
+<p><strong>Do not simply bring the toolkit into a lesson and ask students to use it without testing the activity first.</strong> AI systems vary, and the same toolkit may behave differently depending on the model, account type, free-plan limits, file handling and institutional setup. Before using the toolkit in class, run the <a href="deployment-check.html">deployment check</a> on the same or closest available setup your students will use. It takes ten to fifteen minutes per tool and tells you whether the tool behaves acceptably in your setting for your task.</p>
 <h2>Start with access, not model rankings</h2>
 <p>Before recommending the toolkit to students, consider what AI systems they can actually use. Students may be using a personal free or paid account, or they may have access through an institutional system such as Microsoft Copilot, Gemini, ChatGPT Edu, Claude, or another approved AI platform. Some students may have no approved AI access, so you may need an alternative activity route.</p>
 <p>This matters because the toolkit may behave differently depending on file-upload limits, model quality, reasoning settings, and whether the AI can handle a long instruction library.</p>
-<p>For example, some institutions provide access to <a href="https://copilot.microsoft.com/" target="_blank" rel="noopener">Microsoft Copilot</a> through Microsoft accounts, while others may provide access to <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a> through Google Workspace. These platforms may be linked to institutional support, licensing, privacy and data-governance arrangements, so local rules come first.</p>
-</section>
-
-<section class="panel reading">
+<p>For example, some institutions provide access to <a href="https://copilot.microsoft.com/">Microsoft Copilot</a> through Microsoft accounts, while others may provide access to <a href="https://gemini.google.com/">Gemini</a> through Google Workspace. These platforms may be linked to institutional support, licensing, privacy and data-governance arrangements, so local rules come first.</p>
 <h2>Choosing or specifying a model</h2>
 <p>AI model names and capabilities change frequently, so avoid giving students a permanent ranking such as “always use X”. Instead, make a practical recommendation for your activity.</p>
 <p>For these toolkits, the issue is not only whether the AI can answer a question. The AI also has to manage a long instruction set, follow the selected tool, respect learning-focused boundaries, and avoid turning the whole toolkit into a summary.</p>
 <p>A useful general recommendation is: use a thinking, reasoning, or stronger general-purpose model where available. A basic model may be enough for short tasks, but very fast or instant modes may be less reliable with a long toolkit instruction set.</p>
 <p>You do not normally need to tell students to use the highest or most expensive setting. Start with a thinking or reasoning option if the AI system offers one. Use a basic model only for short or simple tasks. Try a stronger model if the AI ignores the toolkit, gives very shallow feedback, or struggles to follow the selected tool.</p>
 <p>For classroom use, make this part of your instructions. For example: “For this activity, use a thinking or reasoning model if your AI system offers one. If you are using a free plan, a basic model is acceptable, but work with a smaller extract.”</p>
-</section>
-
-<section class="panel reading">
 <h2>Free-plan considerations</h2>
-<p>Free AI plans can be useful for light use, short extracts and experimentation, but they may not be reliable enough for every classroom activity. Students may run out of usage during a session, lose access to stronger models, have limited file uploads, or find that long chats become less reliable. This matters because a toolkit plus student writing can use more context than an ordinary short prompt. If students are likely to use free accounts, design the activity around one sentence, one paragraph, one short section, or one reference list rather than a full assignment. If a mini library is too large, direct students to the <a href="../tools/single-tools.html">single-tool downloads</a>. You may also need an alternative route for students who cannot access the recommended AI system.</p>
-</section>
-
-<section class="panel reading">
+<p>Free AI plans can be useful for light use, short extracts and experimentation, but they may not be reliable enough for every classroom activity. Students may run out of usage during a session, lose access to stronger models, have limited file uploads, or find that long chats become less reliable. This matters because a toolkit plus student writing can use more context than an ordinary short prompt. If students are likely to use free accounts, design the activity around one sentence, one paragraph, one short section, or one reference list rather than a full assignment. If a mini library is too large, direct students to the <a href="https://markbeachill.github.io/tutorprompts/tools/single-tools.html">single-tool downloads</a>. You may also need an alternative route for students who cannot access the recommended AI system.</p>
 <h2>Projects and workspaces</h2>
 <p>Projects, workspaces, notebooks and similar features are mainly useful for individual repeated use. They are not essential for a one-off classroom activity, but they can make repeated use easier because the toolkit file, instructions and related chats can stay in one place.</p>
 <p>This can be useful for tutors who want a convenient testing space, or for students with paid or institutional plans who expect to use the toolkit regularly over several weeks. For students, this should usually be optional rather than required, because project features may be limited on free plans.</p>
 <p>A student-facing version might say: “If you have access to Projects, workspaces, Gems or notebooks, you may find it easier to keep the toolkit there for repeated use. This is optional and may be limited on free plans.”</p>
-<p>For detailed setup instructions, link students or tutors to the relevant platform guide rather than duplicating every step here.</p>
-</section>
-
-<section class="panel reading">
+<p>For step-by-step loading instructions for each route, see <a href="deployment-routes.html">Deployment routes</a>.</p>
 <h2>Shared custom AIs and public GPTs</h2>
 <p>A shared custom AI can give students a simpler entry point. In ChatGPT, this may mean a custom GPT. In Gemini, a similar idea may be a Gem. Some institutions may also provide their own approved agents or assistants.</p>
 <p>This can be useful if you want students to open a ready-made version of the toolkit rather than upload files or paste setup instructions themselves. It may also help keep the student experience more consistent across a module.</p>
-<p>However, shared custom AIs need careful handling. They are not a guarantee that the AI will always follow the toolkit correctly. They can still ignore instructions, summarise too much, blend tools, or become outdated when the toolkit changes.</p>
+<p>However, shared custom AIs need careful handling. They are not a guarantee that the AI will always follow the toolkit correctly. They can still ignore instructions, summarise too much, blend tools, or become outdated when the toolkit changes. How the toolkit is loaded also matters: see the note on instruction fields versus attached knowledge files in <a href="deployment-routes.html">Deployment routes</a>, because the two can behave differently.</p>
 <h3>Pros</h3>
 <ul>
 <li>Easier for students to access.</li>
@@ -65,7 +90,7 @@
 </ul>
 <h3>Cons</h3>
 <ul>
-<li>Needs testing before use.</li>
+<li>Needs the deployment check before use, and re-checking when the toolkit or the platform's model changes.</li>
 <li>Needs updating when the toolkit changes.</li>
 <li>May be affected by platform limits or model changes.</li>
 <li>May not be available to all students, especially on free accounts.</li>
@@ -74,43 +99,55 @@
 </ul>
 <p>A shared custom AI may be appropriate when the toolkit is stable, the intended use is clear, the institution permits the platform, and someone is responsible for testing and maintaining it. It may be less appropriate for early pilots, sensitive contexts, or situations where students are using different approved AI systems.</p>
 <p>A cautious tutor note could say: “A shared custom AI can make access easier, but it should be treated as a maintained teaching resource, not a fixed or foolproof application. Test it regularly and make clear to students that AI outputs still need judgement.”</p>
-</section>
-
-<section class="panel reading">
 <h2>Some of the major AI systems</h2>
 <table>
-<thead><tr><th>AI system</th><th>Description and useful information</th></tr></thead>
+<thead>
+<tr>
+<th>AI system</th>
+<th>Description and useful information</th>
+</tr>
+</thead>
 <tbody>
-<tr><td><a href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a></td><td>General-purpose AI system with model choice, file uploads, Projects and custom GPTs depending on plan. Useful for testing and repeated toolkit use. See the <a href="https://help.openai.com/en/articles/10169521-projects-in-chatgpt" target="_blank" rel="noopener">ChatGPT Projects guide</a>.</td></tr>
-<tr><td><a href="https://claude.ai/" target="_blank" rel="noopener">Claude</a></td><td>General-purpose AI system with Projects, project knowledge and project-specific chats. Often useful for working with long instructions or documents, but limits vary by plan. See the <a href="https://support.claude.com/en/articles/9517075-what-are-projects" target="_blank" rel="noopener">Claude Projects guide</a>.</td></tr>
-<tr><td><a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a></td><td>Google’s AI system. May be useful where students or institutions already use Google accounts or Workspace. Gems can store customised instructions, but availability and features vary by account. See the <a href="https://support.google.com/gemini/answer/15235603" target="_blank" rel="noopener">Gemini Gems guide</a>.</td></tr>
-<tr><td><a href="https://copilot.microsoft.com/" target="_blank" rel="noopener">Microsoft Copilot</a></td><td>Microsoft’s AI system. May be especially relevant where institutions provide Microsoft accounts. Copilot Notebooks can gather files, chats, notes and links in one workspace, depending on licence and availability. See the <a href="https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-notebooks" target="_blank" rel="noopener">Microsoft Copilot Notebooks guide</a>.</td></tr>
+<tr>
+<td><a href="https://chatgpt.com/">ChatGPT</a></td>
+<td>General-purpose AI system with model choice, file uploads, Projects and custom GPTs depending on plan. Useful for testing and repeated toolkit use. See the <a href="https://help.openai.com/en/articles/10169521-projects-in-chatgpt">ChatGPT Projects guide</a>.</td>
+</tr>
+<tr>
+<td><a href="https://claude.ai/">Claude</a></td>
+<td>General-purpose AI system with Projects, project knowledge and project-specific chats. Often useful for working with long instructions or documents, but limits vary by plan. See the <a href="https://support.claude.com/en/articles/9517075-what-are-projects">Claude Projects guide</a>.</td>
+</tr>
+<tr>
+<td><a href="https://gemini.google.com/">Gemini</a></td>
+<td>Google’s AI system. May be useful where students or institutions already use Google accounts or Workspace. Gems can store customised instructions, but availability and features vary by account. See the <a href="https://support.google.com/gemini/answer/15235603">Gemini Gems guide</a>.</td>
+</tr>
+<tr>
+<td><a href="https://copilot.microsoft.com/">Microsoft Copilot</a></td>
+<td>Microsoft’s AI system. May be especially relevant where institutions provide Microsoft accounts. Copilot Notebooks can gather files, chats, notes and links in one workspace, depending on licence and availability. See the <a href="https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-notebooks">Microsoft Copilot Notebooks guide</a>.</td>
+</tr>
 </tbody>
 </table>
-</section>
-
-<section class="panel reading">
 <h2>What tutors should decide before classroom use</h2>
 <p>Before using the toolkit with students, decide which AI system or systems students are allowed to use, whether the institution already provides access to an approved tool, and whether students may use personal AI accounts.</p>
-<p>You should also test the exact activity you plan to set. Use the same AI system, model or account type that students are likely to use where possible. Check that the toolkit loads properly, the task can be completed in the available time, and the output is good enough for the learning purpose.</p>
+<p>You should also run the <a href="deployment-check.html">deployment check</a> on the exact activity you plan to set, using the same AI system, model or account type that students are likely to use where possible. It checks that the toolkit loads properly, the tool behaves like a tutor rather than an answer machine, and the output is good enough for the learning purpose.</p>
 <p>You should also decide whether students should use a thinking or reasoning model, whether a basic model is acceptable for the activity, and whether the task is suitable for free-plan limits. For most classroom use, it is safer to ask students to work with short extracts rather than full documents.</p>
 <p>Finally, decide whether Projects, workspaces or shared custom AIs are optional, recommended, or not relevant for your context.</p>
-</section>
-
-<section class="panel reading">
 <h2>Suggested wording for classroom instructions</h2>
 <p>Use the AI Personal Tutor Toolkit with an AI system you are allowed to use. If your AI system gives you a model choice, use a thinking or reasoning option where available. A basic model is acceptable for short extracts, especially on a free plan.</p>
-<p>For this activity, work with a small piece of writing rather than a whole assignment. One paragraph or one short section is enough. If your AI tool cannot handle the mini library, use the <a href="../tools/single-tools.html">single-tool downloads</a> and choose only the tool named for this activity.</p>
+<p>For this activity, work with a small piece of writing rather than a whole assignment. One paragraph or one short section is enough. If your AI tool cannot handle the mini library, use the <a href="https://markbeachill.github.io/tutorprompts/tools/single-tools.html">single-tool downloads</a> and choose only the tool named for this activity.</p>
 <p>If you have access to Projects, workspaces, Gems or notebooks, you may use one to keep the toolkit available for repeated use. This is optional and may be limited on free plans.</p>
-</section>
-
-<section class="panel reading">
 <h2>Final note</h2>
-<p>This guide should be reviewed regularly. AI model names, free-plan limits, institutional access and project features change often. The safest advice is not to prescribe one permanent “best” model, but to recommend a suitable level of reasoning for the task and check what students can actually access.</p>
-</section>
-
-</div>
+<p>This guide should be reviewed regularly. AI model names, free-plan limits, institutional access and project features change often. The safest advice is not to prescribe one permanent “best” model, but to recommend a suitable level of reasoning for the task, check what students can actually access, and run the deployment check on the setup they will actually use.</p>
+<p>Next: <a href="deployment-routes.html">Deployment routes</a> · <a href="deployment-check.html">Deployment check</a></p>
 </main>
-<footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="../testing.html">Testing</a> | <a href="../changelog/">Changelog</a> | <a href="../guides/teaching-approach.html">Teaching approach</a> | <a href="../about.html">About this site</a></p></div></footer>
+<footer><div class="fwrap">
+AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.<br>
+<a href="https://markbeachill.github.io/tutorprompts/testing.html">Testing</a> |
+<a href="https://markbeachill.github.io/tutorprompts/changelog/">Changelog</a> |
+<a href="https://markbeachill.github.io/tutorprompts/guides/teaching-approach.html">Teaching approach</a> |
+<a href="https://markbeachill.github.io/tutorprompts/about.html">About this site</a>
+</div></footer>
+<script>
+function copyBox(id,btn){var t=document.getElementById(id).textContent;navigator.clipboard.writeText(t).then(function(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o;},1500);});}
+</script>
 </body>
 </html>

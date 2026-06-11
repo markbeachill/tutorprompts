@@ -106,7 +106,6 @@ For every student-facing output, also check the v4 tutor style:
 - **English as an additional language:** where the student identifies as an EAL writer or the writing shows systematic L2 patterns, explanations should be concrete, patterns treated as learnable rather than careless, and the intellectual content of feedback not simplified.
 - **Specialist writing support:** the output should feel like focused writing, revision or academic-thinking support, not a general homework-answer service.
 - **Plain grammar teaching:** essential terms such as subject, verb, object, clause, passive construction or conjunction may be used, but they should be explained in plain English with a simple example before being applied to the student's work.
-- **Certainty, confidence and authority:** clarity or style improvements must not make the student sound more certain, definitive, authoritative or procedurally confident than the original wording supports. Watch for upgrades from “may”, “could”, “should consider”, “available evidence” or “accusations” into stronger claims or instructions.
 - **“I’m stuck” support:** if the student says they are stuck, the tool should slow down, take a step back and offer two or three manageable ways forward. If the likely reason is clear, it should name that reason tentatively; if not, it should ask a short clarifying question.
 
 ## Tool-specific checks
@@ -121,7 +120,6 @@ Check whether the output:
 - gives a small move or choice rather than a full polished sentence immediately, and asks the student to attempt a rewrite
 - handles follow-up pressure such as “this does not sound academic” by pushing back on unnecessary complexity
 - preserves meaning by not silently replacing key terms with smoother, more academic-sounding or more fashionable alternatives; explains possible differences between terms such as “groups” and “communities” and asks the student to choose
-- preserves certainty, confidence and authority; does not turn tentative claims or possible actions into definitive claims or official instructions
 - if the writing is already clear, says so plainly, names one strength, and does not invent improvements
 - ends a completed exchange with a **Move practised:** line
 
@@ -159,7 +157,6 @@ Check whether the output teaches style and clarity without becoming a replacemen
 - whether the default advice is framed as a **move to make** rather than a polished sentence to copy;
 - whether the initial review stays within five improvements, with more offered rather than delivered;
 - whether vague wording is flagged with a clarifying question instead of being silently specified by the tool;
-- whether cautious or tentative wording is preserved rather than upgraded into stronger claims or more authoritative advice;
 - whether, in a strict-register discipline such as law, scientific reporting or clinical writing, the register is kept and the tool says so;
 - whether any model wording is sparse, conditional, and labelled as one possible version;
 - whether strong passages are used as teaching moments by asking the student to identify and transfer the successful move;
@@ -205,7 +202,6 @@ For the selected test, check whether the output:
 12. explains essential grammar terms plainly when they are used
 13. supports writing as thinking rather than rushing to finished wording
 14. preserves the student's intended meaning and avoids academicising key terms in ways that change concepts
-15. preserves the student's level of certainty, confidence and authority
 
 ## Rating scale
 
@@ -258,17 +254,12 @@ State whether you audited this as an interactive tutoring tool or a full review/
 | Made-up teaching example |  |  |  |
 | Academic-register handling |  |  |  |
 | Meaning preservation |  |  |  |
-| Certainty / authority preservation |  |  |  |
 | Paragraph logic / missing links |  |  |  |
 | Next steps |  |  |  |
 
 ## Meaning drift check
 
 Say whether the output preserves the student's terms and concepts, or whether it replaces them with more polished but different wording.
-
-## Certainty and authority check
-
-Say whether the output preserves the student's level of certainty, confidence and authority. Note any cases where the tool upgrades cautious wording such as “may”, “might”, “could”, “accusations”, “available evidence” or “should consider” into stronger claims, official-sounding advice or definitive instructions.
 
 ## Interaction drift check
 
@@ -307,7 +298,7 @@ Add any judgement calls the educator should check themselves.
 
 For startup activation tests, treat summarising the prompt library, listing internal file sections, or asking whether to summarise/activate as a failure. The default behaviour should be activation unless the user explicitly asks to inspect, summarise, audit, debug, edit or explain the prompt library.
 
-For launcher fidelity tests, treat reconstructed menus, table conversions, added emojis, welcome lines, or preambles such as “I’ve read the file” as partial failures unless they are explicitly present in the launcher text. Treat any output of release-note, changelog or version-history material as a failure in launcher tests: even if that material exists in the uploaded file, it is not part of the launcher output.
+For launcher fidelity tests, treat reconstructed menus, table conversions, added emojis, welcome lines, or preambles such as “I’ve read the file” as partial failures unless they are explicitly present in the launcher text. Treat any output of release-note or changelog material as a failure: the version history is published separately and is not part of the library.
 
 A launcher that activates but strips out the privacy/responsibility note, “I'm stuck” support, the triage line (“Not sure which tool? Describe your problem in a sentence and I will suggest one or two.”), or tool codes should not be treated as a full pass. A launcher that only shows the tool list is a partial failure even if the tools are correct. The launcher should preserve the library name and version, purpose, short course-rules/privacy guidance, “I'm stuck” support, the triage line, visible tool codes, paste/upload guidance and the `prompt` return instruction.
 

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="What toolkit testing can and cannot show - samples not proofs, self-reported records, audit limits, model variance, and why every result records what it was tested on.">
+<title>Auditing and Testing: Limitations | AI Personal Tutor Toolkit</title>
+<!-- Standalone styling: replace the <style> block with the site stylesheet if preferred. -->
+<style>
+:root{--ink:#1d2430;--muted:#5a6472;--accent:#23527c;--line:#dfe3e8;--bg:#ffffff;--code:#f5f7f9;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+header{border-bottom:1px solid var(--line);padding:0.9rem 1rem}
+.hwrap,main,footer .fwrap{max-width:46rem;margin:0 auto}
+.site-title{font-weight:700;text-decoration:none;color:var(--ink);font-size:1.05rem}
+.site-sub{color:var(--muted);font-size:0.85rem;display:block}
+nav.top{margin-top:0.45rem;font-size:0.95rem}
+nav.top a{color:var(--accent);text-decoration:none;margin-right:0.9rem}
+nav.top a:hover{text-decoration:underline}
+main{padding:1.4rem 1rem 3rem}
+p.label{color:var(--muted);font-size:0.85rem;letter-spacing:0.04em;text-transform:uppercase;margin:0 0 0.2rem}
+h1{font-size:1.7rem;line-height:1.25;margin:0.2rem 0 0.8rem}
+h2{font-size:1.25rem;margin-top:2rem;border-bottom:1px solid var(--line);padding-bottom:0.25rem}
+h3{font-size:1.05rem;margin-top:1.6rem}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;font-size:0.95rem;margin:1rem 0}
+th,td{border:1px solid var(--line);padding:0.45rem 0.6rem;text-align:left;vertical-align:top}
+th{background:var(--code)}
+pre{background:var(--code);border:1px solid var(--line);border-radius:6px;padding:0.8rem;overflow:auto;font-size:0.88rem;max-height:26rem}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.copywrap{margin:0.8rem 0}
+.copybtn,.btn{display:inline-block;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:0.4rem 0.9rem;font-size:0.9rem;cursor:pointer;text-decoration:none;margin:0 0 0.4rem 0}
+.copybtn:hover,.btn:hover{filter:brightness(1.1)}
+.fileframe{width:100%;height:26rem;border:1px solid var(--line);border-radius:6px;background:var(--code)}
+blockquote{border-left:3px solid var(--line);margin:1rem 0;padding:0.1rem 1rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:2rem;padding:1.2rem 1rem;color:var(--muted);font-size:0.9rem}
+footer a{color:var(--accent)}
+hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+</style>
+</head>
+<body>
+<header><div class="hwrap">
+<a class="site-title" href="https://markbeachill.github.io/tutorprompts/index.html">AI Personal Tutor Toolkit <span class="site-sub">Structured writing support</span></a>
+<nav class="top">
+<a href="https://markbeachill.github.io/tutorprompts/index.html">Home</a>
+<a href="https://markbeachill.github.io/tutorprompts/tools/">Tools</a>
+<a href="https://markbeachill.github.io/tutorprompts/examples/">Examples</a>
+<a href="https://markbeachill.github.io/tutorprompts/student-help/">Student Help</a>
+<a href="https://markbeachill.github.io/tutorprompts/guides/">Guides</a>
+</nav>
+</div></header>
+<main>
+<p class="label">Maintainer guide · Auditing and testing · 5 of 5</p>
+<h1>Limitations: what you are testing, on what</h1>
+<p>Testing AI behaviour is not like testing ordinary software, and this page says plainly what the method can and cannot establish. It is here for two reasons: maintainers make better decisions when the limits are explicit, and the project's credibility depends on never claiming more than the evidence supports.</p>
+<h2>Results are samples, not proofs</h2>
+<p>The same prompt, library, model and input can produce different outputs on different runs. A pass is one sample from a distribution, not a property of the system. That is why release-gating tests run twice, why one pass plus one failure is a failure to investigate rather than an average, and why a clean test sheet means "we found no problems in the runs we made", never "there are no problems".</p>
+<h2>You are testing a specific thing, on a specific day</h2>
+<p>Every result is conditional on the model, the plan, the platform, the loading route and the date — and providers update models without notice, sometimes without changing the name. This is why every log row and every test record carries all of these, why the model matrix exists (one strong model, one free-tier model, because the libraries are designed for free plans and weak-model behaviour is evidence), and why results from one platform do not transfer to another. A toolkit that passed everywhere last month can fail somewhere this month through no change of its own.</p>
+<h2>The test record is self-reported</h2>
+<p>The output collector asks the tested AI to transcribe its own performance. Most of the time it does so faithfully; the dangerous case is the failed test, because a model that broke a rule is the least reliable narrator of the breakage, and a long session can be silently truncated. The spot-check is therefore part of the method: one turn for routine tests, every turn (or manual capture) for adversarial and release-gating tests, and a record that disagrees with the chat makes the test NOT TESTABLE.</p>
+<h2>The audit is a helper, not a judge</h2>
+<p>The audit prompt is itself an LLM under instructions, with LLM weaknesses: leniency, plausible paraphrase, and a tendency to average. The countermeasures — verbatim quotation or "Not shown", the ★ rating cap, running the audit on a different model from the one tested — reduce these, but do not remove them. The human judgement recorded in the log is the result; an audit that cannot quote its evidence should be discounted, and a human is always entitled to overrule an audit, recording why.</p>
+<h2>Tests can be gamed by context</h2>
+<p>The library sits in the model's context during every test, so a test input that structurally resembles a worked example embedded in the library measures the model's ability to copy, not to diagnose. The test-input hygiene rule exists for this; it also means any new test input needs checking against the library's embedded examples before adoption, and audits should flag instruction-example leakage when feedback reuses the library's own example vocabulary.</p>
+<h2>Coverage is always partial</h2>
+<p>The pack samples behaviours: a handful of inputs per tool, mostly in one topic universe, mostly in short sessions. It does not cover long multi-session use, every discipline, every student phrasing, or deliberate adversarial creativity beyond the A-series. The alternate-strand inputs and the periodic deeper pass widen the sample; they do not complete it. Deployment checks run by tutors on real platforms (<a href="https://markbeachill.github.io/tutorprompts/guides/deployment-check.html">deployment guide</a>) cover combinations release testing never reaches, which is why problem reports with collector records are genuinely valuable.</p>
+<h2>What follows from all this</h2>
+<p>State decision rules before running tests, not after seeing results. Record what every result was conditional on. Re-test when anything changes — toolkit, platform, model, term. Treat the pack as evidence-gathering for human judgement, and write release notes that say what was tested, on what, rather than that the toolkit "works".</p>
+<p>Back to: <a href="testing.html">Auditing and testing overview</a></p>
+</main>
+<footer><div class="fwrap">
+AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.<br>
+<a href="https://markbeachill.github.io/tutorprompts/testing.html">Testing</a> |
+<a href="https://markbeachill.github.io/tutorprompts/changelog/">Changelog</a> |
+<a href="https://markbeachill.github.io/tutorprompts/guides/teaching-approach.html">Teaching approach</a> |
+<a href="https://markbeachill.github.io/tutorprompts/about.html">About this site</a>
+</div></footer>
+<script>
+function copyBox(id,btn){var t=document.getElementById(id).textContent;navigator.clipboard.writeText(t).then(function(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o;},1500);});}
+</script>
+</body>
+</html>

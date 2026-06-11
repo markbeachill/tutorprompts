@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How tutors can capture, keep and present records of AI tutoring sessions - for classroom examples, student evidence and problem reports.">
+<title>Tutor Guide: Producing Documentation | AI Personal Tutor Toolkit</title>
+<!-- Standalone styling: replace the <style> block with the site stylesheet if preferred. -->
+<style>
+:root{--ink:#1d2430;--muted:#5a6472;--accent:#23527c;--line:#dfe3e8;--bg:#ffffff;--code:#f5f7f9;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+header{border-bottom:1px solid var(--line);padding:0.9rem 1rem}
+.hwrap,main,footer .fwrap{max-width:46rem;margin:0 auto}
+.site-title{font-weight:700;text-decoration:none;color:var(--ink);font-size:1.05rem}
+.site-sub{color:var(--muted);font-size:0.85rem;display:block}
+nav.top{margin-top:0.45rem;font-size:0.95rem}
+nav.top a{color:var(--accent);text-decoration:none;margin-right:0.9rem}
+nav.top a:hover{text-decoration:underline}
+main{padding:1.4rem 1rem 3rem}
+p.label{color:var(--muted);font-size:0.85rem;letter-spacing:0.04em;text-transform:uppercase;margin:0 0 0.2rem}
+h1{font-size:1.7rem;line-height:1.25;margin:0.2rem 0 0.8rem}
+h2{font-size:1.25rem;margin-top:2rem;border-bottom:1px solid var(--line);padding-bottom:0.25rem}
+h3{font-size:1.05rem;margin-top:1.6rem}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;font-size:0.95rem;margin:1rem 0}
+th,td{border:1px solid var(--line);padding:0.45rem 0.6rem;text-align:left;vertical-align:top}
+th{background:var(--code)}
+pre{background:var(--code);border:1px solid var(--line);border-radius:6px;padding:0.8rem;overflow:auto;font-size:0.88rem;max-height:26rem}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.copywrap{margin:0.8rem 0}
+.copybtn,.btn{display:inline-block;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:0.4rem 0.9rem;font-size:0.9rem;cursor:pointer;text-decoration:none;margin:0 0 0.4rem 0}
+.copybtn:hover,.btn:hover{filter:brightness(1.1)}
+.fileframe{width:100%;height:26rem;border:1px solid var(--line);border-radius:6px;background:var(--code)}
+blockquote{border-left:3px solid var(--line);margin:1rem 0;padding:0.1rem 1rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:2rem;padding:1.2rem 1rem;color:var(--muted);font-size:0.9rem}
+footer a{color:var(--accent)}
+hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+</style>
+</head>
+<body>
+<header><div class="hwrap">
+<a class="site-title" href="https://markbeachill.github.io/tutorprompts/index.html">AI Personal Tutor Toolkit <span class="site-sub">Structured writing support</span></a>
+<nav class="top">
+<a href="https://markbeachill.github.io/tutorprompts/index.html">Home</a>
+<a href="https://markbeachill.github.io/tutorprompts/tools/">Tools</a>
+<a href="https://markbeachill.github.io/tutorprompts/examples/">Examples</a>
+<a href="https://markbeachill.github.io/tutorprompts/student-help/">Student Help</a>
+<a href="https://markbeachill.github.io/tutorprompts/guides/">Guides</a>
+</nav>
+</div></header>
+<main>
+<p class="label">Tutor guide</p>
+<h1>Producing documentation</h1>
+<p>How to capture an AI tutoring session and turn it into something you can keep, share or hand out.</p>
+<h2>Why document at all</h2>
+<p>Three classroom situations call for a record of an AI session rather than a memory of one.</p>
+<p><strong>Worked examples for teaching.</strong> A good session — a student's sentence genuinely improving through diagnosis, example and attempt — is teaching material. Captured and lightly anonymised, it shows the next cohort what using the tool well actually looks like, which lands far better than a description of it.</p>
+<p><strong>Evidence of process.</strong> Where students declare AI use (see the <a href="https://markbeachill.github.io/tutorprompts/tools/">SW3 AI-Use Record</a> tool and your course's rules), a saved transcript of the session is the strongest possible companion to the declaration: it shows what the AI did and what the student did, which is the question integrity processes actually ask. A declaration says "AI gave feedback on my draft"; a transcript shows the feedback and the student's own revision.</p>
+<p><strong>Problem reports.</strong> When a tool misbehaves on your platform, a captured session is the difference between "it didn't work" and a report a maintainer can act on.</p>
+<h2>Capturing a session: the collector</h2>
+<p>The simplest capture is one paste. At the end of the session — never before or during it — paste the toolkit's output collector into the same chat. It produces a single record: the session details and a verbatim transcript of every turn. Copy it once and save it as a Markdown (<code>.md</code>) or text file.</p>
+<p>The collector prompt, with its instructions, is on the <a href="https://markbeachill.github.io/tutorprompts/testing-collector.html">collector page</a> of the testing guide. One honesty note travels with it: the record is written by the same AI that ran the session, so glance over it against the chat before relying on it — especially if the session went wrong, which is exactly when the AI is the least reliable narrator of its own behaviour.</p>
+<p>Manual capture — selecting and copying the turns yourself — remains the most reliable method, and is worth the effort for anything contentious.</p>
+<h2>Presenting a record</h2>
+<p>A saved Markdown record is already readable, searchable and easy to store alongside module materials. For something more presentable:</p>
+<p><strong>Paste into Word.</strong> Most AI chat interfaces preserve formatting when copied into a Word document, which is enough for a handout or a staff-development example. Tidy the headings, anonymise names, and add a short framing note saying what the example shows.</p>
+<p><strong>Convert to a web page.</strong> The separate <a href="https://markbeachill.github.io/ai-chat-to-html/index.html">AI Chat to HTML</a> project converts a chat transcript into a clean standalone web page, and its <a href="https://markbeachill.github.io/ai-chat-to-html/word.html">Word page</a> covers producing a Word-friendly version. It is an independent tool with its own setup, so treat it as an option for those comfortable with it rather than a required step — the Markdown record and the paste-into-Word route cover most classroom needs.</p>
+<h2>Anonymisation and care</h2>
+<p>Before sharing any session beyond its student: remove names, student numbers, and anything identifying in the writing itself; remember that a student's draft is their work, so ask before using it as an example, even anonymised; and for placement-related writing (nursing, education, social work), check that no patient, pupil or client details survive in the extract — the same privacy rule the toolkit itself applies.</p>
+<h2>A simple classroom pattern</h2>
+<p>For a module using the toolkit regularly, the lightweight habit is: students end each AI session by saving a collector record into a module folder alongside their SW3 record; the tutor keeps one or two good anonymised examples per term for teaching; and anything that misbehaves gets its record sent on via the <a href="https://markbeachill.github.io/tutorprompts/about.html">About page</a>. Documentation then accumulates as a by-product of use, instead of being reconstructed when someone asks for it.</p>
+</main>
+<footer><div class="fwrap">
+AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.<br>
+<a href="https://markbeachill.github.io/tutorprompts/testing.html">Testing</a> |
+<a href="https://markbeachill.github.io/tutorprompts/changelog/">Changelog</a> |
+<a href="https://markbeachill.github.io/tutorprompts/guides/teaching-approach.html">Teaching approach</a> |
+<a href="https://markbeachill.github.io/tutorprompts/about.html">About this site</a>
+</div></footer>
+<script>
+function copyBox(id,btn){var t=document.getElementById(id).textContent;navigator.clipboard.writeText(t).then(function(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o;},1500);});}
+</script>
+</body>
+</html>
