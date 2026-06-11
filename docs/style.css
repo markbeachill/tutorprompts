@@ -1,75 +1,60 @@
-/* AI Personal Tutor Toolkit
-   Consistent site frame + calmer documentation defaults
-
-   Design rules:
-   - Every page uses the same outer site width and the same nav frame.
-   - The homepage may have a larger hero and visual cards, but it sits in the same frame.
-   - Standard pages use a document layout inside that frame: readable text measure, left aligned.
-   - Menu pages keep a two-column scan layout inside the same frame.
-   - Tools/examples pages can use wider tables or examples without changing the outer frame.
-*/
-
 :root {
-  --bg: #f8f6f1;
-  --paper: #fffefa;
+  --bg: #f7f4ee;
   --panel: #ffffff;
-  --ink: #24292f;
-  --muted: #59636e;
-  --line: #e3ddd2;
-  --line-strong: #d2c8b8;
-  --accent: #245a73;
-  --accent2: #9d563b;
+  --ink: #1f2933;
+  --muted: #5d6875;
+  --line: #e4ded3;
+  --accent: #295c7a;
+  --accent2: #b45f3c;
   --soft: #eef5f7;
-  --warn: #fff7e5;
-  --shadow: 0 14px 34px rgba(31, 41, 51, 0.08);
-  --radius: 16px;
-  --site-width: 1120px;
-  --measure: 700px;
-  --page-gutter: 20px;
+  --warn: #fff6df;
+  --shadow: 0 18px 40px rgba(31, 41, 51, 0.08);
+  --radius: 18px;
+  --measure: 720px;
+  --menu-measure: 980px;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  font-size: 16.5px;
-  line-height: 1.68;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: var(--bg);
   color: var(--ink);
-  text-align: left;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* One universal site frame. Header, homepage, menu pages, standard pages and footer all use this. */
-.container,
-.reading {
-  width: min(var(--site-width), calc(100% - (var(--page-gutter) * 2)));
-  max-width: var(--site-width);
-  margin-left: auto;
-  margin-right: auto;
+  line-height: 1.62;
 }
 
 a {
   color: var(--accent);
-  font-weight: 620;
-  text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.16em;
+  font-weight: 650;
+  text-decoration: none;
 }
-a:not(.button) { text-decoration: underline; }
+
 a:hover,
-a:focus { text-decoration-thickness: 0.12em; }
+a:focus {
+  text-decoration: underline;
+}
+
 a:focus-visible,
 .button:focus-visible {
-  outline: 3px solid rgba(36, 90, 115, 0.32);
+  outline: 3px solid rgba(41, 92, 122, 0.35);
   outline-offset: 3px;
 }
 
-/* Site header and nav: identical frame on every page. */
-header:not(.page-intro) {
-  background: rgba(255, 255, 255, 0.82);
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* Site header */
+header {
+  background: rgba(255, 255, 255, 0.78);
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
@@ -81,22 +66,21 @@ header:not(.page-intro) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  padding: 13px 0;
+  gap: 16px;
+  padding: 14px 0;
 }
 
 .brand {
   display: flex;
   flex-direction: column;
   color: var(--ink);
-  font-weight: 760;
-  letter-spacing: -0.015em;
-  text-decoration: none;
-  flex: 0 0 auto;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
+
 .brand small {
   color: var(--muted);
-  font-weight: 520;
+  font-weight: 550;
   letter-spacing: 0;
 }
 
@@ -104,105 +88,75 @@ nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 9px 15px;
+  gap: 10px 16px;
   margin: 0;
   padding: 0;
 }
+
 nav a {
   color: var(--ink);
-  font-weight: 650;
-  font-size: 0.94rem;
-  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
 }
 
-/* Default documentation layout. The page frame is wide and consistent; prose has a readable measure. */
-main { padding: 0; }
-
-.reading {
-  padding: 30px 0 48px;
+/*
+  Default internal pages are plain documentation pages:
+  compact top area, readable measure, quiet headings, and minimal visual furniture.
+  The homepage is the exception and is styled at the end of this file.
+*/
+.hero {
+  padding: 24px 0 12px;
 }
 
-.reading > *,
-.page-intro > *,
-.reading section > * {
+.hero-grid {
+  display: block;
+}
+
+main.container {
   max-width: var(--measure);
 }
 
-/* Allow genuinely wide content to use the full common site frame. */
-.reading table,
-.reading .table-wrap,
-.reading .wide,
-.reading .grid,
-.reading .btn-row,
-.reading .button-row,
-.reading .actions,
-.reading pre {
-  max-width: 100%;
-}
-
-.page-intro {
-  padding: 0 0 16px;
-  margin: 0 0 22px;
-  border: 0;
-  position: static;
-  background: transparent;
-  backdrop-filter: none;
-}
-.page-intro h1 { margin-top: 0; }
-.page-intro .lead { margin-bottom: 0; }
-
-.reading section { margin: 0 0 24px; }
-.reading section + section { margin-top: 24px; }
-
-h1, h2, h3 { color: #1f252b; }
-
 h1 {
-  font-size: clamp(1.7rem, 3vw, 2.2rem);
-  line-height: 1.16;
+  font-size: clamp(1.75rem, 3.2vw, 2.35rem);
+  line-height: 1.14;
   margin: 0 0 8px;
-  letter-spacing: -0.025em;
-  font-weight: 720;
+  letter-spacing: -0.038em;
 }
 
 h2 {
-  font-size: clamp(1.08rem, 1.35vw, 1.18rem);
-  line-height: 1.35;
-  margin: 28px 0 7px;
-  letter-spacing: -0.004em;
-  font-weight: 650;
+  font-size: clamp(1.08rem, 1.7vw, 1.28rem);
+  line-height: 1.28;
+  margin: 28px 0 8px;
+  letter-spacing: -0.012em;
+  font-weight: 720;
 }
 
 h3 {
-  font-size: 1.01rem;
-  line-height: 1.36;
-  margin: 20px 0 5px;
-  font-weight: 650;
+  font-size: 1.02rem;
+  line-height: 1.32;
+  margin: 20px 0 6px;
+  font-weight: 720;
 }
 
 p {
-  margin: 0 0 0.9rem;
-  max-width: var(--measure);
+  margin: 0 0 13px;
 }
-li { margin: 0.25rem 0; }
-ul, ol {
-  margin: 0.45rem 0 1rem;
-  padding-left: 1.35rem;
-}
+
 .lead {
-  font-size: 1.02rem;
-  line-height: 1.62;
+  font-size: 1rem;
   color: var(--muted);
-  max-width: 66ch;
+  max-width: 680px;
 }
+
 .kicker {
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.08em;
   color: var(--accent2);
-  font-weight: 720;
-  font-size: 0.73rem;
-  margin-bottom: 5px;
+  font-weight: 850;
+  font-size: 0.76rem;
+  margin-bottom: 6px;
 }
+
 .tag,
 .guide-label {
   display: inline-block;
@@ -211,14 +165,14 @@ ul, ol {
   border-radius: 0;
   background: transparent;
   color: var(--accent2);
-  font-weight: 720;
-  font-size: 0.73rem;
-  margin-bottom: 4px;
+  font-weight: 800;
+  font-size: 0.76rem;
+  margin-bottom: 5px;
   text-transform: uppercase;
-  letter-spacing: 0.055em;
+  letter-spacing: 0.06em;
 }
 
-/* Old visual block classes become plain by default. */
+/* Standard pages: flatten ordinary content blocks. */
 .panel,
 .card,
 .example-note {
@@ -229,96 +183,173 @@ ul, ol {
   padding: 0;
   margin: 0 0 20px;
 }
-.card { display: block; }
+
+.card {
+  display: block;
+}
+
 .card h3,
-.resource-item h3 { margin-top: 0; }
+.resource-item h3 {
+  margin-top: 0;
+}
+
 .card p,
 .small,
-.small-note,
-.table-note { color: var(--muted); }
-.grid,
-.grid.two { display: block; }
+.table-note {
+  color: var(--muted);
+}
 
-/* Editorial callouts: visible, but not card-heavy. */
+.card .actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Standard documentation pages should not become wide card grids by default. */
+.grid,
+.grid.two {
+  display: block;
+}
+
+/*
+  Menu pages, such as Guides and Student Help, keep a two-column layout on wider screens.
+  The cards are lighter than homepage cards, but still structured enough to reduce scrolling.
+*/
+body.menu main.container {
+  max-width: var(--menu-measure);
+}
+
+body.menu .grid,
+body.menu .grid.two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+body.menu .card,
+body.menu .guide-card {
+  background: rgba(255, 255, 255, 0.38);
+  border: 1px solid rgba(228, 222, 211, 0.95);
+  border-radius: 12px;
+  box-shadow: none;
+  padding: 14px 16px;
+  margin: 0;
+}
+
+body.menu .card h2,
+body.menu .card h3,
+body.menu .guide-card h2,
+body.menu .guide-card h3 {
+  font-size: 1.03rem;
+  line-height: 1.28;
+  margin: 0 0 5px;
+  letter-spacing: -0.01em;
+  font-weight: 720;
+}
+
+body.menu .card p,
+body.menu .guide-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+body.menu .button {
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 720;
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--line);
+}
+
+body.menu .button:hover {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+/* Callouts remain visible, but should feel like editorial notes rather than panels. */
 .notice,
 .warning {
   background: var(--warn);
   border: 0;
-  border-left: 4px solid #d7aa4e;
+  border-left: 4px solid #d8aa47;
   border-radius: 0;
   box-shadow: none;
-  padding: 0.75rem 0.95rem;
-  margin: 1.1rem 0 1.35rem;
-  max-width: var(--measure);
-}
-.notice p:last-child,
-.warning p:last-child { margin-bottom: 0; }
-
-/* Contents/subnav blocks. */
-.toc,
-.subnav,
-.on-this-page {
-  border-left: 3px solid var(--line-strong);
-  padding: 0.25rem 0 0.25rem 0.9rem;
-  margin: 1rem 0 1.45rem;
-  background: transparent;
-  max-width: var(--measure);
-}
-.toc ul,
-.subnav ul,
-.on-this-page ul {
-  margin: 0.25rem 0 0;
-  padding-left: 1.1rem;
+  padding: 11px 15px;
+  margin: 18px 0;
 }
 
 blockquote,
 .sample-output {
-  margin: 1rem 0;
-  padding: 0.75rem 0.95rem;
-  background: rgba(255, 255, 255, 0.5);
+  margin: 16px 0;
+  padding: 11px 15px;
+  background: rgba(255, 255, 255, 0.45);
   border: 0;
   border-left: 4px solid var(--accent);
   border-radius: 0;
   color: #374151;
-  max-width: var(--measure);
 }
-.sample-output { border-left-color: var(--accent2); }
 
-/* Buttons */
+.sample-output {
+  border-left-color: var(--accent2);
+}
+
+/* Buttons are actions, so they remain visually distinct. */
 .btn-row,
-.button-row,
-.actions {
+.button-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 14px;
+  gap: 12px;
+  margin-top: 18px;
 }
+
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding: 10px 15px;
+  border-radius: 10px;
   background: var(--accent);
   color: #fff;
-  font-weight: 680;
+  font-weight: 800;
   border: 1px solid var(--accent);
   text-decoration: none;
-  line-height: 1.25;
 }
-.button:hover { text-decoration: none; filter: brightness(0.97); }
-.button.secondary { background: #fff; color: var(--accent); }
-.button.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
 
-hr { border: 0; margin: 1.2rem 0; }
+.button:hover {
+  text-decoration: none;
+  filter: brightness(0.96);
+}
+
+.button.secondary {
+  background: #fff;
+  color: var(--accent);
+}
+
+.button.ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+/* Avoid routine horizontal rules on documentation pages. */
+hr {
+  border: 0;
+  margin: 24px 0;
+}
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1rem 0;
+  margin: 16px 0;
   background: rgba(255, 255, 255, 0.65);
   border: 1px solid var(--line);
+  overflow: hidden;
+  display: table;
 }
+
 th,
 td {
   text-align: left;
@@ -326,20 +357,27 @@ td {
   border-bottom: 1px solid var(--line);
   vertical-align: top;
 }
-th { background: #f0ede6; font-weight: 680; }
-tr:last-child td { border-bottom: 0; }
+
+th {
+  background: #f0ede6;
+  font-weight: 760;
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
 
 code {
   background: #eee7dc;
   padding: 2px 5px;
   border-radius: 5px;
-  font-size: 0.94em;
 }
+
 pre {
   background: #19202a;
   color: #f8fafc;
-  padding: 15px;
-  border-radius: 9px;
+  padding: 16px;
+  border-radius: 10px;
   overflow: auto;
 }
 
@@ -347,107 +385,88 @@ pre {
   padding: 34px 0 50px;
   color: var(--muted);
 }
-.footer-links { margin-top: 8px; }
-.footer-links a { color: var(--accent); }
 
-.list-clean { padding-left: 1.2rem; }
-.steps li { margin-bottom: 0.65rem; }
-.checklist { columns: 2; column-gap: 2rem; }
-.panel table a { white-space: nowrap; }
-.card ul { margin-top: 0; }
+.footer-links {
+  margin-top: 8px;
+}
+
+.footer-links a {
+  color: var(--accent);
+}
+
+.list-clean {
+  padding-left: 1.2rem;
+}
+
+.steps li {
+  margin-bottom: 0.7rem;
+}
+
+.checklist {
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.panel table a {
+  white-space: nowrap;
+}
+
+.card ul {
+  margin-top: 0;
+}
+
 .example-label {
-  font-weight: 700;
+  font-weight: 800;
   color: var(--accent);
   margin-top: 12px;
 }
-.muted { color: var(--muted); font-weight: 600; }
-.resource-item { padding-top: 10px; margin-top: 10px; }
 
-/* Compact hero for internal pages that still use the old hero pattern. Same container width as everything else. */
-.hero { padding: 24px 0 12px; }
-.hero-grid { display: block; }
-.hero .container { text-align: left; }
-
-/* Menu pages: two-column scan pattern inside the same universal site frame. */
-body.menu .hero { padding: 24px 0 12px; }
-body.menu main > .container { margin-bottom: 44px; }
-body.menu .grid,
-body.menu .grid.two {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-}
-body.menu .panel { margin: 0; }
-body.menu .card,
-body.menu .guide-card {
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(227, 221, 210, 0.95);
-  border-radius: 11px;
-  box-shadow: none;
-  padding: 14px 16px;
-  margin: 0;
-}
-body.menu .card h2,
-body.menu .card h3,
-body.menu .guide-card h2,
-body.menu .guide-card h3 {
-  font-size: 1.02rem;
-  line-height: 1.3;
-  margin: 0 0 5px;
-  letter-spacing: -0.004em;
-  font-weight: 660;
-}
-body.menu .card p,
-body.menu .guide-card p {
-  font-size: 0.96rem;
-  line-height: 1.55;
-  margin-bottom: 10px;
+.muted {
   color: var(--muted);
-}
-body.menu .button {
-  padding: 6px 9px;
-  border-radius: 8px;
-  font-size: 0.9rem;
   font-weight: 650;
-  background: transparent;
-  color: var(--accent);
-  border-color: var(--line);
-}
-body.menu .button:hover { background: rgba(255, 255, 255, 0.55); }
-
-/* Reference pages such as Tools and Examples: same outer frame, wide tables/examples when useful. */
-body.reference .reading table,
-body.reference .reading .notice {
-  max-width: 100%;
-}
-body.reference .reading .notice p,
-body.reference .reading .notice h2 {
-  max-width: var(--measure);
 }
 
-/* Homepage exception: larger visual front door inside the same universal site frame. */
-body.home .hero { padding: 56px 0 30px; }
+.resource-item {
+  padding-top: 14px;
+  margin-top: 14px;
+}
+
+/* Homepage exception: the homepage keeps the bigger hero and visual card layout. */
+body.home main.container {
+  max-width: 1120px;
+}
+
+body.home .hero {
+  padding: 56px 0 30px;
+}
+
 body.home .hero-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 24px;
   align-items: stretch;
 }
+
 body.home h1 {
   font-size: clamp(2.1rem, 5vw, 4.5rem);
   line-height: 1.02;
   margin: 0 0 16px;
-  letter-spacing: -0.048em;
+  letter-spacing: -0.055em;
+}
+
+body.home h2 {
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+  margin: 0 0 12px;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
   font-weight: 760;
 }
-body.home h2 {
-  font-size: clamp(1.45rem, 3vw, 2.05rem);
-  margin: 0 0 12px;
-  letter-spacing: -0.03em;
-  line-height: 1.14;
-  font-weight: 720;
+
+body.home .lead {
+  font-size: 1.18rem;
+  max-width: 780px;
 }
-body.home .lead { font-size: 1.16rem; max-width: 780px; }
+
 body.home .panel,
 body.home .card {
   background: var(--panel);
@@ -455,7 +474,12 @@ body.home .card {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-body.home .panel { padding: 24px; margin: 20px 0; }
+
+body.home .panel {
+  padding: 24px;
+  margin: 20px 0;
+}
+
 body.home .card {
   padding: 20px;
   display: flex;
@@ -463,27 +487,42 @@ body.home .card {
   gap: 10px;
   margin: 0;
 }
-body.home .card h3 { margin-top: 0; }
-body.home .card p { color: var(--muted); }
-body.home .card .actions { margin-top: auto; }
+
+body.home .card h3 {
+  margin-top: 0;
+}
+
+body.home .card p {
+  color: var(--muted);
+}
+
+body.home .card .actions {
+  margin-top: auto;
+}
+
 body.home .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
-body.home .grid.two { grid-template-columns: repeat(2, 1fr); }
+
+body.home .grid.two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 body.home .tag {
   display: inline-block;
   padding: 5px 10px;
   border-radius: 999px;
   background: var(--soft);
   color: var(--accent);
-  font-weight: 740;
+  font-weight: 800;
   font-size: 0.82rem;
   margin-bottom: 12px;
   text-transform: none;
   letter-spacing: 0;
 }
+
 body.home .notice {
   background: var(--warn);
   border: 1px solid #f0d99b;
@@ -493,12 +532,15 @@ body.home .notice {
 
 /* Mobile */
 @media (max-width: 860px) {
-  header:not(.page-intro) { position: static; }
+  header {
+    position: static;
+  }
+
   .nav {
     align-items: flex-start;
     flex-direction: column;
   }
-  nav ul { justify-content: flex-start; }
+
   body.home .hero-grid,
   body.home .grid,
   body.home .grid.two,
@@ -509,15 +551,23 @@ body.home .notice {
 }
 
 @media (max-width: 760px) {
-  :root { --page-gutter: 14px; }
-  body { font-size: 16px; line-height: 1.65; }
-  .container,
-  .reading {
-    width: calc(100% - (var(--page-gutter) * 2));
+  .container {
+    width: min(100% - 24px, 1120px);
   }
-  .reading { padding-top: 22px; }
-  .hero { padding: 20px 0 12px; }
-  h1 { font-size: clamp(1.62rem, 8vw, 2.05rem); }
-  h2 { font-size: 1.06rem; }
-  .checklist { columns: 1; }
+
+  .hero {
+    padding: 20px 0 12px;
+  }
+
+  h1 {
+    font-size: clamp(1.65rem, 8vw, 2.15rem);
+  }
+
+  h2 {
+    font-size: 1.08rem;
+  }
+
+  .checklist {
+    columns: 1;
+  }
 }
