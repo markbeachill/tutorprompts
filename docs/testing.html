@@ -1,62 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Auditing and testing guide for maintainers of the AI Personal Tutor Toolkit - workflow, collector, audit, test cards, limitations and release checks.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Auditing and Testing Guide | AI Personal Tutor Toolkit</title>
-<!-- Standalone styling: replace the <style> block with the site stylesheet if preferred. -->
+<meta content="Auditing and testing guide for maintainers of the AI Personal Tutor Toolkit - workflow, collector, audit, test cards, limitations and release checks." name="description"/>
+<link href="style.css" rel="stylesheet"/>
 <style>
-:root{--ink:#1d2430;--muted:#5a6472;--accent:#23527c;--line:#dfe3e8;--bg:#ffffff;--code:#f5f7f9;}
-*{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
-header{border-bottom:1px solid var(--line);padding:0.9rem 1rem}
-.hwrap,main,footer .fwrap{max-width:46rem;margin:0 auto}
-.site-title{font-weight:700;text-decoration:none;color:var(--ink);font-size:1.05rem}
-.site-sub{color:var(--muted);font-size:0.85rem;display:block}
-nav.top{margin-top:0.45rem;font-size:0.95rem}
-nav.top a{color:var(--accent);text-decoration:none;margin-right:0.9rem}
-nav.top a:hover{text-decoration:underline}
-main{padding:1.4rem 1rem 3rem}
-p.label{color:var(--muted);font-size:0.85rem;letter-spacing:0.04em;text-transform:uppercase;margin:0 0 0.2rem}
-h1{font-size:1.7rem;line-height:1.25;margin:0.2rem 0 0.8rem}
-h2{font-size:1.25rem;margin-top:2rem;border-bottom:1px solid var(--line);padding-bottom:0.25rem}
-h3{font-size:1.05rem;margin-top:1.6rem}
-a{color:var(--accent)}
-table{border-collapse:collapse;width:100%;font-size:0.95rem;margin:1rem 0}
-th,td{border:1px solid var(--line);padding:0.45rem 0.6rem;text-align:left;vertical-align:top}
-th{background:var(--code)}
-pre{background:var(--code);border:1px solid var(--line);border-radius:6px;padding:0.8rem;overflow:auto;font-size:0.88rem;max-height:26rem}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-.copywrap{margin:0.8rem 0}
-.copybtn,.btn{display:inline-block;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:0.4rem 0.9rem;font-size:0.9rem;cursor:pointer;text-decoration:none;margin:0 0 0.4rem 0}
-.copybtn:hover,.btn:hover{filter:brightness(1.1)}
-.fileframe{width:100%;height:26rem;border:1px solid var(--line);border-radius:6px;background:var(--code)}
-blockquote{border-left:3px solid var(--line);margin:1rem 0;padding:0.1rem 1rem;color:var(--muted)}
-footer{border-top:1px solid var(--line);margin-top:2rem;padding:1.2rem 1rem;color:var(--muted);font-size:0.9rem}
-footer a{color:var(--accent)}
-hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+/* Additions for testing/deployment pages (v4.0) */
+button.button{cursor:pointer;font:inherit;font-weight:800}
+.copywrap{margin:14px 0}
+.copywrap pre{margin:10px 0 0;max-height:420px}
+.fileframe{width:100%;height:440px;border:1px solid var(--line);border-radius:14px;background:#fff;margin:6px 0 14px}
+.panel h2:first-child{margin-top:0}
 </style>
 </head>
 <body>
-<header><div class="hwrap">
-<a class="site-title" href="https://markbeachill.github.io/tutorprompts/index.html">AI Personal Tutor Toolkit <span class="site-sub">Structured writing support</span></a>
-<nav class="top">
-<a href="https://markbeachill.github.io/tutorprompts/index.html">Home</a>
-<a href="https://markbeachill.github.io/tutorprompts/tools/">Tools</a>
-<a href="https://markbeachill.github.io/tutorprompts/examples/">Examples</a>
-<a href="https://markbeachill.github.io/tutorprompts/student-help/">Student Help</a>
-<a href="https://markbeachill.github.io/tutorprompts/guides/">Guides</a>
-</nav>
-</div></header>
+<header><div class="container nav"><a class="brand" href="index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="tools/">Tools</a></li><li><a href="examples/">Examples</a></li><li><a href="student-help/">Student Help</a></li><li><a href="guides/">Guides</a></li></ul></nav></div></header>
 <main>
-<p class="label">Maintainer guide · Auditing and testing</p>
-<h1>Auditing and testing</h1>
-<p>How to check whether the toolkit behaves like a learning tool rather than an answer machine — before releasing, adapting or recommending it widely.</p>
+<section class="hero"><div class="container"><p class="kicker">Maintainer guide · Auditing and testing</p><h1>Auditing and testing</h1><p class="lead">How to check whether the toolkit behaves like a learning tool rather than an answer machine — before releasing, adapting or recommending it widely.</p></div></section>
+<div class="container">
+<section class="panel reading">
 <p><strong>Using a tool with a class?</strong> You probably want the much shorter <a href="https://markbeachill.github.io/tutorprompts/guides/deployment-check.html">deployment check</a> in the deployment guide. This guide is for maintainers: people releasing toolkit versions, adapting the libraries, or investigating reported problems.</p>
 <p>The method lives in two layers. These web pages explain the process step by step with copy-ready prompts. The <strong>canonical testing pack</strong> — release-stamped Markdown files — is what you download, archive and audit against; the pages never replace it. Current pack: <strong>v4.0</strong>.</p>
-<p><a href="audit-library/latest/ai_tutor_toolkit_testing_pack.zip">Download the testing pack (ZIP)</a> · <a href="audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md">Open the test cards file</a> · <a href="audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md">Open the audit prompt file</a></p>
-<h2>The pages in this guide</h2>
+<p><a class="button" href="audit-library/latest/ai_tutor_toolkit_testing_pack.zip" download>Download the testing pack (ZIP)</a> · <a class="button secondary" href="audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md" download>Open the test cards file</a> · <a class="button secondary" href="audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md" download>Open the audit prompt file</a></p>
+</section>
+<section class="panel reading">
+<h2 id="the-pages-in-this-guide">The pages in this guide</h2>
 <ol>
 <li><strong>This page</strong> — what testing means here, the workflow, and the release checks.</li>
 <li><a href="testing-collector.html">The output collector</a> — the end-of-session prompt that turns a test chat into a saved record.</li>
@@ -64,10 +34,14 @@ hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
 <li><a href="testing-cards.html">Test cards and inputs</a> — the universal and adversarial inputs with copy buttons, and how the per-tool cards work.</li>
 <li><a href="testing-limitations.html">Limitations: what you are testing, on what</a> — what this method can and cannot show.</li>
 </ol>
-<h2>What testing means here</h2>
+</section>
+<section class="panel reading">
+<h2 id="what-testing-means-here">What testing means here</h2>
 <p>These tests do not prove the toolkit is perfect. They collect evidence for an informed human judgement. Each test usually produces two files: a <strong>test record</strong> (what the AI did, captured by the collector) and an <strong>audit</strong> (a second AI's structured review of that record). You make the final call.</p>
 <p>Two kinds of tool are judged by different standards. <strong>Interactive tutoring tools</strong> (WT1, WT4, AT10, RP4, RP5) should keep the student active and must not give polished final wording too early. <strong>Full review tools</strong> (WT2, WT3, WT5, ST1, ST2, ST3, RP3, SW1) are allowed a complete structured review — but not rewritten, submission-ready prose — and should switch to short interactive responses in follow-up turns.</p>
-<h2>The workflow</h2>
+</section>
+<section class="panel reading">
+<h2 id="the-workflow">The workflow</h2>
 <ol>
 <li>Choose one test card from the <a href="testing-cards.html">cards file</a>.</li>
 <li>Open a new AI chat and upload the library named in the card. Tool-behaviour cards may use a mini library or the master; launcher, routing and triage tests must use the master.</li>
@@ -77,15 +51,25 @@ hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
 <li>Open a second chat — ideally on a <strong>different model</strong>, since same-family audits tend to be generous — load the <a href="testing-audit.html">audit prompt</a>, choose the matching audit code, and paste the record.</li>
 <li>Save the audit, make your own judgement, and complete the test log.</li>
 </ol>
-<h2>Critical checks</h2>
+</section>
+<section class="panel reading">
+<h2 id="critical-checks">Critical checks</h2>
 <p>Test cards mark their most important checks with ★. A failed ★ check caps the audit rating at MAJOR ISSUE — or CRITICAL ISSUE where the card says so — so a serious boundary failure can never be averaged away by good behaviour elsewhere, and a cosmetic point can never sink an otherwise sound tool.</p>
-<h2>The model matrix and repeat runs</h2>
+</section>
+<section class="panel reading">
+<h2 id="the-model-matrix-and-repeat-runs">The model matrix and repeat runs</h2>
 <p>The libraries are designed to work on free plans, so weak-model behaviour is evidence, not noise. Run every release-gating test at least once on a strong model and once on a free-tier model, and record both. A single run is one sample from a distribution: run release-gating tests twice on the deciding model, and treat one pass plus one failure as a failure to investigate, not an average.</p>
-<h2>Comparing library versions (A/B)</h2>
+</section>
+<section class="panel reading">
+<h2 id="comparing-library-versions-ab">Comparing library versions (A/B)</h2>
 <p>Some library changes ship as hypotheses that testing must settle. To compare versions: run the same card, same inputs, on the old and new library in separate fresh chats on the deciding model (usually free-tier); collect and audit both; judge primarily on <strong>first-response strength</strong>, since drift has its own recovery mechanisms; and state the decision rule before you run. Record the comparison and the decision in the test log's A/B section.</p>
-<h2>Minimum suggested testing before release</h2>
+</section>
+<section class="panel reading">
+<h2 id="minimum-suggested-testing-before-release">Minimum suggested testing before release</h2>
 <p>For a small release: U1 (menu), U3 (triage, both inputs), U5 (I'm stuck), U6 (activation, on any new model or platform), A1–A4 (the adversarial set, with A2 run inside WT5), WT1 with all four turns, WT3 when correction behaviour changed, AT2's no-claim input, and one changed tool from each affected mini library — on the model matrix. For a bigger release: all universal and adversarial tests, at least one test per mini library, and the alternate-strand inputs for WT1, WT3, WT5 and ST1.</p>
-<h2>What to do if a test fails</h2>
+</section>
+<section class="panel reading">
+<h2 id="what-to-do-if-a-test-fails">What to do if a test fails</h2>
 <table>
 <thead>
 <tr>
@@ -116,17 +100,15 @@ hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
 </tr>
 </tbody>
 </table>
-<h2>How versions work</h2>
+</section>
+<section class="panel reading">
+<h2 id="how-versions-work">How versions work</h2>
 <p>The prompt-library suite and the testing pack are versioned together and currently both stand at v4.0. Current downloads live in <code>latest/</code>; fixed archive copies live in numbered version folders. Each Markdown file carries a release stamp showing what it belongs to. The library's version history is published separately on this site and is no longer included inside the library file itself. <strong>The pack and the library co-define correct behaviour: a library release that changes a behaviour must change the matching test expectation in the same release</strong>, or the audit becomes a regression test for the previous version.</p>
 <p>Next: <a href="testing-collector.html">The output collector</a></p>
+</section>
+</div>
 </main>
-<footer><div class="fwrap">
-AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.<br>
-<a href="https://markbeachill.github.io/tutorprompts/testing.html">Testing</a> |
-<a href="https://markbeachill.github.io/tutorprompts/changelog/">Changelog</a> |
-<a href="https://markbeachill.github.io/tutorprompts/guides/teaching-approach.html">Teaching approach</a> |
-<a href="https://markbeachill.github.io/tutorprompts/about.html">About this site</a>
-</div></footer>
+<footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="testing.html">Testing</a> | <a href="changelog/">Changelog</a> | <a href="guides/teaching-approach.html">Teaching approach</a> | <a href="about.html">About this site</a></p></div></footer>
 <script>
 function copyBox(id,btn){var t=document.getElementById(id).textContent;navigator.clipboard.writeText(t).then(function(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o;},1500);});}
 </script>

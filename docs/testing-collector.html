@@ -1,60 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The output collector - an end-of-session prompt that turns a toolkit test chat into a single saved test record for audit and review.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Auditing and Testing: The Output Collector | AI Personal Tutor Toolkit</title>
-<!-- Standalone styling: replace the <style> block with the site stylesheet if preferred. -->
+<meta content="The output collector - an end-of-session prompt that turns a toolkit test chat into a single saved test record for audit and review." name="description"/>
+<link href="style.css" rel="stylesheet"/>
 <style>
-:root{--ink:#1d2430;--muted:#5a6472;--accent:#23527c;--line:#dfe3e8;--bg:#ffffff;--code:#f5f7f9;}
-*{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
-header{border-bottom:1px solid var(--line);padding:0.9rem 1rem}
-.hwrap,main,footer .fwrap{max-width:46rem;margin:0 auto}
-.site-title{font-weight:700;text-decoration:none;color:var(--ink);font-size:1.05rem}
-.site-sub{color:var(--muted);font-size:0.85rem;display:block}
-nav.top{margin-top:0.45rem;font-size:0.95rem}
-nav.top a{color:var(--accent);text-decoration:none;margin-right:0.9rem}
-nav.top a:hover{text-decoration:underline}
-main{padding:1.4rem 1rem 3rem}
-p.label{color:var(--muted);font-size:0.85rem;letter-spacing:0.04em;text-transform:uppercase;margin:0 0 0.2rem}
-h1{font-size:1.7rem;line-height:1.25;margin:0.2rem 0 0.8rem}
-h2{font-size:1.25rem;margin-top:2rem;border-bottom:1px solid var(--line);padding-bottom:0.25rem}
-h3{font-size:1.05rem;margin-top:1.6rem}
-a{color:var(--accent)}
-table{border-collapse:collapse;width:100%;font-size:0.95rem;margin:1rem 0}
-th,td{border:1px solid var(--line);padding:0.45rem 0.6rem;text-align:left;vertical-align:top}
-th{background:var(--code)}
-pre{background:var(--code);border:1px solid var(--line);border-radius:6px;padding:0.8rem;overflow:auto;font-size:0.88rem;max-height:26rem}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-.copywrap{margin:0.8rem 0}
-.copybtn,.btn{display:inline-block;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:0.4rem 0.9rem;font-size:0.9rem;cursor:pointer;text-decoration:none;margin:0 0 0.4rem 0}
-.copybtn:hover,.btn:hover{filter:brightness(1.1)}
-.fileframe{width:100%;height:26rem;border:1px solid var(--line);border-radius:6px;background:var(--code)}
-blockquote{border-left:3px solid var(--line);margin:1rem 0;padding:0.1rem 1rem;color:var(--muted)}
-footer{border-top:1px solid var(--line);margin-top:2rem;padding:1.2rem 1rem;color:var(--muted);font-size:0.9rem}
-footer a{color:var(--accent)}
-hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+/* Additions for testing/deployment pages (v4.0) */
+button.button{cursor:pointer;font:inherit;font-weight:800}
+.copywrap{margin:14px 0}
+.copywrap pre{margin:10px 0 0;max-height:420px}
+.fileframe{width:100%;height:440px;border:1px solid var(--line);border-radius:14px;background:#fff;margin:6px 0 14px}
+.panel h2:first-child{margin-top:0}
 </style>
 </head>
 <body>
-<header><div class="hwrap">
-<a class="site-title" href="https://markbeachill.github.io/tutorprompts/index.html">AI Personal Tutor Toolkit <span class="site-sub">Structured writing support</span></a>
-<nav class="top">
-<a href="https://markbeachill.github.io/tutorprompts/index.html">Home</a>
-<a href="https://markbeachill.github.io/tutorprompts/tools/">Tools</a>
-<a href="https://markbeachill.github.io/tutorprompts/examples/">Examples</a>
-<a href="https://markbeachill.github.io/tutorprompts/student-help/">Student Help</a>
-<a href="https://markbeachill.github.io/tutorprompts/guides/">Guides</a>
-</nav>
-</div></header>
+<header><div class="container nav"><a class="brand" href="index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="tools/">Tools</a></li><li><a href="examples/">Examples</a></li><li><a href="student-help/">Student Help</a></li><li><a href="guides/">Guides</a></li></ul></nav></div></header>
 <main>
-<p class="label">Maintainer guide · Auditing and testing · 2 of 5</p>
-<h1>The output collector</h1>
-<p>Paste one prompt at the end of a test session and get a single, saved, verbatim test record — metadata plus transcript — ready for the audit chat and for human review.</p>
+<section class="hero"><div class="container"><p class="kicker">Maintainer guide · Auditing and testing · 2 of 5</p><h1>The output collector</h1><p class="lead">Paste one prompt at the end of a test session and get a single, saved, verbatim test record — metadata plus transcript — ready for the audit chat and for human review.</p></div></section>
+<div class="container">
+<section class="panel reading">
 <p><strong>Check the result before using it.</strong> The record is produced by the same AI that was tested, so it is self-reported evidence: an AI that just failed a test is the least reliable narrator of that failure. The spot-check below is part of the method, not optional politeness.</p>
-<h2>How to use it</h2>
+</section>
+<section class="panel reading">
+<h2 id="how-to-use-it">How to use it</h2>
 <ol>
 <li>Run the test as normal: upload the library, <code>prompt</code>, choose the tool, paste the inputs and follow-ups.</li>
 <li>Only when the final test turn is complete, paste the collector prompt below into the <strong>same chat</strong>. You can add your name and plan in the same message, for example: <code>Tester: MB. Plan: free.</code></li>
@@ -62,9 +32,11 @@ hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
 <li><strong>Spot-check:</strong> compare at least one AI response in the record against the live chat. For A-series and release-gating tests, compare every turn or capture manually. If the record and the chat disagree, the test is NOT TESTABLE — re-run with manual capture.</li>
 <li>Never paste the collector before or during the test turns: it would change the behaviour being tested.</li>
 </ol>
-<h2>Copy the prompt</h2>
+</section>
+<section class="panel reading">
+<h2 id="copy-the-prompt">Copy the prompt</h2>
 <p>The box is scrollable so the page stays readable. Use the button to copy the whole prompt.</p>
-<div class="copywrap"><button class="copybtn" onclick="copyBox('collectorprompt',this)">Copy collector prompt</button><pre id="collectorprompt"><code>Stop acting as the tutor toolkit. This is a maintainer instruction. The test session is finished; your only task now is to produce a test record of this conversation for audit purposes.
+<div class="copywrap"><button class="button" onclick="copyBox('collectorprompt',this)">Copy collector prompt</button><pre id="collectorprompt"><code>Stop acting as the tutor toolkit. This is a maintainer instruction. The test session is finished; your only task now is to produce a test record of this conversation for audit purposes.
 
 Follow these rules exactly:
 
@@ -99,16 +71,14 @@ Produce the record in exactly this structure:
 ## Transcript
 
 ### Turn 1 — Student
-
-<pre><code>[verbatim student message]
-</code></pre>
-
+````
+[verbatim student message]
+````
 
 ### Turn 1 — Toolkit
-
-<pre><code>[verbatim toolkit response]
-</code></pre>
-
+````
+[verbatim toolkit response]
+````
 
 (Continue numbering for every turn in the conversation.)
 
@@ -123,23 +93,21 @@ State in one or two sentences: whether the reproduction is complete; and that no
 **Spot-check done:** [which turn(s) compared against the chat, and result]
 
 **Forwarded to audit on:** [date]</code></pre></div>
-
+</section>
+<section class="panel reading">
 <h2>The canonical file</h2>
 <p>The file below is the canonical, release-stamped copy served from <code>audit-library/latest/</code>. The copy box above is generated from this file at build time; if they ever disagree, the file is right.</p>
-<p><a class="btn" href="audit-library/latest/ai_tutor_toolkit_output_collector.md" download>Download ai_tutor_toolkit_output_collector.md</a></p>
+<p><a class="button" href="audit-library/latest/ai_tutor_toolkit_output_collector.md" download>Download ai_tutor_toolkit_output_collector.md</a></p>
 <iframe class="fileframe" src="audit-library/latest/ai_tutor_toolkit_output_collector.md" title="ai_tutor_toolkit_output_collector.md"></iframe>
-
-<h2>How it fits the workflow</h2>
+</section>
+<section class="panel reading">
+<h2 id="how-it-fits-the-workflow">How it fits the workflow</h2>
 <p>The record's Metadata table mirrors the test-log columns, so completing the log is mostly copying. The audit prompt recognises collector records: it audits the Transcript section and takes the test context from the Metadata table. The canonical copy of this prompt lives in the testing pack as <code>ai_tutor_toolkit_output_collector.md</code>; if this page and the pack ever disagree, the pack is right.</p>
 <p>Next: <a href="testing-audit.html">Running an audit</a></p>
+</section>
+</div>
 </main>
-<footer><div class="fwrap">
-AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.<br>
-<a href="https://markbeachill.github.io/tutorprompts/testing.html">Testing</a> |
-<a href="https://markbeachill.github.io/tutorprompts/changelog/">Changelog</a> |
-<a href="https://markbeachill.github.io/tutorprompts/guides/teaching-approach.html">Teaching approach</a> |
-<a href="https://markbeachill.github.io/tutorprompts/about.html">About this site</a>
-</div></footer>
+<footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="testing.html">Testing</a> | <a href="changelog/">Changelog</a> | <a href="guides/teaching-approach.html">Teaching approach</a> | <a href="about.html">About this site</a></p></div></footer>
 <script>
 function copyBox(id,btn){var t=document.getElementById(id).textContent;navigator.clipboard.writeText(t).then(function(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o;},1500);});}
 </script>

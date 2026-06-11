@@ -1,93 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="How to load the AI Personal Tutor Toolkit on each platform route - upload, paste, Projects, custom GPTs, Gems and Copilot - and what each route risks.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Deployment Guide: Deployment Routes | AI Personal Tutor Toolkit</title>
-<!-- Standalone styling: replace the <style> block with the site stylesheet if preferred. -->
+<meta content="How to load the AI Personal Tutor Toolkit on each platform route - upload, paste, Projects, custom GPTs, Gems and Copilot - and what each route risks." name="description"/>
+<link href="../style.css" rel="stylesheet"/>
 <style>
-:root{--ink:#1d2430;--muted:#5a6472;--accent:#23527c;--line:#dfe3e8;--bg:#ffffff;--code:#f5f7f9;}
-*{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
-header{border-bottom:1px solid var(--line);padding:0.9rem 1rem}
-.hwrap,main,footer .fwrap{max-width:46rem;margin:0 auto}
-.site-title{font-weight:700;text-decoration:none;color:var(--ink);font-size:1.05rem}
-.site-sub{color:var(--muted);font-size:0.85rem;display:block}
-nav.top{margin-top:0.45rem;font-size:0.95rem}
-nav.top a{color:var(--accent);text-decoration:none;margin-right:0.9rem}
-nav.top a:hover{text-decoration:underline}
-main{padding:1.4rem 1rem 3rem}
-p.label{color:var(--muted);font-size:0.85rem;letter-spacing:0.04em;text-transform:uppercase;margin:0 0 0.2rem}
-h1{font-size:1.7rem;line-height:1.25;margin:0.2rem 0 0.8rem}
-h2{font-size:1.25rem;margin-top:2rem;border-bottom:1px solid var(--line);padding-bottom:0.25rem}
-h3{font-size:1.05rem;margin-top:1.6rem}
-a{color:var(--accent)}
-table{border-collapse:collapse;width:100%;font-size:0.95rem;margin:1rem 0}
-th,td{border:1px solid var(--line);padding:0.45rem 0.6rem;text-align:left;vertical-align:top}
-th{background:var(--code)}
-pre{background:var(--code);border:1px solid var(--line);border-radius:6px;padding:0.8rem;overflow:auto;font-size:0.88rem;max-height:26rem}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-.copywrap{margin:0.8rem 0}
-.copybtn,.btn{display:inline-block;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:0.4rem 0.9rem;font-size:0.9rem;cursor:pointer;text-decoration:none;margin:0 0 0.4rem 0}
-.copybtn:hover,.btn:hover{filter:brightness(1.1)}
-.fileframe{width:100%;height:26rem;border:1px solid var(--line);border-radius:6px;background:var(--code)}
-blockquote{border-left:3px solid var(--line);margin:1rem 0;padding:0.1rem 1rem;color:var(--muted)}
-footer{border-top:1px solid var(--line);margin-top:2rem;padding:1.2rem 1rem;color:var(--muted);font-size:0.9rem}
-footer a{color:var(--accent)}
-hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+/* Additions for testing/deployment pages (v4.0) */
+button.button{cursor:pointer;font:inherit;font-weight:800}
+.copywrap{margin:14px 0}
+.copywrap pre{margin:10px 0 0;max-height:420px}
+.fileframe{width:100%;height:440px;border:1px solid var(--line);border-radius:14px;background:#fff;margin:6px 0 14px}
+.panel h2:first-child{margin-top:0}
 </style>
 </head>
 <body>
-<header><div class="hwrap">
-<a class="site-title" href="https://markbeachill.github.io/tutorprompts/index.html">AI Personal Tutor Toolkit <span class="site-sub">Structured writing support</span></a>
-<nav class="top">
-<a href="https://markbeachill.github.io/tutorprompts/index.html">Home</a>
-<a href="https://markbeachill.github.io/tutorprompts/tools/">Tools</a>
-<a href="https://markbeachill.github.io/tutorprompts/examples/">Examples</a>
-<a href="https://markbeachill.github.io/tutorprompts/student-help/">Student Help</a>
-<a href="https://markbeachill.github.io/tutorprompts/guides/">Guides</a>
-</nav>
-</div></header>
+<header><div class="container nav"><a class="brand" href="../index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="../index.html">Home</a></li><li><a href="../tools/">Tools</a></li><li><a href="../examples/">Examples</a></li><li><a href="../student-help/">Student Help</a></li><li><a href="./">Guides</a></li></ul></nav></div></header>
 <main>
-<p class="label">Deployment guide · 2 of 3</p>
-<h1>Deployment routes</h1>
-<p>How to load the toolkit on each platform, and what each route risks.</p>
+<section class="hero"><div class="container"><p class="kicker">Deployment guide · 2 of 3</p><h1>Deployment routes</h1><p class="lead">How to load the toolkit on each platform, and what each route risks.</p></div></section>
+<div class="container">
+<section class="panel reading">
 <p>This is the second page of the deployment guide. <a href="setup.html">Choosing and setting up an AI</a> helps you decide which system and model to use; this page covers how to load the toolkit once you have decided; the <a href="deployment-check.html">Deployment check</a> is the short test you run on the result.</p>
 <p>One rule covers every route on this page: <strong>whichever route you choose, run the deployment check on it before using it with students.</strong> Platforms differ, change without notice, and load instructions in different ways. The check takes ten to fifteen minutes and tests the setup students will actually meet.</p>
-<h2>Route 1 — Upload the file in a chat</h2>
+</section>
+<section class="panel reading">
+<h2 id="route-1-upload-the-file-in-a-chat">Route 1 — Upload the file in a chat</h2>
 <p>The simplest route, and the one the student help pages assume. Start a new chat, upload the library file (master, mini library, or single tool), and type <code>prompt</code>. The menu should appear.</p>
 <p><strong>Best for:</strong> one-off activities, free plans, first trials.
 <strong>Risks:</strong> students must repeat the upload each chat; long chats on free plans can hit limits; some models summarise an uploaded file instead of activating it — exactly what the first step of the deployment check looks for.</p>
-<h2>Route 2 — Paste a single tool</h2>
+</section>
+<section class="panel reading">
+<h2 id="route-2-paste-a-single-tool">Route 2 — Paste a single tool</h2>
 <p>Where uploads are limited or the mini library is too large for the plan, students can paste a <a href="https://markbeachill.github.io/tutorprompts/tools/single-tools.html">single-tool download</a> directly into the chat and follow it with their writing.</p>
 <p><strong>Best for:</strong> free plans, phones, locked-down platforms without file upload.
 <strong>Risks:</strong> no launcher or routing, so name the exact tool in your activity instructions; very small context limits can still truncate a pasted tool.</p>
-<h2>Route 3 — Projects, workspaces and notebooks</h2>
+</section>
+<section class="panel reading">
+<h2 id="route-3-projects-workspaces-and-notebooks">Route 3 — Projects, workspaces and notebooks</h2>
 <p>Platforms with Projects (ChatGPT, Claude), Gems-adjacent workspaces, or Copilot Notebooks can keep the toolkit file and related chats in one place, so the student sets up once and reuses it.</p>
 <p><strong>Best for:</strong> repeated individual use across weeks; tutors who want a standing test space.
 <strong>Risks:</strong> availability varies by plan, so keep this optional for students; project-level instructions and files may be handled differently from a fresh upload, so check on the project itself, not in an ordinary chat.</p>
-<h2>Route 4 — Shared custom AIs: custom GPTs, Gems and similar</h2>
+</section>
+<section class="panel reading">
+<h2 id="route-4-shared-custom-ais-custom-gpts-gems-and-similar">Route 4 — Shared custom AIs: custom GPTs, Gems and similar</h2>
 <p>A shared custom AI gives students a ready-made entry point: they open it and type <code>prompt</code>, with no file handling. The setup decisions and the pros and cons are covered on the <a href="setup.html">previous page</a>; this section covers the loading mechanics, because there are two genuinely different ways to load the toolkit into a custom AI, and they can behave differently.</p>
-<h3>Instructions field versus attached knowledge file</h3>
+<h3 id="instructions-field-versus-attached-knowledge-file">Instructions field versus attached knowledge file</h3>
 <p><strong>Instructions field.</strong> The toolkit text is pasted into the custom AI's instruction or system field. The whole library is then present every time. This is the stronger route — but instruction fields have size limits, and the master library will usually exceed them. This is where the mini libraries and single tools earn their keep: a mini library in the instructions field is generally more reliable than the master library attached as a file.</p>
 <p><strong>Attached knowledge file.</strong> The toolkit file is attached to the custom AI as knowledge. This fits any size — but on some platforms, attached files are searched and retrieved in fragments rather than held in full. The practical consequence: a tool can run while the global rules — the academic-integrity boundary, the teaching loop, the privacy note — are simply not present in the response. The toolkit looks like it is working and is quietly degraded. If you must use an attached file, the deployment check's boundary probe matters most, because it is the test most likely to expose missing global rules.</p>
 <p>Platform limits and retrieval behaviour change without notice, so this page deliberately avoids stating current numbers. The honest position is: the routes differ, the platforms change, and the deployment check on your own setup is the only answer that stays true.</p>
-<h3>Keeping a shared custom AI honest</h3>
+<h3 id="keeping-a-shared-custom-ai-honest">Keeping a shared custom AI honest</h3>
 <p>Treat a shared custom AI as a maintained teaching resource. Re-run the deployment check when the toolkit is updated, when the platform announces (or silently makes) a model change, and at the start of each term. Record the date and result somewhere colleagues can see. Make clear to students that the custom AI is a convenience, not a guarantee: the usual judgement about AI output still applies.</p>
-<h2>Institutional platforms: Copilot and Gemini at your institution</h2>
+</section>
+<section class="panel reading">
+<h2 id="institutional-platforms-copilot-and-gemini-at-your-institution">Institutional platforms: Copilot and Gemini at your institution</h2>
 <p>Where students use an institutional Copilot or Gemini, the available models, file handling and data arrangements are set by the institution, and may differ from the public versions of the same products. Local rules come first. Run the deployment check inside the institutional environment, not on the public product, and ask your IT or digital education team about data governance if student writing will be pasted in.</p>
-<h2>After loading: run the check</h2>
+</section>
+<section class="panel reading">
+<h2 id="after-loading-run-the-check">After loading: run the check</h2>
 <p>Whichever route you used: <a href="deployment-check.html">run the deployment check</a>. It confirms the menu appears, the tool you plan to use behaves like a tutor, and the boundary holds — on your platform, your plan, and your model, today.</p>
 <p>Next: <a href="deployment-check.html">Deployment check</a></p>
+</section>
+</div>
 </main>
-<footer><div class="fwrap">
-AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.<br>
-<a href="https://markbeachill.github.io/tutorprompts/testing.html">Testing</a> |
-<a href="https://markbeachill.github.io/tutorprompts/changelog/">Changelog</a> |
-<a href="https://markbeachill.github.io/tutorprompts/guides/teaching-approach.html">Teaching approach</a> |
-<a href="https://markbeachill.github.io/tutorprompts/about.html">About this site</a>
-</div></footer>
+<footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="../testing.html">Testing</a> | <a href="../changelog/">Changelog</a> | <a href="teaching-approach.html">Teaching approach</a> | <a href="../about.html">About this site</a></p></div></footer>
 <script>
 function copyBox(id,btn){var t=document.getElementById(id).textContent;navigator.clipboard.writeText(t).then(function(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o;},1500);});}
 </script>
