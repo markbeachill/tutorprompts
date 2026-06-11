@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
@@ -18,36 +19,29 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 <body>
 <header><div class="container nav"><a class="brand" href="../index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="../index.html">Home</a></li><li><a href="../tools/">Tools</a></li><li><a href="../examples/">Examples</a></li><li><a href="../student-help/">Student Help</a></li><li><a href="./">Guides</a></li></ul></nav></div></header>
 <main>
-<section class="hero"><div class="container"><p class="kicker">Tutor guide</p><h1>Producing documentation</h1><p class="lead">How to capture an AI tutoring session and turn it into something you can keep, share or hand out.</p></div></section>
-<div class="container">
-<section class="panel reading">
+<article class="reading"><header class="page-intro"><p class="kicker">Tutor guide</p><h1>Producing documentation</h1><p class="lead">How to capture an AI tutoring session and turn it into something you can keep, share or hand out.</p></header><section>
 <h2 id="why-document-at-all">Why document at all</h2>
 <p>Three classroom situations call for a record of an AI session rather than a memory of one.</p>
 <p><strong>Worked examples for teaching.</strong> A good session — a student's sentence genuinely improving through diagnosis, example and attempt — is teaching material. Captured and lightly anonymised, it shows the next cohort what using the tool well actually looks like, which lands far better than a description of it.</p>
 <p><strong>Evidence of process.</strong> Where students declare AI use (see the <a href="https://markbeachill.github.io/tutorprompts/tools/">SW3 AI-Use Record</a> tool and your course's rules), a saved transcript of the session is the strongest possible companion to the declaration: it shows what the AI did and what the student did, which is the question integrity processes actually ask. A declaration says "AI gave feedback on my draft"; a transcript shows the feedback and the student's own revision.</p>
 <p><strong>Problem reports.</strong> When a tool misbehaves on your platform, a captured session is the difference between "it didn't work" and a report a maintainer can act on.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="capturing-a-session-the-collector">Capturing a session: the collector</h2>
 <p>The simplest capture is one paste. At the end of the session — never before or during it — paste the toolkit's output collector into the same chat. It produces a single record: the session details and a verbatim transcript of every turn. Copy it once and save it as a Markdown (<code>.md</code>) or text file.</p>
 <p>The collector prompt, with its instructions, is on the <a href="https://markbeachill.github.io/tutorprompts/testing-collector.html">collector page</a> of the testing guide. One honesty note travels with it: the record is written by the same AI that ran the session, so glance over it against the chat before relying on it — especially if the session went wrong, which is exactly when the AI is the least reliable narrator of its own behaviour.</p>
 <p>Manual capture — selecting and copying the turns yourself — remains the most reliable method, and is worth the effort for anything contentious.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="presenting-a-record">Presenting a record</h2>
 <p>A saved Markdown record is already readable, searchable and easy to store alongside module materials. For something more presentable:</p>
 <p><strong>Paste into Word.</strong> Most AI chat interfaces preserve formatting when copied into a Word document, which is enough for a handout or a staff-development example. Tidy the headings, anonymise names, and add a short framing note saying what the example shows.</p>
 <p><strong>Convert to a web page.</strong> The separate <a href="https://markbeachill.github.io/ai-chat-to-html/index.html">AI Chat to HTML</a> project converts a chat transcript into a clean standalone web page, and its <a href="https://markbeachill.github.io/ai-chat-to-html/word.html">Word page</a> covers producing a Word-friendly version. It is an independent tool with its own setup, so treat it as an option for those comfortable with it rather than a required step — the Markdown record and the paste-into-Word route cover most classroom needs.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="anonymisation-and-care">Anonymisation and care</h2>
 <p>Before sharing any session beyond its student: remove names, student numbers, and anything identifying in the writing itself; remember that a student's draft is their work, so ask before using it as an example, even anonymised; and for placement-related writing (nursing, education, social work), check that no patient, pupil or client details survive in the extract — the same privacy rule the toolkit itself applies.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="a-simple-classroom-pattern">A simple classroom pattern</h2>
 <p>For a module using the toolkit regularly, the lightweight habit is: students end each AI session by saving a collector record into a module folder alongside their SW3 record; the tutor keeps one or two good anonymised examples per term for teaching; and anything that misbehaves gets its record sent on via the <a href="https://markbeachill.github.io/tutorprompts/about.html">About page</a>. Documentation then accumulates as a by-product of use, instead of being reconstructed when someone asks for it.</p>
-</section>
-</div>
+</section></article>
 </main>
 <footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="../testing.html">Testing</a> | <a href="../changelog/">Changelog</a> | <a href="teaching-approach.html">Teaching approach</a> | <a href="../about.html">About this site</a></p></div></footer>
 <script>

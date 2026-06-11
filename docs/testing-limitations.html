@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
@@ -18,38 +19,29 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 <body>
 <header><div class="container nav"><a class="brand" href="index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="tools/">Tools</a></li><li><a href="examples/">Examples</a></li><li><a href="student-help/">Student Help</a></li><li><a href="guides/">Guides</a></li></ul></nav></div></header>
 <main>
-<section class="hero"><div class="container"><p class="kicker">Maintainer guide · Auditing and testing · 5 of 5</p><h1>Limitations: what you are testing, on what</h1><p class="lead">Testing AI behaviour is not like testing ordinary software, and this page says plainly what the method can and cannot establish. It is here for two reasons: maintainers make better decisions when the limits are explicit, and the project's credibility depends on never claiming more than the evidence supports.</p></div></section>
-<div class="container">
-<section class="panel reading">
+<article class="reading"><header class="page-intro"><p class="kicker">Maintainer guide · Auditing and testing · 5 of 5</p><h1>Limitations: what you are testing, on what</h1><p class="lead">Testing AI behaviour is not like testing ordinary software, and this page says plainly what the method can and cannot establish. It is here for two reasons: maintainers make better decisions when the limits are explicit, and the project's credibility depends on never claiming more than the evidence supports.</p></header><section>
 <h2 id="results-are-samples-not-proofs">Results are samples, not proofs</h2>
 <p>The same prompt, library, model and input can produce different outputs on different runs. A pass is one sample from a distribution, not a property of the system. That is why release-gating tests run twice, why one pass plus one failure is a failure to investigate rather than an average, and why a clean test sheet means "we found no problems in the runs we made", never "there are no problems".</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="you-are-testing-a-specific-thing-on-a-specific-day">You are testing a specific thing, on a specific day</h2>
 <p>Every result is conditional on the model, the plan, the platform, the loading route and the date — and providers update models without notice, sometimes without changing the name. This is why every log row and every test record carries all of these, why the model matrix exists (one strong model, one free-tier model, because the libraries are designed for free plans and weak-model behaviour is evidence), and why results from one platform do not transfer to another. A toolkit that passed everywhere last month can fail somewhere this month through no change of its own.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="the-test-record-is-self-reported">The test record is self-reported</h2>
 <p>The output collector asks the tested AI to transcribe its own performance. Most of the time it does so faithfully; the dangerous case is the failed test, because a model that broke a rule is the least reliable narrator of the breakage, and a long session can be silently truncated. The spot-check is therefore part of the method: one turn for routine tests, every turn (or manual capture) for adversarial and release-gating tests, and a record that disagrees with the chat makes the test NOT TESTABLE.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="the-audit-is-a-helper-not-a-judge">The audit is a helper, not a judge</h2>
 <p>The audit prompt is itself an LLM under instructions, with LLM weaknesses: leniency, plausible paraphrase, and a tendency to average. The countermeasures — verbatim quotation or "Not shown", the ★ rating cap, running the audit on a different model from the one tested — reduce these, but do not remove them. The human judgement recorded in the log is the result; an audit that cannot quote its evidence should be discounted, and a human is always entitled to overrule an audit, recording why.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="tests-can-be-gamed-by-context">Tests can be gamed by context</h2>
 <p>The library sits in the model's context during every test, so a test input that structurally resembles a worked example embedded in the library measures the model's ability to copy, not to diagnose. The test-input hygiene rule exists for this; it also means any new test input needs checking against the library's embedded examples before adoption, and audits should flag instruction-example leakage when feedback reuses the library's own example vocabulary.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="coverage-is-always-partial">Coverage is always partial</h2>
 <p>The pack samples behaviours: a handful of inputs per tool, mostly in one topic universe, mostly in short sessions. It does not cover long multi-session use, every discipline, every student phrasing, or deliberate adversarial creativity beyond the A-series. The alternate-strand inputs and the periodic deeper pass widen the sample; they do not complete it. Deployment checks run by tutors on real platforms (<a href="https://markbeachill.github.io/tutorprompts/guides/deployment-check.html">deployment guide</a>) cover combinations release testing never reaches, which is why problem reports with collector records are genuinely valuable.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="what-follows-from-all-this">What follows from all this</h2>
 <p>State decision rules before running tests, not after seeing results. Record what every result was conditional on. Re-test when anything changes — toolkit, platform, model, term. Treat the pack as evidence-gathering for human judgement, and write release notes that say what was tested, on what, rather than that the toolkit "works".</p>
 <p>Back to: <a href="testing.html">Auditing and testing overview</a></p>
-</section>
-</div>
+</section></article>
 </main>
 <footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="testing.html">Testing</a> | <a href="changelog/">Changelog</a> | <a href="guides/teaching-approach.html">Teaching approach</a> | <a href="about.html">About this site</a></p></div></footer>
 <script>

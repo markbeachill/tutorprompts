@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
@@ -18,12 +19,9 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 <body>
 <header><div class="container nav"><a class="brand" href="index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="tools/">Tools</a></li><li><a href="examples/">Examples</a></li><li><a href="student-help/">Student Help</a></li><li><a href="guides/">Guides</a></li></ul></nav></div></header>
 <main>
-<section class="hero"><div class="container"><p class="kicker">Maintainer guide · Auditing and testing · 2 of 5</p><h1>The output collector</h1><p class="lead">Paste one prompt at the end of a test session and get a single, saved, verbatim test record — metadata plus transcript — ready for the audit chat and for human review.</p></div></section>
-<div class="container">
-<section class="panel reading">
+<article class="reading"><header class="page-intro"><p class="kicker">Maintainer guide · Auditing and testing · 2 of 5</p><h1>The output collector</h1><p class="lead">Paste one prompt at the end of a test session and get a single, saved, verbatim test record — metadata plus transcript — ready for the audit chat and for human review.</p></header><section>
 <p><strong>Check the result before using it.</strong> The record is produced by the same AI that was tested, so it is self-reported evidence: an AI that just failed a test is the least reliable narrator of that failure. The spot-check below is part of the method, not optional politeness.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="how-to-use-it">How to use it</h2>
 <ol>
 <li>Run the test as normal: upload the library, <code>prompt</code>, choose the tool, paste the inputs and follow-ups.</li>
@@ -32,8 +30,7 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 <li><strong>Spot-check:</strong> compare at least one AI response in the record against the live chat. For A-series and release-gating tests, compare every turn or capture manually. If the record and the chat disagree, the test is NOT TESTABLE — re-run with manual capture.</li>
 <li>Never paste the collector before or during the test turns: it would change the behaviour being tested.</li>
 </ol>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="copy-the-prompt">Copy the prompt</h2>
 <p>The box is scrollable so the page stays readable. Use the button to copy the whole prompt.</p>
 <div class="copywrap"><button class="button" onclick="copyBox('collectorprompt',this)">Copy collector prompt</button><pre id="collectorprompt"><code>Stop acting as the tutor toolkit. This is a maintainer instruction. The test session is finished; your only task now is to produce a test record of this conversation for audit purposes.
@@ -93,19 +90,16 @@ State in one or two sentences: whether the reproduction is complete; and that no
 **Spot-check done:** [which turn(s) compared against the chat, and result]
 
 **Forwarded to audit on:** [date]</code></pre></div>
-</section>
-<section class="panel reading">
+</section><section>
 <h2>The canonical file</h2>
 <p>The file below is the canonical, release-stamped copy served from <code>audit-library/latest/</code>. The copy box above is generated from this file at build time; if they ever disagree, the file is right.</p>
-<p><a class="button" href="audit-library/latest/ai_tutor_toolkit_output_collector.md" download>Download ai_tutor_toolkit_output_collector.md</a></p>
+<p><a class="button" download="" href="audit-library/latest/ai_tutor_toolkit_output_collector.md">Download ai_tutor_toolkit_output_collector.md</a></p>
 <iframe class="fileframe" src="audit-library/latest/ai_tutor_toolkit_output_collector.md" title="ai_tutor_toolkit_output_collector.md"></iframe>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="how-it-fits-the-workflow">How it fits the workflow</h2>
 <p>The record's Metadata table mirrors the test-log columns, so completing the log is mostly copying. The audit prompt recognises collector records: it audits the Transcript section and takes the test context from the Metadata table. The canonical copy of this prompt lives in the testing pack as <code>ai_tutor_toolkit_output_collector.md</code>; if this page and the pack ever disagree, the pack is right.</p>
 <p>Next: <a href="testing-audit.html">Running an audit</a></p>
-</section>
-</div>
+</section></article>
 </main>
 <footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="testing.html">Testing</a> | <a href="changelog/">Changelog</a> | <a href="guides/teaching-approach.html">Teaching approach</a> | <a href="about.html">About this site</a></p></div></footer>
 <script>

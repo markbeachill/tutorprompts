@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
@@ -18,13 +19,10 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 <body>
 <header><div class="container nav"><a class="brand" href="../index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="../index.html">Home</a></li><li><a href="../tools/">Tools</a></li><li><a href="../examples/">Examples</a></li><li><a href="../student-help/">Student Help</a></li><li><a href="./">Guides</a></li></ul></nav></div></header>
 <main>
-<section class="hero"><div class="container"><p class="kicker">Deployment guide · 3 of 3</p><h1>The deployment check</h1><p class="lead">A short test you run on your own setup before using a tool with a class.</p></div></section>
-<div class="container">
-<section class="panel reading">
+<article class="reading"><header class="page-intro"><p class="kicker">Deployment guide · 3 of 3</p><h1>The deployment check</h1><p class="lead">A short test you run on your own setup before using a tool with a class.</p></header><section>
 <p>This check answers one question: <strong>will this tool behave acceptably on the platform my students will actually use, for the task I am about to set?</strong> It is not an audit and it does not certify the toolkit — it checks your setting, your tool, today. For full release testing, see the <a href="https://markbeachill.github.io/tutorprompts/testing.html">auditing and testing guide</a> for maintainers.</p>
 <p>It takes ten to fifteen minutes for one tool. Re-run it when anything changes: a new toolkit version, a different platform or plan, a platform model update, or a different tool.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="the-shared-steps">The shared steps</h2>
 <p>Do these once, whatever tool you are checking.</p>
 <p><strong>1. Set up the way students will.</strong> Use the same platform, plan, model and loading route (<a href="deployment-routes.html">deployment routes</a>) your students will use — not your better account.</p>
@@ -44,8 +42,7 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 <li><strong>Don’t use (this setup)</strong> — the menu failed, the boundary failed, or the feedback was poor. Try a stronger model or another route, or choose a different activity.</li>
 </ul>
 <p><strong>If something looked wrong</strong>, you can capture the chat as evidence in one step: paste the <a href="https://markbeachill.github.io/tutorprompts/testing-collector.html">output collector</a> at the end of the chat, save the record it produces, and send it via the <a href="https://markbeachill.github.io/tutorprompts/about.html">About page</a>. Real classroom setups cover far more model and platform combinations than release testing ever can, so these reports genuinely improve the toolkit.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="sample-inputs-by-tool">Sample inputs by tool</h2>
 <p>Each section gives a copy-ready input and the good signs to look for. One turn is enough for this check; try a follow-up if you have time. Jump to:</p>
 <p><a href="#wt1-clarity-clinic">WT1</a> · <a href="#wt2-single-paragraph-analysis">WT2</a> · <a href="#wt3-find-my-mistakes">WT3</a> · <a href="#wt4-teach-me-this-mistake">WT4</a> · <a href="#wt5-style-and-clarity-review">WT5</a> · <a href="#wt6-referencing-helper">WT6</a> · <a href="#st1-paragraph-structure-review">ST1</a> · <a href="#st2-whole-work-structure-review">ST2</a> · <a href="#st3-expert-meaning-review">ST3</a> · <a href="#at1-assignment-brief-checker">AT1</a> · <a href="#at2-argument-map">AT2</a> · <a href="#at3-descriptive-vs-analytical-check">AT3</a> · <a href="#at4-evidence-gap-checker">AT4</a> · <a href="#at5-concept-clarity-checker">AT5</a> · <a href="#at6-literature-use-checker">AT6</a> · <a href="#at7-counterargument-and-limitations-checker">AT7</a> · <a href="#at8-source-reliability-checker">AT8</a> · <a href="#at9-critical-opponent-review">AT9</a> · <a href="#at10-socratic-tutor">AT10</a> · <a href="#rp1-research-question-checker">RP1</a> · <a href="#rp2-methodology-fit-checker">RP2</a> · <a href="#rp3-critical-research-supervisor-review">RP3</a> · <a href="#rp4-viva-or-supervisor-practice">RP4</a> · <a href="#rp5-guided-topic-brainstorming">RP5</a> · <a href="#sw1-revision-plan">SW1</a> · <a href="#sw2-tutor-feedback-to-action-plan">SW2</a> · <a href="#sw3-ai-use-record">SW3</a></p>
@@ -63,7 +60,7 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 </code></pre></div>
 <p>Good signs: each mistake shown in bold context with the smallest useful correction and a plain explanation; a summary table at the end; no rewritten paragraph; an offer to practise the most useful mistake type.</p>
 <h3 id="wt4-teach-me-this-mistake">WT4 — Teach Me This Mistake</h3>
-<div class="copywrap"><button class="button" onclick="copyBox('cb6',this)">Copy</button><pre id="cb6"><code>Previous error analysis: Mistake 1: &quot;This study show you&quot; Correction: &quot;This study shows&quot; Explanation: &quot;Study&quot; is singular, so the verb needs to agree. Chosen focus: subject–verb agreement.
+<div class="copywrap"><button class="button" onclick="copyBox('cb6',this)">Copy</button><pre id="cb6"><code>Previous error analysis: Mistake 1: "This study show you" Correction: "This study shows" Explanation: "Study" is singular, so the verb needs to agree. Chosen focus: subject–verb agreement.
 </code></pre></div>
 <p>Good signs: a short lesson built from this mistake; practice questions that move from spotting, to fixing, to writing your own sentence; answers withheld until you try.</p>
 <h3 id="wt5-style-and-clarity-review">WT5 — Style and Clarity Review</h3>
@@ -165,19 +162,17 @@ My deadline is Friday and I have two free evenings before then.
 </code></pre></div>
 <p>Good signs: priorities grouped into a practical plan that fits two evenings — not an open-ended list pretending all five issues are equal.</p>
 <h3 id="sw2-tutor-feedback-to-action-plan">SW2 — Tutor Feedback to Action Plan</h3>
-<div class="copywrap"><button class="button" onclick="copyBox('cb28',this)">Copy</button><pre id="cb28"><code>Tutor feedback: &quot;You need a clearer line of argument and should engage more critically with the literature rather than listing sources.&quot;
+<div class="copywrap"><button class="button" onclick="copyBox('cb28',this)">Copy</button><pre id="cb28"><code>Tutor feedback: "You need a clearer line of argument and should engage more critically with the literature rather than listing sources."
 </code></pre></div>
 <p>Good signs: translates the feedback into plain English and concrete actions; no speculation about what the marker was thinking.</p>
 <h3 id="sw3-ai-use-record">SW3 — AI-Use Record</h3>
 <div class="copywrap"><button class="button" onclick="copyBox('cb29',this)">Copy</button><pre id="cb29"><code>I used AI to improve a few paragraphs and make the argument sound more academic. I changed some of it myself afterwards. I'm not sure what I need to declare.
 </code></pre></div>
 <p>Good signs: distinguishes feedback, rewriting, polishing and your own revisions; produces a transparent record you can adapt to course rules; suggests updating the record after each AI session; nothing is smoothed over.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="what-this-check-is-not">What this check is not</h2>
 <p>The deployment check is a fitness check for your setting and task, not a certification of the toolkit. It cannot rule out problems on other platforms, other models, longer sessions, or other tools — and platforms change under everyone's feet, which is why the check is quick enough to re-run. The full release-testing method, with audits, logs and model comparisons, is in the <a href="https://markbeachill.github.io/tutorprompts/testing.html">auditing and testing guide</a>.</p>
-</section>
-</div>
+</section></article>
 </main>
 <footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="../testing.html">Testing</a> | <a href="../changelog/">Changelog</a> | <a href="teaching-approach.html">Teaching approach</a> | <a href="../about.html">About this site</a></p></div></footer>
 <script>

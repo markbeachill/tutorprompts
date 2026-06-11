@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
@@ -18,9 +19,7 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 <body>
 <header><div class="container nav"><a class="brand" href="index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="tools/">Tools</a></li><li><a href="examples/">Examples</a></li><li><a href="student-help/">Student Help</a></li><li><a href="guides/">Guides</a></li></ul></nav></div></header>
 <main>
-<section class="hero"><div class="container"><p class="kicker">Maintainer guide · Auditing and testing · 3 of 5</p><h1>Running an audit</h1><p class="lead">A second AI reviews the saved test record against the toolkit's standards and produces a structured Markdown report. You make the final judgement.</p></div></section>
-<div class="container">
-<section class="panel reading">
+<article class="reading"><header class="page-intro"><p class="kicker">Maintainer guide · Auditing and testing · 3 of 5</p><h1>Running an audit</h1><p class="lead">A second AI reviews the saved test record against the toolkit's standards and produces a structured Markdown report. You make the final judgement.</p></header><section>
 <h2 id="how-to-run-one">How to run one</h2>
 <ol>
 <li>Open a <strong>new chat, separate from the test chat</strong> — ideally on a different model from the one tested, since same-family audits tend toward generosity.</li>
@@ -29,14 +28,12 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 <li>Paste the saved test record. The audit recognises collector records: it audits the Transcript section and reads the context from the Metadata table.</li>
 <li>Save the result as <code>[code]_audit_[date].md</code> and complete the test log.</li>
 </ol>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="what-a-good-audit-looks-like">What a good audit looks like</h2>
 <p>The audit must support <strong>every judgement with a verbatim quotation</strong> from the record; a judgement it cannot quote evidence for is recorded as <strong>Not shown</strong>, not Pass. Treat an audit that paraphrases instead of quoting with suspicion — that is the signature of a generous audit.</p>
 <p>The audit applies different standards by tool type: interactive tutoring tools are judged on keeping the student active; full review tools (including WT2 from v4.0) are judged on giving a complete structured review without rewritten prose, and on switching to short interactive responses in follow-ups.</p>
 <p>It also applies the <strong>★ critical-check rule</strong>: any failed ★ check from the test card caps the rating at MAJOR ISSUE, or CRITICAL ISSUE where the card says so.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="the-rating-scale">The rating scale</h2>
 <table>
 <thead>
@@ -68,20 +65,16 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 </tr>
 </tbody>
 </table>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="the-audit-is-a-helper-not-a-judge">The audit is a helper, not a judge</h2>
 <p>If the audit seems too generous or too harsh, change the final decision yourself and record why in the log. The human judgement is the result; the audit is structured assistance toward it.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2>The canonical file</h2>
 <p>The full audit prompt, served from <code>audit-library/latest/</code>. Use the download for auditing; the viewer is for reference.</p>
-<p><a class="button" href="audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md" download>Download ai_tutor_toolkit_audit_prompt_with_menu.md</a></p>
+<p><a class="button" download="" href="audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md">Download ai_tutor_toolkit_audit_prompt_with_menu.md</a></p>
 <iframe class="fileframe" src="audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md" title="ai_tutor_toolkit_audit_prompt_with_menu.md"></iframe>
-
 <p>Next: <a href="testing-cards.html">Test cards and inputs</a></p>
-</section>
-</div>
+</section></article>
 </main>
 <footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="testing.html">Testing</a> | <a href="changelog/">Changelog</a> | <a href="guides/teaching-approach.html">Teaching approach</a> | <a href="about.html">About this site</a></p></div></footer>
 <script>

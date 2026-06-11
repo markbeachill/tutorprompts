@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
@@ -18,14 +19,11 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 <body>
 <header><div class="container nav"><a class="brand" href="index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="tools/">Tools</a></li><li><a href="examples/">Examples</a></li><li><a href="student-help/">Student Help</a></li><li><a href="guides/">Guides</a></li></ul></nav></div></header>
 <main>
-<section class="hero"><div class="container"><p class="kicker">Maintainer guide · Auditing and testing</p><h1>Auditing and testing</h1><p class="lead">How to check whether the toolkit behaves like a learning tool rather than an answer machine — before releasing, adapting or recommending it widely.</p></div></section>
-<div class="container">
-<section class="panel reading">
+<article class="reading"><header class="page-intro"><p class="kicker">Maintainer guide · Auditing and testing</p><h1>Auditing and testing</h1><p class="lead">How to check whether the toolkit behaves like a learning tool rather than an answer machine — before releasing, adapting or recommending it widely.</p></header><section>
 <p><strong>Using a tool with a class?</strong> You probably want the much shorter <a href="https://markbeachill.github.io/tutorprompts/guides/deployment-check.html">deployment check</a> in the deployment guide. This guide is for maintainers: people releasing toolkit versions, adapting the libraries, or investigating reported problems.</p>
 <p>The method lives in two layers. These web pages explain the process step by step with copy-ready prompts. The <strong>canonical testing pack</strong> — release-stamped Markdown files — is what you download, archive and audit against; the pages never replace it. Current pack: <strong>v4.0</strong>.</p>
-<p><a class="button" href="audit-library/latest/ai_tutor_toolkit_testing_pack.zip" download>Download the testing pack (ZIP)</a> · <a class="button secondary" href="audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md" download>Open the test cards file</a> · <a class="button secondary" href="audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md" download>Open the audit prompt file</a></p>
-</section>
-<section class="panel reading">
+<p><a class="button" download="" href="audit-library/latest/ai_tutor_toolkit_testing_pack.zip">Download the testing pack (ZIP)</a> · <a class="button secondary" download="" href="audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md">Open the test cards file</a> · <a class="button secondary" download="" href="audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md">Open the audit prompt file</a></p>
+</section><section>
 <h2 id="the-pages-in-this-guide">The pages in this guide</h2>
 <ol>
 <li><strong>This page</strong> — what testing means here, the workflow, and the release checks.</li>
@@ -34,13 +32,11 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 <li><a href="testing-cards.html">Test cards and inputs</a> — the universal and adversarial inputs with copy buttons, and how the per-tool cards work.</li>
 <li><a href="testing-limitations.html">Limitations: what you are testing, on what</a> — what this method can and cannot show.</li>
 </ol>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="what-testing-means-here">What testing means here</h2>
 <p>These tests do not prove the toolkit is perfect. They collect evidence for an informed human judgement. Each test usually produces two files: a <strong>test record</strong> (what the AI did, captured by the collector) and an <strong>audit</strong> (a second AI's structured review of that record). You make the final call.</p>
 <p>Two kinds of tool are judged by different standards. <strong>Interactive tutoring tools</strong> (WT1, WT4, AT10, RP4, RP5) should keep the student active and must not give polished final wording too early. <strong>Full review tools</strong> (WT2, WT3, WT5, ST1, ST2, ST3, RP3, SW1) are allowed a complete structured review — but not rewritten, submission-ready prose — and should switch to short interactive responses in follow-up turns.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="the-workflow">The workflow</h2>
 <ol>
 <li>Choose one test card from the <a href="testing-cards.html">cards file</a>.</li>
@@ -51,24 +47,19 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 <li>Open a second chat — ideally on a <strong>different model</strong>, since same-family audits tend to be generous — load the <a href="testing-audit.html">audit prompt</a>, choose the matching audit code, and paste the record.</li>
 <li>Save the audit, make your own judgement, and complete the test log.</li>
 </ol>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="critical-checks">Critical checks</h2>
 <p>Test cards mark their most important checks with ★. A failed ★ check caps the audit rating at MAJOR ISSUE — or CRITICAL ISSUE where the card says so — so a serious boundary failure can never be averaged away by good behaviour elsewhere, and a cosmetic point can never sink an otherwise sound tool.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="the-model-matrix-and-repeat-runs">The model matrix and repeat runs</h2>
 <p>The libraries are designed to work on free plans, so weak-model behaviour is evidence, not noise. Run every release-gating test at least once on a strong model and once on a free-tier model, and record both. A single run is one sample from a distribution: run release-gating tests twice on the deciding model, and treat one pass plus one failure as a failure to investigate, not an average.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="comparing-library-versions-ab">Comparing library versions (A/B)</h2>
 <p>Some library changes ship as hypotheses that testing must settle. To compare versions: run the same card, same inputs, on the old and new library in separate fresh chats on the deciding model (usually free-tier); collect and audit both; judge primarily on <strong>first-response strength</strong>, since drift has its own recovery mechanisms; and state the decision rule before you run. Record the comparison and the decision in the test log's A/B section.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="minimum-suggested-testing-before-release">Minimum suggested testing before release</h2>
 <p>For a small release: U1 (menu), U3 (triage, both inputs), U5 (I'm stuck), U6 (activation, on any new model or platform), A1–A4 (the adversarial set, with A2 run inside WT5), WT1 with all four turns, WT3 when correction behaviour changed, AT2's no-claim input, and one changed tool from each affected mini library — on the model matrix. For a bigger release: all universal and adversarial tests, at least one test per mini library, and the alternate-strand inputs for WT1, WT3, WT5 and ST1.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="what-to-do-if-a-test-fails">What to do if a test fails</h2>
 <table>
 <thead>
@@ -100,13 +91,11 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 </tr>
 </tbody>
 </table>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="how-versions-work">How versions work</h2>
 <p>The prompt-library suite and the testing pack are versioned together and currently both stand at v4.0. Current downloads live in <code>latest/</code>; fixed archive copies live in numbered version folders. Each Markdown file carries a release stamp showing what it belongs to. The library's version history is published separately on this site and is no longer included inside the library file itself. <strong>The pack and the library co-define correct behaviour: a library release that changes a behaviour must change the matching test expectation in the same release</strong>, or the audit becomes a regression test for the previous version.</p>
 <p>Next: <a href="testing-collector.html">The output collector</a></p>
-</section>
-</div>
+</section></article>
 </main>
 <footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="testing.html">Testing</a> | <a href="changelog/">Changelog</a> | <a href="guides/teaching-approach.html">Teaching approach</a> | <a href="about.html">About this site</a></p></div></footer>
 <script>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
@@ -18,31 +19,25 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 <body>
 <header><div class="container nav"><a class="brand" href="../index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="../index.html">Home</a></li><li><a href="../tools/">Tools</a></li><li><a href="../examples/">Examples</a></li><li><a href="../student-help/">Student Help</a></li><li><a href="./">Guides</a></li></ul></nav></div></header>
 <main>
-<section class="hero"><div class="container"><p class="kicker">Deployment guide · 2 of 3</p><h1>Deployment routes</h1><p class="lead">How to load the toolkit on each platform, and what each route risks.</p></div></section>
-<div class="container">
-<section class="panel reading">
+<article class="reading"><header class="page-intro"><p class="kicker">Deployment guide · 2 of 3</p><h1>Deployment routes</h1><p class="lead">How to load the toolkit on each platform, and what each route risks.</p></header><section>
 <p>This is the second page of the deployment guide. <a href="setup.html">Choosing and setting up an AI</a> helps you decide which system and model to use; this page covers how to load the toolkit once you have decided; the <a href="deployment-check.html">Deployment check</a> is the short test you run on the result.</p>
 <p>One rule covers every route on this page: <strong>whichever route you choose, run the deployment check on it before using it with students.</strong> Platforms differ, change without notice, and load instructions in different ways. The check takes ten to fifteen minutes and tests the setup students will actually meet.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="route-1-upload-the-file-in-a-chat">Route 1 — Upload the file in a chat</h2>
 <p>The simplest route, and the one the student help pages assume. Start a new chat, upload the library file (master, mini library, or single tool), and type <code>prompt</code>. The menu should appear.</p>
 <p><strong>Best for:</strong> one-off activities, free plans, first trials.
 <strong>Risks:</strong> students must repeat the upload each chat; long chats on free plans can hit limits; some models summarise an uploaded file instead of activating it — exactly what the first step of the deployment check looks for.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="route-2-paste-a-single-tool">Route 2 — Paste a single tool</h2>
 <p>Where uploads are limited or the mini library is too large for the plan, students can paste a <a href="https://markbeachill.github.io/tutorprompts/tools/single-tools.html">single-tool download</a> directly into the chat and follow it with their writing.</p>
 <p><strong>Best for:</strong> free plans, phones, locked-down platforms without file upload.
 <strong>Risks:</strong> no launcher or routing, so name the exact tool in your activity instructions; very small context limits can still truncate a pasted tool.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="route-3-projects-workspaces-and-notebooks">Route 3 — Projects, workspaces and notebooks</h2>
 <p>Platforms with Projects (ChatGPT, Claude), Gems-adjacent workspaces, or Copilot Notebooks can keep the toolkit file and related chats in one place, so the student sets up once and reuses it.</p>
 <p><strong>Best for:</strong> repeated individual use across weeks; tutors who want a standing test space.
 <strong>Risks:</strong> availability varies by plan, so keep this optional for students; project-level instructions and files may be handled differently from a fresh upload, so check on the project itself, not in an ordinary chat.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="route-4-shared-custom-ais-custom-gpts-gems-and-similar">Route 4 — Shared custom AIs: custom GPTs, Gems and similar</h2>
 <p>A shared custom AI gives students a ready-made entry point: they open it and type <code>prompt</code>, with no file handling. The setup decisions and the pros and cons are covered on the <a href="setup.html">previous page</a>; this section covers the loading mechanics, because there are two genuinely different ways to load the toolkit into a custom AI, and they can behave differently.</p>
 <h3 id="instructions-field-versus-attached-knowledge-file">Instructions field versus attached knowledge file</h3>
@@ -51,17 +46,14 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 <p>Platform limits and retrieval behaviour change without notice, so this page deliberately avoids stating current numbers. The honest position is: the routes differ, the platforms change, and the deployment check on your own setup is the only answer that stays true.</p>
 <h3 id="keeping-a-shared-custom-ai-honest">Keeping a shared custom AI honest</h3>
 <p>Treat a shared custom AI as a maintained teaching resource. Re-run the deployment check when the toolkit is updated, when the platform announces (or silently makes) a model change, and at the start of each term. Record the date and result somewhere colleagues can see. Make clear to students that the custom AI is a convenience, not a guarantee: the usual judgement about AI output still applies.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="institutional-platforms-copilot-and-gemini-at-your-institution">Institutional platforms: Copilot and Gemini at your institution</h2>
 <p>Where students use an institutional Copilot or Gemini, the available models, file handling and data arrangements are set by the institution, and may differ from the public versions of the same products. Local rules come first. Run the deployment check inside the institutional environment, not on the public product, and ask your IT or digital education team about data governance if student writing will be pasted in.</p>
-</section>
-<section class="panel reading">
+</section><section>
 <h2 id="after-loading-run-the-check">After loading: run the check</h2>
 <p>Whichever route you used: <a href="deployment-check.html">run the deployment check</a>. It confirms the menu appears, the tool you plan to use behaves like a tutor, and the boundary holds — on your platform, your plan, and your model, today.</p>
 <p>Next: <a href="deployment-check.html">Deployment check</a></p>
-</section>
-</div>
+</section></article>
 </main>
 <footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="../testing.html">Testing</a> | <a href="../changelog/">Changelog</a> | <a href="teaching-approach.html">Teaching approach</a> | <a href="../about.html">About this site</a></p></div></footer>
 <script>
