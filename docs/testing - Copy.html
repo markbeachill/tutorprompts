@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Testing and audit | AI Personal Tutor Toolkit</title>
+<meta content="Testing and audit guide for checking whether the AI Personal Tutor Toolkit behaves like a learning-focused tutor rather than an answer machine." name="description"/><link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<header><div class="container nav"><a class="brand" href="index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="tools/">Tools</a></li><li><a href="examples/">Examples</a></li><li><a href="student-help/">Student Help</a></li><li><a href="guides/">Guides</a></li></ul></nav></div></header>
+<main>
+<section class="hero"><div class="container"><p class="kicker">For educators and maintainers</p><h1>Testing and audit</h1><p class="lead">Use this testing pack to check whether the prompt libraries behave like learning tools, not answer machines. The tests are practical, step by step, and designed for educators rather than software testers.</p><div class="btn-row"><a class="button" href="audit-library/latest/ai_personal_tutor_testing_pack.zip">Download testing pack v4.1</a><a class="button secondary" href="audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md">Open test cards</a><a class="button secondary" href="audit-library/latest/ai_tutor_toolkit_output_collector.md">Open output collector</a></div></div></section>
+<div class="container">
+<section class="panel reading">
+<h2>What changed in v4.1?</h2>
+<p>Testing pack v4.1 checks the v4.1 prompt-library revision, including WT7 source-use behaviour, and updates the testing process itself.</p>
+<p>The biggest process change is the <strong>output collector</strong>: a prompt you paste at the end of a test session to produce a single test record with metadata and a verbatim transcript. Because that record is produced by the same AI that was tested, the method now asks testers to spot-check the record against the live chat, and to use manual capture for release-gating tests where reliable export is available.</p>
+<div class="grid two">
+<div class="card"><h3>v4 behaviour checks</h3><p>The tests now check the default teaching loop, router triage with at most two suggested tools, long-input honesty, EAL handling, WT3 complete checking, WT5 register discipline, ST2 student-first ordering, and updated research-proposal and academic-thinking behaviours.</p></div>
+<div class="card"><h3>New regression checks</h3><p>The pack adds checks for WT1 sentence-ending emphasis, WT1 topic chains and unclear pointers, certainty/confidence/authority preservation, WT3 long inputs, WT5 register, WT6 cross-checking, and concealment requests around AI-use records.</p></div>
+</div>
+</section>
+<section class="panel reading">
+<h2>Simple testing workflow</h2>
+<ol>
+<li>Choose one test card.</li>
+<li>Open a new AI chat.</li>
+<li>Upload the prompt library named in the test card.</li>
+<li>Type <code>prompt</code> and choose the named tool.</li>
+<li>Paste the test input and complete any follow-up turns.</li>
+<li>Paste the output collector prompt into the same chat to create a test record.</li>
+<li>Spot-check the collector record against the live chat. For adversarial or release-gating tests, compare every turn or capture the transcript manually.</li>
+<li>Open a second AI chat for audit so the audit is not influenced by the same uploaded library instructions as the tool being tested.</li>
+<li>Upload or paste the audit prompt, choose the matching audit, paste the saved record, and save the audit response.</li>
+</ol>
+</section>
+<section class="panel">
+<h2>Downloads</h2>
+<div class="grid two">
+<div class="card"><h3>Testing pack</h3><p>Everything needed for audit-style testing in one ZIP.</p><p><a class="button" href="audit-library/latest/ai_personal_tutor_testing_pack.zip">Download ZIP</a></p></div>
+<div class="card"><h3>Audit prompt with menu</h3><p>The prompt used to review test outputs and produce Markdown audit reports.</p><p><a class="button" href="audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md">Download audit prompt</a></p></div>
+<div class="card"><h3>Step-by-step test cards</h3><p>Practical cards showing exactly what to open, paste, save and audit.</p><p><a class="button" href="audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md">Download test cards</a></p></div>
+<div class="card"><h3>Output collector</h3><p>Creates a single test record after a test session. The record must still be spot-checked by the tester.</p><p><a class="button" href="audit-library/latest/ai_tutor_toolkit_output_collector.md">Download collector</a></p></div>
+<div class="card"><h3>Testing guide for educators</h3><p>Explains smoke tests, regression tests, adversarial tests, naming conventions and release checks.</p><p><a class="button" href="audit-library/latest/ai_tutor_toolkit_testing_guide_for_educators.md">Download guide</a></p></div>
+<div class="card"><h3>Test log template</h3><p>A simple table for recording model, plan, version, output record, audit result and action needed.</p><p><a class="button" href="audit-library/latest/ai_tutor_toolkit_test_log_template.md">Download log template</a></p></div>
+</div>
+</section>
+<section class="panel reading">
+<h2>Plain-English testing terms</h2>
+<div class="grid three">
+<div class="card"><h3>Smoke test</h3><p>A quick check that the basics work: the menu appears, routing works, and the tool responds to simple input.</p></div>
+<div class="card"><h3>Regression test</h3><p>A check that something fixed or redesigned has not broken again in a later version.</p></div>
+<div class="card"><h3>Adversarial test</h3><p>A check using a vague, risky or boundary-pushing request, such as asking the tool to rewrite work for submission or hide AI use.</p></div>
+</div>
+</section>
+<section class="panel reading">
+<h2>Suggested minimum before release</h2>
+<ul>
+<li>Run the startup activation and launcher-fidelity test on the master library.</li>
+<li>Run WT1, including sentence movement, topic-chain and more-academic follow-up checks.</li>
+<li>Run WT7 source-use checks, especially too-close paraphrase, unmarked quotation and reporting-verb overclaiming.</li>
+<li>Run at least one over-rewrite or concealment adversarial test.</li>
+<li>Run WT3, WT5, AT2, SW3 and the long-input honesty test.</li>
+<li>Record the result in the test log and audit any release-gating output in a separate chat.</li>
+</ul>
+<p><a href="audit-library/latest/ai_tutor_toolkit_test_log_template.md">Download the test log template</a></p>
+</section>
+<section class="panel">
+<h2>What if a test fails?</h2>
+<table><thead><tr><th>Audit result</th><th>Suggested action</th></tr></thead><tbody>
+<tr><td>PASS</td><td>Safe to keep; log the result.</td></tr>
+<tr><td>MINOR ISSUE</td><td>Keep, but note for the next maintenance release.</td></tr>
+<tr><td>MAJOR ISSUE</td><td>Revise before recommending widely. Re-test the affected tool.</td></tr>
+<tr><td>CRITICAL ISSUE</td><td>Do not release or recommend until fixed and re-tested.</td></tr>
+<tr><td>NOT TESTABLE</td><td>Check setup, prompt loading, input quality, output-collector fidelity or AI tool limits; repeat before judging.</td></tr>
+</tbody></table>
+</section>
+<section class="panel">
+<h2>How versions work</h2>
+<p>The public site uses three labels: the <strong>site package</strong>, the <strong>prompt-library suite</strong>, and the <strong>testing/audit pack</strong>. The current public release is v4.1 for all three labels.</p>
+<p>Current downloads live in <code>latest/</code>; fixed archive copies live in numbered version folders. Each current Markdown download includes a release stamp showing which suite or pack it belongs to.</p>
+<div class="btn-row"><a class="button secondary" href="release_manifest.md">Open release manifest</a></div>
+</section>
+<section class="panel reading"><h2>Startup activation and launcher fidelity</h2><p>The first thing to check is whether the AI activates the uploaded toolkit file instead of summarising it. The toolkit should show the launcher menu by default, preserve the minimum launcher guidance, and allow students to describe their problem in one sentence so the router can suggest one or two tools.</p><p>The launcher should be shown from the launcher section itself, not reconstructed from the manifest, router or tool headings. The testing pack includes a startup activation and launcher-fidelity test for this first-contact behaviour.</p></section>
+</div>
+</main>
+<footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="testing.html">Testing</a> | <a href="changelog/">Changelog</a> | <a href="guides/teaching-approach.html">Teaching approach</a> | <a href="about.html">About this site</a></p></div></footer>
+</body>
+</html>
