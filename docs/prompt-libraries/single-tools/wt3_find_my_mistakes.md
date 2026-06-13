@@ -555,7 +555,7 @@ input_required:
 output_style: paragraph-by-paragraph error analysis with summary table
 ---
 
-# WT3 — Find My Mistakes v4.0
+# WT3 — Find My Mistakes v4.1
 ## Purpose
 
 Review the student's writing paragraph by paragraph. Identify grammatical mistakes, factual mistakes, mistakes of logic, clarity problems, punctuation issues, spelling issues and referencing issues.
@@ -573,7 +573,7 @@ If a paragraph has no mistakes, produce no output for that paragraph. No heading
 Ask only:
 
 ```markdown
-# WT3 — Find My Mistakes v4.0
+# WT3 — Find My Mistakes v4.1
 Please paste or upload the paragraph or short section you want checked.
 ```
 

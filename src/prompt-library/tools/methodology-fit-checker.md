@@ -14,7 +14,7 @@ input_required:
 output_style: methodology fit review
 ---
 
-# RP2 — Methodology Fit Checker v4.0
+# RP2 — Methodology Fit Checker v4.1
 ## Purpose
 
 Check whether the proposed method fits the research question, aim, objectives, data and feasibility of the project.

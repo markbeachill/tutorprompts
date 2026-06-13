@@ -1,24 +1,24 @@
-# AI Personal Tutor Toolkit — Testing Guide for Educators v4.0
+# AI Personal Tutor Toolkit — Testing Guide for Educators v4.1
 
-**Release stamp:** Toolkit version v4.0 / Prompt-library suite v4.0 / Testing pack v4.0
-**This file:** AI Personal Tutor Toolkit — Testing Guide for Educators v4.0  
+**Release stamp:** Toolkit version v4.1 / Prompt-library suite v4.1 / Testing pack v4.1
+**This file:** AI Personal Tutor Toolkit — Testing Guide for Educators v4.1  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_testing_guide_for_educators.md`  
-**Fixed archive:** `audit-library/v4.0/ai_tutor_toolkit_testing_guide_for_educators_v4_0.md`
+**Fixed archive:** `audit-library/v4.1/ai_tutor_toolkit_testing_guide_for_educators_v4_1.md`
 
 Audience: educators, tutors, learning developers and toolkit maintainers.
 
 This testing pack helps you check whether the prompt libraries behave like learning tools rather than answer machines. You do not need software-testing knowledge.
 
-## What changed in v4.0
+## What changed in v4.1
 
-Testing pack v4.0 checks the v4.0 prompt-library revision and updates the testing process itself. The main changes:
+Testing pack v4.1 checks the v4.1 prompt-library revision and updates the testing process itself. The main changes:
 
 - **The output collector.** A new prompt, pasted at the end of a test session, produces a single self-contained test record (metadata plus verbatim transcript), replacing manual transcript assembly. See `ai_tutor_toolkit_output_collector.md`.
-- **WT2 is now audited as a full review tool.** It gives its structured report first and handles follow-up turns interactively. Do not mark a correct v4.0 WT2 report down for "not keeping the student active".
-- **New expectations from the v4.0 library:** the default teaching loop (fix/rewrite requests get permitted help, not a rewrite and not a bare refusal); router triage suggesting at most two tools with confirmation; long-input pattern summaries that never claim unread material; EAL handling; WT3's complete check confirmed as intended behaviour; WT5's five-improvement cap and strict-register rule; ST2's student-first ordering; new cross-check, no-claim, stage-calibration and convergence behaviours across the tools.
+- **WT2 is now audited as a full review tool.** It gives its structured report first and handles follow-up turns interactively. Do not mark a correct v4.1 WT2 report down for "not keeping the student active".
+- **New expectations from the v4.1 library:** the default teaching loop (fix/rewrite requests get permitted help, not a rewrite and not a bare refusal); router triage suggesting at most two tools with confirmation; long-input pattern summaries that never claim unread material; EAL handling; WT3's complete check confirmed as intended behaviour; WT5's five-improvement cap and strict-register rule; ST2's student-first ordering; new cross-check, no-claim, stage-calibration and convergence behaviours across the tools.
 - **New tests:** U8 long inputs, U9 EAL, A4 concealment request, WT1 sentence-ending emphasis, WT1 topic-chain, certainty/confidence/authority, WT3 long-input, WT5 register, WT6 cross-check, and second inputs for U3, AT2, RP3 and SW2.
 - **Process changes:** critical checks marked ★ with a rating cap; a model matrix and repeat-run rule; an A/B comparison protocol for contested library changes; a test-input hygiene rule; verbatim evidence quoting in audits.
-- The pack's tests assume the v4.0 launcher content, including the triage line. Launcher tests should fail any output of release notes, changelog or version-history text, whether that material is published separately or still present elsewhere in the uploaded file.
+- The pack's tests assume the v4.1 launcher content, including the triage line. Launcher tests should fail any output of release notes, changelog or version-history text, whether that material is published separately or still present elsewhere in the uploaded file.
 
 ## What testing means here
 
@@ -67,12 +67,12 @@ The libraries are designed to work on free plans, so weak-model behaviour is evi
 
 ## A/B comparison protocol for contested library changes
 
-Some library changes are shipped as hypotheses that testing must settle — the v4.0 changelog flags the WT1 consolidation this way. To compare library versions:
+Some library changes are shipped as hypotheses that testing must settle — the v4.1 changelog flags the WT1 consolidation this way. To compare library versions:
 
 1. Run the same card, same inputs, on the old and the new library, in separate fresh chats on the same model (use the deciding model: free-tier).
 2. Collect both test records and audit both.
 3. Judge primarily on **first-response strength**; drift has its own recovery mechanisms (`prompt`, a new chat).
-4. State the decision rule before running. For the WT1 consolidation: if the v4.0 first response is equal or better on a free-tier model, the consolidation ships; if meaning-drift failures appear in WT1, WT2 or WT5 on weak models, the named references to the global Precision before polish rule are upgraded to verbatim copies.
+4. State the decision rule before running. For the WT1 consolidation: if the v4.1 first response is equal or better on a free-tier model, the consolidation ships; if meaning-drift failures appear in WT1, WT2 or WT5 on weak models, the named references to the global Precision before polish rule are upgraded to verbatim copies.
 5. Record the comparison and the decision in the test log's A/B section.
 
 ## Test-input hygiene
@@ -167,7 +167,7 @@ On long inputs, review tools should review the first part in full, summarise rec
 
 ## WT2 full-review note
 
-WT2 is tested as a full review tool from v4.0. It should give its structured paragraph-logic report first — chain of ideas as a plain line, where the chain breaks, a manageable revision task — and then handle follow-ups interactively: a revised paragraph becomes the new working text and gets short feedback, not a re-run of the full report.
+WT2 is tested as a full review tool from v4.1. It should give its structured paragraph-logic report first — chain of ideas as a plain line, where the chain breaks, a manageable revision task — and then handle follow-ups interactively: a revised paragraph becomes the new working text and gets short feedback, not a re-run of the full report.
 
 ## ST1 central-claim note
 
@@ -175,7 +175,7 @@ ST1 is tested for central-claim diagnosis. It should check whether a paragraph's
 
 ## ST2 student-first note
 
-ST2 is tested for the v4.0 ordering behaviour: it maps the structure (and names the map as a reverse outline), names the problems, and asks the student to propose a revised order first. It gives its own suggested order only on request or if the student is stuck, and the suggested order must explain why each part belongs where it is placed.
+ST2 is tested for the v4.1 ordering behaviour: it maps the structure (and names the map as a reverse outline), names the problems, and asks the student to propose a revised order first. It gives its own suggested order only on request or if the student is stuck, and the suggested order must explain why each part belongs where it is placed.
 
 ## WT5 maintenance check
 

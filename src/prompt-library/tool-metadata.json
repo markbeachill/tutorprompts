@@ -67,6 +67,17 @@
       "launcher_description": "create or check Harvard-style references."
     },
     {
+      "id": "paraphrase-quotation-workshop",
+      "code": "WT7",
+      "title": "Paraphrase and Quotation Workshop",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "master_manifest_description": "check paraphrases, quotations, attribution and source integration without writing the source-use sentence for the student",
+      "mini_manifest_description": "check paraphrases, quotations, attribution and source integration without writing the source-use sentence for the student",
+      "mini_family_label": "Writing and referencing tools",
+      "launcher_description": "check whether a paraphrase or quotation is accurate, safely credited and integrated into your writing."
+    },
+    {
       "id": "paragraph-structure-review",
       "code": "ST1",
       "title": "Paragraph Structure Review Across a Whole Draft",

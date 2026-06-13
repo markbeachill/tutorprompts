@@ -1,9 +1,9 @@
-# AI Personal Tutor Toolkit — Audit Prompt v4.0
+# AI Personal Tutor Toolkit — Audit Prompt v4.1
 
-**Release stamp:** Toolkit version v4.0 / Prompt-library suite v4.0 / Testing pack v4.0
-**This file:** AI Personal Tutor Toolkit — Audit Prompt v4.0  
+**Release stamp:** Toolkit version v4.1 / Prompt-library suite v4.1 / Testing pack v4.1
+**This file:** AI Personal Tutor Toolkit — Audit Prompt v4.1  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md`  
-**Fixed archive:** `audit-library/v4.0/ai_tutor_toolkit_audit_prompt_with_menu_v4_0.md`
+**Fixed archive:** `audit-library/v4.1/ai_tutor_toolkit_audit_prompt_with_menu_v4_1.md`
 
 Audience: educators, tutors, learning developers and toolkit maintainers.
 
@@ -37,6 +37,7 @@ When this audit prompt starts, show this menu and ask which audit the user wants
 - `WT4` — Teach Me This Mistake
 - `WT5` — Style and Clarity Review (including regression and register cards)
 - `WT6` — Referencing Helper (including cross-check card)
+- `WT7` — Paraphrase and Quotation Workshop
 
 ### Structure Tutor tests
 - `ST1` — Paragraph Structure Review Across a Whole Draft

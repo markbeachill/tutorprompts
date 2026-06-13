@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v4.0 / Prompt libraries v4.0 / Testing pack v4.0
+Toolkit release: Site v4.1 / Prompt libraries v4.1 / Testing pack v4.1
 
-This manifest describes the current public site package after the v4.0 prompt-library and testing/audit release sync.
+This manifest describes the current public site package after the v4.1 WT7 source-use integration.
 
 ## Repository-level developer files
 
@@ -72,6 +72,7 @@ Versioned prompt-library archives are in:
 - `docs/prompt-libraries/v3.5/`
 - `docs/prompt-libraries/v3.6/`
 - `docs/prompt-libraries/v4.0/`
+- `docs/prompt-libraries/v4.1/`
 
 ## Testing/audit downloads
 
@@ -93,6 +94,17 @@ Versioned testing/audit archives are in:
 - `docs/audit-library/v3.4/`
 - `docs/audit-library/v3.5/`
 - `docs/audit-library/v4.0/`
+- `docs/audit-library/v4.1/`
+
+## Site v4.1 — WT7 paraphrase and quotation workshop
+
+- Site package updated to v4.1.
+- Prompt libraries updated to v4.1.
+- Testing/audit pack updated to v4.1.
+- Added WT7 — Paraphrase and Quotation Workshop to the Writing Tutor family.
+- Rebuilt the master library, Writing Tutor mini-library, all mini-library archive outputs, custom packs and single-tool downloads.
+- Added WT7 source-use testing cards for too-close paraphrase, plagiarism / patchwriting risk, quote framing and reporting-verb overclaiming.
+- Updated the Tools directory, Writing Tutor page, single-tool download page, Testing page, release manifest, changelog and generated site data.
 
 ## Site v4.0 — prompt-library consolidation and testing-pack update
 

@@ -1,7 +1,7 @@
 id: master
 title: "AI Personal Tutor Master Library"
 latest_output: docs/prompt-libraries/latest/ai_personal_tutor_master_library.md
-archive_output: docs/prompt-libraries/v4.0/ai_personal_tutor_master_library_v4_0.md
+archive_output: docs/prompt-libraries/v4.1/ai_personal_tutor_master_library_v4_1.md
 tool_metadata_mode: master
 sections:
   - pack-sections/master/00-manifest.md

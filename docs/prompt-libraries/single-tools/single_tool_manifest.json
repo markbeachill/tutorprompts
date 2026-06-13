@@ -1,9 +1,9 @@
 {
   "generator_feature": "single-tool-packs",
-  "toolkit_version": "4.0",
-  "prompt_library_version": "4.0",
-  "release_date": "2026-06-10",
-  "pack_count": 27,
+  "toolkit_version": "4.1",
+  "prompt_library_version": "4.1",
+  "release_date": "2026-06-13",
+  "pack_count": 28,
   "packs": [
     {
       "code": "WT1",
@@ -58,6 +58,15 @@
       "family_label": "Writing Tutor tools",
       "generated_file": "wt6_referencing_helper.md",
       "pack_title": "WT6 — Referencing Helper Single-Tool Pack"
+    },
+    {
+      "code": "WT7",
+      "id": "paraphrase-quotation-workshop",
+      "title": "Paraphrase and Quotation Workshop",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "generated_file": "wt7_paraphrase_and_quotation_workshop.md",
+      "pack_title": "WT7 — Paraphrase and Quotation Workshop Single-Tool Pack"
     },
     {
       "code": "ST1",

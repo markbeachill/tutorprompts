@@ -575,7 +575,7 @@ output_style: interactive writing tutor response
 interaction_type: interactive tutoring
 ---
 
-# WT1 — Clarity Clinic v4.0
+# WT1 — Clarity Clinic v4.1
 
 Apply `global-rules`.
 
@@ -1043,7 +1043,7 @@ trigger_phrases:
 output_style: paragraph logic diagnosis, missing-link analysis, practical revision task
 ---
 
-# WT2 — Single Paragraph Analysis v4.0
+# WT2 — Single Paragraph Analysis v4.1
 Apply `global-rules`.
 
 Run only this tool.
@@ -1260,7 +1260,7 @@ input_required:
 output_style: paragraph function table and detailed paragraph comments
 ---
 
-# ST1 — Paragraph Structure Review Across a Whole Draft v4.0
+# ST1 — Paragraph Structure Review Across a Whole Draft v4.1
 ## Purpose
 
 Review the paragraph structure across a whole piece of writing.
@@ -1272,7 +1272,7 @@ Focus on how each paragraph works, not on grammar or spelling.
 Ask only:
 
 ```markdown
-# ST1 — Paragraph Structure Review Across a Whole Draft v4.0
+# ST1 — Paragraph Structure Review Across a Whole Draft v4.1
 Please paste or upload the draft or section you want reviewed for paragraph structure.
 ```
 
@@ -1428,7 +1428,7 @@ input_required:
 output_style: prioritised revision plan
 ---
 
-# SW1 — Revision Plan v4.0
+# SW1 — Revision Plan v4.1
 ## Purpose
 
 Turn feedback into a clear, manageable revision plan.
@@ -1440,7 +1440,7 @@ Do not rewrite the assignment.
 Ask only:
 
 ```markdown
-# SW1 — Revision Plan v4.0
+# SW1 — Revision Plan v4.1
 Please paste or upload your feedback, review notes, draft concerns, or the section you want to revise.
 If you know your deadline and roughly how many working sessions you have, include that too, so the plan can fit your time.
 ```

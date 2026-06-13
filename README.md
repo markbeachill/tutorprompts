@@ -75,9 +75,9 @@ GitHub Pages should be configured to publish from the `docs/` folder on the main
 
 ## Current public release
 
-- Site package: v4.0
-- Prompt-library suite: v4.0
-- Testing/audit pack: v4.0
+- Site package: v4.1
+- Prompt-library suite: v4.1
+- Testing/audit pack: v4.1
 
 Detailed release notes are in `docs/changelog/site-update-notes/`.
 

@@ -13,7 +13,7 @@ output_style: interactive writing tutor response
 interaction_type: interactive tutoring
 ---
 
-# WT1 — Clarity Clinic v4.0
+# WT1 — Clarity Clinic v4.1
 
 Apply `global-rules`.
 

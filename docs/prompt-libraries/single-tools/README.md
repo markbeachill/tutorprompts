@@ -2,7 +2,7 @@
 
 This folder contains generated single-tool prompt packs. Each file contains the shared operating rules, a one-tool launcher/router, and one tool instruction block.
 
-Prompt-library version: v4.0
+Prompt-library version: v4.1
 
 Build all single-tool packs from the repository root with:
 
@@ -26,6 +26,7 @@ python scripts/build_prompt_libraries.py --include-single-tools --check
 | WT4 | Teach Me This Mistake | Writing Tutor tools | `wt4_teach_me_this_mistake.md` |
 | WT5 | Style and Clarity Review | Writing Tutor tools | `wt5_style_and_clarity_review.md` |
 | WT6 | Referencing Helper | Writing Tutor tools | `wt6_referencing_helper.md` |
+| WT7 | Paraphrase and Quotation Workshop | Writing Tutor tools | `wt7_paraphrase_and_quotation_workshop.md` |
 | ST1 | Paragraph Structure Review Across a Whole Draft | Structure Tutor tools | `st1_paragraph_structure_review_across_a_whole_draft.md` |
 | ST2 | Whole-Work Structure Review | Structure Tutor tools | `st2_whole_work_structure_review.md` |
 | ST3 | Expert Meaning Review | Structure Tutor tools | `st3_expert_meaning_review.md` |

@@ -128,7 +128,7 @@ The AI should:
 - not convert the launcher into a table unless the launcher itself uses a table;
 - not add emojis, a “Welcome” line, or a preamble such as “I’ve read the file”;
 - not omit the launcher’s short privacy, responsibility and use guidance;
-- not output release notes or changelog material (the version history is published separately and is not in the library);
+- not output release notes, changelog material or version-history text as part of the launcher; if version history is present in the uploaded file, treat it as internal/reference material and not as menu output;
 - keep visible tool codes such as WT1, WT2 or WT3;
 - preserve the “I’m stuck” support line;
 - include paste/upload guidance and the `prompt` return instruction.

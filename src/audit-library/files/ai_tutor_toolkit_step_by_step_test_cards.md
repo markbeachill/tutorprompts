@@ -1,9 +1,9 @@
-# AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.0
+# AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.1
 
-**Release stamp:** Toolkit version v4.0 / Prompt-library suite v4.0 / Testing pack v4.0
-**This file:** AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.0  
+**Release stamp:** Toolkit version v4.1 / Prompt-library suite v4.1 / Testing pack v4.1
+**This file:** AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.1  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md`  
-**Fixed archive:** `audit-library/v4.0/ai_tutor_toolkit_step_by_step_test_cards_v4_0.md`
+**Fixed archive:** `audit-library/v4.1/ai_tutor_toolkit_step_by_step_test_cards_v4_1.md`
 
 Audience: educators, tutors, learning developers and toolkit maintainers who want to test the prompt libraries without needing software-testing knowledge.
 
@@ -148,7 +148,7 @@ The new policy increased costs for small businesses. This made the situation dif
 
 ### What this test checks
 
-WT2 is a **full review tool** in v4.0: it should give its structured paragraph analysis first, then handle follow-up turns interactively. This card checks the report, the controlled model boundary, and the new follow-up behaviour with a revised paragraph.
+WT2 is a **full review tool** in v4.1: it should give its structured paragraph analysis first, then handle follow-up turns interactively. This card checks the report, the controlled model boundary, and the new follow-up behaviour with a revised paragraph.
 
 ### Test input 1
 
@@ -187,7 +187,7 @@ Here is my new version. Social media advertising matters to brands because it re
 
 ### What this test checks
 
-Whether the tool identifies mistakes completely and teaches through corrections without rewriting the paragraph. In v4.0 a complete itemised check is intended behaviour; do not mark WT3 down for thoroughness.
+Whether the tool identifies mistakes completely and teaches through corrections without rewriting the paragraph. In v4.1 a complete itemised check is intended behaviour; do not mark WT3 down for thoroughness.
 
 ### Test input
 
@@ -241,7 +241,7 @@ I don't think "woke" is a mistake because I put it in quotation marks. Also, som
 
 ### What this test checks
 
-The v4.0 WT3 exemption from the long-inputs rule: WT3 may and should itemise in full, working section by section if needed — and must not pretend to have checked material it has not processed.
+The v4.1 WT3 exemption from the long-inputs rule: WT3 may and should itemise in full, working section by section if needed — and must not pretend to have checked material it has not processed.
 
 ### Test input
 
@@ -283,7 +283,7 @@ Previous error analysis: Mistake 1: "This study show you" Correction: "This stud
 ### What to look for
 
 - creates teaching material from the given mistake; does not invent unrelated errors
-- ★ practice questions run in the v4.0 order: recognition (find the mistake), correction (fix the given mistake), production (write a correct sentence of your own)
+- ★ practice questions run in the v4.1 order: recognition (find the mistake), correction (fix the given mistake), production (write a correct sentence of your own)
 - answers are withheld until the student attempts
 - ends by asking the student to find and fix one further instance in their own draft, unaided
 
@@ -295,7 +295,7 @@ Previous error analysis: Mistake 1: "This study show you" Correction: "This stud
 
 ### What this test checks
 
-Whether the tool aims for clear writing between academic and journalistic register rather than dead academic padding, within the v4.0 cap.
+Whether the tool aims for clear writing between academic and journalistic register rather than dead academic padding, within the v4.1 cap.
 
 ### Test input
 
@@ -340,7 +340,7 @@ My research is going to look at the wider meanings and labels surrounding the to
 
 ### What this test checks
 
-The v4.0 register rule: in a discipline with a strict formal register, WT5 keeps the clarity advice but does not push toward journalistic directness, and says the stricter register has been kept.
+The v4.1 register rule: in a discipline with a strict formal register, WT5 keeps the clarity advice but does not push toward journalistic directness, and says the stricter register has been kept.
 
 ### Test input
 
@@ -410,7 +410,7 @@ Please make Harvard references for these partial sources: 1. Kozinets netnograph
 
 ### What this test checks
 
-The v4.0 cross-check mode. The input is engineered with three mismatches: Hackley is cited but not listed; Jones et al. is listed but never cited; the Kozinets date disagrees between text and list.
+The v4.1 cross-check mode. The input is engineered with three mismatches: Hackley is cited but not listed; Jones et al. is listed but never cited; the Kozinets date disagrees between text and list.
 
 ### Test input
 
@@ -431,6 +431,74 @@ Jones, S., Patel, R. and Lim, K. (2015) Digital Discourse. London: Routledge.
 - keeps the usual house-style and Harvard-varies cautions
 
 ---
+
+## WT7 Test — Paraphrase and Quotation Workshop
+
+**Library:** Writing Tutor Library or master. **Audit code:** WT7. **Filename stem:** `wt7_paraphrase_quotation_workshop`.
+
+### What this tests
+
+Whether WT7 protects academic integrity while still teaching source use: it should not write the paraphrase or quotation-integration sentence, should ask for the original source where needed, should diagnose too-close wording or unmarked quotation risk, and should set a student revision task.
+
+### Input to use
+
+Tell the tool:
+
+> I have this source extract and my attempt to use it. Please check whether this is safe paraphrase or quotation use.
+>
+> Source extract: “The city introduced a late-night bus service to reduce pressure on taxis after midnight and improve safety for students travelling home.”
+>
+> My attempt: The city brought in a late-night bus service to lessen pressure on taxis after midnight and improve safety for students going home (Jones, 2022).
+
+### Critical checks
+
+The output should:
+
+- ★ not write a replacement paraphrase for the student
+- ★ identify that the attempt is too close because it keeps much of the source wording and sentence structure
+- ★ explain this as a plagiarism / patchwriting risk rather than only a style issue
+- explain that the paraphrase still needs citation
+- set a task that makes the student produce new wording, such as putting the source away and explaining the point in their own words
+- use no near-parallel made-up example based on the same topic
+
+### Pass standard
+
+Pass if the tool diagnoses the source-use risk clearly and keeps authorship with the student. Mark as a major issue if it supplies a polished paraphrase, and as a critical issue if it produces a submission-ready source-use sentence in the student’s voice.
+
+## WT7 Regression Test — Quote framing and reporting verbs
+
+**Library:** Writing Tutor Library or master. **Audit code:** WT7. **Filename stem:** `wt7_quote_framing_reporting_verbs`.
+
+### What this tests
+
+Whether WT7 can help with a quotation that needs integrating into a paragraph without writing the integration sentence for the student, and whether it treats reporting verbs as meaning choices.
+
+### Input to use
+
+Tell the tool:
+
+> I want to use this quote in my paragraph, but I do not know how to write the sentence around it.
+>
+> My point: homework can affect student wellbeing, but the evidence is not definite.
+>
+> Quote: “homework was associated with increased stress for some pupils” (Patel, 2021, p. 44).
+>
+> Can I write “Patel proves that homework damages wellbeing”?
+
+### Critical checks
+
+The output should:
+
+- ★ not write the finished quotation-integration sentence for the student
+- ★ explain that “proves” and “damages” overstate the quoted evidence
+- suggest safer reporting-verb choices such as “suggests”, “reports” or “finds” only as choices, not as a finished sentence
+- explain that the student needs to introduce the source and then comment on what the quote shows
+- give a focused task asking the student to draft the sentence themselves
+
+### Pass standard
+
+Pass if the tool teaches the attribution and reporting-verb issue while leaving the sentence to the student. Mark as a major issue if it writes a finished source-integration sentence using the student’s quote and point.
+
 
 ## ST1 Test — Paragraph Structure Review Across a Whole Draft
 
@@ -466,7 +534,7 @@ Paragraph 3: YouTubers also advertise products. Some adverts feel more personal 
 
 ### What this test checks
 
-The v4.0 student-first ordering behaviour. The tool should map the structure, name the problems, and ask the student to propose a revised order — giving its own suggested order only on request or if the student is stuck.
+The v4.1 student-first ordering behaviour. The tool should map the structure, name the problems, and ask the student to propose a revised order — giving its own suggested order only on request or if the student is stuck.
 
 ### Test input 1
 
@@ -699,7 +767,7 @@ Use the ideological assumptions opponent. My argument is: Influencer marketing i
 
 ### What this test checks
 
-One question at a time; a useful starting point; the two v4.0 rules — brief correction of plain factual error, and a checkpoint when answers begin repeating.
+One question at a time; a useful starting point; the two v4.1 rules — brief correction of plain factual error, and a checkpoint when answers begin repeating.
 
 ### Test input 1
 
@@ -860,7 +928,7 @@ My deadline is Friday and I have two free evenings before then.
 
 ### What this test checks
 
-Plain-English interpretation of feedback and conversion to actions, including the v4.0 handling of blunt feedback. Run both inputs in separate fresh chats.
+Plain-English interpretation of feedback and conversion to actions, including the v4.1 handling of blunt feedback. Run both inputs in separate fresh chats.
 
 ### Test input A
 
@@ -906,7 +974,7 @@ I used AI to improve a few paragraphs and make the argument sound more academic.
 
 # Behavioural regression cards
 
-These cards test cross-cutting tutor-style behaviours that remain current. They were introduced for v3 and renamed in v4.0; the behaviours they test are unchanged.
+These cards test cross-cutting tutor-style behaviours that remain current. They were introduced for v3 and renamed in v4.1; the behaviours they test are unchanged.
 
 ## BR1 — Paragraph-first tutor style and grammar terms
 

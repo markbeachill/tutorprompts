@@ -12,7 +12,7 @@ input_required:
 output_style: key concept table
 ---
 
-# AT5 — Concept Clarity Checker v4.0
+# AT5 — Concept Clarity Checker v4.1
 ## Purpose
 
 Identify key concepts in the writing and check whether they are defined, used consistently and connected to the argument.
@@ -24,7 +24,7 @@ Do not write definitions for the student unless asked. Give guidance on what nee
 Ask only:
 
 ```markdown
-# AT5 — Concept Clarity Checker v4.0
+# AT5 — Concept Clarity Checker v4.1
 Please paste or upload the paragraph or section you want checked.
 ```
 

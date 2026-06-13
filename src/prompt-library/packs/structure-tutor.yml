@@ -1,7 +1,7 @@
 id: structure-tutor
 title: "Structure Tutor Mini Library"
 latest_output: docs/prompt-libraries/latest/02_structure_tutor_library.md
-archive_output: docs/prompt-libraries/v4.0/02_structure_tutor_library_v4_0.md
+archive_output: docs/prompt-libraries/v4.1/02_structure_tutor_library_v4_1.md
 tool_metadata_mode: mini
 sections:
   - pack-sections/structure-tutor/00-manifest.md

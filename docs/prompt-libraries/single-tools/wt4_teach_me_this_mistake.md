@@ -556,7 +556,7 @@ input_required:
 output_style: teaching materials
 ---
 
-# WT4 — Teach Me This Mistake v4.0
+# WT4 — Teach Me This Mistake v4.1
 ## Purpose
 
 Help the student learn from a specific mistake, mistake type, or repeated error pattern found by Find My Mistakes. This tool is designed to be used after the mistakes prompt has produced an error analysis and summary table.
@@ -568,7 +568,7 @@ Do not rewrite the student's assignment.
 If the previous Find My Mistakes output is missing, ask only:
 
 ```markdown
-# WT4 — Teach Me This Mistake v4.0
+# WT4 — Teach Me This Mistake v4.1
 Please paste the mistake or pattern from your WT3 feedback that you want to learn from.
 ```
 

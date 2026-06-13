@@ -13,7 +13,7 @@ input_required:
 output_style: task alignment review
 ---
 
-# AT1 — Assignment Brief Checker v4.0
+# AT1 — Assignment Brief Checker v4.1
 ## Purpose
 
 Check whether the student's work answers the assignment brief.

@@ -1,8 +1,8 @@
 {
   "generated_by": "ai-personal-tutor-package-generator-v1.6",
-  "toolkit_version": "4.0",
-  "prompt_library_version": "4.0",
-  "testing_pack_version": "4.0",
-  "release_date": "2026-06-10",
+  "toolkit_version": "4.1",
+  "prompt_library_version": "4.1",
+  "testing_pack_version": "4.1",
+  "release_date": "2026-06-13",
   "source": "src/release.yml"
 }

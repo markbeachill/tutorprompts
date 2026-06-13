@@ -12,7 +12,7 @@ input_required:
 output_style: numbered style and clarity feedback
 ---
 
-# WT5 — Style and Clarity Review v4.0
+# WT5 — Style and Clarity Review v4.1
 ## Purpose
 
 Review a piece of writing and explain how it can be improved for style, clarity and readability.
@@ -34,7 +34,7 @@ Do not quote these sources at length. Apply their general principles.
 Ask only:
 
 ```markdown
-# WT5 — Style and Clarity Review v4.0
+# WT5 — Style and Clarity Review v4.1
 Please paste or upload the section you want reviewed for readability, tone and style.
 ```
 

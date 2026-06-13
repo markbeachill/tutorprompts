@@ -12,7 +12,7 @@ input_required:
 output_style: source quality review
 ---
 
-# AT8 — Source Reliability Checker v4.0
+# AT8 — Source Reliability Checker v4.1
 ## Purpose
 
 Help the student think critically about whether sources look credible, relevant and suitable for academic work.
@@ -30,7 +30,7 @@ Do not fabricate source details or claim to have opened links unless the AI envi
 Ask only:
 
 ```markdown
-# AT8 — Source Reliability Checker v4.0
+# AT8 — Source Reliability Checker v4.1
 Please paste or upload the source list, links, bibliography or source details you want checked.
 ```
 

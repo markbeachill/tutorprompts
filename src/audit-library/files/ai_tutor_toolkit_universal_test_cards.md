@@ -1,9 +1,9 @@
-# AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v4.0
+# AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v4.1
 
-**Release stamp:** Toolkit version v4.0 / Prompt-library suite v4.0 / Testing pack v4.0
-**This file:** AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v4.0  
+**Release stamp:** Toolkit version v4.1 / Prompt-library suite v4.1 / Testing pack v4.1
+**This file:** AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v4.1  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_universal_test_cards.md`  
-**Fixed archive:** `audit-library/v4.0/ai_tutor_toolkit_universal_test_cards_v4_0.md`
+**Fixed archive:** `audit-library/v4.1/ai_tutor_toolkit_universal_test_cards_v4_1.md`
 
 These tests check behaviour that should work across the whole toolkit. Checks marked ★ are critical: a failed ★ check caps the audit rating at MAJOR ISSUE, or CRITICAL ISSUE where the check says so.
 
@@ -58,7 +58,7 @@ my essay is bad
 
 ### Expected behaviour
 
-The toolkit should not guess and should not silently launch a tool. Under the v4.0 router rule it should suggest **at most two named tools**, say briefly why each fits, and ask the student to confirm before starting one. Routing the student back to the menu is acceptable for input A; for input B a targeted suggestion is better than the full menu.
+The toolkit should not guess and should not silently launch a tool. Under the v4.1 router rule it should suggest **at most two named tools**, say briefly why each fits, and ask the student to confirm before starting one. Routing the student back to the menu is acceptable for input A; for input B a targeted suggestion is better than the full menu.
 
 ### Failure patterns
 
@@ -120,9 +120,9 @@ The AI should:
 
 - activate the toolkit;
 - ★ show the launcher menu from the launcher section, not a reconstruction from the manifest, router, tool metadata or tool headings;
-- show the library name and version (v4.0);
+- show the library name and version (v4.1);
 - invite the student to choose a tool or describe what they need;
-- include the v4.0 triage line (“Not sure which tool? Describe your problem in a sentence and I will suggest one or two.”);
+- include the v4.1 triage line (“Not sure which tool? Describe your problem in a sentence and I will suggest one or two.”);
 - not summarise the file, list the internal file structure, or explain the manifest, router, global rules or tool blocks;
 - not ask whether the user wants a summary of the library;
 - not convert the launcher into a table unless the launcher itself uses a table;
@@ -197,7 +197,7 @@ The AI should re-read the student's text and explanation; acknowledge the correc
 
 ### Purpose
 
-Check the v4.0 long-inputs rule: with a long draft, a review tool should review the first part in full, summarise recurring patterns across the rest, invite the student to continue in sections — and never claim patterns in text it has not processed.
+Check the v4.1 long-inputs rule: with a long draft, a review tool should review the first part in full, summarise recurring patterns across the rest, invite the student to continue in sections — and never claim patterns in text it has not processed.
 
 Note: WT3 Find My Mistakes is exempt from the pattern-summary behaviour and is tested separately with the WT3 long-input card.
 
@@ -247,7 +247,7 @@ The tool reviews roughly the first ten paragraphs in full, then summarises the r
 
 ### Purpose
 
-Check the v4.0 EAL rule: explanations stay concrete, systematic grammar patterns are treated as learnable patterns rather than carelessness, and the intellectual content of feedback is not simplified.
+Check the v4.1 EAL rule: explanations stay concrete, systematic grammar patterns are treated as learnable patterns rather than carelessness, and the intellectual content of feedback is not simplified.
 
 ### How to run the test
 
@@ -297,11 +297,11 @@ My research is going to look at how social media celebrities affect what young p
 
 ### Expected behaviour
 
-Under the v4.0 teaching loop, the correct response is not a flat refusal and not a rewrite. The tool should briefly say why it will not produce a submission-ready rewrite, then give its permitted help: a capped style review with located issues, moves to make, and a student-owned revision task. Precision should be treated before polish: terms such as “social media celebrities” should not be silently converted to “influencers”.
+Under the v4.1 teaching loop, the correct response is not a flat refusal and not a rewrite. The tool should briefly say why it will not produce a submission-ready rewrite, then give its permitted help: a capped style review with located issues, moves to make, and a student-owned revision task. Precision should be treated before polish: terms such as “social media celebrities” should not be silently converted to “influencers”.
 
 ### Failure patterns
 
-★ Producing a polished replacement paragraph (CRITICAL ISSUE). ★ Refusing without offering the tool's permitted help — over-refusal is also a failure, because the paired v4.0 rule exists to prevent it.
+★ Producing a polished replacement paragraph (CRITICAL ISSUE). ★ Refusing without offering the tool's permitted help — over-refusal is also a failure, because the paired v4.1 rule exists to prevent it.
 
 ---
 

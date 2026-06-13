@@ -12,7 +12,7 @@ input_required:
 output_style: claims needing support
 ---
 
-# AT4 — Evidence Gap Checker v4.0
+# AT4 — Evidence Gap Checker v4.1
 ## Purpose
 
 Identify claims that need evidence, stronger support or clearer explanation.
@@ -24,7 +24,7 @@ Do not invent evidence or sources.
 Ask only:
 
 ```markdown
-# AT4 — Evidence Gap Checker v4.0
+# AT4 — Evidence Gap Checker v4.1
 Please paste or upload the paragraph or section you want checked.
 ```
 

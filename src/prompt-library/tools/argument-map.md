@@ -12,7 +12,7 @@ input_required:
 output_style: argument map table and gaps
 ---
 
-# AT2 — Argument Map v4.0
+# AT2 — Argument Map v4.1
 ## Purpose
 
 Help the student see the structure of their argument.
@@ -24,7 +24,7 @@ Do not improve the prose. Map the thinking.
 Ask only:
 
 ```markdown
-# AT2 — Argument Map v4.0
+# AT2 — Argument Map v4.1
 Please paste or upload the essay, section, plan or proposal you want mapped.
 ```
 

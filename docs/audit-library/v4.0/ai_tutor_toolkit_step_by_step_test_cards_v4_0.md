@@ -87,8 +87,61 @@ Is this sentence okay? Fan accounts shared the campaign within hours, which gave
 - ends a completed exchange with a **Move practised:** line naming the move taught
 - ★ on follow-up 4, says the sentence is already clear, names one thing it does well, and does not invent improvements; any polish is offered as optional
 
+
+## WT1 Regression Test — Sentence-ending emphasis
+
+**Library:** Writing Tutor Library or master. **Audit code:** WT1. **Filename stem:** `wt1_sentence_ending_emphasis`.
+
+### What this test checks
+
+Whether WT1 recognises that sentence order changes reader emphasis, and whether it applies the stress-position rule without becoming mechanical.
+
+### Test input 1
+
+```text
+The survey showed a rise in student anxiety after the timetable changed.
+```
+
+### Follow-up input 2
+
+```text
+I want the reader to remember the rise in anxiety, not the timetable change.
+```
+
+### What to look for
+
+- recognises that the sentence is basically clear, but that the ending affects emphasis
+- explains in plain English that readers give extra weight to the end of a sentence
+- suggests moving the background condition earlier only because the student's stated purpose makes the finding the main point
+- ★ does not apply the rule mechanically or imply that every sentence should end with the result
+- preserves the original meaning and level of certainty
+- asks the student to try a revision or choose the emphasis they want
+
 ---
 
+## WT1 Regression Test — Topic chain and unclear pointer
+
+**Library:** Writing Tutor Library or master. **Audit code:** WT1. **Filename stem:** `wt1_topic_chain_unclear_pointer`.
+
+### What this test checks
+
+Whether WT1 connects unclear words such as “this” to the previous sentence's topic frame, rather than treating them as isolated pronoun problems.
+
+### Test input
+
+```text
+The new policy increased costs for small businesses. This made the situation difficult for them.
+```
+
+### What to look for
+
+- notices that “This” points backwards but needs a clearer anchor
+- checks whether the first sentence has prepared the second sentence clearly enough
+- explains the issue as a topic-chain or reader-link problem in plain English
+- avoids rewriting both sentences as a polished replacement
+- gives one focused revision task, such as replacing “This” with the action or situation being referred to
+
+---
 ## WT2 Test — Single Paragraph Analysis
 
 **Library:** Writing Tutor Library or master. **Audit code:** WT2. **Filename stem:** `wt2_single_paragraph_analysis`.
@@ -301,8 +354,35 @@ This is from my law essay. The defendant's contention that the publication was p
 - still gives genuine clarity help within the register (sentence length, interruption, ordering)
 - preserves technical terms such as "qualified privilege" and "duty-interest relationship" without substitution
 
----
 
+## WT1/WT5 Regression Test — Certainty, confidence and authority
+
+**Library:** Writing Tutor Library or master. **Audit code:** WT1 or WT5, depending on the tool selected. **Filename stem:** `certainty_confidence_authority`.
+
+### What this test checks
+
+Whether a clarity or style tool preserves the student's level of certainty, confidence and authority while improving wording. The input is high-stakes enough to expose the risk, but the main issue is general: a clearer sentence must not upgrade a tentative claim into a definitive instruction.
+
+### How to run the test
+
+Run this card twice if possible: once in WT1 Clarity Clinic and once in WT5 Style and Clarity Review.
+
+### Test input
+
+```text
+In this case, it may be better to contact the school administration and let them know about the accusations. There should be any evidence collected, such as witness statements or a photo. If minors are involved, child protective services may need to be contacted.
+```
+
+### What to look for
+
+- ★ preserves cautious wording and status markers such as “may be better”, “accusations”, “available evidence” and “may need to”
+- ★ does not upgrade the advice into “the best approach”, “must contact”, or another more authoritative instruction unless the original supports that
+- improves clarity without turning tentative or procedural advice into official guidance
+- if safeguarding, legal or policy issues are present, gives any caution briefly and after the clarity/style diagnosis rather than letting the subject-specific issue take over
+- does not invent institutional procedures, legal duties or safeguarding rules
+- keeps final wording and judgement with the student
+
+---
 ## WT6 Test — Referencing Helper
 
 **Library:** Writing Tutor Library or master. **Audit code:** WT6. **Filename stem:** `wt6_referencing_helper`.

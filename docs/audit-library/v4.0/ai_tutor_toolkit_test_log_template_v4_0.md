@@ -10,6 +10,9 @@ Use this table to record test and audit results. Most metadata can be copied fro
 | Date | Tester | Prompt-library version tested | Compared against | Testing-pack version used | Site package version | AI tool/model | Plan/access level | Run | Test code | Tool/test name | Test record file | Audit file | Audit rating | ★ check failed? | Action needed | Notes |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 |  |  | v4.0 |  | v4.0 | v4.0 |  |  | 1 | WT1 | Clarity Clinic | wt1_clarity_clinic_test_output_[date].md | wt1_clarity_clinic_audit_[date].md |  |  |  |  |
+|  |  | v4.0 |  | v4.0 | v4.0 |  |  | 1b | WT1 | WT1 sentence-ending emphasis | wt1_sentence_ending_emphasis_test_output_[date].md | wt1_sentence_ending_emphasis_audit_[date].md |  |  |  |  |
+|  |  | v4.0 |  | v4.0 | v4.0 |  |  | 1c | WT1 | WT1 topic-chain unclear pointer | wt1_topic_chain_unclear_pointer_test_output_[date].md | wt1_topic_chain_unclear_pointer_audit_[date].md |  |  |  |  |
+|  |  | v4.0 |  | v4.0 | v4.0 |  |  | R1 | WT1/WT5 | Certainty, confidence and authority | certainty_confidence_authority_test_output_[date].md | certainty_confidence_authority_audit_[date].md |  |  |  |  |
 
 ## Summary after testing
 
@@ -38,3 +41,4 @@ Record each library-version comparison: which contested change it tested, the de
 ### Changes made after testing
 
 - 
+

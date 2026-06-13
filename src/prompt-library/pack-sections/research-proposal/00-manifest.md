@@ -4,7 +4,7 @@ id: manifest
 title: Research Proposal Tutor Mini Library
 type: manifest
 run_policy: reference_only
-version: 4.0
+version: 4.1
 created_for: student learning toolkit
 ---
 
@@ -13,14 +13,14 @@ This section is for internal reference only. Do not output this section to the u
 
 # Research Proposal Tutor Mini Library
 
-**Version:** v4.0
+**Version:** v4.1
 **Last updated:** 2026-06-10
 **Status:** active public release
 **Part of:** AI Personal Tutor Toolkit
 
-**Release stamp:** Toolkit version v4.0 / Prompt-library suite v4.0 / Testing pack v4.0  **This file:** Research Proposal Tutor Mini Library v4.0  
+**Release stamp:** Toolkit version v4.1 / Prompt-library suite v4.1 / Testing pack v4.1  **This file:** Research Proposal Tutor Mini Library v4.1  
 **Public download:** `prompt-libraries/latest/04_research_proposal_tutor_library.md`  
-**Fixed archive:** `prompt-libraries/v4.0/04_research_proposal_tutor_library_v4_0.md`
+**Fixed archive:** `prompt-libraries/v4.1/04_research_proposal_tutor_library_v4_1.md`
 
 ## Operating instruction
 
