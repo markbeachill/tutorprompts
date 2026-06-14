@@ -25,20 +25,342 @@
 <!-- ************************************** -->
 <!-- ************************************** -->
 
-<section class="ai-chat-page" aria-label="Example chat">
-  <div class="ai-chat-window">
-    <div class="ai-chat-log">
-      <section class="ai-chat-turn ai-chat-chatbot ai-chat-turn--chatbot">
-        <div class="ai-chat-role">Chatbot</div>
-        <div class="ai-chat-bubble">
-          <h1>WT4 — Teach Me This Mistake</h1>
-          <p>Example to follow...</p>
-        </div>
-      </section>
-    </div>
-  </div>
-</section>
+<style>
+.ai-chat-page {
+  width: 100%;
+  background: #f6f7fb;
+  color: #172033;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.55;
+}
 
+.ai-chat-page,
+.ai-chat-page *,
+.ai-chat-page *::before,
+.ai-chat-page *::after {
+  box-sizing: border-box;
+}
+
+.ai-chat-page .ai-chat-window {
+  width: min(100%, 860px);
+  max-width: 860px;
+  margin-inline: auto;
+  margin-block: 0;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #d8dde7;
+  border-radius: 1rem;
+}
+
+.ai-chat-page .ai-chat-log {
+  display: grid;
+  gap: 1rem;
+}
+
+.ai-chat-page .ai-chat-turn {
+  display: grid;
+  gap: 0.35rem;
+  max-width: 85%;
+}
+
+.ai-chat-page .ai-chat-turn--user,
+.ai-chat-page .ai-chat-user {
+  justify-self: end;
+}
+
+.ai-chat-page .ai-chat-turn--chatbot,
+.ai-chat-page .ai-chat-chatbot {
+  justify-self: start;
+}
+
+.ai-chat-page .ai-chat-role {
+  color: #5f6b7a;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.ai-chat-page .ai-chat-bubble {
+  padding: 1rem;
+  border: 1px solid #d8dde7;
+  border-radius: 0.85rem;
+  overflow-wrap: anywhere;
+  color: inherit;
+}
+
+.ai-chat-page .ai-chat-turn--user .ai-chat-bubble,
+.ai-chat-page .ai-chat-user .ai-chat-bubble {
+  background: #e7f0ff;
+}
+
+.ai-chat-page .ai-chat-turn--chatbot .ai-chat-bubble,
+.ai-chat-page .ai-chat-chatbot .ai-chat-bubble {
+  background: #f4f6f9;
+}
+
+.ai-chat-page .ai-chat-bubble > :first-child {
+  margin-top: 0;
+}
+
+.ai-chat-page .ai-chat-bubble > :last-child {
+  margin-bottom: 0;
+}
+
+.ai-chat-page .ai-chat-bubble p {
+  margin: 0 0 0.7em;
+  color: inherit;
+}
+
+.ai-chat-page .ai-chat-bubble h1,
+.ai-chat-page .ai-chat-bubble h2,
+.ai-chat-page .ai-chat-bubble h3,
+.ai-chat-page .ai-chat-bubble h4,
+.ai-chat-page .ai-chat-bubble h5,
+.ai-chat-page .ai-chat-bubble h6 {
+  margin: 0.6em 0 0.4em;
+  line-height: 1.3;
+  color: inherit;
+  font-weight: 700;
+}
+
+.ai-chat-page .ai-chat-bubble h1 { font-size: 1.45em; }
+.ai-chat-page .ai-chat-bubble h2 { font-size: 1.3em; }
+.ai-chat-page .ai-chat-bubble h3 { font-size: 1.15em; }
+.ai-chat-page .ai-chat-bubble h4,
+.ai-chat-page .ai-chat-bubble h5,
+.ai-chat-page .ai-chat-bubble h6 { font-size: 1em; }
+
+.ai-chat-page .ai-chat-bubble strong,
+.ai-chat-page .ai-chat-bubble b {
+  color: inherit;
+  font-weight: 700;
+}
+
+.ai-chat-page .ai-chat-bubble em,
+.ai-chat-page .ai-chat-bubble i {
+  color: inherit;
+  font-style: italic;
+}
+
+.ai-chat-page .ai-chat-bubble ul,
+.ai-chat-page .ai-chat-bubble ol {
+  margin: 0 0 0.7em;
+  padding-left: 1.4em;
+  color: inherit;
+}
+
+.ai-chat-page .ai-chat-bubble ul {
+  list-style-type: disc;
+}
+
+.ai-chat-page .ai-chat-bubble ol {
+  list-style-type: decimal;
+}
+
+.ai-chat-page .ai-chat-bubble li {
+  display: list-item;
+  margin: 0.2em 0;
+  padding-left: 0;
+  color: inherit;
+}
+
+.ai-chat-page .ai-chat-bubble li::marker {
+  color: inherit;
+}
+
+.ai-chat-page .ai-chat-bubble blockquote {
+  margin: 0 0 0.7em;
+  padding: 0.65em 0.85em;
+  border-left: 4px solid #9aa3b2;
+  background: rgba(0, 0, 0, 0.04);
+  color: inherit;
+}
+
+.ai-chat-page .ai-chat-bubble blockquote > :first-child {
+  margin-top: 0;
+}
+
+.ai-chat-page .ai-chat-bubble blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.ai-chat-page .ai-chat-bubble a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.ai-chat-page .ai-chat-turn--chatbot .ai-chat-bubble a,
+.ai-chat-page .ai-chat-chatbot .ai-chat-bubble a {
+  color: #e7f0ff;
+}
+
+.ai-chat-page .ai-chat-bubble code {
+  font-family: "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: rgba(135, 144, 154, 0.18);
+  color: inherit;
+  padding: 0.12em 0.36em;
+  border-radius: 5px;
+}
+
+.ai-chat-page .ai-chat-turn--user .ai-chat-bubble code,
+.ai-chat-page .ai-chat-user .ai-chat-bubble code {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.ai-chat-page .ai-chat-bubble pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 0.65rem;
+  background: #111827;
+  color: #f9fafb;
+  margin: 0 0 0.7em;
+  font-family: "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace;
+}
+
+.ai-chat-page .ai-chat-bubble pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+  white-space: pre;
+  font-size: 0.88em;
+}
+
+.ai-chat-page .ai-chat-bubble table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 0.9em;
+  font-size: 0.92em;
+  color: inherit;
+}
+
+.ai-chat-page .ai-chat-bubble thead,
+.ai-chat-page .ai-chat-bubble tbody,
+.ai-chat-page .ai-chat-bubble tr {
+  color: inherit;
+}
+
+.ai-chat-page .ai-chat-bubble th,
+.ai-chat-page .ai-chat-bubble td {
+  border: 1.5px solid #9aa3b2;
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: top;
+  color: inherit;
+}
+
+.ai-chat-page .ai-chat-bubble th {
+  background: rgba(0, 0, 0, 0.04);
+  font-weight: 700;
+}
+
+.ai-chat-page .ai-chat-bubble img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 0 0 0.7em;
+}
+
+@media (max-width: 520px) {
+  .ai-chat-page .ai-chat-turn { max-width: 100%; }
+  .ai-chat-page .ai-chat-window { padding: 0.75rem; }
+}
+</style>
+
+<div class="ai-chat-page">
+  <div class="ai-chat-window">
+  <div class="ai-chat-log">
+    <section class="ai-chat-turn ai-chat-turn--user ai-chat-user">
+      <div class="ai-chat-role">User</div>
+      <div class="ai-chat-bubble">
+        <p>WT4</p>
+      </div>
+    </section>
+
+    <section class="ai-chat-turn ai-chat-turn--chatbot ai-chat-chatbot">
+      <div class="ai-chat-role">Chatbot</div>
+      <div class="ai-chat-bubble">
+        <p>Which mistake type would you like to practise first?</p>
+        <p>From your WT3 feedback, the main options are <strong>subject-verb agreement</strong>, <strong>clarity</strong>, <strong>word choice</strong>, or <strong>academic tone</strong>. I recommend starting with <strong>subject-verb agreement</strong>, because it was the most frequent pattern, or <strong>clarity</strong>, because it most affects meaning.</p>
+      </div>
+    </section>
+
+    <section class="ai-chat-turn ai-chat-turn--user ai-chat-user">
+      <div class="ai-chat-role">User</div>
+      <div class="ai-chat-bubble">
+        <p>yes the first one</p>
+      </div>
+    </section>
+
+    <section class="ai-chat-turn ai-chat-turn--chatbot ai-chat-chatbot">
+      <div class="ai-chat-role">Chatbot</div>
+      <div class="ai-chat-bubble">
+        <h1>WT4 — Teach Me This Mistake v4.0</h1>
+        <p>You chose <strong>subject-verb agreement</strong>.</p>
+        <p>This means the verb must match the subject. In your sentence, the problem appears twice:</p>
+        <table>
+        <thead>
+        <tr>
+        <th>Original phrase</th>
+        <th>Correction</th>
+        <th>Why</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>“This study <strong>show</strong>”</td>
+        <td>“This study <strong>shows</strong>”</td>
+        <td>“Study” is one thing, so the verb needs <strong>-s</strong>.</td>
+        </tr>
+        <tr>
+        <td>“it <strong>increase</strong>”</td>
+        <td>“it <strong>increases</strong>”</td>
+        <td>“It” is singular, so the verb needs <strong>-s</strong>.</td>
+        </tr>
+        </tbody>
+        </table>
+        <p>A simple pattern is:</p>
+        <blockquote>
+        <p>One thing → verb often takes <strong>-s</strong>
+        Many things → verb usually does <strong>not</strong> take <strong>-s</strong></p>
+        </blockquote>
+        <p><strong>Examples:</strong></p>
+        <blockquote>
+        <p>The study <strong>shows</strong> the impact of advertising.
+        The influencers <strong>show</strong> the impact of advertising.</p>
+        </blockquote>
+        <blockquote>
+        <p>The campaign <strong>increases</strong> engagement.
+        The campaigns <strong>increase</strong> engagement.</p>
+        </blockquote>
+        <blockquote>
+        <p>It <strong>affects</strong> consumer behaviour.
+        They <strong>affect</strong> consumer behaviour.</p>
+        </blockquote>
+        <p><strong>Practice task</strong></p>
+        <p>Choose the correct verb in each sentence:</p>
+        <ol>
+        <li>This essay <strong>explain / explains</strong> the role of digital media.</li>
+        <li>YouTubers <strong>promote / promotes</strong> products to online audiences.</li>
+        <li>The advertisement <strong>increase / increases</strong> consumer interest.</li>
+        <li>BTS and YouTubers <strong>influence / influences</strong> audience engagement.</li>
+        </ol>
+        <p>Reply with your answers, like this:</p>
+        <blockquote>
+        <ol>
+        <li>explains</li>
+        <li>...</li>
+        </ol>
+        </blockquote>
+        <p>Type <code>prompt</code> to return to the menu.</p>
+      </div>
+    </section>
+  </div>
+  </div>
+</div>
 <!-- ************************************** -->
 <!-- ************************************** -->
 <!-- END OF THE EXAMPLE CHAT -->
