@@ -364,6 +364,30 @@ pre code {
   font-size: inherit;
 }
 
+/* Source-material copy boxes: readable, scrollable and user-resizable.
+   These boxes may contain long source packs, so they should not expand to the
+   full document height by default. */
+.source-copy-box {
+  margin-top: 14px;
+  height: 260px;
+  min-height: 150px;
+  max-height: 70vh;
+  overflow: auto;
+  resize: vertical;
+  white-space: pre;
+  box-sizing: border-box;
+}
+.source-copy-box code {
+  display: block;
+  background: transparent !important;
+  color: inherit !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-size: inherit !important;
+  line-height: inherit;
+  white-space: pre;
+}
+
 .footer {
   padding: 34px 0 50px;
   color: var(--muted);

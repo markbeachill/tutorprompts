@@ -7,8 +7,27 @@
 <meta content="Copy-ready source material for testing and using AI Personal Tutor Toolkit tools." name="description"/>
 <link href="../style.css" rel="stylesheet"/><link href="../css/aichat.css" rel="stylesheet"/>
 <style>
-.source-card pre { margin-top: 14px; max-height: 520px; }
 .source-card h2 { margin-top: 0; }
+.source-copy-box {
+  margin-top: 14px;
+  height: 260px;
+  min-height: 150px;
+  max-height: 70vh;
+  overflow: auto;
+  resize: vertical;
+  white-space: pre;
+  box-sizing: border-box;
+}
+.source-copy-box code {
+  display: block;
+  background: transparent !important;
+  color: inherit !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-size: inherit !important;
+  line-height: inherit;
+  white-space: pre;
+}
 </style>
 </head>
 <body class="reference">
@@ -30,7 +49,7 @@
 <p class="small-note"><strong>AT8</strong> — Source Reliability Checker · Academic Thinking Tutor</p>
 <p>Use when testing whether the tutor distinguishes preliminary reliability signals from a full literature review.</p>
 <div class="btn-row"><button class="button" onclick="copyBox('sourcebox1',this)">Copy source text</button><a class="button secondary" download href="latest/at8-source-reliability-set.md">Download Markdown</a></div>
-<pre id="sourcebox1"><code># AT8 source reliability practice set
+<pre id="sourcebox1" class="source-copy-box" tabindex="0"><code># AT8 source reliability practice set
 
 ## Student topic
 
@@ -54,7 +73,7 @@ Which of these sources look most reliable for an academic assignment, and what s
 <p class="small-note"><strong>ST2</strong> — Whole-Work Structure Review · Structure Tutor</p>
 <p>Use when testing whether the tutor diagnoses order, balance and missing links without writing a new essay plan for the student.</p>
 <div class="btn-row"><button class="button" onclick="copyBox('sourcebox2',this)">Copy source text</button><a class="button secondary" download href="latest/st2-structure-balance-sample.md">Download Markdown</a></div>
-<pre id="sourcebox2"><code># ST2 structure balance sample plan
+<pre id="sourcebox2" class="source-copy-box" tabindex="0"><code># ST2 structure balance sample plan
 
 ## Essay question
 
@@ -81,7 +100,7 @@ Does this structure work, or does it need a different order?
 <p class="small-note"><strong>ST4</strong> — Reverse Outline Mapper · Structure Tutor</p>
 <p>Use when testing whether the tutor maps what each paragraph currently does without rewriting the draft.</p>
 <div class="btn-row"><button class="button" onclick="copyBox('sourcebox3',this)">Copy source text</button><a class="button secondary" download href="latest/st4-reverse-outline-sample-draft.md">Download Markdown</a></div>
-<pre id="sourcebox3"><code># ST4 reverse outline sample draft
+<pre id="sourcebox3" class="source-copy-box" tabindex="0"><code># ST4 reverse outline sample draft
 
 ## Assignment focus
 
@@ -105,7 +124,7 @@ Overall, influencer marketing has changed the relationship between brands and yo
 <p class="small-note"><strong>WT7</strong> — Paraphrase and Quotation Workshop · Writing Tutor</p>
 <p>Use when testing whether a student paraphrase is too close, accurately attributed and safely integrated.</p>
 <div class="btn-row"><button class="button" onclick="copyBox('sourcebox4',this)">Copy source text</button><a class="button secondary" download href="latest/wt7-paraphrase-quotation-practice.md">Download Markdown</a></div>
-<pre id="sourcebox4"><code># WT7 paraphrase and quotation practice source
+<pre id="sourcebox4" class="source-copy-box" tabindex="0"><code># WT7 paraphrase and quotation practice source
 
 ## Source extract
 

@@ -150,7 +150,7 @@ def item_card(item: SourceItem, index: int) -> str:
 <p class="small-note"><strong>{html.escape(item.tool_code)}</strong> — {html.escape(item.tool_title)} · {html.escape(item.category)}</p>
 <p>{html.escape(item.use_when)}</p>
 <div class="btn-row"><button class="button" onclick="copyBox('{pre_id}',this)">Copy source text</button><a class="button secondary" download href="latest/{html.escape(item.output_path.name)}">Download Markdown</a></div>
-<pre id="{pre_id}"><code>{escaped_body}</code></pre>
+<pre id="{pre_id}" class="source-copy-box" tabindex="0"><code>{escaped_body}</code></pre>
 </article>'''
 
 
@@ -165,8 +165,27 @@ def build_index_html(items: Sequence[SourceItem]) -> str:
 <meta content="Copy-ready source material for testing and using AI Personal Tutor Toolkit tools." name="description"/>
 <link href="../style.css" rel="stylesheet"/><link href="../css/aichat.css" rel="stylesheet"/>
 <style>
-.source-card pre {{ margin-top: 14px; max-height: 520px; }}
 .source-card h2 {{ margin-top: 0; }}
+.source-copy-box {{
+  margin-top: 14px;
+  height: 260px;
+  min-height: 150px;
+  max-height: 70vh;
+  overflow: auto;
+  resize: vertical;
+  white-space: pre;
+  box-sizing: border-box;
+}}
+.source-copy-box code {{
+  display: block;
+  background: transparent !important;
+  color: inherit !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-size: inherit !important;
+  line-height: inherit;
+  white-space: pre;
+}}
 </style>
 </head>
 <body class="reference">

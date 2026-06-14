@@ -143,6 +143,28 @@ Academic Thinking Tutor
 
 A short explanation of when a tutor, teacher or tester should use the source material.
 
+
+## Source box display behaviour
+
+The public copy boxes are intentionally compact so the index can hold more source material over time.
+
+Each generated source card uses:
+
+```html
+<pre class="source-copy-box"><code>...</code></pre>
+```
+
+The CSS gives the box:
+
+```text
+- a readable dark code-block style
+- vertical and horizontal scrollbars when content overflows
+- a shorter default height of about 260px
+- a vertical resize handle so a user can make the box taller while reading
+```
+
+The source text itself is still copied in full by the **Copy source text** button, even when only part of it is visible inside the scrollable box.
+
 ## How the source material page is built
 
 The generator script is:
