@@ -25,19 +25,88 @@
 <!-- ************************************** -->
 <!-- ************************************** -->
 
-<section class="ai-chat-page" aria-label="Example chat">
+<div class="ai-chat-page">
   <div class="ai-chat-window">
-    <div class="ai-chat-log">
-      <section class="ai-chat-turn ai-chat-chatbot ai-chat-turn--chatbot">
-        <div class="ai-chat-role">Chatbot</div>
-        <div class="ai-chat-bubble">
-          <h1>WT7 — Paraphrase and Quotation Workshop</h1>
-          <p>Example to follow...</p>
-        </div>
-      </section>
-    </div>
+  <div class="ai-chat-log">
+    <section class="ai-chat-turn ai-chat-turn--chatbot ai-chat-chatbot">
+      <div class="ai-chat-role">Chatbot</div>
+      <div class="ai-chat-bubble">
+        <h1>WT7 — Paraphrase and Quotation Workshop v4.1</h1>
+        <p>Which situation are you in?</p>
+        <ol>
+        <li>I already have a paragraph and want to check whether my source use is safe.</li>
+        <li>I have a paragraph and want to add a source or quote.</li>
+        <li>I have a quote and need help integrating it.</li>
+        <li>I have a paraphrase attempt and want to check whether it is too close.</li>
+        <li>I am not sure what counts as quote, paraphrase or plagiarism risk.</li>
+        </ol>
+        <p>Paste the relevant paragraph, quote, source extract or attempt. If closeness or accuracy needs checking, include the original source extract too.</p>
+      </div>
+    </section>
+
+    <section class="ai-chat-turn ai-chat-turn--user ai-chat-user">
+      <div class="ai-chat-role">User</div>
+      <div class="ai-chat-bubble">
+        <p>I have this source extract and my attempt to use it. Please check whether this is safe paraphrase or quotation use.
+        Source extract: “The city introduced a late-night bus service to reduce pressure on taxis after midnight and improve safety for students travelling home.”
+        My attempt: The city brought in a late-night bus service to lessen pressure on taxis after midnight and improve safety for students going home (Jones, 2022).</p>
+      </div>
+    </section>
+
+    <section class="ai-chat-turn ai-chat-turn--chatbot ai-chat-chatbot">
+      <div class="ai-chat-role">Chatbot</div>
+      <div class="ai-chat-bubble">
+        <p><strong>Source extract:</strong></p>
+        <blockquote>
+        <p>“The city introduced a late-night bus service to reduce pressure on taxis after midnight and improve safety for students travelling home.”</p>
+        </blockquote>
+        <p><strong>Your attempt:</strong></p>
+        <blockquote>
+        <p>The city brought in a late-night bus service to lessen pressure on taxis after midnight and improve safety for students going home (Jones, 2022).</p>
+        </blockquote>
+        <p><strong>Closeness, quotation status and accuracy check</strong></p>
+        <p>This is <strong>not a safe paraphrase yet</strong>. It has a citation, which is good, but the wording and sentence structure are still too close to the source. The sentence mainly swaps a few words: “introduced” becomes “brought in”, “reduce” becomes “lessen”, and “travelling home” becomes “going home”. The order and shape of the source sentence stay almost the same.</p>
+        <table>
+        <thead>
+        <tr>
+        <th>Source wording</th>
+        <th>Student wording</th>
+        <th>Why this is a problem</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>“introduced a late-night bus service”</td>
+        <td>“brought in a late-night bus service”</td>
+        <td>Very close wording and same structure.</td>
+        </tr>
+        <tr>
+        <td>“to reduce pressure on taxis after midnight”</td>
+        <td>“to lessen pressure on taxis after midnight”</td>
+        <td>Mainly a synonym swap.</td>
+        </tr>
+        <tr>
+        <td>“improve safety for students travelling home”</td>
+        <td>“improve safety for students going home”</td>
+        <td>Mostly copied structure with small wording changes.</td>
+        </tr>
+        </tbody>
+        </table>
+        <p><strong>Plagiarism risk</strong></p>
+        <p>This is a <strong>patchwriting risk</strong>: the citation shows where the idea came from, but the source’s wording and structure are still doing too much of the work. A paraphrase needs to express the idea in your own sentence structure, not just change individual words.</p>
+        <p><strong>Quote or paraphrase decision</strong></p>
+        <p>You have two safe options:</p>
+        <p>If the exact wording matters, use it as a direct quotation with quotation marks and a citation.</p>
+        <p>If the idea matters more than the exact wording, write a fuller paraphrase in your own structure. Put the source away first, explain the point from memory, then check back to make sure you have not changed the meaning.</p>
+        <p><strong>Your next task</strong></p>
+        <p>Put the source away and write the point from memory in one sentence. Try to answer: What did the city do, why did it do it, and who was meant to benefit?</p>
+        <p>Paste your revised attempt here and I will check whether it is far enough from the source while still accurate.</p>
+        <p>Type <code>prompt</code> to return to the menu, paste a revised attempt for checking, or say <code>create md</code> for a clean Markdown version.</p>
+      </div>
+    </section>
   </div>
-</section>
+  </div>
+</div>
 
 <!-- ************************************** -->
 <!-- ************************************** -->

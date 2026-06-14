@@ -123,6 +123,7 @@
       "mini_manifest_description": "check paraphrases, quotations, attribution and source integration without writing the source-use sentence for the student",
       "launcher_description": "check whether a paraphrase or quotation is accurate, safely credited and integrated into your writing.",
       "included_in_packs": [
+        "master",
         "writing-tutor"
       ],
       "single_tool_output": "docs/prompt-libraries/single-tools/wt7_paraphrase_and_quotation_workshop.md"
