@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
@@ -7,24 +6,31 @@
 <title>Customising prompt libraries | AI Personal Tutor Toolkit</title>
 <meta content="Developer guidance for customising AI Personal Tutor Toolkit prompt libraries." name="description"/>
 <link href="../style.css" rel="stylesheet"/>
+<link href="../css/aichat.css" rel="stylesheet"/>
 </head>
 <body>
 <header><div class="container nav"><a class="brand" href="../index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="../index.html">Home</a></li><li><a href="../tools/">Tools</a></li><li><a href="../examples/">Examples</a></li><li><a href="../student-help/">Student Help</a></li><li><a href="./">Guides</a></li></ul></nav></div></header>
 <main>
-<article class="reading"><header class="page-intro"><p class="kicker">Developer guide</p><h1>Customising prompt libraries</h1><p class="lead">A pointer to developer notes for building smaller or locally tailored prompt libraries without weakening the core tutor-not-ghost-writer design.</p></header><section>
+<section class="hero"><div class="container"><p class="kicker">Developer guide</p><h1>Customising prompt libraries</h1><p class="lead">A pointer to developer notes for building smaller or locally tailored prompt libraries without weakening the core tutor-not-ghost-writer design.</p></div></section>
+<div class="container">
+<section class="panel">
 <h2>Most users should not edit the toolkit files</h2>
 <p>Most students should use the official toolkit files without editing them. The public mini libraries and master library are the recommended downloads for ordinary student use.</p>
 <p>Customising is mainly for developers, teachers, departments and confident users who want to create a smaller or locally tailored version for a specific context.</p>
-</section><section>
+</section>
+<section class="panel">
 <h2>Recommended customising method</h2>
 <p>The recommended interim method is to start from the master library and delete down: copy the master file, remove the tools you do not need, keep the shared scaffolding, trim the menu and router so they match, and add local rules in one place.</p>
 <p>This approach avoids duplicating files at the repository root and keeps customised versions closer to the official toolkit structure.</p>
-</section><section>
+</section>
+<section class="panel">
 <h2>Open the developer notes</h2>
 <p>The repository includes two root-level developer files:</p>
-<p><a href="https://github.com/markbeachill/tutorprompts/blob/main/PROMPTS.md" rel="noopener noreferrer" target="_blank">PROMPTS.md</a> explains where the prompt files live and how the libraries are structured.</p>
-<p><a href="https://github.com/markbeachill/tutorprompts/blob/main/CUSTOMISING_PROMPTS.md" rel="noopener noreferrer" target="_blank">CUSTOMISING_PROMPTS.md</a> explains how to build a smaller custom library from the master library.</p>
-</section><section><h2>Why this page is brief</h2><p>This page is intentionally brief. The detailed customisation guidance is kept in the GitHub repository so developers and departments can work from the current prompt-library files.</p></section></article>
+<p><a href="https://github.com/markbeachill/tutorprompts/blob/main/PROMPTS.md" target="_blank" rel="noopener noreferrer">PROMPTS.md</a> explains where the prompt files live and how the libraries are structured.</p>
+<p><a href="https://github.com/markbeachill/tutorprompts/blob/main/CUSTOMISING_PROMPTS.md" target="_blank" rel="noopener noreferrer">CUSTOMISING_PROMPTS.md</a> explains how to build a smaller custom library from the master library.</p>
+</section>
+<section class="panel"><h2>Why this page is brief</h2><p>This page is intentionally brief. The detailed customisation guidance is kept in the GitHub repository so developers and departments can work from the current prompt-library files.</p></section>
+</div>
 </main>
 <footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="../testing.html">Testing</a> | <a href="../changelog/">Changelog</a> | <a href="teaching-approach.html">Teaching approach</a> | <a href="../about.html">About this site</a></p></div></footer>
 </body>
