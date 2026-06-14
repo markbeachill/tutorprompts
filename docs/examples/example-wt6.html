@@ -25,19 +25,81 @@
 <!-- ************************************** -->
 <!-- ************************************** -->
 
-<section class="ai-chat-page" aria-label="Example chat">
+<div class="ai-chat-page">
   <div class="ai-chat-window">
-    <div class="ai-chat-log">
-      <section class="ai-chat-turn ai-chat-chatbot ai-chat-turn--chatbot">
-        <div class="ai-chat-role">Chatbot</div>
-        <div class="ai-chat-bubble">
-          <h1>WT6 — Referencing Helper</h1>
-          <p>Example to follow...</p>
-        </div>
-      </section>
-    </div>
+  <div class="ai-chat-log">
+    <section class="ai-chat-turn ai-chat-turn--chatbot ai-chat-chatbot">
+      <div class="ai-chat-role">Chatbot</div>
+      <div class="ai-chat-bubble">
+        <h1>WT6 — Referencing Helper v4.0</h1>
+        <p>Please paste or upload the source details, links, citations or draft reference list you want checked.</p>
+        <p>You can also paste both your in-text citations or full text and your reference list, and I will cross-check them for mismatches.</p>
+        <p>If you know your course referencing guide, include it. If not, say <code>use the toolkit house style</code>.</p>
+      </div>
+    </section>
+
+    <section class="ai-chat-turn ai-chat-turn--user ai-chat-user">
+      <div class="ai-chat-role">User</div>
+      <div class="ai-chat-bubble">
+        <p>Here is my text and my reference list. Can you cross-check them?</p>
+        <p>Text extract: Netnography offers one route into fan communities (Kozinets, 2002). Marketing communications research has long debated authenticity (Hackley, 2003), and these debates now extend to influencer disclosure.</p>
+        <p>Reference list:
+        Kozinets, R. (2012) 'The field behind the screen', Journal of Marketing Research.
+        Jones, S., Patel, R. and Lim, K. (2015) Digital Discourse. London: Routledge.</p>
+      </div>
+    </section>
+
+    <section class="ai-chat-turn ai-chat-turn--chatbot ai-chat-chatbot">
+      <div class="ai-chat-role">Chatbot</div>
+      <div class="ai-chat-bubble">
+        <p>I’ll cross-check the matching first, because that does not depend much on your institution’s exact Harvard variant. I’ll avoid treating any final reference format as definitive until you choose a guide or house style.</p>
+      </div>
+    </section>
+
+    <section class="ai-chat-turn ai-chat-turn--chatbot ai-chat-chatbot">
+      <div class="ai-chat-role">Chatbot</div>
+      <div class="ai-chat-bubble">
+        <h1>In-text and reference-list cross-check</h1>
+        <p>You have not specified your course referencing guide or said <code>use the toolkit house style</code>, so I am <strong>not treating this as a final Harvard-formatted reference list</strong>. I can still cross-check citation/reference matching, which WT6 asks me to do when both in-text citations and a reference list are provided.</p>
+        <table>
+        <thead>
+        <tr>
+        <th>In-text citation</th>
+        <th>Reference list entry</th>
+        <th>Mismatch</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Kozinets, 2002</td>
+        <td>Kozinets, R. (2012) 'The field behind the screen', <em>Journal of Marketing Research</em>.</td>
+        <td><strong>Date mismatch.</strong> Your text cites 2002, but the reference list says 2012. If this is the well-known netnography article, it was first published in 2002 in <em>Journal of Marketing Research</em>, volume 39, issue 1, with the longer title <em>The Field behind the Screen: Using Netnography for Marketing Research in Online Communities</em>. (<a href="https://journals.sagepub.com/doi/10.1509/jmkr.39.1.61.18935?utm_source=chatgpt.com">journals.sagepub.com</a>)</td>
+        </tr>
+        <tr>
+        <td>Hackley, 2003</td>
+        <td>No matching entry</td>
+        <td><strong>Missing from reference list.</strong> Add the Hackley source you actually used. Be careful: there may be more than one possible Hackley source around this period, so check the exact title, year and publisher rather than guessing.</td>
+        </tr>
+        <tr>
+        <td>No in-text citation</td>
+        <td>Jones, S., Patel, R. and Lim, K. (2015) <em>Digital Discourse</em>. London: Routledge.</td>
+        <td><strong>Listed but not cited.</strong> Either cite Jones, Patel and Lim in the text, or remove this from the reference list if you did not use it.</td>
+        </tr>
+        </tbody>
+        </table>
+        <h1>Details needing checking</h1>
+        <p>The <strong>Kozinets</strong> entry needs checking and probably correcting. It is missing fuller article details such as full title, volume, issue, page range and DOI. The publisher page confirms the 2002 article details and DOI, so use that to rebuild the reference according to your required Harvard guide. (<a href="https://journals.sagepub.com/doi/10.1509/jmkr.39.1.61.18935?utm_source=chatgpt.com">journals.sagepub.com</a>)</p>
+        <p>The <strong>Hackley</strong> citation needs a full matching reference. I would not assume the source from “Hackley, 2003” alone. For example, Taylor &amp; Francis lists <em>Marketing and Social Construction: Exploring the Rhetorics of Managed Consumption</em> by Chris Hackley, with first publication in 2001 and ebook publication in 2003; Royal Holloway lists that book as 2001. That means you need to check which Hackley text your citation actually refers to. (<a href="https://www.taylorfrancis.com/books/mono/10.4324/9780203360996/marketing-social-construction-chris-hackley?utm_source=chatgpt.com">taylorfrancis.com</a>)</p>
+        <h1>Your next move</h1>
+        <p>Please reply with either your university/course Harvard guide or <code>use the toolkit house style</code>. Then I can help you rebuild the corrected reference list.</p>
+        <p>Harvard style varies. Check these against your university's referencing guide before submission.</p>
+        <p>Would you like this as a clean Markdown file or Markdown-ready version? If yes, say <code>create md</code>.</p>
+        <p>Type <code>prompt</code> to return to the menu.</p>
+      </div>
+    </section>
   </div>
-</section>
+  </div>
+</div>
 
 <!-- ************************************** -->
 <!-- ************************************** -->
