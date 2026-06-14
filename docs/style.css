@@ -353,6 +353,17 @@ pre {
   overflow: auto;
 }
 
+/* Keep code inside copy/test blocks readable.
+   The global inline-code rule gives <code> a pale background; without this
+   reset, text inside dark <pre><code> blocks can become hard to read. */
+pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+}
+
 .footer {
   padding: 34px 0 50px;
   color: var(--muted);

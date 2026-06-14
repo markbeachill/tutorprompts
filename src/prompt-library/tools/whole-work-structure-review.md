@@ -2,10 +2,10 @@
 ---
 id: whole-work-structure-review
 tool_code: ST2
-master_number: 8
+master_number: 9
 title: Whole-Work Structure Review
 type: tool
-menu_number: 8
+menu_number: 9
 run_policy: selected_only
 input_required:
   - whole draft or substantial section

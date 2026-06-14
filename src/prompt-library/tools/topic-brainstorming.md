@@ -2,10 +2,10 @@
 ---
 id: topic-brainstorming
 tool_code: RP5
-master_number: 24
+master_number: 26
 title: Guided Topic Brainstorming
 type: tool
-menu_number: 24
+menu_number: 26
 run_policy: selected_only
 input_required:
   - broad area of interest, module, level, constraints, or assignment type

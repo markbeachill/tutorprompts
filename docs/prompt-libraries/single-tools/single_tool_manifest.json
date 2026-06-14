@@ -3,7 +3,7 @@
   "toolkit_version": "4.1",
   "prompt_library_version": "4.1",
   "release_date": "2026-06-13",
-  "pack_count": 28,
+  "pack_count": 29,
   "packs": [
     {
       "code": "WT1",
@@ -94,6 +94,15 @@
       "family_label": "Structure Tutor tools",
       "generated_file": "st3_expert_meaning_review.md",
       "pack_title": "ST3 — Expert Meaning Review Single-Tool Pack"
+    },
+    {
+      "code": "ST4",
+      "id": "reverse-outline-mapper",
+      "title": "Reverse Outline Mapper",
+      "family": "structure-tutor",
+      "family_label": "Structure Tutor tools",
+      "generated_file": "st4_reverse_outline_mapper.md",
+      "pack_title": "ST4 — Reverse Outline Mapper Single-Tool Pack"
     },
     {
       "code": "AT1",

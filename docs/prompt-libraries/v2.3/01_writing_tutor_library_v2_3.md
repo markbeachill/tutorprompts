@@ -53,7 +53,7 @@ Outputs are in Markdown by default.
 | 1 | WT1 | clarity-clinic | Clarity Clinic | improve one sentence, a few sentences, or one paragraph |
 | 2 | WT2 | single-paragraph-analysis | Single Paragraph Analysis | analyse one paragraph for chain of ideas, missing links, topic sentence alignment and practical revision |
 | 3 | WT3 | find-mistakes | Find My Mistakes | identify grammar, logic, clarity, factual, spelling, punctuation and referencing problems |
-| 4 | WT4 | teach-mistake | Teach Me This Mistake | learn from mistakes identified by Find My Mistakes |
+| 4 | WT4 | teach-mistake | Teach Me This Mistake | learn from WT3 mistakes through a micro-lesson or tutor lesson builder |
 | 5 | WT5 | style-clarity-review | Style and Clarity Review | improve readability, tone and style without rewriting the assignment |
 | 6 | WT6 | referencing-helper | Referencing Helper | create or check Harvard-style references carefully |
 
@@ -363,7 +363,7 @@ For lecturers, tutors, supervisors, and others supporting students: be especiall
 1. **WT1 — Clarity Clinic** — improve one sentence, a few sentences, or one paragraph.
 2. **WT2 — Single Paragraph Analysis** — analyse one paragraph for chain of ideas, missing links, topic sentence alignment and practical revision.
 3. **WT3 — Find My Mistakes** — identify grammar, logic, clarity, factual, spelling, punctuation and referencing problems.
-4. **WT4 — Teach Me This Mistake** — learn from mistakes identified by Find My Mistakes.
+4. **WT4 — Teach Me This Mistake** — learn from WT3 mistakes through a micro-lesson or tutor lesson builder.
 5. **WT5 — Style and Clarity Review** — improve readability, tone and style without rewriting the assignment.
 6. **WT6 — Referencing Helper** — create or check Harvard-style references carefully.
 

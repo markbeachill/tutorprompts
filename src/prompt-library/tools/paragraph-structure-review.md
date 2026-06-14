@@ -4,8 +4,8 @@ id: paragraph-structure-review
 tool_code: ST1
 title: Paragraph Structure Review Across a Whole Draft
 type: tool
-menu_number: 7
-master_number: 7
+menu_number: 8
+master_number: 8
 run_policy: selected_only
 input_required:
   - student writing

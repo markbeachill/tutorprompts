@@ -30,6 +30,12 @@ jobs:
       - name: Run audit/testing pack generator checks
         run: python scripts/build_audit_pack.py --ci
 
+      - name: Check generated site data
+        run: python scripts/build_site_data.py --check
+
+      - name: Check generated source material
+        run: python scripts/build_source_material_library.py --check
+
       - name: Run release consistency check
         run: python scripts/release_consistency_check.py --fail-on-problems
 

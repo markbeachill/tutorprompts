@@ -2,10 +2,10 @@
 ---
 id: ai-use-record
 tool_code: SW3
-master_number: 27
+master_number: 29
 title: AI-Use Record
 type: tool
-menu_number: 27
+menu_number: 29
 run_policy: selected_only
 input_required:
   - description of AI use or chat history summary

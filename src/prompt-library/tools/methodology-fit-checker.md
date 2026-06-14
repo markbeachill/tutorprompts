@@ -2,10 +2,10 @@
 ---
 id: methodology-fit-checker
 tool_code: RP2
-master_number: 21
+master_number: 23
 title: Methodology Fit Checker
 type: tool
-menu_number: 21
+menu_number: 23
 run_policy: selected_only
 input_required:
   - research question or aim

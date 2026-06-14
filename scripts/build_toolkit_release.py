@@ -111,11 +111,9 @@ def build_commands(plan: ReleasePlan) -> list[list[str]]:
         if plan.testing_pack_version:
             commands[-1].extend(["--testing-pack-version", normalise_version(plan.testing_pack_version) or plan.testing_pack_version])
 
-    build_cmd = [python, "scripts/build_prompt_libraries.py"]
+    build_cmd = [python, "scripts/build_prompt_libraries.py", "--include-single-tools"]
     if plan.include_custom:
         build_cmd.append("--include-custom")
-    if plan.include_single_tools:
-        build_cmd.append("--include-single-tools")
     commands.append(build_cmd)
     commands.append([python, "scripts/build_audit_pack.py"])
 
@@ -123,6 +121,8 @@ def build_commands(plan: ReleasePlan) -> list[list[str]]:
     commands.append([python, "scripts/build_audit_pack.py", "--ci"])
     commands.append([python, "scripts/build_site_data.py"])
     commands.append([python, "scripts/build_site_data.py", "--check"])
+    commands.append([python, "scripts/build_source_material_library.py"])
+    commands.append([python, "scripts/build_source_material_library.py", "--check"])
     commands.append([python, "scripts/release_consistency_check.py", "--fail-on-problems"])
 
     if plan.draft_notes:

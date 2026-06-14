@@ -190,7 +190,7 @@ Choose one option, or describe what you need.
 
 1. **WT1 — Clarity Clinic** — improve one sentence, a few sentences, or one paragraph.
 2. **WT3 — Find My Mistakes** — identify grammar, logic, clarity, factual, spelling, punctuation and referencing problems.
-3. **WT4 — Teach Me This Mistake** — learn from mistakes identified by Find My Mistakes.
+3. **WT4 — Teach Me This Mistake** — learn from WT3 mistakes through a micro-lesson or tutor lesson builder.
 4. **WT5 — Style and Clarity Review** — improve readability, tone and style without rewriting the assignment.
 5. **SW1 — Revision Plan** — turn feedback into a revision plan.
 

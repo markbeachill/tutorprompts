@@ -30,6 +30,7 @@ python scripts/build_prompt_libraries.py --include-single-tools --check
 | ST1 | Paragraph Structure Review Across a Whole Draft | Structure Tutor tools | `st1_paragraph_structure_review_across_a_whole_draft.md` |
 | ST2 | Whole-Work Structure Review | Structure Tutor tools | `st2_whole_work_structure_review.md` |
 | ST3 | Expert Meaning Review | Structure Tutor tools | `st3_expert_meaning_review.md` |
+| ST4 | Reverse Outline Mapper | Structure Tutor tools | `st4_reverse_outline_mapper.md` |
 | AT1 | Assignment Brief Checker | Academic Thinking tools | `at1_assignment_brief_checker.md` |
 | AT2 | Argument Map | Academic Thinking tools | `at2_argument_map.md` |
 | AT3 | Descriptive vs Analytical Check | Academic Thinking tools | `at3_descriptive_vs_analytical_check.md` |

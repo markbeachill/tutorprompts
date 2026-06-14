@@ -2,10 +2,10 @@
 ---
 id: critical-supervisor-review
 tool_code: RP3
-master_number: 22
+master_number: 24
 title: Critical Research Supervisor Review
 type: tool
-menu_number: 22
+menu_number: 24
 run_policy: selected_only
 input_required:
   - dissertation proposal or research proposal

@@ -2,10 +2,10 @@
 ---
 id: viva-practice
 tool_code: RP4
-master_number: 23
+master_number: 25
 title: Viva or Supervisor Practice
 type: tool
-menu_number: 23
+menu_number: 25
 run_policy: selected_only
 input_required:
   - proposal, argument, essay plan or research idea

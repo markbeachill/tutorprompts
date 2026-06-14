@@ -2,10 +2,10 @@
 ---
 id: revision-plan
 tool_code: SW1
-master_number: 25
+master_number: 27
 title: Revision Plan
 type: tool
-menu_number: 25
+menu_number: 27
 run_policy: selected_only
 input_required:
   - feedback, draft, review output, or student concerns

@@ -2,10 +2,10 @@
 ---
 id: concept-clarity-checker
 tool_code: AT5
-master_number: 14
+master_number: 16
 title: Concept Clarity Checker
 type: tool
-menu_number: 14
+menu_number: 16
 run_policy: selected_only
 input_required:
   - student writing

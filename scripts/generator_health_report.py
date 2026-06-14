@@ -47,6 +47,7 @@ EXPECTED_SCRIPTS = [
     "scripts/prepare_toolkit_release.py",
     "scripts/build_toolkit_release.py",
     "scripts/build_site_data.py",
+    "scripts/build_source_material_library.py",
     "scripts/build_audit_pack.py",
     "scripts/generator_health_report.py",
     "scripts/release_consistency_check.py",
@@ -66,6 +67,7 @@ EXPECTED_SITE_DATA_FILES = [
     "docs/data/release.json",
     "docs/data/tool_index.json",
     "docs/data/prompt_library_packs.json",
+    "docs/data/source_material_index.json",
 ]
 
 EXPECTED_AUDIT_FILES = [

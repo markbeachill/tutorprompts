@@ -2,10 +2,10 @@
 ---
 id: expert-meaning-review
 tool_code: ST3
-master_number: 9
+master_number: 10
 title: Expert Meaning Review
 type: tool
-menu_number: 9
+menu_number: 10
 run_policy: selected_only
 input_required:
   - student writing

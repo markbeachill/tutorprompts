@@ -2,10 +2,10 @@
 ---
 id: source-reliability-checker
 tool_code: AT8
-master_number: 17
+master_number: 19
 title: Source Reliability Checker
 type: tool
-menu_number: 17
+menu_number: 19
 run_policy: selected_only
 input_required:
   - source list, links, bibliography, or source details

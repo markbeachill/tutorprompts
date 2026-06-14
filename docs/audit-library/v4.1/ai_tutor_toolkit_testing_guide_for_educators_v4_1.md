@@ -37,9 +37,9 @@ The toolkit has two broad kinds of tool. They should not be audited in the same 
 
 ### Interactive tutoring tools
 
-Examples: WT1 Clarity Clinic, WT4 Teach Me This Mistake, AT10 Socratic Tutor, RP4 Viva Practice and RP5 Guided Topic Brainstorming.
+Examples: WT1 Clarity Clinic, WT4 Teach Me This Mistake in student micro-lesson mode, AT10 Socratic Tutor, RP4 Viva Practice and RP5 Guided Topic Brainstorming.
 
-These should keep the student active. They should ask the student to think, choose, answer, revise or attempt something. They should not give polished final wording too early.
+These should keep the student active. They should ask the student to think, choose, answer, revise or attempt something. They should not give polished final wording too early. WT4 tutor lesson-builder mode is an exception: it may include copy-ready lesson instructions and an answer key because it is material for a tutor to use, not submitted student writing.
 
 ### Full review and diagnostic tools
 

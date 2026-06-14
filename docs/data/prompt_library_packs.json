@@ -5,10 +5,10 @@
   "testing_pack_version": "4.1",
   "release_date": "2026-06-13",
   "source": "src/release.yml",
-  "pack_count": 35,
+  "pack_count": 36,
   "core_pack_count": 6,
   "custom_pack_count": 1,
-  "single_tool_pack_count": 28,
+  "single_tool_pack_count": 29,
   "packs": [
     {
       "id": "academic-thinking",
@@ -50,7 +50,7 @@
       "source": "src/prompt-library/packs/master.yml",
       "latest_output": "docs/prompt-libraries/latest/ai_personal_tutor_master_library.md",
       "archive_output": "docs/prompt-libraries/v4.1/ai_personal_tutor_master_library_v4_1.md",
-      "tool_count": 28,
+      "tool_count": 29,
       "tool_codes": [
         "WT1",
         "WT2",
@@ -62,6 +62,7 @@
         "ST1",
         "ST2",
         "ST3",
+        "ST4",
         "AT1",
         "AT2",
         "AT3",
@@ -92,6 +93,7 @@
         "paragraph-structure-review",
         "whole-work-structure-review",
         "expert-meaning-review",
+        "reverse-outline-mapper",
         "assignment-brief-checker",
         "argument-map",
         "descriptive-analytical-check",
@@ -142,16 +144,18 @@
       "source": "src/prompt-library/packs/structure-tutor.yml",
       "latest_output": "docs/prompt-libraries/latest/02_structure_tutor_library.md",
       "archive_output": "docs/prompt-libraries/v4.1/02_structure_tutor_library_v4_1.md",
-      "tool_count": 3,
+      "tool_count": 4,
       "tool_codes": [
         "ST1",
         "ST2",
-        "ST3"
+        "ST3",
+        "ST4"
       ],
       "tool_ids": [
         "paragraph-structure-review",
         "whole-work-structure-review",
-        "expert-meaning-review"
+        "expert-meaning-review",
+        "reverse-outline-mapper"
       ]
     },
     {
@@ -349,6 +353,19 @@
       ],
       "tool_ids": [
         "expert-meaning-review"
+      ]
+    },
+    {
+      "id": "single-st4",
+      "title": "ST4 — Reverse Outline Mapper Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/st4_reverse_outline_mapper.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "ST4"
+      ],
+      "tool_ids": [
+        "reverse-outline-mapper"
       ]
     },
     {

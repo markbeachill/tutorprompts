@@ -4,8 +4,8 @@ id: assignment-brief-checker
 tool_code: AT1
 title: Assignment Brief Checker
 type: tool
-menu_number: 10
-master_number: 10
+menu_number: 12
+master_number: 12
 run_policy: selected_only
 input_required:
   - assignment brief

@@ -272,7 +272,7 @@ Paragraph 5: This dissertation examine these tensions threw a case study of two 
 
 ### What this test checks
 
-Whether the teaching tool builds a lesson from a previously found mistake, sequences practice by difficulty, and transfers the skill back to the student's own draft.
+Whether WT4 defaults to an interactive student micro-lesson, withholds answers until the student attempts the practice, and can also produce tutor lesson material when lesson mode is requested.
 
 ### Test input
 
@@ -282,10 +282,11 @@ Previous error analysis: Mistake 1: "This study show you" Correction: "This stud
 
 ### What to look for
 
-- creates teaching material from the given mistake; does not invent unrelated errors
+- creates a student micro-lesson by default; does not invent unrelated errors
 - ★ practice questions run in the v4.1 order: recognition (find the mistake), correction (fix the given mistake), production (write a correct sentence of your own)
 - answers are withheld until the student attempts
 - ends by asking the student to find and fix one further instance in their own draft, unaided
+- if the same input adds “lesson mode”, creates copy-ready tutor material with objective, timing, worked example, practice, answer key and tutor notes
 
 ---
 

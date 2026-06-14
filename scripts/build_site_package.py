@@ -146,13 +146,15 @@ def iter_package_files(include_generator: bool) -> list[Path]:
 
 def run_generator_check() -> None:
     checks = [
-        ROOT / "scripts" / "build_prompt_libraries.py",
-        ROOT / "scripts" / "build_audit_pack.py",
+        (ROOT / "scripts" / "build_prompt_libraries.py", ["--ci"]),
+        (ROOT / "scripts" / "build_audit_pack.py", ["--ci"]),
+        (ROOT / "scripts" / "build_site_data.py", ["--check"]),
+        (ROOT / "scripts" / "build_source_material_library.py", ["--check"]),
     ]
-    for script in checks:
+    for script, extra_args in checks:
         if not script.exists():
             raise SystemExit(f"Cannot run generator check: {script.relative_to(ROOT).as_posix()} was not found.")
-        result = subprocess.run([sys.executable, str(script), "--ci"], cwd=ROOT)
+        result = subprocess.run([sys.executable, str(script), *extra_args], cwd=ROOT)
         if result.returncode != 0:
             raise SystemExit(result.returncode)
 

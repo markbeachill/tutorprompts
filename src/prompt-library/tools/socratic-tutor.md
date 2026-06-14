@@ -2,10 +2,10 @@
 ---
 id: socratic-tutor
 tool_code: AT10
-master_number: 19
+master_number: 21
 title: Socratic Tutor
 type: tool
-menu_number: 19
+menu_number: 21
 run_policy: selected_only
 input_required:
   - topic, question, paragraph, argument, assignment idea, or research idea

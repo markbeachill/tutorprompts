@@ -2,10 +2,10 @@
 ---
 id: literature-use-checker
 tool_code: AT6
-master_number: 15
+master_number: 17
 title: Literature Use Checker
 type: tool
-menu_number: 15
+menu_number: 17
 run_policy: selected_only
 input_required:
   - writing that uses sources

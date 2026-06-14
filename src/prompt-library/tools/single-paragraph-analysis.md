@@ -5,6 +5,7 @@ tool_code: WT2
 title: Single Paragraph Analysis
 type: tool
 menu_number: 2
+master_number: 2
 run_policy: selected_only
 input_required:
   - one paragraph

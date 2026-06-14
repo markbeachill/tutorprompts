@@ -186,6 +186,11 @@ def main() -> int:
         help="Skip generated site-data checks.",
     )
     parser.add_argument(
+        "--skip-source-material",
+        action="store_true",
+        help="Skip generated source-material library checks.",
+    )
+    parser.add_argument(
         "--skip-release-consistency",
         action="store_true",
         help="Skip release consistency checks.",
@@ -234,9 +239,10 @@ def main() -> int:
         print("Package Generator build refresh")
         print(f"Repository root: {ROOT}")
         for label, cmd in [
-            ("Rebuild prompt libraries", ["scripts/build_prompt_libraries.py"]),
+            ("Rebuild prompt libraries", ["scripts/build_prompt_libraries.py", "--include-single-tools", "--include-custom"]),
             ("Rebuild audit/testing pack", ["scripts/build_audit_pack.py"]),
             ("Rebuild site data", ["scripts/build_site_data.py"]),
+            ("Rebuild source-material library", ["scripts/build_source_material_library.py"]),
         ]:
             rc = run_step(label, cmd, dry_run=args.dry_run)
             if rc:
@@ -251,6 +257,8 @@ def main() -> int:
         steps.append(("Audit/testing-pack CI", ["scripts/build_audit_pack.py", "--ci"]))
     if not args.skip_site_data:
         steps.append(("Generated site-data check", ["scripts/build_site_data.py", "--check"]))
+    if not args.skip_source_material:
+        steps.append(("Generated source-material check", ["scripts/build_source_material_library.py", "--check"]))
     if not args.skip_release_consistency:
         steps.append(("Release consistency check", ["scripts/release_consistency_check.py", "--fail-on-problems"]))
 

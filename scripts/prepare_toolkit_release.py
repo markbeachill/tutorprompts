@@ -293,8 +293,10 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(f"  - {display}")
     if not args.dry_run:
         print("Next recommended commands:")
-        print("  python scripts/build_prompt_libraries.py")
+        print("  python scripts/build_prompt_libraries.py --include-single-tools --include-custom")
         print("  python scripts/build_audit_pack.py")
+        print("  python scripts/build_site_data.py")
+        print("  python scripts/build_source_material_library.py")
         print(f"  python scripts/build_site_package.py --run-generator-check --version {values.toolkit_version}")
         if values.testing_pack_version != values.toolkit_version:
             print(f"Note: testing/audit pack remains on its own version v{values.testing_pack_version}.")

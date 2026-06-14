@@ -2,10 +2,10 @@
 ---
 id: evidence-gap-checker
 tool_code: AT4
-master_number: 13
+master_number: 15
 title: Evidence Gap Checker
 type: tool
-menu_number: 13
+menu_number: 15
 run_policy: selected_only
 input_required:
   - student writing

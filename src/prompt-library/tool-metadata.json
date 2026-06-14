@@ -39,10 +39,10 @@
       "title": "Teach Me This Mistake",
       "family": "writing-tutor",
       "family_label": "Writing Tutor tools",
-      "master_manifest_description": "learn from mistakes identified by Find My Mistakes",
-      "mini_manifest_description": "learn from mistakes identified by Find My Mistakes",
+      "master_manifest_description": "learn from a WT3 mistake through an interactive micro-lesson or build copy-ready tutor lesson material",
+      "mini_manifest_description": "learn from a WT3 mistake through an interactive micro-lesson or build copy-ready tutor lesson material",
       "mini_family_label": "Writing and referencing tools",
-      "launcher_description": "create a short learning activity from a mistake found by WT3."
+      "launcher_description": "teach a mistake pattern interactively or build a copy-ready lesson from WT3 feedback."
     },
     {
       "id": "style-clarity-review",
@@ -109,6 +109,17 @@
       "mini_manifest_description": "check whether the ideas and interpretations make sense",
       "mini_family_label": "Structure tools",
       "launcher_description": "check whether the ideas and interpretations make sense."
+    },
+    {
+      "id": "reverse-outline-mapper",
+      "code": "ST4",
+      "title": "Reverse Outline Mapper",
+      "family": "structure-tutor",
+      "family_label": "Structure Tutor tools",
+      "master_manifest_description": "create a diagnostic reverse outline of what each part of the draft currently does without producing submitted text",
+      "mini_manifest_description": "create a diagnostic reverse outline of what each part currently does",
+      "mini_family_label": "Structure tools",
+      "launcher_description": "map what each paragraph or section currently does so you can revise the structure yourself."
     },
     {
       "id": "assignment-brief-checker",

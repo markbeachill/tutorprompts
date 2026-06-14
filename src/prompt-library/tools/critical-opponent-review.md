@@ -2,10 +2,10 @@
 ---
 id: critical-opponent-review
 tool_code: AT9
-master_number: 18
+master_number: 20
 title: Critical Opponent Review
 type: tool
-menu_number: 18
+menu_number: 20
 run_policy: selected_only
 input_required:
   - student argument, paragraph, essay section, proposal, claim, or position

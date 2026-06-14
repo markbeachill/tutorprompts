@@ -4,8 +4,8 @@ id: research-question-checker
 tool_code: RP1
 title: Research Question, Aim and Objectives Checker
 type: tool
-menu_number: 20
-master_number: 20
+menu_number: 22
+master_number: 22
 run_policy: selected_only
 input_required:
   - research question, aim and objectives

@@ -88,7 +88,7 @@ Do not use the same standard for every tool.
 
 ### Interactive tutoring tools
 
-For tools such as WT1, WT4, AT10, RP4 and RP5, check whether the output keeps the student active. It should ask the student to think, choose, answer, revise or attempt something. It should avoid polished final wording before the student has tried.
+For tools such as WT1, WT4 student micro-lesson mode, AT10, RP4 and RP5, check whether the output keeps the student active. It should ask the student to think, choose, answer, revise or attempt something. It should avoid polished final wording before the student has tried. WT4 tutor lesson-builder mode is different: it may include copy-ready lesson instructions and an answer key, because the output is tutor material rather than student submission text.
 
 ### Full review and diagnostic tools
 
