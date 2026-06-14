@@ -123,8 +123,18 @@ main { padding: 0; }
   padding: 24px 0 48px;
 }
 
-.reading > *,
-.page-intro > *,
+.reading > * {
+  max-width: var(--measure);
+}
+
+/* Page titles and standfirsts need more room than sustained body prose. */
+.reading > .page-intro {
+  max-width: min(900px, 100%);
+}
+.page-intro > * {
+  max-width: min(900px, 100%);
+}
+
 .reading section > * {
   max-width: var(--measure);
 }
@@ -489,6 +499,26 @@ body.home .notice {
   border: 1px solid #f0d99b;
   border-radius: var(--radius);
   padding: 24px;
+}
+
+
+
+/* Reference pages keep body prose readable, but tables and table sections can use the full site frame. */
+body.reference .reading > section {
+  max-width: 100%;
+}
+body.reference .reading > section > table,
+body.reference .reading > section > .table-wrap,
+body.reference .reading > section > .wide {
+  max-width: 100%;
+}
+body.reference .reading > section > p,
+body.reference .reading > section > h2,
+body.reference .reading > section > h3,
+body.reference .reading > section > ul,
+body.reference .reading > section > ol,
+body.reference .reading > section > blockquote {
+  max-width: var(--measure);
 }
 
 /* Mobile */
