@@ -150,3 +150,15 @@ Then apply it only if the preview looks right:
 ```powershell
 python scripts\clean_generator_artifacts.py --apply
 ```
+
+
+## Optional GitHub Actions Pages build
+
+This repository now includes an optional GitHub-side build/deploy workflow for GitHub Pages:
+
+```text
+.github/workflows/deploy-github-pages.yml
+```
+
+Use it if you want GitHub Actions to rebuild the generated `docs/` site from `src/` before deploying. This is a server-side build at deploy time, not dynamic server-side behaviour for visitors. See `GITHUB_PAGES_ACTIONS_BUILD.md` for setup steps and troubleshooting.
+
