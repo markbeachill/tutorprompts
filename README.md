@@ -65,6 +65,7 @@ The public website is published from the `docs/` folder.
 ├── docs/
 │   ├── index.html
 │   ├── where-to-start/
+│   ├── try-it/
 │   ├── tools/
 │   ├── examples/
 │   ├── student-help/

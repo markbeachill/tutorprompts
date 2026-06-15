@@ -27,7 +27,7 @@ from typing import Sequence
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 GITHUB_URL = "https://github.com/markbeachill/tutorprompts"
-GENERATOR_VERSION = "1.1"
+GENERATOR_VERSION = "1.2"
 
 FAMILY_ORDER = ["writing-tutor", "structure-tutor", "academic-thinking", "research-proposal", "study-workflow"]
 FAMILY_LABELS = {
@@ -272,9 +272,32 @@ body.home .panel.notice {
 body.home #downloads {
   max-width: 100%;
 }
+.try-it-callout {
+  border-left: 5px solid var(--accent);
+}
+.try-it-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.try-it-option {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+}
+.try-it-option h2,
+.try-it-option h3 {
+  margin-top: 0;
+}
+.external-note {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
 
 @media (max-width: 860px) {
-  .tool-grid { grid-template-columns: 1fr; }
+  .tool-grid, .try-it-options { grid-template-columns: 1fr; }
   table.tool-table { min-width: 640px; }
   .tool-section > summary { padding: 16px; }
 }
@@ -297,6 +320,7 @@ def header_html(prefix: str, current: str = "") -> str:
     items = [
         ("Home", prefix + "index.html", "home"),
         ("Where to start?", prefix + "where-to-start/", "start"),
+        ("Try It", prefix + "try-it/", "try-it"),
         ("Tools", prefix + "tools/", "tools"),
         ("Examples", prefix + "examples/", "examples"),
         ("Student Help", prefix + "student-help/", "student-help"),
@@ -338,6 +362,8 @@ def current_for_path(path: Path, docs: Path = DOCS) -> str:
     first = parts[0]
     if first == "where-to-start":
         return "start"
+    if first == "try-it":
+        return "try-it"
     if first == "tools":
         return "tools"
     if first == "examples":
@@ -445,6 +471,37 @@ def tool_card(tool: dict[str, object], *, prefix: str = "../", include_anchor: b
 <div class="actions tool-actions"><a class="button secondary small-button" href="{single}">Open</a><a class="button secondary small-button download-tool" download href="{single}">Download this tool</a>{ex_link}</div>
 </article>'''
 
+
+def build_try_it_page(version: str) -> str:
+    chatgpt_url = "https://chatgpt.com/g/g-6a299f950d5c81919e9afe2f8ab56a63-ai-tutor-v4-0"
+    gemini_url = "https://gemini.google.com/gem/1mFpS7V97O1uAuIQzXlsUSalJmo8PcxSZ?usp=sharing"
+    return f'''<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Try It | AI Personal Tutor Toolkit</title>
+<meta content="Try a preloaded AI Personal Tutor in ChatGPT or Gemini." name="description"/>
+<link href="../style.css" rel="stylesheet"/><link href="../css/aichat.css" rel="stylesheet"/>
+</head>
+<body class="reference try-it-page">
+{header_html("../", "try-it")}
+<main><article class="reading"><header class="page-intro">
+<p class="kicker">Try It</p>
+<h1>Try a preloaded tutor.</h1>
+<p class="lead">These links open versions of the tutor that already have the master library preloaded in the platform knowledge area, so you can try the toolkit without copying the full prompt library manually.</p>
+<p class="small-note">Current website release: <strong>v{html.escape(version)}</strong>. Hosted platform versions may need manual updating after a new toolkit release.</p>
+</header>
+<section class="panel notice"><span class="tag">Privacy reminder</span><h2>Use external AI platforms carefully.</h2><p>These links open external AI platforms. Do not paste private, sensitive or identifiable student work unless you have permission and your institution allows it.</p><p>For ordinary extracts of your own work, use the feedback to revise the work yourself and follow your course rules on AI use.</p></section>
+<section class="try-it-options">
+<article class="try-it-option"><span class="tag">ChatGPT</span><h2>AI Tutor Custom GPT</h2><p>Open the preloaded AI Tutor in ChatGPT.</p><p class="external-note">Requires access to ChatGPT and any relevant platform account features.</p><p><a class="button" href="{html.escape(chatgpt_url, quote=True)}" rel="noopener noreferrer" target="_blank">Try in ChatGPT</a></p></article>
+<article class="try-it-option"><span class="tag">Gemini</span><h2>AI Tutor Gemini Gem</h2><p>Open the preloaded AI Tutor Gem in Gemini.</p><p class="external-note">Requires access to Gemini and any relevant platform account features.</p><p><a class="button" href="{html.escape(gemini_url, quote=True)}" rel="noopener noreferrer" target="_blank">Try in Gemini</a></p></article>
+</section>
+<section class="panel"><h2>Prefer to download the library yourself?</h2><p>The hosted tutors are a convenient way to try the toolkit. For inspection, local adaptation or long-term use, download the Markdown prompt libraries from the Download page.</p><p><a class="button secondary" href="../download/">Go to Download</a></p></section>
+</article></main>
+{footer_html("../")}
+</body>
+</html>'''
 
 def build_tools_page(tools: list[dict[str, object]], version: str) -> str:
     by_family: dict[str, list[dict[str, object]]] = defaultdict(list)
@@ -603,12 +660,28 @@ def normalise_css(css: str) -> str:
     return css.rstrip() + CSS_BLOCK + "\n"
 
 
+def insert_try_it_home_callout(text: str) -> str:
+    """Add the compact home-page Try It callout without duplicating it."""
+    text = re.sub(
+        r'<section class="panel notice try-it-callout" id="try-it-home">.*?</section>',
+        '',
+        text,
+        flags=re.S,
+    )
+    callout = '''<section class="panel notice try-it-callout" id="try-it-home"><span class="tag">Try It</span><h2>Try a preloaded tutor</h2><p>You can try a preloaded version of the tutor in ChatGPT or Gemini without copying the full prompt library manually.</p><p class="small-note">These links open external AI platforms, so the same privacy and responsibility warnings still apply.</p><div class="btn-row"><a class="button" href="try-it/">Try the preloaded tutor</a></div></section>'''
+    marker = '<div class="container"><section class="panel" id="downloads">'
+    if marker in text:
+        return text.replace(marker, '<div class="container">' + callout + '<section class="panel" id="downloads">', 1)
+    return text
+
+
 def build_plan(root: Path = ROOT) -> list[WritePlan]:
     docs = root / "docs"
     tools, version = read_tool_data(root)
     planned: dict[Path, str] = {
         docs / "tools" / "index.html": build_tools_page(tools, version),
         docs / "where-to-start" / "index.html": build_where_to_start_page(tools),
+        docs / "try-it" / "index.html": build_try_it_page(version),
         docs / "download" / "index.html": build_download_page(tools, version),
     }
     for path in sorted(docs.rglob("*.html")):
@@ -633,6 +706,7 @@ def build_plan(root: Path = ROOT) -> list[WritePlan]:
         }
         for old, new in replacements.items():
             text = text.replace(old, new)
+        text = insert_try_it_home_callout(text)
         planned[home] = text
     css_path = docs / "style.css"
     if css_path.exists():
@@ -671,7 +745,7 @@ def check_plans(plans: Sequence[WritePlan]) -> int:
 
 
 def validate() -> int:
-    required = [DOCS / "tools" / "index.html", DOCS / "where-to-start" / "index.html", DOCS / "download" / "index.html", DOCS / "style.css"]
+    required = [DOCS / "tools" / "index.html", DOCS / "where-to-start" / "index.html", DOCS / "try-it" / "index.html", DOCS / "download" / "index.html", DOCS / "style.css"]
     missing = [path for path in required if not path.exists()]
     if missing:
         print("Missing generated site page output(s):", file=sys.stderr)

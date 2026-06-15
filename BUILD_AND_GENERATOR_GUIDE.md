@@ -86,7 +86,7 @@ python scripts/build_site_pages.py
 What they do:
 
 - `build_source_material_library.py` builds the copy-ready source-material page, Markdown downloads and source-material JSON index.
-- `build_site_pages.py` builds the collapsed Tools page, expandable Where to start? page and Download page from generated metadata, then normalises site navigation and footer links.
+- `build_site_pages.py` builds the collapsed Tools page, expandable Where to start? page, canonical Try It page and Download page from generated metadata/hardcoded site links, then normalises site navigation and footer links.
 
 Check-only commands:
 

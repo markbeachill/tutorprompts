@@ -812,9 +812,32 @@ body.home .panel.notice {
 body.home #downloads {
   max-width: 100%;
 }
+.try-it-callout {
+  border-left: 5px solid var(--accent);
+}
+.try-it-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.try-it-option {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+}
+.try-it-option h2,
+.try-it-option h3 {
+  margin-top: 0;
+}
+.external-note {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
 
 @media (max-width: 860px) {
-  .tool-grid { grid-template-columns: 1fr; }
+  .tool-grid, .try-it-options { grid-template-columns: 1fr; }
   table.tool-table { min-width: 640px; }
   .tool-section > summary { padding: 16px; }
 }
