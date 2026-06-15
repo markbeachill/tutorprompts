@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Auditing and Testing: The Output Collector | AI Personal Tutor Toolkit</title>
+<meta content="The output collector - an end-of-session prompt that turns a toolkit test chat into a single saved test record for audit and review." name="description"/>
+<link href="style.css" rel="stylesheet"/>
+<style>
+/* Additions for testing/deployment pages (v4.0) */
+button.button{cursor:pointer;font:inherit;font-weight:800}
+.copywrap{margin:14px 0}
+.copywrap pre{margin:10px 0 0;max-height:420px}
+.fileframe{width:100%;height:440px;border:1px solid var(--line);border-radius:14px;background:#fff;margin:6px 0 14px}
+.panel h2:first-child{margin-top:0}
+</style>
+</head>
+<body>
+<header><div class="container nav"><a class="brand" href="index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="where-to-start/">Where to start?</a></li><li><a href="tools/">Tools</a></li><li><a href="examples/">Examples</a></li><li><a href="student-help/">Student Help</a></li><li><a href="guides/">Guides</a></li><li><a href="download/">Download</a></li></ul></nav></div></header>
+<main>
+<article class="reading"><header class="page-intro"><p class="kicker">Maintainer guide · Auditing and testing · 2 of 5</p><h1>The output collector</h1><p class="lead">Paste one prompt at the end of a test session and get a single, saved, verbatim test record — metadata plus transcript — ready for the audit chat and for human review.</p></header><section>
+<p><strong>Check the result before using it.</strong> The record is produced by the same AI that was tested, so it is self-reported evidence: an AI that just failed a test is the least reliable narrator of that failure. The spot-check below is part of the method, not optional politeness.</p>
+</section><section>
+<h2 id="how-to-use-it">How to use it</h2>
+<ol>
+<li>Run the test as normal: upload the library, <code>prompt</code>, choose the tool, paste the inputs and follow-ups.</li>
+<li>Only when the final test turn is complete, paste the collector prompt below into the <strong>same chat</strong>. You can add your name and plan in the same message, for example: <code>Tester: MB. Plan: free.</code></li>
+<li>Save the record it produces as <code>[code]_test_output_[date].md</code> — for example <code>wt1_clarity_clinic_test_output_[date].md</code>.</li>
+<li><strong>Spot-check:</strong> compare at least one AI response in the record against the live chat. For A-series and release-gating tests, compare every turn or capture manually. If the record and the chat disagree, the test is NOT TESTABLE — re-run with manual capture.</li>
+<li>Never paste the collector before or during the test turns: it would change the behaviour being tested.</li>
+</ol>
+</section><section>
+<h2 id="copy-the-prompt">Copy the prompt</h2>
+<p>The box is scrollable so the page stays readable. Use the button to copy the whole prompt.</p>
+<div class="copywrap"><button class="button" onclick="copyBox('collectorprompt',this)">Copy collector prompt</button><pre id="collectorprompt"><code>Stop acting as the tutor toolkit. This is a maintainer instruction. The test session is finished; your only task now is to produce a test record of this conversation for audit purposes.
+
+Follow these rules exactly:
+
+1. Reproduce every turn of this conversation verbatim, in order, from the first message after the library was uploaded to the last response before this instruction. Include the `prompt` command, the menu, every student input and every toolkit response.
+2. Verbatim means verbatim. Do not correct, improve, shorten, summarise, reformat or omit anything — including your own mistakes, formatting choices, headings, tables and code blocks. The record is evidence, and flaws in the responses are exactly what the audit needs to see.
+3. Wrap each reproduced turn in a fenced block opened and closed with four backticks (````), so that any Markdown or code blocks inside the turn are preserved exactly as written.
+4. Do not add any commentary, evaluation, praise or criticism of the responses. Do not explain what the toolkit did well or badly.
+5. If the conversation is too long to reproduce completely, say so plainly at the top of the record, reproduce as much as you can starting from the beginning, and state exactly where the reproduction stops. Never truncate or compress silently.
+6. For metadata you cannot see (tester name, plan, testing-pack version, test code), use anything the tester has stated in this chat; otherwise write `[tester to complete]`. For your own model name, state what you know; if you are not certain, write `unknown — tester to confirm`. Take the library file name and version from the uploaded file.
+7. If your environment can create files, also offer the record as a downloadable Markdown file. If not, present it as one continuous block that can be copied in a single action.
+8. End by asking the tester to spot-check at least one turn of the record against the conversation before saving.
+
+Produce the record in exactly this structure:
+
+# Test record: [test code] — [tool or test name]
+
+## Metadata
+
+| Field | Value |
+|---|---|
+| Date |  |
+| Tester |  |
+| AI tool/model |  |
+| Plan/access level |  |
+| Prompt-library file and version |  |
+| Testing-pack version |  |
+| Test code |  |
+| Tool tested |  |
+| Number of turns reproduced |  |
+| Reproduction complete? | Yes / No — stopped at turn N |
+
+## Transcript
+
+### Turn 1 — Student
+````
+[verbatim student message]
+````
+
+### Turn 1 — Toolkit
+````
+[verbatim toolkit response]
+````
+
+(Continue numbering for every turn in the conversation.)
+
+## Collector declarations
+
+State in one or two sentences: whether the reproduction is complete; and that nothing has been corrected, improved or omitted. If either statement cannot honestly be made, say what is missing instead.
+
+## Tester notes (leave blank for the tester to complete)
+
+**Observations outside the transcript** (activation behaviour, anything unusual):
+
+**Spot-check done:** [which turn(s) compared against the chat, and result]
+
+**Forwarded to audit on:** [date]</code></pre></div>
+</section><section>
+<h2>The canonical file</h2>
+<p>The file below is the canonical, release-stamped copy served from <code>audit-library/latest/</code>. The copy box above is generated from this file at build time; if they ever disagree, the file is right.</p>
+<p><a class="button" download="" href="audit-library/latest/ai_tutor_toolkit_output_collector.md">Download ai_tutor_toolkit_output_collector.md</a></p>
+<iframe class="fileframe" src="audit-library/latest/ai_tutor_toolkit_output_collector.md" title="ai_tutor_toolkit_output_collector.md"></iframe>
+</section><section>
+<h2 id="how-it-fits-the-workflow">How it fits the workflow</h2>
+<p>The record's Metadata table mirrors the test-log columns, so completing the log is mostly copying. The audit prompt recognises collector records: it audits the Transcript section and takes the test context from the Metadata table. The canonical copy of this prompt lives in the testing pack as <code>ai_tutor_toolkit_output_collector.md</code>; if this page and the pack ever disagree, the pack is right.</p>
+<p>Next: <a href="testing-audit.html">Running an audit</a></p>
+</section></article>
+</main>
+<footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="changelog/">Changelog</a> | <a href="https://github.com/markbeachill/tutorprompts" rel="noopener noreferrer" target="_blank">GitHub</a> | <a href="about.html">About this site</a></p></div></footer>
+<script>
+function copyBox(id,btn){var t=document.getElementById(id).textContent;navigator.clipboard.writeText(t).then(function(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o;},1500);});}
+</script>
+</body>
+</html>
