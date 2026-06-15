@@ -1,2 +1,0 @@
-
-<!-- SECTION: Research Proposal tools -->

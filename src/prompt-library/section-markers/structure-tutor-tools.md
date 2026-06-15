@@ -1,2 +1,0 @@
-
-<!-- SECTION: Structure Tutor tools -->

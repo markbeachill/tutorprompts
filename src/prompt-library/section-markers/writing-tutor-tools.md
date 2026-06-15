@@ -1,2 +1,0 @@
-
-<!-- SECTION: Writing Tutor tools -->

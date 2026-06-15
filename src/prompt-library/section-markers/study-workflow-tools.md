@@ -1,2 +1,0 @@
-
-<!-- SECTION: Study Workflow tools -->
