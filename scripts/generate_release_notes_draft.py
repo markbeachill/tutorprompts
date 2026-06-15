@@ -76,9 +76,9 @@ def normalise_version(value: str | None) -> str | None:
 
 def load_release_values(version: str | None, release_date: str | None) -> ReleaseValues:
     config = simple_yaml_load(RELEASE_YML)
-    toolkit = normalise_version(version) or normalise_version(config.get("toolkit_version"))
-    prompt = normalise_version(config.get("prompt_library_version")) or toolkit
-    testing = normalise_version(config.get("testing_pack_version")) or toolkit
+    toolkit = normalise_version(version) or normalise_version(config.get("release_version")) or normalise_version(config.get("toolkit_version"))
+    prompt = toolkit
+    testing = toolkit
     final_date = release_date or config.get("release_date") or date.today().isoformat()
     if not toolkit:
         raise SystemExit("No version supplied and src/release.yml does not contain toolkit_version.")
@@ -113,9 +113,9 @@ TODO: Add a short one-paragraph summary of the release.
 
 - TODO: List prompt-library changes, or write: Prompt libraries unchanged.
 
-## Testing/audit-pack changes
+## Audit/testing support changes
 
-- TODO: List testing/audit-pack changes, or write: Testing/audit pack unchanged.
+- TODO: List audit/testing support changes, or write: Audit/testing support unchanged. Public audit/testing version matches the release version.
 
 ## Generator/build changes
 

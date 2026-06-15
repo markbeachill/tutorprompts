@@ -11,8 +11,9 @@ scripts; it runs them in the safe order:
 3. rebuild audit/testing pack outputs;
 4. run prompt-library and audit/testing CI checks;
 5. build generated site integration data;
-6. check generated site integration data;
-7. run release consistency checks;
+6. build source-material and static site pages;
+7. check generated data/pages;
+8. run release consistency checks;
 8. optionally create a draft release-notes file;
 9. build the clean public site package;
 10. check that the package is current.
@@ -48,7 +49,7 @@ class ReleasePlan:
     output: Path | None
     draft_notes: bool
     force_draft_notes: bool
-    testing_pack_version: str | None
+    testing_pack_version: str | None  # legacy alias; must match version if supplied
 
 
 def simple_yaml_load(path: Path) -> dict[str, str]:
@@ -74,9 +75,9 @@ def infer_version(explicit: str | None) -> str:
     if explicit:
         return normalise_version(explicit) or explicit
     config = simple_yaml_load(RELEASE_YML)
-    version = config.get("toolkit_version") or config.get("prompt_library_version")
+    version = config.get("release_version") or config.get("toolkit_version") or config.get("prompt_library_version")
     if not version:
-        raise SystemExit("No version supplied and src/release.yml does not contain toolkit_version.")
+        raise SystemExit("No version supplied and src/release.yml does not contain release_version/toolkit_version.")
     return version.lstrip("v")
 
 
@@ -109,7 +110,10 @@ def build_commands(plan: ReleasePlan) -> list[list[str]]:
             release_date,
         ])
         if plan.testing_pack_version:
-            commands[-1].extend(["--testing-pack-version", normalise_version(plan.testing_pack_version) or plan.testing_pack_version])
+            legacy_testing = normalise_version(plan.testing_pack_version) or plan.testing_pack_version
+            if legacy_testing != version:
+                raise SystemExit("--testing-pack-version must match --version. Public releases now use one release_version.")
+            commands[-1].extend(["--testing-pack-version", legacy_testing])
 
     build_cmd = [python, "scripts/build_prompt_libraries.py", "--include-single-tools"]
     if plan.include_custom:
@@ -123,6 +127,8 @@ def build_commands(plan: ReleasePlan) -> list[list[str]]:
     commands.append([python, "scripts/build_site_data.py", "--check"])
     commands.append([python, "scripts/build_source_material_library.py"])
     commands.append([python, "scripts/build_source_material_library.py", "--check"])
+    commands.append([python, "scripts/build_site_pages.py"])
+    commands.append([python, "scripts/build_site_pages.py", "--check"])
     commands.append([python, "scripts/release_consistency_check.py", "--fail-on-problems"])
 
     if plan.draft_notes:
@@ -155,7 +161,7 @@ def parse_args(argv: Sequence[str] | None = None) -> ReleasePlan:
     parser = argparse.ArgumentParser(description="Run the normal toolkit release build sequence.")
     parser.add_argument("--version", help="Toolkit version to prepare/package, for example 3.6. Defaults to src/release.yml.")
     parser.add_argument("--date", help="Release date in YYYY-MM-DD format. Defaults to src/release.yml or today.")
-    parser.add_argument("--testing-pack-version", help="Optional testing/audit pack version. If omitted, the existing src/release.yml testing_pack_version is kept.")
+    parser.add_argument("--testing-pack-version", help="Legacy alias retained for older commands. If supplied, it must match --version because public releases now use one release_version.")
     parser.add_argument("--skip-prepare", action="store_true", help="Do not run prepare_toolkit_release.py; use existing stamps.")
     parser.add_argument("--no-package", action="store_true", help="Prepare/rebuild/check prompt libraries, but do not create the site ZIP.")
     parser.add_argument("--include-custom", action="store_true", help="Also build custom packs before checks/package creation.")

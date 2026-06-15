@@ -1,7 +1,8 @@
-# Package Generator v1.3 release metadata source.
-# This file is intentionally simple key: value YAML so it can be read without
-# third-party Python packages.
+# Package Generator release metadata source.
+# Public releases use one release_version for the site, prompt libraries, source material and audit/testing pack.
+# The legacy *_version keys are retained as aliases for existing scripts and generated text, but must match release_version.
 
+release_version: 4.1
 toolkit_version: 4.1
 prompt_library_version: 4.1
 testing_pack_version: 4.1

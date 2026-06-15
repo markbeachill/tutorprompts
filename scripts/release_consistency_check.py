@@ -173,12 +173,13 @@ def check_release_yml() -> tuple[list[Check], dict[str, str] | None]:
     release = release_metadata()
     if not RELEASE_YML.exists():
         return [Check("src/release.yml", False, "missing")], None
-    required = ["toolkit_version", "prompt_library_version", "testing_pack_version", "release_date"]
+    required = ["release_version", "toolkit_version", "prompt_library_version", "testing_pack_version", "release_date"]
     missing = [key for key in required if not release.get(key)]
     if missing:
         checks.append(Check("src/release.yml", False, "missing keys: " + ", ".join(missing)))
         return checks, None
     versions = {
+        "release_version": norm_version(release.get("release_version")) or norm_version(release.get("toolkit_version")) or "",
         "toolkit_version": norm_version(release.get("toolkit_version")) or "",
         "prompt_library_version": norm_version(release.get("prompt_library_version")) or "",
         "testing_pack_version": norm_version(release.get("testing_pack_version")) or "",
@@ -188,14 +189,16 @@ def check_release_yml() -> tuple[list[Check], dict[str, str] | None]:
     if invalid:
         checks.append(Check("src/release.yml version format", False, "invalid value(s): " + ", ".join(invalid)))
         return checks, versions
-    if versions["testing_pack_version"] != versions["toolkit_version"]:
+    version_values = {versions["release_version"], versions["toolkit_version"], versions["prompt_library_version"], versions["testing_pack_version"]}
+    if len(version_values) != 1:
         detail = (
-            f"toolkit v{versions['toolkit_version']}, prompt libraries v{versions['prompt_library_version']}, "
-            f"testing/audit pack v{versions['testing_pack_version']} (audit pack has its own version)"
+            f"release v{versions['release_version']}, toolkit v{versions['toolkit_version']}, "
+            f"prompt libraries v{versions['prompt_library_version']}, audit/testing v{versions['testing_pack_version']}"
         )
+        checks.append(Check("src/release.yml unified release version", False, detail))
     else:
-        detail = f"toolkit/prompt/testing v{versions['toolkit_version']}, date {versions['release_date']}"
-    checks.append(Check("src/release.yml", True, detail))
+        detail = f"release/toolkit/prompt/audit v{versions['release_version']}, date {versions['release_date']}"
+        checks.append(Check("src/release.yml", True, detail))
     return checks, versions
 
 
@@ -372,9 +375,9 @@ def build_checks() -> list[Check]:
     checks, versions = check_release_yml()
     if not versions:
         return checks
-    toolkit_version = versions["toolkit_version"]
-    prompt_version = versions["prompt_library_version"]
-    testing_version = versions["testing_pack_version"]
+    toolkit_version = versions["release_version"]
+    prompt_version = versions["release_version"]
+    testing_version = versions["release_version"]
     checks.extend(check_pack_manifests(prompt_version))
     checks.extend(check_generated_prompt_files(prompt_version, allowed_extra_versions={testing_version, toolkit_version}))
     checks.extend(check_mini_zip())

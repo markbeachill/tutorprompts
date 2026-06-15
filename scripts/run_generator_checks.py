@@ -191,6 +191,11 @@ def main() -> int:
         help="Skip generated source-material library checks.",
     )
     parser.add_argument(
+        "--skip-site-pages",
+        action="store_true",
+        help="Skip generated static site page checks.",
+    )
+    parser.add_argument(
         "--skip-release-consistency",
         action="store_true",
         help="Skip release consistency checks.",
@@ -243,6 +248,7 @@ def main() -> int:
             ("Rebuild audit/testing pack", ["scripts/build_audit_pack.py"]),
             ("Rebuild site data", ["scripts/build_site_data.py"]),
             ("Rebuild source-material library", ["scripts/build_source_material_library.py"]),
+            ("Rebuild generated site pages", ["scripts/build_site_pages.py"]),
         ]:
             rc = run_step(label, cmd, dry_run=args.dry_run)
             if rc:
@@ -259,6 +265,8 @@ def main() -> int:
         steps.append(("Generated site-data check", ["scripts/build_site_data.py", "--check"]))
     if not args.skip_source_material:
         steps.append(("Generated source-material check", ["scripts/build_source_material_library.py", "--check"]))
+    if not args.skip_site_pages:
+        steps.append(("Generated site-pages check", ["scripts/build_site_pages.py", "--check"]))
     if not args.skip_release_consistency:
         steps.append(("Release consistency check", ["scripts/release_consistency_check.py", "--fail-on-problems"]))
 

@@ -59,6 +59,7 @@ def release_data() -> dict[str, Any]:
     release = bpl.read_release_metadata()
     return {
         "generated_by": f"ai-personal-tutor-package-generator-v{GENERATOR_VERSION}",
+        "release_version": release.get("release_version", "") or release.get("toolkit_version", ""),
         "toolkit_version": release.get("toolkit_version", ""),
         "prompt_library_version": release.get("prompt_library_version", ""),
         "testing_pack_version": release.get("testing_pack_version", ""),

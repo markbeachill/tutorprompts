@@ -12,6 +12,8 @@ on:
       - ".github/workflows/deploy-github-pages.yml"
       - "GITHUB_PAGES_ACTIONS_BUILD.md"
       - "SOURCE_MATERIAL_INDEX_EXPLAINER.md"
+      - "BUILD_AND_GENERATOR_GUIDE.md"
+      - "scripts/build_site_pages.py"
       - "README.md"
   workflow_dispatch:
 

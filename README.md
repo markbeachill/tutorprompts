@@ -86,3 +86,8 @@ Detailed release notes are in `docs/changelog/site-update-notes/`.
 Comments, questions and suggestions can be added in the repository discussions area:
 
 https://github.com/markbeachill/tutorprompts/discussions
+
+
+## Build instructions
+
+See [`BUILD_AND_GENERATOR_GUIDE.md`](BUILD_AND_GENERATOR_GUIDE.md) for the consolidated library/page build workflow and release-version policy.

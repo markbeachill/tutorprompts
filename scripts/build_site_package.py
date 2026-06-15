@@ -11,7 +11,7 @@ Run from the repository root:
     python scripts/build_site_package.py
 
 Recommended release-package build:
-    python scripts/build_prompt_libraries.py --ci
+    python scripts/run_generator_checks.py --build-first
     python scripts/build_site_package.py --run-generator-check
 """
 from __future__ import annotations
@@ -150,6 +150,7 @@ def run_generator_check() -> None:
         (ROOT / "scripts" / "build_audit_pack.py", ["--ci"]),
         (ROOT / "scripts" / "build_site_data.py", ["--check"]),
         (ROOT / "scripts" / "build_source_material_library.py", ["--check"]),
+        (ROOT / "scripts" / "build_site_pages.py", ["--check"]),
     ]
     for script, extra_args in checks:
         if not script.exists():
@@ -180,7 +181,7 @@ def parse_args(argv: Sequence[str] | None = None) -> PackagePlan:
     parser.add_argument("--include-generator", action="store_true", help="Include src/, scripts/ and package-generator docs in the ZIP. Default is a clean public site package without generator tooling.")
     parser.add_argument("--dry-run", action="store_true", help="List files that would be packaged without writing a ZIP.")
     parser.add_argument("--check", action="store_true", help="Check that the output ZIP exists and matches what would be built, without writing changes.")
-    parser.add_argument("--run-generator-check", action="store_true", help="Run prompt-library and audit/testing generator CI checks before packaging.")
+    parser.add_argument("--run-generator-check", action="store_true", help="Run library, source-material and site-page generator checks before packaging.")
     args = parser.parse_args(argv)
 
     output = args.output if args.output else default_output_path(args.version)

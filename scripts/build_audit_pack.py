@@ -5,7 +5,7 @@ Package Generator v1.9 helper.
 
 This script mirrors the prompt-library generator discipline for the testing pack:
 source files live under src/audit-library/files/, while docs/audit-library/latest/,
-docs/audit-library/v<testing_pack_version>/ and the testing-pack ZIP are generated outputs.
+docs/audit-library/v<release_version>/ and the testing-pack ZIP are generated outputs.
 
 Typical use from the repository root:
     python scripts/build_audit_pack.py
@@ -85,9 +85,9 @@ def read_simple_yaml(path: Path) -> dict[str, object]:
 
 def read_release_version() -> str:
     data = read_simple_yaml(RELEASE_YML)
-    version = str(data.get("testing_pack_version") or data.get("toolkit_version") or "").strip().lstrip("v")
+    version = str(data.get("release_version") or data.get("toolkit_version") or data.get("testing_pack_version") or "").strip().lstrip("v")
     if not re.fullmatch(r"\d+(?:\.\d+)*", version):
-        raise SystemExit("Could not read a valid testing_pack_version from src/release.yml")
+        raise SystemExit("Could not read a valid release_version from src/release.yml")
     return version
 
 

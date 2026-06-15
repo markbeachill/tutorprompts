@@ -48,6 +48,7 @@ EXPECTED_SCRIPTS = [
     "scripts/build_toolkit_release.py",
     "scripts/build_site_data.py",
     "scripts/build_source_material_library.py",
+    "scripts/build_site_pages.py",
     "scripts/build_audit_pack.py",
     "scripts/generator_health_report.py",
     "scripts/release_consistency_check.py",
@@ -60,6 +61,7 @@ EXPECTED_DOCS = [
     "PACKAGE_GENERATOR_README.md",
     "PACKAGE_GENERATOR_DESIGN.md",
     "PACKAGE_GENERATOR_START_HERE.md",
+    "BUILD_AND_GENERATOR_GUIDE.md",
 ]
 
 
@@ -240,11 +242,14 @@ def check_prompt_generated_versions(release: dict[str, Any]) -> Check:
     were prepared for a newer prompt-library release but src/release.yml still points
     at the previous version.
     """
-    toolkit_version = release.get("toolkit_version")
-    prompt_version = release.get("prompt_library_version")
-    testing_version = release.get("testing_pack_version")
-    if not toolkit_version or not prompt_version or not testing_version:
-        return Check("prompt-library generated version stamps", "problem", "src/release.yml is missing toolkit_version, prompt_library_version or testing_pack_version")
+    release_version = release.get("release_version") or release.get("toolkit_version")
+    toolkit_version = release.get("toolkit_version") or release_version
+    prompt_version = release.get("prompt_library_version") or release_version
+    testing_version = release.get("testing_pack_version") or release_version
+    if not release_version or not toolkit_version or not prompt_version or not testing_version:
+        return Check("prompt-library generated version stamps", "problem", "src/release.yml is missing release_version/toolkit_version/prompt_library_version/testing_pack_version")
+    if len({release_version, toolkit_version, prompt_version, testing_version}) != 1:
+        return Check("prompt-library generated version stamps", "problem", f"release versions differ: release={release_version}, toolkit={toolkit_version}, prompt={prompt_version}, testing={testing_version}")
 
     problems: list[str] = []
     versions_seen: set[str] = set()
@@ -307,7 +312,7 @@ def check_prompt_generated_versions(release: dict[str, Any]) -> Check:
     return Check(
         "prompt-library generated version stamps",
         "ok",
-        f"match src/release.yml: toolkit v{toolkit_version}, prompt-library v{prompt_version}, testing-pack v{testing_version}",
+        f"match src/release.yml release v{release_version}",
     )
 
 

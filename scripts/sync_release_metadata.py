@@ -10,7 +10,7 @@ version, but `src/release.yml` still carries the previous version.
 Typical use from the repository root:
     python scripts/sync_release_metadata.py --to-generated --build --check
 
-The audit/testing pack keeps its own version unless you explicitly use the lower-level
+Public audit/testing outputs use the same release_version as the toolkit. Older
 prepare_toolkit_release.py command with --testing-pack-version.
 """
 from __future__ import annotations
@@ -174,8 +174,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         if rc:
             return rc
         print()
-        print("Note: testing_pack_version is left unchanged by this command. Use")
-        print("prepare_toolkit_release.py --testing-pack-version only when audit/testing content changes.")
+        print("Note: public audit/testing outputs now use the same release_version as the toolkit.")
+        print("Run prepare_toolkit_release.py --version <version> to align all release stamps.")
 
     if args.build:
         print()

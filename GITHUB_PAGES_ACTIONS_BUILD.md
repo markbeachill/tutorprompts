@@ -95,3 +95,8 @@ If GitHub Pages does not update, check:
 - the workflow has permission to deploy Pages;
 - the latest workflow run completed successfully; and
 - the `docs/` folder exists after the build step.
+
+
+## Build guide
+
+For the full list of library and page-generation scripts, see `BUILD_AND_GENERATOR_GUIDE.md`. The Actions workflow runs `python scripts/run_generator_checks.py --build-first`, which includes `scripts/build_site_pages.py`.

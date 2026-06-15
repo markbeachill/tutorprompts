@@ -34,6 +34,7 @@ RELEASE_YML = SRC / "release.yml"
 
 @dataclass(frozen=True)
 class ReleaseValues:
+    release_version: str
     toolkit_version: str
     prompt_library_version: str
     testing_pack_version: str
@@ -224,43 +225,56 @@ def update_site_stamps(values: ReleaseValues, dry_run: bool, changed: list[Path]
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     config = simple_yaml_load(RELEASE_YML)
     parser = argparse.ArgumentParser(description="Prepare structured version/date stamps for a toolkit release.")
-    parser.add_argument("--version", help="Set toolkit/site and prompt-library version together, for example 3.6. Does not change the testing/audit pack version unless --testing-pack-version is also supplied.")
-    parser.add_argument("--toolkit-version", help="Toolkit/site package version. Defaults to src/release.yml or --version.")
-    parser.add_argument("--prompt-library-version", help="Prompt-library suite version. Defaults to src/release.yml or --version.")
-    parser.add_argument("--testing-pack-version", help="Testing/audit pack version. Defaults to src/release.yml and can intentionally differ from the toolkit/prompt-library version.")
+    parser.add_argument("--version", help="Release version for site, prompt libraries and audit/testing pack together, for example 3.6.")
+    parser.add_argument("--release-version", help="Alias for --version.")
+    parser.add_argument("--toolkit-version", help="Legacy alias. Must match the release version if supplied.")
+    parser.add_argument("--prompt-library-version", help="Legacy alias. Must match the release version if supplied.")
+    parser.add_argument("--testing-pack-version", help="Legacy alias. Must match the release version if supplied; audit/testing no longer has a separate public version.")
     parser.add_argument("--date", default=config.get("release_date") or date.today().isoformat(), help="Release date in YYYY-MM-DD format. Defaults to src/release.yml or today.")
     parser.add_argument("--status", default=config.get("status") or "active public release", help="Release status label for generated prompt-library files.")
     parser.add_argument("--site-only", action="store_true", help="Only update public site/version stamp files, not prompt-library source files.")
     parser.add_argument("--prompt-only", action="store_true", help="Only update prompt-library source files, not public site/version stamp files.")
     parser.add_argument("--dry-run", action="store_true", help="Report files that would change without writing anything.")
     args = parser.parse_args(argv)
-    args.testing_pack_version_explicit = args.testing_pack_version is not None
     if args.site_only and args.prompt_only:
         parser.error("Use at most one of --site-only or --prompt-only.")
-    if args.version:
-        args.toolkit_version = args.toolkit_version or args.version
-        args.prompt_library_version = args.prompt_library_version or args.version
-    args.toolkit_version = args.toolkit_version or config.get("toolkit_version")
-    args.prompt_library_version = args.prompt_library_version or config.get("prompt_library_version")
-    args.testing_pack_version = args.testing_pack_version or config.get("testing_pack_version")
-    missing = [name for name in ("toolkit_version", "prompt_library_version", "testing_pack_version") if not getattr(args, name)]
-    if missing:
-        parser.error("Missing version value(s): " + ", ".join(missing) + ". Use --version or set src/release.yml.")
-    for name in ("toolkit_version", "prompt_library_version", "testing_pack_version"):
-        value = getattr(args, name)
-        if not re.fullmatch(r"\d+(?:\.\d+)*", value.lstrip("v")):
-            parser.error(f"{name.replace('_', '-')} should look like 3.6 or v3.6")
+
+    supplied = [
+        args.version,
+        args.release_version,
+        args.toolkit_version,
+        args.prompt_library_version,
+        args.testing_pack_version,
+        config.get("release_version"),
+        config.get("toolkit_version"),
+        config.get("prompt_library_version"),
+        config.get("testing_pack_version"),
+    ]
+    chosen = next((value for value in supplied if value), None)
+    if not chosen:
+        parser.error("Missing release version. Use --version or set release_version in src/release.yml.")
+    release_version = chosen.lstrip("v")
+    if not re.fullmatch(r"\d+(?:\.\d+)*", release_version):
+        parser.error("release version should look like 3.6 or v3.6")
+    for name in ("release_version", "toolkit_version", "prompt_library_version", "testing_pack_version"):
+        value = getattr(args, name, None)
+        if value and value.lstrip("v") != release_version:
+            parser.error(f"{name.replace('_', '-')} must match --version. Public releases now use one release_version.")
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", args.date):
         parser.error("--date must be YYYY-MM-DD")
+    args.release_version = release_version
+    args.toolkit_version = release_version
+    args.prompt_library_version = release_version
+    args.testing_pack_version = release_version
     return args
-
 
 def main(argv: Sequence[str] | None = None) -> int:
     args = parse_args(argv)
     values = ReleaseValues(
-        toolkit_version=args.toolkit_version.lstrip("v"),
-        prompt_library_version=args.prompt_library_version.lstrip("v"),
-        testing_pack_version=args.testing_pack_version.lstrip("v"),
+        release_version=args.release_version.lstrip("v"),
+        toolkit_version=args.release_version.lstrip("v"),
+        prompt_library_version=args.release_version.lstrip("v"),
+        testing_pack_version=args.release_version.lstrip("v"),
         release_date=args.date,
         status=args.status,
     )
@@ -268,8 +282,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     write_release_yml(values, dry_run=args.dry_run, changed=changed)
     if not args.site_only:
         update_prompt_source(values, dry_run=args.dry_run, changed=changed)
-        if args.testing_pack_version_explicit:
-            update_audit_source(values, dry_run=args.dry_run, changed=changed)
+        update_audit_source(values, dry_run=args.dry_run, changed=changed)
     if not args.prompt_only:
         update_site_stamps(values, dry_run=args.dry_run, changed=changed)
 
@@ -297,10 +310,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         print("  python scripts/build_audit_pack.py")
         print("  python scripts/build_site_data.py")
         print("  python scripts/build_source_material_library.py")
-        print(f"  python scripts/build_site_package.py --run-generator-check --version {values.toolkit_version}")
-        if values.testing_pack_version != values.toolkit_version:
-            print(f"Note: testing/audit pack remains on its own version v{values.testing_pack_version}.")
-            print("To bump audit/testing content too, rerun with --testing-pack-version <version>.")
+        print("  python scripts/build_site_pages.py")
+        print(f"  python scripts/build_site_package.py --run-generator-check --version {values.release_version}")
     return 0
 
 

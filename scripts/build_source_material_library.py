@@ -189,7 +189,7 @@ def build_index_html(items: Sequence[SourceItem]) -> str:
 </style>
 </head>
 <body class="reference">
-<header><div class="container nav"><a class="brand" href="../index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="../index.html">Home</a></li><li><a href="../tools/">Tools</a></li><li><a href="../examples/">Examples</a></li><li><a href="../student-help/">Student Help</a></li><li><a href="../guides/">Guides</a></li></ul></nav></div></header>
+<header><div class="container nav"><a class="brand" href="../index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="../index.html">Home</a></li><li><a href="../where-to-start/">Where to start?</a></li><li><a href="../tools/">Tools</a></li><li><a href="../examples/">Examples</a></li><li><a href="../student-help/">Student Help</a></li><li><a href="../guides/">Guides</a></li><li><a href="../download/">Download</a></li></ul></nav></div></header>
 <main>
 <article class="reading">
 <header class="page-intro">
@@ -205,7 +205,7 @@ def build_index_html(items: Sequence[SourceItem]) -> str:
 {cards}
 </article>
 </main>
-<footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="../testing.html">Testing</a> | <a href="../changelog/">Changelog</a> | <a href="../guides/teaching-approach.html">Teaching approach</a> | <a href="../about.html">About this site</a></p></div></footer>
+<footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="../changelog/">Changelog</a> | <a href="https://github.com/markbeachill/tutorprompts" rel="noopener noreferrer" target="_blank">GitHub</a> | <a href="../about.html">About this site</a></p></div></footer>
 <script>
 function copyBox(id,btn){{var t=document.getElementById(id).textContent;navigator.clipboard.writeText(t).then(function(){{var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){{btn.textContent=o;}},1500);}});}}
 </script>
