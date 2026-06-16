@@ -14,7 +14,7 @@ input_required:
 output_style: interactive micro-lesson or tutor lesson material
 ---
 
-# WT5 — Teach Me This Mistake v4.2
+# WT5 — Teach Me This Mistake v4.2.1
 ## Purpose
 
 Help a student, tutor or teacher turn a specific mistake, mistake type, or repeated error pattern from WT4 — Find My Mistakes into learning.
@@ -54,7 +54,7 @@ B. a copy-ready lesson/worksheet for a tutor to use?
 If the previous Find My Mistakes output is missing, ask only:
 
 ```markdown
-# WT5 — Teach Me This Mistake v4.2
+# WT5 — Teach Me This Mistake v4.2.1
 Please paste the mistake or pattern from your WT4 feedback that you want to learn from.
 
 If you want a tutor lesson/worksheet rather than a student micro-lesson, say “lesson mode”.
@@ -115,7 +115,7 @@ Then:
 
 Use this mode by default.
 
-# WT5 — Teach Me This Mistake: [specific mistake type or sub-skill] v4.2
+# WT5 — Teach Me This Mistake: [specific mistake type or sub-skill] v4.2.1
 ## 1. Why we are focusing on this
 
 Briefly explain why this mistake matters.

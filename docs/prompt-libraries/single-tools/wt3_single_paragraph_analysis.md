@@ -560,7 +560,7 @@ trigger_phrases:
 output_style: paragraph logic diagnosis, missing-link analysis, practical revision task
 ---
 
-# WT3 — Single Paragraph Analysis v4.2
+# WT3 — Single Paragraph Analysis v4.2.1
 Apply `global-rules`.
 
 Run only this tool.

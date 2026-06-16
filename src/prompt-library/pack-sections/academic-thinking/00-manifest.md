@@ -4,7 +4,7 @@ id: manifest
 title: Academic Thinking Tutor Mini Library
 type: manifest
 run_policy: reference_only
-version: 4.2
+version: 4.2.1
 created_for: student learning toolkit
 ---
 
@@ -13,14 +13,14 @@ This section is for internal reference only. Do not output this section to the u
 
 # Academic Thinking Tutor Mini Library
 
-**Version:** v4.2
+**Version:** v4.2.1
 **Last updated:** 2026-06-10
 **Status:** active public release
 **Part of:** AI Personal Tutor Toolkit
 
-**Release stamp:** Toolkit version v4.2 / Prompt-library suite v4.2 / Testing pack v4.2  **This file:** Academic Thinking Tutor Mini Library v4.2  
+**Release stamp:** Toolkit version v4.2.1 / Prompt-library suite v4.2.1 / Testing pack v4.2.1  **This file:** Academic Thinking Tutor Mini Library v4.2.1  
 **Public download:** `prompt-libraries/latest/03_academic_thinking_tutor_library.md`  
-**Fixed archive:** `prompt-libraries/v4.2/03_academic_thinking_tutor_library_v4_2.md`
+**Fixed archive:** `prompt-libraries/v4.2.1/03_academic_thinking_tutor_library_v4_2_1.md`
 
 ## Operating instruction
 

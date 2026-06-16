@@ -26,13 +26,13 @@ python scripts/run_generator_checks.py
 Build the clean public site ZIP:
 
 ```bash
-python scripts/build_site_package.py --run-generator-check --version 4.2
+python scripts/build_site_package.py --run-generator-check --version 4.2.1
 ```
 
 Build the full repository ZIP, including generator files:
 
 ```bash
-python scripts/build_site_package.py --include-generator --run-generator-check --version 4.2
+python scripts/build_site_package.py --include-generator --run-generator-check --version 4.2.1
 ```
 
 ## Release version policy
@@ -40,10 +40,10 @@ python scripts/build_site_package.py --include-generator --run-generator-check -
 Public releases use a single version number:
 
 ```yaml
-release_version: 4.2
-toolkit_version: 4.2
-prompt_library_version: 4.2
-testing_pack_version: 4.2
+release_version: 4.2.1
+toolkit_version: 4.2.1
+prompt_library_version: 4.2.1
+testing_pack_version: 4.2.1
 ```
 
 `release_version` is the source of truth. The legacy keys are retained for compatibility with older scripts and generated text, but they must match `release_version`.
@@ -119,7 +119,7 @@ python scripts/run_generator_checks.py
 Before a release:
 
 ```bash
-python scripts/build_toolkit_release.py --version 4.2 --date 2026-06-14
+python scripts/build_toolkit_release.py --version 4.2.1 --date 2026-06-16
 ```
 
 ## What to commit
@@ -238,4 +238,4 @@ Older package-generator notes and superseded root notes have been moved out of t
 tool-history/repository-docs/root-docs/
 ```
 
-The current canonical build instructions are this file plus `project-docs/` and `PACKAGE_GENERATOR_START_HERE.md`.
+The current canonical build instructions are this file plus `UPDATE-CHECKLISTS.md`, `project-docs/` and `PACKAGE_GENERATOR_START_HERE.md`.

@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v4.2 / Prompt libraries v4.2 / Testing pack v4.2
+Toolkit release: Site v4.2.1 / Prompt libraries v4.2.1 / Testing pack v4.2.1
 
-This manifest describes the current public site package after the v4.2 Writing Tutor router, flow and subject-tool integration.
+This manifest describes the current public site package after the v4.2.1 WT4 answer-boundary patch.
 
 ## Repository-level developer files
 
@@ -73,6 +73,7 @@ Versioned prompt-library archives are in:
 - `docs/prompt-libraries/v4.0/`
 - `docs/prompt-libraries/v4.1/`
 - `docs/prompt-libraries/v4.2/`
+- `docs/prompt-libraries/v4.2.1/`
 
 ## Testing/audit downloads
 
@@ -96,6 +97,16 @@ Versioned testing/audit archives are in:
 - `docs/audit-library/v4.0/`
 - `docs/audit-library/v4.1/`
 - `docs/audit-library/v4.2/`
+- `docs/audit-library/v4.2.1/`
+
+## Site v4.2.1 — WT4 answer-boundary patch
+
+- Site package updated to v4.2.1.
+- Prompt libraries updated to v4.2.1.
+- Testing/audit pack updated to v4.2.1.
+- Narrowed WT4 — Find My Mistakes so it checks writing mistakes, obvious everyday factual slips and visible technical referencing presentation slips only.
+- Added audit guidance that marks WT4 down when it becomes a source-checker, evidence-checker, citation-substance checker or specialist subject-answering tool.
+- Added a WT4 answer-boundary regression test card.
 
 ## Site v4.2 — Writing Tutor router, flow and subject tools
 

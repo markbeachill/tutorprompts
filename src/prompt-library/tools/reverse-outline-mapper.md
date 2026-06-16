@@ -12,7 +12,7 @@ input_required:
 output_style: diagnostic reverse-outline table and revision questions
 ---
 
-# ST4 — Reverse Outline Mapper v4.2
+# ST4 — Reverse Outline Mapper v4.2.1
 ## Purpose
 
 Create a reverse outline of the student's existing draft, section or plan.
@@ -26,7 +26,7 @@ Use this tool to help the student see the shape of their own work before revisin
 Ask only:
 
 ```markdown
-# ST4 — Reverse Outline Mapper v4.2
+# ST4 — Reverse Outline Mapper v4.2.1
 Please paste or upload the draft, section or plan you want mapped. I will create a reverse outline showing what each part currently does.
 ```
 

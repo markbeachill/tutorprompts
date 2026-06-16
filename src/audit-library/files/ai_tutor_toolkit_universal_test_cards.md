@@ -1,7 +1,7 @@
-# AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v4.2
-**Release stamp:** Toolkit version v4.2 / Prompt-library suite v4.2 / Testing pack v4.2  **This file:** AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v4.2  
+# AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v4.2.1
+**Release stamp:** Toolkit version v4.2.1 / Prompt-library suite v4.2.1 / Testing pack v4.2.1  **This file:** AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v4.2  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_universal_test_cards.md`  
-**Fixed archive:** `audit-library/v4.2/ai_tutor_toolkit_universal_test_cards_v4_2.md`
+**Fixed archive:** `audit-library/v4.2.1/ai_tutor_toolkit_universal_test_cards_v4_2_1.md`
 
 These tests check behaviour that should work across the whole toolkit. Checks marked ★ are critical: a failed ★ check caps the audit rating at MAJOR ISSUE, or CRITICAL ISSUE where the check says so.
 

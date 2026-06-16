@@ -25,11 +25,12 @@ CHANGELOG.md
 CONTRIBUTING.md
 BUILD_AND_GENERATOR_GUIDE.md
 PACKAGE_GENERATOR_START_HERE.md
+UPDATE-CHECKLISTS.md
 CUSTOMISING_PROMPTS.md
 SOURCE_MATERIAL_INDEX_EXPLAINER.md
 ```
 
-`README.md` is the repository front door. `BUILD_AND_GENERATOR_GUIDE.md` is the build source of truth. `CONTRIBUTING.md` is the shortest safe workflow for making a change.
+`README.md` is the repository front door. `BUILD_AND_GENERATOR_GUIDE.md` is the build source of truth. `UPDATE-CHECKLISTS.md` is the operational checklist for tool, audit and rebuild changes. `CONTRIBUTING.md` is the shortest safe workflow for making a change.
 
 ## Public website rule
 

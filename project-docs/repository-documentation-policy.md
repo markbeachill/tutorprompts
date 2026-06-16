@@ -3,7 +3,7 @@
 Use this policy to decide where documentation belongs.
 
 ```text
-Root files       Entry points and standard GitHub files.
+Root files       Entry points, standard GitHub files and high-use operational checklists.
 project-docs/    Current maintainer and developer documentation.
 tool-history/    Past tool-design decisions, release-era notes and approach records.
 roadmaps/        Future work and proposals.
@@ -12,7 +12,7 @@ scripts/         Build, check and packaging scripts.
 src/             Editable source for generated content.
 ```
 
-If a document gives current build instructions, it belongs in `project-docs/` or the root build guide.
+If a document gives current build instructions, it belongs in `project-docs/` or the root build guide. If it is a short checklist that AI assistants or maintainers should see before updates, it may live at the root, such as `UPDATE-CHECKLISTS.md`.
 
 If a document explains how a tool or approach developed in the past, it belongs in `tool-history/`.
 

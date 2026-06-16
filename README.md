@@ -2,7 +2,7 @@
 
 The AI Personal Tutor Toolkit is a set of prompt libraries that help students use AI as a tutor, not as a ghost-writer.
 
-The prompts are designed to give structured, specialist writing support: focused feedback, plain explanation, practice and revision guidance while students keep responsibility for their own writing and thinking. The v4.2 release expands the teaching loop across the toolkit, updates tool behaviour, improves routing and testing, and keeps the focus on writing as thinking rather than AI-generated submission text.
+The prompts are designed to give structured, specialist writing support: focused feedback, plain explanation, practice and revision guidance while students keep responsibility for their own writing and thinking. The v4.2.1 release keeps the v4.2 Writing Tutor structure and adds a narrow WT4 boundary patch so Find My Mistakes stays inside writing-mistake support rather than becoming a subject-answering or source-checking service.
 
 Live website: https://markbeachill.github.io/tutorprompts/
 
@@ -60,6 +60,7 @@ The public website is published from the `docs/` folder. Current maintainer docu
 ├── CONTRIBUTING.md
 ├── BUILD_AND_GENERATOR_GUIDE.md
 ├── PACKAGE_GENERATOR_START_HERE.md
+├── UPDATE-CHECKLISTS.md
 ├── CUSTOMISING_PROMPTS.md
 ├── SOURCE_MATERIAL_INDEX_EXPLAINER.md
 ├── src/
@@ -77,16 +78,17 @@ GitHub Pages can publish from the committed `docs/` folder, or from the optional
 If you are updating or rebuilding the repository without prior context:
 
 1. Read `BUILD_AND_GENERATOR_GUIDE.md`.
-2. Read `project-docs/README.md` and `project-docs/repository-layout.md`.
-3. Edit source files under `src/` or generator files under `scripts/`.
-4. Rebuild and check with `python scripts/run_generator_checks.py --build-first`.
-5. Do not treat `tool-history/` or `roadmaps/` as current instructions unless the user explicitly asks you to implement something from them.
+2. Read `UPDATE-CHECKLISTS.md` and use the relevant checklist for the change.
+3. Read `project-docs/README.md` and `project-docs/repository-layout.md`.
+4. Edit source files under `src/` or generator files under `scripts/`.
+5. Rebuild and check with `python scripts/run_generator_checks.py --build-first`.
+6. Do not treat `tool-history/` or `roadmaps/` as current instructions unless the user explicitly asks you to implement something from them.
 
 ## Current public release
 
-- Site package: v4.2
-- Prompt-library suite: v4.2
-- Testing/audit pack: v4.2
+- Site package: v4.2.1
+- Prompt-library suite: v4.2.1
+- Testing/audit pack: v4.2.1
 
 Detailed release notes are in `docs/changelog/site-update-notes/`.
 

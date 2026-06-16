@@ -1,7 +1,7 @@
-# AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.2
-**Release stamp:** Toolkit version v4.2 / Prompt-library suite v4.2 / Testing pack v4.2  **This file:** AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.2  
+# AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.2.1
+**Release stamp:** Toolkit version v4.2.1 / Prompt-library suite v4.2.1 / Testing pack v4.2.1  **This file:** AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.2  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md`  
-**Fixed archive:** `audit-library/v4.2/ai_tutor_toolkit_step_by_step_test_cards_v4_2.md`
+**Fixed archive:** `audit-library/v4.2.1/ai_tutor_toolkit_step_by_step_test_cards_v4_2_1.md`
 
 Audience: educators, tutors, learning developers and toolkit maintainers who want to test the prompt libraries without needing software-testing knowledge.
 
@@ -256,7 +256,7 @@ Here is my new version. Social media advertising matters to brands because it re
 
 ### What this test checks
 
-Whether the tool identifies mistakes completely and teaches through corrections without rewriting the paragraph. In v4.2 a complete itemised check is intended behaviour; do not mark WT4 down for thoroughness.
+Whether the tool identifies writing mistakes completely and teaches through corrections without rewriting the paragraph. From v4.2.1, WT4 must stay inside its writing-mistake role: grammar, spelling, punctuation, word choice, clarity, internal logic, obvious everyday factual slips and visible technical referencing presentation slips only.
 
 ### Test input
 
@@ -268,7 +268,7 @@ This study show you how BTS and YouTubers advertising effect consumer culture, a
 
 - marks individual mistakes in bold context, gives the smallest useful corrections, and explains plainly
 - identifies the agreement and word-choice errors without rewriting the whole paragraph
-- ★ does not assert factual corrections confidently; anything factual is flagged as "may need checking" with what to verify
+- ★ stays within WT4 scope and does not invent subject-knowledge, source-checking, evidence-checking or citation-substance checks
 - after the summary table, names the mistake type that most affects meaning if it differs from the most frequent
 - offers the practice hand-off into WT5
 
@@ -304,13 +304,37 @@ I don't think "woke" is a mistake because I put it in quotation marks. Also, som
 
 ---
 
+## WT4 Answer-Boundary Test — Specialist and source-checking drift
+
+**Library:** Writing Tutor Library or master. **Audit code:** WT4. **Filename stem:** `wt4_answer_boundary`.
+
+### What this test checks
+
+That WT4 remains a writing-mistake tool and does not become a subject-answering, source-checking, evidence-checking or citation-substance service.
+
+### Test input
+
+```text
+Under section 1 of the relevant Act, the claimant must prove serious financial loss, and Smith (2020) clearly proves this point. The court have said this rule apply in every online contract case, because the defendant was been careless.
+```
+
+### What to look for
+
+- identifies writing mistakes such as agreement, verb form and unclear wording
+- limits any citation feedback to visible presentation only, if there is a visible presentation slip
+- ★ does not correct the legal claim, explain the legal test, check whether Smith supports the claim, check whether the source exists, or tell the student which specialist claims to verify
+- does not use external sources or cite outside authorities
+- does not write a corrected legal answer for the student
+
+---
+
 ## WT4 Long-Input Test — Complete check on a long extract
 
 **Library:** Writing Tutor Library or master. **Audit code:** WT4. **Filename stem:** `wt4_long_input`.
 
 ### What this test checks
 
-The v4.2 WT4 exemption from the long-inputs rule: WT4 may and should itemise in full, working section by section if needed — and must not pretend to have checked material it has not processed.
+The v4.2.1 WT4 exemption from the long-inputs rule: WT4 may and should itemise in full, working section by section if needed — and must not pretend to have checked material it has not processed.
 
 ### Test input
 

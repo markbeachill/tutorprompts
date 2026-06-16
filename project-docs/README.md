@@ -34,8 +34,9 @@ If you have no prior context and are asked to update or build the repository:
 
 1. Read `README.md` in the repository root.
 2. Read `BUILD_AND_GENERATOR_GUIDE.md` in the repository root.
-3. Read this file and `repository-layout.md`.
-4. Edit source files under `src/` or generator files under `scripts/` as appropriate.
-5. Run `python scripts/run_generator_checks.py --build-first` before packaging.
+3. Read `UPDATE-CHECKLISTS.md` in the repository root and follow the relevant checklist.
+4. Read this file and `repository-layout.md`.
+5. Edit source files under `src/` or generator files under `scripts/` as appropriate.
+6. Run `python scripts/run_generator_checks.py --build-first` before packaging.
 
 Do not treat `tool-history/` or `roadmaps/` as current instructions unless the user explicitly asks you to implement something from them.

@@ -1,11 +1,15 @@
-# AI Personal Tutor Toolkit — Testing Guide for Educators v4.2
-**Release stamp:** Toolkit version v4.2 / Prompt-library suite v4.2 / Testing pack v4.2  **This file:** AI Personal Tutor Toolkit — Testing Guide for Educators v4.2  
+# AI Personal Tutor Toolkit — Testing Guide for Educators v4.2.1
+**Release stamp:** Toolkit version v4.2.1 / Prompt-library suite v4.2.1 / Testing pack v4.2.1  **This file:** AI Personal Tutor Toolkit — Testing Guide for Educators v4.2  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_testing_guide_for_educators.md`  
-**Fixed archive:** `audit-library/v4.2/ai_tutor_toolkit_testing_guide_for_educators_v4_2.md`
+**Fixed archive:** `audit-library/v4.2.1/ai_tutor_toolkit_testing_guide_for_educators_v4_2_1.md`
 
 Audience: educators, tutors, learning developers and toolkit maintainers.
 
 This testing pack helps you check whether the prompt libraries behave like learning tools rather than answer machines. You do not need software-testing knowledge.
+
+## What changed in v4.2.1
+
+Testing pack v4.2.1 adds a stricter WT4 answer-giving boundary. WT4 should find writing mistakes, obvious everyday factual slips and visible technical referencing presentation slips only. It should not check specialist subject correctness, source accuracy, evidence sufficiency, quotation accuracy against external sources, or citation/source substance.
 
 ## What changed in v4.2
 

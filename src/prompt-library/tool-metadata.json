@@ -39,10 +39,10 @@
       "title": "Find My Mistakes",
       "family": "writing-tutor",
       "family_label": "Writing Tutor tools",
-      "master_manifest_description": "identify grammar, logic, clarity, factual, spelling, punctuation and referencing problems",
-      "mini_manifest_description": "identify grammar, logic, clarity, factual, spelling, punctuation and referencing problems",
+      "master_manifest_description": "identify grammar, spelling, punctuation, word-choice, clarity and visible citation-formatting mistakes",
+      "mini_manifest_description": "identify grammar, spelling, punctuation, word-choice, clarity and visible citation-formatting mistakes",
       "mini_family_label": "Writing and referencing tools",
-      "launcher_description": "list and explain mistakes in grammar, logic and clarity."
+      "launcher_description": "list and explain writing mistakes in grammar, wording, clarity and visible citation formatting."
     },
     {
       "id": "teach-mistake",
