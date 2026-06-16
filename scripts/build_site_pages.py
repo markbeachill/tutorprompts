@@ -407,13 +407,13 @@ table.tool-table td:nth-child(3) {
 }
 
 
-/* Full-width generated catalogue pages and responsive tables.
-   These pages should use the page width, not internal accordion scrollboxes. */
+/* Site-width generated catalogue pages and responsive tables.
+   These pages should use the same outer frame as Examples, not the full browser width. */
 body.reference.tools-catalogue .reading,
 body.reference.start-page .reading,
 body.reference.download-page .reading {
-  width: min(1440px, calc(100% - (var(--page-gutter) * 2)));
-  max-width: 1440px;
+  width: min(var(--site-width), calc(100% - (var(--page-gutter) * 2)));
+  max-width: var(--site-width);
 }
 body.reference.tools-catalogue .tool-section,
 body.reference.start-page .tool-section,
@@ -465,8 +465,8 @@ body.reference.start-page .links-col .compact-links {
   body.reference.tools-catalogue .reading,
   body.reference.start-page .reading,
   body.reference.download-page .reading {
-    width: min(100% - 24px, 100%);
-    max-width: none;
+    width: calc(100% - 24px);
+    max-width: var(--site-width);
   }
   body.reference.tools-catalogue .tool-table-wrap,
   body.reference.start-page .tool-table-wrap {
@@ -941,9 +941,20 @@ def build_examples_index_page(tools: list[dict[str, object]]) -> str:
 
 def normalise_css(css: str) -> str:
     # Remove previous generated navigation/tool-page CSS block(s) before appending the current one.
-    # The generated block is always appended at the end of style.css and starts with
-    # the accessible heading refinement marker. Remove from that marker onward so
-    # nested responsive rules remain idempotent.
+    # Older builds appended some layout blocks before the main generated marker, so remove those
+    # explicitly as well. The current generated block starts with the accessible heading marker.
+    css = re.sub(
+        r"\n/\* Full-width generated catalogue pages and responsive tables\..*?(?=\n/\* Accessible heading refinement:|\n/\* Site-width generated catalogue pages|\Z)",
+        "\n",
+        css,
+        flags=re.S,
+    )
+    css = re.sub(
+        r"\n/\* Site-width generated catalogue pages and responsive tables\..*?(?=\n/\* Accessible heading refinement:|\Z)",
+        "\n",
+        css,
+        flags=re.S,
+    )
     marker = "\n/* Accessible heading refinement:"
     idx = css.find(marker)
     if idx != -1:

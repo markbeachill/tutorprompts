@@ -587,132 +587,6 @@ body.reference .reading > section > blockquote {
   .checklist { columns: 1; }
 }
 
-
-
-/* Full-width generated catalogue pages and responsive tables.
-   These pages should use the page width, not internal accordion scrollboxes. */
-body.reference.tools-catalogue .reading,
-body.reference.start-page .reading,
-body.reference.download-page .reading {
-  width: min(1440px, calc(100% - (var(--page-gutter) * 2)));
-  max-width: 1440px;
-}
-body.reference.tools-catalogue .tool-section,
-body.reference.start-page .tool-section,
-body.reference.download-page .tool-section,
-body.reference.tools-catalogue .accordion-list,
-body.reference.start-page .accordion-list,
-body.reference.download-page .accordion-list,
-body.reference.download-page .download-libraries,
-body.reference.download-page #individual-tools {
-  max-width: 100%;
-  width: 100%;
-}
-body.reference.tools-catalogue .tool-table-wrap,
-body.reference.start-page .tool-table-wrap {
-  overflow: visible;
-  margin: 0 18px 4px;
-  max-width: calc(100% - 36px);
-}
-body.reference.tools-catalogue table.tool-table,
-body.reference.start-page table.tool-table {
-  min-width: 0;
-  width: 100%;
-  table-layout: auto;
-}
-body.reference.tools-catalogue table.tools-catalog-table .col-code { width: 5.25rem; }
-body.reference.tools-catalogue table.tools-catalog-table .col-tool { width: 22%; }
-body.reference.tools-catalogue table.tools-catalog-table .col-links { width: 18rem; }
-body.reference.tools-catalogue table.tools-catalog-table .col-use { width: auto; }
-body.reference.start-page table.start-table .col-recommended { width: 28%; }
-body.reference.start-page table.start-table .col-links { width: 14rem; }
-body.reference.start-page table.start-table .col-why { width: auto; }
-body.reference.tools-catalogue table.tool-table td,
-body.reference.start-page table.tool-table td {
-  overflow-wrap: normal;
-  word-break: normal;
-}
-body.reference.tools-catalogue table.tool-table .use-col,
-body.reference.start-page table.tool-table .why-col,
-body.reference.start-page table.start-table td:nth-child(2) {
-  overflow-wrap: anywhere;
-}
-body.reference.tools-catalogue .links-col .compact-links,
-body.reference.start-page .links-col .compact-links {
-  min-width: 0;
-  white-space: normal;
-}
-
-@media (max-width: 900px) {
-  body.reference.tools-catalogue .reading,
-  body.reference.start-page .reading,
-  body.reference.download-page .reading {
-    width: min(100% - 24px, 100%);
-    max-width: none;
-  }
-  body.reference.tools-catalogue .tool-table-wrap,
-  body.reference.start-page .tool-table-wrap {
-    margin: 0 12px 4px;
-    max-width: calc(100% - 24px);
-    overflow: visible;
-  }
-  body.reference.tools-catalogue table.tool-table,
-  body.reference.start-page table.tool-table,
-  body.reference.tools-catalogue table.tools-catalog-table,
-  body.reference.start-page table.start-table {
-    min-width: 0;
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-  }
-  body.reference.tools-catalogue table.tool-table thead,
-  body.reference.start-page table.tool-table thead {
-    display: none;
-  }
-  body.reference.tools-catalogue table.tool-table tbody,
-  body.reference.start-page table.tool-table tbody,
-  body.reference.tools-catalogue table.tool-table tr,
-  body.reference.start-page table.tool-table tr,
-  body.reference.tools-catalogue table.tool-table td,
-  body.reference.start-page table.tool-table td {
-    display: block;
-    width: 100% !important;
-  }
-  body.reference.tools-catalogue table.tool-table tr,
-  body.reference.start-page table.tool-table tr {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    margin: 0 0 12px;
-    overflow: hidden;
-  }
-  body.reference.tools-catalogue table.tool-table td,
-  body.reference.start-page table.tool-table td {
-    border: 0;
-    border-bottom: 1px solid var(--line);
-    padding: 10px 12px;
-    white-space: normal;
-  }
-  body.reference.tools-catalogue table.tool-table td:last-child,
-  body.reference.start-page table.tool-table td:last-child {
-    border-bottom: 0;
-  }
-  body.reference.tools-catalogue table.tool-table td::before,
-  body.reference.start-page table.tool-table td::before {
-    content: attr(data-label);
-    display: block;
-    color: var(--muted);
-    font-size: 0.78rem;
-    font-weight: 750;
-    letter-spacing: 0.01em;
-    margin-bottom: 2px;
-  }
-  body.reference.tools-catalogue .links-col .compact-links,
-  body.reference.start-page .links-col .compact-links {
-    align-items: flex-start;
-  }
-}
-
 /* Accessible heading refinement: keep strong hierarchy while reducing tight headline spacing. */
 h1 {
   letter-spacing: -0.01em;
@@ -1073,13 +947,13 @@ table.tool-table td:nth-child(3) {
 }
 
 
-/* Full-width generated catalogue pages and responsive tables.
-   These pages should use the page width, not internal accordion scrollboxes. */
+/* Site-width generated catalogue pages and responsive tables.
+   These pages should use the same outer frame as Examples, not the full browser width. */
 body.reference.tools-catalogue .reading,
 body.reference.start-page .reading,
 body.reference.download-page .reading {
-  width: min(1440px, calc(100% - (var(--page-gutter) * 2)));
-  max-width: 1440px;
+  width: min(var(--site-width), calc(100% - (var(--page-gutter) * 2)));
+  max-width: var(--site-width);
 }
 body.reference.tools-catalogue .tool-section,
 body.reference.start-page .tool-section,
@@ -1131,8 +1005,8 @@ body.reference.start-page .links-col .compact-links {
   body.reference.tools-catalogue .reading,
   body.reference.start-page .reading,
   body.reference.download-page .reading {
-    width: min(100% - 24px, 100%);
-    max-width: none;
+    width: calc(100% - 24px);
+    max-width: var(--site-width);
   }
   body.reference.tools-catalogue .tool-table-wrap,
   body.reference.start-page .tool-table-wrap {
