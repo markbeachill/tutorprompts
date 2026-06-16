@@ -405,6 +405,131 @@ table.tool-table td:nth-child(3) {
   table.start-table { min-width: 980px; }
   .tool-section > summary { padding: 16px; }
 }
+
+
+/* Full-width generated catalogue pages and responsive tables.
+   These pages should use the page width, not internal accordion scrollboxes. */
+body.reference.tools-catalogue .reading,
+body.reference.start-page .reading,
+body.reference.download-page .reading {
+  width: min(1440px, calc(100% - (var(--page-gutter) * 2)));
+  max-width: 1440px;
+}
+body.reference.tools-catalogue .tool-section,
+body.reference.start-page .tool-section,
+body.reference.download-page .tool-section,
+body.reference.tools-catalogue .accordion-list,
+body.reference.start-page .accordion-list,
+body.reference.download-page .accordion-list,
+body.reference.download-page .download-libraries,
+body.reference.download-page #individual-tools {
+  max-width: 100%;
+  width: 100%;
+}
+body.reference.tools-catalogue .tool-table-wrap,
+body.reference.start-page .tool-table-wrap {
+  overflow: visible;
+  margin: 0 18px 4px;
+  max-width: calc(100% - 36px);
+}
+body.reference.tools-catalogue table.tool-table,
+body.reference.start-page table.tool-table {
+  min-width: 0;
+  width: 100%;
+  table-layout: auto;
+}
+body.reference.tools-catalogue table.tools-catalog-table .col-code { width: 5.25rem; }
+body.reference.tools-catalogue table.tools-catalog-table .col-tool { width: 22%; }
+body.reference.tools-catalogue table.tools-catalog-table .col-links { width: 18rem; }
+body.reference.tools-catalogue table.tools-catalog-table .col-use { width: auto; }
+body.reference.start-page table.start-table .col-recommended { width: 28%; }
+body.reference.start-page table.start-table .col-links { width: 14rem; }
+body.reference.start-page table.start-table .col-why { width: auto; }
+body.reference.tools-catalogue table.tool-table td,
+body.reference.start-page table.tool-table td {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+body.reference.tools-catalogue table.tool-table .use-col,
+body.reference.start-page table.tool-table .why-col,
+body.reference.start-page table.start-table td:nth-child(2) {
+  overflow-wrap: anywhere;
+}
+body.reference.tools-catalogue .links-col .compact-links,
+body.reference.start-page .links-col .compact-links {
+  min-width: 0;
+  white-space: normal;
+}
+
+@media (max-width: 900px) {
+  body.reference.tools-catalogue .reading,
+  body.reference.start-page .reading,
+  body.reference.download-page .reading {
+    width: min(100% - 24px, 100%);
+    max-width: none;
+  }
+  body.reference.tools-catalogue .tool-table-wrap,
+  body.reference.start-page .tool-table-wrap {
+    margin: 0 12px 4px;
+    max-width: calc(100% - 24px);
+    overflow: visible;
+  }
+  body.reference.tools-catalogue table.tool-table,
+  body.reference.start-page table.tool-table,
+  body.reference.tools-catalogue table.tools-catalog-table,
+  body.reference.start-page table.start-table {
+    min-width: 0;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  body.reference.tools-catalogue table.tool-table thead,
+  body.reference.start-page table.tool-table thead {
+    display: none;
+  }
+  body.reference.tools-catalogue table.tool-table tbody,
+  body.reference.start-page table.tool-table tbody,
+  body.reference.tools-catalogue table.tool-table tr,
+  body.reference.start-page table.tool-table tr,
+  body.reference.tools-catalogue table.tool-table td,
+  body.reference.start-page table.tool-table td {
+    display: block;
+    width: 100% !important;
+  }
+  body.reference.tools-catalogue table.tool-table tr,
+  body.reference.start-page table.tool-table tr {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    margin: 0 0 12px;
+    overflow: hidden;
+  }
+  body.reference.tools-catalogue table.tool-table td,
+  body.reference.start-page table.tool-table td {
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 10px 12px;
+    white-space: normal;
+  }
+  body.reference.tools-catalogue table.tool-table td:last-child,
+  body.reference.start-page table.tool-table td:last-child {
+    border-bottom: 0;
+  }
+  body.reference.tools-catalogue table.tool-table td::before,
+  body.reference.start-page table.tool-table td::before {
+    content: attr(data-label);
+    display: block;
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 750;
+    letter-spacing: 0.01em;
+    margin-bottom: 2px;
+  }
+  body.reference.tools-catalogue .links-col .compact-links,
+  body.reference.start-page .links-col .compact-links {
+    align-items: flex-start;
+  }
+}
 '''
 
 @dataclass(frozen=True)
@@ -527,10 +652,10 @@ def tool_table_rows(tools: Sequence[dict[str, object]], *, prefix: str = "../") 
         use_when = html.escape(str(tool.get("master_manifest_description") or tool.get("mini_manifest_description") or tool.get("launcher_description") or ""))
         rows.append(
             "<tr>"
-            f'<td class="code-col"><strong class="tool-code">{code}</strong></td>'
-            f'<td class="tool-col">{title}</td>'
-            f"<td>{use_when}.</td>"
-            f'<td class="links-col">{tool_links(tool, prefix=prefix)}</td>'
+            f'<td class="code-col" data-label="Code"><strong class="tool-code">{code}</strong></td>'
+            f'<td class="tool-col" data-label="Tool">{title}</td>'
+            f'<td class="use-col" data-label="Use this when…">{use_when}.</td>'
+            f'<td class="links-col" data-label="Links">{tool_links(tool, prefix=prefix)}</td>'
             "</tr>"
         )
     return "\n".join(rows)
@@ -550,9 +675,9 @@ def tool_table(tools: Sequence[dict[str, object]], *, prefix: str = "../", inclu
             why = html.escape(str(tool.get("master_manifest_description") or tool.get("mini_manifest_description") or tool.get("launcher_description") or ""))
             rows.append(
                 "<tr>"
-                f'<td class="tool-col"><strong class="tool-code">{code}</strong> — {title}</td>'
-                f"<td>{why}.</td>"
-                f'<td class="links-col">{tool_links(tool, prefix=prefix)}</td>'
+                f'<td class="tool-col" data-label="Recommended tool"><strong class="tool-code">{code}</strong> — {title}</td>'
+                f'<td class="why-col" data-label="Why this tool">{why}.</td>'
+                f'<td class="links-col" data-label="Links">{tool_links(tool, prefix=prefix)}</td>'
                 "</tr>"
             )
         head = "<tr><th>Recommended tool</th><th>Why this tool</th><th>Links</th></tr>"
@@ -675,7 +800,7 @@ def build_where_to_start_page(tools: list[dict[str, object]]) -> str:
             content = table_for(codes)
         else:
             content = '''<div class="tool-table-wrap"><table class="tool-table start-table"><colgroup><col class="col-recommended"><col class="col-why"><col class="col-links"></colgroup><thead><tr><th>Situation</th><th>Recommended route</th><th>Links</th></tr></thead><tbody>
-<tr><td>You want to check whether a tutor behaves as a learning-support tool rather than an answer machine.</td><td>Use the testing, deployment-check and source-material guide pages.</td><td class="links-col"><div class="compact-links"><a class="compact-link" href="../testing.html">Testing</a><a class="compact-link" href="../guides/">Guides</a><a class="compact-link" href="../source-material/">Source material</a></div></td></tr>
+<tr><td data-label="Situation">You want to check whether a tutor behaves as a learning-support tool rather than an answer machine.</td><td data-label="Recommended route">Use the testing, deployment-check and source-material guide pages.</td><td class="links-col" data-label="Links"><div class="compact-links"><a class="compact-link" href="../testing.html">Testing</a><a class="compact-link" href="../guides/">Guides</a><a class="compact-link" href="../source-material/">Source material</a></div></td></tr>
 </tbody></table></div>'''
         sections.append(f'''<details class="tool-section" id="{slug}">
 <summary><span>{html.escape(title)}</span></summary>
@@ -816,8 +941,14 @@ def build_examples_index_page(tools: list[dict[str, object]]) -> str:
 
 def normalise_css(css: str) -> str:
     # Remove previous generated navigation/tool-page CSS block(s) before appending the current one.
-    css = re.sub(r"\n/\* Accessible heading refinement:.*?@media \(max-width: 860px\) \{\n(?:.|\n)*?\n\}\n", "\n", css, flags=re.S)
-    css = re.sub(r"\n/\* Navigation refresh \*/.*?@media \(max-width: 860px\) \{\n(?:.|\n)*?\n\}\n", "\n", css, flags=re.S)
+    # The generated block is always appended at the end of style.css and starts with
+    # the accessible heading refinement marker. Remove from that marker onward so
+    # nested responsive rules remain idempotent.
+    marker = "\n/* Accessible heading refinement:"
+    idx = css.find(marker)
+    if idx != -1:
+        css = css[:idx]
+    css = re.sub(r"\n/\* Navigation refresh \*/.*", "\n", css, flags=re.S)
     css = re.sub(r"h1 \{\n  font-size: clamp\(1\.7rem, 3vw, 2\.2rem\);\n  line-height: [^;]+;\n  margin: 0 0 8px;\n  letter-spacing: [^;]+;\n  font-weight: [^;]+;\n\}", "h1 {\n  font-size: clamp(1.7rem, 3vw, 2.2rem);\n  line-height: 1.18;\n  margin: 0 0 8px;\n  letter-spacing: -0.01em;\n  font-weight: 700;\n}", css)
     css = re.sub(r"h2 \{\n  font-size: clamp\(1\.08rem, 1\.35vw, 1\.18rem\);\n  line-height: [^;]+;\n  margin: 28px 0 7px;\n  letter-spacing: [^;]+;\n  font-weight: [^;]+;\n\}", "h2 {\n  font-size: clamp(1.08rem, 1.35vw, 1.18rem);\n  line-height: 1.32;\n  margin: 28px 0 7px;\n  letter-spacing: 0;\n  font-weight: 650;\n}", css)
     css = re.sub(r"body\.home h1 \{\n  font-size: clamp\(2\.1rem, 5vw, 4\.5rem\);\n  line-height: [^;]+;\n  margin: 0 0 16px;\n  letter-spacing: [^;]+;\n  font-weight: [^;]+;\n\}", "body.home h1 {\n  font-size: clamp(2.1rem, 5vw, 4.5rem);\n  line-height: 1.08;\n  margin: 0 0 16px;\n  letter-spacing: -0.018em;\n  font-weight: 720;\n}", css)
