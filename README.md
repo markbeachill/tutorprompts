@@ -51,32 +51,36 @@ See:
 
 ## Repository structure
 
-The public website is published from the `docs/` folder.
+The public website is published from the `docs/` folder. Current maintainer documentation is kept separate from the public site.
 
 ```text
 /
 ├── README.md
+├── CHANGELOG.md
+├── CONTRIBUTING.md
 ├── BUILD_AND_GENERATOR_GUIDE.md
 ├── PACKAGE_GENERATOR_START_HERE.md
 ├── CUSTOMISING_PROMPTS.md
 ├── SOURCE_MATERIAL_INDEX_EXPLAINER.md
 ├── src/
 ├── scripts/
-├── docs/
-│   ├── index.html
-│   ├── where-to-start/
-│   ├── try-it/
-│   ├── tools/
-│   ├── examples/
-│   ├── student-help/
-│   ├── guides/
-│   ├── download/
-│   ├── prompt-libraries/
-│   └── audit-library/
-└── roadmaps/archive/root-docs/
+├── docs/              # public GitHub Pages site
+├── project-docs/      # current maintainer/developer docs
+├── tool-history/      # past tool design decisions and release-era notes
+└── roadmaps/          # future work and proposals
 ```
 
 GitHub Pages can publish from the committed `docs/` folder, or from the optional GitHub Actions build workflow described in `BUILD_AND_GENERATOR_GUIDE.md`.
+
+## For maintainers and AI assistants
+
+If you are updating or rebuilding the repository without prior context:
+
+1. Read `BUILD_AND_GENERATOR_GUIDE.md`.
+2. Read `project-docs/README.md` and `project-docs/repository-layout.md`.
+3. Edit source files under `src/` or generator files under `scripts/`.
+4. Rebuild and check with `python scripts/run_generator_checks.py --build-first`.
+5. Do not treat `tool-history/` or `roadmaps/` as current instructions unless the user explicitly asks you to implement something from them.
 
 ## Current public release
 
@@ -95,4 +99,4 @@ https://github.com/markbeachill/tutorprompts/discussions
 
 ## Build instructions
 
-See [`BUILD_AND_GENERATOR_GUIDE.md`](BUILD_AND_GENERATOR_GUIDE.md) for the consolidated library/page build workflow and release-version policy.
+See [`BUILD_AND_GENERATOR_GUIDE.md`](BUILD_AND_GENERATOR_GUIDE.md) for the consolidated library/page build workflow and release-version policy. Current maintainer details live in [`project-docs/`](project-docs/).

@@ -2806,7 +2806,7 @@ For a completed check, end with:
 
 <!-- FILE: flow-and-coherence.md -->
 <!-- Library path: src/prompt-library/tools/flow-and-coherence.md -->
-<!-- Design rationale: roadmaps/design-notes/wt8-beyond-this-doesnt-flow.md (maintainer note, not student-facing) -->
+<!-- Design rationale: tool-history/writing-tutor/v4-2-wt8-wt9-flow-coherence-design.md (maintainer note, not student-facing) -->
 
 <!--
 Public-facing routing metadata

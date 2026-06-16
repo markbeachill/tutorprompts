@@ -60,12 +60,23 @@ EXPECTED_SCRIPTS = [
 
 EXPECTED_DOCS = [
     "README.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
     "PACKAGE_GENERATOR_START_HERE.md",
     "BUILD_AND_GENERATOR_GUIDE.md",
     "CUSTOMISING_PROMPTS.md",
     "SOURCE_MATERIAL_INDEX_EXPLAINER.md",
-    "roadmaps/archive/root-docs/PACKAGE_GENERATOR_README.md",
-    "roadmaps/archive/root-docs/PACKAGE_GENERATOR_DESIGN.md",
+    "project-docs/README.md",
+    "project-docs/repository-layout.md",
+    "project-docs/build-system.md",
+    "project-docs/generated-files.md",
+    "project-docs/tool-index.md",
+    "tool-history/README.md",
+    "tool-history/writing-tutor/v4-2-wt8-wt9-flow-coherence-design.md",
+    "tool-history/repository-docs/root-docs/PACKAGE_GENERATOR_README.md",
+    "tool-history/repository-docs/root-docs/PACKAGE_GENERATOR_DESIGN.md",
+    "roadmaps/README.md",
+    "roadmaps/future-generator/package-generator-roadmap.md",
 ]
 
 

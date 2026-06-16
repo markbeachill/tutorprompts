@@ -219,12 +219,23 @@ This is a deploy-time build only. GitHub Pages still serves a static site to vis
 
 To use it, set GitHub Pages to deploy from **GitHub Actions** in repository settings.
 
-## Archived root notes
+## Documentation organisation
 
-Older design notes and superseded package-generator notes have been moved out of the repository root to keep the root folder usable:
+The repository separates current maintainer documentation, historical design notes and future proposals:
 
 ```text
-roadmaps/archive/root-docs/
+project-docs/  current maintainer/developer documentation
+tool-history/  past tool-development decisions, design rationales and release-era notes
+roadmaps/      future work and proposals
+docs/          public GitHub Pages site
 ```
 
-That archive includes earlier prompt-library notes, v3 design notes, package-generator design notes and the earlier standalone GitHub Actions explainer. The current canonical build instructions are this file plus `PACKAGE_GENERATOR_START_HERE.md`.
+Use `project-docs/` for current operational documentation. Use `tool-history/` when preserving the record of an earlier approach or completed design decision. Use `roadmaps/` only for future or proposed work.
+
+Older package-generator notes and superseded root notes have been moved out of the repository root to:
+
+```text
+tool-history/repository-docs/root-docs/
+```
+
+The current canonical build instructions are this file plus `project-docs/` and `PACKAGE_GENERATOR_START_HERE.md`.
