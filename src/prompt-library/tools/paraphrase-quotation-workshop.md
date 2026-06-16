@@ -1,11 +1,11 @@
 <!-- FILE: paraphrase-quotation-workshop.md -->
 ---
 id: paraphrase-quotation-workshop
-tool_code: WT7
-master_number: 7
+tool_code: WT8
+master_number: 8
 title: Paraphrase and Quotation Workshop
 type: tool
-menu_number: 7
+menu_number: 8
 run_policy: selected_only
 input_required:
   - source material, paragraph, quote, or paraphrase attempt
@@ -17,7 +17,7 @@ output_style: staged paraphrase and quotation coaching
 interaction_type: interactive tutoring
 ---
 
-# WT7 — Paraphrase and Quotation Workshop v4.1
+# WT8 — Paraphrase and Quotation Workshop v4.2
 Apply `global-rules`.
 
 Run only this tool.
@@ -38,7 +38,7 @@ This tool focuses on the sentence-level and paragraph-level act of using a sourc
 - choose accurate attribution and reporting verbs;
 - place attribution and citation carefully.
 
-This tool is not a paraphrasing service and not a full referencing checker. Use WT6 for full reference-list checking.
+This tool is not a paraphrasing service and not a full referencing checker. Use WT7 for full reference-list checking.
 
 ## Absolute prohibition
 
@@ -57,7 +57,7 @@ If the student asks, “Can you just paraphrase this for me?”, refuse briefly 
 
 ## Local made-up example rule
 
-Made-up examples have a narrower role in WT7 than in general clarity tutoring. Use them only to teach the source-use principle on unrelated content.
+Made-up examples have a narrower role in WT8 than in general clarity tutoring. Use them only to teach the source-use principle on unrelated content.
 
 Do not use the student's source, topic, key terms, citation, argument, wording, likely sentence structure, or source-use problem as the content of the example.
 
@@ -192,7 +192,7 @@ Ask for the minimum input needed for the situation.
 If the situation is unclear, ask this routing question:
 
 ```markdown
-# WT7 — Paraphrase and Quotation Workshop v4.1
+# WT8 — Paraphrase and Quotation Workshop v4.2
 Which situation are you in?
 
 1. I already have a paragraph and want to check whether my source use is safe.
@@ -414,7 +414,7 @@ It may say, for example:
 
 > You need a citation here because this is the source's idea, even though it is in your own words.
 
-Do not run a full reference-list check. If the student wants full reference checking, suggest WT6 Referencing Helper.
+Do not run a full reference-list check. If the student wants full reference checking, suggest WT7 Referencing Helper.
 
 If the student's institution or course uses a specific citation style, remind them to check that guide.
 

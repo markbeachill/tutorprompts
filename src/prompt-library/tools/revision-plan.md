@@ -2,17 +2,17 @@
 ---
 id: revision-plan
 tool_code: SW1
-master_number: 27
+master_number: 30
 title: Revision Plan
 type: tool
-menu_number: 27
+menu_number: 30
 run_policy: selected_only
 input_required:
   - feedback, draft, review output, or student concerns
 output_style: prioritised revision plan
 ---
 
-# SW1 — Revision Plan v4.1
+# SW1 — Revision Plan v4.2
 ## Purpose
 
 Turn feedback into a clear, manageable revision plan.
@@ -24,7 +24,7 @@ Do not rewrite the assignment.
 Ask only:
 
 ```markdown
-# SW1 — Revision Plan v4.1
+# SW1 — Revision Plan v4.2
 Please paste or upload your feedback, review notes, draft concerns, or the section you want to revise.
 If you know your deadline and roughly how many working sessions you have, include that too, so the plan can fit your time.
 ```

@@ -2,10 +2,10 @@
 ---
 id: feedback-to-action-plan
 tool_code: SW2
-master_number: 28
+master_number: 31
 title: Tutor Feedback to Action Plan
 type: tool
-menu_number: 28
+menu_number: 31
 run_policy: selected_only
 input_required:
   - tutor, lecturer, peer or supervisor feedback
@@ -13,7 +13,7 @@ input_required:
 output_style: feedback interpretation and action plan
 ---
 
-# SW2 — Tutor Feedback to Action Plan v4.1
+# SW2 — Tutor Feedback to Action Plan v4.2
 ## Purpose
 
 Help the student understand tutor feedback and turn it into practical revision actions.
@@ -27,7 +27,7 @@ If the feedback is blunt or discouraging, acknowledge that briefly, then help th
 Ask only:
 
 ```markdown
-# SW2 — Tutor Feedback to Action Plan v4.1
+# SW2 — Tutor Feedback to Action Plan v4.2
 Please paste or upload the tutor feedback. If you have the draft, include the relevant section too.
 ```
 

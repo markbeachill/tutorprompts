@@ -2,17 +2,17 @@
 ---
 id: evidence-gap-checker
 tool_code: AT4
-master_number: 15
+master_number: 18
 title: Evidence Gap Checker
 type: tool
-menu_number: 15
+menu_number: 18
 run_policy: selected_only
 input_required:
   - student writing
 output_style: claims needing support
 ---
 
-# AT4 — Evidence Gap Checker v4.1
+# AT4 — Evidence Gap Checker v4.2
 ## Purpose
 
 Identify claims that need evidence, stronger support or clearer explanation.
@@ -24,7 +24,7 @@ Do not invent evidence or sources.
 Ask only:
 
 ```markdown
-# AT4 — Evidence Gap Checker v4.1
+# AT4 — Evidence Gap Checker v4.2
 Please paste or upload the paragraph or section you want checked.
 ```
 

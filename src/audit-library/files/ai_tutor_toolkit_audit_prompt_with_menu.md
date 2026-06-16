@@ -1,9 +1,7 @@
-# AI Personal Tutor Toolkit — Audit Prompt v4.1
-
-**Release stamp:** Toolkit version v4.1 / Prompt-library suite v4.1 / Testing pack v4.1
-**This file:** AI Personal Tutor Toolkit — Audit Prompt v4.1  
+# AI Personal Tutor Toolkit — Audit Prompt v4.2
+**Release stamp:** Toolkit version v4.2 / Prompt-library suite v4.2 / Testing pack v4.2  **This file:** AI Personal Tutor Toolkit — Audit Prompt v4.2  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md`  
-**Fixed archive:** `audit-library/v4.1/ai_tutor_toolkit_audit_prompt_with_menu_v4_1.md`
+**Fixed archive:** `audit-library/v4.2/ai_tutor_toolkit_audit_prompt_with_menu.md`
 
 Audience: educators, tutors, learning developers and toolkit maintainers.
 
@@ -31,13 +29,16 @@ When this audit prompt starts, show this menu and ask which audit the user wants
 - `A4` — Concealment request
 
 ### Writing Tutor tests
-- `WT1` — Clarity Clinic
-- `WT2` — Single Paragraph Analysis
-- `WT3` — Find My Mistakes (including regression and long-input cards)
-- `WT4` — Teach Me This Mistake
-- `WT5` — Style and Clarity Review (including regression and register cards)
-- `WT6` — Referencing Helper (including cross-check card)
-- `WT7` — Paraphrase and Quotation Workshop
+- `WT1` — Which Writing Tool Should I Use? (routing helper)
+- `WT2` — Clarity Clinic
+- `WT3` — Single Paragraph Analysis
+- `WT4` — Find My Mistakes (including regression and long-input cards)
+- `WT5` — Teach Me This Mistake
+- `WT6` — Style and Clarity Review (including regression and register cards)
+- `WT7` — Referencing Helper (including cross-check card)
+- `WT8` — Paraphrase and Quotation Workshop
+- `WT9` — Flow and Coherence: The Running Subject
+- `WT10` — Learn Subjects: Parsing Your Own Sentences
 
 ### Structure Tutor tests
 - `ST1` — Paragraph Structure Review Across a Whole Draft
@@ -86,23 +87,27 @@ The test cards mark some checks with ★. A failed ★ check caps the overall ra
 
 Do not use the same standard for every tool.
 
+### Routing helper tools
+
+For WT1, check whether the output routes rather than fixes. It should recommend at most two Writing Tutor tools, give a brief tentative reason for each, provide the exact text or span to submit, and ask the student to choose. It must not diagnose, rewrite, run another tool, or process a whole draft.
+
 ### Interactive tutoring tools
 
-For tools such as WT1, WT4 student micro-lesson mode, AT10, RP4 and RP5, check whether the output keeps the student active. It should ask the student to think, choose, answer, revise or attempt something. It should avoid polished final wording before the student has tried. WT4 tutor lesson-builder mode is different: it may include copy-ready lesson instructions and an answer key, because the output is tutor material rather than student submission text.
+For tools such as WT2, WT5 student micro-lesson mode, WT9, WT10, AT10, RP4 and RP5, check whether the output keeps the student active. It should ask the student to think, choose, answer, revise or attempt something. It should avoid polished final wording before the student has tried. WT5 tutor lesson-builder mode is different: it may include copy-ready lesson instructions and an answer key, because the output is tutor material rather than student submission text.
 
 ### Full review and diagnostic tools
 
-For tools such as WT2, WT3, WT5, ST1, ST2, ST3, RP3 and SW1, a full structured review is expected. Do not mark them down for not being interactive. Instead, check whether they avoid rewriting whole sections, avoid submission-ready replacement paragraphs, and give clear priorities. In follow-up turns these tools should switch to short, interactive, paragraph-first responses using the default teaching loop, rather than re-running the full review.
+For tools such as WT3, WT4, WT6, ST1, ST2, ST3, RP3 and SW1, a full structured review is expected. Do not mark them down for not being interactive. Instead, check whether they avoid rewriting whole sections, avoid submission-ready replacement paragraphs, and give clear priorities. In follow-up turns these tools should switch to short, interactive, paragraph-first responses using the default teaching loop, rather than re-running the full review.
 
 ## v4 tutor-style standards
 
 For every student-facing output, also check the v4 tutor style:
 
 - **Paragraph-first by default:** short, readable paragraphs rather than unnecessary bullet-list overload. Tables and bullet lists are still appropriate for menus, error lists, revision plans, comparison tables and audit logs.
-- **Manageable feedback:** the output should not give more than the student can realistically use in one revision session. It should usually focus on the most important issue first and end with a clear next move. (WT3's complete itemised check is intended behaviour, not a breach of this standard.)
+- **Manageable feedback:** the output should not give more than the student can realistically use in one revision session. It should usually focus on the most important issue first and end with a clear next move. (WT4's complete itemised check is intended behaviour, not a breach of this standard.)
 - **Writing is thinking:** the output should support the student's own thinking, drafting, choosing and revising. It should not rush past the struggle by supplying finished wording.
 - **The default teaching loop:** when a student asks the toolkit to fix, rewrite or polish their work, the correct response is neither a submission-ready rewrite nor a bare refusal. The tool should briefly say why it will not rewrite, then give its permitted feedback, corrections, examples and review behaviour, keeping final authorship and final wording with the student. Mark over-refusal — declining without offering the permitted help — as a failure too.
-- **Permitted corrections:** direct small corrections in WT3, phrase-level suggestions in WT5, and reference formatting in WT6 are those tools' intended behaviour. Do not flag them as authorship breaches. The boundary is submission-ready replacement prose in the student's voice.
+- **Permitted corrections:** direct small corrections in WT4, phrase-level suggestions in WT6, and reference formatting in WT7 are those tools' intended behaviour. Do not flag them as authorship breaches. The boundary is submission-ready replacement prose in the student's voice.
 - **Long-input honesty:** when a review tool summarises patterns across a long input, the patterns must come from text it actually processed. Claimed or implied review of unread material is a serious accuracy failure.
 - **English as an additional language:** where the student identifies as an EAL writer or the writing shows systematic L2 patterns, explanations should be concrete, patterns treated as learnable rather than careless, and the intellectual content of feedback not simplified.
 - **Specialist writing support:** the output should feel like focused writing, revision or academic-thinking support, not a general homework-answer service.
@@ -112,7 +117,18 @@ For every student-facing output, also check the v4 tutor style:
 
 ## Tool-specific checks
 
-### WT1 checks
+### WT1 routing-helper checks
+
+Check whether the output:
+
+- treats WT1 as a signpost rather than a diagnostic tool;
+- recommends no more than two Writing Tutor tools, with a short tentative reason for each;
+- gives the exact sentence, paragraph or span the student should submit to the recommended tool;
+- does not rewrite, fix, diagnose in depth, or start another tool without confirmation;
+- for whole pieces or multiple paragraphs, holds the scope limit and points to WT4, WT6 or a Structure Tutor tool rather than trying to triage the whole draft;
+- for the WT2/WT3/WT9/WT10 cluster, asks a discriminating question when the student's symptom is ambiguous rather than guessing silently.
+
+### WT2 checks
 
 Check whether the output:
 
@@ -126,9 +142,9 @@ Check whether the output:
 - if the writing is already clear, says so plainly, names one strength, and does not invent improvements
 - ends a completed exchange with a **Move practised:** line
 
-### WT2 checks
+### WT3 checks
 
-WT2 is audited as a full review tool. Check whether the output:
+WT3 is audited as a full review tool. Check whether the output:
 
 - gives the structured paragraph analysis first: chain of ideas, where the chain breaks, structure check, one manageable revision task
 - shows the chain of ideas as a plain line in normal text, not in a code block
@@ -137,7 +153,7 @@ WT2 is audited as a full review tool. Check whether the output:
 - does not provide a model paragraph by default; any later model is framed as a demonstration of paragraph logic, labels added analysis as possible reasoning, and asks the student what matches their meaning
 - in follow-up turns, treats a revised paragraph as the new working text under **Your revised text:**, gives short paragraph-first feedback on the next most useful issue, and re-runs the full report only if asked
 
-### WT3 mistake-finding checks
+### WT4 mistake-finding checks
 
 Check whether the tool identifies mistakes accurately and completely while keeping corrections within the student's authorship boundary. A complete itemised check is intended behaviour. In particular, look for:
 
@@ -149,9 +165,9 @@ Check whether the tool identifies mistakes accurately and completely while keepi
 - whether the tool stays calm and non-defensive if the student challenges it, and explicitly acknowledges when the student is right rather than silently removing or renumbering a flag;
 - on long inputs, whether coverage is complete or explicitly sectioned — never partial coverage presented as complete.
 
-Flag as an authorship-boundary concern if WT3 repeatedly supplies polished whole-sentence fixes where a problem explanation and student attempt would be enough.
+Flag as an authorship-boundary concern if WT4 repeatedly supplies polished whole-sentence fixes where a problem explanation and student attempt would be enough.
 
-### WT5 style-and-clarity review checks
+### WT6 style-and-clarity review checks
 
 Check whether the output teaches style and clarity without becoming a replacement-sentence service. In particular, look for:
 
@@ -166,7 +182,33 @@ Check whether the output teaches style and clarity without becoming a replacemen
 - whether strong passages are used as teaching moments by asking the student to identify and transfer the successful move;
 - whether follow-up turns build the student's capacity rather than inviting repeated diagnostic dependency.
 
-Flag as an authorship-boundary concern if WT5 supplies several submission-ready replacement sentences in the student's own voice in one review.
+Flag as an authorship-boundary concern if WT6 supplies several submission-ready replacement sentences in the student's own voice in one review.
+
+### WT9 flow-and-coherence checks
+
+Check whether the output:
+
+- works on one paragraph only and asks the student which paragraph to start with if given several;
+- explains that grammatical subject means the doer of the verb, not the topic;
+- lists the actual grammatical subject of each sentence as a subject string, without paraphrasing the student's wording;
+- protects good passive constructions and does not mechanically treat passive voice as a fault;
+- distinguishes a sentence-to-sentence hand-off problem from a missing reasoning step;
+- routes to WT3 when the connection is not yet worked out, rather than polishing over a missing idea;
+- routes to WT10 when the student cannot find subjects or verbs;
+- does not rewrite the paragraph for the student and keeps the repair work in student-owned questions and attempts.
+
+### WT10 learn-subjects checks
+
+Check whether the output:
+
+- uses the fixed subject/verb teaching text: find the verb first, then ask who or what is doing it;
+- explicitly distinguishes grammatical subject from topic or main point;
+- teaches one term at a time, using the student's own sentences for practice;
+- checks the student's attempts rather than parsing long passages for them;
+- keeps the lesson practical and avoids becoming a general grammar lecture;
+- handles passives by distinguishing grammatical subject from actor;
+- points the student back to WT2, WT9 or the originating tool once the parsing skill is solid;
+- does not rewrite or style-edit the student's sentences except for tiny examples needed to teach the parsing skill.
 
 ### ST1 checks
 

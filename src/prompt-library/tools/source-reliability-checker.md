@@ -2,17 +2,17 @@
 ---
 id: source-reliability-checker
 tool_code: AT8
-master_number: 19
+master_number: 22
 title: Source Reliability Checker
 type: tool
-menu_number: 19
+menu_number: 22
 run_policy: selected_only
 input_required:
   - source list, links, bibliography, or source details
 output_style: source quality review
 ---
 
-# AT8 — Source Reliability Checker v4.1
+# AT8 — Source Reliability Checker v4.2
 ## Purpose
 
 Help the student think critically about whether sources look credible, relevant and suitable for academic work.
@@ -30,7 +30,7 @@ Do not fabricate source details or claim to have opened links unless the AI envi
 Ask only:
 
 ```markdown
-# AT8 — Source Reliability Checker v4.1
+# AT8 — Source Reliability Checker v4.2
 Please paste or upload the source list, links, bibliography or source details you want checked.
 ```
 

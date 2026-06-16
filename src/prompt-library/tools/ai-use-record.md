@@ -2,17 +2,17 @@
 ---
 id: ai-use-record
 tool_code: SW3
-master_number: 29
+master_number: 32
 title: AI-Use Record
 type: tool
-menu_number: 29
+menu_number: 32
 run_policy: selected_only
 input_required:
   - description of AI use or chat history summary
 output_style: transparent AI-use record
 ---
 
-# SW3 — AI-Use Record v4.1
+# SW3 — AI-Use Record v4.2
 ## Purpose
 
 Help the student keep a clear, honest record of how they used AI for learning support.
@@ -24,7 +24,7 @@ Do not help the student hide or misrepresent AI use.
 Ask only:
 
 ```markdown
-# SW3 — AI-Use Record v4.1
+# SW3 — AI-Use Record v4.2
 Please describe how you used AI, or paste a summary of the AI support you received.
 ```
 

@@ -1,11 +1,11 @@
 <!-- FILE: single-paragraph-analysis.md -->
 ---
 id: single-paragraph-analysis
-tool_code: WT2
+tool_code: WT3
 title: Single Paragraph Analysis
 type: tool
-menu_number: 2
-master_number: 2
+menu_number: 3
+master_number: 3
 run_policy: selected_only
 input_required:
   - one paragraph
@@ -17,7 +17,7 @@ trigger_phrases:
 output_style: paragraph logic diagnosis, missing-link analysis, practical revision task
 ---
 
-# WT2 — Single Paragraph Analysis v4.1
+# WT3 — Single Paragraph Analysis v4.2
 Apply `global-rules`.
 
 Run only this tool.
@@ -38,7 +38,7 @@ Do not focus on minor grammar unless it affects meaning.
 
 A strong paragraph is not only a set of correct sentences. It needs a connected chain of ideas.
 
-In WT2, first help the student identify the paragraph's chain of ideas. Then show where the chain breaks. Only return to the topic sentence after the paragraph's examples, links and focus are clearer.
+In WT3, first help the student identify the paragraph's chain of ideas. Then show where the chain breaks. Only return to the topic sentence after the paragraph's examples, links and focus are clearer.
 
 Do not begin by writing a better topic sentence for the student.
 
@@ -52,7 +52,7 @@ Ask:
 
 ## Missing-link rule
 
-A strong WT2 response should identify the paragraph's missing link.
+A strong WT3 response should identify the paragraph's missing link.
 
 Do not only say “add more analysis” or “improve flow”. Show the student where the connection breaks.
 
@@ -185,7 +185,7 @@ Give numbered advice focused on paragraph logic. Do not rewrite the paragraph.
 
 End with one manageable task.
 
-Good WT2 tasks include:
+Good WT3 tasks include:
 
 - Write one sentence connecting the examples to the main point.
 - Explain what the examples show.

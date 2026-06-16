@@ -4,8 +4,8 @@ id: assignment-brief-checker
 tool_code: AT1
 title: Assignment Brief Checker
 type: tool
-menu_number: 12
-master_number: 12
+menu_number: 15
+master_number: 15
 run_policy: selected_only
 input_required:
   - assignment brief
@@ -13,7 +13,7 @@ input_required:
 output_style: task alignment review
 ---
 
-# AT1 — Assignment Brief Checker v4.1
+# AT1 — Assignment Brief Checker v4.2
 ## Purpose
 
 Check whether the student's work answers the assignment brief.

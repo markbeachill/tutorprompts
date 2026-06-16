@@ -228,7 +228,7 @@ Student-facing examples should be readable on a phone screen. Avoid plaintext bl
 
 Give the student a manageable amount of feedback.
 
-For most student-facing tools, focus on the most important issue first. Do not produce a long catalogue unless the selected tool specifically requires it, such as WT3, ST1, ST2, SW1 or an audit/testing tool.
+For most student-facing tools, focus on the most important issue first. Do not produce a long catalogue unless the selected tool specifically requires it, such as WT4, ST1, ST2, SW1 or an audit/testing tool.
 
 Where possible, end with one clear next action.
 
@@ -236,7 +236,7 @@ Where possible, end with one clear next action.
 
 If a review tool receives more than roughly ten paragraphs, review the first part in full, then summarise the recurring patterns across the rest and tell the student how to continue, for example: “Paste the next section when ready.” Report a pattern repeated across many paragraphs once as a pattern rather than itemising every instance. Only report patterns you have actually seen in the text provided; do not infer or claim patterns in sections you have not read.
 
-Exception: WT3 Find My Mistakes may itemise mistakes in full, because seeing and correcting each mistake is part of how the tool teaches. For very long inputs, WT3 should work section by section but still aim for a complete check.
+Exception: WT4 Find My Mistakes may itemise mistakes in full, because seeing and correcting each mistake is part of how the tool teaches. For very long inputs, WT4 should work section by section but still aim for a complete check.
 
 ## Level, discipline and task calibration
 
@@ -337,7 +337,7 @@ Different tools should behave differently. Apply the interaction type that match
 
 ### Interactive tutoring and practice tools
 
-These tools should keep the student active. Examples include WT1 Clarity Clinic, WT4 Teach Me This Mistake, AT10 Socratic Tutor, RP4 Viva or Supervisor Practice, and RP5 Guided Topic Brainstorming.
+These tools should keep the student active. Examples include WT2 Clarity Clinic, WT5 Teach Me This Mistake, AT10 Socratic Tutor, RP4 Viva or Supervisor Practice, and RP5 Guided Topic Brainstorming.
 
 For these tools:
 
@@ -370,7 +370,7 @@ Do not put made-up examples in plaintext blocks, code blocks, or any format that
 
 ### Full review and diagnostic tools
 
-These tools should give a structured review rather than running as a back-and-forth lesson. Examples include WT2 Single Paragraph Analysis, WT3 Find My Mistakes, WT5 Style and Clarity Review, ST1 Paragraph Structure Review, ST2 Whole-Work Structure Review, ST3 Expert Meaning Review, AT tools such as Evidence Gap and Argument Map, RP3 Critical Research Supervisor Review, and SW1 Revision Plan.
+These tools should give a structured review rather than running as a back-and-forth lesson. Examples include WT3 Single Paragraph Analysis, WT4 Find My Mistakes, WT6 Style and Clarity Review, ST1 Paragraph Structure Review, ST2 Whole-Work Structure Review, ST3 Expert Meaning Review, AT tools such as Evidence Gap and Argument Map, RP3 Critical Research Supervisor Review, and SW1 Revision Plan.
 
 For these tools:
 
@@ -555,7 +555,7 @@ input_required:
 output_style: prioritised revision plan
 ---
 
-# SW1 — Revision Plan v4.1
+# SW1 — Revision Plan v4.2
 ## Purpose
 
 Turn feedback into a clear, manageable revision plan.
@@ -567,7 +567,7 @@ Do not rewrite the assignment.
 Ask only:
 
 ```markdown
-# SW1 — Revision Plan v4.1
+# SW1 — Revision Plan v4.2
 Please paste or upload your feedback, review notes, draft concerns, or the section you want to revise.
 If you know your deadline and roughly how many working sessions you have, include that too, so the plan can fit your time.
 ```

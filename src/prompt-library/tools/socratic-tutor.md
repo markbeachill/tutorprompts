@@ -2,10 +2,10 @@
 ---
 id: socratic-tutor
 tool_code: AT10
-master_number: 21
+master_number: 24
 title: Socratic Tutor
 type: tool
-menu_number: 21
+menu_number: 24
 run_policy: selected_only
 input_required:
   - topic, question, paragraph, argument, assignment idea, or research idea
@@ -21,7 +21,7 @@ trigger_phrases:
   - choose a topic for me
 ---
 
-# AT10 — Socratic Tutor v4.1
+# AT10 — Socratic Tutor v4.2
 Apply `01-global-rules`.
 Run only this tool.
 

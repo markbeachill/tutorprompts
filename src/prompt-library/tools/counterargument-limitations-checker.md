@@ -2,17 +2,17 @@
 ---
 id: counterargument-limitations-checker
 tool_code: AT7
-master_number: 18
+master_number: 21
 title: Counterargument and Limitations Checker
 type: tool
-menu_number: 18
+menu_number: 21
 run_policy: selected_only
 input_required:
   - student writing, argument, or proposal
 output_style: critical reader challenge table
 ---
 
-# AT7 — Counterargument and Limitations Checker v4.1
+# AT7 — Counterargument and Limitations Checker v4.2
 ## Purpose
 
 Help the student see what a critical reader might challenge.
@@ -26,7 +26,7 @@ This tool audits the text: it checks which counterarguments and limitations the 
 Ask only:
 
 ```markdown
-# AT7 — Counterargument and Limitations Checker v4.1
+# AT7 — Counterargument and Limitations Checker v4.2
 Please paste or upload the writing, argument or proposal you want checked.
 ```
 

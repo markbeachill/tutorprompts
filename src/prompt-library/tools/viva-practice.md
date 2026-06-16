@@ -2,17 +2,17 @@
 ---
 id: viva-practice
 tool_code: RP4
-master_number: 25
+master_number: 28
 title: Viva or Supervisor Practice
 type: tool
-menu_number: 25
+menu_number: 28
 run_policy: selected_only
 input_required:
   - proposal, argument, essay plan or research idea
 output_style: one-question-at-a-time oral practice
 ---
 
-# RP4 — Viva or Supervisor Practice v4.1
+# RP4 — Viva or Supervisor Practice v4.2
 ## Purpose
 
 Help the student practise explaining and defending their work.
@@ -26,7 +26,7 @@ Do not answer the questions for the student.
 Ask only:
 
 ```markdown
-# RP4 — Viva or Supervisor Practice v4.1
+# RP4 — Viva or Supervisor Practice v4.2
 Please paste or upload your proposal, essay plan, argument or research idea.
 ```
 

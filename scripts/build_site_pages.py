@@ -38,7 +38,7 @@ FAMILY_LABELS = {
     "study-workflow": "Study Workflow Tutor",
 }
 FAMILY_NOTES = {
-    "writing-tutor": "Sentence, paragraph, style, mistake, referencing, paraphrase and quotation tools.",
+    "writing-tutor": "Routing, sentence clarity, paragraph logic, flow, subject/verb, style, mistake, referencing, paraphrase and quotation tools.",
     "structure-tutor": "Paragraph, whole-draft structure and reverse-outline tools.",
     "academic-thinking": "Argument, evidence, concept, source and critical-thinking tools.",
     "research-proposal": "Research question, methodology, supervisor-review and viva-practice tools.",
@@ -162,10 +162,11 @@ nav a[aria-current="page"] {
 }
 table.tool-table {
   width: 100%;
-  min-width: 720px;
+  min-width: 760px;
   margin: 0;
   border-collapse: collapse;
   background: var(--panel);
+  table-layout: fixed;
 }
 table.tool-table th,
 table.tool-table td {
@@ -179,15 +180,22 @@ table.tool-table td {
   font-size: 0.95rem;
   line-height: 1.5;
 }
+table.tool-table th:nth-child(1),
 table.tool-table .code-col {
-  width: 5.8rem;
+  width: 5rem;
   white-space: nowrap;
 }
+table.tool-table th:nth-child(2),
 table.tool-table .tool-col {
-  width: 19rem;
+  width: 21%;
 }
+table.tool-table th:nth-child(3),
+table.tool-table td:nth-child(3) {
+  width: 50%;
+}
+table.tool-table th:nth-child(4),
 table.tool-table .links-col {
-  width: 16rem;
+  width: 21%;
 }
 .tool-code {
   color: var(--accent2);
@@ -298,7 +306,7 @@ body.home #downloads {
 
 @media (max-width: 860px) {
   .tool-grid, .try-it-options { grid-template-columns: 1fr; }
-  table.tool-table { min-width: 640px; }
+  table.tool-table { min-width: 700px; }
   .tool-section > summary { padding: 16px; }
 }
 '''
@@ -549,10 +557,13 @@ def build_where_to_start_page(tools: list[dict[str, object]]) -> str:
     def table_for(codes: Sequence[str]) -> str:
         return tool_table([by_code[code] for code in codes if code in by_code], prefix="../", include_code=False)
     groups = [
-        ("improve-draft", "I want to improve a draft", "Use these when the student has existing writing and wants focused feedback rather than a replacement draft.", ["WT1", "WT2", "WT5", "ST1"]),
+        ("choose-writing-tool", "I have writing but I am not sure which Writing Tutor tool fits", "Start here when the problem is local — a sentence, a few sentences or one paragraph — but the student cannot tell whether they need clarity, paragraph logic, flow, grammar terms, source use or mistake feedback.", ["WT1"]),
+        ("improve-draft", "I want to improve a sentence, paragraph or draft", "Use these when the student has existing writing and wants focused feedback rather than a replacement draft.", ["WT2", "WT3", "WT6", "ST1"]),
         ("understand-feedback", "I want to understand feedback", "Use these when the student has comments, marks or tutor feedback and needs to turn it into revision moves.", ["SW2", "SW1", "WT4"]),
-        ("fix-mistake", "I want to fix a recurring mistake", "Use this when a student keeps making the same kind of mistake and needs a micro-lesson or tutor lesson material.", ["WT4", "WT3"]),
-        ("check-paraphrasing", "I want to check paraphrasing, quotations or referencing", "Use these when source use, attribution, quotations or too-close paraphrase are the main issue.", ["WT7", "WT6", "AT8"]),
+        ("fix-mistake", "I want to fix a recurring mistake", "Use this when a student keeps making the same kind of mistake and needs a micro-lesson or tutor lesson material.", ["WT5", "WT4"]),
+        ("flow-coherence", "I want my paragraph to flow better", "Use these when the sentences are mostly understandable but the paragraph feels jumpy, disjointed or hard to follow between sentences.", ["WT9", "WT3", "ST1"]),
+        ("subjects-verbs", "I need help finding subjects and verbs", "Use this when grammar terms are getting in the way, or when the student cannot reliably identify subjects, verbs, objects or actor/subject gaps in their own sentences.", ["WT10", "WT2", "WT9"]),
+        ("check-paraphrasing", "I want to check paraphrasing, quotations or referencing", "Use these when source use, attribution, quotations, referencing or too-close paraphrase are the main issue.", ["WT7", "WT8", "AT8"]),
         ("plan-structure", "I want to plan or structure an assignment", "Use these when the shape of the argument, paragraph sequence or whole draft needs attention.", ["ST2", "ST4", "AT1", "AT2"]),
         ("reverse-outline", "I want to reverse-outline a draft", "Use this to create a private diagnostic map of what each paragraph is doing. It is a revision aid, not submitted writing.", ["ST4", "ST1"]),
         ("evaluate-sources", "I want to evaluate sources or evidence", "Use these when the problem is source quality, source use, evidence gaps or critical engagement.", ["AT8", "AT4", "AT6"]),
@@ -606,7 +617,7 @@ def build_download_page(tools: list[dict[str, object]], version: str) -> str:
     libraries = [
         ("Master Library", "Everything in one prompt-library file. Best for staff review, testing or users who want the full toolkit.", "../prompt-libraries/latest/ai_personal_tutor_master_library.md"),
         ("All mini libraries ZIP", "All five focused mini-library files in one ZIP.", "../prompt-libraries/latest/ai_personal_tutor_mini_libraries.zip"),
-        ("Writing Tutor Library", "Writing, style, mistakes, referencing, paraphrase and quotation support.", "../prompt-libraries/latest/01_writing_tutor_library.md"),
+        ("Writing Tutor Library", "Routing, clarity, paragraph logic, flow, subject/verb parsing, style, mistakes, referencing, paraphrase and quotation support.", "../prompt-libraries/latest/01_writing_tutor_library.md"),
         ("Structure Tutor Library", "Paragraph, draft structure, meaning review and reverse outlining.", "../prompt-libraries/latest/02_structure_tutor_library.md"),
         ("Academic Thinking Tutor Library", "Argument, evidence, concepts, source reliability and critical challenge.", "../prompt-libraries/latest/03_academic_thinking_tutor_library.md"),
         ("Research Proposal Tutor Library", "Research questions, methods, supervisor review, viva practice and topic brainstorming.", "../prompt-libraries/latest/04_research_proposal_tutor_library.md"),
@@ -649,6 +660,63 @@ def build_download_page(tools: list[dict[str, object]], version: str) -> str:
 </html>'''
 
 
+def build_examples_index_page(tools: list[dict[str, object]]) -> str:
+    by_family: dict[str, list[dict[str, object]]] = defaultdict(list)
+    for tool in tools:
+        by_family[str(tool["family"])].append(tool)
+    rows: list[str] = []
+    for family in FAMILY_ORDER:
+        items = by_family.get(family, [])
+        if not items:
+            continue
+        rows.append(f'<tr><th colspan="4">{html.escape(FAMILY_LABELS[family])}</th></tr>')
+        for tool in items:
+            code = str(tool["code"])
+            title = html.escape(str(tool["title"]))
+            if example_exists(code):
+                status = "Example page available"
+                link = f'<a href="example-{code.lower()}.html">Open example</a>'
+            else:
+                status = "Example to follow"
+                link = "—"
+            rows.append(
+                "<tr>"
+                f"<td>{html.escape(code)}</td>"
+                f"<td>{title}</td>"
+                f"<td>{html.escape(status)}</td>"
+                f"<td>{link}</td>"
+                "</tr>"
+            )
+    return f'''<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Examples | AI Personal Tutor Toolkit</title>
+<meta content="Example and placeholder pages for AI Personal Tutor Toolkit tools." name="description"/>
+<link href="../style.css" rel="stylesheet"/><link href="../css/aichat.css" rel="stylesheet"/>
+</head>
+<body class="reference examples-page">
+{header_html("../", "examples")}
+<main><article class="reading"><header class="page-intro"><p class="kicker">Examples</p><h1>Toolkit examples.</h1><p class="lead">Example pages show what tool use can look like in practice. Some tools have full examples; others are listed while examples are prepared.</p></header>
+<section>
+<h2>Example pages</h2>
+<table>
+<thead><tr><th>Code</th><th>Tool</th><th>Status</th><th>Example page</th></tr></thead>
+<tbody>
+{"".join(rows)}
+</tbody>
+</table>
+</section>
+<section>
+<h2>Ready to try a tool?</h2>
+<div class="btn-row"><a class="button" href="../try-it/">Try a preloaded tutor</a><a class="button secondary" href="../where-to-start/">Find the right tool</a><a class="button secondary" href="../tools/">Browse all tools</a></div>
+</section>
+</article></main>
+{footer_html("../")}
+</body>
+</html>'''
+
 def normalise_css(css: str) -> str:
     # Remove previous generated navigation/tool-page CSS block(s) before appending the current one.
     css = re.sub(r"\n/\* Accessible heading refinement:.*?@media \(max-width: 860px\) \{\n(?:.|\n)*?\n\}\n", "\n", css, flags=re.S)
@@ -683,6 +751,7 @@ def build_plan(root: Path = ROOT) -> list[WritePlan]:
         docs / "where-to-start" / "index.html": build_where_to_start_page(tools),
         docs / "try-it" / "index.html": build_try_it_page(version),
         docs / "download" / "index.html": build_download_page(tools, version),
+        docs / "examples" / "index.html": build_examples_index_page(tools),
     }
     for path in sorted(docs.rglob("*.html")):
         text = planned.get(path)
@@ -706,6 +775,7 @@ def build_plan(root: Path = ROOT) -> list[WritePlan]:
         }
         for old, new in replacements.items():
             text = text.replace(old, new)
+        text = re.sub(r"Current toolkit version:\s*<strong>Prompt libraries v[0-9]+(?:\.[0-9]+)*</strong>", f"Current toolkit version: <strong>Prompt libraries v{version}</strong>", text)
         text = insert_try_it_home_callout(text)
         planned[home] = text
     css_path = docs / "style.css"

@@ -2,7 +2,7 @@
 
 This folder contains generated single-tool prompt packs. Each file contains the shared operating rules, a one-tool launcher/router, and one tool instruction block.
 
-Prompt-library version: v4.1
+Prompt-library version: v4.2
 
 Build all single-tool packs from the repository root with:
 
@@ -20,13 +20,16 @@ python scripts/build_prompt_libraries.py --include-single-tools --check
 
 | Code | Tool | Family | Generated file |
 |---|---|---|---|
-| WT1 | Clarity Clinic | Writing Tutor tools | `wt1_clarity_clinic.md` |
-| WT2 | Single Paragraph Analysis | Writing Tutor tools | `wt2_single_paragraph_analysis.md` |
-| WT3 | Find My Mistakes | Writing Tutor tools | `wt3_find_my_mistakes.md` |
-| WT4 | Teach Me This Mistake | Writing Tutor tools | `wt4_teach_me_this_mistake.md` |
-| WT5 | Style and Clarity Review | Writing Tutor tools | `wt5_style_and_clarity_review.md` |
-| WT6 | Referencing Helper | Writing Tutor tools | `wt6_referencing_helper.md` |
-| WT7 | Paraphrase and Quotation Workshop | Writing Tutor tools | `wt7_paraphrase_and_quotation_workshop.md` |
+| WT1 | Which Writing Tool Should I Use? | Writing Tutor tools | `wt1_which_writing_tool_should_i_use.md` |
+| WT2 | Clarity Clinic | Writing Tutor tools | `wt2_clarity_clinic.md` |
+| WT3 | Single Paragraph Analysis | Writing Tutor tools | `wt3_single_paragraph_analysis.md` |
+| WT4 | Find My Mistakes | Writing Tutor tools | `wt4_find_my_mistakes.md` |
+| WT5 | Teach Me This Mistake | Writing Tutor tools | `wt5_teach_me_this_mistake.md` |
+| WT6 | Style and Clarity Review | Writing Tutor tools | `wt6_style_and_clarity_review.md` |
+| WT7 | Referencing Helper | Writing Tutor tools | `wt7_referencing_helper.md` |
+| WT8 | Paraphrase and Quotation Workshop | Writing Tutor tools | `wt8_paraphrase_and_quotation_workshop.md` |
+| WT9 | Flow and Coherence: The Running Subject | Writing Tutor tools | `wt9_flow_and_coherence_the_running_subject.md` |
+| WT10 | Learn Subjects: Parsing Your Own Sentences | Writing Tutor tools | `wt10_learn_subjects_parsing_your_own_sentences.md` |
 | ST1 | Paragraph Structure Review Across a Whole Draft | Structure Tutor tools | `st1_paragraph_structure_review_across_a_whole_draft.md` |
 | ST2 | Whole-Work Structure Review | Structure Tutor tools | `st2_whole_work_structure_review.md` |
 | ST3 | Expert Meaning Review | Structure Tutor tools | `st3_expert_meaning_review.md` |

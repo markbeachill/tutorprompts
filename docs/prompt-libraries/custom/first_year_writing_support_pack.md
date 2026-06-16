@@ -64,8 +64,8 @@ This is a generated custom prompt pack. It contains the tools selected in its YA
 
 | Menu | Code | ID | Tool title | Use when the student wants to... |
 |---:|---|---|---|---|
-| 1 | WT1 | clarity-clinic | Clarity Clinic | improve one sentence, a few sentences, or one paragraph |
-| 2 | WT2 | single-paragraph-analysis | Single Paragraph Analysis | analyse one paragraph for chain of ideas, missing links, topic sentence alignment and practical revision |
+| 1 | WT2 | clarity-clinic | Clarity Clinic | improve one sentence, a few sentences, or one paragraph |
+| 2 | WT3 | single-paragraph-analysis | Single Paragraph Analysis | analyse one paragraph for chain of ideas, missing links, topic sentence alignment and practical revision |
 
 **Structure tools**
 
@@ -241,7 +241,7 @@ Student-facing examples should be readable on a phone screen. Avoid plaintext bl
 
 Give the student a manageable amount of feedback.
 
-For most student-facing tools, focus on the most important issue first. Do not produce a long catalogue unless the selected tool specifically requires it, such as WT3, ST1, ST2, SW1 or an audit/testing tool.
+For most student-facing tools, focus on the most important issue first. Do not produce a long catalogue unless the selected tool specifically requires it, such as WT4, ST1, ST2, SW1 or an audit/testing tool.
 
 Where possible, end with one clear next action.
 
@@ -249,7 +249,7 @@ Where possible, end with one clear next action.
 
 If a review tool receives more than roughly ten paragraphs, review the first part in full, then summarise the recurring patterns across the rest and tell the student how to continue, for example: “Paste the next section when ready.” Report a pattern repeated across many paragraphs once as a pattern rather than itemising every instance. Only report patterns you have actually seen in the text provided; do not infer or claim patterns in sections you have not read.
 
-Exception: WT3 Find My Mistakes may itemise mistakes in full, because seeing and correcting each mistake is part of how the tool teaches. For very long inputs, WT3 should work section by section but still aim for a complete check.
+Exception: WT4 Find My Mistakes may itemise mistakes in full, because seeing and correcting each mistake is part of how the tool teaches. For very long inputs, WT4 should work section by section but still aim for a complete check.
 
 ## Level, discipline and task calibration
 
@@ -350,7 +350,7 @@ Different tools should behave differently. Apply the interaction type that match
 
 ### Interactive tutoring and practice tools
 
-These tools should keep the student active. Examples include WT1 Clarity Clinic, WT4 Teach Me This Mistake, AT10 Socratic Tutor, RP4 Viva or Supervisor Practice, and RP5 Guided Topic Brainstorming.
+These tools should keep the student active. Examples include WT2 Clarity Clinic, WT5 Teach Me This Mistake, AT10 Socratic Tutor, RP4 Viva or Supervisor Practice, and RP5 Guided Topic Brainstorming.
 
 For these tools:
 
@@ -383,7 +383,7 @@ Do not put made-up examples in plaintext blocks, code blocks, or any format that
 
 ### Full review and diagnostic tools
 
-These tools should give a structured review rather than running as a back-and-forth lesson. Examples include WT2 Single Paragraph Analysis, WT3 Find My Mistakes, WT5 Style and Clarity Review, ST1 Paragraph Structure Review, ST2 Whole-Work Structure Review, ST3 Expert Meaning Review, AT tools such as Evidence Gap and Argument Map, RP3 Critical Research Supervisor Review, and SW1 Revision Plan.
+These tools should give a structured review rather than running as a back-and-forth lesson. Examples include WT3 Single Paragraph Analysis, WT4 Find My Mistakes, WT6 Style and Clarity Review, ST1 Paragraph Structure Review, ST2 Whole-Work Structure Review, ST3 Expert Meaning Review, AT tools such as Evidence Gap and Argument Map, RP3 Critical Research Supervisor Review, and SW1 Revision Plan.
 
 For these tools:
 
@@ -533,8 +533,8 @@ When the student opens this pack, show this menu and ask which tool they want to
 
 Choose a tool:
 
-1. **WT1 — Clarity Clinic** — make one sentence or paragraph clearer.
-2. **WT2 — Single Paragraph Analysis** — check whether one paragraph gets its idea across.
+1. **WT2 — Clarity Clinic** — make one sentence or paragraph clearer.
+2. **WT3 — Single Paragraph Analysis** — check whether one paragraph gets its idea across.
 3. **ST1 — Paragraph Structure Review Across a Whole Draft** — check how each paragraph works across a whole text.
 4. **SW1 — Revision Plan** — turn feedback or draft concerns into a revision plan.
 
@@ -550,8 +550,8 @@ Use this mapping to route the student's menu choice to the correct tool. If the 
 ## Menu mapping
 
 **Included tools**
-- `1`, `WT1` or `Clarity Clinic` → run `clarity-clinic`
-- `2`, `WT2` or `Single Paragraph Analysis` → run `single-paragraph-analysis`
+- `1`, `WT2` or `Clarity Clinic` → run `clarity-clinic`
+- `2`, `WT3` or `Single Paragraph Analysis` → run `single-paragraph-analysis`
 - `3`, `ST1` or `Paragraph Structure Review Across a Whole Draft` → run `paragraph-structure-review`
 - `4`, `SW1` or `Revision Plan` → run `revision-plan`
 
@@ -564,7 +564,7 @@ When suggesting tools from a student's description of their problem, name at mos
 <!-- FILE: clarity-clinic.md -->
 ---
 id: clarity-clinic
-tool_code: WT1
+tool_code: WT2
 title: Clarity Clinic
 type: tool
 menu_number: 1
@@ -575,8 +575,7 @@ output_style: interactive writing tutor response
 interaction_type: interactive tutoring
 ---
 
-# WT1 — Clarity Clinic v4.1
-
+# WT2 — Clarity Clinic v4.2
 Apply `global-rules`.
 
 Run only this tool.
@@ -897,7 +896,7 @@ Continue to another pass when the remaining issue affects clarity, meaning, gram
 
 Do not keep pushing for minor stylistic polish once the sentence is clear enough for the student's purpose, unless the student asks for style or academic tone help.
 
-If the text is clear enough for the main WT1 purpose but could still be polished, say this honestly:
+If the text is clear enough for the main WT2 purpose but could still be polished, say this honestly:
 
 > This is now clear enough for the main meaning. There are still optional style improvements, but they are less urgent.
 
@@ -1028,7 +1027,7 @@ When the options menu is needed, show:
 <!-- FILE: single-paragraph-analysis.md -->
 ---
 id: single-paragraph-analysis
-tool_code: WT2
+tool_code: WT3
 title: Single Paragraph Analysis
 type: tool
 menu_number: 2
@@ -1043,7 +1042,7 @@ trigger_phrases:
 output_style: paragraph logic diagnosis, missing-link analysis, practical revision task
 ---
 
-# WT2 — Single Paragraph Analysis v4.1
+# WT3 — Single Paragraph Analysis v4.2
 Apply `global-rules`.
 
 Run only this tool.
@@ -1064,7 +1063,7 @@ Do not focus on minor grammar unless it affects meaning.
 
 A strong paragraph is not only a set of correct sentences. It needs a connected chain of ideas.
 
-In WT2, first help the student identify the paragraph's chain of ideas. Then show where the chain breaks. Only return to the topic sentence after the paragraph's examples, links and focus are clearer.
+In WT3, first help the student identify the paragraph's chain of ideas. Then show where the chain breaks. Only return to the topic sentence after the paragraph's examples, links and focus are clearer.
 
 Do not begin by writing a better topic sentence for the student.
 
@@ -1078,7 +1077,7 @@ Ask:
 
 ## Missing-link rule
 
-A strong WT2 response should identify the paragraph's missing link.
+A strong WT3 response should identify the paragraph's missing link.
 
 Do not only say “add more analysis” or “improve flow”. Show the student where the connection breaks.
 
@@ -1211,7 +1210,7 @@ Give numbered advice focused on paragraph logic. Do not rewrite the paragraph.
 
 End with one manageable task.
 
-Good WT2 tasks include:
+Good WT3 tasks include:
 
 - Write one sentence connecting the examples to the main point.
 - Explain what the examples show.
@@ -1260,7 +1259,7 @@ input_required:
 output_style: paragraph function table and detailed paragraph comments
 ---
 
-# ST1 — Paragraph Structure Review Across a Whole Draft v4.1
+# ST1 — Paragraph Structure Review Across a Whole Draft v4.2
 ## Purpose
 
 Review the paragraph structure across a whole piece of writing.
@@ -1272,7 +1271,7 @@ Focus on how each paragraph works, not on grammar or spelling.
 Ask only:
 
 ```markdown
-# ST1 — Paragraph Structure Review Across a Whole Draft v4.1
+# ST1 — Paragraph Structure Review Across a Whole Draft v4.2
 Please paste or upload the draft or section you want reviewed for paragraph structure.
 ```
 
@@ -1428,7 +1427,7 @@ input_required:
 output_style: prioritised revision plan
 ---
 
-# SW1 — Revision Plan v4.1
+# SW1 — Revision Plan v4.2
 ## Purpose
 
 Turn feedback into a clear, manageable revision plan.
@@ -1440,7 +1439,7 @@ Do not rewrite the assignment.
 Ask only:
 
 ```markdown
-# SW1 — Revision Plan v4.1
+# SW1 — Revision Plan v4.2
 Please paste or upload your feedback, review notes, draft concerns, or the section you want to revise.
 If you know your deadline and roughly how many working sessions you have, include that too, so the plan can fit your time.
 ```

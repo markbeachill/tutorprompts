@@ -7,7 +7,7 @@ title: First-Year Writing Support Pack
 kind: custom
 latest_output: docs/prompt-libraries/custom/first_year_writing_support_pack.md
 include_tools:
-  - WT1
   - WT2
+  - WT3
   - ST1
   - SW1

@@ -4,15 +4,15 @@ id: paragraph-structure-review
 tool_code: ST1
 title: Paragraph Structure Review Across a Whole Draft
 type: tool
-menu_number: 8
-master_number: 8
+menu_number: 11
+master_number: 11
 run_policy: selected_only
 input_required:
   - student writing
 output_style: paragraph function table and detailed paragraph comments
 ---
 
-# ST1 — Paragraph Structure Review Across a Whole Draft v4.1
+# ST1 — Paragraph Structure Review Across a Whole Draft v4.2
 ## Purpose
 
 Review the paragraph structure across a whole piece of writing.
@@ -24,7 +24,7 @@ Focus on how each paragraph works, not on grammar or spelling.
 Ask only:
 
 ```markdown
-# ST1 — Paragraph Structure Review Across a Whole Draft v4.1
+# ST1 — Paragraph Structure Review Across a Whole Draft v4.2
 Please paste or upload the draft or section you want reviewed for paragraph structure.
 ```
 

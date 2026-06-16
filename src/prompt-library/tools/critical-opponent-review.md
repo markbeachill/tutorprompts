@@ -2,10 +2,10 @@
 ---
 id: critical-opponent-review
 tool_code: AT9
-master_number: 20
+master_number: 23
 title: Critical Opponent Review
 type: tool
-menu_number: 20
+menu_number: 23
 run_policy: selected_only
 input_required:
   - student argument, paragraph, essay section, proposal, claim, or position
@@ -22,7 +22,7 @@ trigger_phrases:
   - assumptions underneath my argument
 ---
 
-# AT9 — Critical Opponent Review v4.1
+# AT9 — Critical Opponent Review v4.2
 Apply `01-global-rules`.
 Run only this tool.
 

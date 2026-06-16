@@ -2,17 +2,17 @@
 ---
 id: whole-work-structure-review
 tool_code: ST2
-master_number: 9
+master_number: 12
 title: Whole-Work Structure Review
 type: tool
-menu_number: 9
+menu_number: 12
 run_policy: selected_only
 input_required:
   - whole draft or substantial section
 output_style: structure map, issues and suggested order
 ---
 
-# ST2 — Whole-Work Structure Review v4.1
+# ST2 — Whole-Work Structure Review v4.2
 ## Purpose
 
 Review the structure of the whole piece of writing. Focus on organisation, sequence, flow, proportion and whether the reader can follow the argument.
@@ -24,7 +24,7 @@ Do not rewrite the work.
 Ask only:
 
 ```markdown
-# ST2 — Whole-Work Structure Review v4.1
+# ST2 — Whole-Work Structure Review v4.2
 Please paste or upload the draft, section or plan you want reviewed for structure.
 ```
 

@@ -9,14 +9,14 @@
 </head>
 <body class="reference">
 <header><div class="container nav"><a class="brand" href="index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="where-to-start/">Where to start?</a></li><li><a href="try-it/">Try It</a></li><li><a href="tools/">Tools</a></li><li><a href="examples/">Examples</a></li><li><a href="student-help/">Student Help</a></li><li><a href="guides/">Guides</a></li><li><a href="download/">Download</a></li></ul></nav></div></header>
-<main><article class="reading"><header class="page-intro"><p class="kicker">For educators and maintainers</p><h1>Testing and audit</h1><p class="lead">Use this testing pack to check whether the prompt libraries behave like learning tools, not answer machines. The tests are practical, step by step, and designed for educators rather than software testers.</p><div class="btn-row"><a class="button" href="audit-library/latest/ai_personal_tutor_testing_pack.zip">Download testing pack v4.1</a><a class="button secondary" href="audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md">Open test cards</a><a class="button secondary" href="audit-library/latest/ai_tutor_toolkit_output_collector.md">Open output collector</a></div></header>
+<main><article class="reading"><header class="page-intro"><p class="kicker">For educators and maintainers</p><h1>Testing and audit</h1><p class="lead">Use this testing pack to check whether the prompt libraries behave like learning tools, not answer machines. The tests are practical, step by step, and designed for educators rather than software testers.</p><div class="btn-row"><a class="button" href="audit-library/latest/ai_personal_tutor_testing_pack.zip">Download testing pack v4.2</a><a class="button secondary" href="audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md">Open test cards</a><a class="button secondary" href="audit-library/latest/ai_tutor_toolkit_output_collector.md">Open output collector</a></div></header>
 <section class="panel">
-<h2>What changed in v4.1?</h2>
-<p>Testing pack v4.1 checks the v4.1 prompt-library revision, including WT7 source-use behaviour, and updates the testing process itself.</p>
+<h2>What changed in v4.2?</h2>
+<p>Testing pack v4.2 checks the v4.2 prompt-library revision, including the renumbered Writing Tutor family, the new WT1 routing helper, WT9 flow-and-coherence behaviour, WT10 subject/verb parsing, and the updated WT8 source-use tool.</p>
 <p>The biggest process change is the <strong>output collector</strong>: a prompt you paste at the end of a test session to produce a single test record with metadata and a verbatim transcript. Because that record is produced by the same AI that was tested, the method now asks testers to spot-check the record against the live chat, and to use manual capture for release-gating tests where reliable export is available.</p>
 <div class="grid two">
-<div class="card"><h3>v4 behaviour checks</h3><p>The tests now check the default teaching loop, router triage with at most two suggested tools, long-input honesty, EAL handling, WT3 complete checking, WT5 register discipline, ST2 student-first ordering, and updated research-proposal and academic-thinking behaviours.</p></div>
-<div class="card"><h3>New regression checks</h3><p>The pack adds checks for WT1 sentence-ending emphasis, WT1 topic chains and unclear pointers, certainty/confidence/authority preservation, WT3 long inputs, WT5 register, WT6 cross-checking, and concealment requests around AI-use records.</p></div>
+<div class="card"><h3>v4 behaviour checks</h3><p>The tests now check the default teaching loop, router triage with at most two suggested tools, long-input honesty, EAL handling, WT4 complete checking, WT6 register discipline, ST2 student-first ordering, and updated research-proposal and academic-thinking behaviours.</p></div>
+<div class="card"><h3>New regression checks</h3><p>The pack adds checks for WT2 sentence-ending emphasis, WT2 topic chains and unclear pointers, certainty/confidence/authority preservation, WT4 long inputs, WT6 register, WT7 cross-checking, and concealment requests around AI-use records.</p></div>
 </div>
 </section>
 <section class="panel">
@@ -56,10 +56,10 @@
 <h2>Suggested minimum before release</h2>
 <ul>
 <li>Run the startup activation and launcher-fidelity test on the master library.</li>
-<li>Run WT1, including sentence movement, topic-chain and more-academic follow-up checks.</li>
-<li>Run WT7 source-use checks, especially too-close paraphrase, unmarked quotation and reporting-verb overclaiming.</li>
+<li>Run WT1 routing checks and WT2 clarity checks, including sentence movement, topic-chain and more-academic follow-up checks.</li>
+<li>Run WT8 source-use checks, especially too-close paraphrase, unmarked quotation and reporting-verb overclaiming.</li>
 <li>Run at least one over-rewrite or concealment adversarial test.</li>
-<li>Run WT3, WT5, AT2, SW3 and the long-input honesty test.</li>
+<li>Run WT4, WT6, WT9, WT10, AT2, SW3 and the long-input honesty test.</li>
 <li>Record the result in the test log and audit any release-gating output in a separate chat.</li>
 </ul>
 <p><a href="audit-library/latest/ai_tutor_toolkit_test_log_template.md">Download the test log template</a></p>
@@ -76,7 +76,7 @@
 </section>
 <section class="panel">
 <h2>How versions work</h2>
-<p>The public site uses three labels: the <strong>site package</strong>, the <strong>prompt-library suite</strong>, and the <strong>testing/audit pack</strong>. The current public release is v4.1 for all three labels.</p>
+<p>The public site uses three labels: the <strong>site package</strong>, the <strong>prompt-library suite</strong>, and the <strong>testing/audit pack</strong>. The current public release is v4.2 for all three labels.</p>
 <p>Current downloads live in <code>latest/</code>; fixed archive copies live in numbered version folders. Each current Markdown download includes a release stamp showing which suite or pack it belongs to.</p>
 <div class="btn-row"><a class="button secondary" href="release_manifest.md">Open release manifest</a></div>
 </section>

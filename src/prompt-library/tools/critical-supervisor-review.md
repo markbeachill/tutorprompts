@@ -2,17 +2,17 @@
 ---
 id: critical-supervisor-review
 tool_code: RP3
-master_number: 24
+master_number: 27
 title: Critical Research Supervisor Review
 type: tool
-menu_number: 24
+menu_number: 27
 run_policy: selected_only
 input_required:
   - dissertation proposal or research proposal
 output_style: critical supervisor review with risk table
 ---
 
-# RP3 — Critical Research Supervisor Review v4.1
+# RP3 — Critical Research Supervisor Review v4.2
 ## Purpose
 
 Review a dissertation or research proposal as a very critical but constructive UK university research supervisor.
@@ -30,7 +30,7 @@ Ask, or infer from context, whether this is an early idea, a working draft, or a
 Ask only:
 
 ```markdown
-# RP3 — Critical Research Supervisor Review v4.1
+# RP3 — Critical Research Supervisor Review v4.2
 Please paste or upload the dissertation proposal, research proposal or research idea you want reviewed.
 ```
 

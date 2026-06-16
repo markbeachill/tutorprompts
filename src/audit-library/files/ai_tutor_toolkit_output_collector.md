@@ -1,9 +1,7 @@
-# AI Personal Tutor Toolkit — Test Output Collector v4.1
-
-**Release stamp:** Toolkit version v4.1 / Prompt-library suite v4.1 / Testing pack v4.1
-**This file:** AI Personal Tutor Toolkit — Test Output Collector v4.1
+# AI Personal Tutor Toolkit — Test Output Collector v4.2
+**Release stamp:** Toolkit version v4.2 / Prompt-library suite v4.2 / Testing pack v4.2  **This file:** AI Personal Tutor Toolkit — Test Output Collector v4.2
 **Public download:** `audit-library/latest/ai_tutor_toolkit_output_collector.md`
-**Fixed archive:** `audit-library/v4.1/ai_tutor_toolkit_output_collector_v4_1.md`
+**Fixed archive:** `audit-library/v4.2/ai_tutor_toolkit_output_collector_v4_2.md`
 
 Audience: testers and toolkit maintainers.
 
@@ -16,7 +14,7 @@ When pasted at the end of a test session, this prompt makes the AI produce one s
 1. Run the test as normal: upload the library, type `prompt`, choose the tool, paste the test inputs, complete all follow-up turns.
 2. Only when the final test turn is complete, paste the whole collector prompt (everything below the line marked **PASTE FROM HERE**) into the **same chat**. You can add your name and plan in the same message, for example: `Tester: MB. Plan: free.`
 3. The AI produces the test record. If your AI tool can create files, it may offer the record as a downloadable `.md` file; otherwise copy the whole record once.
-4. Save it using the standard filename, for example `wt1_clarity_clinic_test_output_[date].md`.
+4. Save it using the standard filename, for example `wt2_clarity_clinic_test_output_[date].md`.
 5. **Spot-check before closing the chat:** compare at least one AI response in the record against the actual conversation on screen. For adversarial tests (A-series) and any test gating a release decision, compare every turn, or capture the transcript manually instead. Manual capture is preferred where the platform offers reliable transcript export or where the collector cannot reproduce the conversation verbatim.
 6. Complete the **Tester notes** section yourself after saving.
 

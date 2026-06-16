@@ -4,15 +4,15 @@ id: reverse-outline-mapper
 tool_code: ST4
 title: Reverse Outline Mapper
 type: tool
-menu_number: 11
-master_number: 11
+menu_number: 14
+master_number: 14
 run_policy: selected_only
 input_required:
   - student draft, section or plan
 output_style: diagnostic reverse-outline table and revision questions
 ---
 
-# ST4 — Reverse Outline Mapper v4.1
+# ST4 — Reverse Outline Mapper v4.2
 ## Purpose
 
 Create a reverse outline of the student's existing draft, section or plan.
@@ -26,7 +26,7 @@ Use this tool to help the student see the shape of their own work before revisin
 Ask only:
 
 ```markdown
-# ST4 — Reverse Outline Mapper v4.1
+# ST4 — Reverse Outline Mapper v4.2
 Please paste or upload the draft, section or plan you want mapped. I will create a reverse outline showing what each part currently does.
 ```
 

@@ -1,8 +1,19 @@
 {
   "tools": [
     {
-      "id": "clarity-clinic",
+      "id": "which-writing-tool",
       "code": "WT1",
+      "title": "Which Writing Tool Should I Use?",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "master_manifest_description": "choose the right Writing Tutor tool for a sentence, a few sentences, or one paragraph without fixing or rewriting the work",
+      "mini_manifest_description": "choose the right Writing Tutor tool for a sentence, a few sentences, or one paragraph without fixing or rewriting the work",
+      "mini_family_label": "Writing and referencing tools",
+      "launcher_description": "suggest the right Writing Tutor tool for a sentence or paragraph before you start."
+    },
+    {
+      "id": "clarity-clinic",
+      "code": "WT2",
       "title": "Clarity Clinic",
       "family": "writing-tutor",
       "family_label": "Writing Tutor tools",
@@ -13,7 +24,7 @@
     },
     {
       "id": "single-paragraph-analysis",
-      "code": "WT2",
+      "code": "WT3",
       "title": "Single Paragraph Analysis",
       "family": "writing-tutor",
       "family_label": "Writing Tutor tools",
@@ -24,7 +35,7 @@
     },
     {
       "id": "find-mistakes",
-      "code": "WT3",
+      "code": "WT4",
       "title": "Find My Mistakes",
       "family": "writing-tutor",
       "family_label": "Writing Tutor tools",
@@ -35,18 +46,18 @@
     },
     {
       "id": "teach-mistake",
-      "code": "WT4",
+      "code": "WT5",
       "title": "Teach Me This Mistake",
       "family": "writing-tutor",
       "family_label": "Writing Tutor tools",
-      "master_manifest_description": "learn from a WT3 mistake through an interactive micro-lesson or build copy-ready tutor lesson material",
-      "mini_manifest_description": "learn from a WT3 mistake through an interactive micro-lesson or build copy-ready tutor lesson material",
+      "master_manifest_description": "learn from a WT4 mistake through an interactive micro-lesson or build copy-ready tutor lesson material",
+      "mini_manifest_description": "learn from a WT4 mistake through an interactive micro-lesson or build copy-ready tutor lesson material",
       "mini_family_label": "Writing and referencing tools",
-      "launcher_description": "teach a mistake pattern interactively or build a copy-ready lesson from WT3 feedback."
+      "launcher_description": "teach a mistake pattern interactively or build a copy-ready lesson from WT4 feedback."
     },
     {
       "id": "style-clarity-review",
-      "code": "WT5",
+      "code": "WT6",
       "title": "Style and Clarity Review",
       "family": "writing-tutor",
       "family_label": "Writing Tutor tools",
@@ -57,7 +68,7 @@
     },
     {
       "id": "referencing-helper",
-      "code": "WT6",
+      "code": "WT7",
       "title": "Referencing Helper",
       "family": "writing-tutor",
       "family_label": "Writing Tutor tools",
@@ -68,7 +79,7 @@
     },
     {
       "id": "paraphrase-quotation-workshop",
-      "code": "WT7",
+      "code": "WT8",
       "title": "Paraphrase and Quotation Workshop",
       "family": "writing-tutor",
       "family_label": "Writing Tutor tools",
@@ -76,6 +87,28 @@
       "mini_manifest_description": "check paraphrases, quotations, attribution and source integration without writing the source-use sentence for the student",
       "mini_family_label": "Writing and referencing tools",
       "launcher_description": "check whether a paraphrase or quotation is accurate, safely credited and integrated into your writing."
+    },
+    {
+      "id": "flow-and-coherence",
+      "code": "WT9",
+      "title": "Flow and Coherence: The Running Subject",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "master_manifest_description": "test whether a paragraph flows by listing grammatical subjects and checking sentence-to-sentence hand-offs",
+      "mini_manifest_description": "test whether a paragraph flows by listing grammatical subjects and checking sentence-to-sentence hand-offs",
+      "mini_family_label": "Writing and referencing tools",
+      "launcher_description": "test paragraph flow by tracking grammatical subjects and hand-offs between sentences."
+    },
+    {
+      "id": "learn-subjects",
+      "code": "WT10",
+      "title": "Learn Subjects: Parsing Your Own Sentences",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "master_manifest_description": "practise finding subjects, verbs, objects and actor/subject gaps in the student's own sentences",
+      "mini_manifest_description": "practise finding subjects, verbs, objects and actor/subject gaps in your own sentences",
+      "mini_family_label": "Writing and referencing tools",
+      "launcher_description": "practise finding subjects and verbs in your own sentences."
     },
     {
       "id": "paragraph-structure-review",

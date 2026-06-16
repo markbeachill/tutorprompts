@@ -22,4 +22,4 @@ python scripts/build_prompt_libraries.py --include-custom --check
 - Source YAML: `src/prompt-library/custom-packs/example-first-year-writing-support.yml`
 - Generated file: `docs/prompt-libraries/custom/first_year_writing_support_pack.md`
 - Tool count: 4
-- Tools: WT1 — Clarity Clinic, WT2 — Single Paragraph Analysis, ST1 — Paragraph Structure Review Across a Whole Draft, SW1 — Revision Plan
+- Tools: WT2 — Clarity Clinic, WT3 — Single Paragraph Analysis, ST1 — Paragraph Structure Review Across a Whole Draft, SW1 — Revision Plan

@@ -632,7 +632,8 @@ def validate_tool_source_metadata(rel_path: str, metadata: Dict[str, ToolMeta]) 
         raise ValueError(f"{rel_path}: tool_code {fm.get('tool_code')!r} does not match metadata code {meta.code!r}")
     if fm.get("title") != meta.title:
         raise ValueError(f"{rel_path}: title {fm.get('title')!r} does not match metadata title {meta.title!r}")
-    if not re.search(rf"^#\s+{re.escape(meta.code)}\s+—\s+{re.escape(meta.title)}\b", block, flags=re.MULTILINE):
+    heading_pattern = rf"^#\s+{re.escape(meta.code)}\s+—\s+{re.escape(meta.title)}(?:\s+v[0-9]+(?:\.[0-9]+)*\s*)?$"
+    if not re.search(heading_pattern, block, flags=re.MULTILINE):
         raise ValueError(f"{rel_path}: top heading does not match {meta.code} — {meta.title}")
 
 

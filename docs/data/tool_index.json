@@ -1,15 +1,32 @@
 {
   "generated_by": "ai-personal-tutor-package-generator-v1.6",
-  "release_version": "4.1",
-  "toolkit_version": "4.1",
-  "prompt_library_version": "4.1",
-  "testing_pack_version": "4.1",
-  "release_date": "2026-06-13",
+  "release_version": "4.2",
+  "toolkit_version": "4.2",
+  "prompt_library_version": "4.2",
+  "testing_pack_version": "4.2",
+  "release_date": "2026-06-16",
   "source": "src/release.yml",
-  "tool_count": 29,
+  "tool_count": 32,
   "tools": [
     {
       "code": "WT1",
+      "id": "which-writing-tool",
+      "title": "Which Writing Tool Should I Use?",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "mini_family_label": "Writing and referencing tools",
+      "source": "tools/which-writing-tool.md",
+      "master_manifest_description": "choose the right Writing Tutor tool for a sentence, a few sentences, or one paragraph without fixing or rewriting the work",
+      "mini_manifest_description": "choose the right Writing Tutor tool for a sentence, a few sentences, or one paragraph without fixing or rewriting the work",
+      "launcher_description": "suggest the right Writing Tutor tool for a sentence or paragraph before you start.",
+      "included_in_packs": [
+        "master",
+        "writing-tutor"
+      ],
+      "single_tool_output": "docs/prompt-libraries/single-tools/wt1_which_writing_tool_should_i_use.md"
+    },
+    {
+      "code": "WT2",
       "id": "clarity-clinic",
       "title": "Clarity Clinic",
       "family": "writing-tutor",
@@ -24,10 +41,10 @@
         "writing-tutor",
         "first-year-writing-support"
       ],
-      "single_tool_output": "docs/prompt-libraries/single-tools/wt1_clarity_clinic.md"
+      "single_tool_output": "docs/prompt-libraries/single-tools/wt2_clarity_clinic.md"
     },
     {
-      "code": "WT2",
+      "code": "WT3",
       "id": "single-paragraph-analysis",
       "title": "Single Paragraph Analysis",
       "family": "writing-tutor",
@@ -42,10 +59,10 @@
         "writing-tutor",
         "first-year-writing-support"
       ],
-      "single_tool_output": "docs/prompt-libraries/single-tools/wt2_single_paragraph_analysis.md"
+      "single_tool_output": "docs/prompt-libraries/single-tools/wt3_single_paragraph_analysis.md"
     },
     {
-      "code": "WT3",
+      "code": "WT4",
       "id": "find-mistakes",
       "title": "Find My Mistakes",
       "family": "writing-tutor",
@@ -59,27 +76,27 @@
         "master",
         "writing-tutor"
       ],
-      "single_tool_output": "docs/prompt-libraries/single-tools/wt3_find_my_mistakes.md"
+      "single_tool_output": "docs/prompt-libraries/single-tools/wt4_find_my_mistakes.md"
     },
     {
-      "code": "WT4",
+      "code": "WT5",
       "id": "teach-mistake",
       "title": "Teach Me This Mistake",
       "family": "writing-tutor",
       "family_label": "Writing Tutor tools",
       "mini_family_label": "Writing and referencing tools",
       "source": "tools/teach-mistake.md",
-      "master_manifest_description": "learn from a WT3 mistake through an interactive micro-lesson or build copy-ready tutor lesson material",
-      "mini_manifest_description": "learn from a WT3 mistake through an interactive micro-lesson or build copy-ready tutor lesson material",
-      "launcher_description": "teach a mistake pattern interactively or build a copy-ready lesson from WT3 feedback.",
+      "master_manifest_description": "learn from a WT4 mistake through an interactive micro-lesson or build copy-ready tutor lesson material",
+      "mini_manifest_description": "learn from a WT4 mistake through an interactive micro-lesson or build copy-ready tutor lesson material",
+      "launcher_description": "teach a mistake pattern interactively or build a copy-ready lesson from WT4 feedback.",
       "included_in_packs": [
         "master",
         "writing-tutor"
       ],
-      "single_tool_output": "docs/prompt-libraries/single-tools/wt4_teach_me_this_mistake.md"
+      "single_tool_output": "docs/prompt-libraries/single-tools/wt5_teach_me_this_mistake.md"
     },
     {
-      "code": "WT5",
+      "code": "WT6",
       "id": "style-clarity-review",
       "title": "Style and Clarity Review",
       "family": "writing-tutor",
@@ -93,10 +110,10 @@
         "master",
         "writing-tutor"
       ],
-      "single_tool_output": "docs/prompt-libraries/single-tools/wt5_style_and_clarity_review.md"
+      "single_tool_output": "docs/prompt-libraries/single-tools/wt6_style_and_clarity_review.md"
     },
     {
-      "code": "WT6",
+      "code": "WT7",
       "id": "referencing-helper",
       "title": "Referencing Helper",
       "family": "writing-tutor",
@@ -110,10 +127,10 @@
         "master",
         "writing-tutor"
       ],
-      "single_tool_output": "docs/prompt-libraries/single-tools/wt6_referencing_helper.md"
+      "single_tool_output": "docs/prompt-libraries/single-tools/wt7_referencing_helper.md"
     },
     {
-      "code": "WT7",
+      "code": "WT8",
       "id": "paraphrase-quotation-workshop",
       "title": "Paraphrase and Quotation Workshop",
       "family": "writing-tutor",
@@ -127,7 +144,41 @@
         "master",
         "writing-tutor"
       ],
-      "single_tool_output": "docs/prompt-libraries/single-tools/wt7_paraphrase_and_quotation_workshop.md"
+      "single_tool_output": "docs/prompt-libraries/single-tools/wt8_paraphrase_and_quotation_workshop.md"
+    },
+    {
+      "code": "WT9",
+      "id": "flow-and-coherence",
+      "title": "Flow and Coherence: The Running Subject",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "mini_family_label": "Writing and referencing tools",
+      "source": "tools/flow-and-coherence.md",
+      "master_manifest_description": "test whether a paragraph flows by listing grammatical subjects and checking sentence-to-sentence hand-offs",
+      "mini_manifest_description": "test whether a paragraph flows by listing grammatical subjects and checking sentence-to-sentence hand-offs",
+      "launcher_description": "test paragraph flow by tracking grammatical subjects and hand-offs between sentences.",
+      "included_in_packs": [
+        "master",
+        "writing-tutor"
+      ],
+      "single_tool_output": "docs/prompt-libraries/single-tools/wt9_flow_and_coherence_the_running_subject.md"
+    },
+    {
+      "code": "WT10",
+      "id": "learn-subjects",
+      "title": "Learn Subjects: Parsing Your Own Sentences",
+      "family": "writing-tutor",
+      "family_label": "Writing Tutor tools",
+      "mini_family_label": "Writing and referencing tools",
+      "source": "tools/learn-subjects.md",
+      "master_manifest_description": "practise finding subjects, verbs, objects and actor/subject gaps in the student's own sentences",
+      "mini_manifest_description": "practise finding subjects, verbs, objects and actor/subject gaps in your own sentences",
+      "launcher_description": "practise finding subjects and verbs in your own sentences.",
+      "included_in_packs": [
+        "master",
+        "writing-tutor"
+      ],
+      "single_tool_output": "docs/prompt-libraries/single-tools/wt10_learn_subjects_parsing_your_own_sentences.md"
     },
     {
       "code": "ST1",

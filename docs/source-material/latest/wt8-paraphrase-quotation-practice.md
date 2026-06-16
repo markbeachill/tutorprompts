@@ -1,12 +1,4 @@
----
-id: wt7-paraphrase-quotation-practice
-title: WT7 paraphrase and quotation practice source
-tool_code: WT7
-tool_title: Paraphrase and Quotation Workshop
-category: Writing Tutor
-use_when: Use when testing whether a student paraphrase is too close, accurately attributed and safely integrated.
----
-# WT7 paraphrase and quotation practice source
+# WT8 paraphrase and quotation practice source
 
 ## Source extract
 

@@ -1,18 +1,18 @@
 <!-- FILE: referencing-helper.md -->
 ---
 id: referencing-helper
-tool_code: WT6
-master_number: 6
+tool_code: WT7
+master_number: 7
 title: Referencing Helper
 type: tool
-menu_number: 6
+menu_number: 7
 run_policy: selected_only
 input_required:
   - links, source details, draft reference list, or citations
 output_style: Harvard-style references and checking notes
 ---
 
-# WT6 — Referencing Helper v4.1
+# WT7 — Referencing Helper v4.2
 ## Purpose
 
 Help the student create or check references carefully.
@@ -34,7 +34,7 @@ If the student provides an institution or course guide, follow that guide over t
 Ask only:
 
 ```markdown
-# WT6 — Referencing Helper v4.1
+# WT7 — Referencing Helper v4.2
 Please paste or upload the source details, links, citations or draft reference list you want checked.
 
 You can also paste both your in-text citations (or the full text) and your reference list, and I will cross-check them for mismatches.

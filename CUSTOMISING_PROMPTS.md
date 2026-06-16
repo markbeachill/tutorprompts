@@ -56,7 +56,7 @@ There are two kinds of section.
 | `03-launcher` | The welcome screen and the numbered menu the student sees |
 | `04-router` | Maps the student's choice (number or code) to the right tool |
 
-**2. Tool blocks — keep only the ones you want.** There are 27, each a self-contained `<!-- FILE: ... -->` unit with its own front matter (`tool_code`, `menu_number`). Examples: `clarity-clinic` (WT1), `find-mistakes` (WT3), `revision-plan` (SW1).
+**2. Tool blocks — keep only the ones you want.** There are 32, each a self-contained `<!-- FILE: ... -->` unit with its own front matter (`tool_code`, `menu_number`). Examples: `clarity-clinic` (WT2), `find-mistakes` (WT4), `revision-plan` (SW1).
 
 ### The one trap to watch
 
@@ -96,7 +96,7 @@ ai_personal_tutor_master_library.md  →  first_year_writing_support_library.md
 
 ### Step 2 — Decide which tools to keep
 
-Pick from the 27 by tool code. Write the list down before you start cutting.
+Pick from the 32 by tool code. Write the list down before you start cutting.
 
 ### Step 3 — Delete the tool blocks you do not want
 
@@ -169,29 +169,29 @@ If any check fails, the usual cause is a menu left out of sync across the three 
 
 **Goal:** a small library for first-year undergraduates, focused on clarity, mistakes and revision. No research-proposal or advanced thinking tools.
 
-**Tools kept (5 of 27):**
+**Tools kept (5 of 32):**
 
 | New menu | Code | Tool |
 |---:|---|---|
-| 1 | WT1 | Clarity Clinic |
-| 2 | WT3 | Find My Mistakes |
-| 3 | WT4 | Teach Me This Mistake |
-| 4 | WT5 | Style and Clarity Review |
+| 1 | WT2 | Clarity Clinic |
+| 2 | WT4 | Find My Mistakes |
+| 3 | WT5 | Teach Me This Mistake |
+| 4 | WT6 | Style and Clarity Review |
 | 5 | SW1 | Revision Plan |
 
-Note that the codes are not 1–5; they are the original codes, renumbered only by menu position. That is intentional (Step 5).
+Note that the codes are not 1–5; they are the original tool codes, while this custom pack has its own local menu numbers. That is intentional (Step 5).
 
-**What you delete:** the 22 tool blocks for WT2, WT6, all ST, all AT, RP1–RP5, SW2, SW3.
+**What you delete:** the remaining tool blocks, including WT1, WT3, WT7–WT10, all ST, all AT, RP1–RP5, SW2 and SW3.
 
 **What the trimmed `03-launcher` menu looks like:**
 
 ```markdown
 Choose one option, or describe what you need.
 
-1. **WT1 — Clarity Clinic** — improve one sentence, a few sentences, or one paragraph.
-2. **WT3 — Find My Mistakes** — identify grammar, logic, clarity, factual, spelling, punctuation and referencing problems.
-3. **WT4 — Teach Me This Mistake** — learn from WT3 mistakes through a micro-lesson or tutor lesson builder.
-4. **WT5 — Style and Clarity Review** — improve readability, tone and style without rewriting the assignment.
+1. **WT2 — Clarity Clinic** — improve one sentence, a few sentences, or one paragraph.
+2. **WT4 — Find My Mistakes** — identify grammar, logic, clarity, factual, spelling, punctuation and referencing problems.
+3. **WT5 — Teach Me This Mistake** — learn from WT4 mistakes through a micro-lesson or tutor lesson builder.
+4. **WT6 — Style and Clarity Review** — improve readability, tone and style without rewriting the assignment.
 5. **SW1 — Revision Plan** — turn feedback into a revision plan.
 
 You can type `prompt` at any time to return to this menu.
@@ -202,10 +202,10 @@ You can type `prompt` at any time to return to this menu.
 ```markdown
 | Student choice | Code | Tool ID |
 |---:|---|---|
-| 1 | `WT1` | `clarity-clinic` |
-| 2 | `WT3` | `find-mistakes` |
-| 3 | `WT4` | `teach-mistake` |
-| 4 | `WT5` | `style-clarity-review` |
+| 1 | `WT2` | `clarity-clinic` |
+| 2 | `WT4` | `find-mistakes` |
+| 3 | `WT5` | `teach-mistake` |
+| 4 | `WT6` | `style-clarity-review` |
 | 5 | `SW1` | `revision-plan` |
 ```
 

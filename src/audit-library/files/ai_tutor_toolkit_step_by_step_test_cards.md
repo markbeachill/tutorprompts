@@ -1,9 +1,7 @@
-# AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.1
-
-**Release stamp:** Toolkit version v4.1 / Prompt-library suite v4.1 / Testing pack v4.1
-**This file:** AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.1  
+# AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.2
+**Release stamp:** Toolkit version v4.2 / Prompt-library suite v4.2 / Testing pack v4.2  **This file:** AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.2  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md`  
-**Fixed archive:** `audit-library/v4.1/ai_tutor_toolkit_step_by_step_test_cards_v4_1.md`
+**Fixed archive:** `audit-library/v4.2/ai_tutor_toolkit_step_by_step_test_cards_v4_2.md`
 
 Audience: educators, tutors, learning developers and toolkit maintainers who want to test the prompt libraries without needing software-testing knowledge.
 
@@ -16,7 +14,7 @@ Each card now contains only what is specific to that test: which tool to open, w
 3. Type `prompt` and choose the named tool.
 4. Paste Test input 1. Let the tool respond. Paste any follow-up inputs in order, letting the tool respond each time.
 5. When the final turn is complete, paste the **output collector** prompt (from `ai_tutor_toolkit_output_collector.md`) into the same chat. It produces a single test record containing metadata and the verbatim transcript.
-6. Save the record as `[code]_test_output_[date].md` — for example `wt1_clarity_clinic_test_output_[date].md`. Use lowercase and do not hard-code library versions in filenames; versions are recorded inside the record and in the test log.
+6. Save the record as `[code]_test_output_[date].md` — for example `wt2_clarity_clinic_test_output_[date].md`. Use lowercase and do not hard-code library versions in filenames; versions are recorded inside the record and in the test log.
 7. **Spot-check** at least one AI response in the record against the live chat before closing it. For A-series cards and any release-gating test, compare every turn or capture the transcript manually instead. If the record and the chat disagree, mark the test NOT TESTABLE and re-run with manual capture.
 8. Open a second AI chat — ideally on a **different model** from the one tested. Upload or paste the current audit prompt from `audit-library/latest/`.
 9. Choose the matching audit code from the audit menu, paste the saved test record, and ask for the audit as Markdown.
@@ -40,15 +38,86 @@ A **smoke test** is a quick check that the basics work: the menu appears, `promp
 
 ---
 
-## WT1 Test — Clarity Clinic
+## WT1 Test — Which Writing Tool Should I Use?
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT1. **Filename stem:** `wt1_clarity_clinic`.
+**Library:** Master library or Writing Tutor Library. **Audit code:** WT1. **Filename stem:** `wt1_which_writing_tool`.
+
+### What this test checks
+
+Whether WT1 routes rather than fixes: it should recommend at most two Writing Tutor tools, give tentative reasons, provide the exact text or span to submit, and avoid diagnosing, rewriting or launching another tool.
+
+### Test input 1
+
+```text
+I have this paragraph and I don't know which writing tool to use:
+
+Social media influencers affect how people buy products. The campaign was successful. This is important because brands need to understand online audiences. Many studies have discussed authenticity and trust.
+```
+
+### What to look for
+
+- ★ recommends no more than two tools and asks the student to choose rather than silently starting one
+- gives a tentative reason for each recommendation, framed as a routing signal rather than a verdict about the writing
+- provides the exact paragraph or sentence to submit to the recommended tool
+- does not rewrite, fix, diagnose in depth or run the recommended tool
+
+---
+
+## WT1 Scope Test — Whole piece or too much text
+
+**Library:** Master library or Writing Tutor Library. **Audit code:** WT1. **Filename stem:** `wt1_whole_piece_scope`.
+
+### What this test checks
+
+Whether WT1 holds its small-unit scope. For whole pieces or several paragraphs, it should not try to triage the full draft. It should point to WT4, WT6 or a Structure Tutor tool depending on the student's aim.
+
+### Test input
+
+```text
+I want to check my whole essay. It has an introduction, four body paragraphs and a conclusion. I am not sure whether the structure, the style or the mistakes are the main problem. Which Writing Tutor should I use?
+```
+
+### What to look for
+
+- ★ does not ask for or attempt to analyse the whole essay inside WT1
+- points the student to WT4 Find My Mistakes, WT6 Style and Clarity Review, or a Structure Tutor tool as appropriate
+- explains briefly that WT1 is for a sentence, a few sentences or one paragraph
+- does not invent a diagnosis of the essay's main problem
+
+---
+
+## WT1 Cluster-Routing Test — Sentence, paragraph, flow or grammar terms
+
+**Library:** Master library or Writing Tutor Library. **Audit code:** WT1. **Filename stem:** `wt1_cluster_routing`.
+
+### What this test checks
+
+Whether WT1 asks a discriminating question when a student uses vague terms such as "unclear", "doesn't flow" or "doesn't make sense" that could indicate WT2, WT3, WT9 or WT10.
+
+### Test input
+
+```text
+This paragraph doesn't make sense and it doesn't really flow. I also get confused by things like subjects and verbs. Which tool should I use?
+```
+
+### What to look for
+
+- ★ does not guess silently between WT2, WT3, WT9 and WT10
+- asks one clear discriminating question or offers a short set of choices that separates: unclear sentence, missing point/connection, sentence-to-sentence flow, and subject/verb learning
+- names the likely tools using the v4.2 numbering: WT2, WT3, WT9 and WT10
+- does not analyse or rewrite the paragraph before the student chooses a route
+
+---
+
+## WT2 Test — Clarity Clinic
+
+**Library:** Writing Tutor Library or master. **Audit code:** WT2. **Filename stem:** `wt2_clarity_clinic`.
 
 ### What this test checks
 
 Whether the Clarity Clinic behaves like an interactive writing tutor and, critically, whether it diagnoses the deepest useful issue first rather than the most visible one. The input below has a deliberately weak first-sentence frame and a salient pronoun problem later: the frame is the right primary diagnosis, the pronouns are the decoy.
 
-This is a four-turn test because WT1 can look safe in the first answer but drift into final wording or meaning-changing "academic" terms under follow-up pressure, and because it should also know when to stop.
+This is a four-turn test because WT2 can look safe in the first answer but drift into final wording or meaning-changing "academic" terms under follow-up pressure, and because it should also know when to stop.
 
 ### Test input 1
 
@@ -88,13 +157,13 @@ Is this sentence okay? Fan accounts shared the campaign within hours, which gave
 - ★ on follow-up 4, says the sentence is already clear, names one thing it does well, and does not invent improvements; any polish is offered as optional
 
 
-## WT1 Regression Test — Sentence-ending emphasis
+## WT2 Regression Test — Sentence-ending emphasis
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT1. **Filename stem:** `wt1_sentence_ending_emphasis`.
+**Library:** Writing Tutor Library or master. **Audit code:** WT2. **Filename stem:** `wt2_sentence_ending_emphasis`.
 
 ### What this test checks
 
-Whether WT1 recognises that sentence order changes reader emphasis, and whether it applies the stress-position rule without becoming mechanical.
+Whether WT2 recognises that sentence order changes reader emphasis, and whether it applies the stress-position rule without becoming mechanical.
 
 ### Test input 1
 
@@ -119,13 +188,13 @@ I want the reader to remember the rise in anxiety, not the timetable change.
 
 ---
 
-## WT1 Regression Test — Topic chain and unclear pointer
+## WT2 Regression Test — Topic chain and unclear pointer
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT1. **Filename stem:** `wt1_topic_chain_unclear_pointer`.
+**Library:** Writing Tutor Library or master. **Audit code:** WT2. **Filename stem:** `wt2_topic_chain_unclear_pointer`.
 
 ### What this test checks
 
-Whether WT1 connects unclear words such as “this” to the previous sentence's topic frame, rather than treating them as isolated pronoun problems.
+Whether WT2 connects unclear words such as “this” to the previous sentence's topic frame, rather than treating them as isolated pronoun problems.
 
 ### Test input
 
@@ -142,13 +211,13 @@ The new policy increased costs for small businesses. This made the situation dif
 - gives one focused revision task, such as replacing “This” with the action or situation being referred to
 
 ---
-## WT2 Test — Single Paragraph Analysis
+## WT3 Test — Single Paragraph Analysis
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT2. **Filename stem:** `wt2_single_paragraph_analysis`.
+**Library:** Writing Tutor Library or master. **Audit code:** WT3. **Filename stem:** `wt3_single_paragraph_analysis`.
 
 ### What this test checks
 
-WT2 is a **full review tool** in v4.1: it should give its structured paragraph analysis first, then handle follow-up turns interactively. This card checks the report, the controlled model boundary, and the new follow-up behaviour with a revised paragraph.
+WT3 is a **full review tool** in v4.2: it should give its structured paragraph analysis first, then handle follow-up turns interactively. This card checks the report, the controlled model boundary, and the new follow-up behaviour with a revised paragraph.
 
 ### Test input 1
 
@@ -181,13 +250,13 @@ Here is my new version. Social media advertising matters to brands because it re
 
 ---
 
-## WT3 Test — Find My Mistakes
+## WT4 Test — Find My Mistakes
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT3. **Filename stem:** `wt3_find_my_mistakes`.
+**Library:** Writing Tutor Library or master. **Audit code:** WT4. **Filename stem:** `wt4_find_my_mistakes`.
 
 ### What this test checks
 
-Whether the tool identifies mistakes completely and teaches through corrections without rewriting the paragraph. In v4.1 a complete itemised check is intended behaviour; do not mark WT3 down for thoroughness.
+Whether the tool identifies mistakes completely and teaches through corrections without rewriting the paragraph. In v4.2 a complete itemised check is intended behaviour; do not mark WT4 down for thoroughness.
 
 ### Test input
 
@@ -201,17 +270,17 @@ This study show you how BTS and YouTubers advertising effect consumer culture, a
 - identifies the agreement and word-choice errors without rewriting the whole paragraph
 - ★ does not assert factual corrections confidently; anything factual is flagged as "may need checking" with what to verify
 - after the summary table, names the mistake type that most affects meaning if it differs from the most frequent
-- offers the practice hand-off into WT4
+- offers the practice hand-off into WT5
 
 ---
 
-## WT3 Regression Test — Challenge handling and correction boundary
+## WT4 Regression Test — Challenge handling and correction boundary
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT3. **Filename stem:** `wt3_challenge_regression`.
+**Library:** Writing Tutor Library or master. **Audit code:** WT4. **Filename stem:** `wt4_challenge_regression`.
 
 ### What this test checks
 
-That WT3 corrects mistakes without becoming a sentence-rewriting service, and responds transparently when a student correctly challenges a flagged mistake.
+That WT4 corrects mistakes without becoming a sentence-rewriting service, and responds transparently when a student correctly challenges a flagged mistake.
 
 ### Test input 1
 
@@ -235,13 +304,13 @@ I don't think "woke" is a mistake because I put it in quotation marks. Also, som
 
 ---
 
-## WT3 Long-Input Test — Complete check on a long extract
+## WT4 Long-Input Test — Complete check on a long extract
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT3. **Filename stem:** `wt3_long_input`.
+**Library:** Writing Tutor Library or master. **Audit code:** WT4. **Filename stem:** `wt4_long_input`.
 
 ### What this test checks
 
-The v4.1 WT3 exemption from the long-inputs rule: WT3 may and should itemise in full, working section by section if needed — and must not pretend to have checked material it has not processed.
+The v4.2 WT4 exemption from the long-inputs rule: WT4 may and should itemise in full, working section by section if needed — and must not pretend to have checked material it has not processed.
 
 ### Test input
 
@@ -266,13 +335,13 @@ Paragraph 5: This dissertation examine these tensions threw a case study of two 
 
 ---
 
-## WT4 Test — Teach Me This Mistake
+## WT5 Test — Teach Me This Mistake
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT4. **Filename stem:** `wt4_teach_me_this_mistake`.
+**Library:** Writing Tutor Library or master. **Audit code:** WT5. **Filename stem:** `wt5_teach_me_this_mistake`.
 
 ### What this test checks
 
-Whether WT4 defaults to an interactive student micro-lesson, withholds answers until the student attempts the practice, and can also produce tutor lesson material when lesson mode is requested.
+Whether WT5 defaults to an interactive student micro-lesson, withholds answers until the student attempts the practice, and can also produce tutor lesson material when lesson mode is requested.
 
 ### Test input
 
@@ -283,20 +352,20 @@ Previous error analysis: Mistake 1: "This study show you" Correction: "This stud
 ### What to look for
 
 - creates a student micro-lesson by default; does not invent unrelated errors
-- ★ practice questions run in the v4.1 order: recognition (find the mistake), correction (fix the given mistake), production (write a correct sentence of your own)
+- ★ practice questions run in the v4.2 order: recognition (find the mistake), correction (fix the given mistake), production (write a correct sentence of your own)
 - answers are withheld until the student attempts
 - ends by asking the student to find and fix one further instance in their own draft, unaided
 - if the same input adds “lesson mode”, creates copy-ready tutor material with objective, timing, worked example, practice, answer key and tutor notes
 
 ---
 
-## WT5 Test — Style and Clarity Review
+## WT6 Test — Style and Clarity Review
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT5. **Filename stem:** `wt5_style_and_clarity`.
+**Library:** Writing Tutor Library or master. **Audit code:** WT6. **Filename stem:** `wt6_style_and_clarity`.
 
 ### What this test checks
 
-Whether the tool aims for clear writing between academic and journalistic register rather than dead academic padding, within the v4.1 cap.
+Whether the tool aims for clear writing between academic and journalistic register rather than dead academic padding, within the v4.2 cap.
 
 ### Test input
 
@@ -312,13 +381,13 @@ The utilisation of digital platforms has facilitated the development of particip
 
 ---
 
-## WT5 Regression Test — Move to make, not replacement sentence
+## WT6 Regression Test — Move to make, not replacement sentence
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT5. **Filename stem:** `wt5_meaning_regression`.
+**Library:** Writing Tutor Library or master. **Audit code:** WT6. **Filename stem:** `wt6_meaning_regression`.
 
 ### What this test checks
 
-That WT5 gives style-and-clarity feedback without supplying a sequence of polished replacement sentences, and does not silently specify vague student meaning.
+That WT6 gives style-and-clarity feedback without supplying a sequence of polished replacement sentences, and does not silently specify vague student meaning.
 
 ### Test input
 
@@ -335,13 +404,13 @@ My research is going to look at the wider meanings and labels surrounding the to
 
 ---
 
-## WT5 Register Test — Strict-register discipline
+## WT6 Register Test — Strict-register discipline
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT5. **Filename stem:** `wt5_register`.
+**Library:** Writing Tutor Library or master. **Audit code:** WT6. **Filename stem:** `wt6_register`.
 
 ### What this test checks
 
-The v4.1 register rule: in a discipline with a strict formal register, WT5 keeps the clarity advice but does not push toward journalistic directness, and says the stricter register has been kept.
+The v4.2 register rule: in a discipline with a strict formal register, WT6 keeps the clarity advice but does not push toward journalistic directness, and says the stricter register has been kept.
 
 ### Test input
 
@@ -356,9 +425,9 @@ This is from my law essay. The defendant's contention that the publication was p
 - preserves technical terms such as "qualified privilege" and "duty-interest relationship" without substitution
 
 
-## WT1/WT5 Regression Test — Certainty, confidence and authority
+## WT2/WT6 Regression Test — Certainty, confidence and authority
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT1 or WT5, depending on the tool selected. **Filename stem:** `certainty_confidence_authority`.
+**Library:** Writing Tutor Library or master. **Audit code:** WT2 or WT6, depending on the tool selected. **Filename stem:** `certainty_confidence_authority`.
 
 ### What this test checks
 
@@ -366,7 +435,7 @@ Whether a clarity or style tool preserves the student's level of certainty, conf
 
 ### How to run the test
 
-Run this card twice if possible: once in WT1 Clarity Clinic and once in WT5 Style and Clarity Review.
+Run this card twice if possible: once in WT2 Clarity Clinic and once in WT6 Style and Clarity Review.
 
 ### Test input
 
@@ -384,9 +453,9 @@ In this case, it may be better to contact the school administration and let them
 - keeps final wording and judgement with the student
 
 ---
-## WT6 Test — Referencing Helper
+## WT7 Test — Referencing Helper
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT6. **Filename stem:** `wt6_referencing_helper`.
+**Library:** Writing Tutor Library or master. **Audit code:** WT7. **Filename stem:** `wt7_referencing_helper`.
 
 ### What this test checks
 
@@ -405,13 +474,13 @@ Please make Harvard references for these partial sources: 1. Kozinets netnograph
 
 ---
 
-## WT6 Cross-Check Test — In-text citations versus reference list
+## WT7 Cross-Check Test — In-text citations versus reference list
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT6. **Filename stem:** `wt6_cross_check`.
+**Library:** Writing Tutor Library or master. **Audit code:** WT7. **Filename stem:** `wt7_cross_check`.
 
 ### What this test checks
 
-The v4.1 cross-check mode. The input is engineered with three mismatches: Hackley is cited but not listed; Jones et al. is listed but never cited; the Kozinets date disagrees between text and list.
+The v4.2 cross-check mode. The input is engineered with three mismatches: Hackley is cited but not listed; Jones et al. is listed but never cited; the Kozinets date disagrees between text and list.
 
 ### Test input
 
@@ -433,13 +502,13 @@ Jones, S., Patel, R. and Lim, K. (2015) Digital Discourse. London: Routledge.
 
 ---
 
-## WT7 Test — Paraphrase and Quotation Workshop
+## WT8 Test — Paraphrase and Quotation Workshop
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT7. **Filename stem:** `wt7_paraphrase_quotation_workshop`.
+**Library:** Writing Tutor Library or master. **Audit code:** WT8. **Filename stem:** `wt8_paraphrase_quotation_workshop`.
 
 ### What this tests
 
-Whether WT7 protects academic integrity while still teaching source use: it should not write the paraphrase or quotation-integration sentence, should ask for the original source where needed, should diagnose too-close wording or unmarked quotation risk, and should set a student revision task.
+Whether WT8 protects academic integrity while still teaching source use: it should not write the paraphrase or quotation-integration sentence, should ask for the original source where needed, should diagnose too-close wording or unmarked quotation risk, and should set a student revision task.
 
 ### Input to use
 
@@ -466,13 +535,13 @@ The output should:
 
 Pass if the tool diagnoses the source-use risk clearly and keeps authorship with the student. Mark as a major issue if it supplies a polished paraphrase, and as a critical issue if it produces a submission-ready source-use sentence in the student’s voice.
 
-## WT7 Regression Test — Quote framing and reporting verbs
+## WT8 Regression Test — Quote framing and reporting verbs
 
-**Library:** Writing Tutor Library or master. **Audit code:** WT7. **Filename stem:** `wt7_quote_framing_reporting_verbs`.
+**Library:** Writing Tutor Library or master. **Audit code:** WT8. **Filename stem:** `wt8_quote_framing_reporting_verbs`.
 
 ### What this tests
 
-Whether WT7 can help with a quotation that needs integrating into a paragraph without writing the integration sentence for the student, and whether it treats reporting verbs as meaning choices.
+Whether WT8 can help with a quotation that needs integrating into a paragraph without writing the integration sentence for the student, and whether it treats reporting verbs as meaning choices.
 
 ### Input to use
 
@@ -500,6 +569,86 @@ The output should:
 
 Pass if the tool teaches the attribution and reporting-verb issue while leaving the sentence to the student. Mark as a major issue if it writes a finished source-integration sentence using the student’s quote and point.
 
+
+## WT9 Test — Flow and Coherence: The Running Subject
+
+**Library:** Writing Tutor Library or master. **Audit code:** WT9. **Filename stem:** `wt9_flow_and_coherence`.
+
+### What this test checks
+
+Whether WT9 tests paragraph flow through the grammatical-subject string, protects useful passive voice, and hands the judgement and repair work back to the student rather than rewriting the paragraph.
+
+### Test input
+
+```text
+Online fan communities can increase the visibility of brand campaigns. The campaign message was shared widely during the first weekend. Sponsors then received attention from audiences who had not followed the original launch. This attention created value for the brand because peer sharing made the promotion seem less like a normal advert.
+```
+
+### What to look for
+
+- ★ explains that grammatical subject means the doer of the verb, not the topic or main point
+- lists the subject string sentence by sentence using the student's actual grammatical subjects
+- comments on hand-offs between sentences without turning the answer into a general paragraph review
+- protects passive voice where it supports the subject string or old-to-new information flow
+- asks the student to judge or revise the hand-off instead of supplying a rewritten paragraph
+
+---
+
+## WT9 Routing Test — Flow gap or missing reasoning step
+
+**Library:** Writing Tutor Library or master. **Audit code:** WT9. **Filename stem:** `wt9_flow_vs_reasoning`.
+
+### What this test checks
+
+Whether WT9 distinguishes a hand-off problem from a not-yet-worked-out idea and routes to WT3 when the paragraph needs reasoning before flow repair.
+
+### Test input
+
+```text
+Short videos are important for political communication. Young voters use TikTok every day. Trust in government has changed in recent years. Therefore campaign regulation should be updated.
+```
+
+### What to look for
+
+- ★ shows the subject string and identifies where the reader may lose the thread
+- asks whether the connection is merely unwritten or not yet worked out
+- ★ if the connection is not yet worked out, points to WT3 Single Paragraph Analysis rather than polishing the wording
+- does not supply a polished revised paragraph
+
+---
+
+## WT10 Test — Learn Subjects: Parsing Your Own Sentences
+
+**Library:** Writing Tutor Library or master. **Audit code:** WT10. **Filename stem:** `wt10_learn_subjects`.
+
+### What this test checks
+
+Whether WT10 teaches students to find verbs and grammatical subjects using the fixed doing-test, without becoming a general grammar lecture or parsing everything for the student.
+
+### Test input 1
+
+```text
+I always get confused about subjects and verbs. Can you teach me using these sentences?
+
+The council introduced a night bus service. The service was welcomed by students. Because the taxi queue was unsafe after midnight.
+```
+
+### Follow-up input 2
+
+```text
+I think the subject of the second sentence is students because the sentence is about students.
+```
+
+### What to look for
+
+- ★ uses the fixed method: find the verb first, then ask who or what is doing or being it
+- ★ explicitly says grammatical subject is not the topic or main point
+- teaches one term at a time and asks the student to identify subjects/verbs, rather than simply giving a full parse
+- handles the passive sentence by distinguishing grammatical subject from actor
+- uses the fragment as an optional completeness-test teaching moment if appropriate
+- points the student back to WT2 or WT9 only after the parsing skill is clearer
+
+---
 
 ## ST1 Test — Paragraph Structure Review Across a Whole Draft
 
@@ -535,7 +684,7 @@ Paragraph 3: YouTubers also advertise products. Some adverts feel more personal 
 
 ### What this test checks
 
-The v4.1 student-first ordering behaviour. The tool should map the structure, name the problems, and ask the student to propose a revised order — giving its own suggested order only on request or if the student is stuck.
+The v4.2 student-first ordering behaviour. The tool should map the structure, name the problems, and ask the student to propose a revised order — giving its own suggested order only on request or if the student is stuck.
 
 ### Test input 1
 
@@ -768,7 +917,7 @@ Use the ideological assumptions opponent. My argument is: Influencer marketing i
 
 ### What this test checks
 
-One question at a time; a useful starting point; the two v4.1 rules — brief correction of plain factual error, and a checkpoint when answers begin repeating.
+One question at a time; a useful starting point; the two v4.2 rules — brief correction of plain factual error, and a checkpoint when answers begin repeating.
 
 ### Test input 1
 
@@ -929,7 +1078,7 @@ My deadline is Friday and I have two free evenings before then.
 
 ### What this test checks
 
-Plain-English interpretation of feedback and conversion to actions, including the v4.1 handling of blunt feedback. Run both inputs in separate fresh chats.
+Plain-English interpretation of feedback and conversion to actions, including the v4.2 handling of blunt feedback. Run both inputs in separate fresh chats.
 
 ### Test input A
 
@@ -975,11 +1124,11 @@ I used AI to improve a few paragraphs and make the argument sound more academic.
 
 # Behavioural regression cards
 
-These cards test cross-cutting tutor-style behaviours that remain current. They were introduced for v3 and renamed in v4.1; the behaviours they test are unchanged.
+These cards test cross-cutting tutor-style behaviours that remain current. They were introduced for v3 and renamed in v4.2; the behaviours they test are unchanged.
 
 ## BR1 — Paragraph-first tutor style and grammar terms
 
-**Library:** current Writing Tutor Library or master. **Tool:** WT1. **Filename stem:** `br1_paragraph_first_grammar`.
+**Library:** current Writing Tutor Library or master. **Tool:** WT2. **Filename stem:** `br1_paragraph_first_grammar`.
 
 ### Test input
 
@@ -995,7 +1144,7 @@ I don't understand what you mean by the action being hidden.
 
 ### What to look for
 
-WT1 should explain the problem in short, readable paragraphs. It may use essential grammar or sentence terms, but should explain them plainly with a simple example before applying them. It should teach the student to identify the actor, action and meaning choice rather than supplying a polished rewrite, and ask the student to attempt the revision.
+WT2 should explain the problem in short, readable paragraphs. It may use essential grammar or sentence terms, but should explain them plainly with a simple example before applying them. It should teach the student to identify the actor, action and meaning choice rather than supplying a polished rewrite, and ask the student to attempt the revision.
 
 ## BR2 — Manageable feedback check
 
@@ -1011,7 +1160,7 @@ This paragraph is about how social media is bad and it has many effects on young
 
 ### What to look for
 
-The output should resist producing an overwhelming catalogue. It should focus on the most important issue first, explain it plainly, and give one or a small number of next steps. (WT3, if selected, is the exception: its complete check is intended behaviour.)
+The output should resist producing an overwhelming catalogue. It should focus on the most important issue first, explain it plainly, and give one or a small number of next steps. (WT4, if selected, is the exception: its complete check is intended behaviour.)
 
 ---
 
@@ -1019,19 +1168,19 @@ The output should resist producing an overwhelming catalogue. It should focus on
 
 To avoid overfitting the prompts to one topic universe, run a periodic deeper pass replacing the standard inputs with these alternates for the high-stakes tools. Release passes use the standard inputs; an alternate-strand pass is recommended once per major release.
 
-**WT1 alternate (nursing):**
+**WT2 alternate (nursing):**
 
 ```text
 It could be argued that there were a number of communication issues during the handover which may have been a factor in what happened with the medication times.
 ```
 
-**WT3 alternate (biology):**
+**WT4 alternate (biology):**
 
 ```text
 The experiment show that enzyme activity were effected by temperature, with the highest rate occuring at 37 degrees, however above this the proteins begins to denature and activity drop quickly.
 ```
 
-**WT5 alternate (business report):**
+**WT6 alternate (business report):**
 
 ```text
 The implementation of the aforementioned operational efficiencies facilitated a notable enhancement in quarterly performance metrics across the organisation's customer-facing functions.

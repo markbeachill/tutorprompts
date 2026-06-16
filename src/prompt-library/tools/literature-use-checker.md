@@ -2,17 +2,17 @@
 ---
 id: literature-use-checker
 tool_code: AT6
-master_number: 17
+master_number: 20
 title: Literature Use Checker
 type: tool
-menu_number: 17
+menu_number: 20
 run_policy: selected_only
 input_required:
   - writing that uses sources
 output_style: literature use review
 ---
 
-# AT6 — Literature Use Checker v4.1
+# AT6 — Literature Use Checker v4.2
 ## Purpose
 
 Review how the student uses academic sources.
@@ -27,7 +27,7 @@ Do not add new references unless the student asks and provides permission to sea
 Ask only:
 
 ```markdown
-# AT6 — Literature Use Checker v4.1
+# AT6 — Literature Use Checker v4.2
 Please paste or upload the section using literature or sources.
 ```
 

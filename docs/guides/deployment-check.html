@@ -8,7 +8,7 @@
 <meta content="A ten-to-fifteen-minute check tutors run on their own AI setup before using a toolkit tool with a class - sample inputs, good signs and a clear decision." name="description"/>
 <link href="../style.css" rel="stylesheet"/>
 <style>
-/* Additions for testing/deployment pages (v4.0) */
+/* Additions for testing/deployment pages (v4.2) */
 button.button{cursor:pointer;font:inherit;font-weight:800}
 .copywrap{margin:14px 0}
 .copywrap pre{margin:10px 0 0;max-height:420px}
@@ -45,32 +45,52 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 </section><section>
 <h2 id="sample-inputs-by-tool">Sample inputs by tool</h2>
 <p>Each section gives a copy-ready input and the good signs to look for. One turn is enough for this check; try a follow-up if you have time. Jump to:</p>
-<p><a href="#wt1-clarity-clinic">WT1</a> · <a href="#wt2-single-paragraph-analysis">WT2</a> · <a href="#wt3-find-my-mistakes">WT3</a> · <a href="#wt4-teach-me-this-mistake">WT4</a> · <a href="#wt5-style-and-clarity-review">WT5</a> · <a href="#wt6-referencing-helper">WT6</a> · <a href="#st1-paragraph-structure-review">ST1</a> · <a href="#st2-whole-work-structure-review">ST2</a> · <a href="#st3-expert-meaning-review">ST3</a> · <a href="#at1-assignment-brief-checker">AT1</a> · <a href="#at2-argument-map">AT2</a> · <a href="#at3-descriptive-vs-analytical-check">AT3</a> · <a href="#at4-evidence-gap-checker">AT4</a> · <a href="#at5-concept-clarity-checker">AT5</a> · <a href="#at6-literature-use-checker">AT6</a> · <a href="#at7-counterargument-and-limitations-checker">AT7</a> · <a href="#at8-source-reliability-checker">AT8</a> · <a href="#at9-critical-opponent-review">AT9</a> · <a href="#at10-socratic-tutor">AT10</a> · <a href="#rp1-research-question-checker">RP1</a> · <a href="#rp2-methodology-fit-checker">RP2</a> · <a href="#rp3-critical-research-supervisor-review">RP3</a> · <a href="#rp4-viva-or-supervisor-practice">RP4</a> · <a href="#rp5-guided-topic-brainstorming">RP5</a> · <a href="#sw1-revision-plan">SW1</a> · <a href="#sw2-tutor-feedback-to-action-plan">SW2</a> · <a href="#sw3-ai-use-record">SW3</a></p>
+<p><a href="#wt1-which-writing-tool">WT1</a> · <a href="#wt2-clarity-clinic">WT2</a> · <a href="#wt3-single-paragraph-analysis">WT3</a> · <a href="#wt4-find-my-mistakes">WT4</a> · <a href="#wt5-teach-me-this-mistake">WT5</a> · <a href="#wt6-style-and-clarity-review">WT6</a> · <a href="#wt7-referencing-helper">WT7</a> · <a href="#wt8-paraphrase-quotation-workshop">WT8</a> · <a href="#wt9-flow-and-coherence">WT9</a> · <a href="#wt10-learn-subjects">WT10</a> · <a href="#st1-paragraph-structure-review">ST1</a> · <a href="#st2-whole-work-structure-review">ST2</a> · <a href="#st3-expert-meaning-review">ST3</a> · <a href="#at1-assignment-brief-checker">AT1</a> · <a href="#at2-argument-map">AT2</a> · <a href="#at3-descriptive-vs-analytical-check">AT3</a> · <a href="#at4-evidence-gap-checker">AT4</a> · <a href="#at5-concept-clarity-checker">AT5</a> · <a href="#at6-literature-use-checker">AT6</a> · <a href="#at7-counterargument-and-limitations-checker">AT7</a> · <a href="#at8-source-reliability-checker">AT8</a> · <a href="#at9-critical-opponent-review">AT9</a> · <a href="#at10-socratic-tutor">AT10</a> · <a href="#rp1-research-question-checker">RP1</a> · <a href="#rp2-methodology-fit-checker">RP2</a> · <a href="#rp3-critical-research-supervisor-review">RP3</a> · <a href="#rp4-viva-or-supervisor-practice">RP4</a> · <a href="#rp5-guided-topic-brainstorming">RP5</a> · <a href="#sw1-revision-plan">SW1</a> · <a href="#sw2-tutor-feedback-to-action-plan">SW2</a> · <a href="#sw3-ai-use-record">SW3</a></p>
 <p>The sample inputs are the same inputs used in release testing, so what you see can be compared against vetted behaviour. Better still, use a real piece of writing of the kind your activity will involve.</p>
-<h3 id="wt1-clarity-clinic">WT1 — Clarity Clinic</h3>
+<h3 id="wt1-which-writing-tool">WT1 — Which Writing Tool Should I Use?</h3>
+<div class="copywrap"><button class="button" onclick="copyBox('cb31',this)">Copy</button><pre id="cb31"><code>I have one paragraph and I am not sure whether the problem is sentence clarity, paragraph logic, flow, or grammar terms. Can you help me choose the right Writing Tutor tool?
+</code></pre></div>
+<p>Good signs: it does not fix or rewrite the writing; it recommends one or two Writing Tutor tools, explains why, and asks you to confirm before starting. For whole pieces, it should point toward WT4, WT6 or a Structure Tutor tool rather than trying to run a sentence/paragraph tool.</p>
+<h3 id="wt2-clarity-clinic">WT2 — Clarity Clinic</h3>
 <div class="copywrap"><button class="button" onclick="copyBox('cb3',this)">Copy</button><pre id="cb3"><code>It is widely acknowledged in the literature that there are many factors which can be considered relevant when looking at this area. This means brands struggle to know which of these they should respond to.
 </code></pre></div>
 <p>Good signs: it quotes your text and names the deepest problem — the empty opening that never says what the sentence is about — rather than only the vague pronouns; explains in plain English; shows the move with a short made-up example on a different topic; asks you to attempt the rewrite instead of rewriting for you.</p>
-<h3 id="wt2-single-paragraph-analysis">WT2 — Single Paragraph Analysis</h3>
+<h3 id="wt3-single-paragraph-analysis">WT3 — Single Paragraph Analysis</h3>
 <div class="copywrap"><button class="button" onclick="copyBox('cb4',this)">Copy</button><pre id="cb4"><code>Social media advertising is important today. BTS have worked with brands and YouTubers also promote products. These campaigns get likes and comments online. My dissertation will look at this topic because young people use social media a lot and brands want to connect with them.
 </code></pre></div>
 <p>Good signs: a structured report that maps the chain of ideas as a plain line, names where the chain breaks, and ends with one manageable revision task; no rewritten model paragraph by default.</p>
-<h3 id="wt3-find-my-mistakes">WT3 — Find My Mistakes</h3>
+<h3 id="wt4-find-my-mistakes">WT4 — Find My Mistakes</h3>
 <div class="copywrap"><button class="button" onclick="copyBox('cb5',this)">Copy</button><pre id="cb5"><code>This study show you how BTS and YouTubers advertising effect consumer culture, and how it increase audience engagement in digital media settings.
 </code></pre></div>
 <p>Good signs: each mistake shown in bold context with the smallest useful correction and a plain explanation; a summary table at the end; no rewritten paragraph; an offer to practise the most useful mistake type.</p>
-<h3 id="wt4-teach-me-this-mistake">WT4 — Teach Me This Mistake</h3>
+<h3 id="wt5-teach-me-this-mistake">WT5 — Teach Me This Mistake</h3>
 <div class="copywrap"><button class="button" onclick="copyBox('cb6',this)">Copy</button><pre id="cb6"><code>Previous error analysis: Mistake 1: "This study show you" Correction: "This study shows" Explanation: "Study" is singular, so the verb needs to agree. Chosen focus: subject–verb agreement.
 </code></pre></div>
 <p>Good signs: by default, a student micro-lesson built from this mistake; practice questions that move from spotting, to fixing, to writing your own sentence; answers withheld until you try. If you add <code>lesson mode</code>, good signs are copy-ready tutor material with an objective, timing, worked example, practice, answer key and tutor notes.</p>
-<h3 id="wt5-style-and-clarity-review">WT5 — Style and Clarity Review</h3>
+<h3 id="wt6-style-and-clarity-review">WT6 — Style and Clarity Review</h3>
 <div class="copywrap"><button class="button" onclick="copyBox('cb7',this)">Copy</button><pre id="cb7"><code>The utilisation of digital platforms has facilitated the development of participatory engagement practices amongst contemporary consumers within increasingly complex media ecosystems.
 </code></pre></div>
 <p>Good signs: no more than five improvements, each located and framed as a move to make rather than a replacement sentence; pushes toward lively clarity, not heavier academese; your key terms survive.</p>
-<h3 id="wt6-referencing-helper">WT6 — Referencing Helper</h3>
+<h3 id="wt7-referencing-helper">WT7 — Referencing Helper</h3>
 <div class="copywrap"><button class="button" onclick="copyBox('cb8',this)">Copy</button><pre id="cb8"><code>Please make Harvard references for these partial sources: 1. Kozinets netnography article 2002 Journal of Marketing Research. 2. Orwell Politics and the English Language.
 </code></pre></div>
 <p>Good signs: asks for your course referencing guide or confirms house style, warns that Harvard varies, and marks missing details as missing rather than inventing volumes, pages or publishers.</p>
+<h3 id="wt8-paraphrase-quotation-workshop">WT8 — Paraphrase and Quotation Workshop</h3>
+<div class="copywrap"><button class="button" onclick="copyBox('cb32',this)">Copy</button><pre id="cb32"><code>Source extract: Digital creators can make branded content feel more personal because audiences often experience them as familiar voices rather than distant advertisers.
+
+Student attempt: Digital creators make branded content more personal because people see them as familiar voices, not distant advertisers.
+
+Is this paraphrase too close?
+</code></pre></div>
+<p>Good signs: it asks for enough source/context, checks closeness and attribution, and sets a student-owned revision task rather than writing the paraphrase or quotation integration for the student.</p>
+<h3 id="wt9-flow-and-coherence">WT9 — Flow and Coherence: The Running Subject</h3>
+<div class="copywrap"><button class="button" onclick="copyBox('cb33',this)">Copy</button><pre id="cb33"><code>Social media advertising is important today. These campaigns get likes and comments online. Young people use platforms every day. The brand relationship changes because audiences trust familiar creators.
+</code></pre></div>
+<p>Good signs: it lists the grammatical subject of each sentence, uses the subject string to test flow, and distinguishes a missing hand-off from a missing idea that may need WT3 instead.</p>
+<h3 id="wt10-learn-subjects">WT10 — Learn Subjects: Parsing Your Own Sentences</h3>
+<div class="copywrap"><button class="button" onclick="copyBox('cb34',this)">Copy</button><pre id="cb34"><code>I cannot tell what the subject and verb are in this sentence: The campaign that the influencers promoted across several platforms increased audience engagement.
+</code></pre></div>
+<p>Good signs: it teaches the verb-first subject test using the student's sentence, keeps the distinction between grammatical subject and topic clear, and does not turn into a general grammar lecture.</p>
 <h3 id="st1-paragraph-structure-review">ST1 — Paragraph Structure Review</h3>
 <div class="copywrap"><button class="button" onclick="copyBox('cb9',this)">Copy</button><pre id="cb9"><code>Paragraph 1: Social media is important for advertising because many people use it.
 

@@ -1,11 +1,11 @@
 <!-- FILE: clarity-clinic.md -->
 ---
 id: clarity-clinic
-tool_code: WT1
+tool_code: WT2
 title: Clarity Clinic
 type: tool
-menu_number: 1
-master_number: 1
+menu_number: 2
+master_number: 2
 run_policy: selected_only
 input_required:
   - one sentence, a few sentences, or one paragraph
@@ -13,8 +13,7 @@ output_style: interactive writing tutor response
 interaction_type: interactive tutoring
 ---
 
-# WT1 — Clarity Clinic v4.1
-
+# WT2 — Clarity Clinic v4.2
 Apply `global-rules`.
 
 Run only this tool.
@@ -335,7 +334,7 @@ Continue to another pass when the remaining issue affects clarity, meaning, gram
 
 Do not keep pushing for minor stylistic polish once the sentence is clear enough for the student's purpose, unless the student asks for style or academic tone help.
 
-If the text is clear enough for the main WT1 purpose but could still be polished, say this honestly:
+If the text is clear enough for the main WT2 purpose but could still be polished, say this honestly:
 
 > This is now clear enough for the main meaning. There are still optional style improvements, but they are less urgent.
 

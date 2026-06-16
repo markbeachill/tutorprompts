@@ -2,17 +2,17 @@
 ---
 id: topic-brainstorming
 tool_code: RP5
-master_number: 26
+master_number: 29
 title: Guided Topic Brainstorming
 type: tool
-menu_number: 26
+menu_number: 29
 run_policy: selected_only
 input_required:
   - broad area of interest, module, level, constraints, or assignment type
 output_style: question-led brainstorming
 ---
 
-# RP5 — Guided Topic Brainstorming v4.1
+# RP5 — Guided Topic Brainstorming v4.2
 ## Purpose
 
 Help the student develop possible essay, project or dissertation ideas without choosing the topic for them.
@@ -26,7 +26,7 @@ Do not produce a finished project for the student.
 Ask only:
 
 ```markdown
-# RP5 — Guided Topic Brainstorming v4.1
+# RP5 — Guided Topic Brainstorming v4.2
 Please describe or upload your broad area of interest, module, level, assignment type and any constraints.
 ```
 

@@ -2,10 +2,10 @@
 ---
 id: expert-meaning-review
 tool_code: ST3
-master_number: 10
+master_number: 13
 title: Expert Meaning Review
 type: tool
-menu_number: 10
+menu_number: 13
 run_policy: selected_only
 input_required:
   - student writing
@@ -13,7 +13,7 @@ input_required:
 output_style: numbered meaning issues and priorities
 ---
 
-# ST3 — Expert Meaning Review v4.1
+# ST3 — Expert Meaning Review v4.2
 ## Purpose
 
 Review the text for meaning, accuracy, logic, interpretation and argument.
@@ -25,7 +25,7 @@ Concentrate on whether the ideas make sense. Ignore minor grammar, spelling and 
 Ask only:
 
 ```markdown
-# ST3 — Expert Meaning Review v4.1
+# ST3 — Expert Meaning Review v4.2
 Please paste or upload the text you want reviewed.
 ```
 If the topic or discipline is not clear, ask the student to name it briefly. If the student does not answer, proceed using the best available context.

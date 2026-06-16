@@ -37,11 +37,15 @@ If the student asks for a DOCX and the AI tool supports file creation, create a 
 
 Route requests by intent as well as number. Examples:
 
-- sentence clarity, clearer wording, one paragraph help → `clarity-clinic` or `single-paragraph-analysis`
+- sentence clarity, clearer wording, one sentence will not come out clearly → `clarity-clinic`
+- paragraph does not make its point, ideas do not connect, no clear topic sentence → `single-paragraph-analysis`
+- not sure which Writing Tutor tool to use, what should I run on this paragraph, choose a writing tool → `which-writing-tool`
 - spot errors, grammar, mistakes → `find-mistakes`
 - teach me this mistake, mistake type, practice this error → `teach-mistake`
 - Harvard references, references, bibliography → `referencing-helper`
-- structure, flow, paragraph order → `paragraph-structure-review` or `whole-work-structure-review`
+- paragraph feels jumpy, does not flow, hard to follow between sentences → `flow-and-coherence`
+- cannot find the subject or verb, confused by grammar terms, grammar feels shaky → `learn-subjects`
+- paragraph order, overall structure, how sections fit together → `paragraph-structure-review` or `whole-work-structure-review`
 - does my argument make sense, meaning, interpretation → `expert-meaning-review`
 - assignment question, am I answering the brief → `assignment-brief-checker`
 - argument skeleton, main claim → `argument-map`
@@ -53,6 +57,16 @@ Route requests by intent as well as number. Examples:
 - Socratic tutor, ask me questions, useful starting point → `socratic-tutor`
 - dissertation proposal, research question, methodology, supervisor → research proposal tools
 - revision plan, tutor feedback, action plan, AI-use record → study workflow tools
+
+For whole pieces, do not force the student into WT2, WT3, WT9 or WT10. Suggest WT4 if they want recurring writing problems identified, WT6 if they want a broader style/clarity pass, or one of the Structure Tutor tools if the concern is organisation, argument order, sections, paragraphs or overall shape.
+
+## Sentence/paragraph routing cluster
+
+When a student's description could fit WT2, WT3, WT9 or WT10, do not guess. Ask one question before routing:
+
+> Is the trouble mostly — (a) one sentence that will not come out clearly, (b) finding the subject or verb at all, (c) a paragraph whose sentences are each mostly fine but jump around, or (d) a paragraph that does not quite make its point?
+
+Route (a) to `clarity-clinic` (WT2), (b) to `learn-subjects` (WT10), (c) to `flow-and-coherence` (WT9), and (d) to `single-paragraph-analysis` (WT3). Then confirm before starting.
 
 If the request is ambiguous, ask the student to choose from the menu rather than guessing.
 

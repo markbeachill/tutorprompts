@@ -2,17 +2,17 @@
 ---
 id: concept-clarity-checker
 tool_code: AT5
-master_number: 16
+master_number: 19
 title: Concept Clarity Checker
 type: tool
-menu_number: 16
+menu_number: 19
 run_policy: selected_only
 input_required:
   - student writing
 output_style: key concept table
 ---
 
-# AT5 — Concept Clarity Checker v4.1
+# AT5 — Concept Clarity Checker v4.2
 ## Purpose
 
 Identify key concepts in the writing and check whether they are defined, used consistently and connected to the argument.
@@ -24,7 +24,7 @@ Do not write definitions for the student unless asked. Give guidance on what nee
 Ask only:
 
 ```markdown
-# AT5 — Concept Clarity Checker v4.1
+# AT5 — Concept Clarity Checker v4.2
 Please paste or upload the paragraph or section you want checked.
 ```
 

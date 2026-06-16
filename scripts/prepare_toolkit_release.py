@@ -77,9 +77,10 @@ def simple_yaml_load(path: Path) -> dict[str, str]:
 
 def write_release_yml(values: ReleaseValues, dry_run: bool, changed: list[Path]) -> None:
     text = (
-        "# Package Generator v1.3 release metadata source.\n"
-        "# This file is intentionally simple key: value YAML so it can be read without\n"
-        "# third-party Python packages.\n\n"
+        "# Package Generator release metadata source.\n"
+        "# Public releases use one release_version for the site, prompt libraries, source material and audit/testing pack.\n"
+        "# The legacy *_version keys are retained as aliases for existing scripts and generated text, but must match release_version.\n\n"
+        f"release_version: {values.release_version}\n"
         f"toolkit_version: {values.toolkit_version}\n"
         f"prompt_library_version: {values.prompt_library_version}\n"
         f"testing_pack_version: {values.testing_pack_version}\n"

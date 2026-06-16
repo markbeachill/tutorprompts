@@ -1,15 +1,15 @@
 {
   "generated_by": "ai-personal-tutor-package-generator-v1.6",
-  "release_version": "4.1",
-  "toolkit_version": "4.1",
-  "prompt_library_version": "4.1",
-  "testing_pack_version": "4.1",
-  "release_date": "2026-06-13",
+  "release_version": "4.2",
+  "toolkit_version": "4.2",
+  "prompt_library_version": "4.2",
+  "testing_pack_version": "4.2",
+  "release_date": "2026-06-16",
   "source": "src/release.yml",
-  "pack_count": 36,
+  "pack_count": 39,
   "core_pack_count": 6,
   "custom_pack_count": 1,
-  "single_tool_pack_count": 29,
+  "single_tool_pack_count": 32,
   "packs": [
     {
       "id": "academic-thinking",
@@ -17,7 +17,7 @@
       "kind": "core",
       "source": "src/prompt-library/packs/academic-thinking.yml",
       "latest_output": "docs/prompt-libraries/latest/03_academic_thinking_tutor_library.md",
-      "archive_output": "docs/prompt-libraries/v4.1/03_academic_thinking_tutor_library_v4_1.md",
+      "archive_output": "docs/prompt-libraries/v4.2/03_academic_thinking_tutor_library_v4_2.md",
       "tool_count": 10,
       "tool_codes": [
         "AT1",
@@ -50,8 +50,8 @@
       "kind": "core",
       "source": "src/prompt-library/packs/master.yml",
       "latest_output": "docs/prompt-libraries/latest/ai_personal_tutor_master_library.md",
-      "archive_output": "docs/prompt-libraries/v4.1/ai_personal_tutor_master_library_v4_1.md",
-      "tool_count": 29,
+      "archive_output": "docs/prompt-libraries/v4.2/ai_personal_tutor_master_library_v4_2.md",
+      "tool_count": 32,
       "tool_codes": [
         "WT1",
         "WT2",
@@ -60,6 +60,9 @@
         "WT5",
         "WT6",
         "WT7",
+        "WT8",
+        "WT9",
+        "WT10",
         "ST1",
         "ST2",
         "ST3",
@@ -84,6 +87,7 @@
         "SW3"
       ],
       "tool_ids": [
+        "which-writing-tool",
         "clarity-clinic",
         "single-paragraph-analysis",
         "find-mistakes",
@@ -91,6 +95,8 @@
         "style-clarity-review",
         "referencing-helper",
         "paraphrase-quotation-workshop",
+        "flow-and-coherence",
+        "learn-subjects",
         "paragraph-structure-review",
         "whole-work-structure-review",
         "expert-meaning-review",
@@ -121,7 +127,7 @@
       "kind": "core",
       "source": "src/prompt-library/packs/research-proposal.yml",
       "latest_output": "docs/prompt-libraries/latest/04_research_proposal_tutor_library.md",
-      "archive_output": "docs/prompt-libraries/v4.1/04_research_proposal_tutor_library_v4_1.md",
+      "archive_output": "docs/prompt-libraries/v4.2/04_research_proposal_tutor_library_v4_2.md",
       "tool_count": 5,
       "tool_codes": [
         "RP1",
@@ -144,7 +150,7 @@
       "kind": "core",
       "source": "src/prompt-library/packs/structure-tutor.yml",
       "latest_output": "docs/prompt-libraries/latest/02_structure_tutor_library.md",
-      "archive_output": "docs/prompt-libraries/v4.1/02_structure_tutor_library_v4_1.md",
+      "archive_output": "docs/prompt-libraries/v4.2/02_structure_tutor_library_v4_2.md",
       "tool_count": 4,
       "tool_codes": [
         "ST1",
@@ -165,7 +171,7 @@
       "kind": "core",
       "source": "src/prompt-library/packs/study-workflow.yml",
       "latest_output": "docs/prompt-libraries/latest/05_study_workflow_tutor_library.md",
-      "archive_output": "docs/prompt-libraries/v4.1/05_study_workflow_tutor_library_v4_1.md",
+      "archive_output": "docs/prompt-libraries/v4.2/05_study_workflow_tutor_library_v4_2.md",
       "tool_count": 3,
       "tool_codes": [
         "SW1",
@@ -184,8 +190,8 @@
       "kind": "core",
       "source": "src/prompt-library/packs/writing-tutor.yml",
       "latest_output": "docs/prompt-libraries/latest/01_writing_tutor_library.md",
-      "archive_output": "docs/prompt-libraries/v4.1/01_writing_tutor_library_v4_1.md",
-      "tool_count": 7,
+      "archive_output": "docs/prompt-libraries/v4.2/01_writing_tutor_library_v4_2.md",
+      "tool_count": 10,
       "tool_codes": [
         "WT1",
         "WT2",
@@ -193,16 +199,22 @@
         "WT4",
         "WT5",
         "WT6",
-        "WT7"
+        "WT7",
+        "WT8",
+        "WT9",
+        "WT10"
       ],
       "tool_ids": [
+        "which-writing-tool",
         "clarity-clinic",
         "single-paragraph-analysis",
         "find-mistakes",
         "teach-mistake",
         "style-clarity-review",
         "referencing-helper",
-        "paraphrase-quotation-workshop"
+        "paraphrase-quotation-workshop",
+        "flow-and-coherence",
+        "learn-subjects"
       ]
     },
     {
@@ -214,8 +226,8 @@
       "archive_output": null,
       "tool_count": 4,
       "tool_codes": [
-        "WT1",
         "WT2",
+        "WT3",
         "ST1",
         "SW1"
       ],
@@ -228,93 +240,132 @@
     },
     {
       "id": "single-wt1",
-      "title": "WT1 — Clarity Clinic Single-Tool Pack",
+      "title": "WT1 — Which Writing Tool Should I Use? Single-Tool Pack",
       "kind": "single-tool",
-      "latest_output": "docs/prompt-libraries/single-tools/wt1_clarity_clinic.md",
+      "latest_output": "docs/prompt-libraries/single-tools/wt1_which_writing_tool_should_i_use.md",
       "tool_count": 1,
       "tool_codes": [
         "WT1"
+      ],
+      "tool_ids": [
+        "which-writing-tool"
+      ]
+    },
+    {
+      "id": "single-wt2",
+      "title": "WT2 — Clarity Clinic Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/wt2_clarity_clinic.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "WT2"
       ],
       "tool_ids": [
         "clarity-clinic"
       ]
     },
     {
-      "id": "single-wt2",
-      "title": "WT2 — Single Paragraph Analysis Single-Tool Pack",
+      "id": "single-wt3",
+      "title": "WT3 — Single Paragraph Analysis Single-Tool Pack",
       "kind": "single-tool",
-      "latest_output": "docs/prompt-libraries/single-tools/wt2_single_paragraph_analysis.md",
+      "latest_output": "docs/prompt-libraries/single-tools/wt3_single_paragraph_analysis.md",
       "tool_count": 1,
       "tool_codes": [
-        "WT2"
+        "WT3"
       ],
       "tool_ids": [
         "single-paragraph-analysis"
       ]
     },
     {
-      "id": "single-wt3",
-      "title": "WT3 — Find My Mistakes Single-Tool Pack",
+      "id": "single-wt4",
+      "title": "WT4 — Find My Mistakes Single-Tool Pack",
       "kind": "single-tool",
-      "latest_output": "docs/prompt-libraries/single-tools/wt3_find_my_mistakes.md",
+      "latest_output": "docs/prompt-libraries/single-tools/wt4_find_my_mistakes.md",
       "tool_count": 1,
       "tool_codes": [
-        "WT3"
+        "WT4"
       ],
       "tool_ids": [
         "find-mistakes"
       ]
     },
     {
-      "id": "single-wt4",
-      "title": "WT4 — Teach Me This Mistake Single-Tool Pack",
+      "id": "single-wt5",
+      "title": "WT5 — Teach Me This Mistake Single-Tool Pack",
       "kind": "single-tool",
-      "latest_output": "docs/prompt-libraries/single-tools/wt4_teach_me_this_mistake.md",
+      "latest_output": "docs/prompt-libraries/single-tools/wt5_teach_me_this_mistake.md",
       "tool_count": 1,
       "tool_codes": [
-        "WT4"
+        "WT5"
       ],
       "tool_ids": [
         "teach-mistake"
       ]
     },
     {
-      "id": "single-wt5",
-      "title": "WT5 — Style and Clarity Review Single-Tool Pack",
+      "id": "single-wt6",
+      "title": "WT6 — Style and Clarity Review Single-Tool Pack",
       "kind": "single-tool",
-      "latest_output": "docs/prompt-libraries/single-tools/wt5_style_and_clarity_review.md",
+      "latest_output": "docs/prompt-libraries/single-tools/wt6_style_and_clarity_review.md",
       "tool_count": 1,
       "tool_codes": [
-        "WT5"
+        "WT6"
       ],
       "tool_ids": [
         "style-clarity-review"
       ]
     },
     {
-      "id": "single-wt6",
-      "title": "WT6 — Referencing Helper Single-Tool Pack",
+      "id": "single-wt7",
+      "title": "WT7 — Referencing Helper Single-Tool Pack",
       "kind": "single-tool",
-      "latest_output": "docs/prompt-libraries/single-tools/wt6_referencing_helper.md",
+      "latest_output": "docs/prompt-libraries/single-tools/wt7_referencing_helper.md",
       "tool_count": 1,
       "tool_codes": [
-        "WT6"
+        "WT7"
       ],
       "tool_ids": [
         "referencing-helper"
       ]
     },
     {
-      "id": "single-wt7",
-      "title": "WT7 — Paraphrase and Quotation Workshop Single-Tool Pack",
+      "id": "single-wt8",
+      "title": "WT8 — Paraphrase and Quotation Workshop Single-Tool Pack",
       "kind": "single-tool",
-      "latest_output": "docs/prompt-libraries/single-tools/wt7_paraphrase_and_quotation_workshop.md",
+      "latest_output": "docs/prompt-libraries/single-tools/wt8_paraphrase_and_quotation_workshop.md",
       "tool_count": 1,
       "tool_codes": [
-        "WT7"
+        "WT8"
       ],
       "tool_ids": [
         "paraphrase-quotation-workshop"
+      ]
+    },
+    {
+      "id": "single-wt9",
+      "title": "WT9 — Flow and Coherence: The Running Subject Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/wt9_flow_and_coherence_the_running_subject.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "WT9"
+      ],
+      "tool_ids": [
+        "flow-and-coherence"
+      ]
+    },
+    {
+      "id": "single-wt10",
+      "title": "WT10 — Learn Subjects: Parsing Your Own Sentences Single-Tool Pack",
+      "kind": "single-tool",
+      "latest_output": "docs/prompt-libraries/single-tools/wt10_learn_subjects_parsing_your_own_sentences.md",
+      "tool_count": 1,
+      "tool_codes": [
+        "WT10"
+      ],
+      "tool_ids": [
+        "learn-subjects"
       ]
     },
     {

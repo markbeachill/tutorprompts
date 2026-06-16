@@ -2,17 +2,17 @@
 ---
 id: descriptive-analytical-check
 tool_code: AT3
-master_number: 14
+master_number: 17
 title: Descriptive vs Analytical Check
 type: tool
-menu_number: 14
+menu_number: 17
 run_policy: selected_only
 input_required:
   - student writing
 output_style: analysis balance review
 ---
 
-# AT3 — Descriptive vs Analytical Check v4.1
+# AT3 — Descriptive vs Analytical Check v4.2
 ## Purpose
 
 Check whether the student's writing is mostly descriptive or analytical, and show how to deepen analysis.
@@ -24,7 +24,7 @@ Do not rewrite the work.
 Ask only:
 
 ```markdown
-# AT3 — Descriptive vs Analytical Check v4.1
+# AT3 — Descriptive vs Analytical Check v4.2
 Please paste or upload the paragraph or section you want checked.
 ```
 

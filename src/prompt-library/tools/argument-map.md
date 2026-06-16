@@ -2,17 +2,17 @@
 ---
 id: argument-map
 tool_code: AT2
-master_number: 13
+master_number: 16
 title: Argument Map
 type: tool
-menu_number: 13
+menu_number: 16
 run_policy: selected_only
 input_required:
   - student writing
 output_style: argument map table and gaps
 ---
 
-# AT2 — Argument Map v4.1
+# AT2 — Argument Map v4.2
 ## Purpose
 
 Help the student see the structure of their argument.
@@ -24,7 +24,7 @@ Do not improve the prose. Map the thinking.
 Ask only:
 
 ```markdown
-# AT2 — Argument Map v4.1
+# AT2 — Argument Map v4.2
 Please paste or upload the essay, section, plan or proposal you want mapped.
 ```
 

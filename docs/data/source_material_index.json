@@ -34,14 +34,14 @@
       "download": "docs/source-material/latest/st4-reverse-outline-sample-draft.md"
     },
     {
-      "id": "wt7-paraphrase-quotation-practice",
-      "title": "WT7 paraphrase and quotation practice source",
-      "tool_code": "WT7",
+      "id": "wt8-paraphrase-quotation-practice",
+      "title": "WT8 paraphrase and quotation practice source",
+      "tool_code": "WT8",
       "tool_title": "Paraphrase and Quotation Workshop",
       "category": "Writing Tutor",
       "use_when": "Use when testing whether a student paraphrase is too close, accurately attributed and safely integrated.",
-      "source": "src/source-material/items/wt7-paraphrase-quotation-practice.md",
-      "download": "docs/source-material/latest/wt7-paraphrase-quotation-practice.md"
+      "source": "src/source-material/items/wt8-paraphrase-quotation-practice.md",
+      "download": "docs/source-material/latest/wt8-paraphrase-quotation-practice.md"
     }
   ]
 }

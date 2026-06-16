@@ -1,13 +1,14 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v4.1 / Prompt libraries v4.1 / Testing pack v4.1
+Toolkit release: Site v4.2 / Prompt libraries v4.2 / Testing pack v4.2
 
-This manifest describes the current public site package after the v4.1 WT7 source-use integration.
+This manifest describes the current public site package after the v4.2 Writing Tutor router, flow and subject-tool integration.
 
 ## Repository-level developer files
 
 - `README.md` — repository introduction and live site link
-- `PROMPTS.md` — developer guide to prompt-library locations, structure and customisation strategy
+- `BUILD_AND_GENERATOR_GUIDE.md` — consolidated library/page build workflow
+- `PACKAGE_GENERATOR_START_HERE.md` — quick entry point to the generator guide
 - `CUSTOMISING_PROMPTS.md` — interim guide for building smaller tailored libraries from the master library
 
 ## Publishing structure
@@ -17,16 +18,14 @@ The public GitHub Pages site is now contained in the `docs/` folder. GitHub Page
 ## Main site pages
 
 - `docs/index.html` — homepage
-- `docs/tools/index.html` — tools directory
-- `docs/tools/single-tools.html` — single-tool downloads directory
-- `docs/tools/writing-tutor.html` — Writing Tutor page
-- `docs/tools/structure-tutor.html` — Structure Tutor page
-- `docs/tools/academic-thinking.html` — Academic Thinking page
-- `docs/tools/research-proposal.html` — Research Proposal page
-- `docs/tools/study-workflow.html` — Study Workflow page
-- `docs/examples/index.html` — examples page
+- `docs/where-to-start/index.html` — expandable task-to-tool guide
+- `docs/try-it/index.html` — canonical page for preloaded ChatGPT/Gemini tutor links
+- `docs/tools/index.html` — collapsed table-based tools directory
+- `docs/examples/index.html` — examples index
 - `docs/student-help/index.html` — Student Help home
 - `docs/guides/index.html` — Guides home
+- `docs/download/index.html` — prompt-library and single-tool download page
+- `docs/source-material/index.html` — copy-ready source material library, surfaced through Guides
 - `docs/testing.html` — testing and audit page
 - `docs/about.html` — About this site
 - `docs/changelog/index.html` — public changelog
@@ -73,6 +72,7 @@ Versioned prompt-library archives are in:
 - `docs/prompt-libraries/v3.6/`
 - `docs/prompt-libraries/v4.0/`
 - `docs/prompt-libraries/v4.1/`
+- `docs/prompt-libraries/v4.2/`
 
 ## Testing/audit downloads
 
@@ -95,6 +95,19 @@ Versioned testing/audit archives are in:
 - `docs/audit-library/v3.5/`
 - `docs/audit-library/v4.0/`
 - `docs/audit-library/v4.1/`
+- `docs/audit-library/v4.2/`
+
+## Site v4.2 — Writing Tutor router, flow and subject tools
+
+- Site package updated to v4.2.
+- Prompt libraries updated to v4.2.
+- Testing/audit pack updated to v4.2.
+- Added WT1 — Which Writing Tool Should I Use? as a Writing Tutor routing helper.
+- Renumbered the Writing Tutor family so the menu starts cleanly at WT1 and runs through WT10.
+- Added WT9 — Flow and Coherence: The Running Subject.
+- Added WT10 — Learn Subjects: Parsing Your Own Sentences.
+- Updated the launcher/router, audit/testing pack, Tools page, Where to start? page, Examples index, Download page, Source material page, Testing page and Deployment check to match the v4.2 tool map.
+- Added a compatibility note in the changelog because v4.2 changes the WT numbers used in older screenshots or teaching notes.
 
 ## Site v4.1 — WT7 paraphrase and quotation workshop
 

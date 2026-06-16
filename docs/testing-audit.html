@@ -8,7 +8,7 @@
 <meta content="How to run a second-chat audit of a toolkit test record - the audit prompt, the menu codes, evidence rules, critical checks and the rating scale." name="description"/>
 <link href="style.css" rel="stylesheet"/>
 <style>
-/* Additions for testing/deployment pages (v4.0) */
+/* Additions for testing/deployment pages (v4.2) */
 button.button{cursor:pointer;font:inherit;font-weight:800}
 .copywrap{margin:14px 0}
 .copywrap pre{margin:10px 0 0;max-height:420px}
@@ -24,14 +24,14 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 <ol>
 <li>Open a <strong>new chat, separate from the test chat</strong> — ideally on a different model from the one tested, since same-family audits tend toward generosity.</li>
 <li>Upload or paste the current audit prompt: <a href="audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md">download the audit prompt file</a>. It is long by design, so it is a download rather than a copy box; the canonical, release-stamped copy in the pack is always the one to use.</li>
-<li>The audit prompt shows a menu of test codes (U1–U9, A1–A4, WT1–WT6, ST1–ST3, AT1–AT10, RP1–RP5, SW1–SW3, BR1–BR2). Choose the code matching your test.</li>
+<li>The audit prompt shows a menu of test codes (U1–U9, A1–A4, WT1–WT10, ST1–ST4, AT1–AT10, RP1–RP5, SW1–SW3, BR1–BR2). Choose the code matching your test.</li>
 <li>Paste the saved test record. The audit recognises collector records: it audits the Transcript section and reads the context from the Metadata table.</li>
 <li>Save the result as <code>[code]_audit_[date].md</code> and complete the test log.</li>
 </ol>
 </section><section>
 <h2 id="what-a-good-audit-looks-like">What a good audit looks like</h2>
 <p>The audit must support <strong>every judgement with a verbatim quotation</strong> from the record; a judgement it cannot quote evidence for is recorded as <strong>Not shown</strong>, not Pass. Treat an audit that paraphrases instead of quoting with suspicion — that is the signature of a generous audit.</p>
-<p>The audit applies different standards by tool type: interactive tutoring tools are judged on keeping the student active; full review tools (including WT2 from v4.0) are judged on giving a complete structured review without rewritten prose, and on switching to short interactive responses in follow-ups.</p>
+<p>The audit applies different standards by tool type: interactive tutoring tools are judged on keeping the student active; full review tools (including WT3 from v4.2) are judged on giving a complete structured review without rewritten prose, and on switching to short interactive responses in follow-ups.</p>
 <p>It also applies the <strong>★ critical-check rule</strong>: any failed ★ check from the test card caps the rating at MAJOR ISSUE, or CRITICAL ISSUE where the card says so.</p>
 </section><section>
 <h2 id="the-rating-scale">The rating scale</h2>

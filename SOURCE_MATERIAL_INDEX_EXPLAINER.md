@@ -53,14 +53,14 @@ Example structure:
 
 ```markdown
 ---
-id: wt7-paraphrase-quotation-practice
-title: WT7 paraphrase and quotation practice source
-tool_code: WT7
+id: wt8-paraphrase-quotation-practice
+title: WT8 paraphrase and quotation practice source
+tool_code: WT8
 tool_title: Paraphrase and Quotation Workshop
 category: Writing Tutor
 use_when: Use when testing whether a student paraphrase is too close, accurately attributed and safely integrated.
 ---
-# WT7 paraphrase and quotation practice source
+# WT8 paraphrase and quotation practice source
 
 ## Source extract
 
@@ -97,7 +97,7 @@ A stable machine-readable identifier. Use lowercase words separated by hyphens.
 Good:
 
 ```text
-wt7-paraphrase-quotation-practice
+wt8-paraphrase-quotation-practice
 st4-reverse-outline-sample-draft
 ```
 
@@ -274,7 +274,7 @@ At the time this explainer was added, the source material library includes examp
 AT8 — Source Reliability Checker
 ST2 — Whole-Work Structure Review
 ST4 — Reverse Outline Mapper
-WT7 — Paraphrase and Quotation Workshop
+WT8 — Paraphrase and Quotation Workshop
 ```
 
 More can be added by creating additional Markdown files in `src/source-material/items/`.

@@ -8,7 +8,7 @@
 <meta content="The output collector - an end-of-session prompt that turns a toolkit test chat into a single saved test record for audit and review." name="description"/>
 <link href="style.css" rel="stylesheet"/>
 <style>
-/* Additions for testing/deployment pages (v4.0) */
+/* Additions for testing/deployment pages (v4.2) */
 button.button{cursor:pointer;font:inherit;font-weight:800}
 .copywrap{margin:14px 0}
 .copywrap pre{margin:10px 0 0;max-height:420px}
@@ -26,7 +26,7 @@ button.button{cursor:pointer;font:inherit;font-weight:800}
 <ol>
 <li>Run the test as normal: upload the library, <code>prompt</code>, choose the tool, paste the inputs and follow-ups.</li>
 <li>Only when the final test turn is complete, paste the collector prompt below into the <strong>same chat</strong>. You can add your name and plan in the same message, for example: <code>Tester: MB. Plan: free.</code></li>
-<li>Save the record it produces as <code>[code]_test_output_[date].md</code> — for example <code>wt1_clarity_clinic_test_output_[date].md</code>.</li>
+<li>Save the record it produces as <code>[code]_test_output_[date].md</code> — for example <code>wt2_clarity_clinic_test_output_[date].md</code>.</li>
 <li><strong>Spot-check:</strong> compare at least one AI response in the record against the live chat. For A-series and release-gating tests, compare every turn or capture manually. If the record and the chat disagree, the test is NOT TESTABLE — re-run with manual capture.</li>
 <li>Never paste the collector before or during the test turns: it would change the behaviour being tested.</li>
 </ol>

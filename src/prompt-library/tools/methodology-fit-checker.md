@@ -2,10 +2,10 @@
 ---
 id: methodology-fit-checker
 tool_code: RP2
-master_number: 23
+master_number: 26
 title: Methodology Fit Checker
 type: tool
-menu_number: 23
+menu_number: 26
 run_policy: selected_only
 input_required:
   - research question or aim
@@ -14,7 +14,7 @@ input_required:
 output_style: methodology fit review
 ---
 
-# RP2 — Methodology Fit Checker v4.1
+# RP2 — Methodology Fit Checker v4.2
 ## Purpose
 
 Check whether the proposed method fits the research question, aim, objectives, data and feasibility of the project.

@@ -4,15 +4,15 @@ id: research-question-checker
 tool_code: RP1
 title: Research Question, Aim and Objectives Checker
 type: tool
-menu_number: 22
-master_number: 22
+menu_number: 25
+master_number: 25
 run_policy: selected_only
 input_required:
   - research question, aim and objectives
 output_style: research alignment review
 ---
 
-# RP1 — Research Question, Aim and Objectives Checker v4.1
+# RP1 — Research Question, Aim and Objectives Checker v4.2
 ## Purpose
 
 Review a research question, aim and objectives to check whether they are clear, focused, researchable and aligned.
@@ -31,7 +31,7 @@ If you suggest a different key term, research focus or concept, explain how it m
 Ask only:
 
 ```markdown
-# RP1 — Research Question, Aim and Objectives Checker v4.1
+# RP1 — Research Question, Aim and Objectives Checker v4.2
 Please paste or upload your research question, aim and objectives. If you only have a topic, include that instead.
 Tell me the level and approximate word count if you know them, because what counts as a researchable question depends on the size of the project.
 ```

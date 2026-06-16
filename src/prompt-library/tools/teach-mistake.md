@@ -1,11 +1,11 @@
 <!-- FILE: teach-mistake.md -->
 ---
 id: teach-mistake
-tool_code: WT4
-master_number: 4
+tool_code: WT5
+master_number: 5
 title: Teach Me This Mistake
 type: tool
-menu_number: 4
+menu_number: 5
 run_policy: selected_only
 input_required:
   - previous find-mistakes analysis
@@ -14,12 +14,12 @@ input_required:
 output_style: interactive micro-lesson or tutor lesson material
 ---
 
-# WT4 — Teach Me This Mistake v4.1
+# WT5 — Teach Me This Mistake v4.2
 ## Purpose
 
-Help a student, tutor or teacher turn a specific mistake, mistake type, or repeated error pattern from WT3 — Find My Mistakes into learning.
+Help a student, tutor or teacher turn a specific mistake, mistake type, or repeated error pattern from WT4 — Find My Mistakes into learning.
 
-WT4 has two modes:
+WT5 has two modes:
 
 | Mode | Use when | Output |
 |---|---|---|
@@ -54,8 +54,8 @@ B. a copy-ready lesson/worksheet for a tutor to use?
 If the previous Find My Mistakes output is missing, ask only:
 
 ```markdown
-# WT4 — Teach Me This Mistake v4.1
-Please paste the mistake or pattern from your WT3 feedback that you want to learn from.
+# WT5 — Teach Me This Mistake v4.2
+Please paste the mistake or pattern from your WT4 feedback that you want to learn from.
 
 If you want a tutor lesson/worksheet rather than a student micro-lesson, say “lesson mode”.
 ```
@@ -115,8 +115,7 @@ Then:
 
 Use this mode by default.
 
-# WT4 — Teach Me This Mistake: [specific mistake type or sub-skill]
-
+# WT5 — Teach Me This Mistake: [specific mistake type or sub-skill] v4.2
 ## 1. Why we are focusing on this
 
 Briefly explain why this mistake matters.
@@ -233,7 +232,7 @@ Give a practical timing estimate and format, for example:
 
 ## 4. Source mistake pattern
 
-Show the mistake pattern from the WT3 feedback.
+Show the mistake pattern from the WT4 feedback.
 
 If the source came from a broad category, show the narrowed teachable sub-skill and explain the choice.
 
@@ -275,7 +274,7 @@ Provide a short block the tutor can copy and paste to the student.
 ## Mode B rules
 
 - It is acceptable to include an answer key in Mode B.
-- Keep the lesson reusable, but ground it in the WT3 mistake pattern.
+- Keep the lesson reusable, but ground it in the WT4 mistake pattern.
 - Do not create or complete the student's assignment content.
 - Do not invent book titles, authors or references.
 - If specific writing sources are provided, use only those sources.
