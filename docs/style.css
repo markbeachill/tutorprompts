@@ -856,10 +856,93 @@ body.home #downloads {
   font-size: 0.94rem;
 }
 
+
+
+/* Site design pass: full-width home panels and calmer generated page layouts. */
+body.home .panel,
+body.home .panel:not(#downloads),
+body.home .panel.notice {
+  max-width: 100%;
+}
+body.home #try-it-home {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 20px;
+}
+body.home #try-it-home h2 { margin-bottom: 0; }
+body.home #try-it-home .btn-row { margin: 0; }
+body.reference.tools-catalogue .reading > section.accordion-list,
+body.reference.start-page .reading > section.accordion-list {
+  max-width: 100%;
+}
+body.reference.tools-catalogue .page-intro,
+body.reference.start-page .page-intro,
+body.reference.download-page .page-intro,
+body.reference.try-it-page .page-intro {
+  max-width: 100%;
+}
+body.reference.tools-catalogue .page-intro > *,
+body.reference.start-page .page-intro > *,
+body.reference.download-page .page-intro > *,
+body.reference.try-it-page .page-intro > * {
+  max-width: min(900px, 100%);
+}
+body.reference.tools-catalogue .page-intro .small-note {
+  max-width: 100%;
+}
+
+table.tools-catalog-table,
+table.start-table {
+  table-layout: fixed;
+}
+table.tools-catalog-table {
+  min-width: 1120px;
+}
+table.tools-catalog-table .col-code { width: 5.25rem; }
+table.tools-catalog-table .col-tool { width: 18rem; }
+table.tools-catalog-table .col-links { width: 19rem; }
+table.tools-catalog-table .col-use { width: auto; }
+table.start-table {
+  min-width: 980px;
+}
+table.start-table .col-recommended { width: 31%; }
+table.start-table .col-links { width: 17rem; }
+table.start-table .col-why { width: auto; }
+table.tool-table td,
+table.tool-table th {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+table.tool-table td:nth-child(2),
+table.tool-table td:nth-child(3) {
+  overflow-wrap: anywhere;
+}
+.links-col .compact-links {
+  min-width: max-content;
+}
+
+.try-it-options-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.try-it-page .try-it-option p:last-child { margin-bottom: 0; }
+.download-page .download-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.download-page .download-card {
+  border-top: 5px solid var(--accent);
+}
+.download-page .download-card:nth-child(3n+2) { border-top-color: var(--accent2); }
+.download-page .download-card:nth-child(3n) { border-top-color: #8a5a13; }
+.download-page .download-libraries {
+  padding-top: 20px;
+}
 @media (max-width: 860px) {
-  .tool-grid, .try-it-options { grid-template-columns: 1fr; }
-  table.tool-table { min-width: 700px; }
-  table.tools-catalog-table { min-width: 980px; }
+  .tool-grid, .try-it-options, .try-it-options-three, .download-page .download-grid { grid-template-columns: 1fr; }
+  table.tool-table { min-width: 780px; }
+  table.tools-catalog-table { min-width: 1120px; }
+  table.start-table { min-width: 980px; }
   .tool-section > summary { padding: 16px; }
 }
 

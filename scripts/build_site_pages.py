@@ -316,10 +316,93 @@ body.home #downloads {
   font-size: 0.94rem;
 }
 
+
+
+/* Site design pass: full-width home panels and calmer generated page layouts. */
+body.home .panel,
+body.home .panel:not(#downloads),
+body.home .panel.notice {
+  max-width: 100%;
+}
+body.home #try-it-home {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 20px;
+}
+body.home #try-it-home h2 { margin-bottom: 0; }
+body.home #try-it-home .btn-row { margin: 0; }
+body.reference.tools-catalogue .reading > section.accordion-list,
+body.reference.start-page .reading > section.accordion-list {
+  max-width: 100%;
+}
+body.reference.tools-catalogue .page-intro,
+body.reference.start-page .page-intro,
+body.reference.download-page .page-intro,
+body.reference.try-it-page .page-intro {
+  max-width: 100%;
+}
+body.reference.tools-catalogue .page-intro > *,
+body.reference.start-page .page-intro > *,
+body.reference.download-page .page-intro > *,
+body.reference.try-it-page .page-intro > * {
+  max-width: min(900px, 100%);
+}
+body.reference.tools-catalogue .page-intro .small-note {
+  max-width: 100%;
+}
+
+table.tools-catalog-table,
+table.start-table {
+  table-layout: fixed;
+}
+table.tools-catalog-table {
+  min-width: 1120px;
+}
+table.tools-catalog-table .col-code { width: 5.25rem; }
+table.tools-catalog-table .col-tool { width: 18rem; }
+table.tools-catalog-table .col-links { width: 19rem; }
+table.tools-catalog-table .col-use { width: auto; }
+table.start-table {
+  min-width: 980px;
+}
+table.start-table .col-recommended { width: 31%; }
+table.start-table .col-links { width: 17rem; }
+table.start-table .col-why { width: auto; }
+table.tool-table td,
+table.tool-table th {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+table.tool-table td:nth-child(2),
+table.tool-table td:nth-child(3) {
+  overflow-wrap: anywhere;
+}
+.links-col .compact-links {
+  min-width: max-content;
+}
+
+.try-it-options-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.try-it-page .try-it-option p:last-child { margin-bottom: 0; }
+.download-page .download-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.download-page .download-card {
+  border-top: 5px solid var(--accent);
+}
+.download-page .download-card:nth-child(3n+2) { border-top-color: var(--accent2); }
+.download-page .download-card:nth-child(3n) { border-top-color: #8a5a13; }
+.download-page .download-libraries {
+  padding-top: 20px;
+}
 @media (max-width: 860px) {
-  .tool-grid, .try-it-options { grid-template-columns: 1fr; }
-  table.tool-table { min-width: 700px; }
-  table.tools-catalog-table { min-width: 980px; }
+  .tool-grid, .try-it-options, .try-it-options-three, .download-page .download-grid { grid-template-columns: 1fr; }
+  table.tool-table { min-width: 780px; }
+  table.tools-catalog-table { min-width: 1120px; }
+  table.start-table { min-width: 980px; }
   .tool-section > summary { padding: 16px; }
 }
 '''
@@ -457,6 +540,8 @@ def tool_table(tools: Sequence[dict[str, object]], *, prefix: str = "../", inclu
     if include_code:
         head = "<tr><th>Code</th><th>Tool</th><th>Use this when…</th><th>Links</th></tr>"
         body = tool_table_rows(tools, prefix=prefix)
+        table_class = "tool-table tools-catalog-table"
+        colgroup = '<colgroup><col class="col-code"><col class="col-tool"><col class="col-use"><col class="col-links"></colgroup>'
     else:
         rows: list[str] = []
         for tool in tools:
@@ -472,8 +557,9 @@ def tool_table(tools: Sequence[dict[str, object]], *, prefix: str = "../", inclu
             )
         head = "<tr><th>Recommended tool</th><th>Why this tool</th><th>Links</th></tr>"
         body = "\n".join(rows)
-    table_class = "tool-table tools-catalog-table" if include_code else "tool-table"
-    return f'<div class="tool-table-wrap"><table class="{table_class}"><thead>{head}</thead><tbody>\n{body}\n</tbody></table></div>'
+        table_class = "tool-table start-table"
+        colgroup = '<colgroup><col class="col-recommended"><col class="col-why"><col class="col-links"></colgroup>'
+    return f'<div class="tool-table-wrap"><table class="{table_class}">{colgroup}<thead>{head}</thead><tbody>\n{body}\n</tbody></table></div>'
 
 
 def tool_card(tool: dict[str, object], *, prefix: str = "../", include_anchor: bool = True) -> str:
@@ -511,15 +597,14 @@ def build_try_it_page(version: str) -> str:
 <main><article class="reading"><header class="page-intro">
 <p class="kicker">Try It</p>
 <h1>Try a preloaded tutor.</h1>
-<p class="lead">These links open versions of the tutor that already have the master library preloaded in the platform knowledge area, so you can try the toolkit without copying the full prompt library manually.</p>
-<p class="small-note">Current website release: <strong>v{html.escape(version)}</strong>. Hosted platform versions may need manual updating after a new toolkit release.</p>
+<p class="lead">Open a preloaded tutor, or download the library files to use them yourself.</p>
+<p class="small-note">Current website release: <strong>v{html.escape(version)}</strong>. Do not paste private or identifiable student work into external AI platforms unless you have permission and your institution allows it.</p>
 </header>
-<section class="panel notice"><span class="tag">Privacy reminder</span><h2>Use external AI platforms carefully.</h2><p>These links open external AI platforms. Do not paste private, sensitive or identifiable student work unless you have permission and your institution allows it.</p><p>For ordinary extracts of your own work, use the feedback to revise the work yourself and follow your course rules on AI use.</p></section>
-<section class="try-it-options">
-<article class="try-it-option"><span class="tag">ChatGPT</span><h2>AI Tutor Custom GPT</h2><p>Open the preloaded AI Tutor in ChatGPT.</p><p class="external-note">Requires access to ChatGPT and any relevant platform account features.</p><p><a class="button" href="{html.escape(chatgpt_url, quote=True)}" rel="noopener noreferrer" target="_blank">Try in ChatGPT</a></p></article>
-<article class="try-it-option"><span class="tag">Gemini</span><h2>AI Tutor Gemini Gem</h2><p>Open the preloaded AI Tutor Gem in Gemini.</p><p class="external-note">Requires access to Gemini and any relevant platform account features.</p><p><a class="button" href="{html.escape(gemini_url, quote=True)}" rel="noopener noreferrer" target="_blank">Try in Gemini</a></p></article>
+<section class="try-it-options try-it-options-three wide">
+<article class="try-it-option"><span class="tag">ChatGPT</span><h2>Custom GPT</h2><p>Open the preloaded AI Tutor in ChatGPT.</p><p><a class="button" href="{html.escape(chatgpt_url, quote=True)}" rel="noopener noreferrer" target="_blank">Try in ChatGPT</a></p></article>
+<article class="try-it-option"><span class="tag">Gemini</span><h2>Gemini Gem</h2><p>Open the preloaded AI Tutor Gem in Gemini.</p><p><a class="button" href="{html.escape(gemini_url, quote=True)}" rel="noopener noreferrer" target="_blank">Try in Gemini</a></p></article>
+<article class="try-it-option"><span class="tag">Download</span><h2>Use the files yourself</h2><p>Download the Markdown prompt libraries for inspection, adaptation or local use.</p><p><a class="button secondary" href="../download/">Go to Download</a></p></article>
 </section>
-<section class="panel"><h2>Prefer to download the library yourself?</h2><p>The hosted tutors are a convenient way to try the toolkit. For inspection, local adaptation or long-term use, download the Markdown prompt libraries from the Download page.</p><p><a class="button secondary" href="../download/">Go to Download</a></p></section>
 </article></main>
 {footer_html("../")}
 </body>
@@ -553,10 +638,8 @@ def build_tools_page(tools: list[dict[str, object]], version: str) -> str:
 <main><article class="reading"><header class="page-intro">
 <p class="kicker">Tools</p>
 <h1>Browse the tool catalogue.</h1>
-<p class="lead">This page only lists tools. Expand a tutor section to see a compact table of tools in that group.</p>
 <p class="small-note">Current release version: <strong>v{html.escape(version)}</strong>.</p>
 </header>
-<section class="panel"><p>Not sure which tool you need? Start with <a href="../where-to-start/">Where to start?</a>. To download whole libraries rather than single tools, use <a href="../download/">Download</a>.</p></section>
 <section class="accordion-list wide">
 {"".join(sections)}
 </section>
@@ -591,7 +674,7 @@ def build_where_to_start_page(tools: list[dict[str, object]]) -> str:
         if codes:
             content = table_for(codes)
         else:
-            content = '''<div class="tool-table-wrap"><table class="tool-table"><thead><tr><th>Situation</th><th>Recommended route</th><th>Links</th></tr></thead><tbody>
+            content = '''<div class="tool-table-wrap"><table class="tool-table start-table"><colgroup><col class="col-recommended"><col class="col-why"><col class="col-links"></colgroup><thead><tr><th>Situation</th><th>Recommended route</th><th>Links</th></tr></thead><tbody>
 <tr><td>You want to check whether a tutor behaves as a learning-support tool rather than an answer machine.</td><td>Use the testing, deployment-check and source-material guide pages.</td><td class="links-col"><div class="compact-links"><a class="compact-link" href="../testing.html">Testing</a><a class="compact-link" href="../guides/">Guides</a><a class="compact-link" href="../source-material/">Source material</a></div></td></tr>
 </tbody></table></div>'''
         sections.append(f'''<details class="tool-section" id="{slug}">
@@ -666,7 +749,7 @@ def build_download_page(tools: list[dict[str, object]], version: str) -> str:
 <p class="lead">Use a mini library for most student work. Use a single-tool file when upload limits are tight or you want one focused prompt.</p>
 <p class="small-note">Current release version: <strong>v{html.escape(version)}</strong>.</p>
 </header>
-<section class="panel wide"><h2>Complete and mini libraries</h2><div class="tool-grid">{"".join(lib_cards)}</div></section>
+<section class="panel wide download-libraries"><div class="tool-grid download-grid">{"".join(lib_cards)}</div></section>
 <section class="panel wide" id="individual-tools"><h2>Individual tool downloads</h2><p>Expand a section to download one tool file.</p><div class="accordion-list">{"".join(individual_sections)}</div></section>
 </article></main>
 {footer_html("../")}
@@ -750,7 +833,7 @@ def insert_try_it_home_callout(text: str) -> str:
         text,
         flags=re.S,
     )
-    callout = '''<section class="panel notice try-it-callout" id="try-it-home"><span class="tag">Try It</span><h2>Try a preloaded tutor</h2><p>You can try a preloaded version of the tutor in ChatGPT or Gemini without copying the full prompt library manually.</p><p class="small-note">These links open external AI platforms, so the same privacy and responsibility warnings still apply.</p><div class="btn-row"><a class="button" href="try-it/">Try the preloaded tutor</a></div></section>'''
+    callout = '''<section class="panel notice try-it-callout" id="try-it-home"><span class="tag">Try It</span><h2>Try a preloaded tutor</h2><div class="btn-row"><a class="button" href="try-it/">Try the preloaded tutor</a></div></section>'''
     marker = '<div class="container"><section class="panel" id="downloads">'
     if marker in text:
         return text.replace(marker, '<div class="container">' + callout + '<section class="panel" id="downloads">', 1)
@@ -791,6 +874,7 @@ def build_plan(root: Path = ROOT) -> list[WritePlan]:
             text = text.replace(old, new)
         text = re.sub(r"Current toolkit version:\s*<strong>Prompt libraries v[0-9]+(?:\.[0-9]+)*</strong>", f"Current toolkit version: <strong>Prompt libraries v{version}</strong>", text)
         text = insert_try_it_home_callout(text)
+        text = re.sub(r'<section class="panel"><h2>Help, guides and testing</h2>.*?</section>', '', text, flags=re.S)
         planned[home] = text
     css_path = docs / "style.css"
     if css_path.exists():
