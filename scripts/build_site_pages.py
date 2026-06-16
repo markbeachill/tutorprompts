@@ -166,7 +166,7 @@ table.tool-table {
   margin: 0;
   border-collapse: collapse;
   background: var(--panel);
-  table-layout: fixed;
+  table-layout: auto;
 }
 table.tool-table th,
 table.tool-table td {
@@ -185,17 +185,28 @@ table.tool-table .code-col {
   width: 5rem;
   white-space: nowrap;
 }
-table.tool-table th:nth-child(2),
-table.tool-table .tool-col {
-  width: 21%;
-}
-table.tool-table th:nth-child(3),
-table.tool-table td:nth-child(3) {
-  width: 50%;
-}
-table.tool-table th:nth-child(4),
 table.tool-table .links-col {
-  width: 21%;
+  min-width: 12rem;
+}
+table.tools-catalog-table {
+  min-width: 980px;
+}
+table.tools-catalog-table th:nth-child(1),
+table.tools-catalog-table .code-col {
+  width: 5rem;
+}
+table.tools-catalog-table th:nth-child(2),
+table.tools-catalog-table .tool-col {
+  width: 20%;
+}
+table.tools-catalog-table th:nth-child(3),
+table.tools-catalog-table td:nth-child(3) {
+  width: auto;
+}
+table.tools-catalog-table th:nth-child(4),
+table.tools-catalog-table .links-col {
+  width: 16.5rem;
+  min-width: 16.5rem;
 }
 .tool-code {
   color: var(--accent2);
@@ -218,6 +229,7 @@ a.compact-link {
   font-weight: 650;
   text-decoration: none;
   background: rgba(255,255,255,0.74);
+  white-space: nowrap;
 }
 .compact-link.download-tool {
   color: var(--accent);
@@ -307,6 +319,7 @@ body.home #downloads {
 @media (max-width: 860px) {
   .tool-grid, .try-it-options { grid-template-columns: 1fr; }
   table.tool-table { min-width: 700px; }
+  table.tools-catalog-table { min-width: 980px; }
   .tool-section > summary { padding: 16px; }
 }
 '''
@@ -459,7 +472,8 @@ def tool_table(tools: Sequence[dict[str, object]], *, prefix: str = "../", inclu
             )
         head = "<tr><th>Recommended tool</th><th>Why this tool</th><th>Links</th></tr>"
         body = "\n".join(rows)
-    return f'<div class="tool-table-wrap"><table class="tool-table"><thead>{head}</thead><tbody>\n{body}\n</tbody></table></div>'
+    table_class = "tool-table tools-catalog-table" if include_code else "tool-table"
+    return f'<div class="tool-table-wrap"><table class="{table_class}"><thead>{head}</thead><tbody>\n{body}\n</tbody></table></div>'
 
 
 def tool_card(tool: dict[str, object], *, prefix: str = "../", include_anchor: bool = True) -> str:
