@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Create an example | AI Personal Tutor Toolkit</title>
+<meta content="One-stop maintainer tool: run an example card, capture it with the collector, and convert it to an example chat snippet in your browser." name="description"/>
+<link href="../style.css" rel="stylesheet"/>
+<style>
+button.button{cursor:pointer;font:inherit;font-weight:800}
+.small-button{font-size:13px;padding:6px 10px}
+.copywrap{margin:10px 0}
+.copywrap textarea{width:100%;min-height:200px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;border:1px solid var(--line);border-radius:14px;padding:12px;background:#fff}
+.copywrap pre{margin:8px 0 0;max-height:320px;overflow:auto;border:1px solid var(--line);border-radius:14px;padding:12px;background:#fff}
+.excard{border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:14px 0;background:#fff}
+.excard h4{margin:0 0 6px}
+.excard-scenario{margin:0 0 6px}
+.excard-shows{margin:0 0 10px;font-size:14px;color:var(--muted,#555)}
+.meta{font-size:14px;color:var(--muted,#555);margin:8px 0}
+.warn{color:#9a3b00}
+details.cardlib > summary{cursor:pointer;font-weight:800;margin:6px 0}
+</style>
+</head>
+<body>
+<header><div class="container nav"><a class="brand" href="../index.html">AI Personal Tutor Toolkit<small>Structured writing support</small></a><nav><ul><li><a href="../index.html">Home</a></li><li><a href="../where-to-start/">Where to start?</a></li><li><a href="../try-it/">Try It</a></li><li><a href="../tools/">Tools</a></li><li><a href="../examples/">Examples</a></li><li><a href="../student-help/">Student Help</a></li><li><a href="../guides/">Guides</a></li><li><a href="../download/">Download</a></li></ul></nav></div></header>
+<main>
+<article class="reading"><header class="page-intro"><p class="kicker">Maintainer guide · Examples</p><h1>Create an example</h1><p class="lead">Run one example card in a tool, capture the session with the collector prompt, and convert it to an example chat snippet — all from this page. The conversion runs in your browser; nothing is sent anywhere.</p></header>
+
+<section>
+<h2 id="steps">The four steps</h2>
+<ol>
+<li><strong>Run a card.</strong> Open a fresh chat, upload the relevant library, type <code>prompt</code>, choose the tool, and paste the inputs from its example card below (in order, letting the tool respond each time). Pick a clean, representative run — examples are shop-window content.</li>
+<li><strong>Capture.</strong> When the session is complete, paste the collector prompt (below) as the final message. The AI produces a Markdown test record.</li>
+<li><strong>Convert.</strong> Paste that record into the converter below and select Convert. Copy the snippet it produces.</li>
+<li><strong>Place and build.</strong> Save the snippet as the filename shown, in <code>src/examples/</code>. Then run <code>python scripts/build_example_pages.py</code> and <code>python scripts/build_site_pages.py</code>.</li>
+</ol>
+<p class="meta"><strong>Spot-check.</strong> The record is produced by the same AI that was tested, so compare at least one turn of the snippet against the live chat before saving. Edit the <code>&lt;!-- lead: ... --&gt;</code> line in the snippet to set the example's intro sentence.</p>
+</section>
+
+<section>
+<h2 id="collector">1 · Collector prompt</h2>
+<p>Paste this as the final message of the session, after the last tool turn. It is the same canonical prompt used for audit records.</p>
+<div class="copywrap"><button class="button" onclick="copyBox('collectorprompt',this)">Copy collector prompt</button><pre id="collectorprompt"><code>Stop acting as the tutor toolkit. This is a maintainer instruction. The test session is finished; your only task now is to produce a test record of this conversation for audit purposes.
+
+Follow these rules exactly:
+
+1. Reproduce every turn of this conversation verbatim, in order, from the first message after the library was uploaded to the last response before this instruction. Include the `prompt` command, the menu, every student input and every toolkit response.
+2. Verbatim means verbatim. Do not correct, improve, shorten, summarise, reformat or omit anything — including your own mistakes, formatting choices, headings, tables and code blocks. The record is evidence, and flaws in the responses are exactly what the audit needs to see.
+3. Wrap each reproduced turn in a fenced block opened and closed with four backticks (````), so that any Markdown or code blocks inside the turn are preserved exactly as written.
+4. Do not add any commentary, evaluation, praise or criticism of the responses. Do not explain what the toolkit did well or badly.
+5. If the conversation is too long to reproduce completely, say so plainly at the top of the record, reproduce as much as you can starting from the beginning, and state exactly where the reproduction stops. Never truncate or compress silently.
+6. For metadata you cannot see (tester name, plan, testing-pack version, test code), use anything the tester has stated in this chat; otherwise write `[tester to complete]`. For your own model name, state what you know; if you are not certain, write `unknown — tester to confirm`. Take the library file name and version from the uploaded file.
+7. If your environment can create files, also offer the record as a downloadable Markdown file. If not, present it as one continuous block that can be copied in a single action.
+8. End by asking the tester to spot-check at least one turn of the record against the conversation before saving.
+
+Produce the record in exactly this structure:
+
+# Test record: [test code] — [tool or test name]
+
+## Metadata
+
+| Field | Value |
+|---|---|
+| Date |  |
+| Tester |  |
+| AI tool/model |  |
+| Plan/access level |  |
+| Prompt-library file and version |  |
+| Testing-pack version |  |
+| Test code |  |
+| Tool tested |  |
+| Number of turns reproduced |  |
+| Reproduction complete? | Yes / No — stopped at turn N |
+
+## Transcript
+
+### Turn 1 — Student
+````
+[verbatim student message]
+````
+
+### Turn 1 — Toolkit
+````
+[verbatim toolkit response]
+````
+
+(Continue numbering for every turn in the conversation.)
+
+## Collector declarations
+
+State in one or two sentences: whether the reproduction is complete; and that nothing has been corrected, improved or omitted. If either statement cannot honestly be made, say what is missing instead.
+
+## Tester notes (leave blank for the tester to complete)
+
+**Observations outside the transcript** (activation behaviour, anything unusual):
+
+**Spot-check done:** [which turn(s) compared against the chat, and result]
+
+**Forwarded to audit on:** [date]
+
+**END OF COLLECTOR PROMPT**</code></pre></div>
+</section>
+
+<section>
+<h2 id="cards">2 · Example cards</h2>
+<p>One clean scenario per tool. These are written for examples, not audits, so they avoid the adversarial decoys in the test cards. The full audit cards remain in the <a href="../testing-cards.html">test-cards</a> pack.</p>
+<h3>Writing Tutor</h3>
+<div class="excard">
+<h4>WT1 — Which Writing Tool Should I Use?</h4>
+<p class="excard-scenario">A student has a short paragraph and is unsure which writing tool fits.</p>
+<p class="excard-shows"><strong>Example shows:</strong> WT1 suggests at most two tools with reasons and the exact text to submit, without fixing the writing.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc2',this)">Copy input</button><pre id="exc2"><code>I have this paragraph and I am not sure which tool to use:
+
+Remote working changed how teams communicate. Email went up. Some managers felt they had less control. Productivity is hard to measure now.</code></pre></div>
+</div>
+<div class="excard">
+<h4>WT2 — Clarity Clinic</h4>
+<p class="excard-scenario">A student wants one vague sentence made clearer.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Clarity Clinic diagnoses the real clarity problem, teaches with a made-up before/after, and asks the student to attempt the rewrite.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc4',this)">Copy input</button><pre id="exc4"><code>Can you help me make this clearer?
+
+There are a number of elements that play a part in why the outcome ended up being what it was.</code></pre></div>
+</div>
+<div class="excard">
+<h4>WT3 — Single Paragraph Analysis</h4>
+<p class="excard-scenario">A student pastes one body paragraph to check it gets its point across.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Single Paragraph Analysis maps the chain of ideas, finds where it breaks, and sets a focused revision task.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc6',this)">Copy input</button><pre id="exc6"><code>Please check this paragraph:
+
+Electric cars are becoming popular. They are quiet and cheaper to run. Charging can be slow. The government offers grants. People worry about battery life on long trips.</code></pre></div>
+</div>
+<div class="excard">
+<h4>WT4 — Find My Mistakes</h4>
+<p class="excard-scenario">A student asks for surface mistakes in a couple of sentences.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Find My Mistakes lists concrete grammar, punctuation and word-choice issues and explains each briefly, without rewriting the work.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc8',this)">Copy input</button><pre id="exc8"><code>Can you find my mistakes?
+
+The results was suprising, it showed that most participants prefered the second option, however the sample were quite small so we cant be to confident.</code></pre></div>
+</div>
+<div class="excard">
+<h4>WT5 — Teach Me This Mistake</h4>
+<p class="excard-scenario">A student brings a recurring mistake from WT4 and wants to understand it.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Teach Me This Mistake runs a short interactive micro-lesson on one pattern and checks understanding.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc10',this)">Copy input 1</button><pre id="exc10"><code>WT4 said I keep using a comma to join two full sentences. Can you teach me this one so I stop doing it?</code></pre></div>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc11',this)">Copy input 2</button><pre id="exc11"><code>So I should use a full stop or a semicolon between them?</code></pre></div>
+</div>
+<div class="excard">
+<h4>WT6 — Style and Clarity Review</h4>
+<p class="excard-scenario">A student wants tone and readability improved without the content being rewritten.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Style and Clarity Review names the move to make and shows the principle, rather than supplying a finished rewrite.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc13',this)">Copy input</button><pre id="exc13"><code>Can you improve the style of this?
+
+Due to the fact that the experiment was conducted in a manner that was not entirely consistent, it is possible to say that the results may potentially be considered somewhat unreliable.</code></pre></div>
+</div>
+<div class="excard">
+<h4>WT7 — Referencing Helper</h4>
+<p class="excard-scenario">A student needs a Harvard reference checked and built from details.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Referencing Helper checks the format carefully and asks for any missing details rather than inventing them.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc15',this)">Copy input 1</button><pre id="exc15"><code>Is this Harvard reference correct?
+
+Smith, J. (2020) The Future of Work. London, Routledge.</code></pre></div>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc16',this)">Copy input 2</button><pre id="exc16"><code>It was the second edition if that matters.</code></pre></div>
+</div>
+<div class="excard">
+<h4>WT8 — Paraphrase and Quotation Workshop</h4>
+<p class="excard-scenario">A student checks whether their paraphrase of a source is safe.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Paraphrase and Quotation Workshop diagnoses too-close wording as an integrity risk and sets a task that produces new wording, without writing the paraphrase.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc18',this)">Copy input</button><pre id="exc18"><code>Please check whether this is a safe paraphrase.
+
+Source: “Regular short breaks during study improve focus and reduce fatigue more than a single long break.”
+
+My attempt: Taking regular short breaks while studying improves focus and reduces tiredness more than one long break (Lee, 2021).</code></pre></div>
+</div>
+<div class="excard">
+<h4>WT9 — Flow and Coherence: The Running Subject</h4>
+<p class="excard-scenario">A student wants to know why a paragraph feels disconnected.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Flow and Coherence lists the grammatical subject of each sentence and comments on the hand-offs, asking the student to repair the weak join.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc20',this)">Copy input</button><pre id="exc20"><code>Why does this paragraph not flow well?
+
+The museum reopened after a long refurbishment. Visitor numbers were recorded carefully by staff. A new digital ticketing system was introduced. This system reduced queues at the entrance considerably.</code></pre></div>
+</div>
+<div class="excard">
+<h4>WT10 — Learn Subjects: Parsing Your Own Sentences</h4>
+<p class="excard-scenario">A student wants to practise finding subjects and verbs in their own sentences.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Learn Subjects teaches the fixed verb-first method and asks the student to try it, correcting the topic-vs-subject confusion.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc22',this)">Copy input 1</button><pre id="exc22"><code>Can you teach me to find subjects and verbs using my sentences?
+
+The library extended its opening hours. The decision was praised by students. After the exams finished.</code></pre></div>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc23',this)">Copy input 2</button><pre id="exc23"><code>I think the subject of the second one is students.</code></pre></div>
+</div>
+<h3>Structure Tutor</h3>
+<div class="excard">
+<h4>ST1 — Paragraph Structure Review Across a Whole Draft</h4>
+<p class="excard-scenario">A student pastes three short paragraphs to check each works.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Paragraph Structure Review checks central-claim clarity before development and reports honestly, without inventing a pattern.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc25',this)">Copy input</button><pre id="exc25"><code>Please review these paragraphs:
+
+Paragraph 1: Recycling rates vary a lot between cities.
+
+Paragraph 2: Our town introduced food-waste collection. Households were given small bins. This created a problem. Participation was high in the first month. The scheme was featured in the local news.
+
+Paragraph 3: Education also matters. People recycle more when they understand what can be recycled.</code></pre></div>
+</div>
+<div class="excard">
+<h4>ST2 — Whole-Work Structure Review</h4>
+<p class="excard-scenario">A student lists the sections of a report in an odd order.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Whole-Work Structure Review maps the structure and asks the student to propose a better order before offering one.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc27',this)">Copy input 1</button><pre id="exc27"><code>Here are my sections:
+
+Conclusion: The policy should be expanded.
+
+Introduction: This report looks at the cycling subsidy.
+
+Findings: Uptake rose by 20 percent.
+
+Background: The subsidy began in 2023 to reduce car use.</code></pre></div>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc28',this)">Copy input 2</button><pre id="exc28"><code>I am stuck, can you show me an order?</code></pre></div>
+</div>
+<div class="excard">
+<h4>ST3 — Expert Meaning Review</h4>
+<p class="excard-scenario">A student has a sentence that overstates its case.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Expert Meaning Review challenges the overclaiming and weak logic, separating what it can judge from subject facts to verify.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc30',this)">Copy input</button><pre id="exc30"><code>Does this make sense as an argument?
+
+The trial proves that the new teaching method works for everyone and that traditional lectures should be abandoned completely.</code></pre></div>
+</div>
+<div class="excard">
+<h4>ST4 — Reverse Outline Mapper</h4>
+<p class="excard-scenario">A student pastes a short draft and wants its structure mapped.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Reverse Outline Mapper produces a one-line-per-paragraph map of what the draft currently does and flags a likely digression.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc32',this)">Copy input</button><pre id="exc32"><code>Can you map the structure of this draft?
+
+Para 1: This essay examines food delivery apps and small restaurants.
+
+Para 2: The apps charge high commission, which cuts restaurant profits.
+
+Para 3: Apps also bring new customers who would not have found the restaurant.
+
+Para 4: Some cities have beautiful historic high streets.
+
+Para 5: Overall the apps are a mixed blessing for small restaurants.</code></pre></div>
+</div>
+<h3>Academic Thinking Tutor</h3>
+<div class="excard">
+<h4>AT1 — Assignment Brief Checker</h4>
+<p class="excard-scenario">A student shares a brief, criteria, and a descriptive draft extract.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Assignment Brief Checker explains the task word, shows the extract describes rather than meets the task, and relates this to the criteria, without grading.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc34',this)">Copy input</button><pre id="exc34"><code>Brief: Compare two approaches to managing remote teams and recommend one.
+
+Marking criteria: 40% comparison; 30% evidence; 20% recommendation; 10% clarity.
+
+Draft extract: There are many ways to manage remote teams. Some managers use daily calls. Others use written updates. Remote work is common now.</code></pre></div>
+</div>
+<div class="excard">
+<h4>AT2 — Argument Map</h4>
+<p class="excard-scenario">A student pastes a short passage that does contain an argument.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Argument Map separates the main claim, supporting points, evidence and assumptions, and names any gaps.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc36',this)">Copy input</button><pre id="exc36"><code>Map the argument in this:
+
+Flexible hours improve productivity because employees work when they are most alert. A company trial found output rose after flexible hours were introduced. Therefore more firms should adopt flexible scheduling.</code></pre></div>
+</div>
+<div class="excard">
+<h4>AT3 — Descriptive vs Analytical Check</h4>
+<p class="excard-scenario">A student pastes a paragraph that is mostly description.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Descriptive vs Analytical Check shows the balance, treats some description as necessary, and shows how to add the analytical step.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc38',this)">Copy input</button><pre id="exc38"><code>Is this descriptive or analytical?
+
+The company launched a loyalty app in 2022. The app offered points for purchases. Many customers downloaded it. The points could be exchanged for discounts.</code></pre></div>
+</div>
+<div class="excard">
+<h4>AT4 — Evidence Gap Checker</h4>
+<p class="excard-scenario">A student makes two strong claims with no support.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Evidence Gap Checker flags the claims needing evidence, suggests what kind would help, and asks the student to decide what counts as common knowledge.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc40',this)">Copy input</button><pre id="exc40"><code>Check my claims for evidence gaps:
+
+Everyone now does their shopping online, which means physical shops will disappear within ten years.</code></pre></div>
+</div>
+<div class="excard">
+<h4>AT5 — Concept Clarity Checker</h4>
+<p class="excard-scenario">A student names several overlapping concepts without defining them.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Concept Clarity Checker asks for clearer definitions, distinguishes related terms, and flags an ambiguous word.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc42',this)">Copy input</button><pre id="exc42"><code>Are my key concepts clear?
+
+This study explores wellbeing, resilience, engagement and motivation at work, and shows that the effects on staff are significant.</code></pre></div>
+</div>
+<div class="excard">
+<h4>AT6 — Literature Use Checker</h4>
+<p class="excard-scenario">A student lists three sources one after another.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Literature Use Checker names source-by-source listing as the main issue and suggests organising by theme or disagreement.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc44',this)">Copy input</button><pre id="exc44"><code>Is my literature use okay?
+
+Brown (2018) writes about team motivation. Patel (2019) writes about remote communication. Olsen (2021) writes about employee wellbeing. These sources support my topic.</code></pre></div>
+</div>
+<div class="excard">
+<h4>AT7 — Counterargument and Limitations Checker</h4>
+<p class="excard-scenario">A student states a confident claim with no counterargument.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Counterargument and Limitations Checker surfaces objections and ways to qualify the claim, auditing the text rather than staging a debate.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc46',this)">Copy input</button><pre id="exc46"><code>What counterarguments should I consider?
+
+Four-day weeks are clearly better because one company tried it and staff were happier, so all employers should switch.</code></pre></div>
+</div>
+<div class="excard">
+<h4>AT8 — Source Reliability Checker</h4>
+<p class="excard-scenario">A student lists a mix of sources of differing reliability.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Source Reliability Checker classifies each cautiously and gives reusable checks the student can apply themselves.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc48',this)">Copy input</button><pre id="exc48"><code>Can you check the reliability of my sources?
+
+Sources: a company blog post, a peer-reviewed journal article from 2019, a Wikipedia article, and a national statistics agency report.</code></pre></div>
+</div>
+<div class="excard">
+<h4>AT9 — Critical Opponent Review</h4>
+<p class="excard-scenario">A student asks to be challenged from a chosen standpoint.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Critical Opponent Review adopts the standpoint, surfaces assumptions and tough questions, and does not rewrite the argument.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc50',this)">Copy input</button><pre id="exc50"><code>Use the practical-feasibility opponent. My argument: Every school should give each pupil a laptop because it improves digital skills and makes lessons more engaging.</code></pre></div>
+</div>
+<div class="excard">
+<h4>AT10 — Socratic Tutor</h4>
+<p class="excard-scenario">A student offers a tentative idea for Socratic questioning.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Socratic Tutor asks one focused question at a time, corrects a plain factual error briefly, and offers a checkpoint when answers repeat.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc52',this)">Copy input 1</button><pre id="exc52"><code>Ask me Socratic questions about this idea: Working from home may reduce a team&#x27;s sense of belonging.</code></pre></div>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc53',this)">Copy input 2</button><pre id="exc53"><code>I think it reduces belonging because people do not chat as much. Also remote work was invented during the 2020 pandemic.</code></pre></div>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc54',this)">Copy input 3</button><pre id="exc54"><code>Like I said, it is mainly because there is less chatting between people.</code></pre></div>
+</div>
+<h3>Research Proposal Tutor</h3>
+<div class="excard">
+<h4>RP1 — Research Question, Aim and Objectives Checker</h4>
+<p class="excard-scenario">A student has a broad topic with vague aims and objectives.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Research Question Checker identifies breadth and the missing question, and asks for the level and word count.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc56',this)">Copy input</button><pre id="exc56"><code>Topic: working from home. Aim: to study working from home and productivity and wellbeing and communication. Objectives: look at studies, talk about managers, explore productivity, discuss the future.</code></pre></div>
+</div>
+<div class="excard">
+<h4>RP2 — Methodology Fit Checker</h4>
+<p class="excard-scenario">A student&#x27;s method does not match their question.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Methodology Fit Checker spots the mismatch and names whether it is a design problem or a thin-description problem.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc58',this)">Copy input</button><pre id="exc58"><code>Research question: How do remote workers experience loneliness? Method: I will analyse ten company wellbeing policies using content analysis.</code></pre></div>
+</div>
+<div class="excard">
+<h4>RP3 — Critical Research Supervisor Review</h4>
+<p class="excard-scenario">A student brings an early, pre-supervision idea.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Critical Research Supervisor Review calibrates to the early stage: honest questions and grounded encouragement, not final-approval standards.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc60',this)">Copy input</button><pre id="exc60"><code>This is an early idea before my first supervision meeting. I am thinking of studying how remote work affects team belonging, maybe interviewing a few people. I have not settled the method yet.</code></pre></div>
+</div>
+<div class="excard">
+<h4>RP4 — Viva or Supervisor Practice</h4>
+<p class="excard-scenario">A student asks to be questioned like a supervisor and gives a vague answer.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Viva or Supervisor Practice asks one focused question, then probes the same point again when the answer is vague.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc62',this)">Copy input 1</button><pre id="exc62"><code>My proposal is about remote work and team belonging. Please question me like a supervisor.</code></pre></div>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc63',this)">Copy input 2</button><pre id="exc63"><code>It is about how working from home affects things in teams, really. There is a lot to it.</code></pre></div>
+</div>
+<div class="excard">
+<h4>RP5 — Guided Topic Brainstorming</h4>
+<p class="excard-scenario">A student names a broad area and wants help finding a topic.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Guided Topic Brainstorming asks clarifying questions, offers directions, and viability-tests the chosen idea before asking the student to draft the question.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc65',this)">Copy input 1</button><pre id="exc65"><code>I want to do a dissertation about online learning and student motivation.</code></pre></div>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc66',this)">Copy input 2</button><pre id="exc66"><code>I like the first idea best.</code></pre></div>
+</div>
+<h3>Study Workflow Tutor</h3>
+<div class="excard">
+<h4>SW1 — Revision Plan</h4>
+<p class="excard-scenario">A student has mixed feedback and a tight, stated time budget.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Revision Plan groups feedback into prioritised actions that fit the two evenings available.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc68',this)">Copy input</button><pre id="exc68"><code>Feedback: The argument is unclear. The evidence is thin. The structure jumps around. There are some referencing errors. It is a bit wordy.
+
+My deadline is Monday and I have two free evenings before then.</code></pre></div>
+</div>
+<div class="excard">
+<h4>SW2 — Tutor Feedback to Action Plan</h4>
+<p class="excard-scenario">A student received blunt tutor feedback.</p>
+<p class="excard-shows"><strong>Example shows:</strong> Tutor Feedback to Action Plan acknowledges the bluntness, separates tone from usable content, and avoids speculating about the marker.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc70',this)">Copy input</button><pre id="exc70"><code>Tutor feedback: “This is muddled and feels rushed. Not your best.”</code></pre></div>
+</div>
+<div class="excard">
+<h4>SW3 — AI-Use Record</h4>
+<p class="excard-scenario">A student is unsure what AI use to declare.</p>
+<p class="excard-shows"><strong>Example shows:</strong> AI-Use Record distinguishes the kinds of help, builds a transparent record, and will not help downplay or hide AI use.</p>
+<div class="copywrap"><button class="button small-button" onclick="copyBox('exc72',this)">Copy input</button><pre id="exc72"><code>I used AI to reorganise my structure and to check my grammar, then I rewrote parts myself. I am not sure what I need to declare.</code></pre></div>
+</div>
+</section>
+
+<section>
+<h2 id="convert">3 · Convert a record to a snippet</h2>
+<div class="copywrap">
+<label for="inputmd"><strong>Paste the collector record</strong></label>
+<textarea id="inputmd" placeholder="# Test record: WT2 — Clarity Clinic&#10;&#10;## Metadata&#10;...&#10;## Transcript&#10;### Turn 1 — Toolkit&#10;..."></textarea>
+</div>
+<div class="btn-row"><button class="button" id="convertbtn">Convert</button></div>
+<div id="status" class="meta"></div>
+<div class="copywrap">
+<label for="outputhtml"><strong>Snippet</strong> — save as <code id="filename">(convert to see filename)</code> in <code>src/examples/</code></label>
+<div class="btn-row"><button class="button" id="copybtn">Copy snippet</button></div>
+<pre id="outputhtml"><code></code></pre>
+</div>
+</section>
+</article>
+</main>
+<footer class="footer"><div class="container"><p>AI Personal Tutor Toolkit. Structured writing support for learning-focused AI use.</p><p class="footer-links"><a href="../changelog/">Changelog</a> | <a href="https://github.com/markbeachill/tutorprompts" rel="noopener noreferrer" target="_blank">GitHub</a> | <a href="../about.html">About this site</a></p></div></footer>
+<script>
+function copyBox(id, btn){
+  var el=document.getElementById(id);
+  var text=el ? el.textContent : '';
+  if(!text){return;}
+  navigator.clipboard.writeText(text).then(function(){
+    var t=btn.textContent; btn.textContent='Copied'; setTimeout(function(){btn.textContent=t;},1200);
+  });
+}
+</script>
+<script>
+/*
+ * collector-to-snippet.js
+ * Deterministic converter: AI Personal Tutor Toolkit output-collector record
+ * (Markdown) -> ai-chat-page example snippet (HTML).
+ *
+ * No dependencies. Works in the browser and under Node. This is the canonical
+ * source; the create-examples page (docs/create-examples/index.html) inlines a
+ * copy of this exact code, so the two never drift. If you edit this file, re-run
+ * scripts/build_create_examples_page.py to refresh the page.
+ *
+ * Input  : the full Markdown produced by the output collector prompt.
+ * Output : { code, title, turns, html, filename, warnings }
+ *   - html     : the chat-region snippet to save in src/examples/
+ *   - filename : suggested snippet filename, e.g. "wt2-example-chat.html"
+ *
+ * Markdown scope (what toolkit bubbles contain): headings, ordered/unordered
+ * lists, blockquotes, GitHub tables, fenced code, paragraphs, and inline
+ * **bold**, *italic*, `code`. Small and predictable, not a general engine.
+ */
+(function (root, factory) {
+  if (typeof module === "object" && module.exports) {
+    module.exports = factory();
+  } else {
+    root.CollectorToSnippet = factory();
+  }
+})(typeof self !== "undefined" ? self : this, function () {
+  "use strict";
+
+  function escapeHtml(s) {
+    return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  function renderInline(text) {
+    var codes = [];
+    text = text.replace(/`([^`]+)`/g, function (_, c) {
+      codes.push(c);
+      return "\u0000" + (codes.length - 1) + "\u0000";
+    });
+    text = escapeHtml(text);
+    text = text.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    text = text.replace(/(^|[^*])\*([^*]+)\*/g, "$1<em>$2</em>");
+    text = text.replace(/\u0000(\d+)\u0000/g, function (_, i) {
+      return "<code>" + escapeHtml(codes[+i]) + "</code>";
+    });
+    return text;
+  }
+
+  function isTableSeparator(line) {
+    return /^\s*\|?\s*:?-{1,}:?\s*(\|\s*:?-{1,}:?\s*)+\|?\s*$/.test(line);
+  }
+
+  function splitRow(line) {
+    var t = line.trim().replace(/^\|/, "").replace(/\|$/, "");
+    return t.split("|").map(function (c) {
+      return c.trim();
+    });
+  }
+
+  function renderMarkdown(md) {
+    var lines = md.replace(/\r\n/g, "\n").split("\n");
+    var out = [];
+    var i = 0;
+    function push(html) {
+      out.push(html);
+    }
+    while (i < lines.length) {
+      var line = lines[i];
+      if (/^\s*$/.test(line)) {
+        i++;
+        continue;
+      }
+      var fence = line.match(/^\s*(```|~~~)(.*)$/);
+      if (fence) {
+        var marker = fence[1];
+        var buf = [];
+        i++;
+        while (i < lines.length && lines[i].indexOf(marker) !== 0) {
+          buf.push(lines[i]);
+          i++;
+        }
+        i++;
+        push("<pre><code>" + escapeHtml(buf.join("\n")) + "</code></pre>");
+        continue;
+      }
+      var h = line.match(/^(#{1,6})\s+(.*)$/);
+      if (h) {
+        var level = h[1].length;
+        push("<h" + level + ">" + renderInline(h[2].trim()) + "</h" + level + ">");
+        i++;
+        continue;
+      }
+      if (line.indexOf("|") !== -1 && i + 1 < lines.length && isTableSeparator(lines[i + 1])) {
+        var header = splitRow(line);
+        i += 2;
+        var bodyRows = [];
+        while (i < lines.length && lines[i].indexOf("|") !== -1 && !/^\s*$/.test(lines[i])) {
+          bodyRows.push(splitRow(lines[i]));
+          i++;
+        }
+        var tbl = ["<table>", "<thead><tr>"];
+        header.forEach(function (c) {
+          tbl.push("<th>" + renderInline(c) + "</th>");
+        });
+        tbl.push("</tr></thead>", "<tbody>");
+        bodyRows.forEach(function (r) {
+          tbl.push("<tr>");
+          r.forEach(function (c) {
+            tbl.push("<td>" + renderInline(c) + "</td>");
+          });
+          tbl.push("</tr>");
+        });
+        tbl.push("</tbody>", "</table>");
+        push(tbl.join("\n"));
+        continue;
+      }
+      if (/^\s*>/.test(line)) {
+        var quote = [];
+        while (i < lines.length && /^\s*>/.test(lines[i])) {
+          quote.push(lines[i].replace(/^\s*>\s?/, ""));
+          i++;
+        }
+        push("<blockquote>" + renderMarkdown(quote.join("\n")) + "</blockquote>");
+        continue;
+      }
+      if (/^\s*\d+\.\s+/.test(line)) {
+        var oItems = [];
+        while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i])) {
+          oItems.push(lines[i].replace(/^\s*\d+\.\s+/, ""));
+          i++;
+        }
+        push("<ol>");
+        oItems.forEach(function (it) {
+          push("<li>" + renderInline(it) + "</li>");
+        });
+        push("</ol>");
+        continue;
+      }
+      if (/^\s*[-*+]\s+/.test(line)) {
+        var uItems = [];
+        while (i < lines.length && /^\s*[-*+]\s+/.test(lines[i])) {
+          uItems.push(lines[i].replace(/^\s*[-*+]\s+/, ""));
+          i++;
+        }
+        push("<ul>");
+        uItems.forEach(function (it) {
+          push("<li>" + renderInline(it) + "</li>");
+        });
+        push("</ul>");
+        continue;
+      }
+      var para = [];
+      while (
+        i < lines.length &&
+        !/^\s*$/.test(lines[i]) &&
+        !/^(#{1,6})\s+/.test(lines[i]) &&
+        !/^\s*>/.test(lines[i]) &&
+        !/^\s*[-*+]\s+/.test(lines[i]) &&
+        !/^\s*\d+\.\s+/.test(lines[i]) &&
+        !/^\s*(```|~~~)/.test(lines[i])
+      ) {
+        para.push(lines[i]);
+        i++;
+      }
+      push("<p>" + renderInline(para.join(" ").trim()) + "</p>");
+    }
+    return out.join("\n");
+  }
+
+  function parseMetadata(md) {
+    var meta = {};
+    var rowRe = /^\|\s*([^|]+?)\s*\|\s*(.*?)\s*\|\s*$/gm;
+    var m;
+    while ((m = rowRe.exec(md)) !== null) {
+      var key = m[1].trim().toLowerCase();
+      var val = m[2].trim();
+      if (key && key !== "field" && !/^:?-+:?$/.test(key)) meta[key] = val;
+    }
+    return meta;
+  }
+
+  function deriveCode(meta, md, warnings) {
+    var code = (meta["test code"] || "").trim();
+    if (!code) {
+      var t = md.match(/^#\s*Test record:\s*([A-Za-z]{2}\d{1,2})\b/m);
+      if (t) code = t[1];
+    }
+    if (!code) {
+      var b = md.match(/\b([A-Za-z]{2}\d{1,2})\s*[—-]\s/);
+      if (b) code = b[1];
+    }
+    if (!code) warnings.push("Could not determine the tool code; set it manually.");
+    return code.toUpperCase();
+  }
+
+  function parseTurns(md, warnings) {
+    var turns = [];
+    var headRe = /^###\s*Turn\s*\d+\s*[—-]\s*(Student|Toolkit|User|Chatbot|AI)\b.*$/gim;
+    var matches = [];
+    var m;
+    while ((m = headRe.exec(md)) !== null) {
+      matches.push({ index: m.index, end: headRe.lastIndex, role: m[1].toLowerCase() });
+    }
+    for (var k = 0; k < matches.length; k++) {
+      var start = matches[k].end;
+      var stop = k + 1 < matches.length ? matches[k + 1].index : md.length;
+      var segment = md.slice(start, stop);
+      var fenceRe = /(`{4,}|~{4,}|`{3}|~{3})\s*\n([\s\S]*?)\n\1/;
+      var fm = segment.match(fenceRe);
+      var content;
+      if (fm) {
+        content = fm[2];
+      } else {
+        content = segment.trim();
+        warnings.push("Turn " + (k + 1) + ": no fenced block found; used raw text.");
+      }
+      var role = matches[k].role;
+      var isUser = role === "student" || role === "user";
+      turns.push({ role: isUser ? "user" : "chatbot", markdown: content });
+    }
+    if (!turns.length) {
+      warnings.push("No turns found. Is this a collector record with '### Turn N — Role' headers?");
+    }
+    return turns;
+  }
+
+  function indentBlock(html, pad) {
+    return html
+      .split("\n")
+      .map(function (l) {
+        return l.length ? pad + l : l;
+      })
+      .join("\n");
+  }
+
+  function renderTurn(turn) {
+    var roleClass =
+      turn.role === "user"
+        ? "ai-chat-turn ai-chat-turn--user ai-chat-user"
+        : "ai-chat-turn ai-chat-turn--chatbot ai-chat-chatbot";
+    var roleLabel = turn.role === "user" ? "User" : "Chatbot";
+    var body = renderMarkdown(turn.markdown);
+    return (
+      '    <section class="' + roleClass + '">\n' +
+      '      <div class="ai-chat-role">' + roleLabel + "</div>\n" +
+      '      <div class="ai-chat-bubble">\n' +
+      indentBlock(body, "        ") + "\n" +
+      "      </div>\n" +
+      "    </section>"
+    );
+  }
+
+  function buildSnippet(code, lead, turns) {
+    var rows = turns.map(renderTurn).join("\n\n");
+    var leadComment =
+      "<!-- lead: " + (lead || "REPLACE ME WITH A ONE-LINE INTRODUCTION TO THIS EXAMPLE.") + " -->\n";
+    return (
+      leadComment +
+      '<div class="ai-chat-page">\n' +
+      '  <div class="ai-chat-window">\n' +
+      '  <div class="ai-chat-log">\n' +
+      rows + "\n" +
+      "  </div>\n" +
+      "  </div>\n" +
+      "</div>\n"
+    );
+  }
+
+  function convert(collectorMarkdown, options) {
+    options = options || {};
+    var warnings = [];
+    var md = String(collectorMarkdown || "");
+    var meta = parseMetadata(md);
+    var code = options.code || deriveCode(meta, md, warnings);
+    var title = (meta["tool tested"] || "").trim();
+    var turns = parseTurns(md, warnings);
+    var html = buildSnippet(code, options.lead || "", turns);
+    var filename = code ? code.toLowerCase() + "-example-chat.html" : "UNKNOWN-example-chat.html";
+    return { code: code, title: title, turns: turns, html: html, filename: filename, warnings: warnings };
+  }
+
+  return { convert: convert, renderMarkdown: renderMarkdown };
+});
+
+</script>
+<script>
+(function(){
+  var input=document.getElementById('inputmd');
+  var status=document.getElementById('status');
+  var out=document.getElementById('outputhtml').querySelector('code');
+  var fname=document.getElementById('filename');
+  function run(){
+    var md=input.value||'';
+    if(!md.trim()){status.textContent='Paste a collector record first.';return;}
+    var r=CollectorToSnippet.convert(md);
+    out.textContent=r.html;
+    fname.textContent=r.filename;
+    var msg='Converted '+r.turns.length+' turn(s)';
+    if(r.code) msg+=' · code '+r.code;
+    if(r.title) msg+=' · '+r.title;
+    if(r.warnings.length){
+      status.innerHTML=msg+' · <span class="warn">'+r.warnings.length+' warning(s): '+r.warnings.join('; ')+'</span>';
+    } else {
+      status.textContent=msg+' · no warnings';
+    }
+  }
+  document.getElementById('convertbtn').addEventListener('click',run);
+  document.getElementById('copybtn').addEventListener('click',function(){
+    var text=out.textContent; if(!text){return;}
+    navigator.clipboard.writeText(text).then(function(){
+      var b=document.getElementById('copybtn');var t=b.textContent;b.textContent='Copied';setTimeout(function(){b.textContent=t;},1200);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -87,12 +87,16 @@ What they do:
 
 - `build_source_material_library.py` builds the copy-ready source-material page, Markdown downloads and source-material JSON index.
 - `build_site_pages.py` builds the collapsed Tools page, expandable Where to start? page, canonical Try It page, Examples index and Download page from generated metadata/hardcoded site links, then normalises site navigation and footer links.
+- `build_example_pages.py` wraps the hand-editable chat snippets in `src/examples/` into the example pages at `docs/examples/example-*.html`.
+- `build_create_examples_page.py` builds the one-stop create-examples page (`docs/create-examples/index.html`) from the example cards (`example-cards.md`), the collector prompt, and the converter library (`src/examples-tools/collector-to-snippet.js`).
 
 Check-only commands:
 
 ```bash
 python scripts/build_source_material_library.py --check
 python scripts/build_site_pages.py --check
+python scripts/build_example_pages.py --check
+python scripts/build_create_examples_page.py --check
 ```
 
 ## Normal workflows
@@ -156,6 +160,16 @@ docs/where-to-start/index.html
 docs/download/index.html
 docs/examples/index.html
 docs/style.css
+```
+
+For example pages, commit the snippet(s), the generated page(s), and (if cards or the converter changed) the create-examples page:
+
+```text
+src/examples/<code>-example-chat.html
+docs/examples/example-<code>.html
+docs/create-examples/example-cards.md
+docs/create-examples/index.html
+src/examples-tools/collector-to-snippet.js
 ```
 
 ## GitHub Actions

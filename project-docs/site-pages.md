@@ -28,3 +28,15 @@ Tools and Where to Start use accordion sections with table-based content. Mobile
 ## Public website rule
 
 Do not put maintainer-only notes inside `docs/` unless they are intended to be published.
+
+## Example pages and the create-examples tool
+
+Example pages and the create-examples page are built by separate scripts and
+documented in `project-docs/example-pages.md`:
+
+```bash
+python scripts/build_example_pages.py            # src/examples snippets -> docs/examples pages
+python scripts/build_create_examples_page.py      # docs/create-examples/index.html
+```
+
+Both are also run and `--check`ed by `run_generator_checks.py`.

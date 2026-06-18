@@ -934,6 +934,10 @@ def build_examples_index_page(tools: list[dict[str, object]]) -> str:
 <h2>Ready to try a tool?</h2>
 <div class="btn-row"><a class="button" href="../try-it/">Try a preloaded tutor</a><a class="button secondary" href="../where-to-start/">Find the right tool</a><a class="button secondary" href="../tools/">Browse all tools</a></div>
 </section>
+<section>
+<h2>Making a new example (maintainers)</h2>
+<p>Use the <a href="../create-examples/">Create an example</a> page: it has the example cards to run, the output collector prompt to copy, and an in-browser converter that turns the collector record into a chat snippet. Save the snippet in <code>src/examples/</code> and run <code>build_example_pages.py</code>. See the maintainer note <code>project-docs/example-pages.md</code> for the full workflow.</p>
+</section>
 </article></main>
 {footer_html("../")}
 </body>

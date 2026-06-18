@@ -98,6 +98,9 @@ State in one or two sentences: whether the reproduction is complete; and that no
 </section><section>
 <h2 id="how-it-fits-the-workflow">How it fits the workflow</h2>
 <p>The record's Metadata table mirrors the test-log columns, so completing the log is mostly copying. The audit prompt recognises collector records: it audits the Transcript section and takes the test context from the Metadata table. The canonical copy of this prompt lives in the testing pack as <code>ai_tutor_toolkit_output_collector.md</code>; if this page and the pack ever disagree, the pack is right.</p>
+</section><section>
+<h2 id="make-an-example">Turn a record into a site example</h2>
+<p>A collector record can also become a published example. Use the <a href="create-examples/">Create an example</a> page, which has the example cards, this collector prompt, and an in-browser converter that turns the record into a chat snippet. Save the snippet in <code>src/examples/</code> and run the example-pages build. See <code>project-docs/example-pages.md</code> for the full workflow. Use a clean, representative session for examples, since they are shop-window content rather than audit evidence.</p>
 <p>Next: <a href="testing-audit.html">Running an audit</a></p>
 </section></article>
 </main>
