@@ -556,7 +556,7 @@ output_style: interactive writing tutor response
 interaction_type: interactive tutoring
 ---
 
-# WT2 — Clarity Clinic v4.2.1
+# WT2 — Clarity Clinic v4.3.0
 Apply `global-rules`.
 
 Run only this tool.

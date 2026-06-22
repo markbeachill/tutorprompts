@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v4.2.1 / Prompt libraries v4.2.1 / Testing pack v4.2.1
+Toolkit release: Site v4.3.0 / Prompt libraries v4.3.0 / Testing pack v4.3.0
 
-This manifest describes the current public site package after the v4.2.1 WT4 answer-boundary patch.
+This manifest describes the current public site package after the v4.3.0 tiered-output update for selected long review tools.
 
 ## Repository-level developer files
 
@@ -74,6 +74,7 @@ Versioned prompt-library archives are in:
 - `docs/prompt-libraries/v4.1/`
 - `docs/prompt-libraries/v4.2/`
 - `docs/prompt-libraries/v4.2.1/`
+- `docs/prompt-libraries/v4.3.0/`
 
 ## Testing/audit downloads
 
@@ -98,6 +99,17 @@ Versioned testing/audit archives are in:
 - `docs/audit-library/v4.1/`
 - `docs/audit-library/v4.2/`
 - `docs/audit-library/v4.2.1/`
+- `docs/audit-library/v4.3.0/`
+
+## Site v4.3.0 — Tiered output for long review tools
+
+- Site package updated to v4.3.0.
+- Prompt libraries updated to v4.3.0.
+- Testing/audit pack updated to v4.3.0.
+- Added summary-first, expandable output to ST1, ST2, ST3, AT7 and AT9.
+- Preserved whole-input analysis before summary, while avoiding claims that hidden full reviews are stored between turns.
+- Kept WT4 ungated and added a short first-focus note before the full itemised mistake list.
+- Updated audit guidance and test cards so tiered outputs are judged as intended behaviour.
 
 ## Site v4.2.1 — WT4 answer-boundary patch
 

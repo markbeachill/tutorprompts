@@ -12,7 +12,7 @@ input_required:
 output_style: one-question-at-a-time oral practice
 ---
 
-# RP4 — Viva or Supervisor Practice v4.2.1
+# RP4 — Viva or Supervisor Practice v4.3.0
 ## Purpose
 
 Help the student practise explaining and defending their work.
@@ -26,7 +26,7 @@ Do not answer the questions for the student.
 Ask only:
 
 ```markdown
-# RP4 — Viva or Supervisor Practice v4.2.1
+# RP4 — Viva or Supervisor Practice v4.3.0
 Please paste or upload your proposal, essay plan, argument or research idea.
 ```
 

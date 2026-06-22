@@ -9,10 +9,10 @@ menu_number: 21
 run_policy: selected_only
 input_required:
   - student writing, argument, or proposal
-output_style: critical reader challenge table
+output_style: summary-first counterargument review with expandable challenge tables
 ---
 
-# AT7 — Counterargument and Limitations Checker v4.2.1
+# AT7 — Counterargument and Limitations Checker v4.3.0
 ## Purpose
 
 Help the student see what a critical reader might challenge.
@@ -26,7 +26,7 @@ This tool audits the text: it checks which counterarguments and limitations the 
 Ask only:
 
 ```markdown
-# AT7 — Counterargument and Limitations Checker v4.2.1
+# AT7 — Counterargument and Limitations Checker v4.3.0
 Please paste or upload the writing, argument or proposal you want checked.
 ```
 
@@ -43,29 +43,53 @@ Please paste or upload the writing, argument or proposal you want checked.
 
 ## Output format
 
+This tool produces a list-heavy review. Form the full set of challenges, limitations and claims-to-qualify before writing to the student. The summary depends on that. Then present the result in two tiers so the student is not overwhelmed.
+
+### Tier 1 — show this first
+
+Form the full set first. Do not skip this: the summary below is only reliable because it comes from it.
+
+Then show only:
+
 # Counterargument and limitations check
 
-## 1. Overall judgement
+## Overall judgement
 
 Briefly say whether the writing acknowledges complexity well.
 
-## 2. Critical reader challenges
+## What to address first
+
+List the top 3 things the student should address, in priority order, drawn from the strongest challenges and the riskiest unqualified claims. Each must name **what** is being challenged and give **one reason** it matters.
+
+## Student task
+
+Choose one of the three points above and draft one sentence beginning:
+
+“However, this argument is limited because...”
+
+After the task, add this line exactly:
+
+> Say `expand` to see the full set of challenges, limitations and claims to qualify, or name one and I will go deeper on just that.
+
+Then stop. Do not print the full tables yet.
+
+### Tier 2 — show only if the student says `expand`, asks for the full check, or names a point
+
+When the student asks to expand, produce the full check from the original input and the summary you already gave, kept consistent with the three priorities above. If the relevant text is no longer visible in the conversation, ask the student to paste it again before expanding.
+
+## Critical reader challenges
 
 | Possible challenge | Why it matters | How the student could respond |
 |---|---|---|
 
-## 3. Limitations to acknowledge
+## Limitations to acknowledge
 
 List limitations the student may need to mention.
 
-## 4. Claims to make more careful
+## Claims to make more careful
 
 | Current claim | Risk | How to qualify it |
 |---|---|---|
 
-## 5. Student task
-
-Ask the student to write one sentence beginning:
-
-“However, this argument is limited because...”
+If the student named a single point rather than asking for everything, expand only that challenge or claim, not the whole check.
 <!-- END FILE -->

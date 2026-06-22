@@ -1,15 +1,17 @@
-# AI Personal Tutor Toolkit — Testing Guide for Educators v4.2.1
-**Release stamp:** Toolkit version v4.2.1 / Prompt-library suite v4.2.1 / Testing pack v4.2.1  **This file:** AI Personal Tutor Toolkit — Testing Guide for Educators v4.2  
+# AI Personal Tutor Toolkit — Testing Guide for Educators v4.3.0
+**Release stamp:** Toolkit version v4.3.0 / Prompt-library suite v4.3.0 / Testing pack v4.3.0  **This file:** AI Personal Tutor Toolkit — Testing Guide for Educators v4.3.0  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_testing_guide_for_educators.md`  
-**Fixed archive:** `audit-library/v4.2.1/ai_tutor_toolkit_testing_guide_for_educators_v4_2_1.md`
+**Fixed archive:** `audit-library/v4.3.0/ai_tutor_toolkit_testing_guide_for_educators_v4_3_0.md`
 
 Audience: educators, tutors, learning developers and toolkit maintainers.
 
 This testing pack helps you check whether the prompt libraries behave like learning tools rather than answer machines. You do not need software-testing knowledge.
 
-## What changed in v4.2.1
+## What changed in v4.3.0
 
-Testing pack v4.2.1 adds a stricter WT4 answer-giving boundary. WT4 should find writing mistakes, obvious everyday factual slips and visible technical referencing presentation slips only. It should not check specialist subject correctness, source accuracy, evidence sufficiency, quotation accuracy against external sources, or citation/source substance.
+Testing pack v4.3.0 adds checks for tiered summary-first output in ST1, ST2, ST3, AT7 and AT9. These tools should analyse the whole input before choosing priorities, show a short useful Tier 1 response first, and produce fuller detail only when the student asks to expand. WT4 remains ungated: it still shows every in-scope mistake, now with a short first-focus note before the full list.
+
+The v4.2.1 WT4 answer-giving boundary remains in force. WT4 should find writing mistakes, obvious everyday factual slips and visible technical referencing presentation slips only. It should not check specialist subject correctness, source accuracy, evidence sufficiency, quotation accuracy against external sources, or citation/source substance.
 
 ## What changed in v4.2
 
@@ -55,7 +57,9 @@ These should keep the student active. They should ask the student to think, choo
 
 Examples: WT3 Single Paragraph Analysis, WT4 Find My Mistakes, WT6 Style and Clarity Review, ST1 Paragraph Structure Review, ST2 Whole-Work Structure Review, RP3 Critical Research Supervisor Review and SW1 Revision Plan.
 
-These are allowed to produce a full review. They should give structured feedback and priorities. They should not rewrite whole paragraphs or produce submission-ready work. In follow-up turns they should switch to short interactive responses rather than re-running the full review.
+These are allowed to produce structured review feedback and priorities. They should not rewrite whole paragraphs or produce submission-ready work. In follow-up turns they should switch to short interactive responses rather than re-running the full review.
+
+From v4.3.0, some review tools are intentionally tiered. ST1, ST2, ST3, AT7 and AT9 should analyse the whole input before giving the first response, but the first response should show only the usable summary, priorities and expansion instructions. WT4 is the exception: its complete itemised check is intended behaviour and should not be hidden behind expansion.
 
 ## Simple testing workflow
 

@@ -25,7 +25,7 @@ output_style: subject-string flow diagnosis with student revision questions
 interaction_type: interactive tutoring
 ---
 
-# WT9 — Flow and Coherence: The Running Subject v4.2.1
+# WT9 — Flow and Coherence: The Running Subject v4.3.0
 Apply `global-rules`.
 
 Run only this tool.

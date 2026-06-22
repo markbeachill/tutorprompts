@@ -10,8 +10,6 @@ build_audit_pack.py              Builds the testing/audit pack.
 build_site_data.py               Builds generated JSON data.
 build_source_material_library.py Builds source-material pages/downloads.
 build_site_pages.py              Builds/normalises generated site pages.
-build_example_pages.py           Wraps src/examples snippets into docs/examples pages.
-build_create_examples_page.py     Builds the one-stop create-examples page (cards + collector + converter).
 run_generator_checks.py          Main check runner; can rebuild first.
 build_site_package.py            Builds public and full repository ZIPs.
 build_toolkit_release.py         Orchestrates release builds.

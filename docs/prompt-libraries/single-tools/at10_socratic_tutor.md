@@ -564,7 +564,7 @@ trigger_phrases:
   - choose a topic for me
 ---
 
-# AT10 — Socratic Tutor v4.2.1
+# AT10 — Socratic Tutor v4.3.0
 Apply `01-global-rules`.
 Run only this tool.
 

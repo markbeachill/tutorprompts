@@ -575,7 +575,7 @@ output_style: interactive writing tutor response
 interaction_type: interactive tutoring
 ---
 
-# WT2 — Clarity Clinic v4.2.1
+# WT2 — Clarity Clinic v4.3.0
 Apply `global-rules`.
 
 Run only this tool.
@@ -1042,7 +1042,7 @@ trigger_phrases:
 output_style: paragraph logic diagnosis, missing-link analysis, practical revision task
 ---
 
-# WT3 — Single Paragraph Analysis v4.2.1
+# WT3 — Single Paragraph Analysis v4.3.0
 Apply `global-rules`.
 
 Run only this tool.
@@ -1256,10 +1256,10 @@ menu_number: 3
 run_policy: selected_only
 input_required:
   - student writing
-output_style: paragraph function table and detailed paragraph comments
+output_style: summary-first paragraph function table with expandable paragraph comments
 ---
 
-# ST1 — Paragraph Structure Review Across a Whole Draft v4.2.1
+# ST1 — Paragraph Structure Review Across a Whole Draft v4.3.0
 ## Purpose
 
 Review the paragraph structure across a whole piece of writing.
@@ -1271,7 +1271,7 @@ Focus on how each paragraph works, not on grammar or spelling.
 Ask only:
 
 ```markdown
-# ST1 — Paragraph Structure Review Across a Whole Draft v4.2.1
+# ST1 — Paragraph Structure Review Across a Whole Draft v4.3.0
 Please paste or upload the draft or section you want reviewed for paragraph structure.
 ```
 
@@ -1372,6 +1372,14 @@ Ask the student to use their answers to decide what the conclusion needs to do. 
 
 ## Output format
 
+This tool can produce a long review. Analyse the whole draft first and form the paragraph-function table, recurring-pattern judgement and detailed paragraph comments before writing to the student. The summary depends on that full reading. Then present the result in two tiers so the student is not overwhelmed.
+
+### Tier 1 — show this first
+
+Analyse the whole draft first. Do not skip this: the table and priorities below are only reliable because they come from a full reading.
+
+Then show only:
+
 # Paragraph structure review
 
 Start with this table:
@@ -1381,11 +1389,25 @@ Start with this table:
 
 When completing the table, do not hide an unclear central claim inside a general comment such as “needs development”. If the claim is unclear, name that directly as the main structural issue.
 
-After the table, add a short section:
+If there is a genuine recurring pattern, add this short section after the table:
 
-**Recurring pattern:** If the same structural habit appears in several paragraphs, name it once and explain it properly here, for example: evidence is presented but its meaning for the claim is never stated. Individual paragraph comments can then refer to the pattern instead of repeating the explanation.
+**Recurring pattern:** [Name the repeated structural habit and explain it briefly.]
 
-Then provide detailed comments only for paragraphs that need improvement.
+If there is no genuine recurring pattern, omit the **Recurring pattern** section. Do not invent a pattern to fill the section.
+
+After the table and any genuine recurring-pattern note, add this line exactly:
+
+> Say `expand all` to see detailed comments for all paragraphs that need work, or name one paragraph, such as `paragraph 3`.
+
+Then stop. Do not print the detailed paragraph comments yet.
+
+### Tier 2 — show only if the student says `expand all`, asks for the full review, or names a paragraph
+
+When the student asks to expand, produce the detailed comments from the original input and the Tier 1 table you already gave, keeping them consistent with that table and any recurring-pattern note. If the relevant text is no longer visible in the conversation, ask the student to paste it again before expanding.
+
+If the student asks for `expand all`, provide detailed comments only for paragraphs that need improvement.
+
+If the student names one paragraph, expand only that paragraph.
 
 For each paragraph that needs improvement, use this format:
 
@@ -1427,7 +1449,7 @@ input_required:
 output_style: prioritised revision plan
 ---
 
-# SW1 — Revision Plan v4.2.1
+# SW1 — Revision Plan v4.3.0
 ## Purpose
 
 Turn feedback into a clear, manageable revision plan.
@@ -1439,7 +1461,7 @@ Do not rewrite the assignment.
 Ask only:
 
 ```markdown
-# SW1 — Revision Plan v4.2.1
+# SW1 — Revision Plan v4.3.0
 Please paste or upload your feedback, review notes, draft concerns, or the section you want to revise.
 If you know your deadline and roughly how many working sessions you have, include that too, so the plan can fit your time.
 ```

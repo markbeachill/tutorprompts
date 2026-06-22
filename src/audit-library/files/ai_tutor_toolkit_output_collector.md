@@ -1,7 +1,7 @@
-# AI Personal Tutor Toolkit — Test Output Collector v4.2.1
-**Release stamp:** Toolkit version v4.2.1 / Prompt-library suite v4.2.1 / Testing pack v4.2.1  **This file:** AI Personal Tutor Toolkit — Test Output Collector v4.2
+# AI Personal Tutor Toolkit — Test Output Collector v4.3.0
+**Release stamp:** Toolkit version v4.3.0 / Prompt-library suite v4.3.0 / Testing pack v4.3.0  **This file:** AI Personal Tutor Toolkit — Test Output Collector v4.3.0
 **Public download:** `audit-library/latest/ai_tutor_toolkit_output_collector.md`
-**Fixed archive:** `audit-library/v4.2.1/ai_tutor_toolkit_output_collector_v4_2_1.md`
+**Fixed archive:** `audit-library/v4.3.0/ai_tutor_toolkit_output_collector_v4_3_0.md`
 
 Audience: testers and toolkit maintainers.
 

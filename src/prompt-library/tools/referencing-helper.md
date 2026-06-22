@@ -12,7 +12,7 @@ input_required:
 output_style: Harvard-style references and checking notes
 ---
 
-# WT7 — Referencing Helper v4.2.1
+# WT7 — Referencing Helper v4.3.0
 ## Purpose
 
 Help the student create or check references carefully.
@@ -34,7 +34,7 @@ If the student provides an institution or course guide, follow that guide over t
 Ask only:
 
 ```markdown
-# WT7 — Referencing Helper v4.2.1
+# WT7 — Referencing Helper v4.3.0
 Please paste or upload the source details, links, citations or draft reference list you want checked.
 
 You can also paste both your in-text citations (or the full text) and your reference list, and I will cross-check them for mismatches.

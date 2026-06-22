@@ -1,7 +1,7 @@
-# AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.2.1
-**Release stamp:** Toolkit version v4.2.1 / Prompt-library suite v4.2.1 / Testing pack v4.2.1  **This file:** AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.2  
+# AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.3.0
+**Release stamp:** Toolkit version v4.3.0 / Prompt-library suite v4.3.0 / Testing pack v4.3.0  **This file:** AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.3.0  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md`  
-**Fixed archive:** `audit-library/v4.2.1/ai_tutor_toolkit_step_by_step_test_cards_v4_2_1.md`
+**Fixed archive:** `audit-library/v4.3.0/ai_tutor_toolkit_step_by_step_test_cards_v4_3_0.md`
 
 Audience: educators, tutors, learning developers and toolkit maintainers who want to test the prompt libraries without needing software-testing knowledge.
 
@@ -256,7 +256,7 @@ Here is my new version. Social media advertising matters to brands because it re
 
 ### What this test checks
 
-Whether the tool identifies writing mistakes completely and teaches through corrections without rewriting the paragraph. From v4.2.1, WT4 must stay inside its writing-mistake role: grammar, spelling, punctuation, word choice, clarity, internal logic, obvious everyday factual slips and visible technical referencing presentation slips only.
+Whether the tool identifies writing mistakes completely and teaches through corrections without rewriting the paragraph. From v4.2.1 onward, WT4 must stay inside its writing-mistake role: grammar, spelling, punctuation, word choice, clarity, internal logic, obvious everyday factual slips and visible technical referencing presentation slips only.
 
 ### Test input
 
@@ -334,7 +334,7 @@ Under section 1 of the relevant Act, the claimant must prove serious financial l
 
 ### What this test checks
 
-The v4.2.1 WT4 exemption from the long-inputs rule: WT4 may and should itemise in full, working section by section if needed — and must not pretend to have checked material it has not processed.
+The WT4 exemption from the long-inputs rule: WT4 may and should itemise in full, working section by section if needed — and must not pretend to have checked material it has not processed.
 
 ### Test input
 
@@ -694,7 +694,9 @@ Paragraph 3: YouTubers also advertise products. Some adverts feel more personal 
 
 ### What to look for
 
-- maps each paragraph and checks central-claim clarity before development, evidence, links or polish
+- analyses the whole draft before choosing the Tier 1 table and priorities
+- maps each paragraph in the Tier 1 table and checks central-claim clarity before development, evidence, links or polish
+- gives a clear `expand all` or named-paragraph instruction rather than printing every detailed paragraph comment immediately
 - ★ identifies Paragraph 2's unspecified "conflict" as a prior claim problem, not merely thin development
 - explains why development cannot rescue a paragraph whose claim the reader cannot follow
 - avoids writing near-usable topic sentences in the student's voice from the student's own material
@@ -708,7 +710,7 @@ Paragraph 3: YouTubers also advertise products. Some adverts feel more personal 
 
 ### What this test checks
 
-The v4.2 student-first ordering behaviour. The tool should map the structure, name the problems, and ask the student to propose a revised order — giving its own suggested order only on request or if the student is stuck.
+The v4.3.0 tiered structure-review behaviour. The tool should analyse the whole piece, show a compressed structure snapshot and priorities first, then expand to the full reverse outline and issues when asked. It should ask the student to propose a revised order before giving its own suggested order — giving its own suggested order only on request or if the student is stuck.
 
 ### Test input 1
 
@@ -725,15 +727,23 @@ Rationale: This matters because young people use social media and brands want en
 ### Follow-up input 2
 
 ```text
+expand
+```
+
+### Follow-up input 3
+
+```text
 I'm stuck. Just show me an order.
 ```
 
 ### What to look for
 
-- produces the structure map and names it as a reverse outline the student can make themselves
+- on turn 1, gives a compressed structure snapshot and top structure priorities rather than printing the full review immediately
+- gives a clear `expand` instruction for the full structure map and issues
+- on expansion, produces the structure map and names it as a reverse outline the student can make themselves
 - identifies the misplaced order and gaps
-- ★ on turn 1, asks the student to propose their own revised order from the map; does not hand over a suggested order unprompted
-- ★ on follow-up 2, gives the suggested order with each Purpose entry explaining why the part belongs there (general before specific, claim before complication)
+- ★ after expansion, asks the student to propose their own revised order from the map; does not hand over a suggested order unprompted
+- ★ on follow-up 3, gives the suggested order with each Purpose entry explaining why the part belongs there (general before specific, claim before complication)
 - does not write the new text of any section
 
 ---
@@ -754,7 +764,10 @@ BTS campaigns prove that online consumers no longer respond to traditional adver
 
 ### What to look for
 
+- analyses the whole text before giving Tier 1 priorities
+- gives an overall judgement, names the single strongest idea, and gives top priorities with anchors and reasons
 - challenges the overclaiming ("prove", "no longer", "all brands") and the weak cause-effect logic
+- gives a clear `expand` instruction for the full issue list
 - ★ distinguishes internal logic problems it can diagnose from the text alone from discipline-specific accuracy questions, which it raises as things to check with a tutor or source rather than ruling on
 
 ---
@@ -896,7 +909,10 @@ BTS campaigns are successful because fans spread them online, so celebrity campa
 
 ### What to look for
 
-- identifies counterarguments, limits and ways to qualify the claim
+- analyses the argument before selecting the Tier 1 priorities
+- gives a brief overall judgement and top 3 issues with one reason each
+- includes the student task beginning “However, this argument is limited because...”
+- gives a clear `expand` instruction for the full challenge, limitation and qualification detail
 - audits the text rather than staging a debate; may point to AT9 for a live challenge
 
 ---
@@ -930,8 +946,36 @@ Use the ideological assumptions opponent. My argument is: Influencer marketing i
 
 ### What to look for
 
-- adopts the chosen standpoint, identifies underlying assumptions, objections and tough questions
+- adopts the chosen standpoint and names the opponent type used
+- gives the single strongest challenge in Tier 1
+- gives top 3 actions with anchors and reasons
+- gives clear expansion commands for objections, assumptions, questions or named points
+- identifies underlying assumptions, objections and tough questions on expansion rather than printing every detail immediately
 - challenges without rewriting the argument for the student
+
+---
+
+## Tiered Expansion Regression Test — ST1/ST2/ST3/AT7/AT9
+
+**Library:** Structure Tutor Library, Academic Thinking Library or master. **Audit code:** use the matching tool code. **Filename stem:** `tiered_expansion_regression`.
+
+### What this test checks
+
+That tiered tools do not claim to reveal stored hidden tables, and that expansion stays consistent with the Tier 1 summary.
+
+### Test sequence
+
+1. Run one tiered tool on its normal test input.
+2. Check the Tier 1 output.
+3. Send one of the tool's expansion commands, such as `expand`, `expand all`, `expand objections`, or `paragraph 2`.
+
+### What to look for
+
+- Tier 1 gives a useful summary, anchors priorities to the text, and provides a clear expansion instruction
+- the tool does not print all gated detail in Tier 1
+- on expansion, the tool uses the original input and Tier 1 summary to produce the requested detail
+- ★ the expansion is consistent with the Tier 1 priorities and does not introduce a contradictory new main diagnosis without explanation
+- ★ if the original input is no longer visible, the tool asks the student to paste it again rather than pretending to remember hidden detail
 
 ---
 

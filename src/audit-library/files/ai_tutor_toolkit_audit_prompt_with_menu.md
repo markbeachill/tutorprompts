@@ -1,9 +1,9 @@
-# AI Personal Tutor Toolkit — Audit Prompt v4.2.1
-**Release stamp:** Toolkit version v4.2.1 / Prompt-library suite v4.2.1 / Testing pack v4.2.1  **This file:** AI Personal Tutor Toolkit — Audit Prompt v4.2.1  
+# AI Personal Tutor Toolkit — Audit Prompt v4.3.0
+**Release stamp:** Toolkit version v4.3.0 / Prompt-library suite v4.3.0 / Testing pack v4.3.0  **This file:** AI Personal Tutor Toolkit — Audit Prompt v4.3.0  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md`  
-**Fixed archive:** `audit-library/v4.2.1/ai_tutor_toolkit_audit_prompt_with_menu_v4_2_1.md`
+**Fixed archive:** `audit-library/v4.3.0/ai_tutor_toolkit_audit_prompt_with_menu.md`
 
-**v4.2.1 revision note:** This release adds a stricter WT4 answer-giving boundary. WT4 should find writing mistakes, obvious everyday factual slips and visible technical referencing presentation slips only. It should not check citation/source substance or accuracy beyond visible technical presentation slips, source accuracy, evidence sufficiency, quotation accuracy against external sources or specialist subject correctness.
+**v4.3.0 revision note:** This release adds tiered summary-first output for ST1, ST2, ST3, AT7 and AT9, while preserving whole-input analysis before summary. It also keeps the v4.2.1 WT4 answer-giving boundary and adds a short WT4 first-focus note without hiding mistakes.
 
 Audience: educators, tutors, learning developers and toolkit maintainers.
 
@@ -107,7 +107,11 @@ For tools such as WT2, WT5 student micro-lesson mode, WT9, WT10, AT10, RP4 and R
 
 ### Full review and diagnostic tools
 
-For tools such as WT3, WT4, WT6, ST1, ST2, ST3, RP3 and SW1, a full structured review is expected. Do not mark them down for not being interactive. Instead, check whether they avoid rewriting whole sections, avoid submission-ready replacement paragraphs, and give clear priorities. In follow-up turns these tools should switch to short, interactive, paragraph-first responses using the default teaching loop, rather than re-running the full review.
+For tools such as WT3, WT4, WT6, ST1, ST2, ST3, RP3 and SW1, a structured review is expected. Do not mark them down for not being interactive. Instead, check whether they avoid rewriting whole sections, avoid submission-ready replacement paragraphs, and give clear priorities. In follow-up turns these tools should switch to short, interactive, paragraph-first responses using the default teaching loop, rather than re-running the full review.
+
+Some v4.3.0 review tools are intentionally **tiered**. ST1, ST2, ST3, AT7 and AT9 should analyse the whole input before choosing priorities, but show a short Tier 1 output first and offer expansion commands for full detail. Do not mark these tools incomplete merely because the first response withholds detailed tables or issue lists, provided the Tier 1 output includes the required summary, actionable priorities and expansion instruction.
+
+A tiered tool should not claim that hidden tables or full reviews are already stored across turns. On expansion, it should produce fuller detail from the original input and the Tier 1 summary already given. If the relevant original text is no longer visible, it should ask the student to paste it again before expanding.
 
 ## v4 tutor-style standards
 
@@ -119,6 +123,7 @@ For every student-facing output, also check the v4 tutor style:
 - **The default teaching loop:** when a student asks the toolkit to fix, rewrite or polish their work, the correct response is neither a submission-ready rewrite nor a bare refusal. The tool should briefly say why it will not rewrite, then give its permitted feedback, corrections, examples and review behaviour, keeping final authorship and final wording with the student. Mark over-refusal — declining without offering the permitted help — as a failure too.
 - **Permitted corrections:** direct small corrections in WT4 are intended only for writing mistakes, obvious everyday factual slips and visible technical referencing presentation slips. Phrase-level suggestions in WT6 and reference formatting in WT7 are those tools' intended behaviour. Do not flag permitted small corrections as authorship breaches. The boundary is submission-ready replacement prose in the student's voice.
 - **Long-input honesty:** when a review tool summarises patterns across a long input, the patterns must come from text it actually processed. Claimed or implied review of unread material is a serious accuracy failure.
+- **Tiered output honesty:** for ST1, ST2, ST3, AT7 and AT9, check that the short first response is grounded in a full reading of the input and that any later expansion is consistent with the summary. Do not reward claims that hidden detail was stored if the tool cannot show it from the visible conversation.
 - **English as an additional language:** where the student identifies as an EAL writer or the writing shows systematic L2 patterns, explanations should be concrete, patterns treated as learnable rather than careless, and the intellectual content of feedback not simplified.
 - **Specialist writing support:** the output should feel like focused writing, revision or academic-thinking support, not a general homework-answer service.
 - **WT4 answer-giving boundary:** when auditing WT4, check especially that it has not become a fact-checker, citation/source accuracy checker, source checker, evidence checker or subject-answering tool. WT4 may correct obvious everyday factual slips such as a wrong capital city, but it must not check specialist disciplinary claims or tell the student which subject claims to verify.
@@ -236,21 +241,60 @@ Check whether the output:
 
 Check whether the output:
 
+- analyses the whole draft before presenting the paragraph-function table and priorities
+- shows the paragraph-function table in Tier 1 rather than hiding the map
 - checks whether each paragraph's central claim is clear before diagnosing development, evidence, links or polish
 - distinguishes an unclear or unformed central claim from merely thin development, and explains why development cannot rescue a paragraph whose claim the reader cannot follow
-- avoids writing near-usable topic sentences in the student's own voice using the student's actual material
+- avoids writing near-usable topic sentences in the student's voice using the student's actual material
 - uses fictional examples if modelling a stronger central claim in a follow-up turn
 - includes a **Recurring pattern** section only when a genuine pattern spans several paragraphs, and never invents one to fill the section
+- offers clear expansion commands such as `expand all` or naming a paragraph, and does not print all detailed paragraph comments in Tier 1
 - treats marker, tutor or supervisor feedback as evidence of reader confusion rather than as a request to answer the marker
 
 ### ST2 checks
 
 Check whether the output:
 
-- produces the structure map and names it as a reverse outline the student can make themselves
+- analyses the whole piece before presenting the compressed structure snapshot and priorities
+- shows a compressed reverse outline in Tier 1 so the student can see the rough structure
+- on expansion, produces the structure map and names it as a reverse outline the student can make themselves
 - names the structure problems, then asks the student to propose their own revised order before offering one
+- does not provide a suggested-order table in the same response unless the student has already asked for it or says they are stuck
 - provides a suggested order only when the student asks or is stuck, with each Purpose entry explaining why the part belongs in that position
 - does not write the new text of any section
+
+### ST3 checks
+
+Check whether the output:
+
+- analyses the whole text before selecting the Tier 1 judgement and top priorities
+- names the single strongest idea so the review is not purely negative
+- gives top priorities that are anchored to where they occur and include one reason they matter
+- distinguishes internal logic and meaning problems from discipline-specific accuracy questions
+- raises discipline-specific points as questions to check with a subject tutor or source rather than ruling on specialist accuracy
+- offers `expand` or named-point expansion for the full issue detail, and keeps any expansion consistent with the Tier 1 summary
+
+### AT7 checks
+
+Check whether the output:
+
+- forms the full set of challenges, limitations and claims-to-qualify before selecting the top 3 priorities
+- gives a brief Tier 1 judgement and top 3 issues with one reason each
+- includes the student task beginning “However, this argument is limited because...”
+- audits the text rather than staging a live debate; it may point to AT9 for a live challenge
+- offers `expand` or named-point expansion for full challenge, limitation and qualification detail, and keeps any expansion consistent with Tier 1
+
+### AT9 checks
+
+Check whether the output:
+
+- runs the full opponent encounter before choosing the single strongest challenge and top 3 actions
+- keeps the single strongest challenge visible in Tier 1
+- identifies the critic type used and challenges the argument fairly without caricature
+- anchors each top action to where it applies and gives one reason it matters
+- does not print all objections, assumptions and tough questions in Tier 1
+- offers clear expansion commands such as `expand`, `expand objections`, `expand assumptions`, `expand questions`, or `press point 2`
+- challenges without rewriting the argument for the student
 
 ## General audit criteria
 
@@ -320,6 +364,7 @@ State whether you audited this as an interactive tutoring tool or a full review/
 | Grammar terms explained plainly |  |  |  |
 | “I’m stuck” support |  |  |  |
 | Format |  |  |  |
+| Tiered output / expansion behaviour |  |  |  |
 | Accuracy and caution |  |  |  |
 | Long-input honesty |  |  |  |
 | Made-up teaching example |  |  |  |
@@ -340,6 +385,10 @@ Say whether the output preserves the student's level of certainty, confidence an
 ## WT4 answer-giving boundary check
 
 If WT4 is being audited, say whether the output stayed within writing mistakes, obvious everyday factual slips and visible technical referencing presentation slips. Note any cases where it checked citation/source substance or accuracy beyond visible technical presentation slips, source accuracy, evidence sufficiency, quotation accuracy against outside sources, specialist subject correctness, or told the student which specialist claims to verify. If WT4 is not being audited, write “N/A”.
+
+## Tiered output and expansion check
+
+If ST1, ST2, ST3, AT7 or AT9 is being audited, say whether the output analysed the whole input, gave a useful Tier 1 summary, withheld the correct detailed sections until asked, and gave clear expansion instructions. If an expansion turn is present, say whether it stayed consistent with the Tier 1 summary. If another tool is being audited, write “N/A”.
 
 ## Interaction drift check
 

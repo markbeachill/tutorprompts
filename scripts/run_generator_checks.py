@@ -249,8 +249,6 @@ def main() -> int:
             ("Rebuild site data", ["scripts/build_site_data.py"]),
             ("Rebuild source-material library", ["scripts/build_source_material_library.py"]),
             ("Rebuild generated site pages", ["scripts/build_site_pages.py"]),
-            ("Rebuild example pages", ["scripts/build_example_pages.py"]),
-            ("Rebuild create-examples page", ["scripts/build_create_examples_page.py"]),
         ]:
             rc = run_step(label, cmd, dry_run=args.dry_run)
             if rc:
@@ -269,8 +267,6 @@ def main() -> int:
         steps.append(("Generated source-material check", ["scripts/build_source_material_library.py", "--check"]))
     if not args.skip_site_pages:
         steps.append(("Generated site-pages check", ["scripts/build_site_pages.py", "--check"]))
-        steps.append(("Example-pages check", ["scripts/build_example_pages.py", "--check"]))
-        steps.append(("Create-examples-page check", ["scripts/build_create_examples_page.py", "--check"]))
     if not args.skip_release_consistency:
         steps.append(("Release consistency check", ["scripts/release_consistency_check.py", "--fail-on-problems"]))
 
