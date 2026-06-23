@@ -73,6 +73,8 @@ EXPECTED_DOCS = [
     "project-docs/generated-files.md",
     "project-docs/tool-index.md",
     "tool-history/README.md",
+    "tool-history/routing-and-help/README.md",
+    "tool-history/routing-and-help/menus-help-and-routing.md",
     "tool-history/writing-tutor/v4-2-wt8-wt9-flow-coherence-design.md",
     "tool-history/repository-docs/root-docs/PACKAGE_GENERATOR_README.md",
     "tool-history/repository-docs/root-docs/PACKAGE_GENERATOR_DESIGN.md",

@@ -435,13 +435,19 @@ For startup activation tests, treat summarising the prompt library, listing inte
 
 For launcher fidelity tests, treat reconstructed menus, table conversions, added emojis, welcome lines, or preambles such as “I’ve read the file” as partial failures unless they are explicitly present in the launcher text. Treat any output of release-note, changelog or version-history material as a failure in launcher tests: even if that material exists in the uploaded file, it is not part of the launcher output.
 
-A launcher that activates but strips out the privacy/responsibility note, “I'm stuck” support, the triage line (“Not sure which tool? Describe your problem in a sentence and I will suggest one or two.”), or tool codes should not be treated as a full pass. A launcher that only shows the tool list is a partial failure even if the tools are correct. The launcher should preserve the library name and version, purpose, short course-rules/privacy guidance, “I'm stuck” support, the triage line, visible tool codes, paste/upload guidance and the `prompt` return instruction.
+A launcher that activates but strips out the privacy/responsibility note, “I'm stuck” support, the relevant routing instruction, or the `prompt` return instruction should not be treated as a full pass.
+
+For the master library, the expected launcher is now a five-choice mini-library selector rather than the full tool list. It should show A-E library choices, `list tools`, the strict `not sure` one-sentence route, and the warning not to paste a whole draft just to choose a library. Do not mark the master launcher down for not showing every tool code in the first menu.
+
+For mini-libraries, the launcher should preserve visible tool codes and tool names. A mini-library launcher that only shows a bare tool list without privacy, responsibility, “I'm stuck”, paste/upload and `prompt` guidance is a partial failure even if the tool names are correct.
+
+For single-tool packs, startup should activate the included tool directly rather than showing a one-item menu. Do not mark this as a launcher failure if the tool starts and asks for the input it needs.
 
 Suggested evidence-table rows when relevant:
 
 | Startup activation | Pass / partial / fail / N/A | Does the AI activate the uploaded library and show the launcher menu rather than summarising the prompt file? | Applies to startup tests such as U6. |
 | Launcher fidelity | Pass / partial / fail / N/A | Does the AI output the launcher menu from the launcher section without reconstructing it from manifest, router, tool metadata or tool headings? | Applies to startup/menu tests. |
-| Launcher minimum content | Pass / partial / fail / N/A | Does the launcher preserve the required minimum guidance: version, purpose, course-rules/privacy note, “I’m stuck” line, triage line, tool codes, paste/upload guidance, and `prompt` return instruction? | Applies to startup/menu tests. |
+| Launcher minimum content | Pass / partial / fail / N/A | Does the launcher preserve the required minimum guidance for its pack type: master mini-library selector, mini-library tool menu, or single-tool direct activation? | Applies to startup/menu tests. |
 | Student pushback and uncertainty | Pass / partial / fail / N/A | Does the AI take student correction seriously, revise its diagnosis where appropriate, and avoid false certainty in specialist subject areas? | Especially important for subject-specific or high-stakes claims. |
 | WT4 answer-giving boundary | Pass / fail / N/A | Does WT4 stay within writing mistakes, obvious everyday factual slips and visible technical referencing presentation slips only? | Applies to WT4 and any combined WT1/WT4 test. |
 

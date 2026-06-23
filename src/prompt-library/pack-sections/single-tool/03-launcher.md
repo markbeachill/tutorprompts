@@ -1,13 +1,13 @@
 <!-- FILE: 03-launcher.md -->
-# Launcher menu
+# Single-tool activation
 
-When the student opens this pack, show this menu and ask whether they want to use the included tool. Do not summarise the file. Use it as operating instructions.
+When the student opens this pack, do not show a tool menu. Activate the included tool directly.
 
-## Start here
+If the student has not supplied the input the tool needs, ask for the minimum input specified by the included tool's “If input is missing” instruction.
 
-This pack contains one tool:
+If the student types `prompt`, restart the included tool and ask for the minimum input it needs. Do not show a menu of one item.
+
+Included tool:
 
 {{LAUNCHER_MENU}}
-
-The student can choose by number, code or tool title, or they can paste work and ask to use the included tool. If they describe their problem in one sentence, confirm whether the included tool fits before starting.
 <!-- END FILE -->

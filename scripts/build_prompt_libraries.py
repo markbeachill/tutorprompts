@@ -99,6 +99,14 @@ MINI_MANIFEST_HEADINGS = {
     "study-workflow": "Study workflow tools",
 }
 
+MASTER_LIBRARY_CHOICES = [
+    ("A", "writing-tutor", "Writing Tutor"),
+    ("B", "structure-tutor", "Structure Tutor"),
+    ("C", "academic-thinking", "Academic Thinking Tutor"),
+    ("D", "research-proposal", "Research Proposal Tutor"),
+    ("E", "study-workflow", "Study Workflow Tutor"),
+]
+
 
 SECTION_MARKERS = {
     "manifest": "00-manifest.md",
@@ -485,22 +493,61 @@ def generate_available_tools_table(spec: Dict[str, object], tools: Sequence[Tool
     return "\n".join(lines)
 
 
-def generate_launcher_menu(spec: Dict[str, object], tools: Sequence[ToolMeta]) -> str:
-    is_master = spec.get("id") == "master"
+def _tool_menu_lines(tools: Sequence[ToolMeta], *, grouped: bool = False, master_numbering: bool = False) -> List[str]:
+    """Return visible tool menu lines.
+
+    master_numbering=True preserves the historic full master tool list numbering.
+    grouped=True adds family headings before each group.
+    Otherwise numbering restarts at 1 for the supplied tool sequence, which is what
+    mini-library menus use.
+    """
     lines: List[str] = []
-    number = 1
-    is_custom = str(spec.get("kind", "")).lower() == "custom" or "include_tools" in spec
-    groups = grouped_tools(tools) if (is_master or is_custom) else [(tools[0].family, list(tools))]
-    for _family, items in groups:
-        if is_master:
+    if grouped:
+        number = 1
+        for _family, items in grouped_tools(tools):
             if lines:
                 lines.append("")
             lines.append(f"**{items[0].family_label}**")
-        for tool in items:
-            lines.append(f"{number}. **{tool.code} — {tool.title}** — {tool.launcher_description}")
-            number += 1
-    return "\n".join(lines)
+            for tool in items:
+                lines.append(f"{number}. **{tool.code} — {tool.title}** — {tool.launcher_description}")
+                number += 1
+        return lines
+    for number, tool in enumerate(tools, start=1):
+        lines.append(f"{number}. **{tool.code} — {tool.title}** — {tool.launcher_description}")
+    return lines
 
+
+def generate_launcher_menu(spec: Dict[str, object], tools: Sequence[ToolMeta]) -> str:
+    is_master = spec.get("id") == "master"
+    is_custom = str(spec.get("kind", "")).lower() == "custom" or "include_tools" in spec
+    if is_master:
+        # The master launcher now shows mini-library choices rather than the full tool list.
+        # The full tool list is available through the router when the student asks for `list tools`.
+        return "\n".join(
+            f"{letter}. **{label}**"
+            for letter, _family, label in MASTER_LIBRARY_CHOICES
+        )
+    if is_custom:
+        return "\n".join(_tool_menu_lines(tools, grouped=True))
+    return "\n".join(_tool_menu_lines(tools))
+
+
+def generate_master_full_tool_menu(tools: Sequence[ToolMeta]) -> str:
+    return "\n".join(_tool_menu_lines(tools, grouped=True, master_numbering=True))
+
+
+def generate_master_family_menus(tools: Sequence[ToolMeta]) -> str:
+    lines: List[str] = []
+    by_family = {family: [tool for tool in tools if tool.family == family] for family in FAMILY_ORDER}
+    for letter, family, label in MASTER_LIBRARY_CHOICES:
+        items = by_family.get(family, [])
+        if not items:
+            continue
+        if lines:
+            lines.append("")
+        lines.append(f"### {letter} — {label}")
+        lines.extend(_tool_menu_lines(items))
+    return "\n".join(lines)
 
 def generate_number_routing_table(tools: Sequence[ToolMeta]) -> str:
     lines = ["| Student choice | Code | Tool ID |", "|---:|---|---|"]
@@ -529,6 +576,8 @@ def render_generated_sections(text: str, spec: Dict[str, object], tools: Sequenc
         "{{PACK_KIND}}": str(spec.get("kind", "pack")),
         "{{AVAILABLE_TOOLS_TABLE}}": generate_available_tools_table(spec, tools),
         "{{LAUNCHER_MENU}}": generate_launcher_menu(spec, tools),
+        "{{MASTER_FULL_TOOL_MENU}}": generate_master_full_tool_menu(tools) if spec.get("id") == "master" else "",
+        "{{MASTER_FAMILY_MENUS}}": generate_master_family_menus(tools) if spec.get("id") == "master" else "",
         "{{NUMBER_ROUTING_TABLE}}": generate_number_routing_table(tools),
         "{{MENU_MAPPING}}": generate_menu_mapping(spec, tools),
     }
@@ -612,6 +661,10 @@ def expected_launcher_line(number: int, tool: ToolMeta) -> str:
     return f"{number}. **{tool.code} — {tool.title}** — {tool.launcher_description}"
 
 
+def expected_master_family_choice(letter: str, label: str) -> str:
+    return f"{letter}. **{label}**"
+
+
 def expected_number_routing_row(number: int, tool: ToolMeta) -> str:
     return f"| {number} | `{tool.code}` | `{tool.id}` |"
 
@@ -648,21 +701,43 @@ def validate_rendered_pack_semantics(spec: Dict[str, object], text: str, tools: 
     router = extract_generated_section(text, SECTION_MARKERS["router"], pack_id)
 
     is_master = pack_id == "master"
+    is_single = str(spec.get("kind", "")).lower() == "single-tool"
     if is_master:
+        if "## Master mini-library choices" not in router:
+            raise ValueError(f"Pack {pack_id}: master router is missing mini-library choices")
+        if "## Mini-library menus" not in router:
+            raise ValueError(f"Pack {pack_id}: master router is missing generated mini-library menus")
+        if "## Full tool menu" not in router:
+            raise ValueError(f"Pack {pack_id}: master router is missing the generated full tool menu")
         if "| Student choice | Code | Tool ID |" not in router:
             raise ValueError(f"Pack {pack_id}: master router is missing the generated number-routing table header")
+        for letter, _family, label in MASTER_LIBRARY_CHOICES:
+            expected = expected_master_family_choice(letter, label)
+            if expected not in launcher:
+                raise ValueError(f"Pack {pack_id}: master launcher missing mini-library choice {letter} / {label}")
+        if "list tools" not in launcher or "not sure" not in launcher:
+            raise ValueError(f"Pack {pack_id}: master launcher missing list tools or not sure instruction")
     else:
-        if "## Menu mapping" not in router:
+        if is_single:
+            if "# Single-tool activation" not in launcher:
+                raise ValueError(f"Pack {pack_id}: single-tool pack is missing single-tool activation launcher")
+            if "Included tool mapping" not in router:
+                raise ValueError(f"Pack {pack_id}: single-tool router is missing included tool mapping")
+        elif "## Menu mapping" not in router:
             raise ValueError(f"Pack {pack_id}: mini-library router is missing Menu mapping heading")
 
     for number, tool in enumerate(tools, start=1):
         if expected_manifest_row(number, tool) not in manifest:
             raise ValueError(f"Pack {pack_id}: Available tools table missing row prefix for {number} / {tool.code} / {tool.id}")
-        if expected_launcher_line(number, tool) not in launcher:
-            raise ValueError(f"Pack {pack_id}: launcher menu missing exact generated line for {number} / {tool.code}")
         if is_master:
+            # The master launcher intentionally shows mini-library choices only. The full tool menu
+            # remains generated in the router for `list tools`.
+            if expected_launcher_line(number, tool) not in router:
+                raise ValueError(f"Pack {pack_id}: full tool menu missing generated line for {number} / {tool.code}")
             expected = expected_number_routing_row(number, tool)
         else:
+            if expected_launcher_line(number, tool) not in launcher:
+                raise ValueError(f"Pack {pack_id}: launcher menu missing exact generated line for {number} / {tool.code}")
             expected = expected_menu_mapping_line(number, tool)
         if expected not in router:
             raise ValueError(f"Pack {pack_id}: router missing exact generated mapping for {number} / {tool.code} / {tool.id}")
@@ -673,7 +748,7 @@ def validate_rendered_pack_semantics(spec: Dict[str, object], text: str, tools: 
         if len(re.findall(rf"^tool_code:\s*{re.escape(tool.code)}\s*$", text, flags=re.MULTILINE)) != 1:
             raise ValueError(f"Pack {pack_id}: expected exactly one tool_code {tool.code}")
 
-    # Mini-library outputs must not expose menu entries for tools outside the pack.
+    # Mini-library and single-tool outputs must not expose menu entries for tools outside the pack.
     if not is_master:
         included = {tool.id for tool in tools}
         for meta in load_tool_metadata().values():

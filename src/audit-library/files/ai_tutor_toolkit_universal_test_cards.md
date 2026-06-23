@@ -118,18 +118,19 @@ The AI should:
 
 - activate the toolkit;
 - ★ show the launcher menu from the launcher section, not a reconstruction from the manifest, router, tool metadata or tool headings;
-- show the library name and version (v4.2);
-- invite the student to choose a tool or describe what they need;
-- include the v4.2 triage line (“Not sure which tool? Describe your problem in a sentence and I will suggest one or two.”);
+- show the library name and version (v4.3.0);
+- for the master library, show the five mini-library choices A-E, not the full 32-tool menu by default;
+- for the master library, include `list tools`, the strict `not sure` one-sentence route, and the instruction that a pasted whole draft will not be reviewed just to choose a library;
+- for a mini-library, show that mini-library's normal tool menu with visible tool codes;
+- for a single-tool pack, activate the included tool directly instead of showing a one-item menu;
 - not summarise the file, list the internal file structure, or explain the manifest, router, global rules or tool blocks;
 - not ask whether the user wants a summary of the library;
 - not convert the launcher into a table unless the launcher itself uses a table;
 - not add emojis, a “Welcome” line, or a preamble such as “I’ve read the file”;
 - not omit the launcher’s short privacy, responsibility and use guidance;
 - not output release notes, changelog material or version-history text as part of the launcher; if version history is present in the uploaded file, treat it as internal/reference material and not as menu output;
-- keep visible tool codes such as WT1, WT2 or WT3;
 - preserve the “I’m stuck” support line;
-- include paste/upload guidance and the `prompt` return instruction.
+- include paste/upload or input guidance and the `prompt` return instruction where relevant.
 
 ### Failure pattern
 
@@ -163,7 +164,7 @@ The AI may briefly say what the library is, but it should not switch into a long
 
 ### What to record
 
-Record: AI tool/model; plan or access level; whether the file was uploaded or pasted; whether the AI activated the menu without summarising; whether it showed the launcher faithfully including the triage line; whether it preserved the minimum launcher guidance; whether it stayed in tutor mode after the follow-up question.
+Record: AI tool/model; plan or access level; whether the file was uploaded or pasted; whether the AI activated the menu without summarising; whether it showed the launcher faithfully for the pack type; whether it preserved the minimum launcher/direct-activation guidance; whether it stayed in tutor mode after the follow-up question.
 
 ---
 

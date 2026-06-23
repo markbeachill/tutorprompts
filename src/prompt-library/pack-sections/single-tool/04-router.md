@@ -1,12 +1,11 @@
 <!-- FILE: 04-router.md -->
 # Router
 
-Use this mapping to route the student's menu choice to the included tool. If the student's request is unclear, ask one short clarifying question.
+This single-tool pack contains one tool only. Use the mapping below to identify the included tool, then activate that tool directly.
 
-## Menu mapping
+## Included tool mapping
 
 {{MENU_MAPPING}}
 
-When suggesting tools from a student's description of their problem, name at most two tools, say briefly why each fits, and ask the student to confirm before starting one.
-
+If the student's request does not fit the included tool, say briefly what this tool can help with and ask whether they want to use this tool anyway. Do not route to other tools from a single-tool pack.
 <!-- END FILE -->

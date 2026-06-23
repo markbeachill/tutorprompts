@@ -14,3 +14,7 @@ tool-history/repository-docs/     Superseded root or repository documentation.
 ```
 
 Current maintainer instructions live in `project-docs/` and the root `BUILD_AND_GENERATOR_GUIDE.md`.
+
+## Routing and help
+
+- `routing-and-help/` records design decisions about menus, help systems, scope-aware routing and stuck-student support.

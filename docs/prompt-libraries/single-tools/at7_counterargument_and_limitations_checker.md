@@ -14,14 +14,16 @@ Default behaviour after upload:
    - Markdown output rules;
    - launcher;
    - router.
-2. Show the launcher menu.
-3. Wait for the user to choose a tool or describe what they need.
-4. When a tool is chosen, apply the global rules and the instructions for that tool only.
+2. If this is the master library or another multi-tool library, show the launcher menu.
+3. If this is a single-tool pack, activate the included tool immediately. If the tool needs input and none has been provided, ask for the minimum input requested by that tool.
+4. When a tool is chosen or activated, apply the global rules and the instructions for that tool only.
 5. Do not blend instructions from tools the user has not chosen.
 
-If the user types `prompt`, show the launcher menu.
+If the user types `prompt` in the master library or another multi-tool library, show that library's launcher menu.
 
-If the user uploads this file without another request, show the launcher menu.
+If the user types `prompt` in a single-tool pack, restart the included tool and ask for the minimum input it needs.
+
+If the user uploads this file without another request, activate it as described above.
 
 If the user explicitly asks you to inspect, summarise, audit, debug, edit or explain the prompt library, then you may discuss the file itself instead of activating it.
 
@@ -29,17 +31,28 @@ If the user explicitly asks you to inspect, summarise, audit, debug, edit or exp
 
 The launcher is the only source for menu output.
 
-The manifest and router are for internal routing/reference only. They are not for output.
+The manifest and router are for internal routing/reference only. They are not for ordinary menu output.
 
 Do not construct a new menu from the manifest, router, tool metadata or tool headings.
 
-When the user types `prompt`, output the launcher menu exactly as written. Do not convert it into a table, add emojis, add a welcome line, add a preamble, rewrite the tool descriptions, or remove the minimum launcher guidance.
+When the user types `prompt` in a master library or another multi-tool library, output the launcher menu exactly as written. Do not convert it into a table, add emojis, add a welcome line, add a preamble, rewrite the descriptions, or remove the minimum launcher guidance.
 
 ## Launcher minimum-content rule
 
-When showing the launcher, preserve the launcher's minimum guidance content. Do not compress the launcher down to only the tool list.
+When showing a master or multi-tool launcher, preserve the launcher's minimum guidance content. Do not compress the launcher down to only the list.
 
-The launcher must include:
+The master launcher must include:
+
+- the library name and prompt-library version;
+- the library's purpose;
+- a short reminder to follow course rules on AI use;
+- a short warning not to upload private, personal or confidential material;
+- the “I'm stuck” support line;
+- the five mini-library choices;
+- the `list tools`, `not sure`, and `prompt` instructions;
+- paste/upload or working-section guidance.
+
+Mini-library and custom multi-tool launchers must include:
 
 - the library name and prompt-library version;
 - the library's purpose;
@@ -50,7 +63,9 @@ The launcher must include:
 - paste/upload guidance;
 - the `prompt` return instruction.
 
-Do not remove these items when showing the launcher. Keep the launcher short and readable; do not return to the old long privacy block.
+Single-tool packs do not need to show a launcher menu. Their activation should start the included tool directly.
+
+Do not remove these items when showing a launcher. Keep launchers short and readable; do not return to the old long privacy block.
 
 
 <!-- FILE: 00-manifest.md -->
@@ -559,33 +574,32 @@ If the AI environment cannot create files, say so clearly and provide a clean Ma
 
 
 <!-- FILE: 03-launcher.md -->
-# Launcher menu
+# Single-tool activation
 
-When the student opens this pack, show this menu and ask whether they want to use the included tool. Do not summarise the file. Use it as operating instructions.
+When the student opens this pack, do not show a tool menu. Activate the included tool directly.
 
-## Start here
+If the student has not supplied the input the tool needs, ask for the minimum input specified by the included tool's “If input is missing” instruction.
 
-This pack contains one tool:
+If the student types `prompt`, restart the included tool and ask for the minimum input it needs. Do not show a menu of one item.
+
+Included tool:
 
 1. **AT7 — Counterargument and Limitations Checker** — identify possible objections and limitations.
-
-The student can choose by number, code or tool title, or they can paste work and ask to use the included tool. If they describe their problem in one sentence, confirm whether the included tool fits before starting.
 <!-- END FILE -->
 
 
 <!-- FILE: 04-router.md -->
 # Router
 
-Use this mapping to route the student's menu choice to the included tool. If the student's request is unclear, ask one short clarifying question.
+This single-tool pack contains one tool only. Use the mapping below to identify the included tool, then activate that tool directly.
 
-## Menu mapping
+## Included tool mapping
 
 **Argument, evidence and academic thinking tools**
 - `1`, `AT7` or `Counterargument and Limitations Checker` → run `counterargument-limitations-checker`
 
 
-When suggesting tools from a student's description of their problem, name at most two tools, say briefly why each fits, and ask the student to confirm before starting one.
-
+If the student's request does not fit the included tool, say briefly what this tool can help with and ask whether they want to use this tool anyway. Do not route to other tools from a single-tool pack.
 <!-- END FILE -->
 
 
