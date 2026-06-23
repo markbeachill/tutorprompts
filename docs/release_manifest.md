@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v4.4.0 / Prompt libraries v4.4.0 / Testing pack v4.4.0
+Toolkit release: Site v4.4.0 / Prompt libraries v4.4.1 / Testing pack v4.4.1
 
-This manifest describes the current public site package after the v4.4.0 in-tool help system and EAL-mode update.
+This manifest describes the current public site package after the v4.4.1 site entry-route and download-guidance refresh.
 
 ## Repository-level developer files
 
@@ -102,6 +102,15 @@ Versioned testing/audit archives are in:
 - `docs/audit-library/v4.2.1/`
 - `docs/audit-library/v4.3.0/`
 - `docs/audit-library/v4.4.0/`
+
+## Site v4.4.1 — Site entry-route and download guidance refresh
+
+- Site package updated to v4.4.1.
+- Prompt libraries and testing/audit pack version stamps updated to v4.4.1; tool behaviour remains the v4.4.0 help-system behaviour.
+- Promoted Try It as the quickest route for users who already use ChatGPT or Gemini.
+- Reframed the no-ghost-writing boundary as a positive promise: the student’s work stays theirs, and the tutor helps them improve work they understand and can defend.
+- Kept tool codes visible as stable handles while making tool names lead in student-facing catalogue and where-to-start tables.
+- Added download guidance based on plan/context reliability: mini-libraries and single tools for limited setups; master library when the AI setup handles long prompts reliably.
 
 ## Site v4.4.0 — In-tool help system and EAL mode
 

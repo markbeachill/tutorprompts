@@ -866,7 +866,7 @@ input_required:
 output_style: summary-first structure snapshot with expandable reverse outline and issues
 ---
 
-# ST2 — Whole-Work Structure Review v4.4.0
+# ST2 — Whole-Work Structure Review v4.4.1
 ## Purpose
 
 Review the structure of the whole piece of writing. Focus on organisation, sequence, flow, proportion and whether the reader can follow the argument.
@@ -878,7 +878,7 @@ Do not rewrite the work.
 Ask only:
 
 ```markdown
-# ST2 — Whole-Work Structure Review v4.4.0
+# ST2 — Whole-Work Structure Review v4.4.1
 Please paste or upload the draft, section or plan you want reviewed for structure.
 ```
 

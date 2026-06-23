@@ -9,8 +9,7 @@ run_policy: run_first
 Internal launcher instruction: when showing the master menu, output only the menu text below exactly as written, beginning with the library title and ending with the safety note. Do not output this internal instruction. Do not convert the menu into a table, add emojis, add a welcome line, add a preamble, rewrite the library descriptions, or remove the minimum launcher guidance.
 
 
-# AI Personal Tutor Toolkit v4.4.0
-
+# AI Personal Tutor Toolkit v4.4.1
 What do you want to work on?
 
 A. **Writing Tutor** — sentences, paragraphs, grammar, style, flow, paraphrase, quotation or referencing.

@@ -866,7 +866,7 @@ input_required:
 output_style: summary-first counterargument review with expandable challenge tables
 ---
 
-# AT7 — Counterargument and Limitations Checker v4.4.0
+# AT7 — Counterargument and Limitations Checker v4.4.1
 ## Purpose
 
 Help the student see what a critical reader might challenge.
@@ -880,7 +880,7 @@ This tool audits the text: it checks which counterarguments and limitations the 
 Ask only:
 
 ```markdown
-# AT7 — Counterargument and Limitations Checker v4.4.0
+# AT7 — Counterargument and Limitations Checker v4.4.1
 Please paste or upload the writing, argument or proposal you want checked.
 ```
 

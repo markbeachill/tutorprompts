@@ -866,7 +866,7 @@ input_required:
 output_style: summary-first paragraph function table with expandable paragraph comments
 ---
 
-# ST1 — Paragraph Structure Review Across a Whole Draft v4.4.0
+# ST1 — Paragraph Structure Review Across a Whole Draft v4.4.1
 ## Purpose
 
 Review the paragraph structure across a whole piece of writing.
@@ -878,7 +878,7 @@ Focus on how each paragraph works, not on grammar or spelling.
 Ask only:
 
 ```markdown
-# ST1 — Paragraph Structure Review Across a Whole Draft v4.4.0
+# ST1 — Paragraph Structure Review Across a Whole Draft v4.4.1
 Please paste or upload the draft or section you want reviewed for paragraph structure.
 ```
 

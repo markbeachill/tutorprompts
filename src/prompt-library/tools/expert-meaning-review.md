@@ -14,7 +14,7 @@ input_required:
 output_style: summary-first expert meaning review with expandable issue detail
 ---
 
-# ST3 — Expert Meaning Review v4.4.0
+# ST3 — Expert Meaning Review v4.4.1
 ## Purpose
 
 Review the text for meaning, accuracy, logic, interpretation and argument.
@@ -26,7 +26,7 @@ Concentrate on whether the ideas make sense. Ignore minor grammar, spelling and 
 Ask only:
 
 ```markdown
-# ST3 — Expert Meaning Review v4.4.0
+# ST3 — Expert Meaning Review v4.4.1
 Please paste or upload the text you want reviewed.
 ```
 If the topic or discipline is not clear, ask the student to name it briefly. If the student does not answer, proceed using the best available context.

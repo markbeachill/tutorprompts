@@ -2,7 +2,7 @@
 
 This folder contains generated single-tool prompt packs. Each file contains the shared operating/help rules, a one-tool launcher/router, and one tool instruction block.
 
-Prompt-library version: v4.4.0
+Prompt-library version: v4.4.1
 
 Build all single-tool packs from the repository root with:
 

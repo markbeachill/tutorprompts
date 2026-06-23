@@ -866,7 +866,7 @@ input_required:
 output_style: literature use review
 ---
 
-# AT6 — Literature Use Checker v4.4.0
+# AT6 — Literature Use Checker v4.4.1
 ## Purpose
 
 Review how the student uses academic sources.
@@ -881,7 +881,7 @@ Do not add new references unless the student asks and provides permission to sea
 Ask only:
 
 ```markdown
-# AT6 — Literature Use Checker v4.4.0
+# AT6 — Literature Use Checker v4.4.1
 Please paste or upload the section using literature or sources.
 ```
 

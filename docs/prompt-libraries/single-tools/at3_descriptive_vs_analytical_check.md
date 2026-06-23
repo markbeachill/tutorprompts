@@ -866,7 +866,7 @@ input_required:
 output_style: analysis balance review
 ---
 
-# AT3 — Descriptive vs Analytical Check v4.4.0
+# AT3 — Descriptive vs Analytical Check v4.4.1
 ## Purpose
 
 Check whether the student's writing is mostly descriptive or analytical, and show how to deepen analysis.
@@ -878,7 +878,7 @@ Do not rewrite the work.
 Ask only:
 
 ```markdown
-# AT3 — Descriptive vs Analytical Check v4.4.0
+# AT3 — Descriptive vs Analytical Check v4.4.1
 Please paste or upload the paragraph or section you want checked.
 ```
 

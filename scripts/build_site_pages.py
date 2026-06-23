@@ -180,7 +180,6 @@ table.tool-table td {
   font-size: 0.95rem;
   line-height: 1.5;
 }
-table.tool-table th:nth-child(1),
 table.tool-table .code-col {
   width: 5rem;
   white-space: nowrap;
@@ -191,11 +190,11 @@ table.tool-table .links-col {
 table.tools-catalog-table {
   min-width: 980px;
 }
-table.tools-catalog-table th:nth-child(1),
+table.tools-catalog-table th:nth-child(2),
 table.tools-catalog-table .code-col {
   width: 5rem;
 }
-table.tools-catalog-table th:nth-child(2),
+table.tools-catalog-table th:nth-child(1),
 table.tools-catalog-table .tool-col {
   width: 20%;
 }
@@ -652,8 +651,8 @@ def tool_table_rows(tools: Sequence[dict[str, object]], *, prefix: str = "../") 
         use_when = html.escape(str(tool.get("master_manifest_description") or tool.get("mini_manifest_description") or tool.get("launcher_description") or ""))
         rows.append(
             "<tr>"
-            f'<td class="code-col" data-label="Code"><strong class="tool-code">{code}</strong></td>'
             f'<td class="tool-col" data-label="Tool">{title}</td>'
+            f'<td class="code-col" data-label="Code"><strong class="tool-code">{code}</strong></td>'
             f'<td class="use-col" data-label="Use this when…">{use_when}.</td>'
             f'<td class="links-col" data-label="Links">{tool_links(tool, prefix=prefix)}</td>'
             "</tr>"
@@ -663,10 +662,10 @@ def tool_table_rows(tools: Sequence[dict[str, object]], *, prefix: str = "../") 
 
 def tool_table(tools: Sequence[dict[str, object]], *, prefix: str = "../", include_code: bool = True) -> str:
     if include_code:
-        head = "<tr><th>Code</th><th>Tool</th><th>Use this when…</th><th>Links</th></tr>"
+        head = "<tr><th>Tool</th><th>Code</th><th>Use this when…</th><th>Links</th></tr>"
         body = tool_table_rows(tools, prefix=prefix)
         table_class = "tool-table tools-catalog-table"
-        colgroup = '<colgroup><col class="col-code"><col class="col-tool"><col class="col-use"><col class="col-links"></colgroup>'
+        colgroup = '<colgroup><col class="col-tool"><col class="col-code"><col class="col-use"><col class="col-links"></colgroup>'
     else:
         rows: list[str] = []
         for tool in tools:
@@ -675,7 +674,7 @@ def tool_table(tools: Sequence[dict[str, object]], *, prefix: str = "../", inclu
             why = html.escape(str(tool.get("master_manifest_description") or tool.get("mini_manifest_description") or tool.get("launcher_description") or ""))
             rows.append(
                 "<tr>"
-                f'<td class="tool-col" data-label="Recommended tool"><strong class="tool-code">{code}</strong> — {title}</td>'
+                f'<td class="tool-col" data-label="Recommended tool">{title} <span class="tool-code">({code})</span></td>'
                 f'<td class="why-col" data-label="Why this tool">{why}.</td>'
                 f'<td class="links-col" data-label="Links">{tool_links(tool, prefix=prefix)}</td>'
                 "</tr>"
@@ -685,7 +684,6 @@ def tool_table(tools: Sequence[dict[str, object]], *, prefix: str = "../", inclu
         table_class = "tool-table start-table"
         colgroup = '<colgroup><col class="col-recommended"><col class="col-why"><col class="col-links"></colgroup>'
     return f'<div class="tool-table-wrap"><table class="{table_class}">{colgroup}<thead>{head}</thead><tbody>\n{body}\n</tbody></table></div>'
-
 
 def tool_card(tool: dict[str, object], *, prefix: str = "../", include_anchor: bool = True) -> str:
     """Compact card used on the Download page only."""
@@ -699,7 +697,7 @@ def tool_card(tool: dict[str, object], *, prefix: str = "../", include_anchor: b
         ex_link = f'<a class="button secondary small-button" href="{prefix}examples/example-{code_raw.lower()}.html">Example</a>'
     anchor = f' id="tool-{code}"' if include_anchor else ""
     return f'''<article class="tool-card"{anchor}>
-<h3><span class="tool-code">{code}</span> — {title}</h3>
+<h3>{title} <span class="tool-code">({code})</span></h3>
 <p>{desc}</p>
 <div class="actions tool-actions"><a class="button secondary small-button" href="{single}">Open</a><a class="button secondary small-button download-tool" download href="{single}">Download this tool</a>{ex_link}</div>
 </article>'''
@@ -722,13 +720,13 @@ def build_try_it_page(version: str) -> str:
 <main><article class="reading"><header class="page-intro">
 <p class="kicker">Try It</p>
 <h1>Try a preloaded tutor.</h1>
-<p class="lead">Open a preloaded tutor, or download the library files to use them yourself.</p>
+<p class="lead">This is the quickest way to try the toolkit if you already use ChatGPT or Gemini. You do not need to copy prompt files manually.</p>
 <p class="small-note">Current website release: <strong>v{html.escape(version)}</strong>. Do not paste private or identifiable student work into external AI platforms unless you have permission and your institution allows it.</p>
 </header>
 <section class="try-it-options try-it-options-three wide">
-<article class="try-it-option"><span class="tag">ChatGPT</span><h2>Custom GPT</h2><p>Open the preloaded AI Tutor in ChatGPT.</p><p><a class="button" href="{html.escape(chatgpt_url, quote=True)}" rel="noopener noreferrer" target="_blank">Try in ChatGPT</a></p></article>
-<article class="try-it-option"><span class="tag">Gemini</span><h2>Gemini Gem</h2><p>Open the preloaded AI Tutor Gem in Gemini.</p><p><a class="button" href="{html.escape(gemini_url, quote=True)}" rel="noopener noreferrer" target="_blank">Try in Gemini</a></p></article>
-<article class="try-it-option"><span class="tag">Download</span><h2>Use the files yourself</h2><p>Download the Markdown prompt libraries for inspection, adaptation or local use.</p><p><a class="button secondary" href="../download/">Go to Download</a></p></article>
+<article class="try-it-option"><span class="tag">ChatGPT</span><h2>Custom GPT</h2><p>Open the preloaded AI Tutor in ChatGPT. The tutor will ask what kind of support you need, then guide you to a focused tool.</p><p><a class="button" href="{html.escape(chatgpt_url, quote=True)}" rel="noopener noreferrer" target="_blank">Try in ChatGPT</a></p></article>
+<article class="try-it-option"><span class="tag">Gemini</span><h2>Gemini Gem</h2><p>Open the preloaded AI Tutor Gem in Gemini. This is a fast route into the same family of prompt tools.</p><p><a class="button" href="{html.escape(gemini_url, quote=True)}" rel="noopener noreferrer" target="_blank">Try in Gemini</a></p></article>
+<article class="try-it-option"><span class="tag">Download</span><h2>Use the files yourself</h2><p>Download the Markdown prompt libraries if you want to inspect, adapt, keep local copies, or use the toolkit in Projects, Gems or custom setups.</p><p><a class="button secondary" href="../download/">Go to Download</a></p></article>
 </section>
 </article></main>
 {footer_html("../")}
@@ -763,6 +761,7 @@ def build_tools_page(tools: list[dict[str, object]], version: str) -> str:
 <main><article class="reading"><header class="page-intro">
 <p class="kicker">Tools</p>
 <h1>Browse the tool catalogue.</h1>
+<p class="lead">Tool names explain what each tool does. Codes stay visible as stable handles so you can return to the same tool later.</p>
 <p class="small-note">Current release version: <strong>v{html.escape(version)}</strong>.</p>
 </header>
 <section class="accordion-list wide">
@@ -821,8 +820,9 @@ def build_where_to_start_page(tools: list[dict[str, object]]) -> str:
 <main><article class="reading"><header class="page-intro">
 <p class="kicker">Where to start?</p>
 <h1>Choose a tool by what you want to do.</h1>
-<p class="lead">Open the section closest to your situation. Each section uses a compact table so you can compare the suggested tools quickly.</p>
+<p class="lead">Start with the problem you have, not the tool code. Codes are included as stable handles so you can come back to the same tool later.</p>
 </header>
+<section class="panel wide"><h2>Unsure where to begin?</h2><p>Use <a href="../try-it/">Try It</a> first if you want the quickest route into the toolkit. It opens a preloaded tutor in ChatGPT or Gemini, so you do not need to choose or copy prompt files before starting.</p><p>Use <a href="../download/">Download</a> if you want the prompt files, want to use them in a Project, Gem or custom setup, or want to inspect and adapt the toolkit.</p></section>
 <section class="accordion-list wide">
 {"".join(sections)}
 </section>
@@ -837,13 +837,13 @@ def build_download_page(tools: list[dict[str, object]], version: str) -> str:
     for tool in tools:
         by_family[str(tool["family"])].append(tool)
     libraries = [
-        ("Master Library", "Everything in one prompt-library file. Best for staff review, testing or users who want the full toolkit.", "../prompt-libraries/latest/ai_personal_tutor_master_library.md"),
-        ("All mini libraries ZIP", "All five focused mini-library files in one ZIP.", "../prompt-libraries/latest/ai_personal_tutor_mini_libraries.zip"),
-        ("Writing Tutor Library", "Routing, clarity, paragraph logic, flow, subject/verb parsing, style, mistakes, referencing, paraphrase and quotation support.", "../prompt-libraries/latest/01_writing_tutor_library.md"),
-        ("Structure Tutor Library", "Paragraph, draft structure, meaning review and reverse outlining.", "../prompt-libraries/latest/02_structure_tutor_library.md"),
-        ("Academic Thinking Tutor Library", "Argument, evidence, concepts, source reliability and critical challenge.", "../prompt-libraries/latest/03_academic_thinking_tutor_library.md"),
-        ("Research Proposal Tutor Library", "Research questions, methods, supervisor review, viva practice and topic brainstorming.", "../prompt-libraries/latest/04_research_proposal_tutor_library.md"),
-        ("Study Workflow Tutor Library", "Revision planning, feedback-to-action and AI-use records.", "../prompt-libraries/latest/05_study_workflow_tutor_library.md"),
+        ("Master Library", "All tools in one prompt. Best when you want the full toolkit in one place and your AI setup handles long prompts reliably.", "../prompt-libraries/latest/ai_personal_tutor_master_library.md"),
+        ("All mini libraries ZIP", "All five focused mini-library files in one ZIP. Best when you want smaller prompts but still want every family available.", "../prompt-libraries/latest/ai_personal_tutor_mini_libraries.zip"),
+        ("Writing Tutor Library", "A smaller focused pack for sentences, paragraphs, style, mistakes, flow, subject/verb parsing, referencing, paraphrase and quotation support.", "../prompt-libraries/latest/01_writing_tutor_library.md"),
+        ("Structure Tutor Library", "A smaller focused pack for paragraph structure, whole-draft structure, meaning review and reverse outlining.", "../prompt-libraries/latest/02_structure_tutor_library.md"),
+        ("Academic Thinking Tutor Library", "A smaller focused pack for argument, evidence, concepts, source reliability and critical challenge.", "../prompt-libraries/latest/03_academic_thinking_tutor_library.md"),
+        ("Research Proposal Tutor Library", "A smaller focused pack for research questions, methods, supervisor review, viva practice and topic brainstorming.", "../prompt-libraries/latest/04_research_proposal_tutor_library.md"),
+        ("Study Workflow Tutor Library", "A smaller focused pack for revision planning, feedback-to-action and AI-use records.", "../prompt-libraries/latest/05_study_workflow_tutor_library.md"),
     ]
     lib_cards = []
     for title, desc, href in libraries:
@@ -871,16 +871,16 @@ def build_download_page(tools: list[dict[str, object]], version: str) -> str:
 <main><article class="reading"><header class="page-intro">
 <p class="kicker">Download</p>
 <h1>Download prompt libraries and individual tools.</h1>
-<p class="lead">Use a mini library for most student work. Use a single-tool file when upload limits are tight or you want one focused prompt.</p>
+<p class="lead">Download the prompt files if you want to use the toolkit in your own AI setup, keep local copies, inspect the instructions, or adapt the toolkit for a course or workflow.</p>
 <p class="small-note">Current release version: <strong>v{html.escape(version)}</strong>.</p>
 </header>
-<section class="panel wide download-libraries"><div class="tool-grid download-grid">{"".join(lib_cards)}</div></section>
-<section class="panel wide" id="individual-tools"><h2>Individual tool downloads</h2><p>Expand a section to download one tool file.</p><div class="accordion-list">{"".join(individual_sections)}</div></section>
+<section class="panel wide"><h2>Which file should I download?</h2><p>Use <a href="../try-it/">Try It</a> instead if you simply want the quickest way to test the toolkit in ChatGPT or Gemini.</p><p>If you want the files, choose by what your AI setup can handle:</p><ul><li>On a <strong>free plan</strong>, limited plan, or setup that struggles with long prompts: choose a <strong>mini-library</strong> or <strong>single-tool prompt</strong>. These are smaller and are usually more reliable on lighter setups.</li><li>On a <strong>paid plan</strong> or setup that handles long prompts reliably: choose the <strong>master library</strong> if you want every tool in one prompt.</li><li>If you want to inspect, adapt or reuse the toolkit in Projects, Gems or custom setups: download the files and choose the size that best fits your setup.</li></ul><p class="small-note">This is guidance, not a rule. The real question is whether your AI setup handles long prompts reliably.</p></section>
+<section class="panel wide download-libraries"><h2>Prompt-library downloads</h2><div class="tool-grid download-grid">{"".join(lib_cards)}</div></section>
+<section class="panel wide" id="individual-tools"><h2>Individual tool downloads</h2><p>Use a single-tool file when you only need one focused tool, or when your AI plan struggles with long prompt files.</p><div class="accordion-list">{"".join(individual_sections)}</div></section>
 </article></main>
 {footer_html("../")}
 </body>
 </html>'''
-
 
 def build_examples_index_page(tools: list[dict[str, object]]) -> str:
     by_family: dict[str, list[dict[str, object]]] = defaultdict(list)
@@ -903,8 +903,8 @@ def build_examples_index_page(tools: list[dict[str, object]]) -> str:
                 link = "—"
             rows.append(
                 "<tr>"
-                f"<td>{html.escape(code)}</td>"
                 f"<td>{title}</td>"
+                f"<td>{html.escape(code)}</td>"
                 f"<td>{html.escape(status)}</td>"
                 f"<td>{link}</td>"
                 "</tr>"
@@ -924,7 +924,7 @@ def build_examples_index_page(tools: list[dict[str, object]]) -> str:
 <section>
 <h2>Example pages</h2>
 <table>
-<thead><tr><th>Code</th><th>Tool</th><th>Status</th><th>Example page</th></tr></thead>
+<thead><tr><th>Tool</th><th>Code</th><th>Status</th><th>Example page</th></tr></thead>
 <tbody>
 {"".join(rows)}
 </tbody>
@@ -975,7 +975,7 @@ def insert_try_it_home_callout(text: str) -> str:
         text,
         flags=re.S,
     )
-    callout = '''<section class="panel notice try-it-callout" id="try-it-home"><span class="tag">Try It</span><h2>Try a preloaded tutor</h2><div class="btn-row"><a class="button" href="try-it/">Try the preloaded tutor</a></div></section>'''
+    callout = '''<section class="panel notice try-it-callout" id="try-it-home"><span class="tag">Fastest start</span><h2>Try the tutor now</h2><p>Open a preloaded tutor in ChatGPT or Gemini without copying prompt files manually.</p><div class="btn-row"><a class="button" href="try-it/">Try the tutor now</a><a class="button secondary" href="download/">Download the prompt libraries</a></div></section>'''
     marker = '<div class="container"><section class="panel" id="downloads">'
     if marker in text:
         return text.replace(marker, '<div class="container">' + callout + '<section class="panel" id="downloads">', 1)

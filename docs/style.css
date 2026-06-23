@@ -720,7 +720,6 @@ table.tool-table td {
   font-size: 0.95rem;
   line-height: 1.5;
 }
-table.tool-table th:nth-child(1),
 table.tool-table .code-col {
   width: 5rem;
   white-space: nowrap;
@@ -731,11 +730,11 @@ table.tool-table .links-col {
 table.tools-catalog-table {
   min-width: 980px;
 }
-table.tools-catalog-table th:nth-child(1),
+table.tools-catalog-table th:nth-child(2),
 table.tools-catalog-table .code-col {
   width: 5rem;
 }
-table.tools-catalog-table th:nth-child(2),
+table.tools-catalog-table th:nth-child(1),
 table.tools-catalog-table .tool-col {
   width: 20%;
 }

@@ -1,7 +1,7 @@
 id: writing-tutor
 title: "Writing Tutor Mini Library"
 latest_output: docs/prompt-libraries/latest/01_writing_tutor_library.md
-archive_output: docs/prompt-libraries/v4.4.0/01_writing_tutor_library_v4_4_0.md
+archive_output: docs/prompt-libraries/v4.4.1/01_writing_tutor_library_v4_4_1.md
 tool_metadata_mode: mini
 sections:
   - pack-sections/writing-tutor/00-manifest.md
