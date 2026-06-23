@@ -5,6 +5,7 @@ tool_code: ST2
 master_number: 12
 title: Whole-Work Structure Review
 type: tool
+tool_mode: tiered_review
 menu_number: 12
 run_policy: selected_only
 input_required:

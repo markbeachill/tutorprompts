@@ -42,6 +42,7 @@ src/prompt-library/tools/
   - `master_number`
   - `title`
   - `type`
+  - `tool_mode`
   - `menu_number`
   - `run_policy`
   - `input_required`

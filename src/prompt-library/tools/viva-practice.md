@@ -5,6 +5,7 @@ tool_code: RP4
 master_number: 28
 title: Viva or Supervisor Practice
 type: tool
+tool_mode: interactive
 menu_number: 28
 run_policy: selected_only
 input_required:

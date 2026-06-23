@@ -4,6 +4,7 @@ id: assignment-brief-checker
 tool_code: AT1
 title: Assignment Brief Checker
 type: tool
+tool_mode: full_review
 menu_number: 15
 master_number: 15
 run_policy: selected_only

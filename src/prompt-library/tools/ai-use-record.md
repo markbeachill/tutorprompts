@@ -5,6 +5,7 @@ tool_code: SW3
 master_number: 32
 title: AI-Use Record
 type: tool
+tool_mode: full_review
 menu_number: 32
 run_policy: selected_only
 input_required:

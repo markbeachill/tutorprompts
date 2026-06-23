@@ -14,6 +14,7 @@ id: which-writing-tool
 tool_code: WT1
 title: Which Writing Tool Should I Use?
 type: tool
+tool_mode: routing_helper
 menu_number: 1
 master_number: 1
 run_policy: selected_only

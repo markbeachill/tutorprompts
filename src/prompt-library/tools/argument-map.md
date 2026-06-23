@@ -5,6 +5,7 @@ tool_code: AT2
 master_number: 16
 title: Argument Map
 type: tool
+tool_mode: full_review
 menu_number: 16
 run_policy: selected_only
 input_required:

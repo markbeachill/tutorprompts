@@ -4,6 +4,7 @@ id: research-question-checker
 tool_code: RP1
 title: Research Question, Aim and Objectives Checker
 type: tool
+tool_mode: full_review
 menu_number: 25
 master_number: 25
 run_policy: selected_only

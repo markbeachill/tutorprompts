@@ -5,6 +5,7 @@ tool_code: RP5
 master_number: 29
 title: Guided Topic Brainstorming
 type: tool
+tool_mode: interactive
 menu_number: 29
 run_policy: selected_only
 input_required:

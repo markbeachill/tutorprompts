@@ -44,7 +44,7 @@ A **smoke test** is a quick check that the basics work: the menu appears, `promp
 
 ### What this test checks
 
-Whether WT1 routes rather than fixes: it should recommend at most two Writing Tutor tools, give tentative reasons, provide the exact text or span to submit, and avoid diagnosing, rewriting or launching another tool.
+Whether WT1 performs limited triage rather than full review: it may inspect the request only enough to recommend at most two Writing Tutor tools, give tentative reasons, provide the exact text or span to submit, and avoid fixing, diagnosing in depth, rewriting or launching another tool.
 
 ### Test input 1
 

@@ -5,6 +5,7 @@ tool_code: WT7
 master_number: 7
 title: Referencing Helper
 type: tool
+tool_mode: full_review
 menu_number: 7
 run_policy: selected_only
 input_required:

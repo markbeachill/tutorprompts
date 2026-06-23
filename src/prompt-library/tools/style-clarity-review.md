@@ -5,6 +5,7 @@ tool_code: WT6
 master_number: 6
 title: Style and Clarity Review
 type: tool
+tool_mode: full_review
 menu_number: 6
 run_policy: selected_only
 input_required:

@@ -5,6 +5,7 @@ tool_code: AT3
 master_number: 17
 title: Descriptive vs Analytical Check
 type: tool
+tool_mode: full_review
 menu_number: 17
 run_policy: selected_only
 input_required:

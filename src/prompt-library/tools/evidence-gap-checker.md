@@ -5,6 +5,7 @@ tool_code: AT4
 master_number: 18
 title: Evidence Gap Checker
 type: tool
+tool_mode: full_review
 menu_number: 18
 run_policy: selected_only
 input_required:

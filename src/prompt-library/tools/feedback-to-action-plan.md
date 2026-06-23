@@ -5,6 +5,7 @@ tool_code: SW2
 master_number: 31
 title: Tutor Feedback to Action Plan
 type: tool
+tool_mode: full_review
 menu_number: 31
 run_policy: selected_only
 input_required:

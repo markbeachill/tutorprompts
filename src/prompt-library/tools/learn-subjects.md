@@ -15,6 +15,7 @@ id: learn-subjects
 tool_code: WT10
 title: "Learn Subjects: Parsing Your Own Sentences"
 type: tool
+tool_mode: interactive
 menu_number: 10
 master_number: 10
 run_policy: selected_only

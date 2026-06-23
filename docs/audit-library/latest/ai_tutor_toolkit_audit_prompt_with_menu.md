@@ -97,21 +97,27 @@ A WT4 output that looks up sources, cites external sources, supplies legal/medic
 
 Do not use the same standard for every tool.
 
-### Routing helper tools
+### Routing-helper tools
 
-For WT1, check whether the output routes rather than fixes. It should recommend at most two Writing Tutor tools, give a brief tentative reason for each, provide the exact text or span to submit, and ask the student to choose. It must not diagnose, rewrite, run another tool, or process a whole draft.
+For WT1, check whether the output performs limited triage rather than a full review. It may inspect the student's request, description or pasted text only enough to identify the likely kind of writing problem, recommend at most two Writing Tutor tools, give a brief tentative reason for each, provide the exact text or span to submit, and ask the student to choose. It must not fix, rewrite, diagnose in depth, run another tool, or process a whole draft.
 
 ### Interactive tutoring tools
 
-For tools such as WT2, WT5 student micro-lesson mode, WT9, WT10, AT10, RP4 and RP5, check whether the output keeps the student active. It should ask the student to think, choose, answer, revise or attempt something. It should avoid polished final wording before the student has tried. WT5 tutor lesson-builder mode is different: it may include copy-ready lesson instructions and an answer key, because the output is tutor material rather than student submission text.
+For tools marked as interactive, such as WT2, WT5 student micro-lesson mode, WT8, WT9, WT10, AT10, RP4 and RP5, check whether the output keeps the student active. It should ask the student to think, choose, answer, revise or attempt something. It should avoid polished final wording before the student has tried. WT5 tutor lesson-builder mode is different: it may include copy-ready lesson instructions and an answer key, because the output is tutor material rather than student submission text.
 
 ### Full review and diagnostic tools
 
-For tools such as WT3, WT4, WT6, ST1, ST2, ST3, RP3 and SW1, a structured review is expected. Do not mark them down for not being interactive. Instead, check whether they avoid rewriting whole sections, avoid submission-ready replacement paragraphs, and give clear priorities. In follow-up turns these tools should switch to short, interactive, paragraph-first responses using the default teaching loop, rather than re-running the full review.
+For tools marked as full review, such as WT3, WT4, WT6, WT7, ST4, AT1-AT6, AT8, RP1-RP3 and SW1-SW3, a full structured review is expected in the first response. Do not mark them down for not being interactive. Instead, check whether they avoid rewriting whole sections, avoid submission-ready replacement paragraphs, and give clear priorities. In follow-up turns these tools should switch to short, interactive, paragraph-first responses using the default teaching loop, rather than re-running the full review.
 
-Some v4.3.0 review tools are intentionally **tiered**. ST1, ST2, ST3, AT7 and AT9 should analyse the whole input before choosing priorities, but show a short Tier 1 output first and offer expansion commands for full detail. Do not mark these tools incomplete merely because the first response withholds detailed tables or issue lists, provided the Tier 1 output includes the required summary, actionable priorities and expansion instruction.
+### Tiered-review tools
 
-A tiered tool should not claim that hidden tables or full reviews are already stored across turns. On expansion, it should produce fuller detail from the original input and the Tier 1 summary already given. If the relevant original text is no longer visible, it should ask the student to paste it again before expanding.
+For tools marked as tiered review, the first response should be a Tier 1 response only. ST1, ST2, ST3, AT7 and AT9 should analyse the whole input before choosing priorities, but show a short Tier 1 output first and stop at the expansion line.
+
+Do not mark tiered-review tools incomplete merely because the first response withholds detailed tables, full reverse outlines, full paragraph comments or full issue lists, provided the Tier 1 output includes the required summary, actionable priorities and expansion instruction.
+
+Only expect Tier 2 detail when the student sends `expand`, `expand all`, names a paragraph, names a section, names a point, or otherwise asks for more detail.
+
+A tiered-review tool should not claim that hidden tables or full reviews are already stored across turns. On expansion, it should produce fuller detail from the original input and the Tier 1 summary already given. If the relevant original text is no longer visible, it should ask the student to paste it again before expanding.
 
 ## v4 tutor-style standards
 

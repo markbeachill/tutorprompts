@@ -5,6 +5,7 @@ tool_code: SW1
 master_number: 30
 title: Revision Plan
 type: tool
+tool_mode: full_review
 menu_number: 30
 run_policy: selected_only
 input_required:

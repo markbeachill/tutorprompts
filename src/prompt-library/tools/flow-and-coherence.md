@@ -16,6 +16,7 @@ id: flow-and-coherence
 tool_code: WT9
 title: "Flow and Coherence: The Running Subject"
 type: tool
+tool_mode: interactive
 menu_number: 9
 master_number: 9
 run_policy: selected_only

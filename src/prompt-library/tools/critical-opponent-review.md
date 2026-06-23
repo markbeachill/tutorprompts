@@ -5,6 +5,7 @@ tool_code: AT9
 master_number: 23
 title: Critical Opponent Review
 type: tool
+tool_mode: tiered_review
 menu_number: 23
 run_policy: selected_only
 input_required:

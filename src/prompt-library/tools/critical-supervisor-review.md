@@ -5,6 +5,7 @@ tool_code: RP3
 master_number: 27
 title: Critical Research Supervisor Review
 type: tool
+tool_mode: full_review
 menu_number: 27
 run_policy: selected_only
 input_required:

@@ -5,6 +5,7 @@ tool_code: RP2
 master_number: 26
 title: Methodology Fit Checker
 type: tool
+tool_mode: full_review
 menu_number: 26
 run_policy: selected_only
 input_required:

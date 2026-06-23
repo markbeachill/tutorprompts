@@ -5,6 +5,7 @@ tool_code: AT8
 master_number: 22
 title: Source Reliability Checker
 type: tool
+tool_mode: full_review
 menu_number: 22
 run_policy: selected_only
 input_required:

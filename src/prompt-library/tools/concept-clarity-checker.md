@@ -5,6 +5,7 @@ tool_code: AT5
 master_number: 19
 title: Concept Clarity Checker
 type: tool
+tool_mode: full_review
 menu_number: 19
 run_policy: selected_only
 input_required:

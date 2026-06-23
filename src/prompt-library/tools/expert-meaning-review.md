@@ -5,6 +5,7 @@ tool_code: ST3
 master_number: 13
 title: Expert Meaning Review
 type: tool
+tool_mode: tiered_review
 menu_number: 13
 run_policy: selected_only
 input_required:

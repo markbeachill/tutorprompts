@@ -4,6 +4,7 @@ id: paragraph-structure-review
 tool_code: ST1
 title: Paragraph Structure Review Across a Whole Draft
 type: tool
+tool_mode: tiered_review
 menu_number: 11
 master_number: 11
 run_policy: selected_only

@@ -128,6 +128,7 @@ class ToolMeta:
     mini_manifest_description: str
     mini_family_label: str
     launcher_description: str
+    tool_mode: str
 
 
 def read_simple_yaml(path: Path) -> Dict[str, object]:
@@ -268,7 +269,7 @@ def load_tool_metadata() -> Dict[str, ToolMeta]:
         raise ValueError(f"{TOOL_METADATA}: expected a top-level 'tools' list")
     by_id: Dict[str, ToolMeta] = {}
     seen_codes: set[str] = set()
-    required = {"id", "code", "title", "family", "family_label", "master_manifest_description", "mini_manifest_description", "mini_family_label", "launcher_description"}
+    required = {"id", "code", "title", "family", "family_label", "master_manifest_description", "mini_manifest_description", "mini_family_label", "launcher_description", "tool_mode"}
     for item in tools:
         if not isinstance(item, dict):
             raise ValueError(f"{TOOL_METADATA}: every tool entry must be an object")
@@ -284,6 +285,9 @@ def load_tool_metadata() -> Dict[str, ToolMeta]:
             raise ValueError(f"{TOOL_METADATA}: unknown family {meta.family!r} for {meta.id}")
         if not meta.launcher_description.endswith("."):
             raise ValueError(f"{TOOL_METADATA}: launcher_description for {meta.id} should end with a full stop")
+        allowed_tool_modes = {"routing_helper", "interactive", "full_review", "tiered_review"}
+        if meta.tool_mode not in allowed_tool_modes:
+            raise ValueError(f"{TOOL_METADATA}: unsupported tool_mode {meta.tool_mode!r} for {meta.id}")
         by_id[meta.id] = meta
         seen_codes.add(meta.code)
     return by_id

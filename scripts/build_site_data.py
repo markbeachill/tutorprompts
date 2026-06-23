@@ -145,6 +145,7 @@ def tool_index_data(metadata: dict[str, bpl.ToolMeta]) -> dict[str, Any]:
             "master_manifest_description": tool.master_manifest_description,
             "mini_manifest_description": tool.mini_manifest_description,
             "launcher_description": tool.launcher_description,
+            "tool_mode": tool.tool_mode,
             "included_in_packs": included_in,
             "single_tool_output": single.get("latest_output") if single else None,
         })

@@ -4,6 +4,7 @@ id: clarity-clinic
 tool_code: WT2
 title: Clarity Clinic
 type: tool
+tool_mode: interactive
 menu_number: 2
 master_number: 2
 run_policy: selected_only

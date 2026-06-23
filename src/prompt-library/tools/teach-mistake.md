@@ -5,6 +5,7 @@ tool_code: WT5
 master_number: 5
 title: Teach Me This Mistake
 type: tool
+tool_mode: interactive
 menu_number: 5
 run_policy: selected_only
 input_required:

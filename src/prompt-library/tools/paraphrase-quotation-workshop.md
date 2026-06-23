@@ -5,6 +5,7 @@ tool_code: WT8
 master_number: 8
 title: Paraphrase and Quotation Workshop
 type: tool
+tool_mode: interactive
 menu_number: 8
 run_policy: selected_only
 input_required:

@@ -5,6 +5,7 @@ tool_code: AT7
 master_number: 21
 title: Counterargument and Limitations Checker
 type: tool
+tool_mode: tiered_review
 menu_number: 21
 run_policy: selected_only
 input_required:

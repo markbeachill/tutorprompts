@@ -5,6 +5,7 @@ tool_code: AT10
 master_number: 24
 title: Socratic Tutor
 type: tool
+tool_mode: interactive
 menu_number: 24
 run_policy: selected_only
 input_required:

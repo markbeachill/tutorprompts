@@ -4,6 +4,7 @@ id: reverse-outline-mapper
 tool_code: ST4
 title: Reverse Outline Mapper
 type: tool
+tool_mode: full_review
 menu_number: 14
 master_number: 14
 run_policy: selected_only

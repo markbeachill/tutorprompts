@@ -19,6 +19,7 @@
       "master_manifest_description": "choose the right Writing Tutor tool for a sentence, a few sentences, or one paragraph without fixing or rewriting the work",
       "mini_manifest_description": "choose the right Writing Tutor tool for a sentence, a few sentences, or one paragraph without fixing or rewriting the work",
       "launcher_description": "suggest the right Writing Tutor tool for a sentence or paragraph before you start.",
+      "tool_mode": "routing_helper",
       "included_in_packs": [
         "master",
         "writing-tutor"
@@ -36,6 +37,7 @@
       "master_manifest_description": "improve one sentence, a few sentences, or one paragraph",
       "mini_manifest_description": "improve one sentence, a few sentences, or one paragraph",
       "launcher_description": "make one sentence or paragraph clearer.",
+      "tool_mode": "interactive",
       "included_in_packs": [
         "master",
         "writing-tutor",
@@ -54,6 +56,7 @@
       "master_manifest_description": "analyse one paragraph for chain of ideas, missing links, topic sentence alignment and practical revision",
       "mini_manifest_description": "analyse one paragraph for chain of ideas, missing links, topic sentence alignment and practical revision",
       "launcher_description": "check whether one paragraph gets its idea across.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "master",
         "writing-tutor",
@@ -72,6 +75,7 @@
       "master_manifest_description": "identify grammar, spelling, punctuation, word-choice, clarity and visible citation-formatting mistakes",
       "mini_manifest_description": "identify grammar, spelling, punctuation, word-choice, clarity and visible citation-formatting mistakes",
       "launcher_description": "list and explain writing mistakes in grammar, wording, clarity and visible citation formatting.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "master",
         "writing-tutor"
@@ -89,6 +93,7 @@
       "master_manifest_description": "learn from a WT4 mistake through an interactive micro-lesson or build copy-ready tutor lesson material",
       "mini_manifest_description": "learn from a WT4 mistake through an interactive micro-lesson or build copy-ready tutor lesson material",
       "launcher_description": "teach a mistake pattern interactively or build a copy-ready lesson from WT4 feedback.",
+      "tool_mode": "interactive",
       "included_in_packs": [
         "master",
         "writing-tutor"
@@ -106,6 +111,7 @@
       "master_manifest_description": "improve readability, tone and style without rewriting the assignment",
       "mini_manifest_description": "improve readability, tone and style without rewriting the assignment",
       "launcher_description": "show how to improve readability, tone and style without rewriting your assignment.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "master",
         "writing-tutor"
@@ -123,6 +129,7 @@
       "master_manifest_description": "create or check Harvard-style references carefully",
       "mini_manifest_description": "create or check Harvard-style references carefully",
       "launcher_description": "create or check Harvard-style references.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "master",
         "writing-tutor"
@@ -140,6 +147,7 @@
       "master_manifest_description": "check paraphrases, quotations, attribution and source integration without writing the source-use sentence for the student",
       "mini_manifest_description": "check paraphrases, quotations, attribution and source integration without writing the source-use sentence for the student",
       "launcher_description": "check whether a paraphrase or quotation is accurate, safely credited and integrated into your writing.",
+      "tool_mode": "interactive",
       "included_in_packs": [
         "master",
         "writing-tutor"
@@ -157,6 +165,7 @@
       "master_manifest_description": "test whether a paragraph flows by listing grammatical subjects and checking sentence-to-sentence hand-offs",
       "mini_manifest_description": "test whether a paragraph flows by listing grammatical subjects and checking sentence-to-sentence hand-offs",
       "launcher_description": "test paragraph flow by tracking grammatical subjects and hand-offs between sentences.",
+      "tool_mode": "interactive",
       "included_in_packs": [
         "master",
         "writing-tutor"
@@ -174,6 +183,7 @@
       "master_manifest_description": "practise finding subjects, verbs, objects and actor/subject gaps in the student's own sentences",
       "mini_manifest_description": "practise finding subjects, verbs, objects and actor/subject gaps in your own sentences",
       "launcher_description": "practise finding subjects and verbs in your own sentences.",
+      "tool_mode": "interactive",
       "included_in_packs": [
         "master",
         "writing-tutor"
@@ -191,6 +201,7 @@
       "master_manifest_description": "check whether each paragraph works across a whole text",
       "mini_manifest_description": "check how each paragraph works across a whole text",
       "launcher_description": "check how each paragraph works across a whole text.",
+      "tool_mode": "tiered_review",
       "included_in_packs": [
         "master",
         "structure-tutor",
@@ -209,6 +220,7 @@
       "master_manifest_description": "check organisation, sequence, flow and balance",
       "mini_manifest_description": "check the structure, order, flow and balance of the whole piece",
       "launcher_description": "check the structure, order, flow and balance of the whole piece.",
+      "tool_mode": "tiered_review",
       "included_in_packs": [
         "master",
         "structure-tutor"
@@ -226,6 +238,7 @@
       "master_manifest_description": "check whether the ideas, interpretations and argument make sense",
       "mini_manifest_description": "check whether the ideas and interpretations make sense",
       "launcher_description": "check whether the ideas and interpretations make sense.",
+      "tool_mode": "tiered_review",
       "included_in_packs": [
         "master",
         "structure-tutor"
@@ -243,6 +256,7 @@
       "master_manifest_description": "create a diagnostic reverse outline of what each part of the draft currently does without producing submitted text",
       "mini_manifest_description": "create a diagnostic reverse outline of what each part currently does",
       "launcher_description": "map what each paragraph or section currently does so you can revise the structure yourself.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "master",
         "structure-tutor"
@@ -260,6 +274,7 @@
       "master_manifest_description": "check whether the work answers the task",
       "mini_manifest_description": "check whether the work answers the task",
       "launcher_description": "check whether the work answers the task.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "academic-thinking",
         "master"
@@ -277,6 +292,7 @@
       "master_manifest_description": "identify the main claim, supporting points, evidence, assumptions and gaps",
       "mini_manifest_description": "identify claim, supporting points, evidence, assumptions and gaps",
       "launcher_description": "identify the claim, supporting points, evidence, assumptions and gaps.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "academic-thinking",
         "master"
@@ -294,6 +310,7 @@
       "master_manifest_description": "check whether the writing is descriptive or analytical",
       "mini_manifest_description": "check whether the writing is descriptive or analytical",
       "launcher_description": "check whether the writing is descriptive or analytical.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "academic-thinking",
         "master"
@@ -311,6 +328,7 @@
       "master_manifest_description": "identify claims that need more evidence",
       "mini_manifest_description": "identify claims that need evidence",
       "launcher_description": "identify claims that need evidence.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "academic-thinking",
         "master"
@@ -328,6 +346,7 @@
       "master_manifest_description": "check whether key concepts are defined and used clearly",
       "mini_manifest_description": "check whether key concepts are defined and used clearly",
       "launcher_description": "check whether key concepts are defined and used clearly.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "academic-thinking",
         "master"
@@ -345,6 +364,7 @@
       "master_manifest_description": "review how academic sources are used",
       "mini_manifest_description": "review how sources are used",
       "launcher_description": "review how sources are used.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "academic-thinking",
         "master"
@@ -362,6 +382,7 @@
       "master_manifest_description": "identify possible objections, limitations and challenges",
       "mini_manifest_description": "identify possible objections and limitations",
       "launcher_description": "identify possible objections and limitations.",
+      "tool_mode": "tiered_review",
       "included_in_packs": [
         "academic-thinking",
         "master"
@@ -379,6 +400,7 @@
       "master_manifest_description": "check whether sources look credible, relevant and suitable",
       "mini_manifest_description": "check whether sources look credible, relevant and suitable",
       "launcher_description": "check whether sources look credible, relevant and suitable.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "academic-thinking",
         "master"
@@ -396,6 +418,7 @@
       "master_manifest_description": "challenge the argument from sceptical, opposing, picky, methodological, real-world or ideological viewpoints",
       "mini_manifest_description": "challenge the argument from sceptical, opposing, picky or ideological viewpoints",
       "launcher_description": "challenge the argument from sceptical, opposing, picky or ideological viewpoints.",
+      "tool_mode": "tiered_review",
       "included_in_packs": [
         "academic-thinking",
         "master"
@@ -413,6 +436,7 @@
       "master_manifest_description": "discuss a topic through one-question-at-a-time questioning",
       "mini_manifest_description": "discuss a topic through one-question-at-a-time questioning",
       "launcher_description": "discuss a topic through one-question-at-a-time questioning.",
+      "tool_mode": "interactive",
       "included_in_packs": [
         "academic-thinking",
         "master"
@@ -430,6 +454,7 @@
       "master_manifest_description": "check whether research question, aim and objectives align",
       "mini_manifest_description": "check whether research question, aim and objectives align",
       "launcher_description": "check whether your research question, aim and objectives align.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "master",
         "research-proposal"
@@ -447,6 +472,7 @@
       "master_manifest_description": "check whether the method fits the research question",
       "mini_manifest_description": "check whether the method fits the research question",
       "launcher_description": "check whether the method fits the research question.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "master",
         "research-proposal"
@@ -464,6 +490,7 @@
       "master_manifest_description": "review a dissertation or research proposal as a critical supervisor",
       "mini_manifest_description": "review a proposal as a critical supervisor",
       "launcher_description": "review a proposal as a critical supervisor.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "master",
         "research-proposal"
@@ -481,6 +508,7 @@
       "master_manifest_description": "ask supervisor-style questions one at a time",
       "mini_manifest_description": "ask supervisor-style questions one at a time",
       "launcher_description": "ask supervisor-style questions one at a time.",
+      "tool_mode": "interactive",
       "included_in_packs": [
         "master",
         "research-proposal"
@@ -498,6 +526,7 @@
       "master_manifest_description": "help develop possible research topics",
       "mini_manifest_description": "develop possible research topics",
       "launcher_description": "develop possible research topics.",
+      "tool_mode": "interactive",
       "included_in_packs": [
         "master",
         "research-proposal"
@@ -515,6 +544,7 @@
       "master_manifest_description": "turn feedback into a revision plan",
       "mini_manifest_description": "turn feedback into a revision plan",
       "launcher_description": "turn feedback or draft concerns into a revision plan.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "master",
         "study-workflow",
@@ -533,6 +563,7 @@
       "master_manifest_description": "convert tutor feedback into practical actions",
       "mini_manifest_description": "convert tutor feedback into practical actions",
       "launcher_description": "convert human tutor feedback into practical actions.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "master",
         "study-workflow"
@@ -550,6 +581,7 @@
       "master_manifest_description": "help record AI use honestly",
       "mini_manifest_description": "record AI use honestly",
       "launcher_description": "record AI use honestly.",
+      "tool_mode": "full_review",
       "included_in_packs": [
         "master",
         "study-workflow"

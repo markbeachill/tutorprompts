@@ -4,6 +4,7 @@ id: single-paragraph-analysis
 tool_code: WT3
 title: Single Paragraph Analysis
 type: tool
+tool_mode: full_review
 menu_number: 3
 master_number: 3
 run_policy: selected_only
