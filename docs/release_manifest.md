@@ -1,8 +1,8 @@
 # AI Personal Tutor Toolkit — release manifest
 
-Toolkit release: Site v4.3.0 / Prompt libraries v4.3.0 / Testing pack v4.3.0
+Toolkit release: Site v4.4.0 / Prompt libraries v4.4.0 / Testing pack v4.4.0
 
-This manifest describes the current public site package after the v4.3.0 tiered-output update for selected long review tools.
+This manifest describes the current public site package after the v4.4.0 in-tool help system and EAL-mode update.
 
 ## Repository-level developer files
 
@@ -75,6 +75,7 @@ Versioned prompt-library archives are in:
 - `docs/prompt-libraries/v4.2/`
 - `docs/prompt-libraries/v4.2.1/`
 - `docs/prompt-libraries/v4.3.0/`
+- `docs/prompt-libraries/v4.4.0/`
 
 ## Testing/audit downloads
 
@@ -100,6 +101,18 @@ Versioned testing/audit archives are in:
 - `docs/audit-library/v4.2/`
 - `docs/audit-library/v4.2.1/`
 - `docs/audit-library/v4.3.0/`
+- `docs/audit-library/v4.4.0/`
+
+## Site v4.4.0 — In-tool help system and EAL mode
+
+- Site package updated to v4.4.0.
+- Prompt libraries updated to v4.4.0.
+- Testing/audit pack updated to v4.4.0.
+- Added shared `05-help-system.md` to master, mini-library, custom and single-tool prompt packs.
+- Added post-output `help` footers for full-review tools and Tier-1-aware help footers for tiered-review tools.
+- Added a five-item help menu for using the last feedback: explain differently, one first step, three short takeaways, parallel example, or return to menu.
+- Added `EAL on` / `EAL off` as an opt-in session flag for clearer explanations, key-term support and language-pattern visibility without lowering the academic level or rewriting student work.
+- Updated audit guidance and test cards with HS1–HS6 help-system checks.
 
 ## Site v4.3.0 — Tiered output for long review tools
 

@@ -24,7 +24,7 @@ output_style: short routing recommendation with exact submit text
 interaction_type: routing helper
 ---
 
-# WT1 — Which Writing Tool Should I Use? v4.3.0
+# WT1 — Which Writing Tool Should I Use? v4.4.0
 Apply `global-rules`.
 
 Run only this tool.

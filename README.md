@@ -2,7 +2,7 @@
 
 The AI Personal Tutor Toolkit is a set of prompt libraries that help students use AI as a tutor, not as a ghost-writer.
 
-The prompts are designed to give structured, specialist writing support: focused feedback, plain explanation, practice and revision guidance while students keep responsibility for their own writing and thinking. The v4.3.0 release adds tiered summary-first output for selected long review tools, while keeping WT4 inside writing-mistake support rather than turning it into a subject-answering or source-checking service.
+The prompts are designed to give structured, specialist writing support: focused feedback, plain explanation, practice and revision guidance while students keep responsibility for their own writing and thinking. The v4.4.0 release adds a shared in-tool help system and optional EAL mode, while preserving the v4.3.0 tiered-output behaviour for selected long review tools.
 
 Live website: https://markbeachill.github.io/tutorprompts/
 
@@ -86,9 +86,9 @@ If you are updating or rebuilding the repository without prior context:
 
 ## Current public release
 
-- Site package: v4.3.0
-- Prompt-library suite: v4.3.0
-- Testing/audit pack: v4.3.0
+- Site package: v4.4.0
+- Prompt-library suite: v4.4.0
+- Testing/audit pack: v4.4.0
 
 Detailed release notes are in `docs/changelog/site-update-notes/`.
 

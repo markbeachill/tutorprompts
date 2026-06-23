@@ -13,7 +13,7 @@ input_required:
 output_style: first-focus note plus paragraph-by-paragraph error analysis with summary table
 ---
 
-# WT4 — Find My Mistakes v4.3.0
+# WT4 — Find My Mistakes v4.4.0
 ## Purpose
 
 Review the student's writing paragraph by paragraph. Identify mistakes in grammar, spelling, punctuation, word choice, sentence structure, clarity, attribution within the sentence, internal logic and visible technical referencing presentation.
@@ -33,7 +33,7 @@ If a paragraph has no mistakes within WT4's scope, produce no output for that pa
 Ask only:
 
 ```markdown
-# WT4 — Find My Mistakes v4.3.0
+# WT4 — Find My Mistakes v4.4.0
 Please paste or upload the paragraph or short section you want checked.
 ```
 

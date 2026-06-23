@@ -1,11 +1,12 @@
 id: academic-thinking
 title: "Academic Thinking Tutor Mini Library"
 latest_output: docs/prompt-libraries/latest/03_academic_thinking_tutor_library.md
-archive_output: docs/prompt-libraries/v4.3.0/03_academic_thinking_tutor_library_v4_3_0.md
+archive_output: docs/prompt-libraries/v4.4.0/03_academic_thinking_tutor_library_v4_4_0.md
 tool_metadata_mode: mini
 sections:
   - pack-sections/academic-thinking/00-manifest.md
   - shared/01-global-rules.md
+  - shared/05-help-system.md
   - shared/02-markdown-output-rules.md
   - pack-sections/academic-thinking/03-launcher.md
   - pack-sections/academic-thinking/04-router.md

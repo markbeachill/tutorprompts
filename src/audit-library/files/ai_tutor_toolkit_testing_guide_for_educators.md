@@ -1,11 +1,15 @@
-# AI Personal Tutor Toolkit — Testing Guide for Educators v4.3.0
-**Release stamp:** Toolkit version v4.3.0 / Prompt-library suite v4.3.0 / Testing pack v4.3.0  **This file:** AI Personal Tutor Toolkit — Testing Guide for Educators v4.3.0  
+# AI Personal Tutor Toolkit — Testing Guide for Educators v4.4.0
+**Release stamp:** Toolkit version v4.4.0 / Prompt-library suite v4.4.0 / Testing pack v4.4.0  **This file:** AI Personal Tutor Toolkit — Testing Guide for Educators v4.4.0  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_testing_guide_for_educators.md`  
-**Fixed archive:** `audit-library/v4.3.0/ai_tutor_toolkit_testing_guide_for_educators_v4_3_0.md`
+**Fixed archive:** `audit-library/v4.4.0/ai_tutor_toolkit_testing_guide_for_educators_v4_4_0.md`
 
 Audience: educators, tutors, learning developers and toolkit maintainers.
 
 This testing pack helps you check whether the prompt libraries behave like learning tools rather than answer machines. You do not need software-testing knowledge.
+
+## What changed in v4.4.0
+
+Testing pack v4.4.0 adds help-system checks for the shared `help` menu, Tier-1 `help`/`expand` distinction, inline stuckness in interactive tools and the `EAL on/off` explanation-style flag. These checks should be run in the master library as well as mini-library conditions.
 
 ## What changed in v4.3.0
 

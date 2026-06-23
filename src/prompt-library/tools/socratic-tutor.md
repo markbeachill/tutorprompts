@@ -22,7 +22,7 @@ trigger_phrases:
   - choose a topic for me
 ---
 
-# AT10 — Socratic Tutor v4.3.0
+# AT10 — Socratic Tutor v4.4.0
 Apply `01-global-rules`.
 Run only this tool.
 

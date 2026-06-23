@@ -1,7 +1,7 @@
 # AI Personal Tutor custom prompt packs
 
 This folder contains generated custom packs built from YAML files in `src/prompt-library/custom-packs/`.
-Each custom pack includes the shared operating rules, the generated menu/router, and the selected tool instructions.
+Each custom pack includes the shared operating/help rules, the generated menu/router, and the selected tool instructions.
 
 Build all custom packs from the repository root with:
 

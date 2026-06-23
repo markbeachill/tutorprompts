@@ -13,7 +13,7 @@ input_required:
 output_style: critical supervisor review with risk table
 ---
 
-# RP3 — Critical Research Supervisor Review v4.3.0
+# RP3 — Critical Research Supervisor Review v4.4.0
 ## Purpose
 
 Review a dissertation or research proposal as a very critical but constructive UK university research supervisor.
@@ -31,7 +31,7 @@ Ask, or infer from context, whether this is an early idea, a working draft, or a
 Ask only:
 
 ```markdown
-# RP3 — Critical Research Supervisor Review v4.3.0
+# RP3 — Critical Research Supervisor Review v4.4.0
 Please paste or upload the dissertation proposal, research proposal or research idea you want reviewed.
 ```
 

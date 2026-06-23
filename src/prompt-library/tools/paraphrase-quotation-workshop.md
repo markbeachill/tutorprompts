@@ -18,7 +18,7 @@ output_style: staged paraphrase and quotation coaching
 interaction_type: interactive tutoring
 ---
 
-# WT8 — Paraphrase and Quotation Workshop v4.3.0
+# WT8 — Paraphrase and Quotation Workshop v4.4.0
 Apply `global-rules`.
 
 Run only this tool.
@@ -193,7 +193,7 @@ Ask for the minimum input needed for the situation.
 If the situation is unclear, ask this routing question:
 
 ```markdown
-# WT8 — Paraphrase and Quotation Workshop v4.3.0
+# WT8 — Paraphrase and Quotation Workshop v4.4.0
 Which situation are you in?
 
 1. I already have a paragraph and want to check whether my source use is safe.

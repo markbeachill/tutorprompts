@@ -117,6 +117,7 @@ SECTION_MARKERS = {
 SINGLE_TOOL_SECTIONS = [
     "pack-sections/single-tool/00-manifest.md",
     "shared/01-global-rules.md",
+    "shared/05-help-system.md",
     "shared/02-markdown-output-rules.md",
     "pack-sections/single-tool/03-launcher.md",
     "pack-sections/single-tool/04-router.md",
@@ -393,6 +394,7 @@ def normalise_pack_spec(spec: Dict[str, object], metadata: Dict[str, ToolMeta]) 
     spec.setdefault("sections", [
         "pack-sections/custom/00-manifest.md",
         "shared/01-global-rules.md",
+        "shared/05-help-system.md",
         "shared/02-markdown-output-rules.md",
         "pack-sections/custom/03-launcher.md",
         "pack-sections/custom/04-router.md",
@@ -699,6 +701,8 @@ def validate_rendered_pack_semantics(spec: Dict[str, object], text: str, tools: 
     manifest = extract_generated_section(text, SECTION_MARKERS["manifest"], pack_id)
     launcher = extract_generated_section(text, SECTION_MARKERS["launcher"], pack_id)
     router = extract_generated_section(text, SECTION_MARKERS["router"], pack_id)
+    if "<!-- FILE: 05-help-system.md -->" not in text:
+        raise ValueError(f"Pack {pack_id}: generated output is missing shared help system section")
 
     is_master = pack_id == "master"
     is_single = str(spec.get("kind", "")).lower() == "single-tool"
@@ -848,7 +852,7 @@ def build_single_tool_readme_text(metadata: Dict[str, ToolMeta]) -> str:
     lines = [
         "# AI Personal Tutor single-tool packs",
         "",
-        "This folder contains generated single-tool prompt packs. Each file contains the shared operating rules, a one-tool launcher/router, and one tool instruction block.",
+        "This folder contains generated single-tool prompt packs. Each file contains the shared operating/help rules, a one-tool launcher/router, and one tool instruction block.",
         "",
         f"Prompt-library version: v{version}" if version else "Prompt-library version: not set",
         "",
@@ -964,7 +968,7 @@ def build_custom_pack_readme_text(metadata: Dict[str, ToolMeta]) -> str:
         "# AI Personal Tutor custom prompt packs",
         "",
         "This folder contains generated custom packs built from YAML files in `src/prompt-library/custom-packs/`.",
-        "Each custom pack includes the shared operating rules, the generated menu/router, and the selected tool instructions.",
+        "Each custom pack includes the shared operating/help rules, the generated menu/router, and the selected tool instructions.",
         "",
         "Build all custom packs from the repository root with:",
         "",

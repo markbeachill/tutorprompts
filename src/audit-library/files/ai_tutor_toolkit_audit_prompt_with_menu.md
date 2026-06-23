@@ -1,9 +1,9 @@
-# AI Personal Tutor Toolkit — Audit Prompt v4.3.0
-**Release stamp:** Toolkit version v4.3.0 / Prompt-library suite v4.3.0 / Testing pack v4.3.0  **This file:** AI Personal Tutor Toolkit — Audit Prompt v4.3.0  
+# AI Personal Tutor Toolkit — Audit Prompt v4.4.0
+**Release stamp:** Toolkit version v4.4.0 / Prompt-library suite v4.4.0 / Testing pack v4.4.0  **This file:** AI Personal Tutor Toolkit — Audit Prompt v4.4.0  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_audit_prompt_with_menu.md`  
-**Fixed archive:** `audit-library/v4.3.0/ai_tutor_toolkit_audit_prompt_with_menu.md`
+**Fixed archive:** `audit-library/v4.4.0/ai_tutor_toolkit_audit_prompt_with_menu.md`
 
-**v4.3.0 revision note:** This release adds tiered summary-first output for ST1, ST2, ST3, AT7 and AT9, while preserving whole-input analysis before summary. It also keeps the v4.2.1 WT4 answer-giving boundary and adds a short WT4 first-focus note without hiding mistakes.
+**v4.4.0 revision note:** This release adds the shared in-tool help system and optional EAL mode. Full-review and tiered-review outputs should expose `help` appropriately, `EAL on` should make explanations clearer without lowering the academic level or rewriting, and interactive tools should handle stuckness inline.
 
 Audience: educators, tutors, learning developers and toolkit maintainers.
 
@@ -71,6 +71,15 @@ When this audit prompt starts, show this menu and ask which audit the user wants
 - `SW2` — Tutor Feedback to Action Plan
 - `SW3` — AI-Use Record
 
+
+### Help system tests
+- `HS1` — Full-review post-output help menu
+- `HS2` — Tiered-review help and expand distinction
+- `HS3` — Interactive-tool stuckness handled inline
+- `HS4` — EAL mode flag and explanation style
+- `HS5` — Help at menu and ambiguous-state fallback
+- `HS6` — Single-tool menu exit boundary
+
 ### Behavioural regression tests
 - `BR1` — Paragraph-first tutor style and grammar terms
 - `BR2` — Manageable feedback
@@ -118,6 +127,14 @@ Do not mark tiered-review tools incomplete merely because the first response wit
 Only expect Tier 2 detail when the student sends `expand`, `expand all`, names a paragraph, names a section, names a point, or otherwise asks for more detail.
 
 A tiered-review tool should not claim that hidden tables or full reviews are already stored across turns. On expansion, it should produce fuller detail from the original input and the Tier 1 summary already given. If the relevant original text is no longer visible, it should ask the student to paste it again before expanding.
+
+### Help-system standards
+
+For help-system tests, check that `help` is state-aware. After a full-review output, `help` should open the five-item help menu: explain differently, one first step, three short takeaways for time pressure, parallel example, or return to menu. At Tier 1 of a tiered-review tool, `help` should help the student use the summary and should not replace `expand`. In interactive tools, stuckness should be handled inline rather than opening the review-output help menu.
+
+The `EAL on` flag should change explanation style across the active session: clearer English, key-term definitions, visible language patterns and concrete examples where useful, while keeping the academic level of the student's ideas and not rewriting the work. `EAL off` should return to the normal explanation style.
+
+If the model cannot tell the state, the safe fallback is to step back and ask what the student needs next. It must not run a new review, rewrite, or choose a new tool automatically.
 
 ## v4 tutor-style standards
 
@@ -322,6 +339,7 @@ For the selected test, check whether the output:
 14. preserves the student's intended meaning and avoids academicising key terms in ways that change concepts
 15. preserves the student's level of certainty, confidence and authority
 16. stays within tool-specific answer-giving boundaries, especially WT4's writing-mistakes-only boundary
+17. follows the help-system behaviour when `help`, `I'm stuck`, `EAL on`, `EAL off`, `expand`, `prompt` or `menu` are used
 
 ## Rating scale
 
@@ -362,6 +380,8 @@ State whether you audited this as an interactive tutoring tool or a full review/
 | Learning focus |  |  |  |
 | Authorship boundary |  |  |  |
 | WT4 answer-giving boundary |  |  |  |
+| Help-system behaviour |  |  |  |
+| EAL mode handling |  |  |  |
 | Permitted corrections handled correctly |  |  |  |
 | Plain English |  |  |  |
 | Paragraph-first tutor style |  |  |  |
@@ -462,3 +482,14 @@ If WT4 supplies substantive disciplinary content, uses external sources, cites e
 ## Student pushback and uncertainty guidance
 
 For student pushback tests, do not reward the AI for defending its first interpretation automatically. A good response re-reads the student text, acknowledges if the student is right, revises its diagnosis, preserves any useful remaining feedback, and avoids false certainty in specialist subject areas. If the matter is uncertain or high-stakes, it should suggest checking with a human tutor, supervisor or subject specialist.
+
+
+## Help-system audit guidance
+
+Suggested evidence-table rows when relevant:
+
+| Help-system footer/menu | Pass / partial / fail / N/A | Does the output show the appropriate post-output footer, and does `help` open the correct five-item menu after a full-review output? | Applies to HS1 and any follow-up using `help`. |
+| Tiered help/expand distinction | Pass / partial / fail / N/A | Does Tier 1 keep `help` for using the summary and `expand` for more detail? | Applies to HS2 and tiered-review tool tests. |
+| Interactive stuckness | Pass / partial / fail / N/A | Does an interactive tool slow down and continue inline rather than opening the review-output help menu? | Applies to HS3 and interactive tools. |
+| EAL mode | Pass / partial / fail / N/A | Does `EAL on` change explanation style while preserving academic level and authorship boundaries, and does `EAL off` return to normal style? | Applies to HS4 and U9. |
+| Menu return boundary | Pass / partial / fail / N/A | Does “Take me back to the menu” return to the menu without becoming a new routing or review service? | Applies to HS1 and HS6. |

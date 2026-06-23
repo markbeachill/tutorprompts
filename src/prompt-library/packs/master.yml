@@ -1,11 +1,12 @@
 id: master
 title: "AI Personal Tutor Master Library"
 latest_output: docs/prompt-libraries/latest/ai_personal_tutor_master_library.md
-archive_output: docs/prompt-libraries/v4.3.0/ai_personal_tutor_master_library_v4_3_0.md
+archive_output: docs/prompt-libraries/v4.4.0/ai_personal_tutor_master_library_v4_4_0.md
 tool_metadata_mode: master
 sections:
   - pack-sections/master/00-manifest.md
   - shared/01-global-rules.md
+  - shared/05-help-system.md
   - shared/02-markdown-output-rules.md
   - pack-sections/master/03-launcher.md
   - pack-sections/master/04-router.md

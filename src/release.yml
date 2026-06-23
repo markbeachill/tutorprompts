@@ -2,9 +2,9 @@
 # Public releases use one release_version for the site, prompt libraries, source material and audit/testing pack.
 # The legacy *_version keys are retained as aliases for existing scripts and generated text, but must match release_version.
 
-release_version: 4.3.0
-toolkit_version: 4.3.0
-prompt_library_version: 4.3.0
-testing_pack_version: 4.3.0
-release_date: 2026-06-22
+release_version: 4.4.0
+toolkit_version: 4.4.0
+prompt_library_version: 4.4.0
+testing_pack_version: 4.4.0
+release_date: 2026-06-23
 status: active public release

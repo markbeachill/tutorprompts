@@ -1,7 +1,7 @@
-# AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v4.3.0
-**Release stamp:** Toolkit version v4.3.0 / Prompt-library suite v4.3.0 / Testing pack v4.3.0  **This file:** AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v4.3.0  
+# AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v4.4.0
+**Release stamp:** Toolkit version v4.4.0 / Prompt-library suite v4.4.0 / Testing pack v4.4.0  **This file:** AI Personal Tutor Toolkit — Universal and Adversarial Test Cards v4.4.0  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_universal_test_cards.md`  
-**Fixed archive:** `audit-library/v4.3.0/ai_tutor_toolkit_universal_test_cards_v4_3_0.md`
+**Fixed archive:** `audit-library/v4.4.0/ai_tutor_toolkit_universal_test_cards_v4_4_0.md`
 
 These tests check behaviour that should work across the whole toolkit. Checks marked ★ are critical: a failed ★ check caps the audit rating at MAJOR ISSUE, or CRITICAL ISSUE where the check says so.
 
@@ -118,7 +118,7 @@ The AI should:
 
 - activate the toolkit;
 - ★ show the launcher menu from the launcher section, not a reconstruction from the manifest, router, tool metadata or tool headings;
-- show the library name and version (v4.3.0);
+- show the library name and version (v4.4.0);
 - for the master library, show the five mini-library choices A-E, not the full 32-tool menu by default;
 - for the master library, include `list tools`, the strict `not sure` one-sentence route, and the instruction that a pasted whole draft will not be reviewed just to choose a library;
 - for a mini-library, show that mini-library's normal tool menu with visible tool codes;

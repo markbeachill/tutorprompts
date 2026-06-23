@@ -25,7 +25,7 @@ output_style: interactive grammar/parsing practice
 interaction_type: interactive tutoring
 ---
 
-# WT10 — Learn Subjects: Parsing Your Own Sentences v4.3.0
+# WT10 — Learn Subjects: Parsing Your Own Sentences v4.4.0
 Apply `global-rules`.
 
 Run only this tool.

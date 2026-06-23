@@ -1,7 +1,7 @@
-# AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.3.0
-**Release stamp:** Toolkit version v4.3.0 / Prompt-library suite v4.3.0 / Testing pack v4.3.0  **This file:** AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.3.0  
+# AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.4.0
+**Release stamp:** Toolkit version v4.4.0 / Prompt-library suite v4.4.0 / Testing pack v4.4.0  **This file:** AI Personal Tutor Toolkit — Step-by-Step Test Cards v4.4.0  
 **Public download:** `audit-library/latest/ai_tutor_toolkit_step_by_step_test_cards.md`  
-**Fixed archive:** `audit-library/v4.3.0/ai_tutor_toolkit_step_by_step_test_cards_v4_3_0.md`
+**Fixed archive:** `audit-library/v4.4.0/ai_tutor_toolkit_step_by_step_test_cards_v4_4_0.md`
 
 Audience: educators, tutors, learning developers and toolkit maintainers who want to test the prompt libraries without needing software-testing knowledge.
 
@@ -1263,3 +1263,210 @@ Paragraph 2: Land redistribution affected rural communities. Records from the pe
 
 Paragraph 3: Urban workers also experienced change. Wages and conditions were discussed in the new councils.
 ```
+
+---
+
+## Help-system tests
+
+These cards test the shared `help` and `EAL on/off` behaviours. They should be run in the master library at least once, because the help system is most likely to fail under large-file context load.
+
+## HS1 Test — Full-review post-output help menu
+
+**Library:** Master library or Writing Tutor Library. **Audit code:** HS1. **Filename stem:** `hs1_full_review_help_menu`.
+
+### What this test checks
+
+Whether a full-review tool shows the standard help footer and opens the five-item help menu when the student types `help`.
+
+### Test input 1
+
+Choose WT6 — Style and Clarity Review. Paste:
+
+```text
+Online education has many benefits for students. It is flexible and helps them learn. However, some people do not like it because it is not always good. This essay will discuss online education and why it is important.
+```
+
+### Follow-up input 2
+
+```text
+help
+```
+
+### Follow-up input 3
+
+```text
+2
+```
+
+### What to look for
+
+- after the first review, the output shows the standard help footer
+- `help` opens the five-item help menu
+- option 2 gives one first step only, not a new full review
+- the tool does not rewrite the paragraph for the student
+
+---
+
+## HS2 Test — Tiered help and expand distinction
+
+**Library:** Master library or Structure Tutor Library. **Audit code:** HS2. **Filename stem:** `hs2_tiered_help_expand`.
+
+### What this test checks
+
+Whether a tiered-review tool keeps `help` and `expand` separate.
+
+### Test input 1
+
+Choose ST2 — Whole-Work Structure Review. Paste a short essay outline with an introduction, three body paragraphs and a conclusion.
+
+### Follow-up input 2
+
+```text
+help
+```
+
+### Follow-up input 3
+
+```text
+expand
+```
+
+### What to look for
+
+- Tier 1 shows the Tier-1 footer with both `help` and `expand`
+- `help` helps the student use the Tier 1 summary and does not reveal the full detailed review
+- `expand` produces fuller detail from the original input and Tier 1 summary
+- the tool does not claim that hidden tables were stored across turns
+
+---
+
+## HS3 Test — Interactive-tool stuckness handled inline
+
+**Library:** Master library or Academic Thinking Tutor Library. **Audit code:** HS3. **Filename stem:** `hs3_interactive_stuck_inline`.
+
+### What this test checks
+
+Whether an interactive tool handles stuckness inline rather than opening the review-output help menu.
+
+### Test input 1
+
+Choose AT10 — Socratic Tutor. Ask for help thinking through a research question.
+
+### Follow-up input 2
+
+```text
+I'm stuck.
+```
+
+### What to look for
+
+- the tool slows down, recaps or asks a simpler question
+- it does not open the five-item review-output help menu
+- it continues the interactive exchange
+
+---
+
+## HS4 Test — EAL mode flag
+
+**Library:** Master library or Writing Tutor Library. **Audit code:** HS4. **Filename stem:** `hs4_eal_mode`.
+
+### What this test checks
+
+Whether `EAL on` changes explanation style without simplifying ideas or rewriting the student's work.
+
+### Test input 1
+
+```text
+EAL on
+```
+
+### Test input 2
+
+Choose WT3 — Single Paragraph Analysis. Paste:
+
+```text
+The policy was introduced by the university to improve attendance. This shows students are not motivated enough. Some students also work part time jobs. The policy could create pressure.
+```
+
+### Follow-up input 3
+
+```text
+help
+```
+
+### Follow-up input 4
+
+```text
+1
+```
+
+### What to look for
+
+- `EAL on` is acknowledged as a session flag
+- explanations use clearer English and define useful terms
+- the academic meaning is not simplified
+- the tool does not rewrite the paragraph
+- option 1 explains the last feedback in a language-aware way
+
+---
+
+## HS5 Test — Help at menu and ambiguous fallback
+
+**Library:** Master library. **Audit code:** HS5. **Filename stem:** `hs5_menu_help_fallback`.
+
+### What this test checks
+
+Whether `help` at the menu helps the student use the menu instead of opening the review-output help menu, and whether unclear state uses the safe fallback.
+
+### Test input 1
+
+At the master menu, type:
+
+```text
+help
+```
+
+### Follow-up input 2
+
+```text
+I'm lost and I don't know what this is responding to.
+```
+
+### What to look for
+
+- at the menu, `help` points back to the available menu choices
+- it does not open the five-item post-review help menu
+- for unclear state, it steps back and asks what the student needs next
+- it does not run a new review or choose a tool automatically
+
+---
+
+## HS6 Test — Single-tool menu exit boundary
+
+**Library:** Any single-tool pack. **Audit code:** HS6. **Filename stem:** `hs6_single_tool_menu_exit`.
+
+### What this test checks
+
+Whether option 5 remains an exit rather than becoming a routing tool in a single-tool prompt.
+
+### Test input 1
+
+Open a single-tool pack and provide enough input for the tool to respond.
+
+### Follow-up input 2
+
+```text
+help
+```
+
+### Follow-up input 3
+
+```text
+5
+```
+
+### What to look for
+
+- option 5 explains that the prompt contains only the current tool
+- it does not recommend or run another tool from inside the single-tool prompt
+- it suggests using the relevant mini-library or master library to choose another tool
